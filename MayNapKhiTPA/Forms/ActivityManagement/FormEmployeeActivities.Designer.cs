@@ -41,7 +41,7 @@ namespace MayNapKhiTPA.Forms.ActivityManagement
             this.panelUser.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelUser.Location = new System.Drawing.Point(0, 0);
             this.panelUser.Name = "panelUser";
-            this.panelUser.Size = new System.Drawing.Size(149, 390);
+            this.panelUser.Size = new System.Drawing.Size(241, 390);
             this.panelUser.TabIndex = 0;
             // 
             // dataGridViewEmployeeActivity
@@ -49,10 +49,10 @@ namespace MayNapKhiTPA.Forms.ActivityManagement
             this.dataGridViewEmployeeActivity.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.dataGridViewEmployeeActivity.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewEmployeeActivity.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewEmployeeActivity.Location = new System.Drawing.Point(149, 0);
+            this.dataGridViewEmployeeActivity.Location = new System.Drawing.Point(241, 0);
             this.dataGridViewEmployeeActivity.Name = "dataGridViewEmployeeActivity";
             this.dataGridViewEmployeeActivity.RowTemplate.Height = 25;
-            this.dataGridViewEmployeeActivity.Size = new System.Drawing.Size(537, 390);
+            this.dataGridViewEmployeeActivity.Size = new System.Drawing.Size(445, 390);
             this.dataGridViewEmployeeActivity.TabIndex = 1;
             // 
             // FormEmployeeActivities
@@ -64,6 +64,7 @@ namespace MayNapKhiTPA.Forms.ActivityManagement
             this.Controls.Add(this.dataGridViewEmployeeActivity);
             this.Controls.Add(this.panelUser);
             this.Name = "FormEmployeeActivities";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FormEmployeeActivities";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEmployeeActivity)).EndInit();
             this.ResumeLayout(false);
