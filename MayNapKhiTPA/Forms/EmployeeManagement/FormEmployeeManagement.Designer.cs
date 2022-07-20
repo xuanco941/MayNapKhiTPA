@@ -30,11 +30,11 @@ namespace MayNapKhiTPA.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEmployeeManagement));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageUser = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -106,20 +106,20 @@ namespace MayNapKhiTPA.Forms
             // 
             this.dataGridViewUser.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewUser.BackgroundColor = System.Drawing.Color.CornflowerBlue;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewUser.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewUser.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dataGridViewUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewUser.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewUser.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewUser.Name = "dataGridViewUser";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewUser.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewUser.RowsDefaultCellStyle = dataGridViewCellStyle14;
             this.dataGridViewUser.Size = new System.Drawing.Size(983, 426);
             this.dataGridViewUser.TabIndex = 0;
             // 
@@ -265,20 +265,20 @@ namespace MayNapKhiTPA.Forms
             // 
             this.dataGridViewGroup.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewGroup.BackgroundColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewGroup.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewGroup.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.dataGridViewGroup.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewGroup.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewGroup.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewGroup.Name = "dataGridViewGroup";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewGroup.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewGroup.RowsDefaultCellStyle = dataGridViewCellStyle16;
             this.dataGridViewGroup.Size = new System.Drawing.Size(983, 426);
             this.dataGridViewGroup.TabIndex = 0;
             // 
@@ -436,7 +436,7 @@ namespace MayNapKhiTPA.Forms
             this.textBoxT.BorderFocusColor = System.Drawing.SystemColors.ActiveCaption;
             this.textBoxT.BorderRadius = 5;
             this.textBoxT.BorderSize = 1;
-            this.textBoxT.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxT.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxT.Location = new System.Drawing.Point(0, 12);
             this.textBoxT.Multiline = false;
             this.textBoxT.Name = "textBoxT";
@@ -444,7 +444,7 @@ namespace MayNapKhiTPA.Forms
             this.textBoxT.PasswordChar = false;
             this.textBoxT.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.textBoxT.PlaceholderText = "Nhập họ tên hoặc tài khoản";
-            this.textBoxT.Size = new System.Drawing.Size(162, 29);
+            this.textBoxT.Size = new System.Drawing.Size(162, 35);
             this.textBoxT.TabIndex = 23;
             this.textBoxT.Texts = "Nhập họ tên hoặc tài khoản";
             this.textBoxT.UnderlinedStyle = false;
@@ -456,7 +456,7 @@ namespace MayNapKhiTPA.Forms
             this.textBoxT1.BorderFocusColor = System.Drawing.SystemColors.ActiveCaption;
             this.textBoxT1.BorderRadius = 5;
             this.textBoxT1.BorderSize = 1;
-            this.textBoxT1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxT1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxT1.Location = new System.Drawing.Point(3, 12);
             this.textBoxT1.Multiline = false;
             this.textBoxT1.Name = "textBoxT1";
@@ -464,7 +464,7 @@ namespace MayNapKhiTPA.Forms
             this.textBoxT1.PasswordChar = false;
             this.textBoxT1.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.textBoxT1.PlaceholderText = "Nhập tên quyền";
-            this.textBoxT1.Size = new System.Drawing.Size(162, 29);
+            this.textBoxT1.Size = new System.Drawing.Size(162, 35);
             this.textBoxT1.TabIndex = 25;
             this.textBoxT1.Texts = "Nhập tên quyền";
             this.textBoxT1.UnderlinedStyle = false;

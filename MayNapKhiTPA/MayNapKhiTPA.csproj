@@ -183,6 +183,9 @@
     <EmbeddedResource Include="Forms\FormResult.resx">
       <DependentUpon>FormResult.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormSetting.resx">
+      <DependentUpon>FormSetting.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormTestControl.resx">
       <DependentUpon>FormTestControl.cs</DependentUpon>
     </EmbeddedResource>

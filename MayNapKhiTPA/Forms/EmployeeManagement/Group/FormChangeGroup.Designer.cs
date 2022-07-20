@@ -39,9 +39,9 @@ namespace MayNapKhiTPA.Forms.EmployeeManagement.Group
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBoxT2 = new LW_PhanMemBaoGia.MyControls.ComboBoxT();
             this.buttonCustom1 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.buttonDangNhap = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -155,26 +155,6 @@ namespace MayNapKhiTPA.Forms.EmployeeManagement.Group
             this.label8.TabIndex = 33;
             this.label8.Text = "Cập Nhật Quyền Hạn";
             // 
-            // comboBoxT2
-            // 
-            this.comboBoxT2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.comboBoxT2.BorderColor = System.Drawing.Color.CornflowerBlue;
-            this.comboBoxT2.BorderSize = 1;
-            this.comboBoxT2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.comboBoxT2.Enabled = false;
-            this.comboBoxT2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxT2.ForeColor = System.Drawing.Color.DimGray;
-            this.comboBoxT2.IconColor = System.Drawing.Color.CornflowerBlue;
-            this.comboBoxT2.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.comboBoxT2.ListTextColor = System.Drawing.Color.DimGray;
-            this.comboBoxT2.Location = new System.Drawing.Point(137, 111);
-            this.comboBoxT2.MinimumSize = new System.Drawing.Size(200, 30);
-            this.comboBoxT2.Name = "comboBoxT2";
-            this.comboBoxT2.Padding = new System.Windows.Forms.Padding(1);
-            this.comboBoxT2.Size = new System.Drawing.Size(303, 30);
-            this.comboBoxT2.TabIndex = 71;
-            this.comboBoxT2.Texts = "";
-            // 
             // buttonCustom1
             // 
             this.buttonCustom1.BackColor = System.Drawing.Color.Brown;
@@ -213,15 +193,24 @@ namespace MayNapKhiTPA.Forms.EmployeeManagement.Group
             this.buttonDangNhap.TextColor = System.Drawing.Color.White;
             this.buttonDangNhap.UseVisualStyleBackColor = false;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(138, 111);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(302, 33);
+            this.comboBox1.TabIndex = 75;
+            // 
             // FormChangeGroup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(587, 468);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.buttonCustom1);
             this.Controls.Add(this.buttonDangNhap);
-            this.Controls.Add(this.comboBoxT2);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label7);
@@ -247,8 +236,8 @@ namespace MayNapKhiTPA.Forms.EmployeeManagement.Group
         private CheckBox checkBox1;
         private CheckBox checkBox2;
         private Label label8;
-        private LW_PhanMemBaoGia.MyControls.ComboBoxT comboBoxT2;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom1;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonDangNhap;
+        private ComboBox comboBox1;
     }
 }

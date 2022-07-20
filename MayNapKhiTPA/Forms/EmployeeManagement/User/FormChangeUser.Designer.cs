@@ -33,8 +33,6 @@ namespace MayNapKhiTPA.Forms.EmployeeManagement.User
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.textBoxT2 = new LW_PhanMemBaoGia.MyControls.TextBoxT();
-            this.comboBoxT1 = new LW_PhanMemBaoGia.MyControls.ComboBoxT();
-            this.comboBoxT = new LW_PhanMemBaoGia.MyControls.ComboBoxT();
             this.textBoxT1 = new LW_PhanMemBaoGia.MyControls.TextBoxT();
             this.textBoxPassword = new LW_PhanMemBaoGia.MyControls.TextBoxT();
             this.textBoxFullName = new LW_PhanMemBaoGia.MyControls.TextBoxT();
@@ -44,9 +42,11 @@ namespace MayNapKhiTPA.Forms.EmployeeManagement.User
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.comboBoxT2 = new LW_PhanMemBaoGia.MyControls.ComboBoxT();
             this.buttonDangNhap = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.buttonCustom1 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label7
@@ -90,46 +90,6 @@ namespace MayNapKhiTPA.Forms.EmployeeManagement.User
             this.textBoxT2.TabIndex = 69;
             this.textBoxT2.Texts = "";
             this.textBoxT2.UnderlinedStyle = false;
-            // 
-            // comboBoxT1
-            // 
-            this.comboBoxT1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.comboBoxT1.BorderColor = System.Drawing.Color.CornflowerBlue;
-            this.comboBoxT1.BorderSize = 1;
-            this.comboBoxT1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.comboBoxT1.Enabled = false;
-            this.comboBoxT1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxT1.ForeColor = System.Drawing.Color.DimGray;
-            this.comboBoxT1.IconColor = System.Drawing.Color.CornflowerBlue;
-            this.comboBoxT1.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.comboBoxT1.ListTextColor = System.Drawing.Color.DimGray;
-            this.comboBoxT1.Location = new System.Drawing.Point(195, 373);
-            this.comboBoxT1.MinimumSize = new System.Drawing.Size(200, 30);
-            this.comboBoxT1.Name = "comboBoxT1";
-            this.comboBoxT1.Padding = new System.Windows.Forms.Padding(1);
-            this.comboBoxT1.Size = new System.Drawing.Size(433, 30);
-            this.comboBoxT1.TabIndex = 68;
-            this.comboBoxT1.Texts = "";
-            // 
-            // comboBoxT
-            // 
-            this.comboBoxT.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.comboBoxT.BorderColor = System.Drawing.Color.CornflowerBlue;
-            this.comboBoxT.BorderSize = 1;
-            this.comboBoxT.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.comboBoxT.Enabled = false;
-            this.comboBoxT.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxT.ForeColor = System.Drawing.Color.DimGray;
-            this.comboBoxT.IconColor = System.Drawing.Color.CornflowerBlue;
-            this.comboBoxT.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.comboBoxT.ListTextColor = System.Drawing.Color.DimGray;
-            this.comboBoxT.Location = new System.Drawing.Point(428, 176);
-            this.comboBoxT.MinimumSize = new System.Drawing.Size(200, 30);
-            this.comboBoxT.Name = "comboBoxT";
-            this.comboBoxT.Padding = new System.Windows.Forms.Padding(1);
-            this.comboBoxT.Size = new System.Drawing.Size(200, 30);
-            this.comboBoxT.TabIndex = 67;
-            this.comboBoxT.Texts = "";
             // 
             // textBoxT1
             // 
@@ -257,26 +217,6 @@ namespace MayNapKhiTPA.Forms.EmployeeManagement.User
             this.label9.TabIndex = 56;
             this.label9.Text = "Họ tên";
             // 
-            // comboBoxT2
-            // 
-            this.comboBoxT2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.comboBoxT2.BorderColor = System.Drawing.Color.CornflowerBlue;
-            this.comboBoxT2.BorderSize = 1;
-            this.comboBoxT2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.comboBoxT2.Enabled = false;
-            this.comboBoxT2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxT2.ForeColor = System.Drawing.Color.DimGray;
-            this.comboBoxT2.IconColor = System.Drawing.Color.CornflowerBlue;
-            this.comboBoxT2.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.comboBoxT2.ListTextColor = System.Drawing.Color.DimGray;
-            this.comboBoxT2.Location = new System.Drawing.Point(195, 113);
-            this.comboBoxT2.MinimumSize = new System.Drawing.Size(200, 30);
-            this.comboBoxT2.Name = "comboBoxT2";
-            this.comboBoxT2.Padding = new System.Windows.Forms.Padding(1);
-            this.comboBoxT2.Size = new System.Drawing.Size(433, 30);
-            this.comboBoxT2.TabIndex = 70;
-            this.comboBoxT2.Texts = "";
-            // 
             // buttonDangNhap
             // 
             this.buttonDangNhap.BackColor = System.Drawing.Color.Goldenrod;
@@ -315,18 +255,45 @@ namespace MayNapKhiTPA.Forms.EmployeeManagement.User
             this.buttonCustom1.TextColor = System.Drawing.Color.White;
             this.buttonCustom1.UseVisualStyleBackColor = false;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(428, 176);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(200, 33);
+            this.comboBox1.TabIndex = 77;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(195, 113);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(433, 33);
+            this.comboBox2.TabIndex = 78;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(195, 373);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(433, 33);
+            this.comboBox3.TabIndex = 79;
+            // 
             // FormChangeUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(811, 536);
+            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.buttonCustom1);
             this.Controls.Add(this.buttonDangNhap);
-            this.Controls.Add(this.comboBoxT2);
             this.Controls.Add(this.textBoxT2);
-            this.Controls.Add(this.comboBoxT1);
-            this.Controls.Add(this.comboBoxT);
             this.Controls.Add(this.textBoxT1);
             this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.textBoxFullName);
@@ -352,8 +319,6 @@ namespace MayNapKhiTPA.Forms.EmployeeManagement.User
         private Label label7;
         private Label label8;
         private LW_PhanMemBaoGia.MyControls.TextBoxT textBoxT2;
-        private LW_PhanMemBaoGia.MyControls.ComboBoxT comboBoxT1;
-        private LW_PhanMemBaoGia.MyControls.ComboBoxT comboBoxT;
         private LW_PhanMemBaoGia.MyControls.TextBoxT textBoxT1;
         private LW_PhanMemBaoGia.MyControls.TextBoxT textBoxPassword;
         private LW_PhanMemBaoGia.MyControls.TextBoxT textBoxFullName;
@@ -363,8 +328,10 @@ namespace MayNapKhiTPA.Forms.EmployeeManagement.User
         private Label label5;
         private Label label2;
         private Label label9;
-        private LW_PhanMemBaoGia.MyControls.ComboBoxT comboBoxT2;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonDangNhap;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom1;
+        private ComboBox comboBox1;
+        private ComboBox comboBox2;
+        private ComboBox comboBox3;
     }
 }

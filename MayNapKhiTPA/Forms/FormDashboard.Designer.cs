@@ -64,11 +64,8 @@ namespace MayNapKhiTPA.Forms
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.button10 = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.button11 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -87,7 +84,6 @@ namespace MayNapKhiTPA.Forms
             this.panel6 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.buttonCustom1 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.buttonCustom2 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.buttonCustom3 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.panel23 = new System.Windows.Forms.Panel();
@@ -99,7 +95,11 @@ namespace MayNapKhiTPA.Forms
             this.textBoxT2 = new LW_PhanMemBaoGia.MyControls.TextBoxT();
             this.panel27 = new System.Windows.Forms.Panel();
             this.textBoxT3 = new LW_PhanMemBaoGia.MyControls.TextBoxT();
-            this.comboBoxT2 = new LW_PhanMemBaoGia.MyControls.ComboBoxT();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.buttonCustom1 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -553,26 +553,6 @@ namespace MayNapKhiTPA.Forms
             this.panel7.Size = new System.Drawing.Size(370, 96);
             this.panel7.TabIndex = 0;
             // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.DarkOrange;
-            this.button8.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button8.Location = new System.Drawing.Point(0, 0);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(368, 94);
-            this.button8.TabIndex = 6;
-            this.button8.Text = "Áp suất : 50";
-            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button8.UseVisualStyleBackColor = false;
-            // 
             // panel8
             // 
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -583,26 +563,6 @@ namespace MayNapKhiTPA.Forms
             this.panel8.Size = new System.Drawing.Size(370, 96);
             this.panel8.TabIndex = 1;
             // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.button10.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
-            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button10.Location = new System.Drawing.Point(0, 0);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(368, 94);
-            this.button10.TabIndex = 7;
-            this.button10.Text = "Thể tích : 130";
-            this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button10.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button10.UseVisualStyleBackColor = false;
-            // 
             // panel9
             // 
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -612,26 +572,6 @@ namespace MayNapKhiTPA.Forms
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(370, 98);
             this.panel9.TabIndex = 2;
-            // 
-            // button11
-            // 
-            this.button11.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button11.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.button11.Image = ((System.Drawing.Image)(resources.GetObject("button11.Image")));
-            this.button11.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button11.Location = new System.Drawing.Point(0, 0);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(368, 96);
-            this.button11.TabIndex = 7;
-            this.button11.Text = "Lưu lượng : 80";
-            this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button11.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button11.UseVisualStyleBackColor = false;
             // 
             // button9
             // 
@@ -747,7 +687,7 @@ namespace MayNapKhiTPA.Forms
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 267F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 308F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(695, 308);
             this.tableLayoutPanel3.TabIndex = 7;
             // 
@@ -877,31 +817,6 @@ namespace MayNapKhiTPA.Forms
             this.button2.Text = "Điều khiển";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // buttonCustom1
-            // 
-            this.buttonCustom1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCustom1.BackColor = System.Drawing.Color.Green;
-            this.buttonCustom1.BackgroundColor = System.Drawing.Color.Green;
-            this.buttonCustom1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonCustom1.BorderRadius = 6;
-            this.buttonCustom1.BorderSize = 0;
-            this.buttonCustom1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonCustom1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCustom1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCustom1.ForeColor = System.Drawing.Color.White;
-            this.buttonCustom1.Image = ((System.Drawing.Image)(resources.GetObject("buttonCustom1.Image")));
-            this.buttonCustom1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCustom1.Location = new System.Drawing.Point(99, 257);
-            this.buttonCustom1.Name = "buttonCustom1";
-            this.buttonCustom1.Size = new System.Drawing.Size(154, 36);
-            this.buttonCustom1.TabIndex = 16;
-            this.buttonCustom1.Text = "Lưu";
-            this.buttonCustom1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonCustom1.TextColor = System.Drawing.Color.White;
-            this.buttonCustom1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.buttonCustom1.UseVisualStyleBackColor = false;
-            // 
             // buttonCustom2
             // 
             this.buttonCustom2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -950,7 +865,7 @@ namespace MayNapKhiTPA.Forms
             // 
             // panel23
             // 
-            this.panel23.Controls.Add(this.comboBoxT2);
+            this.panel23.Controls.Add(this.comboBox1);
             this.panel23.Controls.Add(this.label1);
             this.panel23.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel23.Location = new System.Drawing.Point(0, 39);
@@ -1086,27 +1001,101 @@ namespace MayNapKhiTPA.Forms
             this.textBoxT3.Texts = "";
             this.textBoxT3.UnderlinedStyle = false;
             // 
-            // comboBoxT2
+            // button8
             // 
-            this.comboBoxT2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.button8.BackColor = System.Drawing.Color.DarkOrange;
+            this.button8.Cursor = System.Windows.Forms.Cursors.Default;
+            this.button8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
+            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button8.Location = new System.Drawing.Point(0, 0);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(368, 94);
+            this.button8.TabIndex = 6;
+            this.button8.Text = "Áp suất : 50";
+            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button8.UseVisualStyleBackColor = false;
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.button10.Cursor = System.Windows.Forms.Cursors.Default;
+            this.button10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
+            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button10.Location = new System.Drawing.Point(0, 0);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(368, 94);
+            this.button10.TabIndex = 7;
+            this.button10.Text = "Thể tích : 130";
+            this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button10.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button10.UseVisualStyleBackColor = false;
+            // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.button11.Cursor = System.Windows.Forms.Cursors.Default;
+            this.button11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button11.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.button11.Image = ((System.Drawing.Image)(resources.GetObject("button11.Image")));
+            this.button11.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button11.Location = new System.Drawing.Point(0, 0);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(368, 96);
+            this.button11.TabIndex = 7;
+            this.button11.Text = "Lưu lượng : 80";
+            this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button11.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button11.UseVisualStyleBackColor = false;
+            // 
+            // buttonCustom1
+            // 
+            this.buttonCustom1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBoxT2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.comboBoxT2.BorderColor = System.Drawing.Color.CornflowerBlue;
-            this.comboBoxT2.BorderSize = 1;
-            this.comboBoxT2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.comboBoxT2.Enabled = false;
-            this.comboBoxT2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxT2.ForeColor = System.Drawing.Color.DimGray;
-            this.comboBoxT2.IconColor = System.Drawing.Color.CornflowerBlue;
-            this.comboBoxT2.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.comboBoxT2.ListTextColor = System.Drawing.Color.DimGray;
-            this.comboBoxT2.Location = new System.Drawing.Point(136, 11);
-            this.comboBoxT2.MinimumSize = new System.Drawing.Size(200, 30);
-            this.comboBoxT2.Name = "comboBoxT2";
-            this.comboBoxT2.Padding = new System.Windows.Forms.Padding(1);
-            this.comboBoxT2.Size = new System.Drawing.Size(200, 30);
-            this.comboBoxT2.TabIndex = 72;
-            this.comboBoxT2.Texts = "";
+            this.buttonCustom1.BackColor = System.Drawing.Color.Green;
+            this.buttonCustom1.BackgroundColor = System.Drawing.Color.Green;
+            this.buttonCustom1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonCustom1.BorderRadius = 6;
+            this.buttonCustom1.BorderSize = 0;
+            this.buttonCustom1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonCustom1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCustom1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCustom1.ForeColor = System.Drawing.Color.White;
+            this.buttonCustom1.Image = ((System.Drawing.Image)(resources.GetObject("buttonCustom1.Image")));
+            this.buttonCustom1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCustom1.Location = new System.Drawing.Point(99, 257);
+            this.buttonCustom1.Name = "buttonCustom1";
+            this.buttonCustom1.Size = new System.Drawing.Size(154, 36);
+            this.buttonCustom1.TabIndex = 16;
+            this.buttonCustom1.Text = "Lưu";
+            this.buttonCustom1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonCustom1.TextColor = System.Drawing.Color.White;
+            this.buttonCustom1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonCustom1.UseVisualStyleBackColor = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(133, 6);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(203, 33);
+            this.comboBox1.TabIndex = 77;
             // 
             // FormDashboard
             // 
@@ -1227,6 +1216,6 @@ namespace MayNapKhiTPA.Forms
         private LW_PhanMemBaoGia.MyControls.TextBoxT textBoxT2;
         private LW_PhanMemBaoGia.MyControls.TextBoxT textBoxT1;
         private LW_PhanMemBaoGia.MyControls.TextBoxT textBoxFullName;
-        private LW_PhanMemBaoGia.MyControls.ComboBoxT comboBoxT2;
+        private ComboBox comboBox1;
     }
 }

@@ -41,7 +41,7 @@ namespace MayNapKhiTPA.Forms.ActivityManagement
             this.panelUser.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelUser.Location = new System.Drawing.Point(0, 0);
             this.panelUser.Name = "panelUser";
-            this.panelUser.Size = new System.Drawing.Size(241, 390);
+            this.panelUser.Size = new System.Drawing.Size(241, 530);
             this.panelUser.TabIndex = 0;
             // 
             // dataGridViewEmployeeActivity
@@ -52,7 +52,7 @@ namespace MayNapKhiTPA.Forms.ActivityManagement
             this.dataGridViewEmployeeActivity.Location = new System.Drawing.Point(241, 0);
             this.dataGridViewEmployeeActivity.Name = "dataGridViewEmployeeActivity";
             this.dataGridViewEmployeeActivity.RowTemplate.Height = 25;
-            this.dataGridViewEmployeeActivity.Size = new System.Drawing.Size(445, 390);
+            this.dataGridViewEmployeeActivity.Size = new System.Drawing.Size(722, 530);
             this.dataGridViewEmployeeActivity.TabIndex = 1;
             // 
             // FormEmployeeActivities
@@ -60,7 +60,7 @@ namespace MayNapKhiTPA.Forms.ActivityManagement
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(686, 390);
+            this.ClientSize = new System.Drawing.Size(963, 530);
             this.Controls.Add(this.dataGridViewEmployeeActivity);
             this.Controls.Add(this.panelUser);
             this.Name = "FormEmployeeActivities";

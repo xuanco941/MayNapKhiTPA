@@ -32,10 +32,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.buttonExit = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
-            this.buttonDangNhap = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.textBoxTaiKhoan = new LW_PhanMemBaoGia.MyControls.TextBoxT();
             this.textBoxMatKhau = new LW_PhanMemBaoGia.MyControls.TextBoxT();
+            this.buttonExit = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.buttonDangNhap = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.SuspendLayout();
             // 
             // label2
@@ -70,6 +70,48 @@
             this.label3.Size = new System.Drawing.Size(262, 34);
             this.label3.TabIndex = 10;
             this.label3.Text = "Máy Nạp Khí TPA";
+            // 
+            // textBoxTaiKhoan
+            // 
+            this.textBoxTaiKhoan.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxTaiKhoan.BorderColor = System.Drawing.Color.CornflowerBlue;
+            this.textBoxTaiKhoan.BorderFocusColor = System.Drawing.SystemColors.ActiveCaption;
+            this.textBoxTaiKhoan.BorderRadius = 5;
+            this.textBoxTaiKhoan.BorderSize = 1;
+            this.textBoxTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxTaiKhoan.Location = new System.Drawing.Point(203, 111);
+            this.textBoxTaiKhoan.Multiline = false;
+            this.textBoxTaiKhoan.Name = "textBoxTaiKhoan";
+            this.textBoxTaiKhoan.Padding = new System.Windows.Forms.Padding(7);
+            this.textBoxTaiKhoan.PasswordChar = false;
+            this.textBoxTaiKhoan.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.textBoxTaiKhoan.PlaceholderText = "";
+            this.textBoxTaiKhoan.Size = new System.Drawing.Size(207, 31);
+            this.textBoxTaiKhoan.TabIndex = 14;
+            this.textBoxTaiKhoan.Texts = "";
+            this.textBoxTaiKhoan.UnderlinedStyle = false;
+            this.textBoxTaiKhoan.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxTaiKhoan_KeyDown);
+            // 
+            // textBoxMatKhau
+            // 
+            this.textBoxMatKhau.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxMatKhau.BorderColor = System.Drawing.Color.CornflowerBlue;
+            this.textBoxMatKhau.BorderFocusColor = System.Drawing.SystemColors.ActiveCaption;
+            this.textBoxMatKhau.BorderRadius = 5;
+            this.textBoxMatKhau.BorderSize = 1;
+            this.textBoxMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxMatKhau.Location = new System.Drawing.Point(203, 158);
+            this.textBoxMatKhau.Multiline = false;
+            this.textBoxMatKhau.Name = "textBoxMatKhau";
+            this.textBoxMatKhau.Padding = new System.Windows.Forms.Padding(7);
+            this.textBoxMatKhau.PasswordChar = true;
+            this.textBoxMatKhau.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.textBoxMatKhau.PlaceholderText = "";
+            this.textBoxMatKhau.Size = new System.Drawing.Size(207, 31);
+            this.textBoxMatKhau.TabIndex = 15;
+            this.textBoxMatKhau.Texts = "";
+            this.textBoxMatKhau.UnderlinedStyle = false;
+            this.textBoxMatKhau.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxTaiKhoan_KeyDown);
             // 
             // buttonExit
             // 
@@ -116,48 +158,6 @@
             this.buttonDangNhap.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.buttonDangNhap.UseVisualStyleBackColor = false;
             this.buttonDangNhap.Click += new System.EventHandler(this.buttonDangNhap_Click);
-            // 
-            // textBoxTaiKhoan
-            // 
-            this.textBoxTaiKhoan.BackColor = System.Drawing.SystemColors.Window;
-            this.textBoxTaiKhoan.BorderColor = System.Drawing.Color.CornflowerBlue;
-            this.textBoxTaiKhoan.BorderFocusColor = System.Drawing.SystemColors.ActiveCaption;
-            this.textBoxTaiKhoan.BorderRadius = 5;
-            this.textBoxTaiKhoan.BorderSize = 1;
-            this.textBoxTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTaiKhoan.Location = new System.Drawing.Point(203, 111);
-            this.textBoxTaiKhoan.Multiline = false;
-            this.textBoxTaiKhoan.Name = "textBoxTaiKhoan";
-            this.textBoxTaiKhoan.Padding = new System.Windows.Forms.Padding(7);
-            this.textBoxTaiKhoan.PasswordChar = false;
-            this.textBoxTaiKhoan.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.textBoxTaiKhoan.PlaceholderText = "";
-            this.textBoxTaiKhoan.Size = new System.Drawing.Size(207, 30);
-            this.textBoxTaiKhoan.TabIndex = 14;
-            this.textBoxTaiKhoan.Texts = "";
-            this.textBoxTaiKhoan.UnderlinedStyle = false;
-            this.textBoxTaiKhoan.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxTaiKhoan_KeyDown);
-            // 
-            // textBoxMatKhau
-            // 
-            this.textBoxMatKhau.BackColor = System.Drawing.SystemColors.Window;
-            this.textBoxMatKhau.BorderColor = System.Drawing.Color.CornflowerBlue;
-            this.textBoxMatKhau.BorderFocusColor = System.Drawing.SystemColors.ActiveCaption;
-            this.textBoxMatKhau.BorderRadius = 5;
-            this.textBoxMatKhau.BorderSize = 1;
-            this.textBoxMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxMatKhau.Location = new System.Drawing.Point(203, 158);
-            this.textBoxMatKhau.Multiline = false;
-            this.textBoxMatKhau.Name = "textBoxMatKhau";
-            this.textBoxMatKhau.Padding = new System.Windows.Forms.Padding(7);
-            this.textBoxMatKhau.PasswordChar = true;
-            this.textBoxMatKhau.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.textBoxMatKhau.PlaceholderText = "";
-            this.textBoxMatKhau.Size = new System.Drawing.Size(207, 30);
-            this.textBoxMatKhau.TabIndex = 15;
-            this.textBoxMatKhau.Texts = "";
-            this.textBoxMatKhau.UnderlinedStyle = false;
-            this.textBoxMatKhau.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxTaiKhoan_KeyDown);
             // 
             // FormLogin
             // 
