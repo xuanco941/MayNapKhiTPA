@@ -30,13 +30,13 @@ namespace MayNapKhiTPA.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormActivity));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridViewActivity = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button6 = new System.Windows.Forms.Button();
             this.buttonTrangCuoi = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -47,7 +47,6 @@ namespace MayNapKhiTPA.Forms
             this.dateTimePickerTuNgay = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePickerToiNgay = new System.Windows.Forms.DateTimePicker();
-            this.buttonLoc = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.buttonCallFormEmployeeActivities = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -55,6 +54,8 @@ namespace MayNapKhiTPA.Forms
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.labelBanGhiMoiTrang = new System.Windows.Forms.Label();
             this.labelTongSoTrang = new System.Windows.Forms.Label();
+            this.button7 = new System.Windows.Forms.Button();
+            this.buttonCustom2 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -114,8 +115,8 @@ namespace MayNapKhiTPA.Forms
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.button7);
             this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Controls.Add(this.button6);
             this.panel2.Controls.Add(this.buttonTrangCuoi);
             this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.button3);
@@ -129,21 +130,10 @@ namespace MayNapKhiTPA.Forms
             // textBox1
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(562, 14);
+            this.textBox1.Location = new System.Drawing.Point(557, 14);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(71, 20);
             this.textBox1.TabIndex = 5;
-            // 
-            // button6
-            // 
-            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.button6.Location = new System.Drawing.Point(638, 13);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(57, 23);
-            this.button6.TabIndex = 4;
-            this.button6.Text = "GO";
-            this.button6.UseVisualStyleBackColor = true;
             // 
             // buttonTrangCuoi
             // 
@@ -198,11 +188,11 @@ namespace MayNapKhiTPA.Forms
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.buttonCustom2);
             this.panel5.Controls.Add(this.label1);
             this.panel5.Controls.Add(this.dateTimePickerTuNgay);
             this.panel5.Controls.Add(this.label2);
             this.panel5.Controls.Add(this.dateTimePickerToiNgay);
-            this.panel5.Controls.Add(this.buttonLoc);
             this.panel5.Controls.Add(this.label3);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(0, 48);
@@ -257,19 +247,6 @@ namespace MayNapKhiTPA.Forms
             this.dateTimePickerToiNgay.Name = "dateTimePickerToiNgay";
             this.dateTimePickerToiNgay.Size = new System.Drawing.Size(125, 20);
             this.dateTimePickerToiNgay.TabIndex = 5;
-            // 
-            // buttonLoc
-            // 
-            this.buttonLoc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonLoc.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.buttonLoc.Location = new System.Drawing.Point(59, 135);
-            this.buttonLoc.Name = "buttonLoc";
-            this.buttonLoc.Size = new System.Drawing.Size(83, 27);
-            this.buttonLoc.TabIndex = 7;
-            this.buttonLoc.Text = "Lọc";
-            this.buttonLoc.UseVisualStyleBackColor = true;
-            this.buttonLoc.Click += new System.EventHandler(this.buttonLoc_Click);
             // 
             // label3
             // 
@@ -355,6 +332,45 @@ namespace MayNapKhiTPA.Forms
             this.labelTongSoTrang.TabIndex = 1;
             this.labelTongSoTrang.Text = "label5";
             // 
+            // button7
+            // 
+            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
+            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.Location = new System.Drawing.Point(634, 11);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(57, 23);
+            this.button7.TabIndex = 7;
+            this.button7.Text = "Đi";
+            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // buttonCustom2
+            // 
+            this.buttonCustom2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonCustom2.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.buttonCustom2.BackgroundColor = System.Drawing.Color.LightSkyBlue;
+            this.buttonCustom2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonCustom2.BorderRadius = 0;
+            this.buttonCustom2.BorderSize = 0;
+            this.buttonCustom2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCustom2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCustom2.ForeColor = System.Drawing.Color.Black;
+            this.buttonCustom2.Image = ((System.Drawing.Image)(resources.GetObject("buttonCustom2.Image")));
+            this.buttonCustom2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonCustom2.Location = new System.Drawing.Point(63, 142);
+            this.buttonCustom2.Name = "buttonCustom2";
+            this.buttonCustom2.Size = new System.Drawing.Size(83, 29);
+            this.buttonCustom2.TabIndex = 19;
+            this.buttonCustom2.Text = "Lọc";
+            this.buttonCustom2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCustom2.TextColor = System.Drawing.Color.Black;
+            this.buttonCustom2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonCustom2.UseVisualStyleBackColor = false;
+            // 
             // FormActivity
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -394,12 +410,10 @@ namespace MayNapKhiTPA.Forms
         private Label label2;
         private Label label1;
         private TextBox textBox1;
-        private Button button6;
         private Button buttonTrangCuoi;
         private Button button4;
         private Button button3;
         private Button button2;
-        private Button buttonLoc;
         private GroupBox groupBox1;
         private Label labelBanGhiMoiTrang;
         private Label labelTongSoTrang;
@@ -407,5 +421,7 @@ namespace MayNapKhiTPA.Forms
         private Label labelNotify;
         private Button buttonCallFormEmployeeActivities;
         private Panel panel5;
+        private Button button7;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom2;
     }
 }

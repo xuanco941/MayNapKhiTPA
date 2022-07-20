@@ -76,3 +76,5 @@ D:\WorkPlace\C-Sharp\Working\DESKTOP\MayNapKhiTPA\MayNapKhiTPA\obj\Debug\MayNapK
 D:\WorkPlace\C-Sharp\Working\DESKTOP\MayNapKhiTPA\MayNapKhiTPA\obj\Debug\MayNapKhiTPA.csproj.CopyComplete
 D:\WorkPlace\C-Sharp\Working\DESKTOP\MayNapKhiTPA\MayNapKhiTPA\obj\Debug\MayNapKhiTPA.exe
 D:\WorkPlace\C-Sharp\Working\DESKTOP\MayNapKhiTPA\MayNapKhiTPA\obj\Debug\MayNapKhiTPA.pdb
+D:\WorkPlace\C-Sharp\Working\DESKTOP\MayNapKhiTPA\MayNapKhiTPA\bin\Debug\TrongTool.dll
+D:\WorkPlace\C-Sharp\Working\DESKTOP\MayNapKhiTPA\MayNapKhiTPA\obj\Debug\MayNapKhiTPA.Forms.FormTestControl.resources

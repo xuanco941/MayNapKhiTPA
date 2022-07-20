@@ -64,7 +64,7 @@ namespace MayNapKhiTPA.Forms.ActivityManagement
             this.Controls.Add(this.dataGridViewEmployeeActivity);
             this.Controls.Add(this.panelUser);
             this.Name = "FormEmployeeActivities";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormEmployeeActivities";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEmployeeActivity)).EndInit();
             this.ResumeLayout(false);

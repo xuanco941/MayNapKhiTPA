@@ -30,34 +30,34 @@ namespace MayNapKhiTPA.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEmployeeManagement));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageUser = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridViewUser = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.buttonAddUser = new System.Windows.Forms.Button();
-            this.buttonChangeUser = new System.Windows.Forms.Button();
+            this.buttonChangeUser = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.buttonAddUser = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.buttonSearchUser = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.textBoxSearchUser = new System.Windows.Forms.TextBox();
-            this.buttonSearchUser = new System.Windows.Forms.Button();
             this.buttonThemNhanVien = new System.Windows.Forms.Button();
             this.buttonSuaNhanVien = new System.Windows.Forms.Button();
             this.tabPageGroup = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridViewGroup = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.buttonAddGroup = new System.Windows.Forms.Button();
-            this.buttonChangeGroup = new System.Windows.Forms.Button();
+            this.buttonChangeGroup = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.buttonAddGroup = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.buttonSearchGroup = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.textBoxSearchGroup = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.buttonSearchGroup = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPageUser.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -89,7 +89,7 @@ namespace MayNapKhiTPA.Forms
             this.tabPageUser.Location = new System.Drawing.Point(4, 29);
             this.tabPageUser.Name = "tabPageUser";
             this.tabPageUser.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageUser.Size = new System.Drawing.Size(942, 467);
+            this.tabPageUser.Size = new System.Drawing.Size(989, 483);
             this.tabPageUser.TabIndex = 0;
             this.tabPageUser.Text = "Tài khoản thành viên";
             // 
@@ -99,77 +99,115 @@ namespace MayNapKhiTPA.Forms
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(936, 410);
+            this.panel2.Size = new System.Drawing.Size(983, 426);
             this.panel2.TabIndex = 8;
             // 
             // dataGridViewUser
             // 
             this.dataGridViewUser.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewUser.BackgroundColor = System.Drawing.Color.CornflowerBlue;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewUser.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewUser.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridViewUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewUser.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewUser.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewUser.Name = "dataGridViewUser";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewUser.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewUser.Size = new System.Drawing.Size(936, 410);
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewUser.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            this.dataGridViewUser.Size = new System.Drawing.Size(983, 426);
             this.dataGridViewUser.TabIndex = 0;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
-            this.panel3.Controls.Add(this.buttonAddUser);
             this.panel3.Controls.Add(this.buttonChangeUser);
-            this.panel3.Controls.Add(this.textBoxSearchUser);
+            this.panel3.Controls.Add(this.buttonAddUser);
             this.panel3.Controls.Add(this.buttonSearchUser);
+            this.panel3.Controls.Add(this.textBoxSearchUser);
             this.panel3.Controls.Add(this.buttonThemNhanVien);
             this.panel3.Controls.Add(this.buttonSuaNhanVien);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.panel3.Location = new System.Drawing.Point(3, 413);
+            this.panel3.Location = new System.Drawing.Point(3, 429);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(936, 51);
+            this.panel3.Size = new System.Drawing.Size(983, 51);
             this.panel3.TabIndex = 9;
-            // 
-            // buttonAddUser
-            // 
-            this.buttonAddUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAddUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonAddUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.buttonAddUser.Image = ((System.Drawing.Image)(resources.GetObject("buttonAddUser.Image")));
-            this.buttonAddUser.Location = new System.Drawing.Point(726, 11);
-            this.buttonAddUser.Name = "buttonAddUser";
-            this.buttonAddUser.Size = new System.Drawing.Size(104, 30);
-            this.buttonAddUser.TabIndex = 6;
-            this.buttonAddUser.Text = "Thêm mới";
-            this.buttonAddUser.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.buttonAddUser.UseVisualStyleBackColor = true;
-            this.buttonAddUser.Click += new System.EventHandler(this.buttonAddUser_Click);
             // 
             // buttonChangeUser
             // 
             this.buttonChangeUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonChangeUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonChangeUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.buttonChangeUser.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.buttonChangeUser.BackgroundColor = System.Drawing.Color.DarkGoldenrod;
+            this.buttonChangeUser.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonChangeUser.BorderRadius = 0;
+            this.buttonChangeUser.BorderSize = 0;
+            this.buttonChangeUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonChangeUser.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonChangeUser.ForeColor = System.Drawing.Color.White;
             this.buttonChangeUser.Image = global::MayNapKhiTPA.Properties.Resources.iconfinder_Synchronize_278832;
-            this.buttonChangeUser.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonChangeUser.Location = new System.Drawing.Point(836, 12);
+            this.buttonChangeUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonChangeUser.Location = new System.Drawing.Point(872, 12);
             this.buttonChangeUser.Name = "buttonChangeUser";
-            this.buttonChangeUser.Size = new System.Drawing.Size(96, 29);
-            this.buttonChangeUser.TabIndex = 7;
+            this.buttonChangeUser.Size = new System.Drawing.Size(106, 29);
+            this.buttonChangeUser.TabIndex = 22;
             this.buttonChangeUser.Text = "Thay đổi";
-            this.buttonChangeUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonChangeUser.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonChangeUser.TextColor = System.Drawing.Color.White;
             this.buttonChangeUser.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.buttonChangeUser.UseVisualStyleBackColor = true;
-            this.buttonChangeUser.Click += new System.EventHandler(this.buttonChangeUser_Click);
+            this.buttonChangeUser.UseVisualStyleBackColor = false;
+            this.buttonChangeUser.Click += new System.EventHandler(this.buttonChangeUser_Click_1);
+            // 
+            // buttonAddUser
+            // 
+            this.buttonAddUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonAddUser.BackColor = System.Drawing.Color.Green;
+            this.buttonAddUser.BackgroundColor = System.Drawing.Color.Green;
+            this.buttonAddUser.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonAddUser.BorderRadius = 0;
+            this.buttonAddUser.BorderSize = 0;
+            this.buttonAddUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAddUser.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAddUser.ForeColor = System.Drawing.Color.White;
+            this.buttonAddUser.Image = ((System.Drawing.Image)(resources.GetObject("buttonAddUser.Image")));
+            this.buttonAddUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonAddUser.Location = new System.Drawing.Point(763, 12);
+            this.buttonAddUser.Name = "buttonAddUser";
+            this.buttonAddUser.Size = new System.Drawing.Size(106, 29);
+            this.buttonAddUser.TabIndex = 21;
+            this.buttonAddUser.Text = "Thêm mới";
+            this.buttonAddUser.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonAddUser.TextColor = System.Drawing.Color.White;
+            this.buttonAddUser.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonAddUser.UseVisualStyleBackColor = false;
+            this.buttonAddUser.Click += new System.EventHandler(this.buttonAddUser_Click_1);
+            // 
+            // buttonSearchUser
+            // 
+            this.buttonSearchUser.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.buttonSearchUser.BackgroundColor = System.Drawing.Color.LightSkyBlue;
+            this.buttonSearchUser.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonSearchUser.BorderRadius = 0;
+            this.buttonSearchUser.BorderSize = 0;
+            this.buttonSearchUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSearchUser.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSearchUser.ForeColor = System.Drawing.Color.Black;
+            this.buttonSearchUser.Image = ((System.Drawing.Image)(resources.GetObject("buttonSearchUser.Image")));
+            this.buttonSearchUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonSearchUser.Location = new System.Drawing.Point(190, 12);
+            this.buttonSearchUser.Name = "buttonSearchUser";
+            this.buttonSearchUser.Size = new System.Drawing.Size(72, 29);
+            this.buttonSearchUser.TabIndex = 20;
+            this.buttonSearchUser.Text = "Tìm";
+            this.buttonSearchUser.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonSearchUser.TextColor = System.Drawing.Color.Black;
+            this.buttonSearchUser.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonSearchUser.UseVisualStyleBackColor = false;
             // 
             // textBoxSearchUser
             // 
@@ -179,28 +217,13 @@ namespace MayNapKhiTPA.Forms
             this.textBoxSearchUser.Size = new System.Drawing.Size(180, 29);
             this.textBoxSearchUser.TabIndex = 5;
             // 
-            // buttonSearchUser
-            // 
-            this.buttonSearchUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonSearchUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.buttonSearchUser.Image = ((System.Drawing.Image)(resources.GetObject("buttonSearchUser.Image")));
-            this.buttonSearchUser.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonSearchUser.Location = new System.Drawing.Point(189, 11);
-            this.buttonSearchUser.Name = "buttonSearchUser";
-            this.buttonSearchUser.Size = new System.Drawing.Size(98, 30);
-            this.buttonSearchUser.TabIndex = 4;
-            this.buttonSearchUser.Text = "Tìm kiếm";
-            this.buttonSearchUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSearchUser.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.buttonSearchUser.UseVisualStyleBackColor = true;
-            // 
             // buttonThemNhanVien
             // 
             this.buttonThemNhanVien.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonThemNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.buttonThemNhanVien.Image = global::MayNapKhiTPA.Properties.Resources.iconfinder_Stock_Index_Up_278812;
             this.buttonThemNhanVien.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonThemNhanVien.Location = new System.Drawing.Point(1490, -27);
+            this.buttonThemNhanVien.Location = new System.Drawing.Point(1537, -27);
             this.buttonThemNhanVien.Name = "buttonThemNhanVien";
             this.buttonThemNhanVien.Size = new System.Drawing.Size(81, 24);
             this.buttonThemNhanVien.TabIndex = 2;
@@ -214,7 +237,7 @@ namespace MayNapKhiTPA.Forms
             this.buttonSuaNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.buttonSuaNhanVien.Image = global::MayNapKhiTPA.Properties.Resources.iconfinder_Synchronize_278832;
             this.buttonSuaNhanVien.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonSuaNhanVien.Location = new System.Drawing.Point(1577, -27);
+            this.buttonSuaNhanVien.Location = new System.Drawing.Point(1624, -27);
             this.buttonSuaNhanVien.Name = "buttonSuaNhanVien";
             this.buttonSuaNhanVien.Size = new System.Drawing.Size(81, 24);
             this.buttonSuaNhanVien.TabIndex = 3;
@@ -247,29 +270,29 @@ namespace MayNapKhiTPA.Forms
             // 
             this.dataGridViewGroup.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewGroup.BackgroundColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewGroup.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewGroup.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridViewGroup.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewGroup.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewGroup.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewGroup.Name = "dataGridViewGroup";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewGroup.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewGroup.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridViewGroup.Size = new System.Drawing.Size(983, 426);
             this.dataGridViewGroup.TabIndex = 0;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Transparent;
-            this.panel4.Controls.Add(this.buttonSearchGroup);
-            this.panel4.Controls.Add(this.buttonAddGroup);
             this.panel4.Controls.Add(this.buttonChangeGroup);
+            this.panel4.Controls.Add(this.buttonAddGroup);
+            this.panel4.Controls.Add(this.buttonSearchGroup);
             this.panel4.Controls.Add(this.button1);
             this.panel4.Controls.Add(this.button2);
             this.panel4.Controls.Add(this.textBoxSearchGroup);
@@ -282,39 +305,75 @@ namespace MayNapKhiTPA.Forms
             this.panel4.Size = new System.Drawing.Size(983, 51);
             this.panel4.TabIndex = 11;
             // 
-            // buttonAddGroup
-            // 
-            this.buttonAddGroup.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAddGroup.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonAddGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.buttonAddGroup.Image = ((System.Drawing.Image)(resources.GetObject("buttonAddGroup.Image")));
-            this.buttonAddGroup.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonAddGroup.Location = new System.Drawing.Point(770, 12);
-            this.buttonAddGroup.Name = "buttonAddGroup";
-            this.buttonAddGroup.Size = new System.Drawing.Size(103, 29);
-            this.buttonAddGroup.TabIndex = 8;
-            this.buttonAddGroup.Text = "Thêm mới";
-            this.buttonAddGroup.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonAddGroup.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.buttonAddGroup.UseVisualStyleBackColor = true;
-            this.buttonAddGroup.Click += new System.EventHandler(this.buttonAddGroup_Click);
-            // 
             // buttonChangeGroup
             // 
             this.buttonChangeGroup.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonChangeGroup.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonChangeGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.buttonChangeGroup.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.buttonChangeGroup.BackgroundColor = System.Drawing.Color.DarkGoldenrod;
+            this.buttonChangeGroup.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonChangeGroup.BorderRadius = 0;
+            this.buttonChangeGroup.BorderSize = 0;
+            this.buttonChangeGroup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonChangeGroup.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonChangeGroup.ForeColor = System.Drawing.Color.White;
             this.buttonChangeGroup.Image = global::MayNapKhiTPA.Properties.Resources.iconfinder_Synchronize_278832;
-            this.buttonChangeGroup.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonChangeGroup.Location = new System.Drawing.Point(879, 12);
+            this.buttonChangeGroup.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonChangeGroup.Location = new System.Drawing.Point(874, 12);
             this.buttonChangeGroup.Name = "buttonChangeGroup";
-            this.buttonChangeGroup.Size = new System.Drawing.Size(101, 29);
-            this.buttonChangeGroup.TabIndex = 9;
+            this.buttonChangeGroup.Size = new System.Drawing.Size(106, 29);
+            this.buttonChangeGroup.TabIndex = 24;
             this.buttonChangeGroup.Text = "Thay đổi";
-            this.buttonChangeGroup.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonChangeGroup.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonChangeGroup.TextColor = System.Drawing.Color.White;
             this.buttonChangeGroup.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.buttonChangeGroup.UseVisualStyleBackColor = true;
+            this.buttonChangeGroup.UseVisualStyleBackColor = false;
             this.buttonChangeGroup.Click += new System.EventHandler(this.buttonChangeGroup_Click);
+            // 
+            // buttonAddGroup
+            // 
+            this.buttonAddGroup.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonAddGroup.BackColor = System.Drawing.Color.Green;
+            this.buttonAddGroup.BackgroundColor = System.Drawing.Color.Green;
+            this.buttonAddGroup.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonAddGroup.BorderRadius = 0;
+            this.buttonAddGroup.BorderSize = 0;
+            this.buttonAddGroup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAddGroup.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAddGroup.ForeColor = System.Drawing.Color.White;
+            this.buttonAddGroup.Image = ((System.Drawing.Image)(resources.GetObject("buttonAddGroup.Image")));
+            this.buttonAddGroup.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonAddGroup.Location = new System.Drawing.Point(765, 12);
+            this.buttonAddGroup.Name = "buttonAddGroup";
+            this.buttonAddGroup.Size = new System.Drawing.Size(106, 29);
+            this.buttonAddGroup.TabIndex = 23;
+            this.buttonAddGroup.Text = "Thêm mới";
+            this.buttonAddGroup.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonAddGroup.TextColor = System.Drawing.Color.White;
+            this.buttonAddGroup.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonAddGroup.UseVisualStyleBackColor = false;
+            this.buttonAddGroup.Click += new System.EventHandler(this.buttonAddGroup_Click);
+            // 
+            // buttonSearchGroup
+            // 
+            this.buttonSearchGroup.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.buttonSearchGroup.BackgroundColor = System.Drawing.Color.LightSkyBlue;
+            this.buttonSearchGroup.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonSearchGroup.BorderRadius = 0;
+            this.buttonSearchGroup.BorderSize = 0;
+            this.buttonSearchGroup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSearchGroup.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSearchGroup.ForeColor = System.Drawing.Color.Black;
+            this.buttonSearchGroup.Image = ((System.Drawing.Image)(resources.GetObject("buttonSearchGroup.Image")));
+            this.buttonSearchGroup.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonSearchGroup.Location = new System.Drawing.Point(192, 12);
+            this.buttonSearchGroup.Name = "buttonSearchGroup";
+            this.buttonSearchGroup.Size = new System.Drawing.Size(72, 29);
+            this.buttonSearchGroup.TabIndex = 21;
+            this.buttonSearchGroup.Text = "Tìm";
+            this.buttonSearchGroup.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonSearchGroup.TextColor = System.Drawing.Color.Black;
+            this.buttonSearchGroup.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonSearchGroup.UseVisualStyleBackColor = false;
             // 
             // button1
             // 
@@ -380,21 +439,6 @@ namespace MayNapKhiTPA.Forms
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // buttonSearchGroup
-            // 
-            this.buttonSearchGroup.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonSearchGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.buttonSearchGroup.Image = ((System.Drawing.Image)(resources.GetObject("buttonSearchGroup.Image")));
-            this.buttonSearchGroup.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonSearchGroup.Location = new System.Drawing.Point(192, 11);
-            this.buttonSearchGroup.Name = "buttonSearchGroup";
-            this.buttonSearchGroup.Size = new System.Drawing.Size(98, 30);
-            this.buttonSearchGroup.TabIndex = 10;
-            this.buttonSearchGroup.Text = "Tìm kiếm";
-            this.buttonSearchGroup.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSearchGroup.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.buttonSearchGroup.UseVisualStyleBackColor = true;
-            // 
             // FormEmployeeManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -428,21 +472,21 @@ namespace MayNapKhiTPA.Forms
         private DataGridView dataGridViewUser;
         private Panel panel3;
         private TextBox textBoxSearchUser;
-        private Button buttonSearchUser;
         private Button buttonThemNhanVien;
         private Button buttonSuaNhanVien;
-        private Button buttonAddUser;
-        private Button buttonChangeUser;
         private Panel panel1;
         private DataGridView dataGridViewGroup;
         private Panel panel4;
-        private Button buttonAddGroup;
-        private Button buttonChangeGroup;
         private Button button1;
         private Button button2;
         private TextBox textBoxSearchGroup;
         private Button button4;
         private Button button5;
-        private Button buttonSearchGroup;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonSearchUser;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonSearchGroup;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonAddUser;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonChangeUser;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonChangeGroup;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonAddGroup;
     }
 }

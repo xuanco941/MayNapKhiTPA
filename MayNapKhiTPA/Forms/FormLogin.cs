@@ -53,23 +53,22 @@ namespace MayNapKhiTPA
 
         }
 
-
-        private void buttonDangNhap_Click(object sender, EventArgs e)
-        {
-            LoginActive();
-        }
-
-        private void buttonThoat_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void textBoxMatKhau_KeyDown(object sender, KeyEventArgs e)
         {
             if(e.KeyCode == Keys.Enter)
             {
                 LoginActive();
             }
+        }
+
+        private void buttonDangNhap_Click(object sender, EventArgs e)
+        {
+            LoginActive();
+        }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

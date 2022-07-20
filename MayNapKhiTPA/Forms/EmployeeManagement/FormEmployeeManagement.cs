@@ -42,7 +42,7 @@ namespace MayNapKhiTPA.Forms
 
         }
 
-        private void buttonAddUser_Click(object sender, EventArgs e)
+        private void buttonAddUser_Click_1(object sender, EventArgs e)
         {
             // Create an instance of form 2
             FormAddUser formAddUser = new FormAddUser();
@@ -54,9 +54,8 @@ namespace MayNapKhiTPA.Forms
             formAddUser.ShowDialog();
         }
 
-        private void buttonChangeUser_Click(object sender, EventArgs e)
+        private void buttonChangeUser_Click_1(object sender, EventArgs e)
         {
-            // Create an instance of form 2
             FormChangeUser formChangeUser = new FormChangeUser();
 
             // Create an instance of the delegate
