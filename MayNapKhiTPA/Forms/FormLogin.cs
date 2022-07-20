@@ -18,12 +18,13 @@ namespace MayNapKhiTPA
         public FormLogin()
         {
             InitializeComponent();
+            this.ActiveControl = textBoxTaiKhoan;
         }
 
         private void LoginActive()
         {
-            string TaiKhoan = textBoxTaiKhoan.Text.Trim();
-            string MatKhau = textBoxMatKhau.Text.Trim();
+            string TaiKhoan = textBoxTaiKhoan.Texts.Trim();
+            string MatKhau = textBoxMatKhau.Texts.Trim();
             if (String.IsNullOrEmpty(TaiKhoan) == true && String.IsNullOrEmpty(MatKhau) == true)
             {
                 MessageBox.Show("Không để trống ô tài khoản và mật khẩu.", "Lỗi Cú Pháp", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -53,14 +54,6 @@ namespace MayNapKhiTPA
 
         }
 
-        private void textBoxMatKhau_KeyDown(object sender, KeyEventArgs e)
-        {
-            if(e.KeyCode == Keys.Enter)
-            {
-                LoginActive();
-            }
-        }
-
         private void buttonDangNhap_Click(object sender, EventArgs e)
         {
             LoginActive();
@@ -69,6 +62,14 @@ namespace MayNapKhiTPA
         private void buttonExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void textBoxTaiKhoan_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                LoginActive();
+            }
         }
     }
 }

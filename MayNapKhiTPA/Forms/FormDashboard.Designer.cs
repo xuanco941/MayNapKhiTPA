@@ -78,7 +78,6 @@ namespace MayNapKhiTPA.Forms
             this.panel4 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -91,10 +90,11 @@ namespace MayNapKhiTPA.Forms
             this.label1 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.button23 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.buttonCustom1 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.buttonCustom2 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.buttonCustom3 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -732,7 +732,7 @@ namespace MayNapKhiTPA.Forms
             // panel5
             // 
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.button6);
+            this.panel5.Controls.Add(this.buttonCustom1);
             this.panel5.Controls.Add(this.textBox4);
             this.panel5.Controls.Add(this.label5);
             this.panel5.Controls.Add(this.textBox3);
@@ -749,24 +749,6 @@ namespace MayNapKhiTPA.Forms
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(283, 261);
             this.panel5.TabIndex = 0;
-            // 
-            // button6
-            // 
-            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button6.BackColor = System.Drawing.Color.Green;
-            this.button6.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.SystemColors.Control;
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(84, 217);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(118, 39);
-            this.button6.TabIndex = 17;
-            this.button6.Text = "Lưu";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.button6.UseVisualStyleBackColor = false;
             // 
             // textBox4
             // 
@@ -878,42 +860,14 @@ namespace MayNapKhiTPA.Forms
             // panel6
             // 
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Controls.Add(this.button23);
-            this.panel6.Controls.Add(this.button7);
+            this.panel6.Controls.Add(this.buttonCustom3);
+            this.panel6.Controls.Add(this.buttonCustom2);
             this.panel6.Controls.Add(this.button5);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(292, 3);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(283, 261);
             this.panel6.TabIndex = 1;
-            // 
-            // button23
-            // 
-            this.button23.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button23.BackColor = System.Drawing.Color.DimGray;
-            this.button23.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button23.ForeColor = System.Drawing.SystemColors.Control;
-            this.button23.Location = new System.Drawing.Point(83, 114);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(118, 39);
-            this.button23.TabIndex = 8;
-            this.button23.Text = "Ngưng nạp";
-            this.button23.UseVisualStyleBackColor = false;
-            // 
-            // button7
-            // 
-            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button7.BackColor = System.Drawing.Color.Firebrick;
-            this.button7.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.SystemColors.Control;
-            this.button7.Location = new System.Drawing.Point(83, 60);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(118, 39);
-            this.button7.TabIndex = 7;
-            this.button7.Text = "Bắt đầu nạp";
-            this.button7.UseVisualStyleBackColor = false;
             // 
             // button5
             // 
@@ -946,6 +900,78 @@ namespace MayNapKhiTPA.Forms
             this.button2.TabIndex = 6;
             this.button2.Text = "Điều khiển";
             this.button2.UseVisualStyleBackColor = false;
+            // 
+            // buttonCustom1
+            // 
+            this.buttonCustom1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonCustom1.BackColor = System.Drawing.Color.Green;
+            this.buttonCustom1.BackgroundColor = System.Drawing.Color.Green;
+            this.buttonCustom1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonCustom1.BorderRadius = 6;
+            this.buttonCustom1.BorderSize = 0;
+            this.buttonCustom1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCustom1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCustom1.ForeColor = System.Drawing.Color.White;
+            this.buttonCustom1.Image = ((System.Drawing.Image)(resources.GetObject("buttonCustom1.Image")));
+            this.buttonCustom1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCustom1.Location = new System.Drawing.Point(99, 219);
+            this.buttonCustom1.Name = "buttonCustom1";
+            this.buttonCustom1.Size = new System.Drawing.Size(96, 36);
+            this.buttonCustom1.TabIndex = 16;
+            this.buttonCustom1.Text = "Lưu";
+            this.buttonCustom1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonCustom1.TextColor = System.Drawing.Color.White;
+            this.buttonCustom1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonCustom1.UseVisualStyleBackColor = false;
+            // 
+            // buttonCustom2
+            // 
+            this.buttonCustom2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonCustom2.BackColor = System.Drawing.Color.Brown;
+            this.buttonCustom2.BackgroundColor = System.Drawing.Color.Brown;
+            this.buttonCustom2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonCustom2.BorderRadius = 6;
+            this.buttonCustom2.BorderSize = 0;
+            this.buttonCustom2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCustom2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCustom2.ForeColor = System.Drawing.Color.White;
+            this.buttonCustom2.Image = ((System.Drawing.Image)(resources.GetObject("buttonCustom2.Image")));
+            this.buttonCustom2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCustom2.Location = new System.Drawing.Point(78, 59);
+            this.buttonCustom2.Name = "buttonCustom2";
+            this.buttonCustom2.Size = new System.Drawing.Size(133, 36);
+            this.buttonCustom2.TabIndex = 17;
+            this.buttonCustom2.Text = "Bắt đầu nạp";
+            this.buttonCustom2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonCustom2.TextColor = System.Drawing.Color.White;
+            this.buttonCustom2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonCustom2.UseVisualStyleBackColor = false;
+            // 
+            // buttonCustom3
+            // 
+            this.buttonCustom3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonCustom3.BackColor = System.Drawing.Color.DimGray;
+            this.buttonCustom3.BackgroundColor = System.Drawing.Color.DimGray;
+            this.buttonCustom3.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonCustom3.BorderRadius = 6;
+            this.buttonCustom3.BorderSize = 0;
+            this.buttonCustom3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCustom3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCustom3.ForeColor = System.Drawing.Color.White;
+            this.buttonCustom3.Image = ((System.Drawing.Image)(resources.GetObject("buttonCustom3.Image")));
+            this.buttonCustom3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCustom3.Location = new System.Drawing.Point(78, 111);
+            this.buttonCustom3.Name = "buttonCustom3";
+            this.buttonCustom3.Size = new System.Drawing.Size(133, 36);
+            this.buttonCustom3.TabIndex = 18;
+            this.buttonCustom3.Text = "Ngừng nạp";
+            this.buttonCustom3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonCustom3.TextColor = System.Drawing.Color.White;
+            this.buttonCustom3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonCustom3.UseVisualStyleBackColor = false;
             // 
             // FormDashboard
             // 
@@ -1017,7 +1043,6 @@ namespace MayNapKhiTPA.Forms
         private Label label3;
         private TextBox textBox1;
         private Label label2;
-        private Button button7;
         private TableLayoutPanel tableLayoutPanel4;
         private Panel panel7;
         private Button button8;
@@ -1051,7 +1076,8 @@ namespace MayNapKhiTPA.Forms
         private Button button13;
         private Panel panel12;
         private Button button12;
-        private Button button6;
-        private Button button23;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom1;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom3;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom2;
     }
 }
