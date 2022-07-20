@@ -30,11 +30,11 @@ namespace MayNapKhiTPA.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEmployeeManagement));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageUser = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -106,20 +106,20 @@ namespace MayNapKhiTPA.Forms
             // 
             this.dataGridViewUser.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewUser.BackgroundColor = System.Drawing.Color.CornflowerBlue;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewUser.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewUser.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewUser.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewUser.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewUser.Name = "dataGridViewUser";
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewUser.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewUser.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewUser.Size = new System.Drawing.Size(983, 426);
             this.dataGridViewUser.TabIndex = 0;
             // 
@@ -145,8 +145,9 @@ namespace MayNapKhiTPA.Forms
             this.buttonChangeUser.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.buttonChangeUser.BackgroundColor = System.Drawing.Color.DarkGoldenrod;
             this.buttonChangeUser.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonChangeUser.BorderRadius = 0;
+            this.buttonChangeUser.BorderRadius = 3;
             this.buttonChangeUser.BorderSize = 0;
+            this.buttonChangeUser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonChangeUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonChangeUser.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonChangeUser.ForeColor = System.Drawing.Color.White;
@@ -169,8 +170,9 @@ namespace MayNapKhiTPA.Forms
             this.buttonAddUser.BackColor = System.Drawing.Color.Green;
             this.buttonAddUser.BackgroundColor = System.Drawing.Color.Green;
             this.buttonAddUser.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonAddUser.BorderRadius = 0;
+            this.buttonAddUser.BorderRadius = 3;
             this.buttonAddUser.BorderSize = 0;
+            this.buttonAddUser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonAddUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAddUser.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAddUser.ForeColor = System.Drawing.Color.White;
@@ -192,8 +194,9 @@ namespace MayNapKhiTPA.Forms
             this.buttonSearchUser.BackColor = System.Drawing.Color.LightSkyBlue;
             this.buttonSearchUser.BackgroundColor = System.Drawing.Color.LightSkyBlue;
             this.buttonSearchUser.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonSearchUser.BorderRadius = 0;
+            this.buttonSearchUser.BorderRadius = 3;
             this.buttonSearchUser.BorderSize = 0;
+            this.buttonSearchUser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonSearchUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSearchUser.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSearchUser.ForeColor = System.Drawing.Color.Black;
@@ -270,20 +273,20 @@ namespace MayNapKhiTPA.Forms
             // 
             this.dataGridViewGroup.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewGroup.BackgroundColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewGroup.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewGroup.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewGroup.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewGroup.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewGroup.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewGroup.Name = "dataGridViewGroup";
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewGroup.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewGroup.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewGroup.Size = new System.Drawing.Size(983, 426);
             this.dataGridViewGroup.TabIndex = 0;
             // 
@@ -311,8 +314,9 @@ namespace MayNapKhiTPA.Forms
             this.buttonChangeGroup.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.buttonChangeGroup.BackgroundColor = System.Drawing.Color.DarkGoldenrod;
             this.buttonChangeGroup.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonChangeGroup.BorderRadius = 0;
+            this.buttonChangeGroup.BorderRadius = 3;
             this.buttonChangeGroup.BorderSize = 0;
+            this.buttonChangeGroup.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonChangeGroup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonChangeGroup.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonChangeGroup.ForeColor = System.Drawing.Color.White;
@@ -335,8 +339,9 @@ namespace MayNapKhiTPA.Forms
             this.buttonAddGroup.BackColor = System.Drawing.Color.Green;
             this.buttonAddGroup.BackgroundColor = System.Drawing.Color.Green;
             this.buttonAddGroup.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonAddGroup.BorderRadius = 0;
+            this.buttonAddGroup.BorderRadius = 3;
             this.buttonAddGroup.BorderSize = 0;
+            this.buttonAddGroup.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonAddGroup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAddGroup.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAddGroup.ForeColor = System.Drawing.Color.White;
@@ -358,8 +363,9 @@ namespace MayNapKhiTPA.Forms
             this.buttonSearchGroup.BackColor = System.Drawing.Color.LightSkyBlue;
             this.buttonSearchGroup.BackgroundColor = System.Drawing.Color.LightSkyBlue;
             this.buttonSearchGroup.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonSearchGroup.BorderRadius = 0;
+            this.buttonSearchGroup.BorderRadius = 3;
             this.buttonSearchGroup.BorderSize = 0;
+            this.buttonSearchGroup.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonSearchGroup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSearchGroup.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSearchGroup.ForeColor = System.Drawing.Color.Black;

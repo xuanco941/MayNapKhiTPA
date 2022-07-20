@@ -41,11 +41,15 @@ namespace MayNapKhiTPA.Forms
             this.dataGridViewResult = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button7 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.buttonPrint = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.buttonExcel = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.buttonCustom2 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.label7 = new System.Windows.Forms.Label();
             this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
@@ -63,10 +67,6 @@ namespace MayNapKhiTPA.Forms
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimePickerTuNgay = new System.Windows.Forms.DateTimePicker();
-            this.button7 = new System.Windows.Forms.Button();
-            this.buttonExcel = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
-            this.buttonPrint = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
-            this.buttonCustom2 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewResult)).BeginInit();
             this.panel2.SuspendLayout();
@@ -104,6 +104,7 @@ namespace MayNapKhiTPA.Forms
             // 
             // button5
             // 
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button5.Location = new System.Drawing.Point(173, 13);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(51, 20);
@@ -113,6 +114,7 @@ namespace MayNapKhiTPA.Forms
             // 
             // button4
             // 
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.Location = new System.Drawing.Point(117, 13);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(51, 20);
@@ -122,6 +124,7 @@ namespace MayNapKhiTPA.Forms
             // 
             // button3
             // 
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.Location = new System.Drawing.Point(58, 13);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(53, 20);
@@ -131,6 +134,7 @@ namespace MayNapKhiTPA.Forms
             // 
             // button2
             // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Location = new System.Drawing.Point(0, 13);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(53, 20);
@@ -183,6 +187,22 @@ namespace MayNapKhiTPA.Forms
             this.textBox2.Size = new System.Drawing.Size(71, 20);
             this.textBox2.TabIndex = 7;
             // 
+            // button7
+            // 
+            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
+            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.Location = new System.Drawing.Point(940, 13);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(57, 23);
+            this.button7.TabIndex = 6;
+            this.button7.Text = "Đi";
+            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.button7.UseVisualStyleBackColor = true;
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.panel3);
@@ -230,6 +250,56 @@ namespace MayNapKhiTPA.Forms
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tùy chọn";
             // 
+            // buttonPrint
+            // 
+            this.buttonPrint.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonPrint.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonPrint.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonPrint.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonPrint.BorderRadius = 3;
+            this.buttonPrint.BorderSize = 0;
+            this.buttonPrint.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPrint.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPrint.ForeColor = System.Drawing.Color.Black;
+            this.buttonPrint.Image = global::MayNapKhiTPA.Properties.Resources.iconfinder_Save_278762;
+            this.buttonPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonPrint.Location = new System.Drawing.Point(39, 19);
+            this.buttonPrint.Name = "buttonPrint";
+            this.buttonPrint.Size = new System.Drawing.Size(132, 36);
+            this.buttonPrint.TabIndex = 17;
+            this.buttonPrint.Text = "In báo cáo";
+            this.buttonPrint.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonPrint.TextColor = System.Drawing.Color.Black;
+            this.buttonPrint.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonPrint.UseVisualStyleBackColor = false;
+            // 
+            // buttonExcel
+            // 
+            this.buttonExcel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonExcel.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.buttonExcel.BackgroundColor = System.Drawing.Color.MediumSeaGreen;
+            this.buttonExcel.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonExcel.BorderRadius = 3;
+            this.buttonExcel.BorderSize = 0;
+            this.buttonExcel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonExcel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonExcel.ForeColor = System.Drawing.Color.Black;
+            this.buttonExcel.Image = global::MayNapKhiTPA.Properties.Resources.Logoexe;
+            this.buttonExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonExcel.Location = new System.Drawing.Point(39, 61);
+            this.buttonExcel.Name = "buttonExcel";
+            this.buttonExcel.Size = new System.Drawing.Size(132, 35);
+            this.buttonExcel.TabIndex = 16;
+            this.buttonExcel.Text = "Xuất Excel";
+            this.buttonExcel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonExcel.TextColor = System.Drawing.Color.Black;
+            this.buttonExcel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonExcel.UseVisualStyleBackColor = false;
+            // 
             // panel6
             // 
             this.panel6.Controls.Add(this.buttonCustom2);
@@ -255,6 +325,31 @@ namespace MayNapKhiTPA.Forms
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(208, 372);
             this.panel6.TabIndex = 25;
+            // 
+            // buttonCustom2
+            // 
+            this.buttonCustom2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonCustom2.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.buttonCustom2.BackgroundColor = System.Drawing.Color.LightSkyBlue;
+            this.buttonCustom2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonCustom2.BorderRadius = 3;
+            this.buttonCustom2.BorderSize = 0;
+            this.buttonCustom2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonCustom2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCustom2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.buttonCustom2.ForeColor = System.Drawing.Color.Black;
+            this.buttonCustom2.Image = ((System.Drawing.Image)(resources.GetObject("buttonCustom2.Image")));
+            this.buttonCustom2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonCustom2.Location = new System.Drawing.Point(39, 297);
+            this.buttonCustom2.Name = "buttonCustom2";
+            this.buttonCustom2.Size = new System.Drawing.Size(132, 32);
+            this.buttonCustom2.TabIndex = 18;
+            this.buttonCustom2.Text = "Lọc";
+            this.buttonCustom2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCustom2.TextColor = System.Drawing.Color.Black;
+            this.buttonCustom2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonCustom2.UseVisualStyleBackColor = false;
             // 
             // label7
             // 
@@ -418,93 +513,6 @@ namespace MayNapKhiTPA.Forms
             this.dateTimePickerTuNgay.Name = "dateTimePickerTuNgay";
             this.dateTimePickerTuNgay.Size = new System.Drawing.Size(108, 20);
             this.dateTimePickerTuNgay.TabIndex = 22;
-            // 
-            // button7
-            // 
-            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(940, 13);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(57, 23);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "Đi";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // buttonExcel
-            // 
-            this.buttonExcel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonExcel.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.buttonExcel.BackgroundColor = System.Drawing.Color.MediumSeaGreen;
-            this.buttonExcel.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonExcel.BorderRadius = 0;
-            this.buttonExcel.BorderSize = 0;
-            this.buttonExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonExcel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonExcel.ForeColor = System.Drawing.Color.Black;
-            this.buttonExcel.Image = global::MayNapKhiTPA.Properties.Resources.Logoexe;
-            this.buttonExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonExcel.Location = new System.Drawing.Point(39, 61);
-            this.buttonExcel.Name = "buttonExcel";
-            this.buttonExcel.Size = new System.Drawing.Size(132, 35);
-            this.buttonExcel.TabIndex = 16;
-            this.buttonExcel.Text = "Xuất Excel";
-            this.buttonExcel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonExcel.TextColor = System.Drawing.Color.Black;
-            this.buttonExcel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonExcel.UseVisualStyleBackColor = false;
-            // 
-            // buttonPrint
-            // 
-            this.buttonPrint.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonPrint.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buttonPrint.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buttonPrint.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonPrint.BorderRadius = 0;
-            this.buttonPrint.BorderSize = 0;
-            this.buttonPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPrint.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonPrint.ForeColor = System.Drawing.Color.Black;
-            this.buttonPrint.Image = global::MayNapKhiTPA.Properties.Resources.iconfinder_Save_278762;
-            this.buttonPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonPrint.Location = new System.Drawing.Point(39, 19);
-            this.buttonPrint.Name = "buttonPrint";
-            this.buttonPrint.Size = new System.Drawing.Size(132, 36);
-            this.buttonPrint.TabIndex = 17;
-            this.buttonPrint.Text = "In báo cáo";
-            this.buttonPrint.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonPrint.TextColor = System.Drawing.Color.Black;
-            this.buttonPrint.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonPrint.UseVisualStyleBackColor = false;
-            // 
-            // buttonCustom2
-            // 
-            this.buttonCustom2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCustom2.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.buttonCustom2.BackgroundColor = System.Drawing.Color.LightSkyBlue;
-            this.buttonCustom2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonCustom2.BorderRadius = 0;
-            this.buttonCustom2.BorderSize = 0;
-            this.buttonCustom2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCustom2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.buttonCustom2.ForeColor = System.Drawing.Color.Black;
-            this.buttonCustom2.Image = ((System.Drawing.Image)(resources.GetObject("buttonCustom2.Image")));
-            this.buttonCustom2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonCustom2.Location = new System.Drawing.Point(39, 297);
-            this.buttonCustom2.Name = "buttonCustom2";
-            this.buttonCustom2.Size = new System.Drawing.Size(132, 29);
-            this.buttonCustom2.TabIndex = 18;
-            this.buttonCustom2.Text = "Lọc";
-            this.buttonCustom2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCustom2.TextColor = System.Drawing.Color.Black;
-            this.buttonCustom2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonCustom2.UseVisualStyleBackColor = false;
             // 
             // FormResult
             // 

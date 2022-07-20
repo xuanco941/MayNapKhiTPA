@@ -941,7 +941,7 @@ namespace MayNapKhiTPA.Forms
             this.buttonCustom2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonCustom2.Location = new System.Drawing.Point(78, 59);
             this.buttonCustom2.Name = "buttonCustom2";
-            this.buttonCustom2.Size = new System.Drawing.Size(133, 36);
+            this.buttonCustom2.Size = new System.Drawing.Size(133, 46);
             this.buttonCustom2.TabIndex = 17;
             this.buttonCustom2.Text = "Bắt đầu nạp";
             this.buttonCustom2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -965,7 +965,7 @@ namespace MayNapKhiTPA.Forms
             this.buttonCustom3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonCustom3.Location = new System.Drawing.Point(78, 111);
             this.buttonCustom3.Name = "buttonCustom3";
-            this.buttonCustom3.Size = new System.Drawing.Size(133, 36);
+            this.buttonCustom3.Size = new System.Drawing.Size(133, 42);
             this.buttonCustom3.TabIndex = 18;
             this.buttonCustom3.Text = "Ngừng nạp";
             this.buttonCustom3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
