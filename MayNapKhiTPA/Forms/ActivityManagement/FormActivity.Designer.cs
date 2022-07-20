@@ -36,12 +36,6 @@ namespace MayNapKhiTPA.Forms
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridViewActivity = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.buttonTrangCuoi = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.buttonCustom2 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
@@ -56,6 +50,12 @@ namespace MayNapKhiTPA.Forms
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.labelBanGhiMoiTrang = new System.Windows.Forms.Label();
             this.labelTongSoTrang = new System.Windows.Forms.Label();
+            this.buttonCustom6 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.buttonCustom5 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.buttonCustom4 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.buttonCustom3 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.textBoxT = new LW_PhanMemBaoGia.MyControls.TextBoxT();
+            this.buttonCustom1 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -79,7 +79,7 @@ namespace MayNapKhiTPA.Forms
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(914, 493);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1039, 494);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // panel1
@@ -89,7 +89,7 @@ namespace MayNapKhiTPA.Forms
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(694, 487);
+            this.panel1.Size = new System.Drawing.Size(819, 488);
             this.panel1.TabIndex = 0;
             // 
             // panel3
@@ -98,7 +98,7 @@ namespace MayNapKhiTPA.Forms
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(694, 437);
+            this.panel3.Size = new System.Drawing.Size(819, 438);
             this.panel3.TabIndex = 1;
             // 
             // dataGridViewActivity
@@ -110,89 +110,22 @@ namespace MayNapKhiTPA.Forms
             this.dataGridViewActivity.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewActivity.Name = "dataGridViewActivity";
             this.dataGridViewActivity.RowTemplate.Height = 25;
-            this.dataGridViewActivity.Size = new System.Drawing.Size(694, 437);
+            this.dataGridViewActivity.Size = new System.Drawing.Size(819, 438);
             this.dataGridViewActivity.TabIndex = 0;
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.button7);
-            this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Controls.Add(this.buttonTrangCuoi);
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.buttonCustom1);
+            this.panel2.Controls.Add(this.buttonCustom6);
+            this.panel2.Controls.Add(this.buttonCustom5);
+            this.panel2.Controls.Add(this.buttonCustom4);
+            this.panel2.Controls.Add(this.buttonCustom3);
+            this.panel2.Controls.Add(this.textBoxT);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 437);
+            this.panel2.Location = new System.Drawing.Point(0, 438);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(694, 50);
+            this.panel2.Size = new System.Drawing.Size(819, 50);
             this.panel2.TabIndex = 0;
-            // 
-            // button7
-            // 
-            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(634, 11);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(57, 23);
-            this.button7.TabIndex = 7;
-            this.button7.Text = "Đi";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(557, 14);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(71, 20);
-            this.textBox1.TabIndex = 5;
-            // 
-            // buttonTrangCuoi
-            // 
-            this.buttonTrangCuoi.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonTrangCuoi.Location = new System.Drawing.Point(182, 13);
-            this.buttonTrangCuoi.Name = "buttonTrangCuoi";
-            this.buttonTrangCuoi.Size = new System.Drawing.Size(51, 20);
-            this.buttonTrangCuoi.TabIndex = 3;
-            this.buttonTrangCuoi.Text = ">>";
-            this.buttonTrangCuoi.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.Location = new System.Drawing.Point(117, 13);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(51, 20);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "3";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Location = new System.Drawing.Point(58, 13);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(53, 20);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "2";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button2
-            // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Location = new System.Drawing.Point(0, 13);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(53, 20);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "1";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel4
             // 
@@ -201,9 +134,9 @@ namespace MayNapKhiTPA.Forms
             this.panel4.Controls.Add(this.groupBox2);
             this.panel4.Controls.Add(this.groupBox1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(703, 3);
+            this.panel4.Location = new System.Drawing.Point(828, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(208, 487);
+            this.panel4.Size = new System.Drawing.Size(208, 488);
             this.panel4.TabIndex = 1;
             // 
             // panel5
@@ -217,7 +150,7 @@ namespace MayNapKhiTPA.Forms
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(0, 48);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(208, 320);
+            this.panel5.Size = new System.Drawing.Size(208, 321);
             this.panel5.TabIndex = 11;
             // 
             // buttonCustom2
@@ -311,7 +244,7 @@ namespace MayNapKhiTPA.Forms
             this.buttonCallFormEmployeeActivities.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.buttonCallFormEmployeeActivities.ForeColor = System.Drawing.SystemColors.Highlight;
             this.buttonCallFormEmployeeActivities.Image = global::MayNapKhiTPA.Properties.Resources.button2_Image;
-            this.buttonCallFormEmployeeActivities.Location = new System.Drawing.Point(0, 368);
+            this.buttonCallFormEmployeeActivities.Location = new System.Drawing.Point(0, 369);
             this.buttonCallFormEmployeeActivities.Name = "buttonCallFormEmployeeActivities";
             this.buttonCallFormEmployeeActivities.Size = new System.Drawing.Size(208, 31);
             this.buttonCallFormEmployeeActivities.TabIndex = 10;
@@ -326,7 +259,7 @@ namespace MayNapKhiTPA.Forms
             this.groupBox2.Controls.Add(this.labelNotify);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupBox2.ForeColor = System.Drawing.Color.Green;
-            this.groupBox2.Location = new System.Drawing.Point(0, 399);
+            this.groupBox2.Location = new System.Drawing.Point(0, 400);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(208, 88);
             this.groupBox2.TabIndex = 9;
@@ -378,11 +311,144 @@ namespace MayNapKhiTPA.Forms
             this.labelTongSoTrang.TabIndex = 1;
             this.labelTongSoTrang.Text = "label5";
             // 
+            // buttonCustom6
+            // 
+            this.buttonCustom6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonCustom6.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonCustom6.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonCustom6.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonCustom6.BorderRadius = 3;
+            this.buttonCustom6.BorderSize = 0;
+            this.buttonCustom6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonCustom6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCustom6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCustom6.ForeColor = System.Drawing.Color.Black;
+            this.buttonCustom6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCustom6.Location = new System.Drawing.Point(206, 10);
+            this.buttonCustom6.Name = "buttonCustom6";
+            this.buttonCustom6.Size = new System.Drawing.Size(63, 30);
+            this.buttonCustom6.TabIndex = 28;
+            this.buttonCustom6.Text = ">>";
+            this.buttonCustom6.TextColor = System.Drawing.Color.Black;
+            this.buttonCustom6.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonCustom6.UseVisualStyleBackColor = false;
+            // 
+            // buttonCustom5
+            // 
+            this.buttonCustom5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonCustom5.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonCustom5.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonCustom5.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonCustom5.BorderRadius = 3;
+            this.buttonCustom5.BorderSize = 0;
+            this.buttonCustom5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonCustom5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCustom5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCustom5.ForeColor = System.Drawing.Color.Black;
+            this.buttonCustom5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCustom5.Location = new System.Drawing.Point(137, 10);
+            this.buttonCustom5.Name = "buttonCustom5";
+            this.buttonCustom5.Size = new System.Drawing.Size(63, 30);
+            this.buttonCustom5.TabIndex = 27;
+            this.buttonCustom5.Text = "3";
+            this.buttonCustom5.TextColor = System.Drawing.Color.Black;
+            this.buttonCustom5.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonCustom5.UseVisualStyleBackColor = false;
+            // 
+            // buttonCustom4
+            // 
+            this.buttonCustom4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonCustom4.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonCustom4.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonCustom4.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonCustom4.BorderRadius = 3;
+            this.buttonCustom4.BorderSize = 0;
+            this.buttonCustom4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonCustom4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCustom4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCustom4.ForeColor = System.Drawing.Color.Black;
+            this.buttonCustom4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCustom4.Location = new System.Drawing.Point(0, 10);
+            this.buttonCustom4.Name = "buttonCustom4";
+            this.buttonCustom4.Size = new System.Drawing.Size(63, 30);
+            this.buttonCustom4.TabIndex = 26;
+            this.buttonCustom4.Text = "1";
+            this.buttonCustom4.TextColor = System.Drawing.Color.Black;
+            this.buttonCustom4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonCustom4.UseVisualStyleBackColor = false;
+            // 
+            // buttonCustom3
+            // 
+            this.buttonCustom3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonCustom3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonCustom3.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonCustom3.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonCustom3.BorderRadius = 3;
+            this.buttonCustom3.BorderSize = 0;
+            this.buttonCustom3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonCustom3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCustom3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCustom3.ForeColor = System.Drawing.Color.Black;
+            this.buttonCustom3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCustom3.Location = new System.Drawing.Point(68, 10);
+            this.buttonCustom3.Name = "buttonCustom3";
+            this.buttonCustom3.Size = new System.Drawing.Size(63, 30);
+            this.buttonCustom3.TabIndex = 25;
+            this.buttonCustom3.Text = "2";
+            this.buttonCustom3.TextColor = System.Drawing.Color.Black;
+            this.buttonCustom3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonCustom3.UseVisualStyleBackColor = false;
+            // 
+            // textBoxT
+            // 
+            this.textBoxT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxT.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxT.BorderColor = System.Drawing.Color.CornflowerBlue;
+            this.textBoxT.BorderFocusColor = System.Drawing.SystemColors.ActiveCaption;
+            this.textBoxT.BorderRadius = 5;
+            this.textBoxT.BorderSize = 1;
+            this.textBoxT.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxT.Location = new System.Drawing.Point(651, 11);
+            this.textBoxT.Multiline = false;
+            this.textBoxT.Name = "textBoxT";
+            this.textBoxT.Padding = new System.Windows.Forms.Padding(7);
+            this.textBoxT.PasswordChar = false;
+            this.textBoxT.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.textBoxT.PlaceholderText = "Trang số . . .";
+            this.textBoxT.Size = new System.Drawing.Size(79, 35);
+            this.textBoxT.TabIndex = 23;
+            this.textBoxT.Texts = "Trang số . . .";
+            this.textBoxT.UnderlinedStyle = false;
+            // 
+            // buttonCustom1
+            // 
+            this.buttonCustom1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonCustom1.BackColor = System.Drawing.Color.DodgerBlue;
+            this.buttonCustom1.BackgroundColor = System.Drawing.Color.DodgerBlue;
+            this.buttonCustom1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonCustom1.BorderRadius = 3;
+            this.buttonCustom1.BorderSize = 0;
+            this.buttonCustom1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonCustom1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCustom1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCustom1.ForeColor = System.Drawing.Color.Black;
+            this.buttonCustom1.Image = ((System.Drawing.Image)(resources.GetObject("buttonCustom1.Image")));
+            this.buttonCustom1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCustom1.Location = new System.Drawing.Point(736, 11);
+            this.buttonCustom1.Name = "buttonCustom1";
+            this.buttonCustom1.Size = new System.Drawing.Size(80, 30);
+            this.buttonCustom1.TabIndex = 29;
+            this.buttonCustom1.Text = "Đi";
+            this.buttonCustom1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonCustom1.TextColor = System.Drawing.Color.Black;
+            this.buttonCustom1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonCustom1.UseVisualStyleBackColor = false;
+            // 
             // FormActivity
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(914, 493);
+            this.ClientSize = new System.Drawing.Size(1039, 494);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "FormActivity";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -392,7 +458,6 @@ namespace MayNapKhiTPA.Forms
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewActivity)).EndInit();
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
@@ -416,11 +481,6 @@ namespace MayNapKhiTPA.Forms
         private DateTimePicker dateTimePickerToiNgay;
         private Label label2;
         private Label label1;
-        private TextBox textBox1;
-        private Button buttonTrangCuoi;
-        private Button button4;
-        private Button button3;
-        private Button button2;
         private GroupBox groupBox1;
         private Label labelBanGhiMoiTrang;
         private Label labelTongSoTrang;
@@ -428,7 +488,12 @@ namespace MayNapKhiTPA.Forms
         private Label labelNotify;
         private Button buttonCallFormEmployeeActivities;
         private Panel panel5;
-        private Button button7;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom2;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom6;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom5;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom4;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom3;
+        private LW_PhanMemBaoGia.MyControls.TextBoxT textBoxT;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom1;
     }
 }

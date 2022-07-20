@@ -30,9 +30,6 @@ namespace MayNapKhiTPA.Forms.EmployeeManagement.Group
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonSua = new System.Windows.Forms.Button();
-            this.comboBoxChonTaiKhoan = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.checkBox6 = new System.Windows.Forms.CheckBox();
@@ -42,51 +39,20 @@ namespace MayNapKhiTPA.Forms.EmployeeManagement.Group
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.comboBoxT2 = new LW_PhanMemBaoGia.MyControls.ComboBoxT();
+            this.buttonCustom1 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.buttonDangNhap = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // buttonSua
-            // 
-            this.buttonSua.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonSua.Location = new System.Drawing.Point(152, 439);
-            this.buttonSua.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.buttonSua.Name = "buttonSua";
-            this.buttonSua.Size = new System.Drawing.Size(154, 37);
-            this.buttonSua.TabIndex = 20;
-            this.buttonSua.Text = "Cập nhật";
-            this.buttonSua.UseVisualStyleBackColor = true;
-            // 
-            // comboBoxChonTaiKhoan
-            // 
-            this.comboBoxChonTaiKhoan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxChonTaiKhoan.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.comboBoxChonTaiKhoan.FormattingEnabled = true;
-            this.comboBoxChonTaiKhoan.Location = new System.Drawing.Point(154, 125);
-            this.comboBoxChonTaiKhoan.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.comboBoxChonTaiKhoan.Name = "comboBoxChonTaiKhoan";
-            this.comboBoxChonTaiKhoan.Size = new System.Drawing.Size(351, 29);
-            this.comboBoxChonTaiKhoan.TabIndex = 23;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(314, 439);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(191, 37);
-            this.button1.TabIndex = 24;
-            this.button1.Text = "Xóa nhóm quyền này";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Transparent;
-            this.label7.Location = new System.Drawing.Point(148, 92);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(134, 87);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(213, 21);
+            this.label7.Size = new System.Drawing.Size(193, 21);
             this.label7.TabIndex = 27;
             this.label7.Text = "Chọn nhóm quyền hiện có";
             // 
@@ -99,9 +65,9 @@ namespace MayNapKhiTPA.Forms.EmployeeManagement.Group
             this.groupBox1.Controls.Add(this.checkBox1);
             this.groupBox1.Controls.Add(this.checkBox2);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(154, 176);
+            this.groupBox1.Location = new System.Drawing.Point(139, 160);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(351, 230);
+            this.groupBox1.Size = new System.Drawing.Size(301, 199);
             this.groupBox1.TabIndex = 28;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cho phép";
@@ -109,11 +75,11 @@ namespace MayNapKhiTPA.Forms.EmployeeManagement.Group
             // checkBox6
             // 
             this.checkBox6.AutoSize = true;
-            this.checkBox6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.checkBox6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox6.ForeColor = System.Drawing.Color.White;
-            this.checkBox6.Location = new System.Drawing.Point(6, 177);
+            this.checkBox6.Location = new System.Drawing.Point(5, 153);
             this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(97, 25);
+            this.checkBox6.Size = new System.Drawing.Size(89, 25);
             this.checkBox6.TabIndex = 17;
             this.checkBox6.Text = "Quyền C";
             this.checkBox6.UseVisualStyleBackColor = true;
@@ -121,11 +87,11 @@ namespace MayNapKhiTPA.Forms.EmployeeManagement.Group
             // checkBox5
             // 
             this.checkBox5.AutoSize = true;
-            this.checkBox5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.checkBox5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox5.ForeColor = System.Drawing.Color.White;
-            this.checkBox5.Location = new System.Drawing.Point(6, 146);
+            this.checkBox5.Location = new System.Drawing.Point(5, 127);
             this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(93, 25);
+            this.checkBox5.Size = new System.Drawing.Size(88, 25);
             this.checkBox5.TabIndex = 16;
             this.checkBox5.Text = "Quyền B";
             this.checkBox5.UseVisualStyleBackColor = true;
@@ -133,11 +99,11 @@ namespace MayNapKhiTPA.Forms.EmployeeManagement.Group
             // checkBox4
             // 
             this.checkBox4.AutoSize = true;
-            this.checkBox4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.checkBox4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox4.ForeColor = System.Drawing.Color.White;
-            this.checkBox4.Location = new System.Drawing.Point(6, 115);
+            this.checkBox4.Location = new System.Drawing.Point(5, 100);
             this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(97, 25);
+            this.checkBox4.Size = new System.Drawing.Size(89, 25);
             this.checkBox4.TabIndex = 15;
             this.checkBox4.Text = "Quyền A";
             this.checkBox4.UseVisualStyleBackColor = true;
@@ -145,11 +111,11 @@ namespace MayNapKhiTPA.Forms.EmployeeManagement.Group
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.checkBox3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox3.ForeColor = System.Drawing.Color.White;
-            this.checkBox3.Location = new System.Drawing.Point(6, 84);
+            this.checkBox3.Location = new System.Drawing.Point(5, 73);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(177, 25);
+            this.checkBox3.Size = new System.Drawing.Size(171, 25);
             this.checkBox3.TabIndex = 14;
             this.checkBox3.Text = "Tìm kiếm lịch sử nạp";
             this.checkBox3.UseVisualStyleBackColor = true;
@@ -157,11 +123,11 @@ namespace MayNapKhiTPA.Forms.EmployeeManagement.Group
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.checkBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox1.ForeColor = System.Drawing.Color.White;
-            this.checkBox1.Location = new System.Drawing.Point(6, 22);
+            this.checkBox1.Location = new System.Drawing.Point(5, 19);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(196, 25);
+            this.checkBox1.Size = new System.Drawing.Size(176, 25);
             this.checkBox1.TabIndex = 12;
             this.checkBox1.Text = "Cài đặt thông số máy";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -169,11 +135,11 @@ namespace MayNapKhiTPA.Forms.EmployeeManagement.Group
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.checkBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox2.ForeColor = System.Drawing.Color.White;
-            this.checkBox2.Location = new System.Drawing.Point(6, 53);
+            this.checkBox2.Location = new System.Drawing.Point(5, 46);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(273, 25);
+            this.checkBox2.Size = new System.Drawing.Size(247, 25);
             this.checkBox2.TabIndex = 13;
             this.checkBox2.Text = "Truy cập vùng quản trị nhân lực";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -181,27 +147,84 @@ namespace MayNapKhiTPA.Forms.EmployeeManagement.Group
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Showcard Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.Font = new System.Drawing.Font("Showcard Gothic", 18F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.Olive;
-            this.label8.Location = new System.Drawing.Point(174, 40);
+            this.label8.Location = new System.Drawing.Point(149, 35);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(279, 30);
             this.label8.TabIndex = 33;
             this.label8.Text = "Cập Nhật Quyền Hạn";
             // 
+            // comboBoxT2
+            // 
+            this.comboBoxT2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBoxT2.BorderColor = System.Drawing.Color.CornflowerBlue;
+            this.comboBoxT2.BorderSize = 1;
+            this.comboBoxT2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.comboBoxT2.Enabled = false;
+            this.comboBoxT2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxT2.ForeColor = System.Drawing.Color.DimGray;
+            this.comboBoxT2.IconColor = System.Drawing.Color.CornflowerBlue;
+            this.comboBoxT2.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.comboBoxT2.ListTextColor = System.Drawing.Color.DimGray;
+            this.comboBoxT2.Location = new System.Drawing.Point(137, 111);
+            this.comboBoxT2.MinimumSize = new System.Drawing.Size(200, 30);
+            this.comboBoxT2.Name = "comboBoxT2";
+            this.comboBoxT2.Padding = new System.Windows.Forms.Padding(1);
+            this.comboBoxT2.Size = new System.Drawing.Size(303, 30);
+            this.comboBoxT2.TabIndex = 71;
+            this.comboBoxT2.Texts = "";
+            // 
+            // buttonCustom1
+            // 
+            this.buttonCustom1.BackColor = System.Drawing.Color.Brown;
+            this.buttonCustom1.BackgroundColor = System.Drawing.Color.Brown;
+            this.buttonCustom1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonCustom1.BorderRadius = 3;
+            this.buttonCustom1.BorderSize = 0;
+            this.buttonCustom1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCustom1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCustom1.ForeColor = System.Drawing.Color.White;
+            this.buttonCustom1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCustom1.Location = new System.Drawing.Point(314, 392);
+            this.buttonCustom1.Name = "buttonCustom1";
+            this.buttonCustom1.Size = new System.Drawing.Size(126, 36);
+            this.buttonCustom1.TabIndex = 74;
+            this.buttonCustom1.Text = "Xóa quyền này";
+            this.buttonCustom1.TextColor = System.Drawing.Color.White;
+            this.buttonCustom1.UseVisualStyleBackColor = false;
+            // 
+            // buttonDangNhap
+            // 
+            this.buttonDangNhap.BackColor = System.Drawing.Color.Goldenrod;
+            this.buttonDangNhap.BackgroundColor = System.Drawing.Color.Goldenrod;
+            this.buttonDangNhap.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonDangNhap.BorderRadius = 3;
+            this.buttonDangNhap.BorderSize = 0;
+            this.buttonDangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDangNhap.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDangNhap.ForeColor = System.Drawing.Color.White;
+            this.buttonDangNhap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonDangNhap.Location = new System.Drawing.Point(139, 392);
+            this.buttonDangNhap.Name = "buttonDangNhap";
+            this.buttonDangNhap.Size = new System.Drawing.Size(126, 36);
+            this.buttonDangNhap.TabIndex = 73;
+            this.buttonDangNhap.Text = "Cập nhật";
+            this.buttonDangNhap.TextColor = System.Drawing.Color.White;
+            this.buttonDangNhap.UseVisualStyleBackColor = false;
+            // 
             // FormChangeGroup
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(654, 525);
+            this.ClientSize = new System.Drawing.Size(587, 468);
+            this.Controls.Add(this.buttonCustom1);
+            this.Controls.Add(this.buttonDangNhap);
+            this.Controls.Add(this.comboBoxT2);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBoxChonTaiKhoan);
-            this.Controls.Add(this.buttonSua);
-            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormChangeGroup";
@@ -215,10 +238,6 @@ namespace MayNapKhiTPA.Forms.EmployeeManagement.Group
         }
 
         #endregion
-
-        private System.Windows.Forms.Button buttonSua;
-        private System.Windows.Forms.ComboBox comboBoxChonTaiKhoan;
-        private System.Windows.Forms.Button button1;
         private Label label7;
         private GroupBox groupBox1;
         private CheckBox checkBox6;
@@ -228,5 +247,8 @@ namespace MayNapKhiTPA.Forms.EmployeeManagement.Group
         private CheckBox checkBox1;
         private CheckBox checkBox2;
         private Label label8;
+        private LW_PhanMemBaoGia.MyControls.ComboBoxT comboBoxT2;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom1;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonDangNhap;
     }
 }

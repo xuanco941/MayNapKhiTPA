@@ -65,7 +65,7 @@ namespace MayNapKhiTPA.Forms.ActivityManagement
             this.Controls.Add(this.panelUser);
             this.Name = "FormEmployeeActivities";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormEmployeeActivities";
+            this.Text = "Chi tiết hoạt động của nhân viên vận hành";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEmployeeActivity)).EndInit();
             this.ResumeLayout(false);
 

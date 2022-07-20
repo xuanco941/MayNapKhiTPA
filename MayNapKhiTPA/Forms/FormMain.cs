@@ -79,5 +79,13 @@ namespace MayNapKhiTPA.Forms
             ChangeFormContent(formResult);
             this.Font = new Font("Arial", 11);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            labelHeader.Text = "Cài đặt";
+            FormSetting formSetting = new FormSetting();
+            ChangeFormContent(formSetting);
+            this.Font = new Font("Arial", 11);
+        }
     }
 }

@@ -33,6 +33,10 @@
             this.textBoxT = new LW_PhanMemBaoGia.MyControls.TextBoxT();
             this.toggleButton = new LW_PhanMemBaoGia.MyControls.ToggleButton();
             this.buttonCustom1 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.comboBoxT = new LW_PhanMemBaoGia.MyControls.ComboBoxT();
+            this.gradientPanel = new LW_PhanMemBaoGia.MyControls.GradientPanel();
+            this.circularButton = new LW_PhanMemBaoGia.MyControls.CircularButton();
+            this.radioButtonT = new LW_PhanMemBaoGia.MyControls.RadioButtonT();
             this.SuspendLayout();
             // 
             // buttonDangNhap
@@ -59,11 +63,11 @@
             // textBoxT
             // 
             this.textBoxT.BackColor = System.Drawing.SystemColors.Window;
-            this.textBoxT.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.textBoxT.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.textBoxT.BorderRadius = 20;
-            this.textBoxT.BorderSize = 2;
-            this.textBoxT.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxT.BorderColor = System.Drawing.Color.CornflowerBlue;
+            this.textBoxT.BorderFocusColor = System.Drawing.SystemColors.ActiveCaption;
+            this.textBoxT.BorderRadius = 5;
+            this.textBoxT.BorderSize = 1;
+            this.textBoxT.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxT.Location = new System.Drawing.Point(168, 241);
             this.textBoxT.Multiline = false;
             this.textBoxT.Name = "textBoxT";
@@ -71,7 +75,7 @@
             this.textBoxT.PasswordChar = false;
             this.textBoxT.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.textBoxT.PlaceholderText = "";
-            this.textBoxT.Size = new System.Drawing.Size(121, 30);
+            this.textBoxT.Size = new System.Drawing.Size(121, 32);
             this.textBoxT.TabIndex = 13;
             this.textBoxT.Texts = "";
             this.textBoxT.UnderlinedStyle = false;
@@ -106,6 +110,53 @@
             this.buttonCustom1.TextColor = System.Drawing.Color.White;
             this.buttonCustom1.UseVisualStyleBackColor = false;
             // 
+            // comboBoxT
+            // 
+            this.comboBoxT.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBoxT.BorderColor = System.Drawing.Color.CornflowerBlue;
+            this.comboBoxT.BorderSize = 1;
+            this.comboBoxT.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.comboBoxT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.comboBoxT.ForeColor = System.Drawing.Color.DimGray;
+            this.comboBoxT.IconColor = System.Drawing.Color.CornflowerBlue;
+            this.comboBoxT.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.comboBoxT.ListTextColor = System.Drawing.Color.DimGray;
+            this.comboBoxT.Location = new System.Drawing.Point(496, 63);
+            this.comboBoxT.MinimumSize = new System.Drawing.Size(200, 30);
+            this.comboBoxT.Name = "comboBoxT";
+            this.comboBoxT.Padding = new System.Windows.Forms.Padding(1);
+            this.comboBoxT.Size = new System.Drawing.Size(200, 30);
+            this.comboBoxT.TabIndex = 16;
+            this.comboBoxT.Texts = "";
+            // 
+            // gradientPanel
+            // 
+            this.gradientPanel.Angle = 0F;
+            this.gradientPanel.ColorBottom = System.Drawing.Color.Empty;
+            this.gradientPanel.ColorTop = System.Drawing.Color.Empty;
+            this.gradientPanel.Location = new System.Drawing.Point(436, 249);
+            this.gradientPanel.Name = "gradientPanel";
+            this.gradientPanel.Size = new System.Drawing.Size(200, 100);
+            this.gradientPanel.TabIndex = 17;
+            // 
+            // circularButton
+            // 
+            this.circularButton.Location = new System.Drawing.Point(214, 12);
+            this.circularButton.Name = "circularButton";
+            this.circularButton.Size = new System.Drawing.Size(75, 81);
+            this.circularButton.TabIndex = 18;
+            // 
+            // radioButtonT
+            // 
+            this.radioButtonT.CheckedColor = System.Drawing.Color.MediumSlateBlue;
+            this.radioButtonT.Location = new System.Drawing.Point(49, 171);
+            this.radioButtonT.MinimumSize = new System.Drawing.Size(0, 21);
+            this.radioButtonT.Name = "radioButtonT";
+            this.radioButtonT.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.radioButtonT.Size = new System.Drawing.Size(104, 24);
+            this.radioButtonT.TabIndex = 19;
+            this.radioButtonT.UnCheckedColor = System.Drawing.Color.Gray;
+            // 
             // FormTestControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -115,6 +166,10 @@
             this.Controls.Add(this.buttonDangNhap);
             this.Controls.Add(this.textBoxT);
             this.Controls.Add(this.toggleButton);
+            this.Controls.Add(this.comboBoxT);
+            this.Controls.Add(this.gradientPanel);
+            this.Controls.Add(this.circularButton);
+            this.Controls.Add(this.radioButtonT);
             this.Name = "FormTestControl";
             this.Text = "FormTestControl";
             this.ResumeLayout(false);
@@ -126,5 +181,9 @@
         private LW_PhanMemBaoGia.MyControls.TextBoxT textBoxT;
         private LW_PhanMemBaoGia.MyControls.ToggleButton toggleButton;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom1;
+        private LW_PhanMemBaoGia.MyControls.ComboBoxT comboBoxT;
+        private LW_PhanMemBaoGia.MyControls.GradientPanel gradientPanel;
+        private LW_PhanMemBaoGia.MyControls.CircularButton circularButton;
+        private LW_PhanMemBaoGia.MyControls.RadioButtonT radioButtonT;
     }
 }

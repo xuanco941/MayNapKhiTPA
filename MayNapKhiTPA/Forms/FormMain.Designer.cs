@@ -71,7 +71,7 @@ namespace MayNapKhiTPA.Forms
             this.buttonThoat.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttonThoat.FlatAppearance.BorderSize = 0;
             this.buttonThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonThoat.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonThoat.Font = new System.Drawing.Font("Bahnschrift", 11.25F);
             this.buttonThoat.ForeColor = System.Drawing.Color.White;
             this.buttonThoat.Image = global::MayNapKhiTPA.Properties.Resources.red_x_10333;
             this.buttonThoat.Location = new System.Drawing.Point(0, 471);
@@ -90,7 +90,7 @@ namespace MayNapKhiTPA.Forms
             this.button1.Dock = System.Windows.Forms.DockStyle.Top;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.Font = new System.Drawing.Font("Bahnschrift", 11.25F);
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = global::MayNapKhiTPA.Properties.Resources.setting_24;
             this.button1.Location = new System.Drawing.Point(0, 392);
@@ -101,6 +101,7 @@ namespace MayNapKhiTPA.Forms
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // buttonActivity
             // 
@@ -108,7 +109,7 @@ namespace MayNapKhiTPA.Forms
             this.buttonActivity.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttonActivity.FlatAppearance.BorderSize = 0;
             this.buttonActivity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonActivity.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonActivity.Font = new System.Drawing.Font("Bahnschrift", 11.25F);
             this.buttonActivity.ForeColor = System.Drawing.Color.White;
             this.buttonActivity.Image = global::MayNapKhiTPA.Properties.Resources.button3_Image;
             this.buttonActivity.Location = new System.Drawing.Point(0, 313);
@@ -127,7 +128,7 @@ namespace MayNapKhiTPA.Forms
             this.buttonEmployee.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttonEmployee.FlatAppearance.BorderSize = 0;
             this.buttonEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEmployee.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonEmployee.Font = new System.Drawing.Font("Bahnschrift", 11.25F);
             this.buttonEmployee.ForeColor = System.Drawing.Color.White;
             this.buttonEmployee.Image = global::MayNapKhiTPA.Properties.Resources.button2_Image;
             this.buttonEmployee.Location = new System.Drawing.Point(0, 234);
@@ -146,7 +147,7 @@ namespace MayNapKhiTPA.Forms
             this.buttonLResult.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttonLResult.FlatAppearance.BorderSize = 0;
             this.buttonLResult.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonLResult.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonLResult.Font = new System.Drawing.Font("Bahnschrift", 11.25F);
             this.buttonLResult.ForeColor = System.Drawing.Color.White;
             this.buttonLResult.Image = global::MayNapKhiTPA.Properties.Resources.book24;
             this.buttonLResult.Location = new System.Drawing.Point(0, 155);
@@ -165,7 +166,7 @@ namespace MayNapKhiTPA.Forms
             this.buttonDashboard.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttonDashboard.FlatAppearance.BorderSize = 0;
             this.buttonDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDashboard.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonDashboard.Font = new System.Drawing.Font("Bahnschrift", 11.25F);
             this.buttonDashboard.ForeColor = System.Drawing.Color.White;
             this.buttonDashboard.Image = ((System.Drawing.Image)(resources.GetObject("buttonDashboard.Image")));
             this.buttonDashboard.Location = new System.Drawing.Point(0, 76);
@@ -191,7 +192,7 @@ namespace MayNapKhiTPA.Forms
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Monotype Corsiva", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.label2.Font = new System.Drawing.Font("Monotype Corsiva", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label2.Location = new System.Drawing.Point(12, 16);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(149, 43);
@@ -241,7 +242,7 @@ namespace MayNapKhiTPA.Forms
             this.ClientSize = new System.Drawing.Size(1449, 730);
             this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.panel1);
-            this.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Font = new System.Drawing.Font("Bahnschrift", 12F);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -125,6 +125,12 @@
     <Compile Include="Forms\FormResult.Designer.cs">
       <DependentUpon>FormResult.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormSetting.Designer.cs">
+      <DependentUpon>FormSetting.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormTestControl.cs">
       <SubType>Form</SubType>
     </Compile>

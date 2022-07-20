@@ -30,11 +30,11 @@ namespace MayNapKhiTPA.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEmployeeManagement));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageUser = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -43,7 +43,6 @@ namespace MayNapKhiTPA.Forms
             this.buttonChangeUser = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.buttonAddUser = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.buttonSearchUser = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
-            this.textBoxSearchUser = new System.Windows.Forms.TextBox();
             this.buttonThemNhanVien = new System.Windows.Forms.Button();
             this.buttonSuaNhanVien = new System.Windows.Forms.Button();
             this.tabPageGroup = new System.Windows.Forms.TabPage();
@@ -55,9 +54,10 @@ namespace MayNapKhiTPA.Forms
             this.buttonSearchGroup = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBoxSearchGroup = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.textBoxT = new LW_PhanMemBaoGia.MyControls.TextBoxT();
+            this.textBoxT1 = new LW_PhanMemBaoGia.MyControls.TextBoxT();
             this.tabControl1.SuspendLayout();
             this.tabPageUser.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -106,30 +106,30 @@ namespace MayNapKhiTPA.Forms
             // 
             this.dataGridViewUser.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewUser.BackgroundColor = System.Drawing.Color.CornflowerBlue;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewUser.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewUser.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewUser.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewUser.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewUser.Name = "dataGridViewUser";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewUser.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewUser.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewUser.Size = new System.Drawing.Size(983, 426);
             this.dataGridViewUser.TabIndex = 0;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.Controls.Add(this.textBoxT);
             this.panel3.Controls.Add(this.buttonChangeUser);
             this.panel3.Controls.Add(this.buttonAddUser);
             this.panel3.Controls.Add(this.buttonSearchUser);
-            this.panel3.Controls.Add(this.textBoxSearchUser);
             this.panel3.Controls.Add(this.buttonThemNhanVien);
             this.panel3.Controls.Add(this.buttonSuaNhanVien);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -202,7 +202,7 @@ namespace MayNapKhiTPA.Forms
             this.buttonSearchUser.ForeColor = System.Drawing.Color.Black;
             this.buttonSearchUser.Image = ((System.Drawing.Image)(resources.GetObject("buttonSearchUser.Image")));
             this.buttonSearchUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSearchUser.Location = new System.Drawing.Point(190, 12);
+            this.buttonSearchUser.Location = new System.Drawing.Point(168, 12);
             this.buttonSearchUser.Name = "buttonSearchUser";
             this.buttonSearchUser.Size = new System.Drawing.Size(72, 29);
             this.buttonSearchUser.TabIndex = 20;
@@ -211,14 +211,6 @@ namespace MayNapKhiTPA.Forms
             this.buttonSearchUser.TextColor = System.Drawing.Color.Black;
             this.buttonSearchUser.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.buttonSearchUser.UseVisualStyleBackColor = false;
-            // 
-            // textBoxSearchUser
-            // 
-            this.textBoxSearchUser.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textBoxSearchUser.Location = new System.Drawing.Point(4, 12);
-            this.textBoxSearchUser.Name = "textBoxSearchUser";
-            this.textBoxSearchUser.Size = new System.Drawing.Size(180, 29);
-            this.textBoxSearchUser.TabIndex = 5;
             // 
             // buttonThemNhanVien
             // 
@@ -273,32 +265,32 @@ namespace MayNapKhiTPA.Forms
             // 
             this.dataGridViewGroup.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewGroup.BackgroundColor = System.Drawing.Color.OliveDrab;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewGroup.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewGroup.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridViewGroup.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewGroup.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewGroup.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewGroup.Name = "dataGridViewGroup";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewGroup.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewGroup.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridViewGroup.Size = new System.Drawing.Size(983, 426);
             this.dataGridViewGroup.TabIndex = 0;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Transparent;
+            this.panel4.Controls.Add(this.textBoxT1);
             this.panel4.Controls.Add(this.buttonChangeGroup);
             this.panel4.Controls.Add(this.buttonAddGroup);
             this.panel4.Controls.Add(this.buttonSearchGroup);
             this.panel4.Controls.Add(this.button1);
             this.panel4.Controls.Add(this.button2);
-            this.panel4.Controls.Add(this.textBoxSearchGroup);
             this.panel4.Controls.Add(this.button4);
             this.panel4.Controls.Add(this.button5);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -371,7 +363,7 @@ namespace MayNapKhiTPA.Forms
             this.buttonSearchGroup.ForeColor = System.Drawing.Color.Black;
             this.buttonSearchGroup.Image = ((System.Drawing.Image)(resources.GetObject("buttonSearchGroup.Image")));
             this.buttonSearchGroup.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSearchGroup.Location = new System.Drawing.Point(192, 12);
+            this.buttonSearchGroup.Location = new System.Drawing.Point(171, 12);
             this.buttonSearchGroup.Name = "buttonSearchGroup";
             this.buttonSearchGroup.Size = new System.Drawing.Size(72, 29);
             this.buttonSearchGroup.TabIndex = 21;
@@ -409,14 +401,6 @@ namespace MayNapKhiTPA.Forms
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // textBoxSearchGroup
-            // 
-            this.textBoxSearchGroup.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textBoxSearchGroup.Location = new System.Drawing.Point(6, 12);
-            this.textBoxSearchGroup.Name = "textBoxSearchGroup";
-            this.textBoxSearchGroup.Size = new System.Drawing.Size(180, 29);
-            this.textBoxSearchGroup.TabIndex = 5;
-            // 
             // button4
             // 
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -445,6 +429,46 @@ namespace MayNapKhiTPA.Forms
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.UseVisualStyleBackColor = true;
             // 
+            // textBoxT
+            // 
+            this.textBoxT.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxT.BorderColor = System.Drawing.Color.CornflowerBlue;
+            this.textBoxT.BorderFocusColor = System.Drawing.SystemColors.ActiveCaption;
+            this.textBoxT.BorderRadius = 5;
+            this.textBoxT.BorderSize = 1;
+            this.textBoxT.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxT.Location = new System.Drawing.Point(0, 12);
+            this.textBoxT.Multiline = false;
+            this.textBoxT.Name = "textBoxT";
+            this.textBoxT.Padding = new System.Windows.Forms.Padding(7);
+            this.textBoxT.PasswordChar = false;
+            this.textBoxT.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.textBoxT.PlaceholderText = "Nhập họ tên hoặc tài khoản";
+            this.textBoxT.Size = new System.Drawing.Size(162, 29);
+            this.textBoxT.TabIndex = 23;
+            this.textBoxT.Texts = "Nhập họ tên hoặc tài khoản";
+            this.textBoxT.UnderlinedStyle = false;
+            // 
+            // textBoxT1
+            // 
+            this.textBoxT1.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxT1.BorderColor = System.Drawing.Color.CornflowerBlue;
+            this.textBoxT1.BorderFocusColor = System.Drawing.SystemColors.ActiveCaption;
+            this.textBoxT1.BorderRadius = 5;
+            this.textBoxT1.BorderSize = 1;
+            this.textBoxT1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxT1.Location = new System.Drawing.Point(3, 12);
+            this.textBoxT1.Multiline = false;
+            this.textBoxT1.Name = "textBoxT1";
+            this.textBoxT1.Padding = new System.Windows.Forms.Padding(7);
+            this.textBoxT1.PasswordChar = false;
+            this.textBoxT1.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.textBoxT1.PlaceholderText = "Nhập tên quyền";
+            this.textBoxT1.Size = new System.Drawing.Size(162, 29);
+            this.textBoxT1.TabIndex = 25;
+            this.textBoxT1.Texts = "Nhập tên quyền";
+            this.textBoxT1.UnderlinedStyle = false;
+            // 
             // FormEmployeeManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -459,12 +483,10 @@ namespace MayNapKhiTPA.Forms
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUser)).EndInit();
             this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.tabPageGroup.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGroup)).EndInit();
             this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -477,7 +499,6 @@ namespace MayNapKhiTPA.Forms
         private Panel panel2;
         private DataGridView dataGridViewUser;
         private Panel panel3;
-        private TextBox textBoxSearchUser;
         private Button buttonThemNhanVien;
         private Button buttonSuaNhanVien;
         private Panel panel1;
@@ -485,7 +506,6 @@ namespace MayNapKhiTPA.Forms
         private Panel panel4;
         private Button button1;
         private Button button2;
-        private TextBox textBoxSearchGroup;
         private Button button4;
         private Button button5;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonSearchUser;
@@ -494,5 +514,7 @@ namespace MayNapKhiTPA.Forms
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonChangeUser;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonChangeGroup;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonAddGroup;
+        private LW_PhanMemBaoGia.MyControls.TextBoxT textBoxT;
+        private LW_PhanMemBaoGia.MyControls.TextBoxT textBoxT1;
     }
 }
