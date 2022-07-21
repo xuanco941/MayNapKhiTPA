@@ -219,8 +219,8 @@ namespace MayNapKhiTPA.Forms.EmployeeManagement.User
             // 
             // buttonDangNhap
             // 
-            this.buttonDangNhap.BackColor = System.Drawing.Color.Goldenrod;
-            this.buttonDangNhap.BackgroundColor = System.Drawing.Color.Goldenrod;
+            this.buttonDangNhap.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.buttonDangNhap.BackgroundColor = System.Drawing.Color.DarkGoldenrod;
             this.buttonDangNhap.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.buttonDangNhap.BorderRadius = 3;
             this.buttonDangNhap.BorderSize = 0;
