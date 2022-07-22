@@ -2,7 +2,7 @@
 
 namespace MayNapKhiTPA
 {
-    public class Common
+    public static class Common
     {
 
         public const string ConnectionString = @"Data Source=DESKTOP-P4IC2M8\SQLEXPRESS;Initial Catalog=MayNapKhiTPA;User ID=sa;Password=942001xX";
