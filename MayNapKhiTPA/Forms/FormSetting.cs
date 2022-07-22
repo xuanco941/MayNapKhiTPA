@@ -12,6 +12,11 @@ namespace MayNapKhiTPA.Forms
 {
     public partial class FormSetting : Form
     {
+        // Aleart
+        public delegate void CallAlert(string msg, FormAlert.enmType type);
+        public CallAlert callAlert;
+
+
         public FormSetting()
         {
             InitializeComponent();

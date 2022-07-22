@@ -12,6 +12,7 @@ namespace MayNapKhiTPA.Forms
 {
     public partial class FormResult : Form
     {
+
         public FormResult()
         {
             InitializeComponent();

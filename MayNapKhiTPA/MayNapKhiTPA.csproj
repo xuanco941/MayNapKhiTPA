@@ -113,10 +113,10 @@
     <Compile Include="Forms\FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FormMain.cs">
+    <Compile Include="Forms\Main\FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FormMain.Designer.cs">
+    <Compile Include="Forms\Main\FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormResult.cs">
@@ -136,6 +136,12 @@
     </Compile>
     <Compile Include="Forms\FormTestControl.Designer.cs">
       <DependentUpon>FormTestControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Main\FormAleart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Main\FormAleart.Designer.cs">
+      <DependentUpon>FormAleart.cs</DependentUpon>
     </Compile>
     <Compile Include="Library\DGVPrinter.cs" />
     <Compile Include="Models\Activity\Activity.cs" />
@@ -175,13 +181,16 @@
     <EmbeddedResource Include="Forms\EmployeeManagement\User\FormChangeUser.resx">
       <DependentUpon>FormChangeUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Main\FormAleart.resx">
+      <DependentUpon>FormAleart.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormDashboard.resx">
       <DependentUpon>FormDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormMain.resx">
+    <EmbeddedResource Include="Forms\Main\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormResult.resx">
@@ -220,6 +229,11 @@
   <ItemGroup>
     <Content Include="License-LGPL.txt" />
     <Content Include="MayNapKhiTPA.sql" />
+    <None Include="Resources\warning.png" />
+    <None Include="Resources\success.png" />
+    <None Include="Resources\info.png" />
+    <None Include="Resources\icons8_cancel_25px.png" />
+    <None Include="Resources\error.png" />
     <None Include="Resources\iconfinder_Stock Index Up_278812.png" />
     <None Include="Resources\setting-24.png" />
     <None Include="Resources\red-x-10333.png" />
@@ -234,5 +248,6 @@
     <None Include="Resources\button1.Image.png" />
     <None Include="Resources\book24.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

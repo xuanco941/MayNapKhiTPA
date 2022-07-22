@@ -16,6 +16,11 @@ namespace MayNapKhiTPA.Forms
 {
     public partial class FormEmployeeManagement : Form
     {
+        // Aleart
+        public delegate void CallAlert(string msg, FormAlert.enmType type);
+        public CallAlert callAlert;
+
+
         public FormEmployeeManagement()
         {
             InitializeComponent();

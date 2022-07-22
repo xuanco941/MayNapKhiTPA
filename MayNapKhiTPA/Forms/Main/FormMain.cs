@@ -47,8 +47,9 @@ namespace MayNapKhiTPA.Forms
         private void buttonNhanVien_Click(object sender, EventArgs e)
         {
             labelHeader.Text = "Quản lý nhân sự";
-            FormEmployeeManagement formNV = new FormEmployeeManagement();
-            ChangeFormContent(formNV);
+            FormEmployeeManagement formEmployeeManagement = new FormEmployeeManagement();
+            formEmployeeManagement.callAlert = new FormEmployeeManagement.CallAlert(Alert);
+            ChangeFormContent(formEmployeeManagement);
             this.Font = new Font("Arial", 11);
 
         }
@@ -66,6 +67,7 @@ namespace MayNapKhiTPA.Forms
         {
             labelHeader.Text = "Bảng điều khiển";
             FormDashboard formDashboard = new FormDashboard();
+            formDashboard.callAlert = new FormDashboard.CallAlert(Alert);
             ChangeFormContent(formDashboard);
             this.Font = new Font("Arial", 11);
 
@@ -84,8 +86,18 @@ namespace MayNapKhiTPA.Forms
         {
             labelHeader.Text = "Cài đặt";
             FormSetting formSetting = new FormSetting();
+            formSetting.callAlert = new FormSetting.CallAlert(Alert);
             ChangeFormContent(formSetting);
             this.Font = new Font("Arial", 11);
         }
+
+
+        public void Alert(string msg, FormAlert.enmType type)
+        {
+            FormAlert frm = new FormAlert();
+            frm.showAlert(msg, type);
+            panelAleart.Controls.Add(frm);
+        }
+
     }
 }

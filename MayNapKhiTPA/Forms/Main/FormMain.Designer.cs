@@ -44,10 +44,15 @@ namespace MayNapKhiTPA.Forms
             this.panelContainer = new System.Windows.Forms.Panel();
             this.panelContent = new System.Windows.Forms.Panel();
             this.panelHeader = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panelAleart = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panelContainer.SuspendLayout();
             this.panelHeader.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -203,7 +208,7 @@ namespace MayNapKhiTPA.Forms
             // 
             this.labelHeader.AutoSize = true;
             this.labelHeader.ForeColor = System.Drawing.Color.LightGray;
-            this.labelHeader.Location = new System.Drawing.Point(22, 31);
+            this.labelHeader.Location = new System.Drawing.Point(15, 28);
             this.labelHeader.Name = "labelHeader";
             this.labelHeader.Size = new System.Drawing.Size(124, 19);
             this.labelHeader.TabIndex = 2;
@@ -229,12 +234,45 @@ namespace MayNapKhiTPA.Forms
             // 
             // panelHeader
             // 
-            this.panelHeader.Controls.Add(this.labelHeader);
+            this.panelHeader.Controls.Add(this.tableLayoutPanel1);
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHeader.Location = new System.Drawing.Point(0, 0);
             this.panelHeader.Name = "panelHeader";
             this.panelHeader.Size = new System.Drawing.Size(1238, 76);
             this.panelHeader.TabIndex = 4;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 160F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.panelAleart, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel2, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1238, 76);
+            this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // panelAleart
+            // 
+            this.panelAleart.AutoScroll = true;
+            this.panelAleart.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelAleart.Location = new System.Drawing.Point(163, 3);
+            this.panelAleart.Name = "panelAleart";
+            this.panelAleart.Size = new System.Drawing.Size(1072, 70);
+            this.panelAleart.TabIndex = 5;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.labelHeader);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(154, 70);
+            this.panel2.TabIndex = 0;
             // 
             // FormMain
             // 
@@ -253,7 +291,9 @@ namespace MayNapKhiTPA.Forms
             this.panel3.PerformLayout();
             this.panelContainer.ResumeLayout(false);
             this.panelHeader.ResumeLayout(false);
-            this.panelHeader.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -273,6 +313,9 @@ namespace MayNapKhiTPA.Forms
         private System.Windows.Forms.Panel panelHeader;
         private System.Windows.Forms.Button buttonDashboard;
         private Button button1;
+        private TableLayoutPanel tableLayoutPanel1;
+        private Panel panelAleart;
+        private Panel panel2;
     }
 }
 

@@ -13,6 +13,15 @@ namespace MayNapKhiTPA.Forms
 {
     public partial class FormDashboard : Form
     {
+        //ALEART
+        // Define delegate
+        public delegate void CallAlert(string msg, FormAlert.enmType type);
+        // Create instance (null)
+        public CallAlert callAlert;
+
+
+
+
         public FormDashboard()
         {
             InitializeComponent();
