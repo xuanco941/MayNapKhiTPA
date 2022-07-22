@@ -30,12 +30,13 @@ namespace MayNapKhiTPA.Forms.EmployeeManagement.User
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAddUser));
             this.label8 = new System.Windows.Forms.Label();
             this.textBoxFullName = new LW_PhanMemBaoGia.MyControls.TextBoxT();
             this.textBoxUsername = new LW_PhanMemBaoGia.MyControls.TextBoxT();
             this.textBoxPassword = new LW_PhanMemBaoGia.MyControls.TextBoxT();
-            this.textBoxT1 = new LW_PhanMemBaoGia.MyControls.TextBoxT();
-            this.textBoxT2 = new LW_PhanMemBaoGia.MyControls.TextBoxT();
+            this.textBoxEmail = new LW_PhanMemBaoGia.MyControls.TextBoxT();
+            this.textBoxSoDienThoai = new LW_PhanMemBaoGia.MyControls.TextBoxT();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -43,9 +44,9 @@ namespace MayNapKhiTPA.Forms.EmployeeManagement.User
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.buttonDangNhap = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.buttonThem = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.comboBoxCaLam = new System.Windows.Forms.ComboBox();
+            this.comboBoxNhomQuyen = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label8
@@ -119,45 +120,45 @@ namespace MayNapKhiTPA.Forms.EmployeeManagement.User
             this.textBoxPassword.Texts = "";
             this.textBoxPassword.UnderlinedStyle = false;
             // 
-            // textBoxT1
+            // textBoxEmail
             // 
-            this.textBoxT1.BackColor = System.Drawing.SystemColors.Window;
-            this.textBoxT1.BorderColor = System.Drawing.Color.CornflowerBlue;
-            this.textBoxT1.BorderFocusColor = System.Drawing.SystemColors.ActiveCaption;
-            this.textBoxT1.BorderRadius = 5;
-            this.textBoxT1.BorderSize = 1;
-            this.textBoxT1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxT1.Location = new System.Drawing.Point(383, 241);
-            this.textBoxT1.Multiline = false;
-            this.textBoxT1.Name = "textBoxT1";
-            this.textBoxT1.Padding = new System.Windows.Forms.Padding(7);
-            this.textBoxT1.PasswordChar = false;
-            this.textBoxT1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.textBoxT1.PlaceholderText = "";
-            this.textBoxT1.Size = new System.Drawing.Size(200, 35);
-            this.textBoxT1.TabIndex = 52;
-            this.textBoxT1.Texts = "";
-            this.textBoxT1.UnderlinedStyle = false;
+            this.textBoxEmail.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxEmail.BorderColor = System.Drawing.Color.CornflowerBlue;
+            this.textBoxEmail.BorderFocusColor = System.Drawing.SystemColors.ActiveCaption;
+            this.textBoxEmail.BorderRadius = 5;
+            this.textBoxEmail.BorderSize = 1;
+            this.textBoxEmail.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxEmail.Location = new System.Drawing.Point(383, 241);
+            this.textBoxEmail.Multiline = false;
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Padding = new System.Windows.Forms.Padding(7);
+            this.textBoxEmail.PasswordChar = false;
+            this.textBoxEmail.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.textBoxEmail.PlaceholderText = "";
+            this.textBoxEmail.Size = new System.Drawing.Size(200, 35);
+            this.textBoxEmail.TabIndex = 52;
+            this.textBoxEmail.Texts = "";
+            this.textBoxEmail.UnderlinedStyle = false;
             // 
-            // textBoxT2
+            // textBoxSoDienThoai
             // 
-            this.textBoxT2.BackColor = System.Drawing.SystemColors.Window;
-            this.textBoxT2.BorderColor = System.Drawing.Color.CornflowerBlue;
-            this.textBoxT2.BorderFocusColor = System.Drawing.SystemColors.ActiveCaption;
-            this.textBoxT2.BorderRadius = 5;
-            this.textBoxT2.BorderSize = 1;
-            this.textBoxT2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxT2.Location = new System.Drawing.Point(150, 241);
-            this.textBoxT2.Multiline = false;
-            this.textBoxT2.Name = "textBoxT2";
-            this.textBoxT2.Padding = new System.Windows.Forms.Padding(7);
-            this.textBoxT2.PasswordChar = false;
-            this.textBoxT2.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.textBoxT2.PlaceholderText = "";
-            this.textBoxT2.Size = new System.Drawing.Size(200, 35);
-            this.textBoxT2.TabIndex = 55;
-            this.textBoxT2.Texts = "";
-            this.textBoxT2.UnderlinedStyle = false;
+            this.textBoxSoDienThoai.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxSoDienThoai.BorderColor = System.Drawing.Color.CornflowerBlue;
+            this.textBoxSoDienThoai.BorderFocusColor = System.Drawing.SystemColors.ActiveCaption;
+            this.textBoxSoDienThoai.BorderRadius = 5;
+            this.textBoxSoDienThoai.BorderSize = 1;
+            this.textBoxSoDienThoai.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSoDienThoai.Location = new System.Drawing.Point(150, 241);
+            this.textBoxSoDienThoai.Multiline = false;
+            this.textBoxSoDienThoai.Name = "textBoxSoDienThoai";
+            this.textBoxSoDienThoai.Padding = new System.Windows.Forms.Padding(7);
+            this.textBoxSoDienThoai.PasswordChar = false;
+            this.textBoxSoDienThoai.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.textBoxSoDienThoai.PlaceholderText = "";
+            this.textBoxSoDienThoai.Size = new System.Drawing.Size(200, 35);
+            this.textBoxSoDienThoai.TabIndex = 55;
+            this.textBoxSoDienThoai.Texts = "";
+            this.textBoxSoDienThoai.UnderlinedStyle = false;
             // 
             // label1
             // 
@@ -236,42 +237,46 @@ namespace MayNapKhiTPA.Forms.EmployeeManagement.User
             this.label7.TabIndex = 29;
             this.label7.Text = "Ca làm";
             // 
-            // buttonDangNhap
+            // buttonThem
             // 
-            this.buttonDangNhap.BackColor = System.Drawing.Color.SteelBlue;
-            this.buttonDangNhap.BackgroundColor = System.Drawing.Color.SteelBlue;
-            this.buttonDangNhap.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonDangNhap.BorderRadius = 3;
-            this.buttonDangNhap.BorderSize = 0;
-            this.buttonDangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDangNhap.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDangNhap.ForeColor = System.Drawing.Color.White;
-            this.buttonDangNhap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonDangNhap.Location = new System.Drawing.Point(304, 364);
-            this.buttonDangNhap.Name = "buttonDangNhap";
-            this.buttonDangNhap.Size = new System.Drawing.Size(126, 36);
-            this.buttonDangNhap.TabIndex = 56;
-            this.buttonDangNhap.Text = "Thêm";
-            this.buttonDangNhap.TextColor = System.Drawing.Color.White;
-            this.buttonDangNhap.UseVisualStyleBackColor = false;
+            this.buttonThem.BackColor = System.Drawing.Color.Green;
+            this.buttonThem.BackgroundColor = System.Drawing.Color.Green;
+            this.buttonThem.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonThem.BorderRadius = 3;
+            this.buttonThem.BorderSize = 0;
+            this.buttonThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonThem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonThem.ForeColor = System.Drawing.Color.White;
+            this.buttonThem.Image = ((System.Drawing.Image)(resources.GetObject("buttonThem.Image")));
+            this.buttonThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonThem.Location = new System.Drawing.Point(304, 364);
+            this.buttonThem.Name = "buttonThem";
+            this.buttonThem.Size = new System.Drawing.Size(126, 36);
+            this.buttonThem.TabIndex = 56;
+            this.buttonThem.Text = "Thêm";
+            this.buttonThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonThem.TextColor = System.Drawing.Color.White;
+            this.buttonThem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonThem.UseVisualStyleBackColor = false;
+            this.buttonThem.Click += new System.EventHandler(this.buttonThem_Click);
             // 
-            // comboBox1
+            // comboBoxCaLam
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(383, 110);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(200, 33);
-            this.comboBox1.TabIndex = 76;
+            this.comboBoxCaLam.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxCaLam.FormattingEnabled = true;
+            this.comboBoxCaLam.Location = new System.Drawing.Point(383, 110);
+            this.comboBoxCaLam.Name = "comboBoxCaLam";
+            this.comboBoxCaLam.Size = new System.Drawing.Size(200, 33);
+            this.comboBoxCaLam.TabIndex = 76;
             // 
-            // comboBox2
+            // comboBoxNhomQuyen
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(148, 309);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(435, 33);
-            this.comboBox2.TabIndex = 77;
+            this.comboBoxNhomQuyen.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxNhomQuyen.FormattingEnabled = true;
+            this.comboBoxNhomQuyen.Location = new System.Drawing.Point(148, 309);
+            this.comboBoxNhomQuyen.Name = "comboBoxNhomQuyen";
+            this.comboBoxNhomQuyen.Size = new System.Drawing.Size(435, 33);
+            this.comboBoxNhomQuyen.TabIndex = 77;
             // 
             // FormAddUser
             // 
@@ -279,11 +284,11 @@ namespace MayNapKhiTPA.Forms.EmployeeManagement.User
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(754, 457);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.buttonDangNhap);
-            this.Controls.Add(this.textBoxT2);
-            this.Controls.Add(this.textBoxT1);
+            this.Controls.Add(this.comboBoxNhomQuyen);
+            this.Controls.Add(this.comboBoxCaLam);
+            this.Controls.Add(this.buttonThem);
+            this.Controls.Add(this.textBoxSoDienThoai);
+            this.Controls.Add(this.textBoxEmail);
             this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.textBoxUsername);
             this.Controls.Add(this.textBoxFullName);
@@ -310,8 +315,8 @@ namespace MayNapKhiTPA.Forms.EmployeeManagement.User
         private LW_PhanMemBaoGia.MyControls.TextBoxT textBoxFullName;
         private LW_PhanMemBaoGia.MyControls.TextBoxT textBoxUsername;
         private LW_PhanMemBaoGia.MyControls.TextBoxT textBoxPassword;
-        private LW_PhanMemBaoGia.MyControls.TextBoxT textBoxT1;
-        private LW_PhanMemBaoGia.MyControls.TextBoxT textBoxT2;
+        private LW_PhanMemBaoGia.MyControls.TextBoxT textBoxEmail;
+        private LW_PhanMemBaoGia.MyControls.TextBoxT textBoxSoDienThoai;
         private Label label1;
         private Label label2;
         private Label label4;
@@ -319,8 +324,8 @@ namespace MayNapKhiTPA.Forms.EmployeeManagement.User
         private Label label3;
         private Label label6;
         private Label label7;
-        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonDangNhap;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonThem;
+        private ComboBox comboBoxCaLam;
+        private ComboBox comboBoxNhomQuyen;
     }
 }

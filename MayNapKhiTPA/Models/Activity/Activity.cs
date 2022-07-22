@@ -4,17 +4,20 @@ namespace MayNapKhiTPA.Models
 {
     public class Activity
     {
-        public int ID { get; set; }
-        public string Name { get; set; }
-        public DateTime Time { get; set; }
+        public int ID_Activity { get; set; }
+        public string Description { get; set; }
+        public bool IsSetting { get; set; }
+        public DateTime Create_At { get; set; }
+        public int ID_Employee { get; set; }
 
-        public Activity(int iD, string name, DateTime time)
+        public Activity(int iD_Activity, string description, bool isSetting, DateTime create_At, int iD_Employee)
         {
-            ID = iD;
-            Name = name;
-            Time = time;
+            ID_Activity = iD_Activity;
+            Description = description;
+            IsSetting = isSetting;
+            Create_At = create_At;
+            ID_Employee = iD_Employee;
         }
-
     }
 }
 

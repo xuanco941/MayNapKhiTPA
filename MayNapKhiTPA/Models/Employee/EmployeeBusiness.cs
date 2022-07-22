@@ -16,14 +16,8 @@ namespace MayNapKhiTPA.Models
             SqlDataReader sqlDataReader = command.ExecuteReader();
 
             // 3 la cloumn password
-            if (sqlDataReader.Read() && sqlDataReader.GetString(3).Trim() == password.ToString().Trim())
+            if (sqlDataReader.Read() && ((string)sqlDataReader["Password"]).Trim() == password.ToString().Trim())
             {
-                int _ID = sqlDataReader.GetInt32(0);
-                string _FullName = sqlDataReader.GetString(1);
-                //employee.ID = _ID;
-                //employee.FullName = _FullName;
-                //bool _IsAdmin = sqlDataReader.GetBoolean(4);
-                //employee.IsAdmin = _IsAdmin;
                 sqlConnection.Close();
                 return true;
             }
@@ -44,8 +38,8 @@ namespace MayNapKhiTPA.Models
             SqlDataReader sqlDataReader = command.ExecuteReader();
             while (sqlDataReader.Read())
             {
-                Employee employee = new Employee((int)sqlDataReader["Employee_ID"], (string)sqlDataReader["Employee_FullName"],
-                    (string)sqlDataReader["Employee_Username"], (string)sqlDataReader["Employee_Password"], (string)sqlDataReader["Employee_Department"], (bool)sqlDataReader["Employee_IsAdmin"]);
+                Employee employee = new Employee((int)sqlDataReader["ID_Employee"], (string)sqlDataReader["FullName"],
+                    (string)sqlDataReader["Username"], (string)sqlDataReader["Password"], (string)sqlDataReader["PhoneNumber"], (string)sqlDataReader["Email"], (int)sqlDataReader["ID_Shift"], (int)sqlDataReader["ID_Permission"]);
                 list.Add(employee);
             }
             sqlConnection.Close();
@@ -55,65 +49,48 @@ namespace MayNapKhiTPA.Models
 
 
         // Them TK
-        public static bool AddEmployee(Employee employee)
+        public static void AddEmployee(Employee employee)
         {
             SqlConnection sqlConnection = new SqlConnection(Common.ConnectionString);
             sqlConnection.Open();
             var command = new SqlCommand();
-            command.CommandText = $"exec AddEmployee @FullName, @Username, @Password,@Department, @IsAdmin";
-            var FullName = command.Parameters.AddWithValue("FullName", employee.FullName);
-            var Username = command.Parameters.AddWithValue("Username", employee.Username.ToString().Trim());
-            var Password = command.Parameters.AddWithValue("Password", employee.Password.ToString().Trim());
-            var Department = command.Parameters.AddWithValue("Department", employee.Department);
-            var IsAdmin = command.Parameters.AddWithValue("IsAdmin", employee.IsAdmin);
+            command.CommandText = $"exec AddEmployee @FullName, @Username, @Password,@PhoneNumber, @Email, @ID_Shift, @ID_Permission";
+            command.Parameters.AddWithValue("FullName", employee.FullName);
+            command.Parameters.AddWithValue("Username", employee.Username.ToString().Trim());
+            command.Parameters.AddWithValue("Password", employee.Password.ToString().Trim());
+            command.Parameters.AddWithValue("PhoneNumber", employee.PhoneNumber.ToString().Trim());
+            command.Parameters.AddWithValue("Email", employee.Email.ToString().Trim());
+            command.Parameters.AddWithValue("ID_Shift", employee.ID_Shift);
+            command.Parameters.AddWithValue("ID_Permission", employee.ID_Permission);
+
             command.Connection = sqlConnection;
 
-            try
-            {
-                command.ExecuteNonQuery();
-                return true;
-            }
-            catch
-            {
-                return false;
-            }
-            finally
-            {
-                sqlConnection.Close();
-            }
+            command.ExecuteNonQuery();
+            sqlConnection.Close();
         }
 
         // Sua TK
-        public static bool UpdateEmployee(string UsernameOld, Employee employee)
+        public static void UpdateEmployee(string UsernameOld, Employee employee)
         {
             SqlConnection sqlConnection = new SqlConnection(Common.ConnectionString);
             sqlConnection.Open();
             var command = new SqlCommand();
-            command.CommandText = "exec UpdateEmployee @UsernameOld, @FullName, @Username, @Password, @Department, @IsAdmin";
+            command.CommandText = "exec UpdateEmployee @UsernameOld, @FullName, @Username, @Password, @PhoneNumber, @Email, @ID_Shift, @ID_Permission";
             command.Parameters.AddWithValue("UsernameOld", UsernameOld);
             command.Parameters.AddWithValue("FullName", employee.FullName);
             command.Parameters.AddWithValue("Username", employee.Username.ToString().Trim());
             command.Parameters.AddWithValue("Password", employee.Password.ToString().Trim());
-            command.Parameters.AddWithValue("Department", employee.Department);
-            command.Parameters.AddWithValue("IsAdmin", employee.IsAdmin);
+            command.Parameters.AddWithValue("PhoneNumber", employee.PhoneNumber.ToString().Trim());
+            command.Parameters.AddWithValue("Email", employee.Email.ToString().Trim());
+            command.Parameters.AddWithValue("ID_Shift", employee.ID_Shift);
+            command.Parameters.AddWithValue("ID_Permission", employee.ID_Permission);
             command.Connection = sqlConnection;
 
-            try
-            {
-                command.ExecuteNonQuery();
-                return true;
-            }
-            catch
-            {
-                return false;
-            }
-            finally
-            {
-                sqlConnection.Close();
-            }
+            command.ExecuteNonQuery();
+            sqlConnection.Close();
         }
 
-        public static bool DeleteEmployee(string username)
+        public static void DeleteEmployee(string username)
         {
             SqlConnection sqlConnection = new SqlConnection(Common.ConnectionString);
             sqlConnection.Open();
@@ -123,19 +100,8 @@ namespace MayNapKhiTPA.Models
 
             command.Connection = sqlConnection;
 
-            try
-            {
-                command.ExecuteNonQuery();
-                return true;
-            }
-            catch
-            {
-                return false;
-            }
-            finally
-            {
-                sqlConnection.Close();
-            }
+            command.ExecuteNonQuery();
+            sqlConnection.Close();
         }
     }
 

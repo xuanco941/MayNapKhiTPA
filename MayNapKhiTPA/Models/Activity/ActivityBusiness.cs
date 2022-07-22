@@ -27,8 +27,7 @@ namespace MayNapKhiTPA.Models
             SqlDataReader sqlDataReader = command.ExecuteReader();
             while (sqlDataReader.Read())
             {
-                Activity activity = new Activity((int)sqlDataReader["Activity_ID"], (string)sqlDataReader["Activity_Name"],
-                    sqlDataReader.GetDateTime(2));
+                Activity activity = new Activity(sqlDataReader.GetInt32(0), sqlDataReader.GetString(1), sqlDataReader.GetBoolean(2), sqlDataReader.GetDateTime(3), sqlDataReader.GetInt32(4)); list.Add(activity);
                 list.Add(activity);
             }
             sqlConnection.Close();
@@ -56,9 +55,7 @@ namespace MayNapKhiTPA.Models
             SqlDataReader sqlDataReader = command.ExecuteReader();
             while (sqlDataReader.Read())
             {
-                Activity activity = new Activity((int)sqlDataReader["Activity_ID"], (string)sqlDataReader["Activity_Name"],
-                    sqlDataReader.GetDateTime(2));
-                list.Add(activity);
+                Activity activity = new Activity(sqlDataReader.GetInt32(0), sqlDataReader.GetString(1), sqlDataReader.GetBoolean(2), sqlDataReader.GetDateTime(3), sqlDataReader.GetInt32(4));                list.Add(activity);
             }
             sqlConnection.Close();
             return list;

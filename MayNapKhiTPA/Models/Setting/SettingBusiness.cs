@@ -4,9 +4,9 @@ using MayNapKhiTPA;
 
 namespace MayNapKhiTPA.Models
 {
-    public class ThongSoMayBusiness
+    public class SettingBusiness
     {
-        public static void UpdateThongSoMay(double ApSuat, TimeSpan ThoiGianNapGioiHan)
+        public static void UpdateSetting(double ApSuat, TimeSpan ThoiGianNapGioiHan)
         {
             SqlConnection sqlConnection = new SqlConnection(Common.ConnectionString);
             sqlConnection.Open();

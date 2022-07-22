@@ -25,16 +25,17 @@ namespace MayNapKhiTPA.Forms
         {
             var listNhanVien = EmployeeBusiness.GetAllEmployees();
             DataTable dt = new DataTable();
-            dt.Columns.Add("Họ tên", typeof(string));
-            dt.Columns.Add("Tài khoản", typeof(string));
-            dt.Columns.Add("Mật khẩu", typeof(string));
-            dt.Columns.Add("Phòng ban", typeof(string));
-            dt.Columns.Add("Quyền ", typeof(string));
+            dt.Columns.Add("Họ tên");
+            dt.Columns.Add("Tài khoản");
+            dt.Columns.Add("Mật khẩu");
+            dt.Columns.Add("Số điện thoại");
+            dt.Columns.Add("Email");
+            dt.Columns.Add("Ca làm");
+            dt.Columns.Add("Quyền");
 
             listNhanVien.ForEach(delegate (Employee employee)
             {
-                string str = employee.IsAdmin == true ? "Mặc định (Admin)" : "Nhân viên";
-                dt.Rows.Add(employee.FullName, employee.Username, employee.Password, employee.Department, str);
+                dt.Rows.Add(employee.FullName, employee.Username, employee.Password, employee.PhoneNumber, employee.Email,employee.ID_Shift,employee.ID_Permission);
             });
             dataGridViewUser.DataSource = dt;
 

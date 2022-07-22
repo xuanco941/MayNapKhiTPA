@@ -43,14 +43,14 @@ namespace MayNapKhiTPA.Forms
             dt.Columns.Add("No.", typeof(int));
             dt.Columns.Add("Hoạt động", typeof(string));
             dt.Columns.Add("Thời gian", typeof(DateTime));
-            dt.Columns.Add("Tài khoản thực hiện", typeof(string));
+            dt.Columns.Add("Tài khoản thực hiện");
 
 
             int count = 1;
             activities.ForEach(delegate (Activity activity)
             {
-                string time = activity.Time.ToString("dd/MM/yyyy hh:mm:ss", CultureInfo.InvariantCulture);
-                dt.Rows.Add(count, activity.Name, time);
+                string createAt = activity.Create_At.ToString("dd/MM/yyyy hh:mm:ss", CultureInfo.InvariantCulture);
+                dt.Rows.Add(count, activity.Description, createAt,activity.ID_Employee);
                 count++;
             });
             dataGridViewActivity.DataSource = dt;

@@ -4,11 +4,11 @@ namespace MayNapKhiTPA.Models
 {
     public class Rules
     {
-        public static bool IsAdmin(int MaNV)
+        public static bool IsAdmin(int ID_Employee)
         {
             SqlConnection sqlConnection = new SqlConnection(Common.ConnectionString);
             sqlConnection.Open();
-            string sql = $"exec FindEmployeeByID {MaNV}";
+            string sql = $"exec FindEmployeeByID {ID_Employee}";
             SqlCommand command = new SqlCommand(sql, sqlConnection);
 
             SqlDataReader sqlDataReader = command.ExecuteReader();
