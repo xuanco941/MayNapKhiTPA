@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace MayNapKhiTPA.Forms.EmployeeManagement.Group
+namespace MayNapKhiTPA.Forms
 {
     partial class FormChangeGroup
     {

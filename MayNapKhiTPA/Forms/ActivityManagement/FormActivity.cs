@@ -50,7 +50,7 @@ namespace MayNapKhiTPA.Forms
             activities.ForEach(delegate (Activity activity)
             {
                 string createAt = activity.Create_At.ToString("dd/MM/yyyy hh:mm:ss", CultureInfo.InvariantCulture);
-                dt.Rows.Add(count, activity.Description, createAt,activity.ID_Employee);
+                dt.Rows.Add(count, activity.Description, createAt,activity.ID_User);
                 count++;
             });
             dataGridViewActivity.DataSource = dt;

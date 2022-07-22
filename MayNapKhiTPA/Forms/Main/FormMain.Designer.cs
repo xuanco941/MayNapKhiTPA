@@ -208,7 +208,7 @@ namespace MayNapKhiTPA.Forms
             // 
             this.labelHeader.AutoSize = true;
             this.labelHeader.ForeColor = System.Drawing.Color.LightGray;
-            this.labelHeader.Location = new System.Drawing.Point(15, 28);
+            this.labelHeader.Location = new System.Drawing.Point(22, 28);
             this.labelHeader.Name = "labelHeader";
             this.labelHeader.Size = new System.Drawing.Size(124, 19);
             this.labelHeader.TabIndex = 2;
@@ -244,7 +244,7 @@ namespace MayNapKhiTPA.Forms
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 160F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 170F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.panelAleart, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 0, 0);
@@ -260,9 +260,9 @@ namespace MayNapKhiTPA.Forms
             // 
             this.panelAleart.AutoScroll = true;
             this.panelAleart.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelAleart.Location = new System.Drawing.Point(163, 3);
+            this.panelAleart.Location = new System.Drawing.Point(173, 3);
             this.panelAleart.Name = "panelAleart";
-            this.panelAleart.Size = new System.Drawing.Size(1072, 70);
+            this.panelAleart.Size = new System.Drawing.Size(1062, 70);
             this.panelAleart.TabIndex = 5;
             // 
             // panel2
@@ -271,7 +271,7 @@ namespace MayNapKhiTPA.Forms
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(154, 70);
+            this.panel2.Size = new System.Drawing.Size(164, 70);
             this.panel2.TabIndex = 0;
             // 
             // FormMain

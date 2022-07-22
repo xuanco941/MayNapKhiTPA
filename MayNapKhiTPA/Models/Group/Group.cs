@@ -6,18 +6,19 @@ using System.Threading.Tasks;
 
 namespace MayNapKhiTPA.Models
 {
-    internal class Permission
+    internal class Group
     {
-        public int ID_Permission { get; set; }
+        public int ID_Group { get; set; }
         public string Name { get; set; }
         public bool IsManagementSetting { get; set; }
-        public bool IsManagementEmployee { get; set; }
+        public bool IsManagementUser { get; set; }
 
-        public Permission(int iD_Permission, bool isManagementSetting, bool isManagementEmployee)
+        public Group(int iD_Group, string name, bool isManagementSetting, bool isManagementUser)
         {
-            ID_Permission = iD_Permission;
+            ID_Group = iD_Group;
+            Name = name;
             IsManagementSetting = isManagementSetting;
-            IsManagementEmployee = isManagementEmployee;
+            IsManagementUser = isManagementUser;
         }
     }
 }

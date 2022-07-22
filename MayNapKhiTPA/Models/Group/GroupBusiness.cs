@@ -7,20 +7,20 @@ using System.Threading.Tasks;
 
 namespace MayNapKhiTPA.Models
 {
-    internal class PermissionBusiness
+    internal class GroupBusiness
     {
-        public static List<Permission> GetAllPermissions()
+        public static List<Group> GetAllGroups()
         {
-            List<Permission> list = new List<Permission>();
+            List<Group> list = new List<Group>();
             SqlConnection sqlConnection = new SqlConnection(Common.ConnectionString);
             sqlConnection.Open();
-            string sql = "select * from Permission";
+            string sql = "select * from [Group]";
             var command = new SqlCommand(sql, sqlConnection);
             SqlDataReader sqlDataReader = command.ExecuteReader();
             while (sqlDataReader.Read())
             {
-                Permission permission = new Permission(sqlDataReader.GetInt32(0),sqlDataReader.GetBoolean(1),sqlDataReader.GetBoolean(2));
-                list.Add(permission);
+                Group group = new Group(sqlDataReader.GetInt32(0),sqlDataReader.GetString(1),sqlDataReader.GetBoolean(2),sqlDataReader.GetBoolean(3));
+                list.Add(group);
             }
             sqlConnection.Close();
             return list;
@@ -29,15 +29,15 @@ namespace MayNapKhiTPA.Models
 
 
         // Them Ca làm
-        public static void AddPermission(Permission permission)
+        public static void AddGroup(Group group)
         {
             SqlConnection sqlConnection = new SqlConnection(Common.ConnectionString);
             sqlConnection.Open();
             var command = new SqlCommand();
-            command.CommandText = $"exec AddPermission @Name, @IsManagementSetting, @IsManagementEmployee";
-            command.Parameters.AddWithValue("Name", permission.Name);
-            command.Parameters.AddWithValue("IsManagementSetting", permission.IsManagementSetting);
-            command.Parameters.AddWithValue("IsManagementEmployee", permission.IsManagementEmployee);
+            command.CommandText = $"exec AddGroup @Name, @IsManagementSetting, @IsManagementUser";
+            command.Parameters.AddWithValue("Name", group.Name);
+            command.Parameters.AddWithValue("IsManagementSetting", group.IsManagementSetting);
+            command.Parameters.AddWithValue("IsManagementUser", group.IsManagementUser);
 
             command.Connection = sqlConnection;
 
@@ -46,17 +46,17 @@ namespace MayNapKhiTPA.Models
         }
 
         // Sua TK
-        public static void UpdatePermission(int ID_Permission, string Name, bool IsManagementSetting, bool IsManagementEmployee)
+        public static void UpdateGroup(int ID_Group, string Name, bool IsManagementSetting, bool IsManagementUser)
         {
             SqlConnection sqlConnection = new SqlConnection(Common.ConnectionString);
             sqlConnection.Open();
             var command = new SqlCommand();
-            command.CommandText = "exec UpdatePermission @ID_Permission, @Name, @IsManagementSetting, @IsManagementEmployee";
+            command.CommandText = "exec UpdateGroup @ID_Group, @Name, @IsManagementSetting, @IsManagementUser";
 
-            command.Parameters.AddWithValue("ID_Permission", ID_Permission);
+            command.Parameters.AddWithValue("ID_Group", ID_Group);
             command.Parameters.AddWithValue("Name", Name);
             command.Parameters.AddWithValue("IsManagementSetting", IsManagementSetting);
-            command.Parameters.AddWithValue("IsManagementEmployee", IsManagementEmployee);
+            command.Parameters.AddWithValue("IsManagementUser", IsManagementUser);
 
             command.Connection = sqlConnection;
 
@@ -64,13 +64,13 @@ namespace MayNapKhiTPA.Models
             sqlConnection.Close();
         }
 
-        public static void DeleteShift(int ID_Permission)
+        public static void DeleteGroup(int ID_Group)
         {
             SqlConnection sqlConnection = new SqlConnection(Common.ConnectionString);
             sqlConnection.Open();
             var command = new SqlCommand();
-            command.CommandText = $"exec DeletePermission @ID_Permission";
-            command.Parameters.AddWithValue("ID_Permission", ID_Permission);
+            command.CommandText = $"exec DeleteGroup @ID_Group";
+            command.Parameters.AddWithValue("ID_Group", ID_Group);
 
             command.Connection = sqlConnection;
 

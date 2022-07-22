@@ -33,7 +33,7 @@ namespace MayNapKhiTPA
             {
                 try
                 {
-                    if (EmployeeBusiness.AuthLogin(TaiKhoan, MatKhau) == true)
+                    if (UserBusiness.AuthLogin(TaiKhoan, MatKhau) == true)
                     {
                         this.Close();
                         Common.UserNameCurrent = TaiKhoan;

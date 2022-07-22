@@ -9,121 +9,109 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MayNapKhiTPA.Models;
 
-namespace MayNapKhiTPA.Forms.EmployeeManagement.User
+namespace MayNapKhiTPA.Forms
 {
     public partial class FormChangeUser : Form
     {
         // Define delegate
-        public delegate void ChangeData();
+        public delegate void ChangeData(string msg, FormAlert.enmType enmType);
 
         // Create instance (null)
         public ChangeData changeData;
         public FormChangeUser()
         {
             InitializeComponent();
-            //LoadForm();
+            LoadForm();
         }
-        //public void LoadForm()
-        //{
-        //    var listNV = EmployeeBusiness.GetAllEmployees();
-        //    var listTaiKhoan = from employee in listNV select employee.Username;
-        //    comboBoxChonTaiKhoan.DataSource = listTaiKhoan.ToList();
+        public void LoadForm()
+        {
+            var listUsers = UserBusiness.GetAllUsers();
+            var listUsername = from user in listUsers select user.Username;
+            comboBoxSelectUsername.DataSource = listUsername.ToList();
 
-        //}
+        }
 
-        //private void buttonSua_Click(object sender, EventArgs e)
-        //{
-        //    string UsernameOld = comboBoxChonTaiKhoan.Text;
-        //    string hoTen = textBoxFullName.Text;
-        //    string taiKhoan = textBoxUsername.Text.Trim();
-        //    string matKhau = textBoxPassword.Text.Trim();
-        //    string department = textBoxDepartment.Text;
-        //    bool isAdmin = false;
-        //    if (radioButtonCo.Checked)
-        //    {
-        //        isAdmin = true;
-        //    }
-        //    if (radioButtonKhong.Checked)
-        //    {
-        //        isAdmin = false;
-        //    }
-        //    Employee employee = new Employee(hoTen, taiKhoan, matKhau, department, isAdmin);
-        //    if (String.IsNullOrEmpty(hoTen) || String.IsNullOrEmpty(taiKhoan) || String.IsNullOrEmpty(matKhau) || String.IsNullOrEmpty(department))
-        //    {
-        //        MessageBox.Show("Vui lòng điền đủ thông tin.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        private void buttonUpdate_Click(object sender, EventArgs e)
+        {
+            string usernameOld = comboBoxSelectUsername.Text;
+            string fullname = textBoxFullName.Texts;
+            string username = textBoxUsername.Texts.Trim();
+            string password = textBoxPassword.Texts.Trim();
+            string phonenumber = textBoxPhoneNumber.Texts.Trim();
+            string email = textBoxEmail.Texts.Trim();
+            int id_shift = 1;
+            int id_group = 1;
+        
+            User user = new User(fullname, username, password, phonenumber, email, id_shift, id_group);
+            if (String.IsNullOrEmpty(fullname) || String.IsNullOrEmpty(username) || String.IsNullOrEmpty(password) )
+            {
+                MessageBox.Show("Vui lòng điền đủ thông tin.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-        //    }
-        //    else
-        //    {
-        //        try
-        //        {
-        //            EmployeeBusiness.UpdateEmployee(UsernameOld, employee);
-        //            MessageBox.Show("Cập nhật thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //            changeData?.Invoke();
-        //        }
-        //        catch
-        //        {
-        //            MessageBox.Show("Cập nhật thất bại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //        }
-        //    }
+            }
+            else
+            {
+                try
+                {
+                    UserBusiness.UpdateUser(usernameOld, user);
+                    changeData?.Invoke("Cập nhật thành công.",FormAlert.enmType.Success);
+                }
+                catch
+                {
+                    changeData?.Invoke("Cập nhật thất bại.", FormAlert.enmType.Error);
+                }
+                this.Close();
+            }
 
-        //    LoadForm();
-        //    comboBoxChonTaiKhoan.Text = taiKhoan;
-        //}
+            LoadForm();
+            comboBoxSelectUsername.Text = username;
+        }
 
-        //private void comboBoxChonTaiKhoan_SelectedIndexChanged(object sender, EventArgs e)
-        //{
-        //    //vô hiệu hóa nút xóa khi đây là tài khoản hiện tại
-        //    if (comboBoxChonTaiKhoan.Text == Common.UserNameCurrent)
-        //    {
-        //        button1.Enabled = false;
-        //    }
-        //    else
-        //    {
-        //        button1.Enabled = true;
-        //    }
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            string username = comboBoxSelectUsername.Text;
 
+            DialogResult dialogResult = MessageBox.Show($"Bạn có chắc muốn xóa tài khoản {username}", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
+            {
+                try
+                {
+                    UserBusiness.DeleteUser(username);
+                    changeData?.Invoke($"Xóa thành công tài khoản {username}.", FormAlert.enmType.Success);
+                }
+                catch
+                {
+                    changeData?.Invoke($"Xóa thất bại.", FormAlert.enmType.Error);
+                }
+                LoadForm();
+                this.Close();
+            }
+        }
 
-        //    var listNV = EmployeeBusiness.GetAllEmployees();
-        //    string TaiKhoanCu = comboBoxChonTaiKhoan.Text;
-        //    var employees = from employee in listNV where employee.Username == TaiKhoanCu select employee;
-        //    foreach (Employee nv in employees)
-        //    {
-        //        textBoxFullName.Text = nv.FullName;
-        //        textBoxUsername.Text = nv.Username;
-        //        textBoxPassword.Text = nv.Password;
-        //        textBoxDepartment.Text = nv.Department;
-        //        if (nv.IsAdmin == true)
-        //        {
-        //            radioButtonCo.Checked = true;
-        //        }
-        //        else
-        //        {
-        //            radioButtonKhong.Checked = true;
-        //        }
-        //    }
-        //}
-
-        //private void button1_Click(object sender, EventArgs e)
-        //{
-        //    string username = comboBoxChonTaiKhoan.Text;
-
-        //    DialogResult dialogResult = MessageBox.Show($"Bạn có chắc muốn xóa tài khoản {username}", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-        //    if (dialogResult == DialogResult.Yes)
-        //    {
-        //        try
-        //        {
-        //            EmployeeBusiness.DeleteEmployee(username);
-        //            changeData?.Invoke();
-        //        }
-        //        catch
-        //        {
-        //            MessageBox.Show("Xóa thất bại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //        }
-        //        LoadForm();
-        //    }
+        private void comboBoxSelectUsername_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //vô hiệu hóa nút xóa khi đây là tài khoản hiện tại
+            if (comboBoxSelectUsername.Text == Common.UserNameCurrent)
+            {
+                buttonDelete.Enabled = false;
+            }
+            else
+            {
+                buttonDelete.Enabled = true;
+            }
 
 
-        //}
+            var listUser = UserBusiness.GetAllUsers();
+            string usernameOld = comboBoxSelectUsername.Text;
+            var users = from user in listUser where user.Username == usernameOld select user;
+            foreach (User user in users)
+            {
+                textBoxFullName.Texts = user.FullName;
+                textBoxUsername.Texts = user.Username;
+                textBoxPassword.Texts = user.Password;
+                textBoxPhoneNumber.Texts = user.PhoneNumber;
+                textBoxEmail.Texts = user.Email;
+
+            }
+        }
     }
 }

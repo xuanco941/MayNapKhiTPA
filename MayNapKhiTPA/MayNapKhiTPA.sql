@@ -12,27 +12,27 @@ ID_Shift INT IDENTITY(1,1) PRIMARY KEY,
 )
 GO
 
---TABLE PERMISSION
-CREATE TABLE Permission (
-ID_Permission INT IDENTITY(1,1) PRIMARY KEY,
+--TABLE GROUP
+CREATE TABLE [Group] (
+ID_Group INT IDENTITY(1,1) PRIMARY KEY,
 [Name] nvarchar(100),
 IsManagementSetting bit,
-IsManagementEmployee bit
+IsManagementUser bit
 )
 GO
 
---TABLE EMPLOYEE
-CREATE TABLE Employee (
-ID_Employee INT IDENTITY(1,1) PRIMARY KEY,
+--TABLE USER
+CREATE TABLE [User] (
+ID_User INT IDENTITY(1,1) PRIMARY KEY,
 FullName NVARCHAR(100),
 Username VARCHAR(100) UNIQUE NOT NULL,
 [Password] VARCHAR(100) default 'tpa',
 PhoneNumber Varchar(100),
 Email Varchar(100),
 ID_Shift int,
-ID_Permission int,
+ID_Group int,
 FOREIGN KEY (ID_Shift) REFERENCES [Shift](ID_Shift),
-FOREIGN KEY (ID_Permission) REFERENCES Permission(ID_Permission)
+FOREIGN KEY (ID_Group) REFERENCES [Group](ID_Group)
 )
 GO
 
@@ -42,8 +42,8 @@ ID_Activity INT IDENTITY(1,1) PRIMARY KEY,
 [Description] NVARCHAR(2000),
 IsSetting bit default 0,
 Create_At DATETIME DEFAULT GETDATE(),
-ID_Employee int,
-FOREIGN KEY (ID_Employee) REFERENCES Employee(ID_Employee)
+ID_User int,
+FOREIGN KEY (ID_User) REFERENCES [User](ID_User)
 )
 GO
 
@@ -181,26 +181,26 @@ GO
 
 
 
--- PROC Permission
--- Thêm Permission
-CREATE PROC AddPermission @Name nvarchar(100), @IsManagementSetting bit, @IsManagementEmployee bit
+-- PROC Group
+-- Thêm Group
+CREATE PROC AddGroup @Name nvarchar(100), @IsManagementSetting bit, @IsManagementUser bit
 as begin
-Insert into Permission values (@Name,@IsManagementSetting,@IsManagementEmployee);
+Insert into [Group] values (@Name,@IsManagementSetting,@IsManagementUser);
 end
 GO
 
 --Cap nhat thong tin quyền
-CREATE PROC UpdatePermission @ID_Permission int,@Name nvarchar(100), @IsManagementSetting bit, @IsManagementEmployee bit
+CREATE PROC UpdateGroup @ID_Group int,@Name nvarchar(100), @IsManagementSetting bit, @IsManagementUser bit
 as begin
-Update Permission SET [Name] = @Name, IsManagementSetting = @IsManagementSetting, IsManagementEmployee = @IsManagementEmployee
-where ID_Permission = @ID_Permission
+Update [Group] SET [Name] = @Name, IsManagementSetting = @IsManagementSetting, IsManagementUser = @IsManagementUser
+where ID_Group = @ID_Group
 end
 GO
 
 --Xóa quyền
-CREATE PROC DeletePermission @ID_Permission Int
+CREATE PROC DeleteGroup @ID_Group Int
 as begin
-Delete FROM Permission WHERE Permission.ID_Permission = @ID_Permission;
+Delete FROM [Group] WHERE [Group].ID_Group = @ID_Group;
 end
 GO
 
@@ -240,46 +240,46 @@ GO
 
 --Proc Employee
 --Tìm kiếm nhân viên theo tên tài khoản
-CREATE PROC FindEmployeeByUsername @Username varchar(100)
+CREATE PROC FindUserByUsername @Username varchar(100)
 as begin 
-Select * From Employee Where Employee.Username = @Username;
+Select * From [User] Where Username = @Username;
 end
 GO
 
 --Tìm kiếm nhân viên theo MaNV
-CREATE PROC FindEmployeeByID @ID int
+CREATE PROC FindUserByID @ID_User int
 as begin 
-Select * From Employee Where Employee.ID_Employee = @ID;
+Select * From [User] Where [User].ID_User = @ID_User;
 end
 GO
 
 --Tìm kiếm nhân viên với họ tên bất kỳ
-CREATE PROC FindEmployeeByFullName @FullName nvarchar(100)
+CREATE PROC FindUserByFullName @FullName nvarchar(100)
 as begin 
-Select * From Employee Where Employee.FullName like '%'+@FullName+'%';
+Select * From [User] Where [User].FullName like '%'+@FullName+'%';
 end
 GO
 
 -- Thêm nhân viên
-CREATE PROC AddEmployee @FullName nvarchar(100), @Username VARCHAR(100) , @Password VARCHAR(100) , @PhoneNumber VARCHAR(100), @Email VARCHAR(100), @ID_Shift INT, @ID_Permission INT
+CREATE PROC AddUser @FullName nvarchar(100), @Username VARCHAR(100) , @Password VARCHAR(100) , @PhoneNumber VARCHAR(100), @Email VARCHAR(100), @ID_Shift INT, @ID_Group INT
 as begin
-Insert into Employee values (@FullName,@Username,@Password,@PhoneNumber,@Email,@ID_Shift,@ID_Permission);
+Insert into [User] values (@FullName,@Username,@Password,@PhoneNumber,@Email,@ID_Shift,@ID_Group);
 end
 GO
 
 --Cap nhat thong tin nhan vien
-CREATE PROC UpdateEmployee @UsernameOld varchar(100), @FullName nvarchar(100), @Username VARCHAR(100) , @Password VARCHAR(100), @PhoneNumber VARCHAR(100), @Email VARCHAR(100), @ID_Shift INT, @ID_Permission INT
+CREATE PROC UpdateUser @UsernameOld varchar(100), @FullName nvarchar(100), @Username VARCHAR(100) , @Password VARCHAR(100), @PhoneNumber VARCHAR(100), @Email VARCHAR(100), @ID_Shift INT, @ID_Group INT
 as begin
-Update Employee SET FullName = @FullName, Username = @Username, Password = @Password, PhoneNumber=@PhoneNumber ,Email = @Email, ID_Shift = @ID_Shift, ID_Permission = @ID_Permission
-where Employee.Username = @UsernameOld
+Update [User] SET FullName = @FullName, Username = @Username, Password = @Password, PhoneNumber=@PhoneNumber ,Email = @Email, ID_Shift = @ID_Shift, ID_Group = @ID_Group
+where [User].Username = @UsernameOld
 end
 GO
 
 
 --Xóa tài khoản nhân viên theo Username
-CREATE PROC DeleteEmployee @username VARCHAR(100)
+CREATE PROC DeleteUser @username VARCHAR(100)
 as begin
-Delete FROM Employee WHERE Employee.Username = @username;
+Delete FROM [User] WHERE [User].Username = @username;
 end
 GO
 
@@ -363,10 +363,11 @@ GO
 
 exec AddShift N'Ca sáng','10:00:00','12:00:00'
 GO
-exec AddPermission N'Quyền Admin',1,1
+exec AddGroup N'Quyền Admin',1,1
 GO
-exec AddEmployee N'Đỗ Văn Xuân', 'admin','123', '0123456789','xuan@gmail.com',1,1
+exec AddUser N'Đỗ Văn Xuân', 'admin','123', '0123456789','xuan@gmail.com',1,1
 GO
+
 --insert into Activity (Activity_Name) values ('Activity_Name')
 
 --GO

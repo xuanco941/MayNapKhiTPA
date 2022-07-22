@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MayNapKhiTPA.Models;
 
-namespace MayNapKhiTPA.Forms.EmployeeManagement.User
+namespace MayNapKhiTPA.Forms
 {
     public partial class FormAddUser : Form
     {
@@ -19,7 +19,7 @@ namespace MayNapKhiTPA.Forms.EmployeeManagement.User
             InitializeComponent();
         }
         // Define delegate
-        public delegate void ChangeData();
+        public delegate void ChangeData(string msg, FormAlert.enmType enmType);
 
         // Create instance (null)
         public ChangeData changeData;
@@ -33,9 +33,9 @@ namespace MayNapKhiTPA.Forms.EmployeeManagement.User
             string email = textBoxEmail.Texts.Trim();
 
             int id_shift = 1;
-            int id_permission = 1;
+            int id_group = 1;
 
-            Employee employee = new Employee(fullname, username, password, phonenumber, email, id_shift, id_permission);
+            Models.User employee = new Models.User(fullname, username, password, phonenumber, email, id_shift, id_group);
 
             if (String.IsNullOrEmpty(fullname) || String.IsNullOrEmpty(username) || String.IsNullOrEmpty(password))
             {
@@ -47,14 +47,13 @@ namespace MayNapKhiTPA.Forms.EmployeeManagement.User
 
                 try
                 {
-                    EmployeeBusiness.AddEmployee(employee);
-                    MessageBox.Show("Thêm thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    UserBusiness.AddUser(employee);
+                    changeData?.Invoke("Thêm thành công.",FormAlert.enmType.Success);
                     this.Close();
-                    changeData?.Invoke();
                 }
                 catch
                 {
-                    MessageBox.Show("Thêm nhân viên thất bại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    changeData?.Invoke("Thêm tài khoản thất bại.", FormAlert.enmType.Error);
 
                 }
 

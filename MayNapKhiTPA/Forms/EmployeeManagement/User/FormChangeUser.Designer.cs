@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace MayNapKhiTPA.Forms.EmployeeManagement.User
+namespace MayNapKhiTPA.Forms
 {
     partial class FormChangeUser
     {
@@ -32,8 +32,8 @@ namespace MayNapKhiTPA.Forms.EmployeeManagement.User
         {
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBoxT2 = new LW_PhanMemBaoGia.MyControls.TextBoxT();
-            this.textBoxT1 = new LW_PhanMemBaoGia.MyControls.TextBoxT();
+            this.textBoxPhoneNumber = new LW_PhanMemBaoGia.MyControls.TextBoxT();
+            this.textBoxEmail = new LW_PhanMemBaoGia.MyControls.TextBoxT();
             this.textBoxPassword = new LW_PhanMemBaoGia.MyControls.TextBoxT();
             this.textBoxFullName = new LW_PhanMemBaoGia.MyControls.TextBoxT();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,11 +42,13 @@ namespace MayNapKhiTPA.Forms.EmployeeManagement.User
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.buttonDangNhap = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
-            this.buttonCustom1 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.buttonUpdate = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.buttonDelete = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.comboBoxSelectShift = new System.Windows.Forms.ComboBox();
+            this.comboBoxSelectUsername = new System.Windows.Forms.ComboBox();
+            this.comboBoxSelectGroup = new System.Windows.Forms.ComboBox();
+            this.textBoxUsername = new LW_PhanMemBaoGia.MyControls.TextBoxT();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label7
@@ -71,45 +73,45 @@ namespace MayNapKhiTPA.Forms.EmployeeManagement.User
             this.label8.TabIndex = 32;
             this.label8.Text = "Thay Đổi Thông Tin";
             // 
-            // textBoxT2
+            // textBoxPhoneNumber
             // 
-            this.textBoxT2.BackColor = System.Drawing.SystemColors.Window;
-            this.textBoxT2.BorderColor = System.Drawing.Color.CornflowerBlue;
-            this.textBoxT2.BorderFocusColor = System.Drawing.SystemColors.ActiveCaption;
-            this.textBoxT2.BorderRadius = 5;
-            this.textBoxT2.BorderSize = 1;
-            this.textBoxT2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxT2.Location = new System.Drawing.Point(195, 305);
-            this.textBoxT2.Multiline = false;
-            this.textBoxT2.Name = "textBoxT2";
-            this.textBoxT2.Padding = new System.Windows.Forms.Padding(7);
-            this.textBoxT2.PasswordChar = false;
-            this.textBoxT2.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.textBoxT2.PlaceholderText = "";
-            this.textBoxT2.Size = new System.Drawing.Size(200, 35);
-            this.textBoxT2.TabIndex = 69;
-            this.textBoxT2.Texts = "";
-            this.textBoxT2.UnderlinedStyle = false;
+            this.textBoxPhoneNumber.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxPhoneNumber.BorderColor = System.Drawing.Color.CornflowerBlue;
+            this.textBoxPhoneNumber.BorderFocusColor = System.Drawing.SystemColors.ActiveCaption;
+            this.textBoxPhoneNumber.BorderRadius = 5;
+            this.textBoxPhoneNumber.BorderSize = 1;
+            this.textBoxPhoneNumber.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPhoneNumber.Location = new System.Drawing.Point(195, 305);
+            this.textBoxPhoneNumber.Multiline = false;
+            this.textBoxPhoneNumber.Name = "textBoxPhoneNumber";
+            this.textBoxPhoneNumber.Padding = new System.Windows.Forms.Padding(7);
+            this.textBoxPhoneNumber.PasswordChar = false;
+            this.textBoxPhoneNumber.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.textBoxPhoneNumber.PlaceholderText = "";
+            this.textBoxPhoneNumber.Size = new System.Drawing.Size(200, 35);
+            this.textBoxPhoneNumber.TabIndex = 69;
+            this.textBoxPhoneNumber.Texts = "";
+            this.textBoxPhoneNumber.UnderlinedStyle = false;
             // 
-            // textBoxT1
+            // textBoxEmail
             // 
-            this.textBoxT1.BackColor = System.Drawing.SystemColors.Window;
-            this.textBoxT1.BorderColor = System.Drawing.Color.CornflowerBlue;
-            this.textBoxT1.BorderFocusColor = System.Drawing.SystemColors.ActiveCaption;
-            this.textBoxT1.BorderRadius = 5;
-            this.textBoxT1.BorderSize = 1;
-            this.textBoxT1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxT1.Location = new System.Drawing.Point(428, 305);
-            this.textBoxT1.Multiline = false;
-            this.textBoxT1.Name = "textBoxT1";
-            this.textBoxT1.Padding = new System.Windows.Forms.Padding(7);
-            this.textBoxT1.PasswordChar = false;
-            this.textBoxT1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.textBoxT1.PlaceholderText = "";
-            this.textBoxT1.Size = new System.Drawing.Size(200, 35);
-            this.textBoxT1.TabIndex = 66;
-            this.textBoxT1.Texts = "";
-            this.textBoxT1.UnderlinedStyle = false;
+            this.textBoxEmail.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxEmail.BorderColor = System.Drawing.Color.CornflowerBlue;
+            this.textBoxEmail.BorderFocusColor = System.Drawing.SystemColors.ActiveCaption;
+            this.textBoxEmail.BorderRadius = 5;
+            this.textBoxEmail.BorderSize = 1;
+            this.textBoxEmail.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxEmail.Location = new System.Drawing.Point(428, 305);
+            this.textBoxEmail.Multiline = false;
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Padding = new System.Windows.Forms.Padding(7);
+            this.textBoxEmail.PasswordChar = false;
+            this.textBoxEmail.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.textBoxEmail.PlaceholderText = "";
+            this.textBoxEmail.Size = new System.Drawing.Size(200, 35);
+            this.textBoxEmail.TabIndex = 66;
+            this.textBoxEmail.Texts = "";
+            this.textBoxEmail.UnderlinedStyle = false;
             // 
             // textBoxPassword
             // 
@@ -119,14 +121,14 @@ namespace MayNapKhiTPA.Forms.EmployeeManagement.User
             this.textBoxPassword.BorderRadius = 5;
             this.textBoxPassword.BorderSize = 1;
             this.textBoxPassword.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPassword.Location = new System.Drawing.Point(195, 238);
+            this.textBoxPassword.Location = new System.Drawing.Point(428, 243);
             this.textBoxPassword.Multiline = false;
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Padding = new System.Windows.Forms.Padding(7);
             this.textBoxPassword.PasswordChar = false;
             this.textBoxPassword.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.textBoxPassword.PlaceholderText = "";
-            this.textBoxPassword.Size = new System.Drawing.Size(433, 35);
+            this.textBoxPassword.Size = new System.Drawing.Size(200, 35);
             this.textBoxPassword.TabIndex = 65;
             this.textBoxPassword.Texts = "";
             this.textBoxPassword.UnderlinedStyle = false;
@@ -200,7 +202,7 @@ namespace MayNapKhiTPA.Forms.EmployeeManagement.User
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(191, 214);
+            this.label2.Location = new System.Drawing.Point(424, 219);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 21);
             this.label2.TabIndex = 57;
@@ -217,70 +219,106 @@ namespace MayNapKhiTPA.Forms.EmployeeManagement.User
             this.label9.TabIndex = 56;
             this.label9.Text = "Họ tên";
             // 
-            // buttonDangNhap
+            // buttonUpdate
             // 
-            this.buttonDangNhap.BackColor = System.Drawing.Color.DarkGoldenrod;
-            this.buttonDangNhap.BackgroundColor = System.Drawing.Color.DarkGoldenrod;
-            this.buttonDangNhap.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonDangNhap.BorderRadius = 3;
-            this.buttonDangNhap.BorderSize = 0;
-            this.buttonDangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDangNhap.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDangNhap.ForeColor = System.Drawing.Color.White;
-            this.buttonDangNhap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonDangNhap.Location = new System.Drawing.Point(253, 440);
-            this.buttonDangNhap.Name = "buttonDangNhap";
-            this.buttonDangNhap.Size = new System.Drawing.Size(126, 36);
-            this.buttonDangNhap.TabIndex = 71;
-            this.buttonDangNhap.Text = "Cập nhật";
-            this.buttonDangNhap.TextColor = System.Drawing.Color.White;
-            this.buttonDangNhap.UseVisualStyleBackColor = false;
+            this.buttonUpdate.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.buttonUpdate.BackgroundColor = System.Drawing.Color.DarkGoldenrod;
+            this.buttonUpdate.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonUpdate.BorderRadius = 3;
+            this.buttonUpdate.BorderSize = 0;
+            this.buttonUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonUpdate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonUpdate.ForeColor = System.Drawing.Color.White;
+            this.buttonUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonUpdate.Location = new System.Drawing.Point(253, 440);
+            this.buttonUpdate.Name = "buttonUpdate";
+            this.buttonUpdate.Size = new System.Drawing.Size(126, 36);
+            this.buttonUpdate.TabIndex = 71;
+            this.buttonUpdate.Text = "Cập nhật";
+            this.buttonUpdate.TextColor = System.Drawing.Color.White;
+            this.buttonUpdate.UseVisualStyleBackColor = false;
+            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
-            // buttonCustom1
+            // buttonDelete
             // 
-            this.buttonCustom1.BackColor = System.Drawing.Color.Brown;
-            this.buttonCustom1.BackgroundColor = System.Drawing.Color.Brown;
-            this.buttonCustom1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonCustom1.BorderRadius = 3;
-            this.buttonCustom1.BorderSize = 0;
-            this.buttonCustom1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCustom1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCustom1.ForeColor = System.Drawing.Color.White;
-            this.buttonCustom1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCustom1.Location = new System.Drawing.Point(439, 440);
-            this.buttonCustom1.Name = "buttonCustom1";
-            this.buttonCustom1.Size = new System.Drawing.Size(126, 36);
-            this.buttonCustom1.TabIndex = 72;
-            this.buttonCustom1.Text = "Xóa tài khoản";
-            this.buttonCustom1.TextColor = System.Drawing.Color.White;
-            this.buttonCustom1.UseVisualStyleBackColor = false;
+            this.buttonDelete.BackColor = System.Drawing.Color.Brown;
+            this.buttonDelete.BackgroundColor = System.Drawing.Color.Brown;
+            this.buttonDelete.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonDelete.BorderRadius = 3;
+            this.buttonDelete.BorderSize = 0;
+            this.buttonDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDelete.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDelete.ForeColor = System.Drawing.Color.White;
+            this.buttonDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonDelete.Location = new System.Drawing.Point(439, 440);
+            this.buttonDelete.Name = "buttonDelete";
+            this.buttonDelete.Size = new System.Drawing.Size(126, 36);
+            this.buttonDelete.TabIndex = 72;
+            this.buttonDelete.Text = "Xóa tài khoản";
+            this.buttonDelete.TextColor = System.Drawing.Color.White;
+            this.buttonDelete.UseVisualStyleBackColor = false;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
-            // comboBox1
+            // comboBoxSelectShift
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(428, 176);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(200, 33);
-            this.comboBox1.TabIndex = 77;
+            this.comboBoxSelectShift.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxSelectShift.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxSelectShift.FormattingEnabled = true;
+            this.comboBoxSelectShift.Location = new System.Drawing.Point(428, 176);
+            this.comboBoxSelectShift.Name = "comboBoxSelectShift";
+            this.comboBoxSelectShift.Size = new System.Drawing.Size(200, 33);
+            this.comboBoxSelectShift.TabIndex = 77;
             // 
-            // comboBox2
+            // comboBoxSelectUsername
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(195, 113);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(433, 33);
-            this.comboBox2.TabIndex = 78;
+            this.comboBoxSelectUsername.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxSelectUsername.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxSelectUsername.FormattingEnabled = true;
+            this.comboBoxSelectUsername.Location = new System.Drawing.Point(195, 113);
+            this.comboBoxSelectUsername.Name = "comboBoxSelectUsername";
+            this.comboBoxSelectUsername.Size = new System.Drawing.Size(433, 33);
+            this.comboBoxSelectUsername.TabIndex = 78;
+            this.comboBoxSelectUsername.SelectedIndexChanged += new System.EventHandler(this.comboBoxSelectUsername_SelectedIndexChanged);
             // 
-            // comboBox3
+            // comboBoxSelectGroup
             // 
-            this.comboBox3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(195, 373);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(433, 33);
-            this.comboBox3.TabIndex = 79;
+            this.comboBoxSelectGroup.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxSelectGroup.FormattingEnabled = true;
+            this.comboBoxSelectGroup.Location = new System.Drawing.Point(195, 373);
+            this.comboBoxSelectGroup.Name = "comboBoxSelectGroup";
+            this.comboBoxSelectGroup.Size = new System.Drawing.Size(433, 33);
+            this.comboBoxSelectGroup.TabIndex = 79;
+            // 
+            // textBoxUsername
+            // 
+            this.textBoxUsername.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxUsername.BorderColor = System.Drawing.Color.CornflowerBlue;
+            this.textBoxUsername.BorderFocusColor = System.Drawing.SystemColors.ActiveCaption;
+            this.textBoxUsername.BorderRadius = 5;
+            this.textBoxUsername.BorderSize = 1;
+            this.textBoxUsername.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxUsername.Location = new System.Drawing.Point(195, 243);
+            this.textBoxUsername.Multiline = false;
+            this.textBoxUsername.Name = "textBoxUsername";
+            this.textBoxUsername.Padding = new System.Windows.Forms.Padding(7);
+            this.textBoxUsername.PasswordChar = false;
+            this.textBoxUsername.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.textBoxUsername.PlaceholderText = "";
+            this.textBoxUsername.Size = new System.Drawing.Size(200, 35);
+            this.textBoxUsername.TabIndex = 81;
+            this.textBoxUsername.Texts = "";
+            this.textBoxUsername.UnderlinedStyle = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.Control;
+            this.label4.Location = new System.Drawing.Point(191, 219);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(75, 21);
+            this.label4.TabIndex = 80;
+            this.label4.Text = "Tài khoản";
             // 
             // FormChangeUser
             // 
@@ -288,13 +326,15 @@ namespace MayNapKhiTPA.Forms.EmployeeManagement.User
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(811, 536);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.buttonCustom1);
-            this.Controls.Add(this.buttonDangNhap);
-            this.Controls.Add(this.textBoxT2);
-            this.Controls.Add(this.textBoxT1);
+            this.Controls.Add(this.textBoxUsername);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.comboBoxSelectGroup);
+            this.Controls.Add(this.comboBoxSelectUsername);
+            this.Controls.Add(this.comboBoxSelectShift);
+            this.Controls.Add(this.buttonDelete);
+            this.Controls.Add(this.buttonUpdate);
+            this.Controls.Add(this.textBoxPhoneNumber);
+            this.Controls.Add(this.textBoxEmail);
             this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.textBoxFullName);
             this.Controls.Add(this.label1);
@@ -318,8 +358,8 @@ namespace MayNapKhiTPA.Forms.EmployeeManagement.User
         #endregion
         private Label label7;
         private Label label8;
-        private LW_PhanMemBaoGia.MyControls.TextBoxT textBoxT2;
-        private LW_PhanMemBaoGia.MyControls.TextBoxT textBoxT1;
+        private LW_PhanMemBaoGia.MyControls.TextBoxT textBoxPhoneNumber;
+        private LW_PhanMemBaoGia.MyControls.TextBoxT textBoxEmail;
         private LW_PhanMemBaoGia.MyControls.TextBoxT textBoxPassword;
         private LW_PhanMemBaoGia.MyControls.TextBoxT textBoxFullName;
         private Label label1;
@@ -328,10 +368,12 @@ namespace MayNapKhiTPA.Forms.EmployeeManagement.User
         private Label label5;
         private Label label2;
         private Label label9;
-        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonDangNhap;
-        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom1;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
-        private ComboBox comboBox3;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonUpdate;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonDelete;
+        private ComboBox comboBoxSelectShift;
+        private ComboBox comboBoxSelectUsername;
+        private ComboBox comboBoxSelectGroup;
+        private LW_PhanMemBaoGia.MyControls.TextBoxT textBoxUsername;
+        private Label label4;
     }
 }

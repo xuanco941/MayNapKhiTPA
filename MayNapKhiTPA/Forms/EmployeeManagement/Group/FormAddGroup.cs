@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MayNapKhiTPA.Models;
 
-namespace MayNapKhiTPA.Forms.EmployeeManagement.Group
+namespace MayNapKhiTPA.Forms
 {
     public partial class FormAddGroup : Form
     {
@@ -19,7 +19,7 @@ namespace MayNapKhiTPA.Forms.EmployeeManagement.Group
             InitializeComponent();
         }
         // Define delegate
-        public delegate void ChangeData();
+        public delegate void ChangeData(string msg, FormAlert.enmType enmType);
 
         // Create instance (null)
         public ChangeData changeData;

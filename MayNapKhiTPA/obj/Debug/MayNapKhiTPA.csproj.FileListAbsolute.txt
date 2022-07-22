@@ -62,10 +62,6 @@ D:\WorkPlace\C-Sharp\Working\DESKTOP\MayNapKhiTPA\MayNapKhiTPA\obj\Debug\MayNapK
 D:\WorkPlace\C-Sharp\Working\DESKTOP\MayNapKhiTPA\MayNapKhiTPA\obj\Debug\MayNapKhiTPA.Forms.FormActivity.resources
 D:\WorkPlace\C-Sharp\Working\DESKTOP\MayNapKhiTPA\MayNapKhiTPA\obj\Debug\MayNapKhiTPA.Forms.ActivityManagement.FormEmployeeActivities.resources
 D:\WorkPlace\C-Sharp\Working\DESKTOP\MayNapKhiTPA\MayNapKhiTPA\obj\Debug\MayNapKhiTPA.Forms.FormEmployeeManagement.resources
-D:\WorkPlace\C-Sharp\Working\DESKTOP\MayNapKhiTPA\MayNapKhiTPA\obj\Debug\MayNapKhiTPA.Forms.EmployeeManagement.Group.FormAddGroup.resources
-D:\WorkPlace\C-Sharp\Working\DESKTOP\MayNapKhiTPA\MayNapKhiTPA\obj\Debug\MayNapKhiTPA.Forms.EmployeeManagement.Group.FormChangeGroup.resources
-D:\WorkPlace\C-Sharp\Working\DESKTOP\MayNapKhiTPA\MayNapKhiTPA\obj\Debug\MayNapKhiTPA.Forms.EmployeeManagement.User.FormAddUser.resources
-D:\WorkPlace\C-Sharp\Working\DESKTOP\MayNapKhiTPA\MayNapKhiTPA\obj\Debug\MayNapKhiTPA.Forms.EmployeeManagement.User.FormChangeUser.resources
 D:\WorkPlace\C-Sharp\Working\DESKTOP\MayNapKhiTPA\MayNapKhiTPA\obj\Debug\MayNapKhiTPA.Forms.FormDashboard.resources
 D:\WorkPlace\C-Sharp\Working\DESKTOP\MayNapKhiTPA\MayNapKhiTPA\obj\Debug\MayNapKhiTPA.FormLogin.resources
 D:\WorkPlace\C-Sharp\Working\DESKTOP\MayNapKhiTPA\MayNapKhiTPA\obj\Debug\MayNapKhiTPA.Forms.FormMain.resources
@@ -80,3 +76,7 @@ D:\WorkPlace\C-Sharp\Working\DESKTOP\MayNapKhiTPA\MayNapKhiTPA\bin\Debug\TrongTo
 D:\WorkPlace\C-Sharp\Working\DESKTOP\MayNapKhiTPA\MayNapKhiTPA\obj\Debug\MayNapKhiTPA.Forms.FormTestControl.resources
 D:\WorkPlace\C-Sharp\Working\DESKTOP\MayNapKhiTPA\MayNapKhiTPA\obj\Debug\MayNapKhiTPA.Forms.FormSetting.resources
 D:\WorkPlace\C-Sharp\Working\DESKTOP\MayNapKhiTPA\MayNapKhiTPA\obj\Debug\MayNapKhiTPA.Forms.FormAlert.resources
+D:\WorkPlace\C-Sharp\Working\DESKTOP\MayNapKhiTPA\MayNapKhiTPA\obj\Debug\MayNapKhiTPA.Forms.FormAddGroup.resources
+D:\WorkPlace\C-Sharp\Working\DESKTOP\MayNapKhiTPA\MayNapKhiTPA\obj\Debug\MayNapKhiTPA.Forms.FormChangeGroup.resources
+D:\WorkPlace\C-Sharp\Working\DESKTOP\MayNapKhiTPA\MayNapKhiTPA\obj\Debug\MayNapKhiTPA.Forms.FormAddUser.resources
+D:\WorkPlace\C-Sharp\Working\DESKTOP\MayNapKhiTPA\MayNapKhiTPA\obj\Debug\MayNapKhiTPA.Forms.FormChangeUser.resources

@@ -14,7 +14,7 @@ namespace MayNapKhiTPA.Models
             List<Shift> list = new List<Shift>();
             SqlConnection sqlConnection = new SqlConnection(Common.ConnectionString);
             sqlConnection.Open();
-            string sql = "select * from Shift";
+            string sql = "select * from [Shift]";
             var command = new SqlCommand(sql, sqlConnection);
             SqlDataReader sqlDataReader = command.ExecuteReader();
             while (sqlDataReader.Read())
