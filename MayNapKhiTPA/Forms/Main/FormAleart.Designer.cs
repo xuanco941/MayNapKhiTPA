@@ -48,12 +48,12 @@
             // lblMsg
             // 
             this.lblMsg.AutoSize = true;
-            this.lblMsg.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMsg.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMsg.ForeColor = System.Drawing.Color.White;
             this.lblMsg.Location = new System.Drawing.Point(3, 18);
             this.lblMsg.MaximumSize = new System.Drawing.Size(250, 0);
             this.lblMsg.Name = "lblMsg";
-            this.lblMsg.Size = new System.Drawing.Size(116, 21);
+            this.lblMsg.Size = new System.Drawing.Size(101, 21);
             this.lblMsg.TabIndex = 0;
             this.lblMsg.Text = "Message Text";
             // 
@@ -103,16 +103,16 @@
             // 
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(345, 3);
+            this.panel1.Location = new System.Drawing.Point(344, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(71, 60);
+            this.panel1.Size = new System.Drawing.Size(72, 60);
             this.panel1.TabIndex = 0;
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.lblMsg);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(81, 3);
+            this.panel2.Location = new System.Drawing.Point(80, 3);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(258, 60);
             this.panel2.TabIndex = 1;
@@ -123,7 +123,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(3, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(72, 60);
+            this.panel3.Size = new System.Drawing.Size(71, 60);
             this.panel3.TabIndex = 2;
             // 
             // FormAlert

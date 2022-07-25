@@ -217,7 +217,7 @@ Select * From [Group] Where [Group].[Name] like '%'+@Name+'%';
 end
 GO
 --Tìm group từ tên group
-CREATE PROC GetGroupByName @Name nvarchar(100)
+CREATE PROC GetGroupFromName @Name nvarchar(100)
 as begin 
 Select * From [Group] Where [Group].[Name] like @Name;
 end
@@ -393,12 +393,15 @@ GO
 
 
 exec AddShift N'Ca sáng','10:00:00','12:00:00'
+exec AddShift N'Ca toi','11:00:00','12:00:00'
+
 GO
 exec AddGroup N'Quyền Admin',1,1
+exec AddGroup N'Quyền Nhan vien',0,1
+
 GO
 exec AddUser N'Đỗ Văn Xuân', 'admin','123', '0123456789','xuan@gmail.com',1,1
 GO
 
---insert into Activity (Activity_Name) values ('Activity_Name')
 
---GO
+exec GetGroupFromName N'Quyền Admin'

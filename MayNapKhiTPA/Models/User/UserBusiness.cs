@@ -120,7 +120,7 @@ namespace MayNapKhiTPA.Models
             command.Parameters.AddWithValue("PhoneNumber", user.PhoneNumber.ToString().Trim());
             command.Parameters.AddWithValue("Email", user.Email.ToString().Trim());
             command.Parameters.AddWithValue("ID_Shift", user.ID_Shift);
-            command.Parameters.AddWithValue("ID_Permission", user.ID_Group);
+            command.Parameters.AddWithValue("ID_Group", user.ID_Group);
             command.Connection = sqlConnection;
 
             command.ExecuteNonQuery();

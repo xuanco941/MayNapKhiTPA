@@ -45,8 +45,8 @@ namespace MayNapKhiTPA.Forms
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.buttonThem = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
-            this.comboBoxCaLam = new System.Windows.Forms.ComboBox();
-            this.comboBoxNhomQuyen = new System.Windows.Forms.ComboBox();
+            this.comboBoxSelectShift = new System.Windows.Forms.ComboBox();
+            this.comboBoxSelectGroup = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label8
@@ -244,6 +244,7 @@ namespace MayNapKhiTPA.Forms
             this.buttonThem.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.buttonThem.BorderRadius = 3;
             this.buttonThem.BorderSize = 0;
+            this.buttonThem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonThem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonThem.ForeColor = System.Drawing.Color.White;
@@ -260,25 +261,25 @@ namespace MayNapKhiTPA.Forms
             this.buttonThem.UseVisualStyleBackColor = false;
             this.buttonThem.Click += new System.EventHandler(this.buttonThem_Click);
             // 
-            // comboBoxCaLam
+            // comboBoxSelectShift
             // 
-            this.comboBoxCaLam.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxCaLam.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxCaLam.FormattingEnabled = true;
-            this.comboBoxCaLam.Location = new System.Drawing.Point(383, 110);
-            this.comboBoxCaLam.Name = "comboBoxCaLam";
-            this.comboBoxCaLam.Size = new System.Drawing.Size(200, 33);
-            this.comboBoxCaLam.TabIndex = 76;
+            this.comboBoxSelectShift.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxSelectShift.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxSelectShift.FormattingEnabled = true;
+            this.comboBoxSelectShift.Location = new System.Drawing.Point(383, 110);
+            this.comboBoxSelectShift.Name = "comboBoxSelectShift";
+            this.comboBoxSelectShift.Size = new System.Drawing.Size(200, 33);
+            this.comboBoxSelectShift.TabIndex = 76;
             // 
-            // comboBoxNhomQuyen
+            // comboBoxSelectGroup
             // 
-            this.comboBoxNhomQuyen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxNhomQuyen.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxNhomQuyen.FormattingEnabled = true;
-            this.comboBoxNhomQuyen.Location = new System.Drawing.Point(148, 309);
-            this.comboBoxNhomQuyen.Name = "comboBoxNhomQuyen";
-            this.comboBoxNhomQuyen.Size = new System.Drawing.Size(435, 33);
-            this.comboBoxNhomQuyen.TabIndex = 77;
+            this.comboBoxSelectGroup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxSelectGroup.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxSelectGroup.FormattingEnabled = true;
+            this.comboBoxSelectGroup.Location = new System.Drawing.Point(148, 309);
+            this.comboBoxSelectGroup.Name = "comboBoxSelectGroup";
+            this.comboBoxSelectGroup.Size = new System.Drawing.Size(435, 33);
+            this.comboBoxSelectGroup.TabIndex = 77;
             // 
             // FormAddUser
             // 
@@ -286,8 +287,8 @@ namespace MayNapKhiTPA.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(754, 457);
-            this.Controls.Add(this.comboBoxNhomQuyen);
-            this.Controls.Add(this.comboBoxCaLam);
+            this.Controls.Add(this.comboBoxSelectGroup);
+            this.Controls.Add(this.comboBoxSelectShift);
             this.Controls.Add(this.buttonThem);
             this.Controls.Add(this.textBoxSoDienThoai);
             this.Controls.Add(this.textBoxEmail);
@@ -327,7 +328,7 @@ namespace MayNapKhiTPA.Forms
         private Label label6;
         private Label label7;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonThem;
-        private ComboBox comboBoxCaLam;
-        private ComboBox comboBoxNhomQuyen;
+        private ComboBox comboBoxSelectShift;
+        private ComboBox comboBoxSelectGroup;
     }
 }

@@ -30,6 +30,7 @@ namespace MayNapKhiTPA.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormChangeUser));
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.textBoxPhoneNumber = new LW_PhanMemBaoGia.MyControls.TextBoxT();
@@ -226,16 +227,20 @@ namespace MayNapKhiTPA.Forms
             this.buttonUpdate.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.buttonUpdate.BorderRadius = 3;
             this.buttonUpdate.BorderSize = 0;
+            this.buttonUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonUpdate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonUpdate.ForeColor = System.Drawing.Color.White;
+            this.buttonUpdate.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonUpdate.Image = global::MayNapKhiTPA.Properties.Resources.iconfinder_Synchronize_278832;
             this.buttonUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonUpdate.Location = new System.Drawing.Point(253, 440);
             this.buttonUpdate.Name = "buttonUpdate";
-            this.buttonUpdate.Size = new System.Drawing.Size(126, 36);
+            this.buttonUpdate.Size = new System.Drawing.Size(142, 36);
             this.buttonUpdate.TabIndex = 71;
             this.buttonUpdate.Text = "Cập nhật";
-            this.buttonUpdate.TextColor = System.Drawing.Color.White;
+            this.buttonUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonUpdate.TextColor = System.Drawing.SystemColors.Control;
+            this.buttonUpdate.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.buttonUpdate.UseVisualStyleBackColor = false;
             this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
@@ -246,16 +251,20 @@ namespace MayNapKhiTPA.Forms
             this.buttonDelete.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.buttonDelete.BorderRadius = 3;
             this.buttonDelete.BorderSize = 0;
+            this.buttonDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDelete.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDelete.ForeColor = System.Drawing.Color.White;
+            this.buttonDelete.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonDelete.Image = ((System.Drawing.Image)(resources.GetObject("buttonDelete.Image")));
             this.buttonDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonDelete.Location = new System.Drawing.Point(439, 440);
+            this.buttonDelete.Location = new System.Drawing.Point(428, 440);
             this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(126, 36);
+            this.buttonDelete.Size = new System.Drawing.Size(142, 36);
             this.buttonDelete.TabIndex = 72;
             this.buttonDelete.Text = "Xóa tài khoản";
-            this.buttonDelete.TextColor = System.Drawing.Color.White;
+            this.buttonDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonDelete.TextColor = System.Drawing.SystemColors.Control;
+            this.buttonDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.buttonDelete.UseVisualStyleBackColor = false;
             this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 

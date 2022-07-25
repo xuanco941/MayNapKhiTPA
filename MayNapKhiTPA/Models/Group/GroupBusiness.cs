@@ -32,7 +32,7 @@ namespace MayNapKhiTPA.Models
             Group group = new Group();
             SqlConnection sqlConnection = new SqlConnection(Common.ConnectionString);
             sqlConnection.Open();
-            string sql = $"GetGroupFromID {ID_Group}";
+            string sql = $"exec GetGroupFromID {ID_Group}";
             var command = new SqlCommand(sql, sqlConnection);
             SqlDataReader sqlDataReader = command.ExecuteReader();
             while (sqlDataReader.Read())
@@ -51,7 +51,7 @@ namespace MayNapKhiTPA.Models
             List<Group> list = new List<Group>();
             SqlConnection sqlConnection = new SqlConnection(Common.ConnectionString);
             sqlConnection.Open();
-            string sql = $"FindGroupByName '{name}'";
+            string sql = $"exec FindGroupByName N'{name}'";
             var command = new SqlCommand(sql, sqlConnection);
             SqlDataReader sqlDataReader = command.ExecuteReader();
             while (sqlDataReader.Read())
@@ -63,12 +63,12 @@ namespace MayNapKhiTPA.Models
             return list;
         }
 
-        public static Group GetGroupByName(string name)
+        public static Group GetGroupFromName(string name)
         {
             Group group = null;
             SqlConnection sqlConnection = new SqlConnection(Common.ConnectionString);
             sqlConnection.Open();
-            string sql = $"GetGroupByName '{name}'";
+            string sql = $"exec GetGroupFromName N'{name}'";
             var command = new SqlCommand(sql, sqlConnection);
             SqlDataReader sqlDataReader = command.ExecuteReader();
             while (sqlDataReader.Read())

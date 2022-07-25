@@ -50,8 +50,10 @@ namespace MayNapKhiTPA.Forms
             string password = textBoxPassword.Texts.Trim();
             string phonenumber = textBoxPhoneNumber.Texts.Trim();
             string email = textBoxEmail.Texts.Trim();
-            int id_shift = ShiftBusiness.GetShiftByName(comboBoxSelectShift.Text).ID_Shift;
-            int id_group = GroupBusiness.GetGroupByName(comboBoxSelectGroup.Text).ID_Group;
+
+            //get id shift và group từ tên tên combobox (name unique)
+            int id_shift = ShiftBusiness.GetShiftFromName(comboBoxSelectShift.Text).ID_Shift;
+            int id_group = GroupBusiness.GetGroupFromName(comboBoxSelectGroup.Text).ID_Group;
 
             User user = new User(fullname, username, password, phonenumber, email, id_shift, id_group);
             if (String.IsNullOrEmpty(fullname) || String.IsNullOrEmpty(username) || String.IsNullOrEmpty(password))
@@ -66,11 +68,12 @@ namespace MayNapKhiTPA.Forms
                     UserBusiness.UpdateUser(usernameOld, user);
                     changeData?.Invoke("Cập nhật thành công.", FormAlert.enmType.Success);
                 }
-                catch
+                catch (Exception ex)
                 {
-                    changeData?.Invoke("Cập nhật thất bại.", FormAlert.enmType.Error);
+                    changeData?.Invoke(ex.Message, FormAlert.enmType.Error);
                 }
                 this.Close();
+
             }
 
             LoadForm();
@@ -84,6 +87,7 @@ namespace MayNapKhiTPA.Forms
             DialogResult dialogResult = MessageBox.Show($"Bạn có chắc muốn xóa tài khoản {username}", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {
+                //Xóa tài khoản, xóa xong sẽ load lại danh sách username của form
                 try
                 {
                     UserBusiness.DeleteUser(username);
@@ -115,6 +119,8 @@ namespace MayNapKhiTPA.Forms
             var listUser = UserBusiness.GetAllUsers();
             string usernameOld = comboBoxSelectUsername.Text;
             User user = listUser.Single(elm => elm.Username == usernameOld);
+
+            //show trên textbox
 
             textBoxFullName.Texts = user.FullName;
             textBoxUsername.Texts = user.Username;

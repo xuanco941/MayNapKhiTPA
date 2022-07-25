@@ -76,7 +76,7 @@ namespace MayNapKhiTPA.Forms
             this.buttonThoat.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttonThoat.FlatAppearance.BorderSize = 0;
             this.buttonThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonThoat.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonThoat.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonThoat.ForeColor = System.Drawing.Color.White;
             this.buttonThoat.Image = global::MayNapKhiTPA.Properties.Resources.red_x_10333;
             this.buttonThoat.Location = new System.Drawing.Point(0, 471);
@@ -95,7 +95,7 @@ namespace MayNapKhiTPA.Forms
             this.button1.Dock = System.Windows.Forms.DockStyle.Top;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = global::MayNapKhiTPA.Properties.Resources.setting_24;
             this.button1.Location = new System.Drawing.Point(0, 392);
@@ -114,7 +114,7 @@ namespace MayNapKhiTPA.Forms
             this.buttonActivity.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttonActivity.FlatAppearance.BorderSize = 0;
             this.buttonActivity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonActivity.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonActivity.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonActivity.ForeColor = System.Drawing.Color.White;
             this.buttonActivity.Image = global::MayNapKhiTPA.Properties.Resources.button3_Image;
             this.buttonActivity.Location = new System.Drawing.Point(0, 313);
@@ -133,7 +133,7 @@ namespace MayNapKhiTPA.Forms
             this.buttonEmployee.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttonEmployee.FlatAppearance.BorderSize = 0;
             this.buttonEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEmployee.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEmployee.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEmployee.ForeColor = System.Drawing.Color.White;
             this.buttonEmployee.Image = global::MayNapKhiTPA.Properties.Resources.button2_Image;
             this.buttonEmployee.Location = new System.Drawing.Point(0, 234);
@@ -152,7 +152,7 @@ namespace MayNapKhiTPA.Forms
             this.buttonLResult.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttonLResult.FlatAppearance.BorderSize = 0;
             this.buttonLResult.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonLResult.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonLResult.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLResult.ForeColor = System.Drawing.Color.White;
             this.buttonLResult.Image = global::MayNapKhiTPA.Properties.Resources.book24;
             this.buttonLResult.Location = new System.Drawing.Point(0, 155);
@@ -171,7 +171,7 @@ namespace MayNapKhiTPA.Forms
             this.buttonDashboard.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttonDashboard.FlatAppearance.BorderSize = 0;
             this.buttonDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDashboard.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDashboard.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDashboard.ForeColor = System.Drawing.Color.White;
             this.buttonDashboard.Image = ((System.Drawing.Image)(resources.GetObject("buttonDashboard.Image")));
             this.buttonDashboard.Location = new System.Drawing.Point(0, 76);
@@ -210,7 +210,7 @@ namespace MayNapKhiTPA.Forms
             this.labelHeader.ForeColor = System.Drawing.Color.LightGray;
             this.labelHeader.Location = new System.Drawing.Point(22, 28);
             this.labelHeader.Name = "labelHeader";
-            this.labelHeader.Size = new System.Drawing.Size(124, 19);
+            this.labelHeader.Size = new System.Drawing.Size(121, 21);
             this.labelHeader.TabIndex = 2;
             this.labelHeader.Text = "Bảng điều khiển";
             // 
@@ -281,7 +281,7 @@ namespace MayNapKhiTPA.Forms
             this.ClientSize = new System.Drawing.Size(1449, 730);
             this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.panel1);
-            this.Font = new System.Drawing.Font("Bahnschrift", 12F);
+            this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

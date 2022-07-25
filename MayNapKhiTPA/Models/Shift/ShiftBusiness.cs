@@ -31,7 +31,7 @@ namespace MayNapKhiTPA.Models
             Shift shift = new Shift();
             SqlConnection sqlConnection = new SqlConnection(Common.ConnectionString);
             sqlConnection.Open();
-            string sql = $"GetShiftFromID {ID_Shift}";
+            string sql = $"exec GetShiftFromID {ID_Shift}";
             var command = new SqlCommand(sql, sqlConnection);
             SqlDataReader sqlDataReader = command.ExecuteReader();
             while (sqlDataReader.Read())
@@ -45,12 +45,12 @@ namespace MayNapKhiTPA.Models
             return shift;
         }
 
-        public static Shift GetShiftByName(string name)
+        public static Shift GetShiftFromName(string name)
         {
             Shift shift = new Shift();
             SqlConnection sqlConnection = new SqlConnection(Common.ConnectionString);
             sqlConnection.Open();
-            string sql = $"GetShiftByName '{name}'";
+            string sql = $"exec GetShiftFromName N'{name}'";
             var command = new SqlCommand(sql, sqlConnection);
             SqlDataReader sqlDataReader = command.ExecuteReader();
             while (sqlDataReader.Read())

@@ -41,7 +41,7 @@ namespace MayNapKhiTPA.Forms
             this.label8 = new System.Windows.Forms.Label();
             this.buttonCustom1 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.buttonDangNhap = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxSelectGroup = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -193,14 +193,15 @@ namespace MayNapKhiTPA.Forms
             this.buttonDangNhap.TextColor = System.Drawing.Color.White;
             this.buttonDangNhap.UseVisualStyleBackColor = false;
             // 
-            // comboBox1
+            // comboBoxSelectGroup
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(138, 111);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(302, 33);
-            this.comboBox1.TabIndex = 75;
+            this.comboBoxSelectGroup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxSelectGroup.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxSelectGroup.FormattingEnabled = true;
+            this.comboBoxSelectGroup.Location = new System.Drawing.Point(138, 111);
+            this.comboBoxSelectGroup.Name = "comboBoxSelectGroup";
+            this.comboBoxSelectGroup.Size = new System.Drawing.Size(302, 33);
+            this.comboBoxSelectGroup.TabIndex = 75;
             // 
             // FormChangeGroup
             // 
@@ -208,7 +209,7 @@ namespace MayNapKhiTPA.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(587, 468);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBoxSelectGroup);
             this.Controls.Add(this.buttonCustom1);
             this.Controls.Add(this.buttonDangNhap);
             this.Controls.Add(this.label8);
@@ -238,6 +239,6 @@ namespace MayNapKhiTPA.Forms
         private Label label8;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom1;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonDangNhap;
-        private ComboBox comboBox1;
+        private ComboBox comboBoxSelectGroup;
     }
 }

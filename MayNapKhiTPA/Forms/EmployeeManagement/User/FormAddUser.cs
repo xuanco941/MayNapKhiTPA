@@ -15,8 +15,16 @@ namespace MayNapKhiTPA.Forms
     {
         public FormAddUser()
         {
-
             InitializeComponent();
+            // lấy tất cả tên các ca làm cho vào combobox
+            var listShifts = ShiftBusiness.GetAllShifts();
+            var listNameShift = from shift in listShifts select shift.Name;
+            comboBoxSelectShift.DataSource = listNameShift.ToList();
+
+            //lấy tất cả tên các quyền cho vào combobox
+            var listGroups = GroupBusiness.GetAllGroups();
+            var listNameGroup = from groupVar in listGroups select groupVar.Name;
+            comboBoxSelectGroup.DataSource = listNameGroup.ToList();
         }
         // Define delegate
         public delegate void ChangeData(string msg, FormAlert.enmType enmType);
@@ -32,10 +40,10 @@ namespace MayNapKhiTPA.Forms
             string phonenumber = textBoxSoDienThoai.Texts.Trim();
             string email = textBoxEmail.Texts.Trim();
 
-            int id_shift = 1;
-            int id_group = 1;
+            int id_shift = ShiftBusiness.GetShiftFromName(comboBoxSelectShift.Text).ID_Shift;
+            int id_group = GroupBusiness.GetGroupFromName(comboBoxSelectGroup.Text).ID_Group;
 
-            User employee = new User(fullname, username, password, phonenumber, email, id_shift, id_group);
+            User user = new User(fullname, username, password, phonenumber, email, id_shift, id_group);
 
             if (String.IsNullOrEmpty(fullname) || String.IsNullOrEmpty(username) || String.IsNullOrEmpty(password))
             {
@@ -47,14 +55,13 @@ namespace MayNapKhiTPA.Forms
 
                 try
                 {
-                    UserBusiness.AddUser(employee);
-                    changeData?.Invoke("Thêm thành công.",FormAlert.enmType.Success);
+                    UserBusiness.AddUser(user);
+                    changeData?.Invoke($"Thêm thành công tài khoản {user.Username}.",FormAlert.enmType.Success);
                     this.Close();
                 }
                 catch
                 {
-                    changeData?.Invoke("Thêm tài khoản thất bại.", FormAlert.enmType.Error);
-
+                    changeData?.Invoke("Thêm tài khoản thất bại, tên tài khoản phải là duy nhất.", FormAlert.enmType.Error);
                 }
 
             }
