@@ -218,7 +218,7 @@ namespace MayNapKhiTPA.Forms
             this.MinimizeBox = false;
             this.Name = "FormChangeGroup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Sửa thông tin nhân viên";
+            this.Text = "Cập nhật quyền";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

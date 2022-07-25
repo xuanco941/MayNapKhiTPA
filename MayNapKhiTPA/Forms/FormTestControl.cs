@@ -15,6 +15,9 @@ namespace MayNapKhiTPA.Forms
         public FormTestControl()
         {
             InitializeComponent();
+            dateTimePicker1.Format = DateTimePickerFormat.Time;
+            dateTimePicker1.ShowUpDown = true;
+
         }
     }
 }
