@@ -21,14 +21,25 @@ namespace MayNapKhiTPA.Forms
         public FormChangeUser()
         {
             InitializeComponent();
+
+            // lấy tất cả tên các ca làm cho vào combobox
+            var listShifts = ShiftBusiness.GetAllShifts();
+            var listNameShift = from shift in listShifts select shift.Name;
+            comboBoxSelectShift.DataSource = listNameShift.ToList();
+
+            //lấy tất cả tên các quyền cho vào combobox
+            var listGroups = GroupBusiness.GetAllGroups();
+            var listNameGroup = from groupVar in listGroups select groupVar.Name;
+            comboBoxSelectGroup.DataSource = listNameGroup.ToList();
+
             LoadForm();
         }
         public void LoadForm()
         {
+            // lấy tất cả các username vào combobox
             var listUsers = UserBusiness.GetAllUsers();
             var listUsername = from user in listUsers select user.Username;
             comboBoxSelectUsername.DataSource = listUsername.ToList();
-
         }
 
         private void buttonUpdate_Click(object sender, EventArgs e)
@@ -39,11 +50,11 @@ namespace MayNapKhiTPA.Forms
             string password = textBoxPassword.Texts.Trim();
             string phonenumber = textBoxPhoneNumber.Texts.Trim();
             string email = textBoxEmail.Texts.Trim();
-            int id_shift = 1;
-            int id_group = 1;
-        
+            int id_shift = ShiftBusiness.GetShiftByName(comboBoxSelectShift.Text).ID_Shift;
+            int id_group = GroupBusiness.GetGroupByName(comboBoxSelectGroup.Text).ID_Group;
+
             User user = new User(fullname, username, password, phonenumber, email, id_shift, id_group);
-            if (String.IsNullOrEmpty(fullname) || String.IsNullOrEmpty(username) || String.IsNullOrEmpty(password) )
+            if (String.IsNullOrEmpty(fullname) || String.IsNullOrEmpty(username) || String.IsNullOrEmpty(password))
             {
                 MessageBox.Show("Vui lòng điền đủ thông tin.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
@@ -53,7 +64,7 @@ namespace MayNapKhiTPA.Forms
                 try
                 {
                     UserBusiness.UpdateUser(usernameOld, user);
-                    changeData?.Invoke("Cập nhật thành công.",FormAlert.enmType.Success);
+                    changeData?.Invoke("Cập nhật thành công.", FormAlert.enmType.Success);
                 }
                 catch
                 {
@@ -87,6 +98,7 @@ namespace MayNapKhiTPA.Forms
             }
         }
 
+        //chọn tài khoản để cập nhật
         private void comboBoxSelectUsername_SelectedIndexChanged(object sender, EventArgs e)
         {
             //vô hiệu hóa nút xóa khi đây là tài khoản hiện tại
@@ -99,19 +111,18 @@ namespace MayNapKhiTPA.Forms
                 buttonDelete.Enabled = true;
             }
 
-
+            // lấy ra thông tin user có username là username trên combobox
             var listUser = UserBusiness.GetAllUsers();
             string usernameOld = comboBoxSelectUsername.Text;
-            var users = from user in listUser where user.Username == usernameOld select user;
-            foreach (User user in users)
-            {
-                textBoxFullName.Texts = user.FullName;
-                textBoxUsername.Texts = user.Username;
-                textBoxPassword.Texts = user.Password;
-                textBoxPhoneNumber.Texts = user.PhoneNumber;
-                textBoxEmail.Texts = user.Email;
+            User user = listUser.Single(elm => elm.Username == usernameOld);
 
-            }
+            textBoxFullName.Texts = user.FullName;
+            textBoxUsername.Texts = user.Username;
+            textBoxPassword.Texts = user.Password;
+            textBoxPhoneNumber.Texts = user.PhoneNumber;
+            textBoxEmail.Texts = user.Email;
+            comboBoxSelectShift.Text = ShiftBusiness.GetShiftFromID(user.ID_Shift).Name;
+            comboBoxSelectGroup.Text = GroupBusiness.GetGroupFromID(user.ID_Group).Name;
         }
     }
 }

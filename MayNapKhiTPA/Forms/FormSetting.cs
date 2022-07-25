@@ -20,19 +20,9 @@ namespace MayNapKhiTPA.Forms
         public FormSetting()
         {
             InitializeComponent();
-            dateTimePicker1.Format = DateTimePickerFormat.Time;
-            dateTimePicker1.ShowUpDown = true;
-            dateTimePicker2.Format = DateTimePickerFormat.Time;
-            dateTimePicker2.ShowUpDown = true;
-
         }
 
-        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        //textbox only number type
+        //textbox only number type tabpage 1
         private void textBoxT5_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))

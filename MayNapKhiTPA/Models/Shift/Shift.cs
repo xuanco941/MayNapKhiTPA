@@ -20,5 +20,9 @@ namespace MayNapKhiTPA.Models
             TimeStart = timeStart;
             TimeEnd = timeEnd;
         }
+
+        public Shift()
+        {
+        }
     }
 }

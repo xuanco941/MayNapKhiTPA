@@ -282,6 +282,7 @@ namespace MayNapKhiTPA.Forms
             // 
             // comboBoxSelectGroup
             // 
+            this.comboBoxSelectGroup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSelectGroup.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxSelectGroup.FormattingEnabled = true;
             this.comboBoxSelectGroup.Location = new System.Drawing.Point(195, 373);

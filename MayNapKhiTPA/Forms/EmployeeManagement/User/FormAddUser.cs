@@ -35,7 +35,7 @@ namespace MayNapKhiTPA.Forms
             int id_shift = 1;
             int id_group = 1;
 
-            Models.User employee = new Models.User(fullname, username, password, phonenumber, email, id_shift, id_group);
+            User employee = new User(fullname, username, password, phonenumber, email, id_shift, id_group);
 
             if (String.IsNullOrEmpty(fullname) || String.IsNullOrEmpty(username) || String.IsNullOrEmpty(password))
             {

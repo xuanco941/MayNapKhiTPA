@@ -262,6 +262,7 @@ namespace MayNapKhiTPA.Forms
             // 
             // comboBoxCaLam
             // 
+            this.comboBoxCaLam.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCaLam.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxCaLam.FormattingEnabled = true;
             this.comboBoxCaLam.Location = new System.Drawing.Point(383, 110);
@@ -271,6 +272,7 @@ namespace MayNapKhiTPA.Forms
             // 
             // comboBoxNhomQuyen
             // 
+            this.comboBoxNhomQuyen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxNhomQuyen.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxNhomQuyen.FormattingEnabled = true;
             this.comboBoxNhomQuyen.Location = new System.Drawing.Point(148, 309);

@@ -23,15 +23,30 @@ namespace MayNapKhiTPA.Forms
         public FormEmployeeManagement()
         {
             InitializeComponent();
-            LoadTabUser();
-            LoadTabGroup();
+            LoadDataUser(UserBusiness.GetAllUsers());
+            LoadDataGroup(GroupBusiness.GetAllGroups());
         }
 
+      
+
+        //method gọi Alert ở Main từ form khác thông qua form hiện tại, delegate
+        public void AlertActive(string msg, FormAlert.enmType enmType)
+        {
+            callAlert?.Invoke(msg, enmType);
+            //load lai 2 datagridview
+            LoadDataUser(UserBusiness.GetAllUsers());
+            LoadDataGroup(GroupBusiness.GetAllGroups());
+        }
+
+
+
+
+        //METHOD
+
         //Load datagridview tabpage User
-        public void LoadTabUser()
+        public void LoadDataUser(List<User> listUser)
         {
             // get all user from model
-            var listUser = UserBusiness.GetAllUsers();
             DataTable dt = new DataTable();
             dt.Columns.Add("Họ tên");
             dt.Columns.Add("Tài khoản");
@@ -43,17 +58,17 @@ namespace MayNapKhiTPA.Forms
 
             listUser.ForEach(delegate (User user)
             {
-                dt.Rows.Add(user.FullName, user.Username, user.Password, user.PhoneNumber, user.Email, user.ID_Shift, user.ID_Group);
+                Shift shift = ShiftBusiness.GetShiftFromID(user.ID_Shift);
+                Group group = GroupBusiness.GetGroupFromID(user.ID_Group);
+                dt.Rows.Add(user.FullName, user.Username, user.Password, user.PhoneNumber, user.Email, shift.Name, group.Name);
             });
             dataGridViewUser.DataSource = dt;
 
         }
 
         //Load datagridview tabpage Group
-        public void LoadTabGroup()
+        public void LoadDataGroup(List<Group> listGroup)
         {
-            // get all group from model
-            var listGroup = GroupBusiness.GetAllGroups();
             DataTable dt = new DataTable();
             dt.Columns.Add("ID");
             dt.Columns.Add("Tên");
@@ -62,21 +77,46 @@ namespace MayNapKhiTPA.Forms
 
             listGroup.ForEach(delegate (Group group)
             {
-                dt.Rows.Add(group.ID_Group, group.Name, group.IsManagementUser, group.IsManagementSetting);
+                string IsManagementUser = group.IsManagementUser == true ? "Có" : "Không";
+                string IsManagementSetting = group.IsManagementSetting == true ? "Có" : "Không";
+                dt.Rows.Add(group.ID_Group, group.Name, IsManagementUser, IsManagementSetting);
             });
             dataGridViewGroup.DataSource = dt;
 
         }
 
-        //method gọi Alert ở Main từ form khác thông qua form hiện tại
-        public void AlertActive(string msg, FormAlert.enmType enmType)
+        //Tìm kiếm
+        public void SearchUser()
         {
-            callAlert?.Invoke(msg, enmType);
-            LoadTabUser();
-            LoadTabGroup();
+            //nếu ô tìm kiếm rỗng hoặc chữ nhập vào trùng với chữ placeholdertext, mặc định texts của textbox custom này bằng với placeholdertext
+            if (String.IsNullOrEmpty(textBoxSearchUser.Texts) == false && textBoxSearchUser.Texts != textBoxSearchUser.PlaceholderText)
+            {
+                LoadDataUser(UserBusiness.FindUserByFullNameOrUsername(textBoxSearchUser.Texts));
+            }
+            else
+            {
+                LoadDataUser(UserBusiness.GetAllUsers());
+            }
+        }
+
+        public void SearchGroup()
+        {
+            //nếu ô tìm kiếm rỗng hoặc chữ nhập vào trùng với chữ placeholdertext, mặc định texts của textbox custom này bằng với placeholdertext
+            if (String.IsNullOrEmpty(textBoxSearchGroup.Texts) == false && textBoxSearchGroup.Texts != textBoxSearchGroup.PlaceholderText)
+            {
+                LoadDataGroup(GroupBusiness.FindGroupByName(textBoxSearchGroup.Texts));
+            }
+            else
+            {
+                LoadDataGroup(GroupBusiness.GetAllGroups());
+            }
         }
 
 
+
+        //EVENT
+
+        // Toast form add, change
         private void buttonAddUser_Click_1(object sender, EventArgs e)
         {
             // Create an instance of form add user
@@ -124,6 +164,36 @@ namespace MayNapKhiTPA.Forms
 
             // Show form 2
             formChangeGroup.ShowDialog();
+        }
+
+
+
+
+
+        //Tìm kiếm user 
+        private void buttonSearchUser_Click(object sender, EventArgs e)
+        {
+            SearchUser();
+        }
+
+        private void textBoxSearchUser_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                SearchUser();
+            }
+        }
+        //Tìm kiếm group
+        private void buttonSearchGroup_Click(object sender, EventArgs e)
+        {
+            SearchGroup();
+        }
+        private void textBoxSearchGroup_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                SearchGroup();
+            }
         }
     }
 }

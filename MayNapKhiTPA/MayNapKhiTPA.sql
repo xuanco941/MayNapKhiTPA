@@ -6,7 +6,7 @@ GO
 --TABLE SHIFT
 CREATE TABLE [Shift] (
 ID_Shift INT IDENTITY(1,1) PRIMARY KEY,
-[Name] nvarchar(100),
+[Name] nvarchar(100) UNIQUE,
 [TimeStart] TIME,
 [TimeEnd] TIME
 )
@@ -15,7 +15,7 @@ GO
 --TABLE GROUP
 CREATE TABLE [Group] (
 ID_Group INT IDENTITY(1,1) PRIMARY KEY,
-[Name] nvarchar(100),
+[Name] nvarchar(100) UNIQUE,
 IsManagementSetting bit,
 IsManagementUser bit
 )
@@ -204,6 +204,25 @@ Delete FROM [Group] WHERE [Group].ID_Group = @ID_Group;
 end
 GO
 
+--Lấy quyền từ id
+CREATE PROC GetGroupFromID @ID_Group Int
+as begin
+Select * from [Group] where ID_Group = @ID_Group
+end
+GO
+--Tìm kiếm group với tên bất kỳ
+CREATE PROC FindGroupByName @Name nvarchar(100)
+as begin 
+Select * From [Group] Where [Group].[Name] like '%'+@Name+'%';
+end
+GO
+--Tìm group từ tên group
+CREATE PROC GetGroupByName @Name nvarchar(100)
+as begin 
+Select * From [Group] Where [Group].[Name] like @Name;
+end
+GO
+
 
 
 
@@ -231,6 +250,18 @@ Delete FROM [Shift] WHERE [Shift].ID_Shift = @ID_Shift;
 end
 GO
 
+--Lấy ca làm từ id
+CREATE PROC GetShiftFromID @ID_Shift Int
+as begin
+Select * from [Shift] where ID_Shift = @ID_Shift
+end
+GO
+--Lấy ca làm từ id
+CREATE PROC GetShiftFromName @Name nvarchar(100)
+as begin
+Select * from [Shift] where [Name] = @Name
+end
+GO
 
 
 
@@ -247,16 +278,16 @@ end
 GO
 
 --Tìm kiếm nhân viên theo MaNV
-CREATE PROC FindUserByID @ID_User int
+CREATE PROC GetUserFromID @ID_User int
 as begin 
 Select * From [User] Where [User].ID_User = @ID_User;
 end
 GO
 
 --Tìm kiếm nhân viên với họ tên bất kỳ
-CREATE PROC FindUserByFullName @FullName nvarchar(100)
+CREATE PROC FindUserByFullNameOrUsername @Name nvarchar(100)
 as begin 
-Select * From [User] Where [User].FullName like '%'+@FullName+'%';
+Select * From [User] Where [User].FullName like '%'+@Name+'%' OR [User].Username like '%'+@Name+'%';
 end
 GO
 

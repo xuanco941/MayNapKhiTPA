@@ -27,6 +27,59 @@ namespace MayNapKhiTPA.Models
         }
 
 
+        public static Group GetGroupFromID(int ID_Group)
+        {
+            Group group = new Group();
+            SqlConnection sqlConnection = new SqlConnection(Common.ConnectionString);
+            sqlConnection.Open();
+            string sql = $"GetGroupFromID {ID_Group}";
+            var command = new SqlCommand(sql, sqlConnection);
+            SqlDataReader sqlDataReader = command.ExecuteReader();
+            while (sqlDataReader.Read())
+            {
+                group.ID_Group = sqlDataReader.GetInt32(0);
+                group.Name = sqlDataReader.GetString(1);
+                group.IsManagementSetting = sqlDataReader.GetBoolean(2);
+                group.IsManagementUser = sqlDataReader.GetBoolean(3);
+            }
+            sqlConnection.Close();
+            return group;
+        }
+        //Tìm kiếm group bằng tên
+        public static List<Group> FindGroupByName(string name)
+        {
+            List<Group> list = new List<Group>();
+            SqlConnection sqlConnection = new SqlConnection(Common.ConnectionString);
+            sqlConnection.Open();
+            string sql = $"FindGroupByName '{name}'";
+            var command = new SqlCommand(sql, sqlConnection);
+            SqlDataReader sqlDataReader = command.ExecuteReader();
+            while (sqlDataReader.Read())
+            {
+                Group group = new Group(sqlDataReader.GetInt32(0), sqlDataReader.GetString(1), sqlDataReader.GetBoolean(2), sqlDataReader.GetBoolean(3));
+                list.Add(group);
+            }
+            sqlConnection.Close();
+            return list;
+        }
+
+        public static Group GetGroupByName(string name)
+        {
+            Group group = null;
+            SqlConnection sqlConnection = new SqlConnection(Common.ConnectionString);
+            sqlConnection.Open();
+            string sql = $"GetGroupByName '{name}'";
+            var command = new SqlCommand(sql, sqlConnection);
+            SqlDataReader sqlDataReader = command.ExecuteReader();
+            while (sqlDataReader.Read())
+            {
+                group = new Group(sqlDataReader.GetInt32(0), sqlDataReader.GetString(1), sqlDataReader.GetBoolean(2), sqlDataReader.GetBoolean(3));
+            }
+            sqlConnection.Close();
+            return group;
+        }
+
+
 
         // Them Ca làm
         public static void AddGroup(Group group)

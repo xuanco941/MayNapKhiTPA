@@ -46,6 +46,43 @@ namespace MayNapKhiTPA.Models
             return list;
         }
 
+        public static List<User> FindUserByFullNameOrUsername(string name)
+        {
+            List<User> list = new List<User>();
+            SqlConnection sqlConnection = new SqlConnection(Common.ConnectionString);
+            sqlConnection.Open();
+            string sql = $"FindUserByFullNameOrUsername '{name}'";
+            var command = new SqlCommand(sql, sqlConnection);
+            SqlDataReader sqlDataReader = command.ExecuteReader();
+            while (sqlDataReader.Read())
+            {
+                User user = new User((int)sqlDataReader["ID_User"], (string)sqlDataReader["FullName"],
+                    (string)sqlDataReader["Username"], (string)sqlDataReader["Password"], (string)sqlDataReader["PhoneNumber"], (string)sqlDataReader["Email"], (int)sqlDataReader["ID_Shift"], (int)sqlDataReader["ID_Group"]);
+                list.Add(user);
+            }
+            sqlConnection.Close();
+            return list;
+        }
+
+
+        public static User GetUserFromID(int ID_User)
+        {
+            User user = null;
+            SqlConnection sqlConnection = new SqlConnection(Common.ConnectionString);
+            sqlConnection.Open();
+            string sql = $"GetUserFromID {ID_User}";
+            var command = new SqlCommand(sql, sqlConnection);
+            SqlDataReader sqlDataReader = command.ExecuteReader();
+            while (sqlDataReader.Read())
+            {
+                user = new User((int)sqlDataReader["ID_User"], (string)sqlDataReader["FullName"],
+                                  (string)sqlDataReader["Username"], (string)sqlDataReader["Password"], (string)sqlDataReader["PhoneNumber"], (string)sqlDataReader["Email"], (int)sqlDataReader["ID_Shift"], (int)sqlDataReader["ID_Group"]);
+            }
+            sqlConnection.Close();
+            return user;
+        }
+
+
 
 
         // Them TK

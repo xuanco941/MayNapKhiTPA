@@ -26,6 +26,43 @@ namespace MayNapKhiTPA.Models
             return list;
         }
 
+        public static Shift GetShiftFromID(int ID_Shift)
+        {
+            Shift shift = new Shift();
+            SqlConnection sqlConnection = new SqlConnection(Common.ConnectionString);
+            sqlConnection.Open();
+            string sql = $"GetShiftFromID {ID_Shift}";
+            var command = new SqlCommand(sql, sqlConnection);
+            SqlDataReader sqlDataReader = command.ExecuteReader();
+            while (sqlDataReader.Read())
+            {
+                shift.ID_Shift = sqlDataReader.GetInt32(0);
+                shift.Name = sqlDataReader.GetString(1);
+                shift.TimeStart = sqlDataReader.GetTimeSpan(2);
+                shift.TimeEnd = sqlDataReader.GetTimeSpan(3);
+            }
+            sqlConnection.Close();
+            return shift;
+        }
+
+        public static Shift GetShiftByName(string name)
+        {
+            Shift shift = new Shift();
+            SqlConnection sqlConnection = new SqlConnection(Common.ConnectionString);
+            sqlConnection.Open();
+            string sql = $"GetShiftByName '{name}'";
+            var command = new SqlCommand(sql, sqlConnection);
+            SqlDataReader sqlDataReader = command.ExecuteReader();
+            while (sqlDataReader.Read())
+            {
+                shift.ID_Shift = sqlDataReader.GetInt32(0);
+                shift.Name = sqlDataReader.GetString(1);
+                shift.TimeStart = sqlDataReader.GetTimeSpan(2);
+                shift.TimeEnd = sqlDataReader.GetTimeSpan(3);
+            }
+            sqlConnection.Close();
+            return shift;
+        }
 
 
         // Them Ca làm

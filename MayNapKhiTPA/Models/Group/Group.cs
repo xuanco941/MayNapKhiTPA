@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MayNapKhiTPA.Models
 {
-    internal class Group
+    public class Group
     {
         public int ID_Group { get; set; }
         public string Name { get; set; }
@@ -19,6 +19,10 @@ namespace MayNapKhiTPA.Models
             Name = name;
             IsManagementSetting = isManagementSetting;
             IsManagementUser = isManagementUser;
+        }
+        public Group()
+        {
+
         }
     }
 }
