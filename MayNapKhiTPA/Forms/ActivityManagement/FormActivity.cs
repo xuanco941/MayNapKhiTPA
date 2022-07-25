@@ -14,12 +14,11 @@ namespace MayNapKhiTPA.Forms
 {
     public partial class FormActivity : Form
     {
+
         private string strDatimeTuNgay = null;
         private string strDatimeToiNgay = null;
         private int page = 1;
         private int pageSize = 0;
-
-
 
 
         public FormActivity()
@@ -43,14 +42,16 @@ namespace MayNapKhiTPA.Forms
             dt.Columns.Add("No.", typeof(int));
             dt.Columns.Add("Hoạt động", typeof(string));
             dt.Columns.Add("Thời gian", typeof(DateTime));
-            dt.Columns.Add("Tài khoản thực hiện");
+            dt.Columns.Add("Tài người thực hiện");
 
-
+            //
             int count = 1;
             activities.ForEach(delegate (Activity activity)
             {
+                User user = UserBusiness.GetUserFromID(activity.ID_User);
+                //format date từ sql -> c#
                 string createAt = activity.Create_At.ToString("dd/MM/yyyy hh:mm:ss", CultureInfo.InvariantCulture);
-                dt.Rows.Add(count, activity.Description, createAt,activity.ID_User);
+                dt.Rows.Add(count, activity.Description, createAt, user.FullName);
                 count++;
             });
             dataGridViewActivity.DataSource = dt;
@@ -81,7 +82,7 @@ namespace MayNapKhiTPA.Forms
                 }
             }
             else
-            { 
+            {
                 try
                 {
                     int sumActivity = ActivityBusiness.CountActivityByDay(strDatimeTuNgay, strDatimeToiNgay);
@@ -97,16 +98,25 @@ namespace MayNapKhiTPA.Forms
                     //Lỗi
                 }
             }
-            
-            
-            
+
+
+
             LoadForm(activities);
         }
 
-
-
-        private void buttonLoc_Click(object sender, EventArgs e)
+        // show form chia tiết hoạt động của user
+        private void buttonCallFormEmployeeActivities_Click(object sender, EventArgs e)
         {
+            // Create an instance of form 
+            FormEmployeeActivities formEmployeeActivities = new FormEmployeeActivities();
+
+            // Show form 
+            formEmployeeActivities.Show();
+        }
+
+        private void buttonLoc_Click_1(object sender, EventArgs e)
+        {
+            //lấy ngày ở datetimepicker rồi chuyển về dạng yyyy-mm-dd, lưu vào các strdatetime, field của lớp
             DateTime tuNgay = Convert.ToDateTime(dateTimePickerTuNgay.Value);
             DateTime toiNgay = Convert.ToDateTime(dateTimePickerToiNgay.Value).AddDays(1);
             strDatimeTuNgay = tuNgay.Year + "-" + tuNgay.Month + "-" + tuNgay.Day;
@@ -115,23 +125,34 @@ namespace MayNapKhiTPA.Forms
             GetActivities();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void buttonGoPage_Click(object sender, EventArgs e)
         {
-            Button btn = sender as Button;
-            if (btn != null)
+            // nếu ô tìm kiếm không rỗng và khác placeholder
+            if(String.IsNullOrEmpty(textBoxGoPage.Texts) == false && textBoxGoPage.Texts != textBoxGoPage.PlaceholderText)
             {
-                this.page = int.Parse(btn.Text);
+
             }
+
+
+            this.page = int.Parse(textBoxGoPage.Texts);
             GetActivities();
         }
 
-        private void buttonCallFormEmployeeActivities_Click(object sender, EventArgs e)
-        {
-            // Create an instance of form 
-            FormEmployeeActivities formEmployeeActivities = new FormEmployeeActivities();
 
-            // Show form 
-            formEmployeeActivities.Show();
+        //validate input chỉ nhập số
+        private void textBoxGoPage_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //textbox only number 
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            //if ((e.KeyChar == '.') && ((sender as LW_PhanMemBaoGia.MyControls.TextBoxT).Texts.IndexOf('.') > -1))
+            //{
+            //    e.Handled = true;
+            //}
         }
     }
 }

@@ -41,7 +41,7 @@ namespace MayNapKhiTPA.Forms
             this.buttonCustom4 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.buttonCustom3 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.buttonCustom1 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
-            this.textBoxT = new LW_PhanMemBaoGia.MyControls.TextBoxT();
+            this.textBoxGoPage = new LW_PhanMemBaoGia.MyControls.TextBoxT();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -130,7 +130,7 @@ namespace MayNapKhiTPA.Forms
             this.panel2.Controls.Add(this.buttonCustom4);
             this.panel2.Controls.Add(this.buttonCustom3);
             this.panel2.Controls.Add(this.buttonCustom1);
-            this.panel2.Controls.Add(this.textBoxT);
+            this.panel2.Controls.Add(this.textBoxGoPage);
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.button6);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -251,26 +251,27 @@ namespace MayNapKhiTPA.Forms
             this.buttonCustom1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.buttonCustom1.UseVisualStyleBackColor = false;
             // 
-            // textBoxT
+            // textBoxGoPage
             // 
-            this.textBoxT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxT.BackColor = System.Drawing.SystemColors.Window;
-            this.textBoxT.BorderColor = System.Drawing.Color.CornflowerBlue;
-            this.textBoxT.BorderFocusColor = System.Drawing.SystemColors.ActiveCaption;
-            this.textBoxT.BorderRadius = 5;
-            this.textBoxT.BorderSize = 1;
-            this.textBoxT.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxT.Location = new System.Drawing.Point(780, 11);
-            this.textBoxT.Multiline = false;
-            this.textBoxT.Name = "textBoxT";
-            this.textBoxT.Padding = new System.Windows.Forms.Padding(7);
-            this.textBoxT.PasswordChar = false;
-            this.textBoxT.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.textBoxT.PlaceholderText = "Trang số . . .";
-            this.textBoxT.Size = new System.Drawing.Size(79, 35);
-            this.textBoxT.TabIndex = 14;
-            this.textBoxT.Texts = "Trang số . . .";
-            this.textBoxT.UnderlinedStyle = false;
+            this.textBoxGoPage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxGoPage.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxGoPage.BorderColor = System.Drawing.Color.CornflowerBlue;
+            this.textBoxGoPage.BorderFocusColor = System.Drawing.SystemColors.ActiveCaption;
+            this.textBoxGoPage.BorderRadius = 5;
+            this.textBoxGoPage.BorderSize = 1;
+            this.textBoxGoPage.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxGoPage.Location = new System.Drawing.Point(780, 11);
+            this.textBoxGoPage.Multiline = false;
+            this.textBoxGoPage.Name = "textBoxGoPage";
+            this.textBoxGoPage.Padding = new System.Windows.Forms.Padding(7, 9, 7, 5);
+            this.textBoxGoPage.PasswordChar = false;
+            this.textBoxGoPage.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.textBoxGoPage.PlaceholderText = "Trang số . . .";
+            this.textBoxGoPage.Size = new System.Drawing.Size(79, 35);
+            this.textBoxGoPage.TabIndex = 14;
+            this.textBoxGoPage.Texts = "Trang số . . .";
+            this.textBoxGoPage.UnderlinedStyle = false;
+            this.textBoxGoPage.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxGoPage_KeyPress);
             // 
             // panel1
             // 
@@ -642,7 +643,7 @@ namespace MayNapKhiTPA.Forms
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonPrint;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonExcel;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom2;
-        private LW_PhanMemBaoGia.MyControls.TextBoxT textBoxT;
+        private LW_PhanMemBaoGia.MyControls.TextBoxT textBoxGoPage;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom6;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom5;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom4;

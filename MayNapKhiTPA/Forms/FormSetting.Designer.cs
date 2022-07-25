@@ -192,7 +192,7 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.Transparent;
+            this.tabPage1.BackColor = System.Drawing.Color.White;
             this.tabPage1.Controls.Add(this.tableLayoutPanel1);
             this.tabPage1.Location = new System.Drawing.Point(4, 28);
             this.tabPage1.Name = "tabPage1";
@@ -265,6 +265,7 @@
             this.textBoxT3.TabIndex = 52;
             this.textBoxT3.Texts = "phút";
             this.textBoxT3.UnderlinedStyle = false;
+            this.textBoxT3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxApSuatNap_KeyPress);
             // 
             // label5
             // 
@@ -308,6 +309,7 @@
             this.textBoxT2.TabIndex = 52;
             this.textBoxT2.Texts = "phút";
             this.textBoxT2.UnderlinedStyle = false;
+            this.textBoxT2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxApSuatNap_KeyPress);
             // 
             // label2
             // 
@@ -351,6 +353,7 @@
             this.textBoxT1.TabIndex = 51;
             this.textBoxT1.Texts = "m3";
             this.textBoxT1.UnderlinedStyle = false;
+            this.textBoxT1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxApSuatNap_KeyPress);
             // 
             // label4
             // 
@@ -394,6 +397,7 @@
             this.textBoxApSuatNap.TabIndex = 50;
             this.textBoxApSuatNap.Texts = "bar";
             this.textBoxApSuatNap.UnderlinedStyle = false;
+            this.textBoxApSuatNap.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxApSuatNap_KeyPress);
             // 
             // label3
             // 
@@ -722,7 +726,7 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.Gainsboro;
+            this.tabPage2.BackColor = System.Drawing.Color.White;
             this.tabPage2.Controls.Add(this.tableLayoutPanel4);
             this.tabPage2.Location = new System.Drawing.Point(4, 28);
             this.tabPage2.Name = "tabPage2";
@@ -1184,6 +1188,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.BackColor = System.Drawing.Color.White;
             this.tabPage3.Controls.Add(this.tableLayoutPanel9);
             this.tabPage3.Location = new System.Drawing.Point(4, 28);
             this.tabPage3.Name = "tabPage3";
@@ -1191,7 +1196,6 @@
             this.tabPage3.Size = new System.Drawing.Size(911, 548);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Ca làm";
-            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel9
             // 

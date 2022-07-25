@@ -25,12 +25,28 @@ namespace MayNapKhiTPA.Forms
         //textbox only number type tabpage 1
         private void textBoxT5_KeyPress(object sender, KeyPressEventArgs e)
         {
+            //textbox only number 
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
                 e.Handled = true;
             }
 
             // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as LW_PhanMemBaoGia.MyControls.TextBoxT).Texts.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxApSuatNap_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //textbox chỉ nhập số  
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // chỉ cho 1 dấu chấm
             if ((e.KeyChar == '.') && ((sender as LW_PhanMemBaoGia.MyControls.TextBoxT).Texts.IndexOf('.') > -1))
             {
                 e.Handled = true;

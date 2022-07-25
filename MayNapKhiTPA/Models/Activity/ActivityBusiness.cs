@@ -27,7 +27,7 @@ namespace MayNapKhiTPA.Models
             SqlDataReader sqlDataReader = command.ExecuteReader();
             while (sqlDataReader.Read())
             {
-                Activity activity = new Activity(sqlDataReader.GetInt32(0), sqlDataReader.GetString(1), sqlDataReader.GetBoolean(2), sqlDataReader.GetDateTime(3), sqlDataReader.GetInt32(4)); list.Add(activity);
+                Activity activity = new Activity(sqlDataReader.GetInt32(0), sqlDataReader.GetString(1), sqlDataReader.GetBoolean(2), sqlDataReader.GetDateTime(3), sqlDataReader.GetInt32(4));
                 list.Add(activity);
             }
             sqlConnection.Close();
@@ -44,18 +44,19 @@ namespace MayNapKhiTPA.Models
             {
                 int? start = (page - 1) * Common.NUMBER_ELM_ON_PAGE_ACTIVITY;
                 int? end = page * Common.NUMBER_ELM_ON_PAGE_ACTIVITY;
-                sql = $"exec paginationActivityByDay {start},{end},'{tungay}','{toingay}'";
+                sql = $"exec PaginationActivityByDay {start},{end},'{tungay}','{toingay}'";
             }
             else
             {
-                sql = $"exec FindActivityDayToDay '{tungay}', '{toingay}'";
+                sql = $"exec FindActivityByDayToDay '{tungay}', '{toingay}'";
             }
             SqlCommand command = new SqlCommand(sql, sqlConnection);
             //loi
             SqlDataReader sqlDataReader = command.ExecuteReader();
             while (sqlDataReader.Read())
             {
-                Activity activity = new Activity(sqlDataReader.GetInt32(0), sqlDataReader.GetString(1), sqlDataReader.GetBoolean(2), sqlDataReader.GetDateTime(3), sqlDataReader.GetInt32(4));                list.Add(activity);
+                Activity activity = new Activity(sqlDataReader.GetInt32(0), sqlDataReader.GetString(1), sqlDataReader.GetBoolean(2), sqlDataReader.GetDateTime(3), sqlDataReader.GetInt32(4));
+                list.Add(activity);
             }
             sqlConnection.Close();
             return list;
@@ -96,18 +97,56 @@ namespace MayNapKhiTPA.Models
         }
 
 
-        public static void AddActivity(string Activity_Name)
+        public static void AddActivity(Activity activity)
         {
             SqlConnection sqlConnection = new SqlConnection(Common.ConnectionString);
             sqlConnection.Open();
             SqlCommand command = new SqlCommand();
-            command.CommandText = $"insert into Activity (Activity_Name) values (@Activity_Name)";
-            command.Parameters.AddWithValue("Activity_Name", Activity_Name);
+            command.CommandText = $"AddActivity {activity.Description}, {activity.IsSetting}, {activity.ID_User}";
             command.Connection = sqlConnection;
 
             command.ExecuteNonQuery();
             sqlConnection.Close();
         }
+
+        public static List<Activity> GetActivityFromIDUser(int ID_User)
+        {
+
+            List<Activity> list = new List<Activity>();
+            SqlConnection sqlConnection = new SqlConnection(Common.ConnectionString);
+            sqlConnection.Open();
+            string sql = $"exec GetActivityFromIDUser {ID_User}";
+            SqlCommand command = new SqlCommand(sql, sqlConnection);
+            SqlDataReader sqlDataReader = command.ExecuteReader();
+            while (sqlDataReader.Read())
+            {
+                Activity activity = new Activity(sqlDataReader.GetInt32(0), sqlDataReader.GetString(1), sqlDataReader.GetBoolean(2), sqlDataReader.GetDateTime(3), sqlDataReader.GetInt32(4));
+                list.Add(activity);
+            }
+            sqlConnection.Close();
+
+            return list;
+        }
+
+        public static List<int> GetListIDUserHasActivity()
+        {
+
+            List<int> list = new List<int>();
+            SqlConnection sqlConnection = new SqlConnection(Common.ConnectionString);
+            sqlConnection.Open();
+            string sql = $"exec GetListIDUserHasActivity";
+            SqlCommand command = new SqlCommand(sql, sqlConnection);
+            SqlDataReader sqlDataReader = command.ExecuteReader();
+            while (sqlDataReader.Read())
+            {
+                list.Add(sqlDataReader.GetInt32(0)) ;
+            }
+            sqlConnection.Close();
+
+            return list;
+        }
+
+
     }
 
 }

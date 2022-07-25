@@ -22,44 +22,53 @@ namespace MayNapKhiTPA.Forms.ActivityManagement
 
         private void LoadPanelUser()
         {            
-            //test
-            List<Activity> activities = new List<Activity>();
-            DataTable dt = new DataTable();
-            dt.Columns.Add("No.", typeof(int));
-            dt.Columns.Add("Hoạt động", typeof(string));
-            dt.Columns.Add("Thời gian", typeof(DateTime));
+            List<User> listUsers = new List<User>();
+            //lấy danh sách id_user tham gia hoạt động, sau đó tìm thông tin user đó và thêm vào list user
+            foreach (int id_user in ActivityBusiness.GetListIDUserHasActivity())
+            {
+                listUsers.Add(UserBusiness.GetUserFromID(id_user));
+            }
 
-            string[] arr = new string[5] {"Đỗ Văn Xuân","Đỗ Văn C","Nguyễn Văn A","Đỗ Thị B", "Bùi Thị H" };
-
-            panelUser.AutoScroll = true;
-            for(int i =0; i< arr.Length; i++)
+            foreach(User user in listUsers)
             {
                 Button btn = new Button();
                 btn.Height = 50;
-                btn.Text = arr[i].ToString();
-                btn.Tag = i;
+                btn.Text = user.FullName;
+                //tag để lưu id_user
+                btn.Tag = user.ID_User;
                 btn.ForeColor = Color.FromName("#B0B3B8");
                 btn.BackColor = Color.FromName("#3a3b3c");
                 btn.Dock = DockStyle.Top;
                 btn.Click += new EventHandler(handleClickButtonUser);
                 panelUser.Controls.Add(btn);
-
-                string time = DateTime.Now.ToString("dd/MM/yyyy hh:mm:ss", CultureInfo.InvariantCulture);
-                dt.Rows.Add(i, "Đã start máy", time);
             }
 
-
-
-
-            dataGridViewEmployeeActivity.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewEmployeeActivity.DataSource = dt;
+            // load 1 thông tin của user
+            if (panelUser.Controls.Count > 0) {
+                int id_user_first = Int32.Parse(panelUser.Controls[0].Tag.ToString());
+                LoadDatagridView(ActivityBusiness.GetActivityFromIDUser(id_user_first));
+            }
 
         }
-
+        //load datagridview
+        private void LoadDatagridView(List<Activity> activities)
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Hoạt động", typeof(string));
+            dt.Columns.Add("Ngày thực hiện", typeof(DateTime));
+            activities.ForEach(delegate (Activity activity)
+            {
+                string createAt = activity.Create_At.ToString("dd/MM/yyyy hh:mm:ss", CultureInfo.InvariantCulture);
+                dt.Rows.Add(activity.Description, createAt);
+            });
+            dataGridViewUserActivity.DataSource = dt;
+        }
+        //function delegate event click button render from list user
         private void handleClickButtonUser(object sender, EventArgs e)
         {
             Button btn = sender as Button;
-            MessageBox.Show(""+btn.Tag);
+            LoadDatagridView(ActivityBusiness.GetActivityFromIDUser(Int32.Parse(btn.Tag.ToString())));
+
         }
 
     }

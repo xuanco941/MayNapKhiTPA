@@ -38,5 +38,19 @@ namespace MayNapKhiTPA.Forms
 
         }
 
+        private void textBoxGoPage_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //textbox chỉ nhập số  
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // chỉ cho 1 dấu chấm
+            if ((e.KeyChar == '.') && ((sender as LW_PhanMemBaoGia.MyControls.TextBoxT).Texts.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

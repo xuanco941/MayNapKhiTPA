@@ -317,42 +317,62 @@ GO
 
 
 
-----Activity
-----Tim kiem Activity theo khoang ngay
---CREATE PROC FindActivityDayToDay @Time1 DateTime , @Time2 DateTime
---as begin
---SELECT * FROM Activity WHERE 
---Activity_Time BETWEEN
---@Time1 AND
--- @Time2 order by Activity.Activity_ID DESC
---end
---GO
+--Activity
+--Add Activity
+CREATE PROC AddActivity @description nvarchar(2000), @isSetting bit ,@id_user int 
+as begin
+insert into Activity ([Description],IsSetting,ID_User) values (@Description,@IsSetting,@id_user)
+end
+GO
 
-----Đếm Activity theo ngày
---CREATE PROC CountActivityDayToDay @Time1 DateTime , @Time2 DateTime
---as begin
---SELECT count(*) FROM Activity WHERE 
---Activity_Time BETWEEN
---@Time1 AND
--- @Time2
---end
---GO
 
-----phan trang 
---create proc paginationActivity (@startfrom int ,@endto int) as
---SELECT * FROM ( 
---  SELECT *, ROW_NUMBER() OVER (ORDER BY Activity_ID desc) as row FROM Activity 
--- ) a WHERE a.row > @startfrom and a.row <= @endto
--- GO
+--Tim kiem Activity theo khoang ngay, sắp xếp theo thứ tự giảm dần của ID
+CREATE PROC FindActivityByDayToDay @Time1 DateTime , @Time2 DateTime
+as begin
+SELECT * FROM Activity WHERE 
+Create_At BETWEEN
+@Time1 AND
+ @Time2 order by Activity.ID_Activity DESC
+end
+GO
 
--- -- phan trang theo ngay
--- create proc paginationActivityByDay (@startfrom int ,@endto int, @Time1 Datetime , @Time2 Datetime) as begin
---SELECT * FROM ( SELECT *, ROW_NUMBER() OVER (ORDER BY Activity_ID desc) as row FROM Activity WHERE 
---Activity_Time BETWEEN
---@Time1 AND
--- @Time2 ) as a WHERE a.row > @startfrom and a.row <= @endto
--- end
--- GO
+--Đếm Activity theo ngày
+CREATE PROC CountActivityDayToDay @Time1 DateTime , @Time2 DateTime
+as begin
+SELECT count(*) FROM Activity WHERE 
+Create_At BETWEEN
+@Time1 AND
+ @Time2
+end
+GO
+
+--phan trang 
+create proc PaginationActivity (@startfrom int ,@endto int) as
+SELECT * FROM ( 
+  SELECT *, ROW_NUMBER() OVER (ORDER BY ID_Activity desc) as row FROM Activity 
+ ) a WHERE a.row > @startfrom and a.row <= @endto
+ GO
+
+ -- phan trang theo ngay
+ create proc PaginationActivityByDay (@startfrom int ,@endto int, @Time1 Datetime , @Time2 Datetime) as begin
+SELECT * FROM ( SELECT *, ROW_NUMBER() OVER (ORDER BY ID_Activity desc) as row FROM Activity WHERE 
+Create_At BETWEEN
+@Time1 AND
+ @Time2 ) as a WHERE a.row > @startfrom and a.row <= @endto
+ end
+ GO
+
+ --Lấy ra các Activity theo ID_User
+ CREATE PROC GetActivityFromIDUser (@ID_User int) as begin
+ Select * from Activity where Activity.ID_User = @ID_User order by Activity.ID_Activity desc
+ end
+ GO
+
+ -- Lấy ra danh sách user tham gia hoạt động
+ CREATE PROC GetListIDUserHasActivity as begin
+ select distinct ID_User from Activity 
+ end
+ GO
 
 
 
@@ -403,5 +423,4 @@ GO
 exec AddUser N'Đỗ Văn Xuân', 'admin','123', '0123456789','xuan@gmail.com',1,1
 GO
 
-
-exec GetGroupFromName N'Quyền Admin'
+exec AddActivity 'Start',1,1
