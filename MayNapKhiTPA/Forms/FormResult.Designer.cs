@@ -263,7 +263,7 @@ namespace MayNapKhiTPA.Forms
             this.textBoxGoPage.Location = new System.Drawing.Point(780, 11);
             this.textBoxGoPage.Multiline = false;
             this.textBoxGoPage.Name = "textBoxGoPage";
-            this.textBoxGoPage.Padding = new System.Windows.Forms.Padding(7, 9, 7, 5);
+            this.textBoxGoPage.Padding = new System.Windows.Forms.Padding(7, 8, 7, 5);
             this.textBoxGoPage.PasswordChar = false;
             this.textBoxGoPage.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.textBoxGoPage.PlaceholderText = "Trang số . . .";

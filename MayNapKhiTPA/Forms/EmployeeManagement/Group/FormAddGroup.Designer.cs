@@ -30,6 +30,7 @@ namespace MayNapKhiTPA.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAddGroup));
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -165,21 +166,24 @@ namespace MayNapKhiTPA.Forms
             // 
             // buttonDangNhap
             // 
-            this.buttonDangNhap.BackColor = System.Drawing.Color.SteelBlue;
-            this.buttonDangNhap.BackgroundColor = System.Drawing.Color.SteelBlue;
+            this.buttonDangNhap.BackColor = System.Drawing.Color.Green;
+            this.buttonDangNhap.BackgroundColor = System.Drawing.Color.Green;
             this.buttonDangNhap.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.buttonDangNhap.BorderRadius = 3;
             this.buttonDangNhap.BorderSize = 0;
             this.buttonDangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDangNhap.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDangNhap.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDangNhap.ForeColor = System.Drawing.Color.White;
+            this.buttonDangNhap.Image = ((System.Drawing.Image)(resources.GetObject("buttonDangNhap.Image")));
             this.buttonDangNhap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonDangNhap.Location = new System.Drawing.Point(253, 421);
             this.buttonDangNhap.Name = "buttonDangNhap";
             this.buttonDangNhap.Size = new System.Drawing.Size(126, 36);
             this.buttonDangNhap.TabIndex = 57;
             this.buttonDangNhap.Text = "Thêm";
+            this.buttonDangNhap.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonDangNhap.TextColor = System.Drawing.Color.White;
+            this.buttonDangNhap.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.buttonDangNhap.UseVisualStyleBackColor = false;
             // 
             // FormAddGroup

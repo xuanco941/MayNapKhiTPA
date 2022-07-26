@@ -159,6 +159,7 @@ namespace MayNapKhiTPA.Forms
             this.textBoxSoDienThoai.TabIndex = 55;
             this.textBoxSoDienThoai.Texts = "";
             this.textBoxSoDienThoai.UnderlinedStyle = false;
+            this.textBoxSoDienThoai.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSoDienThoai_KeyPress);
             // 
             // label1
             // 

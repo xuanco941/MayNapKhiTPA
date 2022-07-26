@@ -68,5 +68,19 @@ namespace MayNapKhiTPA.Forms
 
         }
 
+        private void textBoxSoDienThoai_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //textbox only number 
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as LW_PhanMemBaoGia.MyControls.TextBoxT).Texts.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

@@ -93,6 +93,7 @@ namespace MayNapKhiTPA.Forms
             this.textBoxPhoneNumber.TabIndex = 69;
             this.textBoxPhoneNumber.Texts = "";
             this.textBoxPhoneNumber.UnderlinedStyle = false;
+            this.textBoxPhoneNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPhoneNumber_KeyPress);
             // 
             // textBoxEmail
             // 

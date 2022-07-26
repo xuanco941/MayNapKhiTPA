@@ -150,7 +150,7 @@ namespace MayNapKhiTPA.Forms
             this.textBoxSearchUser.Location = new System.Drawing.Point(5, 11);
             this.textBoxSearchUser.Multiline = false;
             this.textBoxSearchUser.Name = "textBoxSearchUser";
-            this.textBoxSearchUser.Padding = new System.Windows.Forms.Padding(7, 9, 7, 5);
+            this.textBoxSearchUser.Padding = new System.Windows.Forms.Padding(7, 8, 7, 5);
             this.textBoxSearchUser.PasswordChar = false;
             this.textBoxSearchUser.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.textBoxSearchUser.PlaceholderText = "Nhập tên người dùng";
@@ -333,7 +333,7 @@ namespace MayNapKhiTPA.Forms
             this.textBoxSearchGroup.Location = new System.Drawing.Point(3, 11);
             this.textBoxSearchGroup.Multiline = false;
             this.textBoxSearchGroup.Name = "textBoxSearchGroup";
-            this.textBoxSearchGroup.Padding = new System.Windows.Forms.Padding(7, 9, 7, 5);
+            this.textBoxSearchGroup.Padding = new System.Windows.Forms.Padding(7, 8, 7, 5);
             this.textBoxSearchGroup.PasswordChar = false;
             this.textBoxSearchGroup.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.textBoxSearchGroup.PlaceholderText = "Nhập tên quyền";

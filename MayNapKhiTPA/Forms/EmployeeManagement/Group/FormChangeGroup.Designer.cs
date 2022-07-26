@@ -30,6 +30,7 @@ namespace MayNapKhiTPA.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormChangeGroup));
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.checkBox6 = new System.Windows.Forms.CheckBox();
@@ -50,7 +51,7 @@ namespace MayNapKhiTPA.Forms
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Transparent;
-            this.label7.Location = new System.Drawing.Point(134, 87);
+            this.label7.Location = new System.Drawing.Point(124, 87);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(193, 21);
             this.label7.TabIndex = 27;
@@ -65,9 +66,9 @@ namespace MayNapKhiTPA.Forms
             this.groupBox1.Controls.Add(this.checkBox1);
             this.groupBox1.Controls.Add(this.checkBox2);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(139, 160);
+            this.groupBox1.Location = new System.Drawing.Point(128, 160);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(301, 199);
+            this.groupBox1.Size = new System.Drawing.Size(323, 207);
             this.groupBox1.TabIndex = 28;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cho phép";
@@ -163,15 +164,18 @@ namespace MayNapKhiTPA.Forms
             this.buttonCustom1.BorderRadius = 3;
             this.buttonCustom1.BorderSize = 0;
             this.buttonCustom1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCustom1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCustom1.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCustom1.ForeColor = System.Drawing.Color.White;
+            this.buttonCustom1.Image = ((System.Drawing.Image)(resources.GetObject("buttonCustom1.Image")));
             this.buttonCustom1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCustom1.Location = new System.Drawing.Point(314, 392);
+            this.buttonCustom1.Location = new System.Drawing.Point(291, 405);
             this.buttonCustom1.Name = "buttonCustom1";
-            this.buttonCustom1.Size = new System.Drawing.Size(126, 36);
+            this.buttonCustom1.Size = new System.Drawing.Size(160, 36);
             this.buttonCustom1.TabIndex = 74;
             this.buttonCustom1.Text = "Xóa quyền này";
+            this.buttonCustom1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonCustom1.TextColor = System.Drawing.Color.White;
+            this.buttonCustom1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.buttonCustom1.UseVisualStyleBackColor = false;
             // 
             // buttonDangNhap
@@ -182,15 +186,18 @@ namespace MayNapKhiTPA.Forms
             this.buttonDangNhap.BorderRadius = 3;
             this.buttonDangNhap.BorderSize = 0;
             this.buttonDangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDangNhap.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDangNhap.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDangNhap.ForeColor = System.Drawing.Color.White;
+            this.buttonDangNhap.Image = global::MayNapKhiTPA.Properties.Resources.iconfinder_Synchronize_278832;
             this.buttonDangNhap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonDangNhap.Location = new System.Drawing.Point(139, 392);
+            this.buttonDangNhap.Location = new System.Drawing.Point(125, 405);
             this.buttonDangNhap.Name = "buttonDangNhap";
-            this.buttonDangNhap.Size = new System.Drawing.Size(126, 36);
+            this.buttonDangNhap.Size = new System.Drawing.Size(160, 36);
             this.buttonDangNhap.TabIndex = 73;
             this.buttonDangNhap.Text = "Cập nhật";
+            this.buttonDangNhap.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonDangNhap.TextColor = System.Drawing.Color.White;
+            this.buttonDangNhap.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.buttonDangNhap.UseVisualStyleBackColor = false;
             // 
             // comboBoxSelectGroup
@@ -198,9 +205,9 @@ namespace MayNapKhiTPA.Forms
             this.comboBoxSelectGroup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSelectGroup.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxSelectGroup.FormattingEnabled = true;
-            this.comboBoxSelectGroup.Location = new System.Drawing.Point(138, 111);
+            this.comboBoxSelectGroup.Location = new System.Drawing.Point(128, 111);
             this.comboBoxSelectGroup.Name = "comboBoxSelectGroup";
-            this.comboBoxSelectGroup.Size = new System.Drawing.Size(302, 33);
+            this.comboBoxSelectGroup.Size = new System.Drawing.Size(326, 33);
             this.comboBoxSelectGroup.TabIndex = 75;
             // 
             // FormChangeGroup
@@ -208,7 +215,7 @@ namespace MayNapKhiTPA.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(587, 468);
+            this.ClientSize = new System.Drawing.Size(589, 501);
             this.Controls.Add(this.comboBoxSelectGroup);
             this.Controls.Add(this.buttonCustom1);
             this.Controls.Add(this.buttonDangNhap);

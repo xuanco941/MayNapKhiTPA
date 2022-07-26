@@ -51,19 +51,19 @@ namespace MayNapKhiTPA.Forms
                 string infoToiNgay = (int.Parse(arr2[2]) - 1) + "-" + arr2[1] + "-" + arr2[0];
                 if (infoTuNgay == infoToiNgay)
                 {
-                    labelTuNgay.Text = "Hoạt động trong ngày: " + infoTuNgay;
+                    labelTuNgay.Text = "- Hoạt động trong ngày: " + infoTuNgay;
                     labelToiNgay.Text = "";
                 }
                 else
                 {
-                    labelTuNgay.Text = "Từ ngày: " + infoTuNgay;
-                    labelToiNgay.Text = "Tới ngày: " + infoToiNgay;
+                    labelTuNgay.Text = "- Từ ngày: " + infoTuNgay;
+                    labelToiNgay.Text = "- Tới ngày: " + infoToiNgay;
                 }
             }
             else
             {
-                labelTuNgay.Text = "Không có.";
-                labelToiNgay.Text = "Không có.";
+                labelTuNgay.Text = "- Không có.";
+                labelToiNgay.Text = "- Không có.";
             }
 
             //
