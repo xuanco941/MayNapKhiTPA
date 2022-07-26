@@ -66,6 +66,12 @@ namespace MayNapKhiTPA.Forms
                 try
                 {
                     UserBusiness.UpdateUser(usernameOld, user);
+                    //nếu username cũ là username current , biến tĩnh của program thì cập nhật lại usercurrent
+                    if(usernameOld == Common.UserNameCurrent)
+                    {
+                        Common.UserNameCurrent = user.Username;
+                    }
+                    //thông báo
                     changeData?.Invoke("Cập nhật thành công.", FormAlert.enmType.Success);
                 }
                 catch (Exception ex)

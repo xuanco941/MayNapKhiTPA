@@ -23,9 +23,9 @@ namespace MayNapKhiTPA
 
         private void LoginActive()
         {
-            string TaiKhoan = textBoxTaiKhoan.Texts.Trim();
-            string MatKhau = textBoxMatKhau.Texts.Trim();
-            if (String.IsNullOrEmpty(TaiKhoan) == true && String.IsNullOrEmpty(MatKhau) == true)
+            string Username = textBoxTaiKhoan.Texts.Trim();
+            string Password = textBoxMatKhau.Texts.Trim();
+            if (String.IsNullOrEmpty(Username) == true && String.IsNullOrEmpty(Password) == true)
             {
                 MessageBox.Show("Không để trống ô tài khoản và mật khẩu.", "Lỗi Cú Pháp", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -33,10 +33,10 @@ namespace MayNapKhiTPA
             {
                 try
                 {
-                    if (UserBusiness.AuthLogin(TaiKhoan, MatKhau) == true)
+                    if (UserBusiness.AuthLogin(Username, Password) == true)
                     {
                         this.Close();
-                        Common.UserNameCurrent = TaiKhoan;
+                        Common.UserNameCurrent = Username;
                         Common.IsLoggedIn = true;
 
                     }

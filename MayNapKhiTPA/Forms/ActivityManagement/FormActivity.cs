@@ -14,11 +14,18 @@ namespace MayNapKhiTPA.Forms
 {
     public partial class FormActivity : Form
     {
+        // Aleart
+        public delegate void CallAlert(string msg, FormAlert.enmType type);
+        public CallAlert callAlert;
 
+
+        // ngày để query 
         private string strDatimeTuNgay = null;
         private string strDatimeToiNgay = null;
+        // trang hiện tại
         private int page = 1;
-        private int pageSize = 0;
+        // tổng số trang
+        private int pageSize = 1;
 
 
         public FormActivity()
@@ -27,14 +34,13 @@ namespace MayNapKhiTPA.Forms
             GetActivities();
         }
 
-
-
+        // Load form
         private void LoadForm(List<Activity> activities)
         {
             //
-            labelBanGhiMoiTrang.Text = "-Tổng số trang: " + pageSize;
-            labelTongSoTrang.Text = "-Bản ghi mỗi trang: " + Common.NUMBER_ELM_ON_PAGE_ACTIVITY;
-
+            labelBanGhiMoiTrang.Text = "- Tổng số trang: " + pageSize;
+            labelTongSoTrang.Text = "- Bản ghi mỗi trang: " + Common.NUMBER_ELM_ON_PAGE_ACTIVITY;
+            labelPage.Text = "- Đang ở trang: " + this.page;
 
 
             //
@@ -44,7 +50,7 @@ namespace MayNapKhiTPA.Forms
             dt.Columns.Add("Thời gian", typeof(DateTime));
             dt.Columns.Add("Tài người thực hiện");
 
-            //
+            // load datagridview từ tham số activities truyền vào
             int count = 1;
             activities.ForEach(delegate (Activity activity)
             {
@@ -57,18 +63,20 @@ namespace MayNapKhiTPA.Forms
             dataGridViewActivity.DataSource = dt;
         }
 
-
-
+        //get activity dựa trên thông số trên trang (ngày, trang)
         private void GetActivities()
         {
             List<Activity> activities = new List<Activity>();
             ActivityBusiness activityBusiness = new ActivityBusiness();
 
+            // nếu tham số không có ngày thì get tất cả
             if (strDatimeTuNgay == null && strDatimeToiNgay == null)
             {
                 try
                 {
+                    // đếm tổng số activity
                     int sumActivity = ActivityBusiness.CountActivity();
+                    // pagesize bằng tổng số activity chia cho số phần tử mỗi trang
                     pageSize = (sumActivity / Common.NUMBER_ELM_ON_PAGE_ACTIVITY);
                     if (sumActivity % Common.NUMBER_ELM_ON_PAGE_ACTIVITY != 0)
                     {
@@ -81,6 +89,7 @@ namespace MayNapKhiTPA.Forms
                     // Lỗi
                 }
             }
+            // nếu có ngày
             else
             {
                 try
@@ -98,11 +107,26 @@ namespace MayNapKhiTPA.Forms
                     //Lỗi
                 }
             }
-
-
-
             LoadForm(activities);
         }
+
+        private void GoPage()
+        {
+            // nếu ô tìm kiếm không rỗng và khác placeholder
+            if (String.IsNullOrEmpty(textBoxGoPage.Texts) == false && textBoxGoPage.Texts != textBoxGoPage.PlaceholderText)
+            {
+                if (int.Parse(textBoxGoPage.Texts) > this.pageSize)
+                {
+                    callAlert?.Invoke("Tổng số trang hiện tại là: " + pageSize, FormAlert.enmType.Error);
+                }
+                else
+                {
+                    this.page = int.Parse(textBoxGoPage.Texts);
+                    GetActivities();
+                }
+            }
+        }
+
 
         // show form chia tiết hoạt động của user
         private void buttonCallFormEmployeeActivities_Click(object sender, EventArgs e)
@@ -127,19 +151,18 @@ namespace MayNapKhiTPA.Forms
 
         private void buttonGoPage_Click(object sender, EventArgs e)
         {
-            // nếu ô tìm kiếm không rỗng và khác placeholder
-            if(String.IsNullOrEmpty(textBoxGoPage.Texts) == false && textBoxGoPage.Texts != textBoxGoPage.PlaceholderText)
+            GoPage();
+        }
+        private void textBoxGoPage_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
             {
-
+                GoPage();
             }
-
-
-            this.page = int.Parse(textBoxGoPage.Texts);
-            GetActivities();
         }
 
 
-        //validate input chỉ nhập số
+        //validate input chuyển trang chỉ nhập số
         private void textBoxGoPage_KeyPress(object sender, KeyPressEventArgs e)
         {
             //textbox only number 
@@ -147,12 +170,56 @@ namespace MayNapKhiTPA.Forms
             {
                 e.Handled = true;
             }
+            //giới hạn length cho text box là 6
+            if (textBoxGoPage.Texts.Length > 5)
+            {
+                e.Handled = true;
+            }
+            if (e.KeyChar == 8 || e.KeyChar == 46)
+            {
+                e.Handled = false;
+            }
 
-            // only allow one decimal point
-            //if ((e.KeyChar == '.') && ((sender as LW_PhanMemBaoGia.MyControls.TextBoxT).Texts.IndexOf('.') > -1))
-            //{
-            //    e.Handled = true;
-            //}
         }
+
+        //3 nút chuyển trang (số)
+        private void buttonPage1_Click(object sender, EventArgs e)
+        {
+            Button button = sender as Button;
+            this.page = int.Parse(button.Text);
+
+            if (this.page < 2)
+            {
+                buttonPage1.Text = 1.ToString();
+                buttonPage2.Text = 2.ToString();
+                buttonPage3.Text = 3.ToString();
+            }
+            else
+            {
+
+                buttonPage1.Text = (page - 1).ToString();
+                buttonPage2.Text = page.ToString();
+                buttonPage3.Text = (page + 1).ToString();
+            }
+
+            GetActivities();
+        }
+
+        //btn next page
+        private void buttonPageNext_Click(object sender, EventArgs e)
+        {
+            int numPageButton3 = int.Parse(buttonPage3.Text);
+            if (pageSize == numPageButton3)
+            {
+                this.page = pageSize;
+            }
+            else
+            {
+                this.page = numPageButton3 + 1;
+            }
+            GetActivities();
+        }
+
+    
     }
 }

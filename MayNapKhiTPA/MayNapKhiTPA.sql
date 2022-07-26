@@ -47,16 +47,39 @@ FOREIGN KEY (ID_User) REFERENCES [User](ID_User)
 )
 GO
 
---TABLE RESULT
+--TABLE RESULT (MẺ)
 CREATE TABLE Result(
 ID_Result INT IDENTITY(1,1) PRIMARY KEY,
+ApSuatMin FLOAT,
+ApSuatMax FLOAT,
+ApSuatAvg FLOAT,
+TheTichMin FLOAT,
+TheTichMax FLOAT,
+TheTichAvg FLOAT,
+LuuLuongMin FLOAT,
+LuuLuongMax FLOAT,
+LuuLuongAvg FLOAT,
+TimeStart TIME,
+TimeEnd TIME,
+CreateAt DATETIME DEFAULT GETDATE(),
+ID_User int,
+FOREIGN KEY (ID_User) REFERENCES [User](ID_User)
+)
+GO
+
+--TABLE DATA (Dữ liệu suốt quá trình nạp)
+CREATE TABLE [Data](
+ID_Data INT IDENTITY(1,1) PRIMARY KEY,
 ApSuat FLOAT,
 TheTich FLOAT,
 LuuLuong FLOAT,
-ThoiGianNap Time,
-CreateAt DATETIME DEFAULT GETDATE()
+CreateAt DATETIME DEFAULT GETDATE(),
+ID_Result int,
+FOREIGN KEY (ID_Result) REFERENCES Result(ID_Result)
+
 )
 GO
+
 
 --TABLE Bình
 CREATE TABLE TemplateSetting (
@@ -78,6 +101,7 @@ ThoiGianLayMau TIME,
 UpdateAt DateTime
 )
 GO
+
 
 /* Procedure */
 

@@ -57,8 +57,9 @@ namespace MayNapKhiTPA.Forms
         private void buttonCaLam_Click(object sender, EventArgs e)
         {
             labelHeader.Text = "Hoạt động";
-            FormActivity formCaLam = new FormActivity();
-            ChangeFormContent(formCaLam);
+            FormActivity formActivity = new FormActivity();
+            formActivity.callAlert = new FormActivity.CallAlert(Alert);
+            ChangeFormContent(formActivity);
             this.Font = new Font("Arial", 11);
 
         }

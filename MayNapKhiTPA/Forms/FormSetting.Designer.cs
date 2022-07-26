@@ -865,6 +865,7 @@
             this.buttonCustom2.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.buttonCustom2.BorderRadius = 3;
             this.buttonCustom2.BorderSize = 0;
+            this.buttonCustom2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonCustom2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonCustom2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCustom2.Font = new System.Drawing.Font("Bahnschrift SemiLight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -888,6 +889,7 @@
             this.buttonDangNhap.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.buttonDangNhap.BorderRadius = 3;
             this.buttonDangNhap.BorderSize = 0;
+            this.buttonDangNhap.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonDangNhap.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonDangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDangNhap.Font = new System.Drawing.Font("Bahnschrift SemiLight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1326,6 +1328,7 @@
             this.buttonCustom4.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.buttonCustom4.BorderRadius = 3;
             this.buttonCustom4.BorderSize = 0;
+            this.buttonCustom4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonCustom4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonCustom4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCustom4.Font = new System.Drawing.Font("Bahnschrift SemiLight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1349,6 +1352,7 @@
             this.buttonCustom5.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.buttonCustom5.BorderRadius = 3;
             this.buttonCustom5.BorderSize = 0;
+            this.buttonCustom5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonCustom5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonCustom5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCustom5.Font = new System.Drawing.Font("Bahnschrift SemiLight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

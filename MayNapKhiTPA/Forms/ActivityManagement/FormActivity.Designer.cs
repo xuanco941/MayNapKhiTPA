@@ -30,8 +30,8 @@ namespace MayNapKhiTPA.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormActivity));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -39,10 +39,10 @@ namespace MayNapKhiTPA.Forms
             this.dataGridViewActivity = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.buttonGoPage = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
-            this.buttonCustom6 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
-            this.buttonCustom5 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
-            this.buttonCustom4 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
-            this.buttonCustom3 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.buttonPageNext = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.buttonPage3 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.buttonPage1 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.buttonPage2 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.textBoxGoPage = new LW_PhanMemBaoGia.MyControls.TextBoxT();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -56,6 +56,7 @@ namespace MayNapKhiTPA.Forms
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.labelNotify = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.labelPage = new System.Windows.Forms.Label();
             this.labelBanGhiMoiTrang = new System.Windows.Forms.Label();
             this.labelTongSoTrang = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
@@ -107,20 +108,20 @@ namespace MayNapKhiTPA.Forms
             // 
             this.dataGridViewActivity.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewActivity.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewActivity.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewActivity.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewActivity.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewActivity.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewActivity.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewActivity.Name = "dataGridViewActivity";
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewActivity.RowsDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewActivity.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewActivity.RowTemplate.Height = 25;
             this.dataGridViewActivity.Size = new System.Drawing.Size(819, 438);
             this.dataGridViewActivity.TabIndex = 0;
@@ -128,10 +129,10 @@ namespace MayNapKhiTPA.Forms
             // panel2
             // 
             this.panel2.Controls.Add(this.buttonGoPage);
-            this.panel2.Controls.Add(this.buttonCustom6);
-            this.panel2.Controls.Add(this.buttonCustom5);
-            this.panel2.Controls.Add(this.buttonCustom4);
-            this.panel2.Controls.Add(this.buttonCustom3);
+            this.panel2.Controls.Add(this.buttonPageNext);
+            this.panel2.Controls.Add(this.buttonPage3);
+            this.panel2.Controls.Add(this.buttonPage1);
+            this.panel2.Controls.Add(this.buttonPage2);
             this.panel2.Controls.Add(this.textBoxGoPage);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 438);
@@ -164,93 +165,97 @@ namespace MayNapKhiTPA.Forms
             this.buttonGoPage.UseVisualStyleBackColor = false;
             this.buttonGoPage.Click += new System.EventHandler(this.buttonGoPage_Click);
             // 
-            // buttonCustom6
+            // buttonPageNext
             // 
-            this.buttonCustom6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonCustom6.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buttonCustom6.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buttonCustom6.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonCustom6.BorderRadius = 3;
-            this.buttonCustom6.BorderSize = 0;
-            this.buttonCustom6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonCustom6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCustom6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCustom6.ForeColor = System.Drawing.Color.Black;
-            this.buttonCustom6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCustom6.Location = new System.Drawing.Point(206, 10);
-            this.buttonCustom6.Name = "buttonCustom6";
-            this.buttonCustom6.Size = new System.Drawing.Size(63, 30);
-            this.buttonCustom6.TabIndex = 28;
-            this.buttonCustom6.Text = ">>";
-            this.buttonCustom6.TextColor = System.Drawing.Color.Black;
-            this.buttonCustom6.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.buttonCustom6.UseVisualStyleBackColor = false;
+            this.buttonPageNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonPageNext.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonPageNext.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonPageNext.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonPageNext.BorderRadius = 3;
+            this.buttonPageNext.BorderSize = 0;
+            this.buttonPageNext.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonPageNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPageNext.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPageNext.ForeColor = System.Drawing.Color.Black;
+            this.buttonPageNext.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonPageNext.Location = new System.Drawing.Point(206, 10);
+            this.buttonPageNext.Name = "buttonPageNext";
+            this.buttonPageNext.Size = new System.Drawing.Size(63, 30);
+            this.buttonPageNext.TabIndex = 28;
+            this.buttonPageNext.Text = ">>";
+            this.buttonPageNext.TextColor = System.Drawing.Color.Black;
+            this.buttonPageNext.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonPageNext.UseVisualStyleBackColor = false;
+            this.buttonPageNext.Click += new System.EventHandler(this.buttonPageNext_Click);
             // 
-            // buttonCustom5
+            // buttonPage3
             // 
-            this.buttonCustom5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonCustom5.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buttonCustom5.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buttonCustom5.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonCustom5.BorderRadius = 3;
-            this.buttonCustom5.BorderSize = 0;
-            this.buttonCustom5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonCustom5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCustom5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCustom5.ForeColor = System.Drawing.Color.Black;
-            this.buttonCustom5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCustom5.Location = new System.Drawing.Point(137, 10);
-            this.buttonCustom5.Name = "buttonCustom5";
-            this.buttonCustom5.Size = new System.Drawing.Size(63, 30);
-            this.buttonCustom5.TabIndex = 27;
-            this.buttonCustom5.Text = "3";
-            this.buttonCustom5.TextColor = System.Drawing.Color.Black;
-            this.buttonCustom5.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.buttonCustom5.UseVisualStyleBackColor = false;
+            this.buttonPage3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonPage3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonPage3.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonPage3.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonPage3.BorderRadius = 3;
+            this.buttonPage3.BorderSize = 0;
+            this.buttonPage3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonPage3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPage3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPage3.ForeColor = System.Drawing.Color.Black;
+            this.buttonPage3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonPage3.Location = new System.Drawing.Point(137, 10);
+            this.buttonPage3.Name = "buttonPage3";
+            this.buttonPage3.Size = new System.Drawing.Size(63, 30);
+            this.buttonPage3.TabIndex = 27;
+            this.buttonPage3.Text = "3";
+            this.buttonPage3.TextColor = System.Drawing.Color.Black;
+            this.buttonPage3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonPage3.UseVisualStyleBackColor = false;
+            this.buttonPage3.Click += new System.EventHandler(this.buttonPage1_Click);
             // 
-            // buttonCustom4
+            // buttonPage1
             // 
-            this.buttonCustom4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonCustom4.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buttonCustom4.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buttonCustom4.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonCustom4.BorderRadius = 3;
-            this.buttonCustom4.BorderSize = 0;
-            this.buttonCustom4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonCustom4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCustom4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCustom4.ForeColor = System.Drawing.Color.Black;
-            this.buttonCustom4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCustom4.Location = new System.Drawing.Point(0, 10);
-            this.buttonCustom4.Name = "buttonCustom4";
-            this.buttonCustom4.Size = new System.Drawing.Size(63, 30);
-            this.buttonCustom4.TabIndex = 26;
-            this.buttonCustom4.Text = "1";
-            this.buttonCustom4.TextColor = System.Drawing.Color.Black;
-            this.buttonCustom4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.buttonCustom4.UseVisualStyleBackColor = false;
+            this.buttonPage1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonPage1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonPage1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonPage1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonPage1.BorderRadius = 3;
+            this.buttonPage1.BorderSize = 0;
+            this.buttonPage1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonPage1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPage1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPage1.ForeColor = System.Drawing.Color.Black;
+            this.buttonPage1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonPage1.Location = new System.Drawing.Point(0, 10);
+            this.buttonPage1.Name = "buttonPage1";
+            this.buttonPage1.Size = new System.Drawing.Size(63, 30);
+            this.buttonPage1.TabIndex = 26;
+            this.buttonPage1.Text = "1";
+            this.buttonPage1.TextColor = System.Drawing.Color.Black;
+            this.buttonPage1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonPage1.UseVisualStyleBackColor = false;
+            this.buttonPage1.Click += new System.EventHandler(this.buttonPage1_Click);
             // 
-            // buttonCustom3
+            // buttonPage2
             // 
-            this.buttonCustom3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonCustom3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buttonCustom3.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buttonCustom3.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonCustom3.BorderRadius = 3;
-            this.buttonCustom3.BorderSize = 0;
-            this.buttonCustom3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonCustom3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCustom3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCustom3.ForeColor = System.Drawing.Color.Black;
-            this.buttonCustom3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCustom3.Location = new System.Drawing.Point(68, 10);
-            this.buttonCustom3.Name = "buttonCustom3";
-            this.buttonCustom3.Size = new System.Drawing.Size(63, 30);
-            this.buttonCustom3.TabIndex = 25;
-            this.buttonCustom3.Text = "2";
-            this.buttonCustom3.TextColor = System.Drawing.Color.Black;
-            this.buttonCustom3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.buttonCustom3.UseVisualStyleBackColor = false;
+            this.buttonPage2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonPage2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonPage2.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonPage2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonPage2.BorderRadius = 3;
+            this.buttonPage2.BorderSize = 0;
+            this.buttonPage2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonPage2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPage2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPage2.ForeColor = System.Drawing.Color.Black;
+            this.buttonPage2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonPage2.Location = new System.Drawing.Point(68, 10);
+            this.buttonPage2.Name = "buttonPage2";
+            this.buttonPage2.Size = new System.Drawing.Size(63, 30);
+            this.buttonPage2.TabIndex = 25;
+            this.buttonPage2.Text = "2";
+            this.buttonPage2.TextColor = System.Drawing.Color.Black;
+            this.buttonPage2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonPage2.UseVisualStyleBackColor = false;
+            this.buttonPage2.Click += new System.EventHandler(this.buttonPage1_Click);
             // 
             // textBoxGoPage
             // 
@@ -272,6 +277,7 @@ namespace MayNapKhiTPA.Forms
             this.textBoxGoPage.TabIndex = 23;
             this.textBoxGoPage.Texts = "Trang số . . .";
             this.textBoxGoPage.UnderlinedStyle = false;
+            this.textBoxGoPage.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxGoPage_KeyDown);
             this.textBoxGoPage.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxGoPage_KeyPress);
             // 
             // panel4
@@ -295,9 +301,9 @@ namespace MayNapKhiTPA.Forms
             this.panel5.Controls.Add(this.dateTimePickerToiNgay);
             this.panel5.Controls.Add(this.label3);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(0, 48);
+            this.panel5.Location = new System.Drawing.Point(0, 56);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(208, 321);
+            this.panel5.Size = new System.Drawing.Size(208, 313);
             this.panel5.TabIndex = 11;
             // 
             // buttonLoc
@@ -331,10 +337,10 @@ namespace MayNapKhiTPA.Forms
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(59, 23);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(53, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 23);
+            this.label1.Size = new System.Drawing.Size(110, 25);
             this.label1.TabIndex = 3;
             this.label1.Text = "Lọc dữ liệu";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -356,7 +362,7 @@ namespace MayNapKhiTPA.Forms
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 70);
+            this.label2.Location = new System.Drawing.Point(9, 68);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 4;
@@ -379,7 +385,7 @@ namespace MayNapKhiTPA.Forms
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 98);
+            this.label3.Location = new System.Drawing.Point(9, 97);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(54, 13);
             this.label3.TabIndex = 6;
@@ -426,16 +432,28 @@ namespace MayNapKhiTPA.Forms
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.labelPage);
             this.groupBox1.Controls.Add(this.labelBanGhiMoiTrang);
             this.groupBox1.Controls.Add(this.labelTongSoTrang);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.ForeColor = System.Drawing.Color.Green;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(208, 48);
+            this.groupBox1.Size = new System.Drawing.Size(208, 56);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin trang hoạt động";
+            // 
+            // labelPage
+            // 
+            this.labelPage.AutoSize = true;
+            this.labelPage.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.labelPage.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelPage.Location = new System.Drawing.Point(7, 40);
+            this.labelPage.Name = "labelPage";
+            this.labelPage.Size = new System.Drawing.Size(38, 13);
+            this.labelPage.TabIndex = 4;
+            this.labelPage.Text = "label5";
             // 
             // labelBanGhiMoiTrang
             // 
@@ -504,11 +522,12 @@ namespace MayNapKhiTPA.Forms
         private Button buttonCallFormEmployeeActivities;
         private Panel panel5;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonLoc;
-        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom6;
-        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom5;
-        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom4;
-        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom3;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonPageNext;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonPage3;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonPage1;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonPage2;
         private LW_PhanMemBaoGia.MyControls.TextBoxT textBoxGoPage;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonGoPage;
+        private Label labelPage;
     }
 }

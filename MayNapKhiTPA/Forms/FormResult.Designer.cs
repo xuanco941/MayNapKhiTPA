@@ -427,14 +427,14 @@ namespace MayNapKhiTPA.Forms
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(100, 197);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(16, 13);
+            this.label7.Size = new System.Drawing.Size(19, 13);
             this.label7.TabIndex = 45;
-            this.label7.Text = "->";
+            this.label7.Text = "=>";
             // 
             // numericUpDown5
             // 
             this.numericUpDown5.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.numericUpDown5.Location = new System.Drawing.Point(134, 254);
+            this.numericUpDown5.Location = new System.Drawing.Point(134, 257);
             this.numericUpDown5.Name = "numericUpDown5";
             this.numericUpDown5.Size = new System.Drawing.Size(56, 20);
             this.numericUpDown5.TabIndex = 44;
@@ -450,7 +450,7 @@ namespace MayNapKhiTPA.Forms
             // numericUpDown3
             // 
             this.numericUpDown3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.numericUpDown3.Location = new System.Drawing.Point(134, 193);
+            this.numericUpDown3.Location = new System.Drawing.Point(134, 195);
             this.numericUpDown3.Name = "numericUpDown3";
             this.numericUpDown3.Size = new System.Drawing.Size(56, 20);
             this.numericUpDown3.TabIndex = 44;
@@ -461,9 +461,9 @@ namespace MayNapKhiTPA.Forms
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(100, 259);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(16, 13);
+            this.label6.Size = new System.Drawing.Size(19, 13);
             this.label6.TabIndex = 42;
-            this.label6.Text = "->";
+            this.label6.Text = "=>";
             // 
             // numericUpDown4
             // 
@@ -517,9 +517,9 @@ namespace MayNapKhiTPA.Forms
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(100, 137);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(16, 13);
+            this.label4.Size = new System.Drawing.Size(19, 13);
             this.label4.TabIndex = 30;
-            this.label4.Text = "->";
+            this.label4.Text = "=>";
             // 
             // checkBox1
             // 
@@ -536,7 +536,7 @@ namespace MayNapKhiTPA.Forms
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(24, 79);
+            this.label3.Location = new System.Drawing.Point(24, 82);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(54, 13);
             this.label3.TabIndex = 26;
@@ -557,7 +557,7 @@ namespace MayNapKhiTPA.Forms
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 48);
+            this.label2.Location = new System.Drawing.Point(24, 51);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 24;
@@ -567,7 +567,7 @@ namespace MayNapKhiTPA.Forms
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(78, 6);
+            this.label1.Location = new System.Drawing.Point(60, 6);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(98, 23);
             this.label1.TabIndex = 23;
