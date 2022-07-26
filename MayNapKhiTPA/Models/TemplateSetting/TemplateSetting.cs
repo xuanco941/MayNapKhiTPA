@@ -9,6 +9,7 @@ namespace MayNapKhiTPA.Models
     public class TemplateSetting
     {
         public int ID_TemplateSetting { get; set; }
+        public string Name { get; set; }
         public double ApSuatNap { get; set; }
         public double TheTichNap { get; set; }
         public TimeSpan ThoiGianNap { get; set; }

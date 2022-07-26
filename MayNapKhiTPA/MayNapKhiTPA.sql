@@ -84,6 +84,7 @@ GO
 --TABLE Bình
 CREATE TABLE TemplateSetting (
 ID_TemplateSetting INT IDENTITY(1,1) PRIMARY KEY,
+[Name] nvarchar(100),
 ApSuatNap FLoat,
 TheTichNap Float,
 ThoiGianNap TIME,
@@ -193,14 +194,28 @@ GO
 
 
 
+-- PROC SETTING
+--Update Thông số máy
+CREATE PROC UpdateSetting @ApSuatNap FLoat, @TheTichNap FLOAT, @ThoiGianNap TIME, @ThoiGianLayMau TIME
+as begin
+Update Setting SET ApSuatNap = @ApSuatNap, TheTichNap = @TheTichNap, ThoiGianNap = @ThoiGianNap, ThoiGianLayMau = @ThoiGianLayMau ,UpdateAt = GETDATE()
+where ID_Setting = 1
+end
+GO
 
-----Update Thông số máy
---CREATE PROC UpdateThongSoMay @ApSuat FLoat, @ThoiGianNapGioiHan Time
---as begin
---Update ThongSoMay SET ApSuat = @ApSuat, ThoiGianNapGioiHan = @ThoiGianNapGioiHan, UpdateAt = GETDATE()
---where ID = 1
---end
---GO
+
+
+
+
+--PROC TemplateSetting
+-- Thêm TemplateSetting
+CREATE PROC AddTemplateSetting @Name nvarchar(100), @ApSuatNap FLoat, @TheTichNap FLOAT, @ThoiGianNap TIME, @ThoiGianLayMau TIME
+as begin
+Insert into TemplateSetting values (@Name,@ApSuatNap,@TheTichNap,@TheTichNap,@ThoiGianLayMau);
+end
+GO
+
+
 
 
 

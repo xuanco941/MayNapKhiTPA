@@ -6,7 +6,9 @@ namespace MayNapKhiTPA
     {
 
         public const string ConnectionString = @"Data Source=DESKTOP-P4IC2M8\SQLEXPRESS;Initial Catalog=MayNapKhiTPA;User ID=sa;Password=942001xX";
+
         public const int NUMBER_ELM_ON_PAGE_ACTIVITY = 10;
+
         public const int NUMBER_ELM_ON_PAGE_RESULT = 15;
 
         public static List<int> listIdUserHasDeleted = new List<int>();
