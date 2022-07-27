@@ -146,6 +146,9 @@
     <Compile Include="Library\DGVPrinter.cs" />
     <Compile Include="Models\Activity\Activity.cs" />
     <Compile Include="Models\Activity\ActivityBusiness.cs" />
+    <Compile Include="Models\Data\Data.cs" />
+    <Compile Include="Models\Data\DataBusiness.cs" />
+    <Compile Include="Models\TemplateSetting\TemplateSettingBusiness.cs" />
     <Compile Include="Models\User\User.cs" />
     <Compile Include="Models\User\UserBusiness.cs" />
     <Compile Include="Models\User\Rules.cs" />

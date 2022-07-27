@@ -59,9 +59,8 @@ TheTichAvg FLOAT,
 LuuLuongMin FLOAT,
 LuuLuongMax FLOAT,
 LuuLuongAvg FLOAT,
-TimeStart TIME,
-TimeEnd TIME,
-CreateAt DATETIME DEFAULT GETDATE(),
+TimeStart DATETIME DEFAULT GETDATE(),
+TimeEnd DATETIME,
 ID_User int,
 FOREIGN KEY (ID_User) REFERENCES [User](ID_User)
 )
@@ -84,13 +83,14 @@ GO
 --TABLE Bình
 CREATE TABLE TemplateSetting (
 ID_TemplateSetting INT IDENTITY(1,1) PRIMARY KEY,
-[Name] nvarchar(100),
+[Name] nvarchar(100) UNIQUE,
 ApSuatNap FLoat,
 TheTichNap Float,
-ThoiGianNap TIME,
-ThoiGianLayMau TIME,
+ThoiGianNap FLOAT,
+ThoiGianLayMau FLOAT
 )
 GO
+
 
 --TABLE THONG SO MAY
 CREATE TABLE Setting (
@@ -209,14 +209,32 @@ GO
 
 --PROC TemplateSetting
 -- Thêm TemplateSetting
-CREATE PROC AddTemplateSetting @Name nvarchar(100), @ApSuatNap FLoat, @TheTichNap FLOAT, @ThoiGianNap TIME, @ThoiGianLayMau TIME
+CREATE PROC AddTemplateSetting @Name nvarchar(100), @ApSuatNap FLoat, @TheTichNap FLOAT, @ThoiGianNap FLoat, @ThoiGianLayMau FLOAT
 as begin
-Insert into TemplateSetting values (@Name,@ApSuatNap,@TheTichNap,@TheTichNap,@ThoiGianLayMau);
+Insert into TemplateSetting values (@Name,@ApSuatNap,@TheTichNap,@ThoiGianNap,@ThoiGianLayMau);
+end
+GO
+--Cap nhat thong tin TemplateSetting
+CREATE PROC UpdateTemplateSetting @ID_TemplateSetting int,@Name nvarchar(100), @ApSuatNap FLoat, @TheTichNap FLOAT, @ThoiGianNap FLOAT, @ThoiGianLayMau FLOAT
+as begin
+Update TemplateSetting SET TemplateSetting.[Name] = @Name, ApSuatNap = @ApSuatNap, TheTichNap = @TheTichNap, ThoiGianNap = @ThoiGianNap, ThoiGianLayMau = @ThoiGianLayMau
+where ID_TemplateSetting = @ID_TemplateSetting
 end
 GO
 
+--Xóa TemplateSetting
+CREATE PROC DeleteTemplateSetting @ID_TemplateSetting Int
+as begin
+Delete FROM TemplateSetting WHERE TemplateSetting.ID_TemplateSetting = @ID_TemplateSetting;
+end
+GO
 
-
+--lấy TemplateSetting từ tên TemplateSetting
+CREATE PROC GetTemplateSettingFromName @Name nvarchar(100)
+as begin 
+Select * From TemplateSetting Where TemplateSetting.[Name] like @Name;
+end
+GO
 
 
 
@@ -249,13 +267,14 @@ as begin
 Select * from [Group] where ID_Group = @ID_Group
 end
 GO
+
 --Tìm kiếm group với tên bất kỳ
 CREATE PROC FindGroupByName @Name nvarchar(100)
 as begin 
 Select * From [Group] Where [Group].[Name] like '%'+@Name+'%';
 end
 GO
---Tìm group từ tên group
+--lấy group từ tên group
 CREATE PROC GetGroupFromName @Name nvarchar(100)
 as begin 
 Select * From [Group] Where [Group].[Name] like @Name;

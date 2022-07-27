@@ -205,11 +205,8 @@ namespace MayNapKhiTPA.Forms
         // show form chia tiết hoạt động của user
         private void buttonCallFormEmployeeActivities_Click(object sender, EventArgs e)
         {
-            // Create an instance of form 
-            FormEmployeeActivities formEmployeeActivities = new FormEmployeeActivities();
-
             // Show form 
-            formEmployeeActivities.Show();
+            new FormEmployeeActivities().Show();
         }
 
         private void buttonGoPage_Click(object sender, EventArgs e)

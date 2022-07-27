@@ -17,9 +17,7 @@ namespace MayNapKhiTPA
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
-            FormLogin formLogin = new FormLogin();
-            Application.Run(formLogin);
+            Application.Run(new FormLogin());
 
             if (Common.IsLoggedIn)
             {

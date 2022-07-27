@@ -28,7 +28,8 @@ namespace MayNapKhiTPA.Forms
 
         private void buttonThoat_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Common.IsLoggedIn = false;
+            Application.Restart();
         }
 
         private void ChangeFormContent(Form form)
