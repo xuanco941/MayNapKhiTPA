@@ -49,6 +49,30 @@ namespace MayNapKhiTPA.Models
             return templateSetting;
         }
 
+        public static TemplateSetting GetTemplateSettingFromID(int ID_TemplateSetting)
+        {
+            TemplateSetting templateSetting = new TemplateSetting();
+            SqlConnection sqlConnection = new SqlConnection(Common.ConnectionString);
+            sqlConnection.Open();
+            string sql = $"exec GetTemplateSettingFromID {ID_TemplateSetting}";
+            var command = new SqlCommand(sql, sqlConnection);
+            SqlDataReader sqlDataReader = command.ExecuteReader();
+            while (sqlDataReader.Read())
+            {
+                templateSetting.ID_TemplateSetting = sqlDataReader.GetInt32(0);
+                templateSetting.Name = sqlDataReader.GetString(1);
+                templateSetting.ApSuatNap = sqlDataReader.GetDouble(2);
+                templateSetting.TheTichNap = sqlDataReader.GetDouble(3);
+                templateSetting.ThoiGianNap = sqlDataReader.GetDouble(4);
+                templateSetting.ThoiGianLayMau = sqlDataReader.GetDouble(5);
+            }
+            sqlConnection.Close();
+            return templateSetting;
+        }
+
+
+
+
 
         // Them Ca làm
         public static void AddTemplateSetting(TemplateSetting templateSetting)

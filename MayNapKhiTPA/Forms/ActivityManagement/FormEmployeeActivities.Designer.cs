@@ -32,7 +32,6 @@ namespace MayNapKhiTPA.Forms.ActivityManagement
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelUser = new System.Windows.Forms.Panel();
             this.dataGridViewUserActivity = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUserActivity)).BeginInit();
@@ -50,6 +49,7 @@ namespace MayNapKhiTPA.Forms.ActivityManagement
             // 
             // dataGridViewUserActivity
             // 
+            this.dataGridViewUserActivity.AllowUserToAddRows = false;
             this.dataGridViewUserActivity.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewUserActivity.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -61,20 +61,14 @@ namespace MayNapKhiTPA.Forms.ActivityManagement
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewUserActivity.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewUserActivity.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewUserActivity.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewUserActivity.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewUserActivity.Location = new System.Drawing.Point(277, 0);
             this.dataGridViewUserActivity.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridViewUserActivity.Name = "dataGridViewUserActivity";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewUserActivity.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewUserActivity.ReadOnly = true;
+            this.dataGridViewUserActivity.RowHeadersVisible = false;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewUserActivity.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewUserActivity.RowTemplate.Height = 25;
             this.dataGridViewUserActivity.Size = new System.Drawing.Size(1042, 615);
             this.dataGridViewUserActivity.TabIndex = 1;

@@ -33,31 +33,39 @@ namespace MayNapKhiTPA.Forms
         //textbox only number type tabpage 1
         private void textBoxT5_KeyPress(object sender, KeyPressEventArgs e)
         {
+            LW_PhanMemBaoGia.MyControls.TextBoxT textBoxT = sender as LW_PhanMemBaoGia.MyControls.TextBoxT;
             //textbox only number 
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
                 e.Handled = true;
             }
-
-            // only allow one decimal point
-            if ((e.KeyChar == '.') && ((sender as LW_PhanMemBaoGia.MyControls.TextBoxT).Texts.IndexOf('.') > -1))
+            //giới hạn length cho text box là 6
+            if (textBoxT.Texts.Length > 5)
             {
                 e.Handled = true;
+            }
+            if (e.KeyChar == 8 || e.KeyChar == 46)
+            {
+                e.Handled = false;
             }
         }
 
         private void textBoxApSuatNap_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //textbox chỉ nhập số  
+            LW_PhanMemBaoGia.MyControls.TextBoxT textBoxT = sender as LW_PhanMemBaoGia.MyControls.TextBoxT;
+            //textbox only number 
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
                 e.Handled = true;
             }
-
-            // chỉ cho 1 dấu chấm
-            if ((e.KeyChar == '.') && ((sender as LW_PhanMemBaoGia.MyControls.TextBoxT).Texts.IndexOf('.') > -1))
+            //giới hạn length cho text box là 6
+            if (textBoxT.Texts.Length > 5)
             {
                 e.Handled = true;
+            }
+            if (e.KeyChar == 8 || e.KeyChar == 46)
+            {
+                e.Handled = false;
             }
         }
 
@@ -71,10 +79,10 @@ namespace MayNapKhiTPA.Forms
             DataTable dt = new DataTable();
             dt.Columns.Add("Mã bình");
             dt.Columns.Add("Tên bình");
-            dt.Columns.Add("Áp suất nạp");
-            dt.Columns.Add("Thể tích nạp");
-            dt.Columns.Add("Thời gian nạp");
-            dt.Columns.Add("Thời gian lấy mẫu");
+            dt.Columns.Add("Áp suất nạp (bar)");
+            dt.Columns.Add("Thể tích nạp (m3)");
+            dt.Columns.Add("Thời gian nạp (phút)");
+            dt.Columns.Add("Thời gian lấy mẫu (phút)");
             list.ForEach(delegate (TemplateSetting templateSetting)
             {
                 dt.Rows.Add(templateSetting.ID_TemplateSetting, templateSetting.Name, templateSetting.ApSuatNap, templateSetting.TheTichNap, templateSetting.ThoiGianNap, templateSetting.ThoiGianLayMau);
@@ -93,27 +101,36 @@ namespace MayNapKhiTPA.Forms
             dt.Columns.Add("Thời gian kết thúc");
             list.ForEach(delegate (Shift shift)
             {
-                dt.Rows.Add(shift.ID_Shift, shift.Name, shift.TimeStart, shift.TimeEnd);
+                string formatTimeStart = shift.TimeStart.ToString(@"hh\:mm\:ss");
+                string formatTimeEnd = shift.TimeEnd.ToString(@"hh\:mm\:ss");
+
+                dt.Rows.Add(shift.ID_Shift, shift.Name, formatTimeStart, formatTimeEnd);
             });
             dataGridViewShift.DataSource = dt;
         }
 
 
-
+        // add template setting
         private void buttonAddTemplateSetting_Click(object sender, EventArgs e)
         {
-            if (!String.IsNullOrEmpty(textBoxNameTemplateSetting.Texts) && textBoxNameTemplateSetting.Texts != textBoxNameTemplateSetting.PlaceholderText
-                && !String.IsNullOrEmpty(textBoxApSuatNapTemplateSetting.Texts) && textBoxApSuatNapTemplateSetting.Texts != textBoxApSuatNapTemplateSetting.PlaceholderText
-                && !String.IsNullOrEmpty(textBoxTheTichNapTemplateSetting.Texts) && textBoxTheTichNapTemplateSetting.Texts != textBoxTheTichNapTemplateSetting.PlaceholderText
-                && !String.IsNullOrEmpty(textBoxThoiGianNapTemplateSetting.Texts) && textBoxThoiGianNapTemplateSetting.Texts != textBoxThoiGianNapTemplateSetting.PlaceholderText
-                && !String.IsNullOrEmpty(textBoxThoiGianLayMauTemplateSetting.Texts) && textBoxThoiGianLayMauTemplateSetting.Texts != textBoxThoiGianLayMauTemplateSetting.PlaceholderText)
+            string Name = textBoxNameTemplateSetting.Texts;
+            string ApSuatNap = textBoxApSuatNapTemplateSetting.Texts;
+            string TheTichNap = textBoxTheTichNapTemplateSetting.Texts;
+            string ThoiGianNap = textBoxThoiGianNapTemplateSetting.Texts;
+            string ThoiGianLayMau = textBoxThoiGianLayMauTemplateSetting.Texts;
+
+            if (!String.IsNullOrEmpty(Name) && Name != textBoxNameTemplateSetting.PlaceholderText
+               && !String.IsNullOrEmpty(ApSuatNap) && ApSuatNap != textBoxApSuatNapTemplateSetting.PlaceholderText
+               && !String.IsNullOrEmpty(TheTichNap) && TheTichNap != textBoxTheTichNapTemplateSetting.PlaceholderText
+               && !String.IsNullOrEmpty(ThoiGianNap) && ThoiGianNap != textBoxThoiGianNapTemplateSetting.PlaceholderText
+               && !String.IsNullOrEmpty(ThoiGianLayMau) && ThoiGianLayMau != textBoxThoiGianLayMauTemplateSetting.PlaceholderText)
             {
                 TemplateSetting templateSetting = new TemplateSetting();
-                templateSetting.Name = textBoxNameTemplateSetting.Texts;
-                templateSetting.ApSuatNap = double.Parse(textBoxApSuatNapTemplateSetting.Texts);
-                templateSetting.TheTichNap = double.Parse(textBoxTheTichNapTemplateSetting.Texts);
-                templateSetting.ThoiGianNap = double.Parse(textBoxThoiGianNapTemplateSetting.Texts);
-                templateSetting.ThoiGianLayMau = double.Parse(textBoxThoiGianLayMauTemplateSetting.Texts);
+                templateSetting.Name = Name;
+                templateSetting.ApSuatNap = double.Parse(ApSuatNap);
+                templateSetting.TheTichNap = double.Parse(TheTichNap);
+                templateSetting.ThoiGianNap = double.Parse(ThoiGianNap);
+                templateSetting.ThoiGianLayMau = double.Parse(ThoiGianLayMau);
                 try
                 {
                     TemplateSettingBusiness.AddTemplateSetting(templateSetting);
@@ -127,35 +144,246 @@ namespace MayNapKhiTPA.Forms
             }
             else
             {
-                callAlert?.Invoke("Dữ liệu thêm không được trống.", FormAlert.enmType.Error);
+                callAlert?.Invoke("Các trường thêm không được trống.", FormAlert.enmType.Error);
+            }
+
+        }
+
+        //select template setting
+        private int ID_TemplateSetting_Selected = 0;
+        private void dataGridViewTemplateSetting_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int rowIndex = e.RowIndex;
+            if (rowIndex >= 0)
+            {
+                DataGridViewRow row = new DataGridViewRow();
+                row = dataGridViewTemplateSetting.Rows[rowIndex];
+
+                //id được selected
+                ID_TemplateSetting_Selected = int.Parse(row.Cells[0].Value.ToString());
+
+                textBoxNameTemplateSetting.Texts = Convert.ToString(row.Cells[1].Value);
+                textBoxApSuatNapTemplateSetting.Texts = Convert.ToString(row.Cells[2].Value);
+                textBoxTheTichNapTemplateSetting.Texts = Convert.ToString(row.Cells[3].Value);
+                textBoxThoiGianNapTemplateSetting.Texts = Convert.ToString(row.Cells[4].Value);
+                textBoxThoiGianLayMauTemplateSetting.Texts = Convert.ToString(row.Cells[5].Value);
+
+                //highlight row
+                row.Cells[0].Selected = true;
+                row.Cells[1].Selected = true;
+                row.Cells[2].Selected = true;
+                row.Cells[3].Selected = true;
+                row.Cells[4].Selected = true;
+                row.Cells[5].Selected = true;
+
+                textBoxNameTemplateSetting.ForeColor = Color.FromArgb(62, 120, 138);
+                textBoxApSuatNapTemplateSetting.ForeColor = Color.FromArgb(62, 120, 138);
+                textBoxTheTichNapTemplateSetting.ForeColor = Color.FromArgb(62, 120, 138);
+                textBoxThoiGianNapTemplateSetting.ForeColor = Color.FromArgb(62, 120, 138);
+                textBoxThoiGianLayMauTemplateSetting.ForeColor = Color.FromArgb(62, 120, 138);
+            }
+        }
+
+        //update template setting
+        private void buttonUpdateTemplateSetting_Click(object sender, EventArgs e)
+        {
+
+            string Name = textBoxNameTemplateSetting.Texts;
+            string ApSuatNap = textBoxApSuatNapTemplateSetting.Texts;
+            string TheTichNap = textBoxTheTichNapTemplateSetting.Texts;
+            string ThoiGianNap = textBoxThoiGianNapTemplateSetting.Texts;
+            string ThoiGianLayMau = textBoxThoiGianLayMauTemplateSetting.Texts;
+
+            if (!String.IsNullOrEmpty(Name) && Name != textBoxNameTemplateSetting.PlaceholderText
+               && !String.IsNullOrEmpty(ApSuatNap) && ApSuatNap != textBoxApSuatNapTemplateSetting.PlaceholderText
+               && !String.IsNullOrEmpty(TheTichNap) && TheTichNap != textBoxTheTichNapTemplateSetting.PlaceholderText
+               && !String.IsNullOrEmpty(ThoiGianNap) && ThoiGianNap != textBoxThoiGianNapTemplateSetting.PlaceholderText
+               && !String.IsNullOrEmpty(ThoiGianLayMau) && ThoiGianLayMau != textBoxThoiGianLayMauTemplateSetting.PlaceholderText)
+            {
+                if (ID_TemplateSetting_Selected != 0)
+                {
+                    try
+                    {
+                        TemplateSettingBusiness.UpdateTemplateSetting(ID_TemplateSetting_Selected, Name, double.Parse(ApSuatNap),
+                         double.Parse(TheTichNap), double.Parse(ThoiGianNap), double.Parse(ThoiGianLayMau));
+                        callAlert?.Invoke("Cập nhật thành công.", FormAlert.enmType.Success);
+                        LoadDataGridViewTemplateSetting();
+                    }
+                    catch
+                    {
+                        callAlert?.Invoke("Gặp lỗi, không thể cập nhật.", FormAlert.enmType.Error);
+                    }
+                }
+                else
+                {
+                    callAlert?.Invoke("Hãy chọn một bình để tiến hành cập nhật.", FormAlert.enmType.Warning);
+                }
+            }
+            else
+            {
+                callAlert?.Invoke("Các trường cập nhật không được trống.", FormAlert.enmType.Error);
+            }
+        }
+
+        private void buttonDeleteTemplateSetting_Click(object sender, EventArgs e)
+        {
+            if (ID_TemplateSetting_Selected != 0)
+            {
+                try
+                {
+                    TemplateSetting templateSetting = TemplateSettingBusiness.GetTemplateSettingFromID(ID_TemplateSetting_Selected);
+                    DialogResult dialogResult = MessageBox.Show($"Bạn có chắc muốn xóa bình {templateSetting.Name}", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        TemplateSettingBusiness.DeleteTemplateSetting(ID_TemplateSetting_Selected);
+                        callAlert?.Invoke("Xóa thành công.", FormAlert.enmType.Success);
+                        LoadDataGridViewTemplateSetting();
+                        this.ID_TemplateSetting_Selected = 0;
+                        textBoxNameTemplateSetting.Texts = null;
+                        textBoxApSuatNapTemplateSetting.Texts = null;
+                        textBoxTheTichNapTemplateSetting.Texts = null;
+                        textBoxThoiGianNapTemplateSetting.Texts = null;
+                        textBoxThoiGianLayMauTemplateSetting.Texts = null;
+                    }
+
+                }
+                catch
+                {
+                    callAlert?.Invoke("Gặp lỗi, không thể xóa.", FormAlert.enmType.Error);
+                }
+            }
+            else
+            {
+                callAlert?.Invoke("Hãy chọn một bình trước khi xóa.", FormAlert.enmType.Warning);
+            }
+        }
+
+
+        //add Shift
+        private void buttonAddShift_Click(object sender, EventArgs e)
+        {
+            string Name = textBoxNameShift.Texts;
+            DateTime TimeStart = dateTimePickerTimeStart.Value;
+            DateTime TimeEnd = dateTimePickerTimeEnd.Value;
+
+
+            if (!String.IsNullOrEmpty(Name) && Name != textBoxNameShift.PlaceholderText && dateTimePickerTimeStart.Value != null && dateTimePickerTimeStart.Value != null)
+            {
+                Shift shift = new Shift();
+                shift.Name = Name;
+                shift.TimeStart = TimeStart.TimeOfDay;
+                shift.TimeEnd = TimeEnd.TimeOfDay;
+                try
+                {
+                    ShiftBusiness.AddShift(shift);
+                    callAlert?.Invoke("Thêm thành công.", FormAlert.enmType.Success);
+                    LoadDataGridViewShift();
+                }
+                catch
+                {
+                    callAlert?.Invoke("Tên ca làm này đã tồn tại.", FormAlert.enmType.Error);
+                }
+            }
+            else
+            {
+                callAlert?.Invoke("Các trường thêm không được trống.", FormAlert.enmType.Error);
             }
 
         }
 
 
-        private void dataGridViewTemplateSetting_CellClick(object sender, DataGridViewCellEventArgs e)
+        int ID_Shift_Selected = 0;
+        //select a item
+        private void dataGridViewShift_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow row = new DataGridViewRow();
-            row = dataGridViewTemplateSetting.Rows[e.RowIndex];
-            textBoxNameTemplateSetting.Texts = Convert.ToString(row.Cells[1].Value);
-            textBoxApSuatNapTemplateSetting.Texts = Convert.ToString(row.Cells[2].Value);
-            textBoxTheTichNapTemplateSetting.Texts = Convert.ToString(row.Cells[3].Value);
-            textBoxThoiGianNapTemplateSetting.Texts = Convert.ToString(row.Cells[4].Value);
-            textBoxThoiGianLayMauTemplateSetting.Texts = Convert.ToString(row.Cells[5].Value);
+            int rowIndex = e.RowIndex;
 
-            row.Cells[0].Selected = true;
-            row.Cells[1].Selected = true;
-            row.Cells[2].Selected = true;
-            row.Cells[3].Selected = true;
-            row.Cells[4].Selected = true;
-            row.Cells[5].Selected = true;
+            if (rowIndex >= 0)
+            {
+                row = dataGridViewShift.Rows[rowIndex];
 
-            textBoxNameTemplateSetting.ForeColor = Color.FromArgb(62, 120, 138);
-            textBoxApSuatNapTemplateSetting.ForeColor = Color.FromArgb(62, 120, 138);
-            textBoxTheTichNapTemplateSetting.ForeColor = Color.FromArgb(62, 120, 138);
-            textBoxThoiGianNapTemplateSetting.ForeColor = Color.FromArgb(62, 120, 138);
-            textBoxThoiGianLayMauTemplateSetting.ForeColor = Color.FromArgb(62, 120, 138);
+                //id được selected
+                ID_Shift_Selected = int.Parse(row.Cells[0].Value.ToString());
 
+                textBoxNameShift.Texts = Convert.ToString(row.Cells[1].Value);
+                dateTimePickerTimeStart.Value = Convert.ToDateTime(row.Cells[2].Value);
+                dateTimePickerTimeEnd.Value = Convert.ToDateTime(row.Cells[3].Value);
+
+
+                //highlight row
+                row.Cells[0].Selected = true;
+                row.Cells[1].Selected = true;
+                row.Cells[2].Selected = true;
+                row.Cells[3].Selected = true;
+
+                textBoxNameShift.ForeColor = Color.FromArgb(62, 120, 138);
+
+            }
+
+        }
+
+
+        //update shift
+        private void buttonUpdateShift_Click(object sender, EventArgs e)
+        {
+            string Name = textBoxNameShift.Texts;
+            DateTime TimeStart = dateTimePickerTimeStart.Value;
+            DateTime TimeEnd = dateTimePickerTimeEnd.Value;
+            if (!String.IsNullOrEmpty(Name) && Name != textBoxNameShift.PlaceholderText && TimeStart != null && TimeEnd != null)
+            {
+                if (ID_Shift_Selected != 0)
+                {
+                    try
+                    {
+                        ShiftBusiness.UpdateShift(ID_Shift_Selected, Name, TimeStart.TimeOfDay, TimeEnd.TimeOfDay);
+                        callAlert?.Invoke("Cập nhật ca làm thành công.", FormAlert.enmType.Success);
+                        LoadDataGridViewShift();
+                    }
+                    catch
+                    {
+                        callAlert?.Invoke("Gặp lỗi, không thể cập nhật.", FormAlert.enmType.Error);
+                    }
+                }
+                else
+                {
+                    callAlert?.Invoke("Hãy chọn một ca làm để tiến hành cập nhật.", FormAlert.enmType.Warning);
+                }
+            }
+            else
+            {
+                callAlert?.Invoke("Các trường cập nhật không được trống.", FormAlert.enmType.Error);
+            }
+        }
+
+        //Xóa ca làm
+        private void buttonDeleteShift_Click(object sender, EventArgs e)
+        {
+            if (this.ID_Shift_Selected != 0)
+            {
+                try
+                {
+                    Shift shift = ShiftBusiness.GetShiftFromID(ID_Shift_Selected);
+                    DialogResult dialogResult = MessageBox.Show($"Bạn có chắc muốn xóa {shift.Name}", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        ShiftBusiness.DeleteShift(ID_Shift_Selected);
+                        callAlert?.Invoke("Xóa thành công.", FormAlert.enmType.Success);
+                        LoadDataGridViewShift();
+                        this.ID_Shift_Selected = 0;
+                        textBoxNameShift.Texts = null;
+                    }
+
+                }
+                catch
+                {
+                    callAlert?.Invoke("Gặp lỗi, không thể xóa.", FormAlert.enmType.Error);
+                }
+            }
+            else
+            {
+                callAlert?.Invoke("Hãy chọn một ca làm trước khi xóa.", FormAlert.enmType.Warning);
+            }
         }
     }
 }

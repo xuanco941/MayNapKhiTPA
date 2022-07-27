@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSetting));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -101,8 +101,6 @@
             this.panel16 = new System.Windows.Forms.Panel();
             this.textBoxNameTemplateSetting = new LW_PhanMemBaoGia.MyControls.TextBoxT();
             this.label6 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
             this.dataGridViewTemplateSetting = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -113,22 +111,34 @@
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
             this.panel28 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
-            this.buttonCustom3 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
-            this.buttonCustom4 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
-            this.buttonCustom5 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.buttonAddShift = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.buttonDeleteShift = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.buttonUpdateShift = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.panel29 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
             this.panel30 = new System.Windows.Forms.Panel();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerTimeEnd = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
             this.panel31 = new System.Windows.Forms.Panel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerTimeStart = new System.Windows.Forms.DateTimePicker();
             this.label12 = new System.Windows.Forms.Label();
             this.panel34 = new System.Windows.Forms.Panel();
-            this.textBoxT13 = new LW_PhanMemBaoGia.MyControls.TextBoxT();
+            this.textBoxNameShift = new LW_PhanMemBaoGia.MyControls.TextBoxT();
             this.label15 = new System.Windows.Forms.Label();
             this.panel35 = new System.Windows.Forms.Panel();
             this.dataGridViewShift = new System.Windows.Forms.DataGridView();
+            this.panel32 = new System.Windows.Forms.Panel();
+            this.panel33 = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.panel36 = new System.Windows.Forms.Panel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.panel37 = new System.Windows.Forms.Panel();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -164,7 +174,6 @@
             this.panel18.SuspendLayout();
             this.panel17.SuspendLayout();
             this.panel16.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTemplateSetting)).BeginInit();
             this.tabPage3.SuspendLayout();
@@ -182,6 +191,14 @@
             this.panel34.SuspendLayout();
             this.panel35.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewShift)).BeginInit();
+            this.panel32.SuspendLayout();
+            this.panel33.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.panel36.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.panel37.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -773,7 +790,8 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel5.Controls.Add(this.panel13, 1, 0);
-            this.tableLayoutPanel5.Controls.Add(this.groupBox1, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.panel32, 2, 0);
+            this.tableLayoutPanel5.Controls.Add(this.panel33, 0, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
@@ -889,6 +907,7 @@
             this.buttonDeleteTemplateSetting.TextColor = System.Drawing.Color.White;
             this.buttonDeleteTemplateSetting.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.buttonDeleteTemplateSetting.UseVisualStyleBackColor = false;
+            this.buttonDeleteTemplateSetting.Click += new System.EventHandler(this.buttonDeleteTemplateSetting_Click);
             // 
             // buttonUpdateTemplateSetting
             // 
@@ -913,6 +932,7 @@
             this.buttonUpdateTemplateSetting.TextColor = System.Drawing.Color.White;
             this.buttonUpdateTemplateSetting.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.buttonUpdateTemplateSetting.UseVisualStyleBackColor = false;
+            this.buttonUpdateTemplateSetting.Click += new System.EventHandler(this.buttonUpdateTemplateSetting_Click);
             // 
             // panel14
             // 
@@ -1177,30 +1197,6 @@
             this.label6.TabIndex = 50;
             this.label6.Text = "Tên bình :";
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.Green;
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(220, 238);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Hướng dẫn sử dụng";
-            // 
-            // label13
-            // 
-            this.label13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label13.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label13.Location = new System.Drawing.Point(3, 22);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(214, 213);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "- Chọn trực tiếp các hàng trên bảng , dữ liệu sẽ hiển thị dưới hộp cài đặt.";
-            // 
             // panel11
             // 
             this.panel11.Controls.Add(this.dataGridViewTemplateSetting);
@@ -1212,24 +1208,27 @@
             // 
             // dataGridViewTemplateSetting
             // 
+            this.dataGridViewTemplateSetting.AllowUserToAddRows = false;
+            this.dataGridViewTemplateSetting.AllowUserToDeleteRows = false;
             this.dataGridViewTemplateSetting.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewTemplateSetting.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTemplateSetting.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewTemplateSetting.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTemplateSetting.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dataGridViewTemplateSetting.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewTemplateSetting.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewTemplateSetting.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewTemplateSetting.Name = "dataGridViewTemplateSetting";
             this.dataGridViewTemplateSetting.ReadOnly = true;
             this.dataGridViewTemplateSetting.RowHeadersVisible = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTemplateSetting.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTemplateSetting.RowsDefaultCellStyle = dataGridViewCellStyle14;
             this.dataGridViewTemplateSetting.Size = new System.Drawing.Size(907, 272);
             this.dataGridViewTemplateSetting.TabIndex = 0;
             this.dataGridViewTemplateSetting.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTemplateSetting_CellClick);
@@ -1276,6 +1275,8 @@
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel10.Controls.Add(this.panel22, 1, 0);
+            this.tableLayoutPanel10.Controls.Add(this.panel36, 2, 0);
+            this.tableLayoutPanel10.Controls.Add(this.panel37, 0, 0);
             this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel10.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
@@ -1329,9 +1330,9 @@
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel12.Controls.Add(this.buttonCustom3, 1, 1);
-            this.tableLayoutPanel12.Controls.Add(this.buttonCustom4, 5, 1);
-            this.tableLayoutPanel12.Controls.Add(this.buttonCustom5, 3, 1);
+            this.tableLayoutPanel12.Controls.Add(this.buttonAddShift, 1, 1);
+            this.tableLayoutPanel12.Controls.Add(this.buttonDeleteShift, 5, 1);
+            this.tableLayoutPanel12.Controls.Add(this.buttonUpdateShift, 3, 1);
             this.tableLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel12.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel12.Name = "tableLayoutPanel12";
@@ -1342,77 +1343,80 @@
             this.tableLayoutPanel12.Size = new System.Drawing.Size(439, 60);
             this.tableLayoutPanel12.TabIndex = 76;
             // 
-            // buttonCustom3
+            // buttonAddShift
             // 
-            this.buttonCustom3.BackColor = System.Drawing.Color.Green;
-            this.buttonCustom3.BackgroundColor = System.Drawing.Color.Green;
-            this.buttonCustom3.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonCustom3.BorderRadius = 3;
-            this.buttonCustom3.BorderSize = 0;
-            this.buttonCustom3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonCustom3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonCustom3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCustom3.Font = new System.Drawing.Font("Bahnschrift SemiLight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCustom3.ForeColor = System.Drawing.Color.White;
-            this.buttonCustom3.Image = ((System.Drawing.Image)(resources.GetObject("buttonCustom3.Image")));
-            this.buttonCustom3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCustom3.Location = new System.Drawing.Point(46, 12);
-            this.buttonCustom3.Name = "buttonCustom3";
-            this.buttonCustom3.Size = new System.Drawing.Size(81, 36);
-            this.buttonCustom3.TabIndex = 75;
-            this.buttonCustom3.Text = "Thêm";
-            this.buttonCustom3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonCustom3.TextColor = System.Drawing.Color.White;
-            this.buttonCustom3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.buttonCustom3.UseVisualStyleBackColor = false;
+            this.buttonAddShift.BackColor = System.Drawing.Color.Green;
+            this.buttonAddShift.BackgroundColor = System.Drawing.Color.Green;
+            this.buttonAddShift.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonAddShift.BorderRadius = 3;
+            this.buttonAddShift.BorderSize = 0;
+            this.buttonAddShift.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonAddShift.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonAddShift.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAddShift.Font = new System.Drawing.Font("Bahnschrift SemiLight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAddShift.ForeColor = System.Drawing.Color.White;
+            this.buttonAddShift.Image = ((System.Drawing.Image)(resources.GetObject("buttonAddShift.Image")));
+            this.buttonAddShift.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonAddShift.Location = new System.Drawing.Point(46, 12);
+            this.buttonAddShift.Name = "buttonAddShift";
+            this.buttonAddShift.Size = new System.Drawing.Size(81, 36);
+            this.buttonAddShift.TabIndex = 75;
+            this.buttonAddShift.Text = "Thêm";
+            this.buttonAddShift.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonAddShift.TextColor = System.Drawing.Color.White;
+            this.buttonAddShift.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonAddShift.UseVisualStyleBackColor = false;
+            this.buttonAddShift.Click += new System.EventHandler(this.buttonAddShift_Click);
             // 
-            // buttonCustom4
+            // buttonDeleteShift
             // 
-            this.buttonCustom4.BackColor = System.Drawing.Color.Brown;
-            this.buttonCustom4.BackgroundColor = System.Drawing.Color.Brown;
-            this.buttonCustom4.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonCustom4.BorderRadius = 3;
-            this.buttonCustom4.BorderSize = 0;
-            this.buttonCustom4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonCustom4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonCustom4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCustom4.Font = new System.Drawing.Font("Bahnschrift SemiLight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCustom4.ForeColor = System.Drawing.Color.White;
-            this.buttonCustom4.Image = ((System.Drawing.Image)(resources.GetObject("buttonCustom4.Image")));
-            this.buttonCustom4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCustom4.Location = new System.Drawing.Point(306, 12);
-            this.buttonCustom4.Name = "buttonCustom4";
-            this.buttonCustom4.Size = new System.Drawing.Size(81, 36);
-            this.buttonCustom4.TabIndex = 74;
-            this.buttonCustom4.Text = "Xóa";
-            this.buttonCustom4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonCustom4.TextColor = System.Drawing.Color.White;
-            this.buttonCustom4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.buttonCustom4.UseVisualStyleBackColor = false;
+            this.buttonDeleteShift.BackColor = System.Drawing.Color.Brown;
+            this.buttonDeleteShift.BackgroundColor = System.Drawing.Color.Brown;
+            this.buttonDeleteShift.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonDeleteShift.BorderRadius = 3;
+            this.buttonDeleteShift.BorderSize = 0;
+            this.buttonDeleteShift.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonDeleteShift.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonDeleteShift.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDeleteShift.Font = new System.Drawing.Font("Bahnschrift SemiLight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDeleteShift.ForeColor = System.Drawing.Color.White;
+            this.buttonDeleteShift.Image = ((System.Drawing.Image)(resources.GetObject("buttonDeleteShift.Image")));
+            this.buttonDeleteShift.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonDeleteShift.Location = new System.Drawing.Point(306, 12);
+            this.buttonDeleteShift.Name = "buttonDeleteShift";
+            this.buttonDeleteShift.Size = new System.Drawing.Size(81, 36);
+            this.buttonDeleteShift.TabIndex = 74;
+            this.buttonDeleteShift.Text = "Xóa";
+            this.buttonDeleteShift.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonDeleteShift.TextColor = System.Drawing.Color.White;
+            this.buttonDeleteShift.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonDeleteShift.UseVisualStyleBackColor = false;
+            this.buttonDeleteShift.Click += new System.EventHandler(this.buttonDeleteShift_Click);
             // 
-            // buttonCustom5
+            // buttonUpdateShift
             // 
-            this.buttonCustom5.BackColor = System.Drawing.Color.DarkGoldenrod;
-            this.buttonCustom5.BackgroundColor = System.Drawing.Color.DarkGoldenrod;
-            this.buttonCustom5.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonCustom5.BorderRadius = 3;
-            this.buttonCustom5.BorderSize = 0;
-            this.buttonCustom5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonCustom5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonCustom5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCustom5.Font = new System.Drawing.Font("Bahnschrift SemiLight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCustom5.ForeColor = System.Drawing.Color.White;
-            this.buttonCustom5.Image = global::MayNapKhiTPA.Properties.Resources.iconfinder_Synchronize_278832;
-            this.buttonCustom5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCustom5.Location = new System.Drawing.Point(176, 12);
-            this.buttonCustom5.Name = "buttonCustom5";
-            this.buttonCustom5.Size = new System.Drawing.Size(81, 36);
-            this.buttonCustom5.TabIndex = 73;
-            this.buttonCustom5.Text = "Cập nhật";
-            this.buttonCustom5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonCustom5.TextColor = System.Drawing.Color.White;
-            this.buttonCustom5.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.buttonCustom5.UseVisualStyleBackColor = false;
+            this.buttonUpdateShift.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.buttonUpdateShift.BackgroundColor = System.Drawing.Color.DarkGoldenrod;
+            this.buttonUpdateShift.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonUpdateShift.BorderRadius = 3;
+            this.buttonUpdateShift.BorderSize = 0;
+            this.buttonUpdateShift.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonUpdateShift.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonUpdateShift.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonUpdateShift.Font = new System.Drawing.Font("Bahnschrift SemiLight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonUpdateShift.ForeColor = System.Drawing.Color.White;
+            this.buttonUpdateShift.Image = global::MayNapKhiTPA.Properties.Resources.iconfinder_Synchronize_278832;
+            this.buttonUpdateShift.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonUpdateShift.Location = new System.Drawing.Point(176, 12);
+            this.buttonUpdateShift.Name = "buttonUpdateShift";
+            this.buttonUpdateShift.Size = new System.Drawing.Size(81, 36);
+            this.buttonUpdateShift.TabIndex = 73;
+            this.buttonUpdateShift.Text = "Cập nhật";
+            this.buttonUpdateShift.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonUpdateShift.TextColor = System.Drawing.Color.White;
+            this.buttonUpdateShift.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonUpdateShift.UseVisualStyleBackColor = false;
+            this.buttonUpdateShift.Click += new System.EventHandler(this.buttonUpdateShift_Click);
             // 
             // panel29
             // 
@@ -1443,7 +1447,7 @@
             // panel30
             // 
             this.panel30.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel30.Controls.Add(this.dateTimePicker2);
+            this.panel30.Controls.Add(this.dateTimePickerTimeEnd);
             this.panel30.Controls.Add(this.label11);
             this.panel30.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel30.Location = new System.Drawing.Point(222, 3);
@@ -1451,20 +1455,20 @@
             this.panel30.Size = new System.Drawing.Size(214, 46);
             this.panel30.TabIndex = 3;
             // 
-            // dateTimePicker2
+            // dateTimePickerTimeEnd
             // 
-            this.dateTimePicker2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dateTimePickerTimeEnd.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePicker2.CalendarFont = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker2.Location = new System.Drawing.Point(123, 10);
-            this.dateTimePicker2.MinDate = new System.DateTime(2022, 1, 1, 0, 0, 0, 0);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dateTimePicker2.ShowUpDown = true;
-            this.dateTimePicker2.Size = new System.Drawing.Size(86, 29);
-            this.dateTimePicker2.TabIndex = 56;
+            this.dateTimePickerTimeEnd.CalendarFont = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerTimeEnd.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerTimeEnd.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePickerTimeEnd.Location = new System.Drawing.Point(123, 10);
+            this.dateTimePickerTimeEnd.MinDate = new System.DateTime(2022, 1, 1, 0, 0, 0, 0);
+            this.dateTimePickerTimeEnd.Name = "dateTimePickerTimeEnd";
+            this.dateTimePickerTimeEnd.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dateTimePickerTimeEnd.ShowUpDown = true;
+            this.dateTimePickerTimeEnd.Size = new System.Drawing.Size(86, 29);
+            this.dateTimePickerTimeEnd.TabIndex = 56;
             // 
             // label11
             // 
@@ -1482,7 +1486,7 @@
             // panel31
             // 
             this.panel31.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel31.Controls.Add(this.dateTimePicker1);
+            this.panel31.Controls.Add(this.dateTimePickerTimeStart);
             this.panel31.Controls.Add(this.label12);
             this.panel31.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel31.Location = new System.Drawing.Point(3, 3);
@@ -1490,20 +1494,20 @@
             this.panel31.Size = new System.Drawing.Size(213, 46);
             this.panel31.TabIndex = 2;
             // 
-            // dateTimePicker1
+            // dateTimePickerTimeStart
             // 
-            this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dateTimePickerTimeStart.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker1.Location = new System.Drawing.Point(122, 10);
-            this.dateTimePicker1.MinDate = new System.DateTime(2022, 1, 1, 0, 0, 0, 0);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dateTimePicker1.ShowUpDown = true;
-            this.dateTimePicker1.Size = new System.Drawing.Size(86, 29);
-            this.dateTimePicker1.TabIndex = 55;
+            this.dateTimePickerTimeStart.CalendarFont = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerTimeStart.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerTimeStart.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePickerTimeStart.Location = new System.Drawing.Point(122, 10);
+            this.dateTimePickerTimeStart.MinDate = new System.DateTime(2022, 1, 1, 0, 0, 0, 0);
+            this.dateTimePickerTimeStart.Name = "dateTimePickerTimeStart";
+            this.dateTimePickerTimeStart.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dateTimePickerTimeStart.ShowUpDown = true;
+            this.dateTimePickerTimeStart.Size = new System.Drawing.Size(86, 29);
+            this.dateTimePickerTimeStart.TabIndex = 55;
             // 
             // label12
             // 
@@ -1522,7 +1526,7 @@
             // 
             this.panel34.BackColor = System.Drawing.Color.Gainsboro;
             this.panel34.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel34.Controls.Add(this.textBoxT13);
+            this.panel34.Controls.Add(this.textBoxNameShift);
             this.panel34.Controls.Add(this.label15);
             this.panel34.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel34.Location = new System.Drawing.Point(0, 0);
@@ -1530,27 +1534,27 @@
             this.panel34.Size = new System.Drawing.Size(439, 64);
             this.panel34.TabIndex = 0;
             // 
-            // textBoxT13
+            // textBoxNameShift
             // 
-            this.textBoxT13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.textBoxNameShift.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxT13.BackColor = System.Drawing.SystemColors.Window;
-            this.textBoxT13.BorderColor = System.Drawing.Color.CornflowerBlue;
-            this.textBoxT13.BorderFocusColor = System.Drawing.SystemColors.ActiveCaption;
-            this.textBoxT13.BorderRadius = 5;
-            this.textBoxT13.BorderSize = 1;
-            this.textBoxT13.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxT13.Location = new System.Drawing.Point(63, 12);
-            this.textBoxT13.Multiline = false;
-            this.textBoxT13.Name = "textBoxT13";
-            this.textBoxT13.Padding = new System.Windows.Forms.Padding(7);
-            this.textBoxT13.PasswordChar = false;
-            this.textBoxT13.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.textBoxT13.PlaceholderText = "";
-            this.textBoxT13.Size = new System.Drawing.Size(368, 35);
-            this.textBoxT13.TabIndex = 51;
-            this.textBoxT13.Texts = "";
-            this.textBoxT13.UnderlinedStyle = false;
+            this.textBoxNameShift.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxNameShift.BorderColor = System.Drawing.Color.CornflowerBlue;
+            this.textBoxNameShift.BorderFocusColor = System.Drawing.SystemColors.ActiveCaption;
+            this.textBoxNameShift.BorderRadius = 5;
+            this.textBoxNameShift.BorderSize = 1;
+            this.textBoxNameShift.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNameShift.Location = new System.Drawing.Point(63, 12);
+            this.textBoxNameShift.Multiline = false;
+            this.textBoxNameShift.Name = "textBoxNameShift";
+            this.textBoxNameShift.Padding = new System.Windows.Forms.Padding(7);
+            this.textBoxNameShift.PasswordChar = false;
+            this.textBoxNameShift.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.textBoxNameShift.PlaceholderText = "";
+            this.textBoxNameShift.Size = new System.Drawing.Size(368, 35);
+            this.textBoxNameShift.TabIndex = 51;
+            this.textBoxNameShift.Texts = "";
+            this.textBoxNameShift.UnderlinedStyle = false;
             // 
             // label15
             // 
@@ -1576,25 +1580,161 @@
             // 
             // dataGridViewShift
             // 
+            this.dataGridViewShift.AllowUserToAddRows = false;
+            this.dataGridViewShift.AllowUserToDeleteRows = false;
             this.dataGridViewShift.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewShift.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewShift.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewShift.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewShift.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.dataGridViewShift.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewShift.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewShift.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewShift.Name = "dataGridViewShift";
             this.dataGridViewShift.RowHeadersVisible = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewShift.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewShift.RowsDefaultCellStyle = dataGridViewCellStyle16;
             this.dataGridViewShift.Size = new System.Drawing.Size(907, 272);
             this.dataGridViewShift.TabIndex = 0;
+            this.dataGridViewShift.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewShift_CellClick);
+            // 
+            // panel32
+            // 
+            this.panel32.Controls.Add(this.groupBox1);
+            this.panel32.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel32.Location = new System.Drawing.Point(682, 3);
+            this.panel32.Name = "panel32";
+            this.panel32.Size = new System.Drawing.Size(222, 238);
+            this.panel32.TabIndex = 1;
+            // 
+            // panel33
+            // 
+            this.panel33.Controls.Add(this.groupBox3);
+            this.panel33.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel33.Location = new System.Drawing.Point(3, 3);
+            this.panel33.Name = "panel33";
+            this.panel33.Size = new System.Drawing.Size(220, 238);
+            this.panel33.TabIndex = 2;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label13);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.Green;
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(222, 238);
+            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Hướng dẫn";
+            // 
+            // label13
+            // 
+            this.label13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label13.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label13.Location = new System.Drawing.Point(3, 22);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(216, 213);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "- Chọn trực tiếp các hàng trên bảng , dữ liệu sẽ hiển thị dưới hộp cài đặt.";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.label16);
+            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox3.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.ForeColor = System.Drawing.Color.Crimson;
+            this.groupBox3.Location = new System.Drawing.Point(0, 0);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(220, 238);
+            this.groupBox3.TabIndex = 4;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Mô tả";
+            // 
+            // label16
+            // 
+            this.label16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label16.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label16.Location = new System.Drawing.Point(3, 22);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(214, 213);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "- Dùng để lưu những cài đặt máy mặc định.";
+            // 
+            // panel36
+            // 
+            this.panel36.Controls.Add(this.groupBox2);
+            this.panel36.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel36.Location = new System.Drawing.Point(682, 3);
+            this.panel36.Name = "panel36";
+            this.panel36.Size = new System.Drawing.Size(222, 238);
+            this.panel36.TabIndex = 3;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label14);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox2.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.Color.Green;
+            this.groupBox2.Location = new System.Drawing.Point(0, 0);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(222, 238);
+            this.groupBox2.TabIndex = 3;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Hướng dẫn";
+            // 
+            // label14
+            // 
+            this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label14.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label14.Location = new System.Drawing.Point(3, 22);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(216, 213);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "- Chọn trực tiếp các hàng trên bảng , dữ liệu sẽ hiển thị dưới hộp cài đặt.";
+            // 
+            // panel37
+            // 
+            this.panel37.Controls.Add(this.groupBox4);
+            this.panel37.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel37.Location = new System.Drawing.Point(3, 3);
+            this.panel37.Name = "panel37";
+            this.panel37.Size = new System.Drawing.Size(220, 238);
+            this.panel37.TabIndex = 4;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.label17);
+            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox4.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.ForeColor = System.Drawing.Color.Crimson;
+            this.groupBox4.Location = new System.Drawing.Point(0, 0);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(220, 238);
+            this.groupBox4.TabIndex = 5;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Mô tả";
+            // 
+            // label17
+            // 
+            this.label17.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label17.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label17.Location = new System.Drawing.Point(3, 22);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(214, 213);
+            this.label17.TabIndex = 0;
+            this.label17.Text = "- Ca làm của nhân viên";
             // 
             // FormSetting
             // 
@@ -1649,7 +1789,6 @@
             this.panel17.PerformLayout();
             this.panel16.ResumeLayout(false);
             this.panel16.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTemplateSetting)).EndInit();
             this.tabPage3.ResumeLayout(false);
@@ -1670,6 +1809,14 @@
             this.panel34.PerformLayout();
             this.panel35.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewShift)).EndInit();
+            this.panel32.ResumeLayout(false);
+            this.panel33.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.panel36.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.panel37.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1754,9 +1901,9 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
         private System.Windows.Forms.Panel panel28;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;
-        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom3;
-        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom4;
-        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom5;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonAddShift;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonDeleteShift;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonUpdateShift;
         private System.Windows.Forms.Panel panel29;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel13;
         private System.Windows.Forms.Panel panel30;
@@ -1764,13 +1911,23 @@
         private System.Windows.Forms.Panel panel31;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel34;
-        private LW_PhanMemBaoGia.MyControls.TextBoxT textBoxT13;
+        private LW_PhanMemBaoGia.MyControls.TextBoxT textBoxNameShift;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Panel panel35;
         private System.Windows.Forms.DataGridView dataGridViewShift;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePickerTimeEnd;
+        private System.Windows.Forms.DateTimePicker dateTimePickerTimeStart;
+        private System.Windows.Forms.Panel panel32;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Panel panel33;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Panel panel36;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Panel panel37;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Label label17;
     }
 }

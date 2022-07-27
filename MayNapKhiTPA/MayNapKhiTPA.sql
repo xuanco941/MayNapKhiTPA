@@ -235,6 +235,14 @@ as begin
 Select * From TemplateSetting Where TemplateSetting.[Name] like @Name;
 end
 GO
+--Lấy TemplateSetting từ id
+CREATE PROC GetTemplateSettingFromID @ID_TemplateSetting Int
+as begin
+Select * from TemplateSetting where ID_TemplateSetting = @ID_TemplateSetting
+end
+GO
+
+
 
 
 

@@ -30,8 +30,8 @@ namespace MayNapKhiTPA.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormActivity));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -45,15 +45,6 @@ namespace MayNapKhiTPA.Forms
             this.buttonPage2 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.textBoxGoPage = new LW_PhanMemBaoGia.MyControls.TextBoxT();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.buttonCallFormEmployeeActivities = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.labelNotify = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.labelPage = new System.Windows.Forms.Label();
-            this.labelBanGhiMoiTrang = new System.Windows.Forms.Label();
-            this.labelTongSoTrang = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.buttonLoc = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.label1 = new System.Windows.Forms.Label();
@@ -61,21 +52,30 @@ namespace MayNapKhiTPA.Forms
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePickerToiNgay = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.labelToiNgay = new System.Windows.Forms.Label();
             this.labelTuNgay = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.labelPage = new System.Windows.Forms.Label();
+            this.labelBanGhiMoiTrang = new System.Windows.Forms.Label();
+            this.labelTongSoTrang = new System.Windows.Forms.Label();
+            this.buttonCallFormEmployeeActivities = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.labelNotify = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewActivity)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -114,22 +114,26 @@ namespace MayNapKhiTPA.Forms
             // 
             // dataGridViewActivity
             // 
+            this.dataGridViewActivity.AllowUserToAddRows = false;
+            this.dataGridViewActivity.AllowUserToDeleteRows = false;
             this.dataGridViewActivity.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewActivity.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewActivity.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewActivity.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewActivity.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewActivity.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewActivity.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewActivity.Name = "dataGridViewActivity";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewActivity.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            this.dataGridViewActivity.ReadOnly = true;
+            this.dataGridViewActivity.RowHeadersVisible = false;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewActivity.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewActivity.RowTemplate.Height = 25;
             this.dataGridViewActivity.Size = new System.Drawing.Size(819, 438);
             this.dataGridViewActivity.TabIndex = 0;
@@ -281,7 +285,7 @@ namespace MayNapKhiTPA.Forms
             this.textBoxGoPage.PasswordChar = false;
             this.textBoxGoPage.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.textBoxGoPage.PlaceholderText = "Trang số . . .";
-            this.textBoxGoPage.Size = new System.Drawing.Size(79, 35);
+            this.textBoxGoPage.Size = new System.Drawing.Size(79, 34);
             this.textBoxGoPage.TabIndex = 23;
             this.textBoxGoPage.Texts = "Trang số . . .";
             this.textBoxGoPage.UnderlinedStyle = false;
@@ -301,110 +305,6 @@ namespace MayNapKhiTPA.Forms
             this.panel4.Size = new System.Drawing.Size(208, 488);
             this.panel4.TabIndex = 1;
             // 
-            // buttonCallFormEmployeeActivities
-            // 
-            this.buttonCallFormEmployeeActivities.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonCallFormEmployeeActivities.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.buttonCallFormEmployeeActivities.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.buttonCallFormEmployeeActivities.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.buttonCallFormEmployeeActivities.Image = global::MayNapKhiTPA.Properties.Resources.button2_Image;
-            this.buttonCallFormEmployeeActivities.Location = new System.Drawing.Point(0, 362);
-            this.buttonCallFormEmployeeActivities.Name = "buttonCallFormEmployeeActivities";
-            this.buttonCallFormEmployeeActivities.Size = new System.Drawing.Size(208, 38);
-            this.buttonCallFormEmployeeActivities.TabIndex = 10;
-            this.buttonCallFormEmployeeActivities.Text = "Nhân Viên Vận Hành";
-            this.buttonCallFormEmployeeActivities.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonCallFormEmployeeActivities.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonCallFormEmployeeActivities.UseVisualStyleBackColor = true;
-            this.buttonCallFormEmployeeActivities.Click += new System.EventHandler(this.buttonCallFormEmployeeActivities_Click);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.labelNotify);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox2.ForeColor = System.Drawing.Color.Green;
-            this.groupBox2.Location = new System.Drawing.Point(0, 400);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(208, 88);
-            this.groupBox2.TabIndex = 9;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Thông báo";
-            // 
-            // labelNotify
-            // 
-            this.labelNotify.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelNotify.ForeColor = System.Drawing.Color.Black;
-            this.labelNotify.Location = new System.Drawing.Point(3, 16);
-            this.labelNotify.Name = "labelNotify";
-            this.labelNotify.Size = new System.Drawing.Size(202, 69);
-            this.labelNotify.TabIndex = 4;
-            this.labelNotify.Text = "- Đỗ Văn Xuân vừa bắt đầu lần  nạp gần nhất";
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.groupBox1);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(208, 61);
-            this.panel6.TabIndex = 12;
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.groupBox3);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(0, 61);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(208, 61);
-            this.panel7.TabIndex = 13;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.labelPage);
-            this.groupBox1.Controls.Add(this.labelBanGhiMoiTrang);
-            this.groupBox1.Controls.Add(this.labelTongSoTrang);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.ForeColor = System.Drawing.Color.Green;
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(208, 61);
-            this.groupBox1.TabIndex = 11;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thông tin trang hoạt động";
-            // 
-            // labelPage
-            // 
-            this.labelPage.AutoSize = true;
-            this.labelPage.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.labelPage.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelPage.Location = new System.Drawing.Point(7, 40);
-            this.labelPage.Name = "labelPage";
-            this.labelPage.Size = new System.Drawing.Size(38, 13);
-            this.labelPage.TabIndex = 4;
-            this.labelPage.Text = "label5";
-            // 
-            // labelBanGhiMoiTrang
-            // 
-            this.labelBanGhiMoiTrang.AutoSize = true;
-            this.labelBanGhiMoiTrang.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.labelBanGhiMoiTrang.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelBanGhiMoiTrang.Location = new System.Drawing.Point(7, 27);
-            this.labelBanGhiMoiTrang.Name = "labelBanGhiMoiTrang";
-            this.labelBanGhiMoiTrang.Size = new System.Drawing.Size(38, 13);
-            this.labelBanGhiMoiTrang.TabIndex = 3;
-            this.labelBanGhiMoiTrang.Text = "label5";
-            // 
-            // labelTongSoTrang
-            // 
-            this.labelTongSoTrang.AutoSize = true;
-            this.labelTongSoTrang.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.labelTongSoTrang.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelTongSoTrang.Location = new System.Drawing.Point(7, 16);
-            this.labelTongSoTrang.Name = "labelTongSoTrang";
-            this.labelTongSoTrang.Size = new System.Drawing.Size(38, 13);
-            this.labelTongSoTrang.TabIndex = 1;
-            this.labelTongSoTrang.Text = "label5";
-            // 
             // panel5
             // 
             this.panel5.Controls.Add(this.buttonLoc);
@@ -414,7 +314,7 @@ namespace MayNapKhiTPA.Forms
             this.panel5.Controls.Add(this.dateTimePickerToiNgay);
             this.panel5.Controls.Add(this.label3);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 122);
+            this.panel5.Location = new System.Drawing.Point(0, 110);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(208, 237);
             this.panel5.TabIndex = 14;
@@ -504,6 +404,15 @@ namespace MayNapKhiTPA.Forms
             this.label3.TabIndex = 6;
             this.label3.Text = "Tới ngày :";
             // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.groupBox3);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel7.Location = new System.Drawing.Point(0, 61);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(208, 49);
+            this.panel7.TabIndex = 13;
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.labelToiNgay);
@@ -512,7 +421,7 @@ namespace MayNapKhiTPA.Forms
             this.groupBox3.ForeColor = System.Drawing.Color.Crimson;
             this.groupBox3.Location = new System.Drawing.Point(0, 0);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(208, 61);
+            this.groupBox3.Size = new System.Drawing.Size(208, 49);
             this.groupBox3.TabIndex = 12;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông tin lọc";
@@ -539,6 +448,101 @@ namespace MayNapKhiTPA.Forms
             this.labelTuNgay.TabIndex = 1;
             this.labelTuNgay.Text = "label5";
             // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.groupBox1);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(208, 61);
+            this.panel6.TabIndex = 12;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.labelPage);
+            this.groupBox1.Controls.Add(this.labelBanGhiMoiTrang);
+            this.groupBox1.Controls.Add(this.labelTongSoTrang);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.ForeColor = System.Drawing.Color.Green;
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(208, 61);
+            this.groupBox1.TabIndex = 11;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Thông tin trang hoạt động";
+            // 
+            // labelPage
+            // 
+            this.labelPage.AutoSize = true;
+            this.labelPage.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.labelPage.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelPage.Location = new System.Drawing.Point(7, 40);
+            this.labelPage.Name = "labelPage";
+            this.labelPage.Size = new System.Drawing.Size(38, 13);
+            this.labelPage.TabIndex = 4;
+            this.labelPage.Text = "label5";
+            // 
+            // labelBanGhiMoiTrang
+            // 
+            this.labelBanGhiMoiTrang.AutoSize = true;
+            this.labelBanGhiMoiTrang.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.labelBanGhiMoiTrang.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelBanGhiMoiTrang.Location = new System.Drawing.Point(7, 27);
+            this.labelBanGhiMoiTrang.Name = "labelBanGhiMoiTrang";
+            this.labelBanGhiMoiTrang.Size = new System.Drawing.Size(38, 13);
+            this.labelBanGhiMoiTrang.TabIndex = 3;
+            this.labelBanGhiMoiTrang.Text = "label5";
+            // 
+            // labelTongSoTrang
+            // 
+            this.labelTongSoTrang.AutoSize = true;
+            this.labelTongSoTrang.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.labelTongSoTrang.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelTongSoTrang.Location = new System.Drawing.Point(7, 16);
+            this.labelTongSoTrang.Name = "labelTongSoTrang";
+            this.labelTongSoTrang.Size = new System.Drawing.Size(38, 13);
+            this.labelTongSoTrang.TabIndex = 1;
+            this.labelTongSoTrang.Text = "label5";
+            // 
+            // buttonCallFormEmployeeActivities
+            // 
+            this.buttonCallFormEmployeeActivities.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonCallFormEmployeeActivities.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.buttonCallFormEmployeeActivities.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.buttonCallFormEmployeeActivities.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.buttonCallFormEmployeeActivities.Image = global::MayNapKhiTPA.Properties.Resources.button2_Image;
+            this.buttonCallFormEmployeeActivities.Location = new System.Drawing.Point(0, 362);
+            this.buttonCallFormEmployeeActivities.Name = "buttonCallFormEmployeeActivities";
+            this.buttonCallFormEmployeeActivities.Size = new System.Drawing.Size(208, 38);
+            this.buttonCallFormEmployeeActivities.TabIndex = 10;
+            this.buttonCallFormEmployeeActivities.Text = "Nhân Viên Vận Hành";
+            this.buttonCallFormEmployeeActivities.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonCallFormEmployeeActivities.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonCallFormEmployeeActivities.UseVisualStyleBackColor = true;
+            this.buttonCallFormEmployeeActivities.Click += new System.EventHandler(this.buttonCallFormEmployeeActivities_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.labelNotify);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox2.ForeColor = System.Drawing.Color.Green;
+            this.groupBox2.Location = new System.Drawing.Point(0, 400);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(208, 88);
+            this.groupBox2.TabIndex = 9;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Thông báo";
+            // 
+            // labelNotify
+            // 
+            this.labelNotify.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelNotify.ForeColor = System.Drawing.Color.Black;
+            this.labelNotify.Location = new System.Drawing.Point(3, 16);
+            this.labelNotify.Name = "labelNotify";
+            this.labelNotify.Size = new System.Drawing.Size(202, 69);
+            this.labelNotify.TabIndex = 4;
+            this.labelNotify.Text = "- Đỗ Văn Xuân vừa bắt đầu lần  nạp gần nhất";
+            // 
             // FormActivity
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -554,15 +558,15 @@ namespace MayNapKhiTPA.Forms
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewActivity)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.panel7.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
