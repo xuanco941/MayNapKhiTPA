@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +22,9 @@ namespace MayNapKhiTPA.Forms
         {
             InitializeComponent();
 
+            //setting
+            LoadSetting();
+
             // template setting
             dataGridViewTemplateSetting.RowTemplate.Height = 50;
             LoadDataGridViewTemplateSetting();
@@ -28,6 +32,13 @@ namespace MayNapKhiTPA.Forms
             //shift
             dataGridViewShift.RowTemplate.Height = 50;
             LoadDataGridViewShift();
+
+            //Setting
+            dataGridViewActivitySetting.RowTemplate.Height = 35;
+            LoadDataGridViewSetting();
+
+
+
         }
 
         //textbox only number type tabpage 1
@@ -72,6 +83,45 @@ namespace MayNapKhiTPA.Forms
 
 
         // Xu ly data
+        //Load setting
+        private void LoadSetting()
+        {
+            Setting setting = SettingBusiness.GetSetting();
+            buttonNameSetting.Text = "Loại bình : " + setting.NameTemplateSetting;
+            buttonApSuatNap.Text = "Áp suất nạp : " + setting.ApSuatNap + " bar";
+            buttonTheTichNap.Text = "Thể tích nạp : " + setting.TheTichNap + " m3";
+            buttonThoiGianNap.Text = "Thời gian nạp : " + setting.ThoiGianNap + " phút";
+            buttonThoiGianLayMau.Text = "Thời gian lấy mẫu : " + setting.ThoiGianLayMau + " phút";
+
+            //load combobox select bình
+            var listTemplateSetting = TemplateSettingBusiness.GetAllTemplateSettings();
+            var listNameTemplateSetting = from templateSetting in listTemplateSetting select templateSetting.Name;
+            comboBoxSelectTemplateSetting.DataSource = listNameTemplateSetting.ToList();
+        }
+
+        //Load datagridview setting
+        private void LoadDataGridViewSetting()
+        {
+            List<Activity> list = ActivityBusiness.GetActivitiesIsSetting();
+            DataTable dt = new DataTable();
+            dt.Columns.Add("No.", typeof(int));
+            dt.Columns.Add("Hoạt động", typeof(string));
+            dt.Columns.Add("Thời gian", typeof(DateTime));
+            dt.Columns.Add("Tên người thực hiện");
+
+            // load datagridview từ tham số activities truyền vào
+            int count = 1;
+            list.ForEach(delegate (Activity activity)
+            {
+                User user = UserBusiness.GetUserFromID(activity.ID_User);
+                //format date từ sql -> c#
+                string createAt = activity.Create_At.ToString("dd/MM/yyyy hh:mm:ss", CultureInfo.InvariantCulture);
+                dt.Rows.Add(count, activity.Description, createAt, user.FullName);
+                count++;
+            });
+            dataGridViewActivitySetting.DataSource = dt;
+        }
+
         // Load Datagridview TemplateSetting
         private void LoadDataGridViewTemplateSetting()
         {

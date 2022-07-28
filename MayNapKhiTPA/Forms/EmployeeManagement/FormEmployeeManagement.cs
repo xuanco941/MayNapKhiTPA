@@ -23,6 +23,11 @@ namespace MayNapKhiTPA.Forms
         public FormEmployeeManagement()
         {
             InitializeComponent();
+            // set chieu cao cua row datagridview la 50px
+            dataGridViewUser.RowTemplate.Height = 50;
+            dataGridViewGroup.RowTemplate.Height = 50;
+
+            //load datagridview
             LoadDataUser(UserBusiness.GetAllUsers());
             LoadDataGroup(GroupBusiness.GetAllGroups());
         }

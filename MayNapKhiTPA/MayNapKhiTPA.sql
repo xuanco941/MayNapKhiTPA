@@ -95,14 +95,17 @@ GO
 --TABLE THONG SO MAY
 CREATE TABLE Setting (
 ID_Setting int DEFAULT 1,
+NameTemplateSetting nvarchar(100),
 ApSuatNap FLoat,
 TheTichNap Float,
-ThoiGianNap TIME,
-ThoiGianLayMau TIME,
-UpdateAt DateTime
+-- thoi gian tinh bang phut
+ThoiGianNap FLOAT,
+ThoiGianLayMau FLOAT,
+UpdateAt DateTime default GetDate()
 )
 GO
-
+Insert into Setting(NameTemplateSetting,ApSuatNap,TheTichNap,ThoiGianNap,ThoiGianLayMau) values (N'Không có sẵn',0,0,5,5);
+GO
 
 /* Procedure */
 
@@ -196,9 +199,9 @@ GO
 
 -- PROC SETTING
 --Update Thông số máy
-CREATE PROC UpdateSetting @ApSuatNap FLoat, @TheTichNap FLOAT, @ThoiGianNap TIME, @ThoiGianLayMau TIME
+CREATE PROC UpdateSetting @NameTemplateSetting nvarchar(100), @ApSuatNap FLoat, @TheTichNap FLOAT, @ThoiGianNap FLOAT, @ThoiGianLayMau FLOAT
 as begin
-Update Setting SET ApSuatNap = @ApSuatNap, TheTichNap = @TheTichNap, ThoiGianNap = @ThoiGianNap, ThoiGianLayMau = @ThoiGianLayMau ,UpdateAt = GETDATE()
+Update Setting SET NameTemplateSetting = @NameTemplateSetting  ,ApSuatNap = @ApSuatNap, TheTichNap = @TheTichNap, ThoiGianNap = @ThoiGianNap, ThoiGianLayMau = @ThoiGianLayMau ,UpdateAt = GETDATE()
 where ID_Setting = 1
 end
 GO
@@ -480,13 +483,67 @@ Create_At BETWEEN
 
 exec AddShift N'Ca sáng','10:00:00','12:00:00'
 exec AddShift N'Ca toi','11:00:00','12:00:00'
+exec AddShift N'Ca dem','11:00:00','12:00:00'
+exec AddShift N'Ca trua','11:00:00','12:00:00'
+exec AddShift N'Ca nghi','11:00:00','12:00:00'
+exec AddShift N'Ca choi','11:00:00','12:00:00'
+exec AddShift N'Ca lam','11:00:00','12:00:00'
+exec AddShift N'Ca them','11:00:00','12:00:00'
+exec AddShift N'Ca bu','11:00:00','12:00:00'
+exec AddShift N'Ca chieu','11:00:00','12:00:00'
+
 
 GO
 exec AddGroup N'Quyền Admin',1,1
-exec AddGroup N'Quyền Nhan vien',0,1
+exec AddGroup N'Quyền A',0,1
+exec AddGroup N'Quyền B',0,1
+exec AddGroup N'Quyền C',0,1
+exec AddGroup N'Quyền D',0,1
+exec AddGroup N'Quyền E',0,1
+exec AddGroup N'Quyền F',0,1
+exec AddGroup N'Quyền G',0,1
+exec AddGroup N'Quyền H',0,1
+exec AddGroup N'Quyền I',0,1
+exec AddGroup N'Quyền K',0,1
+exec AddGroup N'Quyền L',0,1
+
+
 
 GO
 exec AddUser N'Đỗ Văn Xuân', 'admin','123', '0123456789','xuan@gmail.com',1,1
+exec AddUser N'Lee Văn A', 'admin1','123', '0123456789','xuan@gmail.com',2,2
+exec AddUser N'Kim Văn B', 'admin2','123', '0123456789','xuan@gmail.com',3,2
+exec AddUser N'Nguyen Văn C', 'admin3','123', '0123456789','xuan@gmail.com',3,4
+exec AddUser N'Pham Văn D', 'admin4','123', '0123456789','xuan@gmail.com',4,4
+exec AddUser N'Đỗ Văn E', 'admin5','123', '0123456789','xuan@gmail.com',1,2
+exec AddUser N'Đỗ Văn F', 'admin6','123', '0123456789','xuan@gmail.com',1,2
+exec AddUser N'Đỗ Văn H', 'admin7','123', '0123456789','xuan@gmail.com',2,2
+exec AddUser N'Đỗ Văn G', 'admin8','123', '0123456789','xuan@gmail.com',1,3
+exec AddUser N'Đỗ Văn X', 'admin9','123', '0123456789','xuan@gmail.com',1,5
+exec AddUser N'Đỗ Văn K', 'admin10','123', '0123456789','xuan@gmail.com',3,1
+
 GO
 
-exec AddActivity 'Start',1,1
+exec AddActivity 'Start',0,2
+exec AddActivity N'Thay đổi áp suất nạp',1,3
+exec AddActivity N'Thay đổi thể tích nạp',1,4
+exec AddActivity N'Thay đổi thời gian nạp',1,2
+exec AddActivity 'Start',0,3
+exec AddActivity 'Start',0,4
+exec AddActivity N'Thay đổi áp suất nạp',1,5
+exec AddActivity 'Start',0,2
+exec AddActivity 'Start',0,1
+exec AddActivity 'Start',0,1
+exec AddActivity N'Thay đổi thể tích nạp',1,3
+exec AddActivity 'Start',0,2
+Go
+
+exec AddTemplateSetting N'Binh 1',342,32,55,43
+exec AddTemplateSetting N'Binh 2',23,56,32,76
+exec AddTemplateSetting N'Binh 3',23,44,55,43
+exec AddTemplateSetting N'Binh 4',343,344,55,43
+exec AddTemplateSetting N'Binh 5',45,34,100,43
+exec AddTemplateSetting N'Binh 6',56,398,55,43
+exec AddTemplateSetting N'Binh 1',86,98,55,43
+
+

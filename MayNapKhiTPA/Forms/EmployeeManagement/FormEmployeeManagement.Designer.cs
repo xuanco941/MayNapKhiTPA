@@ -104,8 +104,9 @@ namespace MayNapKhiTPA.Forms
             // 
             // dataGridViewUser
             // 
+            this.dataGridViewUser.AllowUserToAddRows = false;
             this.dataGridViewUser.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewUser.BackgroundColor = System.Drawing.Color.CornflowerBlue;
+            this.dataGridViewUser.BackgroundColor = System.Drawing.Color.LightGray;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
@@ -118,6 +119,8 @@ namespace MayNapKhiTPA.Forms
             this.dataGridViewUser.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewUser.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewUser.Name = "dataGridViewUser";
+            this.dataGridViewUser.ReadOnly = true;
+            this.dataGridViewUser.RowHeadersVisible = false;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dataGridViewUser.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewUser.Size = new System.Drawing.Size(983, 426);
@@ -154,7 +157,7 @@ namespace MayNapKhiTPA.Forms
             this.textBoxSearchUser.PasswordChar = false;
             this.textBoxSearchUser.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.textBoxSearchUser.PlaceholderText = "Nhập tên người dùng";
-            this.textBoxSearchUser.Size = new System.Drawing.Size(162, 35);
+            this.textBoxSearchUser.Size = new System.Drawing.Size(162, 34);
             this.textBoxSearchUser.TabIndex = 26;
             this.textBoxSearchUser.Texts = "Nhập tên người dùng";
             this.textBoxSearchUser.UnderlinedStyle = false;
@@ -285,8 +288,9 @@ namespace MayNapKhiTPA.Forms
             // 
             // dataGridViewGroup
             // 
+            this.dataGridViewGroup.AllowUserToAddRows = false;
             this.dataGridViewGroup.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewGroup.BackgroundColor = System.Drawing.Color.OliveDrab;
+            this.dataGridViewGroup.BackgroundColor = System.Drawing.Color.LightGray;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
@@ -299,6 +303,8 @@ namespace MayNapKhiTPA.Forms
             this.dataGridViewGroup.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewGroup.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewGroup.Name = "dataGridViewGroup";
+            this.dataGridViewGroup.ReadOnly = true;
+            this.dataGridViewGroup.RowHeadersVisible = false;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dataGridViewGroup.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewGroup.Size = new System.Drawing.Size(983, 426);
@@ -337,7 +343,7 @@ namespace MayNapKhiTPA.Forms
             this.textBoxSearchGroup.PasswordChar = false;
             this.textBoxSearchGroup.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.textBoxSearchGroup.PlaceholderText = "Nhập tên quyền";
-            this.textBoxSearchGroup.Size = new System.Drawing.Size(162, 35);
+            this.textBoxSearchGroup.Size = new System.Drawing.Size(162, 34);
             this.textBoxSearchGroup.TabIndex = 25;
             this.textBoxSearchGroup.Texts = "Nhập tên quyền";
             this.textBoxSearchGroup.UnderlinedStyle = false;

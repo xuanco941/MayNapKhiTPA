@@ -146,6 +146,24 @@ namespace MayNapKhiTPA.Models
             return list;
         }
 
+        public static List<Activity> GetActivitiesIsSetting()
+        {
+
+            List<Activity> list = new List<Activity>();
+            SqlConnection sqlConnection = new SqlConnection(Common.ConnectionString);
+            sqlConnection.Open();
+            string sql = $"select * from Activity where isSetting = 1";
+            SqlCommand command = new SqlCommand(sql, sqlConnection);
+            SqlDataReader sqlDataReader = command.ExecuteReader();
+            while (sqlDataReader.Read())
+            {
+                Activity activity = new Activity(sqlDataReader.GetInt32(0), sqlDataReader.GetString(1), sqlDataReader.GetBoolean(2), sqlDataReader.GetDateTime(3), sqlDataReader.GetInt32(4));
+                list.Add(activity);
+            }
+            sqlConnection.Close();
+
+            return list;
+        }
 
     }
 

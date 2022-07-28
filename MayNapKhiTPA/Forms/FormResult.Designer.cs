@@ -40,16 +40,16 @@ namespace MayNapKhiTPA.Forms
             this.buttonCustom5 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.buttonCustom4 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.buttonCustom3 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
-            this.buttonCustom1 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.textBoxGoPage = new LW_PhanMemBaoGia.MyControls.TextBoxT();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.buttonPrint = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
-            this.buttonExcel = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.buttonCustom2 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.comboBoxSelectMay = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
@@ -67,6 +67,11 @@ namespace MayNapKhiTPA.Forms
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimePickerTuNgay = new System.Windows.Forms.DateTimePicker();
+            this.buttonCustom1 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.buttonCallFormData = new System.Windows.Forms.Button();
+            this.buttonCustom2 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.buttonPrint = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.buttonExcel = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewResult)).BeginInit();
             this.panel2.SuspendLayout();
@@ -74,7 +79,10 @@ namespace MayNapKhiTPA.Forms
             this.tableLayoutPanel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
@@ -86,7 +94,7 @@ namespace MayNapKhiTPA.Forms
             // textBox1
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(1288, -23);
+            this.textBox1.Location = new System.Drawing.Point(1036, -23);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(71, 20);
             this.textBox1.TabIndex = 5;
@@ -95,7 +103,7 @@ namespace MayNapKhiTPA.Forms
             // 
             this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.button6.Location = new System.Drawing.Point(1363, -23);
+            this.button6.Location = new System.Drawing.Point(1111, -23);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(57, 23);
             this.button6.TabIndex = 4;
@@ -108,19 +116,22 @@ namespace MayNapKhiTPA.Forms
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(948, 452);
+            this.panel3.Size = new System.Drawing.Size(696, 610);
             this.panel3.TabIndex = 1;
             // 
             // dataGridViewResult
             // 
+            this.dataGridViewResult.AllowUserToAddRows = false;
             this.dataGridViewResult.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewResult.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.dataGridViewResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewResult.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewResult.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewResult.Name = "dataGridViewResult";
+            this.dataGridViewResult.ReadOnly = true;
+            this.dataGridViewResult.RowHeadersVisible = false;
             this.dataGridViewResult.RowTemplate.Height = 25;
-            this.dataGridViewResult.Size = new System.Drawing.Size(948, 452);
+            this.dataGridViewResult.Size = new System.Drawing.Size(696, 610);
             this.dataGridViewResult.TabIndex = 0;
             // 
             // panel2
@@ -134,9 +145,9 @@ namespace MayNapKhiTPA.Forms
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.button6);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 452);
+            this.panel2.Location = new System.Drawing.Point(0, 610);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(948, 50);
+            this.panel2.Size = new System.Drawing.Size(696, 50);
             this.panel2.TabIndex = 0;
             // 
             // buttonCustom6
@@ -227,30 +238,6 @@ namespace MayNapKhiTPA.Forms
             this.buttonCustom3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.buttonCustom3.UseVisualStyleBackColor = false;
             // 
-            // buttonCustom1
-            // 
-            this.buttonCustom1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCustom1.BackColor = System.Drawing.Color.DodgerBlue;
-            this.buttonCustom1.BackgroundColor = System.Drawing.Color.DodgerBlue;
-            this.buttonCustom1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonCustom1.BorderRadius = 3;
-            this.buttonCustom1.BorderSize = 0;
-            this.buttonCustom1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonCustom1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCustom1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCustom1.ForeColor = System.Drawing.Color.Black;
-            this.buttonCustom1.Image = ((System.Drawing.Image)(resources.GetObject("buttonCustom1.Image")));
-            this.buttonCustom1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCustom1.Location = new System.Drawing.Point(865, 11);
-            this.buttonCustom1.Name = "buttonCustom1";
-            this.buttonCustom1.Size = new System.Drawing.Size(80, 30);
-            this.buttonCustom1.TabIndex = 18;
-            this.buttonCustom1.Text = "Đi";
-            this.buttonCustom1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonCustom1.TextColor = System.Drawing.Color.Black;
-            this.buttonCustom1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.buttonCustom1.UseVisualStyleBackColor = false;
-            // 
             // textBoxGoPage
             // 
             this.textBoxGoPage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -260,14 +247,14 @@ namespace MayNapKhiTPA.Forms
             this.textBoxGoPage.BorderRadius = 5;
             this.textBoxGoPage.BorderSize = 1;
             this.textBoxGoPage.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxGoPage.Location = new System.Drawing.Point(780, 11);
+            this.textBoxGoPage.Location = new System.Drawing.Point(528, 11);
             this.textBoxGoPage.Multiline = false;
             this.textBoxGoPage.Name = "textBoxGoPage";
             this.textBoxGoPage.Padding = new System.Windows.Forms.Padding(7, 8, 7, 5);
             this.textBoxGoPage.PasswordChar = false;
             this.textBoxGoPage.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.textBoxGoPage.PlaceholderText = "Trang số . . .";
-            this.textBoxGoPage.Size = new System.Drawing.Size(79, 35);
+            this.textBoxGoPage.Size = new System.Drawing.Size(79, 34);
             this.textBoxGoPage.TabIndex = 14;
             this.textBoxGoPage.Texts = "Trang số . . .";
             this.textBoxGoPage.UnderlinedStyle = false;
@@ -280,7 +267,7 @@ namespace MayNapKhiTPA.Forms
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(948, 502);
+            this.panel1.Size = new System.Drawing.Size(696, 660);
             this.panel1.TabIndex = 0;
             // 
             // tableLayoutPanel1
@@ -295,30 +282,314 @@ namespace MayNapKhiTPA.Forms
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1168, 508);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(916, 666);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.groupBox1);
-            this.panel4.Controls.Add(this.panel6);
+            this.panel4.Controls.Add(this.tableLayoutPanel2);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(957, 3);
+            this.panel4.Location = new System.Drawing.Point(705, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(208, 502);
+            this.panel4.Size = new System.Drawing.Size(208, 660);
             this.panel4.TabIndex = 1;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.buttonPrint);
             this.groupBox1.Controls.Add(this.buttonExcel);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox1.Location = new System.Drawing.Point(0, 397);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(208, 105);
-            this.groupBox1.TabIndex = 0;
+            this.groupBox1.Size = new System.Drawing.Size(202, 114);
+            this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tùy chọn";
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Controls.Add(this.panel5, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.panel6, 0, 1);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 120F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(208, 660);
+            this.tableLayoutPanel2.TabIndex = 26;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.panel7);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(3, 3);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(202, 534);
+            this.panel5.TabIndex = 0;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.groupBox1);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(3, 543);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(202, 114);
+            this.panel6.TabIndex = 1;
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.buttonCallFormData);
+            this.panel7.Controls.Add(this.comboBoxSelectMay);
+            this.panel7.Controls.Add(this.buttonCustom2);
+            this.panel7.Controls.Add(this.label7);
+            this.panel7.Controls.Add(this.numericUpDown5);
+            this.panel7.Controls.Add(this.numericUpDown6);
+            this.panel7.Controls.Add(this.numericUpDown3);
+            this.panel7.Controls.Add(this.label6);
+            this.panel7.Controls.Add(this.numericUpDown4);
+            this.panel7.Controls.Add(this.numericUpDown2);
+            this.panel7.Controls.Add(this.numericUpDown1);
+            this.panel7.Controls.Add(this.checkBox3);
+            this.panel7.Controls.Add(this.checkBox2);
+            this.panel7.Controls.Add(this.label4);
+            this.panel7.Controls.Add(this.checkBox1);
+            this.panel7.Controls.Add(this.label3);
+            this.panel7.Controls.Add(this.dateTimePicker1);
+            this.panel7.Controls.Add(this.label2);
+            this.panel7.Controls.Add(this.label1);
+            this.panel7.Controls.Add(this.dateTimePickerTuNgay);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel7.Location = new System.Drawing.Point(0, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(202, 534);
+            this.panel7.TabIndex = 26;
+            // 
+            // comboBoxSelectMay
+            // 
+            this.comboBoxSelectMay.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxSelectMay.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxSelectMay.FormattingEnabled = true;
+            this.comboBoxSelectMay.Location = new System.Drawing.Point(19, 47);
+            this.comboBoxSelectMay.Name = "comboBoxSelectMay";
+            this.comboBoxSelectMay.Size = new System.Drawing.Size(163, 28);
+            this.comboBoxSelectMay.TabIndex = 46;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(92, 240);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(19, 13);
+            this.label7.TabIndex = 45;
+            this.label7.Text = "=>";
+            // 
+            // numericUpDown5
+            // 
+            this.numericUpDown5.Location = new System.Drawing.Point(126, 300);
+            this.numericUpDown5.Name = "numericUpDown5";
+            this.numericUpDown5.Size = new System.Drawing.Size(56, 20);
+            this.numericUpDown5.TabIndex = 44;
+            // 
+            // numericUpDown6
+            // 
+            this.numericUpDown6.Location = new System.Drawing.Point(19, 300);
+            this.numericUpDown6.Name = "numericUpDown6";
+            this.numericUpDown6.Size = new System.Drawing.Size(55, 20);
+            this.numericUpDown6.TabIndex = 43;
+            // 
+            // numericUpDown3
+            // 
+            this.numericUpDown3.Location = new System.Drawing.Point(126, 238);
+            this.numericUpDown3.Name = "numericUpDown3";
+            this.numericUpDown3.Size = new System.Drawing.Size(56, 20);
+            this.numericUpDown3.TabIndex = 44;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(92, 302);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(19, 13);
+            this.label6.TabIndex = 42;
+            this.label6.Text = "=>";
+            // 
+            // numericUpDown4
+            // 
+            this.numericUpDown4.Location = new System.Drawing.Point(19, 238);
+            this.numericUpDown4.Name = "numericUpDown4";
+            this.numericUpDown4.Size = new System.Drawing.Size(55, 20);
+            this.numericUpDown4.TabIndex = 43;
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Location = new System.Drawing.Point(126, 177);
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(56, 20);
+            this.numericUpDown2.TabIndex = 41;
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(19, 177);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(55, 20);
+            this.numericUpDown1.TabIndex = 40;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(19, 276);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(73, 17);
+            this.checkBox3.TabIndex = 36;
+            this.checkBox3.Text = "Lưu lượng";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(19, 218);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(67, 17);
+            this.checkBox2.TabIndex = 32;
+            this.checkBox2.Text = "Thể tích";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(92, 180);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(19, 13);
+            this.label4.TabIndex = 30;
+            this.label4.Text = "=>";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(19, 155);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(62, 17);
+            this.checkBox1.TabIndex = 28;
+            this.checkBox1.Text = "Áp suất";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(16, 125);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(54, 13);
+            this.label3.TabIndex = 26;
+            this.label3.Text = "Tới ngày :";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(74, 122);
+            this.dateTimePicker1.MaxDate = new System.DateTime(2050, 12, 31, 0, 0, 0, 0);
+            this.dateTimePicker1.MinDate = new System.DateTime(2022, 1, 1, 0, 0, 0, 0);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(108, 20);
+            this.dateTimePicker1.TabIndex = 25;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(16, 94);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(52, 13);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "Từ ngày :";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(55, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(122, 30);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Lọc dữ liệu";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // dateTimePickerTuNgay
+            // 
+            this.dateTimePickerTuNgay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerTuNgay.Location = new System.Drawing.Point(74, 91);
+            this.dateTimePickerTuNgay.MaxDate = new System.DateTime(2050, 12, 31, 0, 0, 0, 0);
+            this.dateTimePickerTuNgay.MinDate = new System.DateTime(2022, 1, 1, 0, 0, 0, 0);
+            this.dateTimePickerTuNgay.Name = "dateTimePickerTuNgay";
+            this.dateTimePickerTuNgay.Size = new System.Drawing.Size(108, 20);
+            this.dateTimePickerTuNgay.TabIndex = 22;
+            // 
+            // buttonCustom1
+            // 
+            this.buttonCustom1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonCustom1.BackColor = System.Drawing.Color.DodgerBlue;
+            this.buttonCustom1.BackgroundColor = System.Drawing.Color.DodgerBlue;
+            this.buttonCustom1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonCustom1.BorderRadius = 3;
+            this.buttonCustom1.BorderSize = 0;
+            this.buttonCustom1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonCustom1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCustom1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCustom1.ForeColor = System.Drawing.Color.Black;
+            this.buttonCustom1.Image = ((System.Drawing.Image)(resources.GetObject("buttonCustom1.Image")));
+            this.buttonCustom1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCustom1.Location = new System.Drawing.Point(613, 11);
+            this.buttonCustom1.Name = "buttonCustom1";
+            this.buttonCustom1.Size = new System.Drawing.Size(80, 30);
+            this.buttonCustom1.TabIndex = 18;
+            this.buttonCustom1.Text = "Đi";
+            this.buttonCustom1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonCustom1.TextColor = System.Drawing.Color.Black;
+            this.buttonCustom1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonCustom1.UseVisualStyleBackColor = false;
+            // 
+            // buttonCallFormData
+            // 
+            this.buttonCallFormData.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonCallFormData.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.buttonCallFormData.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.buttonCallFormData.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.buttonCallFormData.Image = ((System.Drawing.Image)(resources.GetObject("buttonCallFormData.Image")));
+            this.buttonCallFormData.Location = new System.Drawing.Point(0, 496);
+            this.buttonCallFormData.Name = "buttonCallFormData";
+            this.buttonCallFormData.Size = new System.Drawing.Size(202, 38);
+            this.buttonCallFormData.TabIndex = 47;
+            this.buttonCallFormData.Text = "Dữ liệu chi tiết";
+            this.buttonCallFormData.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonCallFormData.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonCallFormData.UseVisualStyleBackColor = true;
+            this.buttonCallFormData.Click += new System.EventHandler(this.buttonCallFormData_Click);
+            // 
+            // buttonCustom2
+            // 
+            this.buttonCustom2.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.buttonCustom2.BackgroundColor = System.Drawing.Color.LightSkyBlue;
+            this.buttonCustom2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonCustom2.BorderRadius = 3;
+            this.buttonCustom2.BorderSize = 0;
+            this.buttonCustom2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonCustom2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCustom2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.buttonCustom2.ForeColor = System.Drawing.Color.Black;
+            this.buttonCustom2.Image = ((System.Drawing.Image)(resources.GetObject("buttonCustom2.Image")));
+            this.buttonCustom2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonCustom2.Location = new System.Drawing.Point(48, 340);
+            this.buttonCustom2.Name = "buttonCustom2";
+            this.buttonCustom2.Size = new System.Drawing.Size(103, 32);
+            this.buttonCustom2.TabIndex = 18;
+            this.buttonCustom2.Text = "Lọc";
+            this.buttonCustom2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCustom2.TextColor = System.Drawing.Color.Black;
+            this.buttonCustom2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonCustom2.UseVisualStyleBackColor = false;
             // 
             // buttonPrint
             // 
@@ -335,9 +606,9 @@ namespace MayNapKhiTPA.Forms
             this.buttonPrint.ForeColor = System.Drawing.Color.Black;
             this.buttonPrint.Image = global::MayNapKhiTPA.Properties.Resources.iconfinder_Save_278762;
             this.buttonPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonPrint.Location = new System.Drawing.Point(39, 19);
+            this.buttonPrint.Location = new System.Drawing.Point(39, 28);
             this.buttonPrint.Name = "buttonPrint";
-            this.buttonPrint.Size = new System.Drawing.Size(132, 36);
+            this.buttonPrint.Size = new System.Drawing.Size(126, 36);
             this.buttonPrint.TabIndex = 17;
             this.buttonPrint.Text = "In báo cáo";
             this.buttonPrint.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -360,9 +631,9 @@ namespace MayNapKhiTPA.Forms
             this.buttonExcel.ForeColor = System.Drawing.Color.Black;
             this.buttonExcel.Image = global::MayNapKhiTPA.Properties.Resources.Logoexe;
             this.buttonExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonExcel.Location = new System.Drawing.Point(39, 61);
+            this.buttonExcel.Location = new System.Drawing.Point(39, 70);
             this.buttonExcel.Name = "buttonExcel";
-            this.buttonExcel.Size = new System.Drawing.Size(132, 35);
+            this.buttonExcel.Size = new System.Drawing.Size(126, 35);
             this.buttonExcel.TabIndex = 16;
             this.buttonExcel.Text = "Xuất Excel";
             this.buttonExcel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -370,225 +641,11 @@ namespace MayNapKhiTPA.Forms
             this.buttonExcel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonExcel.UseVisualStyleBackColor = false;
             // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.buttonCustom2);
-            this.panel6.Controls.Add(this.label7);
-            this.panel6.Controls.Add(this.numericUpDown5);
-            this.panel6.Controls.Add(this.numericUpDown6);
-            this.panel6.Controls.Add(this.numericUpDown3);
-            this.panel6.Controls.Add(this.label6);
-            this.panel6.Controls.Add(this.numericUpDown4);
-            this.panel6.Controls.Add(this.numericUpDown2);
-            this.panel6.Controls.Add(this.numericUpDown1);
-            this.panel6.Controls.Add(this.checkBox3);
-            this.panel6.Controls.Add(this.checkBox2);
-            this.panel6.Controls.Add(this.label4);
-            this.panel6.Controls.Add(this.checkBox1);
-            this.panel6.Controls.Add(this.label3);
-            this.panel6.Controls.Add(this.dateTimePicker1);
-            this.panel6.Controls.Add(this.label2);
-            this.panel6.Controls.Add(this.label1);
-            this.panel6.Controls.Add(this.dateTimePickerTuNgay);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(208, 372);
-            this.panel6.TabIndex = 25;
-            // 
-            // buttonCustom2
-            // 
-            this.buttonCustom2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCustom2.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.buttonCustom2.BackgroundColor = System.Drawing.Color.LightSkyBlue;
-            this.buttonCustom2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonCustom2.BorderRadius = 3;
-            this.buttonCustom2.BorderSize = 0;
-            this.buttonCustom2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonCustom2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCustom2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.buttonCustom2.ForeColor = System.Drawing.Color.Black;
-            this.buttonCustom2.Image = ((System.Drawing.Image)(resources.GetObject("buttonCustom2.Image")));
-            this.buttonCustom2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonCustom2.Location = new System.Drawing.Point(39, 297);
-            this.buttonCustom2.Name = "buttonCustom2";
-            this.buttonCustom2.Size = new System.Drawing.Size(132, 32);
-            this.buttonCustom2.TabIndex = 18;
-            this.buttonCustom2.Text = "Lọc";
-            this.buttonCustom2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCustom2.TextColor = System.Drawing.Color.Black;
-            this.buttonCustom2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonCustom2.UseVisualStyleBackColor = false;
-            // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(100, 197);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(19, 13);
-            this.label7.TabIndex = 45;
-            this.label7.Text = "=>";
-            // 
-            // numericUpDown5
-            // 
-            this.numericUpDown5.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.numericUpDown5.Location = new System.Drawing.Point(134, 257);
-            this.numericUpDown5.Name = "numericUpDown5";
-            this.numericUpDown5.Size = new System.Drawing.Size(56, 20);
-            this.numericUpDown5.TabIndex = 44;
-            // 
-            // numericUpDown6
-            // 
-            this.numericUpDown6.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.numericUpDown6.Location = new System.Drawing.Point(27, 257);
-            this.numericUpDown6.Name = "numericUpDown6";
-            this.numericUpDown6.Size = new System.Drawing.Size(55, 20);
-            this.numericUpDown6.TabIndex = 43;
-            // 
-            // numericUpDown3
-            // 
-            this.numericUpDown3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.numericUpDown3.Location = new System.Drawing.Point(134, 195);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(56, 20);
-            this.numericUpDown3.TabIndex = 44;
-            // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(100, 259);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(19, 13);
-            this.label6.TabIndex = 42;
-            this.label6.Text = "=>";
-            // 
-            // numericUpDown4
-            // 
-            this.numericUpDown4.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.numericUpDown4.Location = new System.Drawing.Point(27, 195);
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(55, 20);
-            this.numericUpDown4.TabIndex = 43;
-            // 
-            // numericUpDown2
-            // 
-            this.numericUpDown2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.numericUpDown2.Location = new System.Drawing.Point(134, 134);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(56, 20);
-            this.numericUpDown2.TabIndex = 41;
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.numericUpDown1.Location = new System.Drawing.Point(27, 134);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(55, 20);
-            this.numericUpDown1.TabIndex = 40;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(27, 233);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(73, 17);
-            this.checkBox3.TabIndex = 36;
-            this.checkBox3.Text = "Lưu lượng";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(27, 175);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(67, 17);
-            this.checkBox2.TabIndex = 32;
-            this.checkBox2.Text = "Thể tích";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(100, 137);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(19, 13);
-            this.label4.TabIndex = 30;
-            this.label4.Text = "=>";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(27, 112);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(62, 17);
-            this.checkBox1.TabIndex = 28;
-            this.checkBox1.Text = "Áp suất";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(24, 82);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 13);
-            this.label3.TabIndex = 26;
-            this.label3.Text = "Tới ngày :";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(82, 79);
-            this.dateTimePicker1.MaxDate = new System.DateTime(2050, 12, 31, 0, 0, 0, 0);
-            this.dateTimePicker1.MinDate = new System.DateTime(2022, 1, 1, 0, 0, 0, 0);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(108, 20);
-            this.dateTimePicker1.TabIndex = 25;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 51);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 13);
-            this.label2.TabIndex = 24;
-            this.label2.Text = "Từ ngày :";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(60, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 23);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "Lọc dữ liệu";
-            // 
-            // dateTimePickerTuNgay
-            // 
-            this.dateTimePickerTuNgay.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.dateTimePickerTuNgay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerTuNgay.Location = new System.Drawing.Point(82, 48);
-            this.dateTimePickerTuNgay.MaxDate = new System.DateTime(2050, 12, 31, 0, 0, 0, 0);
-            this.dateTimePickerTuNgay.MinDate = new System.DateTime(2022, 1, 1, 0, 0, 0, 0);
-            this.dateTimePickerTuNgay.Name = "dateTimePickerTuNgay";
-            this.dateTimePickerTuNgay.Size = new System.Drawing.Size(108, 20);
-            this.dateTimePickerTuNgay.TabIndex = 22;
-            // 
             // FormResult
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1168, 508);
+            this.ClientSize = new System.Drawing.Size(916, 666);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "FormResult";
             this.Text = "FormResult";
@@ -600,8 +657,11 @@ namespace MayNapKhiTPA.Forms
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
@@ -621,16 +681,18 @@ namespace MayNapKhiTPA.Forms
         private Panel panel1;
         private TableLayoutPanel tableLayoutPanel1;
         private Panel panel4;
-        private Panel panel6;
-        private CheckBox checkBox3;
-        private CheckBox checkBox2;
-        private CheckBox checkBox1;
-        private Label label3;
-        private DateTimePicker dateTimePicker1;
-        private Label label2;
-        private Label label1;
-        private DateTimePicker dateTimePickerTuNgay;
-        private GroupBox groupBox1;
+        private LW_PhanMemBaoGia.MyControls.TextBoxT textBoxGoPage;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom6;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom5;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom4;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom3;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom1;
+        private TableLayoutPanel tableLayoutPanel2;
+        private Panel panel5;
+        private Panel panel7;
+        private ComboBox comboBoxSelectMay;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom2;
+        private Label label7;
         private NumericUpDown numericUpDown5;
         private NumericUpDown numericUpDown6;
         private NumericUpDown numericUpDown3;
@@ -638,16 +700,19 @@ namespace MayNapKhiTPA.Forms
         private NumericUpDown numericUpDown4;
         private NumericUpDown numericUpDown2;
         private NumericUpDown numericUpDown1;
+        private CheckBox checkBox3;
+        private CheckBox checkBox2;
         private Label label4;
-        private Label label7;
+        private CheckBox checkBox1;
+        private Label label3;
+        private DateTimePicker dateTimePicker1;
+        private Label label2;
+        private Label label1;
+        private DateTimePicker dateTimePickerTuNgay;
+        private Panel panel6;
+        private GroupBox groupBox1;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonPrint;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonExcel;
-        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom2;
-        private LW_PhanMemBaoGia.MyControls.TextBoxT textBoxGoPage;
-        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom6;
-        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom5;
-        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom4;
-        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom3;
-        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom1;
+        private Button buttonCallFormData;
     }
 }

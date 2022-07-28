@@ -25,16 +25,31 @@ namespace MayNapKhiTPA.Forms
 
             //
             DataTable dt = new DataTable();
-            dt.Columns.Add("No.");
-            dt.Columns.Add("Áp suất");
-            dt.Columns.Add("Lưu lượng");
-            dt.Columns.Add("Thể tích");
+            dt.Columns.Add("Mã mẻ");
+            dt.Columns.Add("Áp suất min");
+            dt.Columns.Add("Áp suất max");
+            dt.Columns.Add("Áp suất trung bình");
+
+            dt.Columns.Add("Lưu lượng min");
+            dt.Columns.Add("Lưu lượng max");
+            dt.Columns.Add("Lưu lượng trung bình");
+
+            dt.Columns.Add("Thể tích min");
+            dt.Columns.Add("Thể tích max");
+            dt.Columns.Add("Thể tích trung bình");
+
             dt.Columns.Add("Thời gian bắt đầu");
             dt.Columns.Add("Thời gian kết thúc");
+            dt.Columns.Add("Máy thực hiện");
+
             dt.Columns.Add("Ngày");
 
 
             dataGridViewResult.DataSource = dt;
+
+            List<string> listMay = new List<string> { "Máy nạp 1", "Máy nạp 2" };
+            comboBoxSelectMay.DataSource = listMay;
+
 
         }
 
@@ -53,5 +68,9 @@ namespace MayNapKhiTPA.Forms
             }
         }
 
+        private void buttonCallFormData_Click(object sender, EventArgs e)
+        {
+            new FormData().Show();
+        }
     }
 }

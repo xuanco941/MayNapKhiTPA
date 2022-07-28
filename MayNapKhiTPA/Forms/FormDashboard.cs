@@ -25,13 +25,26 @@ namespace MayNapKhiTPA.Forms
         public FormDashboard()
         {
             InitializeComponent();
+            string[] x = { "60 phút", "50 phút", "40 phút", "30 phút", "20 phút", "10 phút", "1 phút" };
 
-            // generate some fake data
-            double[] y = { 1, 2, 3, 4, 5, 7, 6, 9, 13 };
-            string[] schools = { "A", "B", "C", "D", "E", "F", "G", "H", "J" };
+            double[] y1 = { 1, 2, 3, 5, 7, 6, 13 };
+            double[] y2 = { 4, 1, 3, 6, 7, 8, 5 };
+            double[] y3 = { 2, 7, 8, 6, 7, 8, 18 };
+            double[] y4 = { 1, 2, 3, 6, 10, 6, 8 };
 
+
+            UpdateChart(zedGraphControl1,"Biểu Đồ Áp Suất","Áp suất",x,y1);
+            UpdateChart(zedGraphControl2, "Biểu Đồ Thể tích", "Thể tích", x, y2);
+            UpdateChart(zedGraphControl3, "Biểu Đồ Thể tích", "Thể tích", x, y3);
+            UpdateChart(zedGraphControl4, "Biểu Đồ Áp Suất", "Áp suất", x, y4);
+
+        }
+
+
+        private void UpdateChart(ZedGraphControl zedGraphControl, string title,string label ,string[] x, double[] y)
+        {
             //generate pane
-            var pane = zedGraphControl1.GraphPane;
+            var pane = zedGraphControl.GraphPane;
 
 
             pane.XAxis.Scale.IsVisible = true;
@@ -40,18 +53,18 @@ namespace MayNapKhiTPA.Forms
             pane.XAxis.MajorGrid.IsVisible = true;
             pane.YAxis.MajorGrid.IsVisible = true;
 
-            pane.XAxis.Scale.TextLabels = schools;
+            pane.XAxis.Scale.TextLabels = x;
             pane.XAxis.Type = AxisType.Text;
 
             //
-            zedGraphControl1.GraphPane.XAxis.Title.Text = "Thời gian";
-            zedGraphControl1.GraphPane.YAxis.Title.Text = "Đơn vị đo";
+            zedGraphControl.GraphPane.XAxis.Title.Text = "Thời gian";
+            zedGraphControl.GraphPane.YAxis.Title.Text = "Giá trị đo";
 
             //var pointsCurve;
-            zedGraphControl1.GraphPane.Title.Text = "Biểu đồ đo áp suất";
-            LineItem pointsCurve = pane.AddCurve("Áp suất", null, y, Color.Black);
+            zedGraphControl.GraphPane.Title.Text = title;
+            LineItem pointsCurve = pane.AddCurve(label, null, y, Color.Black);
             pointsCurve.Line.IsVisible = true;
-            pointsCurve.Line.Width = 3.0F;
+            pointsCurve.Line.Width = 1F;
             //Create your own scale of colors.
 
             pointsCurve.Symbol.Fill = new Fill(new Color[] { Color.Blue, Color.Green, Color.Red });
@@ -62,8 +75,10 @@ namespace MayNapKhiTPA.Forms
 
 
             pane.AxisChange();
-            zedGraphControl1.Refresh();
+            zedGraphControl.Refresh();
         }
+
+
 
     }
 }
