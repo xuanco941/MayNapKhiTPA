@@ -43,7 +43,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(123, 165);
+            this.label2.Location = new System.Drawing.Point(123, 166);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 20);
             this.label2.TabIndex = 8;
@@ -54,7 +54,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(120, 116);
+            this.label1.Location = new System.Drawing.Point(120, 118);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 20);
             this.label1.TabIndex = 7;
@@ -78,7 +78,7 @@
             this.textBoxTaiKhoan.BorderFocusColor = System.Drawing.SystemColors.ActiveCaption;
             this.textBoxTaiKhoan.BorderRadius = 5;
             this.textBoxTaiKhoan.BorderSize = 1;
-            this.textBoxTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxTaiKhoan.Location = new System.Drawing.Point(203, 111);
             this.textBoxTaiKhoan.Multiline = false;
             this.textBoxTaiKhoan.Name = "textBoxTaiKhoan";
@@ -86,7 +86,7 @@
             this.textBoxTaiKhoan.PasswordChar = false;
             this.textBoxTaiKhoan.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.textBoxTaiKhoan.PlaceholderText = "";
-            this.textBoxTaiKhoan.Size = new System.Drawing.Size(207, 31);
+            this.textBoxTaiKhoan.Size = new System.Drawing.Size(207, 33);
             this.textBoxTaiKhoan.TabIndex = 14;
             this.textBoxTaiKhoan.Texts = "";
             this.textBoxTaiKhoan.UnderlinedStyle = false;
@@ -99,7 +99,7 @@
             this.textBoxMatKhau.BorderFocusColor = System.Drawing.SystemColors.ActiveCaption;
             this.textBoxMatKhau.BorderRadius = 5;
             this.textBoxMatKhau.BorderSize = 1;
-            this.textBoxMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxMatKhau.Location = new System.Drawing.Point(203, 158);
             this.textBoxMatKhau.Multiline = false;
             this.textBoxMatKhau.Name = "textBoxMatKhau";
@@ -107,7 +107,7 @@
             this.textBoxMatKhau.PasswordChar = true;
             this.textBoxMatKhau.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.textBoxMatKhau.PlaceholderText = "";
-            this.textBoxMatKhau.Size = new System.Drawing.Size(207, 31);
+            this.textBoxMatKhau.Size = new System.Drawing.Size(207, 33);
             this.textBoxMatKhau.TabIndex = 15;
             this.textBoxMatKhau.Texts = "";
             this.textBoxMatKhau.UnderlinedStyle = false;

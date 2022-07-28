@@ -74,7 +74,7 @@ namespace MayNapKhiTPA.Forms
             this.tabControl1.Controls.Add(this.tabPageUser);
             this.tabControl1.Controls.Add(this.tabPageGroup);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
+            this.tabControl1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -86,10 +86,10 @@ namespace MayNapKhiTPA.Forms
             this.tabPageUser.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.tabPageUser.Controls.Add(this.panel2);
             this.tabPageUser.Controls.Add(this.panel3);
-            this.tabPageUser.Location = new System.Drawing.Point(4, 29);
+            this.tabPageUser.Location = new System.Drawing.Point(4, 30);
             this.tabPageUser.Name = "tabPageUser";
             this.tabPageUser.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageUser.Size = new System.Drawing.Size(989, 483);
+            this.tabPageUser.Size = new System.Drawing.Size(989, 482);
             this.tabPageUser.TabIndex = 0;
             this.tabPageUser.Text = "Tài khoản thành viên";
             // 
@@ -99,7 +99,7 @@ namespace MayNapKhiTPA.Forms
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(983, 426);
+            this.panel2.Size = new System.Drawing.Size(983, 425);
             this.panel2.TabIndex = 8;
             // 
             // dataGridViewUser
@@ -109,7 +109,7 @@ namespace MayNapKhiTPA.Forms
             this.dataGridViewUser.BackgroundColor = System.Drawing.Color.LightGray;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -123,7 +123,7 @@ namespace MayNapKhiTPA.Forms
             this.dataGridViewUser.RowHeadersVisible = false;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dataGridViewUser.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewUser.Size = new System.Drawing.Size(983, 426);
+            this.dataGridViewUser.Size = new System.Drawing.Size(983, 425);
             this.dataGridViewUser.TabIndex = 0;
             // 
             // panel3
@@ -137,7 +137,7 @@ namespace MayNapKhiTPA.Forms
             this.panel3.Controls.Add(this.buttonSuaNhanVien);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.panel3.Location = new System.Drawing.Point(3, 429);
+            this.panel3.Location = new System.Drawing.Point(3, 428);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(983, 51);
             this.panel3.TabIndex = 9;
@@ -270,10 +270,10 @@ namespace MayNapKhiTPA.Forms
             this.tabPageGroup.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.tabPageGroup.Controls.Add(this.panel1);
             this.tabPageGroup.Controls.Add(this.panel4);
-            this.tabPageGroup.Location = new System.Drawing.Point(4, 29);
+            this.tabPageGroup.Location = new System.Drawing.Point(4, 30);
             this.tabPageGroup.Name = "tabPageGroup";
             this.tabPageGroup.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageGroup.Size = new System.Drawing.Size(989, 483);
+            this.tabPageGroup.Size = new System.Drawing.Size(989, 482);
             this.tabPageGroup.TabIndex = 1;
             this.tabPageGroup.Text = "Phân quyền";
             // 
@@ -283,7 +283,7 @@ namespace MayNapKhiTPA.Forms
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(983, 426);
+            this.panel1.Size = new System.Drawing.Size(983, 425);
             this.panel1.TabIndex = 10;
             // 
             // dataGridViewGroup
@@ -293,7 +293,7 @@ namespace MayNapKhiTPA.Forms
             this.dataGridViewGroup.BackgroundColor = System.Drawing.Color.LightGray;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -307,7 +307,7 @@ namespace MayNapKhiTPA.Forms
             this.dataGridViewGroup.RowHeadersVisible = false;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dataGridViewGroup.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridViewGroup.Size = new System.Drawing.Size(983, 426);
+            this.dataGridViewGroup.Size = new System.Drawing.Size(983, 425);
             this.dataGridViewGroup.TabIndex = 0;
             // 
             // panel4
@@ -323,7 +323,7 @@ namespace MayNapKhiTPA.Forms
             this.panel4.Controls.Add(this.button5);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel4.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.panel4.Location = new System.Drawing.Point(3, 429);
+            this.panel4.Location = new System.Drawing.Point(3, 428);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(983, 51);
             this.panel4.TabIndex = 11;

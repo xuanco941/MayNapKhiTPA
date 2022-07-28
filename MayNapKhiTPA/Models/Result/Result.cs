@@ -16,12 +16,13 @@ namespace MayNapKhiTPA.Models
         public double LuuLuongAvg { get; set; }
         public DateTime TimeStart { get; set; }
         public DateTime TimeEnd { get; set; }
+        public int ID_Machine { get; set; }
         public int ID_User { get; set; }
         public Result()
         {
         }
 
-        public Result(int iD_Result, double apSuatMin, double apSuatMax, double apSuatAvg, double theTichMin, double theTichMax, double theTichAvg, double luuLuongMin, double luuLuongMax, double luuLuongAvg, DateTime timeStart, DateTime timeEnd, int iD_User)
+        public Result(int iD_Result, double apSuatMin, double apSuatMax, double apSuatAvg, double theTichMin, double theTichMax, double theTichAvg, double luuLuongMin, double luuLuongMax, double luuLuongAvg, DateTime timeStart, DateTime timeEnd, int iD_Machine, int iD_User)
         {
             ID_Result = iD_Result;
             ApSuatMin = apSuatMin;
@@ -35,6 +36,7 @@ namespace MayNapKhiTPA.Models
             LuuLuongAvg = luuLuongAvg;
             TimeStart = timeStart;
             TimeEnd = timeEnd;
+            ID_Machine = iD_Machine;
             ID_User = iD_User;
         }
     }

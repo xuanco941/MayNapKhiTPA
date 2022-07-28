@@ -30,13 +30,14 @@ namespace MayNapKhiTPA.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormActivity));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormActivity));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.dataGridViewActivity = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.buttonGoPage = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.buttonPageNext = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
@@ -64,10 +65,10 @@ namespace MayNapKhiTPA.Forms
             this.buttonCallFormEmployeeActivities = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.labelNotify = new System.Windows.Forms.Label();
+            this.dataGridViewActivity = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewActivity)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -76,6 +77,7 @@ namespace MayNapKhiTPA.Forms
             this.panel6.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewActivity)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -111,32 +113,6 @@ namespace MayNapKhiTPA.Forms
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(819, 438);
             this.panel3.TabIndex = 1;
-            // 
-            // dataGridViewActivity
-            // 
-            this.dataGridViewActivity.AllowUserToAddRows = false;
-            this.dataGridViewActivity.AllowUserToDeleteRows = false;
-            this.dataGridViewActivity.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewActivity.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewActivity.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewActivity.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewActivity.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewActivity.Location = new System.Drawing.Point(0, 0);
-            this.dataGridViewActivity.Name = "dataGridViewActivity";
-            this.dataGridViewActivity.ReadOnly = true;
-            this.dataGridViewActivity.RowHeadersVisible = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewActivity.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewActivity.RowTemplate.Height = 25;
-            this.dataGridViewActivity.Size = new System.Drawing.Size(819, 438);
-            this.dataGridViewActivity.TabIndex = 0;
             // 
             // panel2
             // 
@@ -316,7 +292,7 @@ namespace MayNapKhiTPA.Forms
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 110);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(208, 237);
+            this.panel5.Size = new System.Drawing.Size(208, 246);
             this.panel5.TabIndex = 14;
             // 
             // buttonLoc
@@ -362,12 +338,13 @@ namespace MayNapKhiTPA.Forms
             // 
             this.dateTimePickerTuNgay.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dateTimePickerTuNgay.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerTuNgay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePickerTuNgay.Location = new System.Drawing.Point(68, 65);
             this.dateTimePickerTuNgay.MaxDate = new System.DateTime(2050, 12, 31, 0, 0, 0, 0);
             this.dateTimePickerTuNgay.MinDate = new System.DateTime(2022, 1, 1, 0, 0, 0, 0);
             this.dateTimePickerTuNgay.Name = "dateTimePickerTuNgay";
-            this.dateTimePickerTuNgay.Size = new System.Drawing.Size(125, 20);
+            this.dateTimePickerTuNgay.Size = new System.Drawing.Size(125, 23);
             this.dateTimePickerTuNgay.TabIndex = 2;
             // 
             // label2
@@ -375,9 +352,10 @@ namespace MayNapKhiTPA.Forms
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 68);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 70);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 13);
+            this.label2.Size = new System.Drawing.Size(55, 15);
             this.label2.TabIndex = 4;
             this.label2.Text = "Từ ngày :";
             // 
@@ -385,12 +363,13 @@ namespace MayNapKhiTPA.Forms
             // 
             this.dateTimePickerToiNgay.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dateTimePickerToiNgay.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerToiNgay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePickerToiNgay.Location = new System.Drawing.Point(68, 94);
             this.dateTimePickerToiNgay.MaxDate = new System.DateTime(2050, 12, 31, 0, 0, 0, 0);
             this.dateTimePickerToiNgay.MinDate = new System.DateTime(2022, 1, 1, 0, 0, 0, 0);
             this.dateTimePickerToiNgay.Name = "dateTimePickerToiNgay";
-            this.dateTimePickerToiNgay.Size = new System.Drawing.Size(125, 20);
+            this.dateTimePickerToiNgay.Size = new System.Drawing.Size(125, 23);
             this.dateTimePickerToiNgay.TabIndex = 5;
             // 
             // label3
@@ -398,9 +377,10 @@ namespace MayNapKhiTPA.Forms
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 97);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(9, 98);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 13);
+            this.label3.Size = new System.Drawing.Size(58, 15);
             this.label3.TabIndex = 6;
             this.label3.Text = "Tới ngày :";
             // 
@@ -429,22 +409,22 @@ namespace MayNapKhiTPA.Forms
             // labelToiNgay
             // 
             this.labelToiNgay.AutoSize = true;
-            this.labelToiNgay.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.labelToiNgay.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelToiNgay.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelToiNgay.Location = new System.Drawing.Point(7, 27);
+            this.labelToiNgay.Location = new System.Drawing.Point(7, 30);
             this.labelToiNgay.Name = "labelToiNgay";
-            this.labelToiNgay.Size = new System.Drawing.Size(38, 13);
+            this.labelToiNgay.Size = new System.Drawing.Size(38, 15);
             this.labelToiNgay.TabIndex = 3;
             this.labelToiNgay.Text = "label5";
             // 
             // labelTuNgay
             // 
             this.labelTuNgay.AutoSize = true;
-            this.labelTuNgay.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.labelTuNgay.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTuNgay.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelTuNgay.Location = new System.Drawing.Point(7, 16);
+            this.labelTuNgay.Location = new System.Drawing.Point(7, 15);
             this.labelTuNgay.Name = "labelTuNgay";
-            this.labelTuNgay.Size = new System.Drawing.Size(38, 13);
+            this.labelTuNgay.Size = new System.Drawing.Size(38, 15);
             this.labelTuNgay.TabIndex = 1;
             this.labelTuNgay.Text = "label5";
             // 
@@ -474,33 +454,33 @@ namespace MayNapKhiTPA.Forms
             // labelPage
             // 
             this.labelPage.AutoSize = true;
-            this.labelPage.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.labelPage.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPage.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelPage.Location = new System.Drawing.Point(7, 40);
+            this.labelPage.Location = new System.Drawing.Point(7, 42);
             this.labelPage.Name = "labelPage";
-            this.labelPage.Size = new System.Drawing.Size(38, 13);
+            this.labelPage.Size = new System.Drawing.Size(38, 15);
             this.labelPage.TabIndex = 4;
             this.labelPage.Text = "label5";
             // 
             // labelBanGhiMoiTrang
             // 
             this.labelBanGhiMoiTrang.AutoSize = true;
-            this.labelBanGhiMoiTrang.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.labelBanGhiMoiTrang.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelBanGhiMoiTrang.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelBanGhiMoiTrang.Location = new System.Drawing.Point(7, 27);
+            this.labelBanGhiMoiTrang.Location = new System.Drawing.Point(7, 29);
             this.labelBanGhiMoiTrang.Name = "labelBanGhiMoiTrang";
-            this.labelBanGhiMoiTrang.Size = new System.Drawing.Size(38, 13);
+            this.labelBanGhiMoiTrang.Size = new System.Drawing.Size(38, 15);
             this.labelBanGhiMoiTrang.TabIndex = 3;
             this.labelBanGhiMoiTrang.Text = "label5";
             // 
             // labelTongSoTrang
             // 
             this.labelTongSoTrang.AutoSize = true;
-            this.labelTongSoTrang.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.labelTongSoTrang.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTongSoTrang.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelTongSoTrang.Location = new System.Drawing.Point(7, 16);
+            this.labelTongSoTrang.Location = new System.Drawing.Point(7, 15);
             this.labelTongSoTrang.Name = "labelTongSoTrang";
-            this.labelTongSoTrang.Size = new System.Drawing.Size(38, 13);
+            this.labelTongSoTrang.Size = new System.Drawing.Size(38, 15);
             this.labelTongSoTrang.TabIndex = 1;
             this.labelTongSoTrang.Text = "label5";
             // 
@@ -508,14 +488,14 @@ namespace MayNapKhiTPA.Forms
             // 
             this.buttonCallFormEmployeeActivities.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonCallFormEmployeeActivities.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.buttonCallFormEmployeeActivities.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.buttonCallFormEmployeeActivities.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.buttonCallFormEmployeeActivities.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCallFormEmployeeActivities.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.buttonCallFormEmployeeActivities.Image = global::MayNapKhiTPA.Properties.Resources.button2_Image;
-            this.buttonCallFormEmployeeActivities.Location = new System.Drawing.Point(0, 362);
+            this.buttonCallFormEmployeeActivities.Location = new System.Drawing.Point(0, 356);
             this.buttonCallFormEmployeeActivities.Name = "buttonCallFormEmployeeActivities";
-            this.buttonCallFormEmployeeActivities.Size = new System.Drawing.Size(208, 38);
+            this.buttonCallFormEmployeeActivities.Size = new System.Drawing.Size(208, 44);
             this.buttonCallFormEmployeeActivities.TabIndex = 10;
-            this.buttonCallFormEmployeeActivities.Text = "Nhân Viên Vận Hành";
+            this.buttonCallFormEmployeeActivities.Text = "Hoạt Động Tài Khoản";
             this.buttonCallFormEmployeeActivities.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonCallFormEmployeeActivities.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonCallFormEmployeeActivities.UseVisualStyleBackColor = true;
@@ -543,6 +523,48 @@ namespace MayNapKhiTPA.Forms
             this.labelNotify.TabIndex = 4;
             this.labelNotify.Text = "- Đỗ Văn Xuân vừa bắt đầu lần  nạp gần nhất";
             // 
+            // dataGridViewActivity
+            // 
+            this.dataGridViewActivity.AllowUserToAddRows = false;
+            this.dataGridViewActivity.AllowUserToDeleteRows = false;
+            this.dataGridViewActivity.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewActivity.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewActivity.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewActivity.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewActivity.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewActivity.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewActivity.Location = new System.Drawing.Point(0, 0);
+            this.dataGridViewActivity.Name = "dataGridViewActivity";
+            this.dataGridViewActivity.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewActivity.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewActivity.RowHeadersVisible = false;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewActivity.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridViewActivity.RowTemplate.Height = 25;
+            this.dataGridViewActivity.Size = new System.Drawing.Size(819, 438);
+            this.dataGridViewActivity.TabIndex = 0;
+            // 
             // FormActivity
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -555,7 +577,6 @@ namespace MayNapKhiTPA.Forms
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewActivity)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
@@ -567,6 +588,7 @@ namespace MayNapKhiTPA.Forms
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewActivity)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -576,7 +598,6 @@ namespace MayNapKhiTPA.Forms
         private TableLayoutPanel tableLayoutPanel1;
         private Panel panel1;
         private Panel panel3;
-        private DataGridView dataGridViewActivity;
         private Panel panel2;
         private Panel panel4;
         private GroupBox groupBox2;
@@ -604,5 +625,6 @@ namespace MayNapKhiTPA.Forms
         private Label labelPage;
         private Label labelBanGhiMoiTrang;
         private Label labelTongSoTrang;
+        private DataGridView dataGridViewActivity;
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using MayNapKhiTPA.Models;
 
 namespace MayNapKhiTPA
 {
@@ -13,11 +14,9 @@ namespace MayNapKhiTPA
 
         public static List<int> listIdUserHasDeleted = new List<int>();
 
-        public static string MessageErrorDashboard;
-        public static bool IsLoggedIn { get; set; } = false;
-        public static bool IsAdmin { get; set; } = false;
-
-        public static string UserNameCurrent = "";
+        //user login
+        public static User USERSESSION;
+        public static Group GROUPSESSION;
     }
 
 }

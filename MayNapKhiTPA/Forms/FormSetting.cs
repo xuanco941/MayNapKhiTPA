@@ -186,6 +186,7 @@ namespace MayNapKhiTPA.Forms
                     TemplateSettingBusiness.AddTemplateSetting(templateSetting);
                     callAlert?.Invoke("Thêm thành công.", FormAlert.enmType.Success);
                     LoadDataGridViewTemplateSetting();
+                    LoadSetting();
                 }
                 catch
                 {
@@ -258,6 +259,7 @@ namespace MayNapKhiTPA.Forms
                          double.Parse(TheTichNap), double.Parse(ThoiGianNap), double.Parse(ThoiGianLayMau));
                         callAlert?.Invoke("Cập nhật thành công.", FormAlert.enmType.Success);
                         LoadDataGridViewTemplateSetting();
+                        LoadSetting();
                     }
                     catch
                     {
@@ -294,6 +296,7 @@ namespace MayNapKhiTPA.Forms
                         textBoxTheTichNapTemplateSetting.Texts = null;
                         textBoxThoiGianNapTemplateSetting.Texts = null;
                         textBoxThoiGianLayMauTemplateSetting.Texts = null;
+                        LoadSetting();
                     }
 
                 }
@@ -433,6 +436,72 @@ namespace MayNapKhiTPA.Forms
             else
             {
                 callAlert?.Invoke("Hãy chọn một ca làm trước khi xóa.", FormAlert.enmType.Warning);
+            }
+        }
+
+
+        //select bình
+        private void comboBoxSelectTemplateSetting_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // lấy ra thông tin user có username là username trên combobox
+            TemplateSetting templateSetting = TemplateSettingBusiness.GetTemplateSettingFromName(comboBoxSelectTemplateSetting.Text);
+
+            //show trên textbox
+
+            if (comboBoxSelectTemplateSetting.Text != "Tùy chỉnh")
+            {
+                textBoxApSuatNap.Texts = templateSetting.ApSuatNap.ToString();
+                textBoxTheTichNap.Texts = templateSetting.TheTichNap.ToString();
+                textBoxThoiGianNap.Texts = templateSetting.ThoiGianNap.ToString();
+                textBoxThoiGianLayMau.Texts = templateSetting.ThoiGianLayMau.ToString();
+
+                textBoxApSuatNap.ForeColor = Color.FromArgb(62, 120, 138);
+                textBoxTheTichNap.ForeColor = Color.FromArgb(62, 120, 138);
+                textBoxThoiGianNap.ForeColor = Color.FromArgb(62, 120, 138);
+                textBoxThoiGianLayMau.ForeColor = Color.FromArgb(62, 120, 138);
+            }
+
+
+        }
+
+        private void buttonSaveSetting_Click(object sender, EventArgs e)
+        {
+            string Name = comboBoxSelectTemplateSetting.Text;
+            string ApSuatNap = textBoxApSuatNap.Texts;
+            string TheTichNap = textBoxTheTichNap.Texts;
+            string ThoiGianNap = textBoxThoiGianNap.Texts;
+            string ThoiGianLayMau = textBoxThoiGianLayMau.Texts;
+
+            if (!String.IsNullOrEmpty(Name) && !String.IsNullOrEmpty(ApSuatNap) && textBoxApSuatNap.Texts != textBoxApSuatNap.PlaceholderText
+            && !String.IsNullOrEmpty(TheTichNap) && textBoxTheTichNap.Texts != textBoxTheTichNap.PlaceholderText
+            && !String.IsNullOrEmpty(ThoiGianNap) && textBoxThoiGianNap.Texts != textBoxThoiGianNap.PlaceholderText
+            && !String.IsNullOrEmpty(ThoiGianLayMau) && textBoxThoiGianLayMau.Texts != textBoxThoiGianLayMau.PlaceholderText)
+            {
+                try
+                {
+                    SettingBusiness.UpdateSetting(Name, double.Parse(ApSuatNap), double.Parse(TheTichNap), double.Parse(ThoiGianNap), double.Parse(ThoiGianLayMau));
+
+                    //lưu lại hành động thay đôi cài đặt
+                    Activity activity = new Activity();
+                    activity.Description = "Cập nhật cài đặt máy";
+                    activity.IsSetting = true;
+                    activity.ID_User = Common.USERSESSION.ID_User;
+                    ActivityBusiness.AddActivity(activity);
+                    //load lại datagridview + thông số cài đặt hiện tại
+                    LoadSetting();
+                    LoadDataGridViewSetting();
+                    //aleart
+                    callAlert?.Invoke("Cập nhật cài đặt máy thành công.", FormAlert.enmType.Success);
+
+                }
+                catch
+                {
+                    callAlert?.Invoke("Lỗi hệ thống, không thể cập nhật cài đặt.", FormAlert.enmType.Error);
+                }
+            }
+            else
+            {
+                callAlert?.Invoke("Các trường cài đặt không được trống.", FormAlert.enmType.Error);
             }
         }
     }

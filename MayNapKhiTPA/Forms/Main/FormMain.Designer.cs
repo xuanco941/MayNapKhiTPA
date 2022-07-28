@@ -198,19 +198,20 @@ namespace MayNapKhiTPA.Forms
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Monotype Corsiva", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label2.Location = new System.Drawing.Point(28, 15);
+            this.label2.Location = new System.Drawing.Point(68, 15);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(149, 43);
+            this.label2.Size = new System.Drawing.Size(81, 43);
             this.label2.TabIndex = 0;
-            this.label2.Text = "LeanWay";
+            this.label2.Text = "TPA";
             // 
             // labelHeader
             // 
             this.labelHeader.AutoSize = true;
+            this.labelHeader.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHeader.ForeColor = System.Drawing.Color.LightGray;
-            this.labelHeader.Location = new System.Drawing.Point(22, 28);
+            this.labelHeader.Location = new System.Drawing.Point(13, 24);
             this.labelHeader.Name = "labelHeader";
-            this.labelHeader.Size = new System.Drawing.Size(121, 21);
+            this.labelHeader.Size = new System.Drawing.Size(148, 25);
             this.labelHeader.TabIndex = 2;
             this.labelHeader.Text = "Bảng điều khiển";
             // 
@@ -244,7 +245,7 @@ namespace MayNapKhiTPA.Forms
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 170F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 193F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.panelAleart, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 0, 0);
@@ -260,9 +261,9 @@ namespace MayNapKhiTPA.Forms
             // 
             this.panelAleart.AutoScroll = true;
             this.panelAleart.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelAleart.Location = new System.Drawing.Point(173, 3);
+            this.panelAleart.Location = new System.Drawing.Point(196, 3);
             this.panelAleart.Name = "panelAleart";
-            this.panelAleart.Size = new System.Drawing.Size(1062, 70);
+            this.panelAleart.Size = new System.Drawing.Size(1039, 70);
             this.panelAleart.TabIndex = 5;
             // 
             // panel2
@@ -271,7 +272,7 @@ namespace MayNapKhiTPA.Forms
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(164, 70);
+            this.panel2.Size = new System.Drawing.Size(187, 70);
             this.panel2.TabIndex = 0;
             // 
             // FormMain

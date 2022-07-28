@@ -22,13 +22,14 @@ namespace MayNapKhiTPA.Forms
 
             //
             FormDashboard formDashboard = new FormDashboard();
-            this.Font = new Font("Arial", 9);
+            this.Font = new Font("Bahnschrift", 11);
             ChangeFormContent(formDashboard);
         }
 
         private void buttonThoat_Click(object sender, EventArgs e)
         {
-            Common.IsLoggedIn = false;
+            Common.USERSESSION = null;
+            Common.GROUPSESSION = null;
             Application.Restart();
         }
 
@@ -51,7 +52,7 @@ namespace MayNapKhiTPA.Forms
             FormEmployeeManagement formEmployeeManagement = new FormEmployeeManagement();
             formEmployeeManagement.callAlert = new FormEmployeeManagement.CallAlert(Alert);
             ChangeFormContent(formEmployeeManagement);
-            this.Font = new Font("Arial", 11);
+            this.Font = new Font("Bahnschrift", 11);
 
         }
 
@@ -61,7 +62,7 @@ namespace MayNapKhiTPA.Forms
             FormActivity formActivity = new FormActivity();
             formActivity.callAlert = new FormActivity.CallAlert(Alert);
             ChangeFormContent(formActivity);
-            this.Font = new Font("Arial", 11);
+            this.Font = new Font("Bahnschrift", 11);
 
         }
 
@@ -71,7 +72,7 @@ namespace MayNapKhiTPA.Forms
             FormDashboard formDashboard = new FormDashboard();
             formDashboard.callAlert = new FormDashboard.CallAlert(Alert);
             ChangeFormContent(formDashboard);
-            this.Font = new Font("Arial", 11);
+            this.Font = new Font("Bahnschrift", 11);
 
 
         }
@@ -81,7 +82,7 @@ namespace MayNapKhiTPA.Forms
             labelHeader.Text = "Lịch sử nạp khí";
             FormResult formResult = new FormResult();
             ChangeFormContent(formResult);
-            this.Font = new Font("Arial", 11);
+            this.Font = new Font("Bahnschrift", 11);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -90,7 +91,7 @@ namespace MayNapKhiTPA.Forms
             FormSetting formSetting = new FormSetting();
             formSetting.callAlert = new FormSetting.CallAlert(Alert);
             ChangeFormContent(formSetting);
-            this.Font = new Font("Arial", 11);
+            this.Font = new Font("Bahnschrift", 11);
         }
 
 

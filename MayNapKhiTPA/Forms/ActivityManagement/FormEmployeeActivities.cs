@@ -18,6 +18,8 @@ namespace MayNapKhiTPA.Forms.ActivityManagement
         {
             InitializeComponent();
             LoadPanelUser();
+            //setting header column
+            dataGridViewUserActivity.ColumnHeadersDefaultCellStyle.Font = new Font("Bahnschrift", 12, FontStyle.Regular);
         }
 
         private void LoadPanelUser()
@@ -39,6 +41,7 @@ namespace MayNapKhiTPA.Forms.ActivityManagement
                 btn.ForeColor = Color.FromName("#B0B3B8");
                 btn.BackColor = Color.FromName("#3a3b3c");
                 btn.Dock = DockStyle.Top;
+                btn.Cursor = Cursors.Hand;
                 btn.Click += new EventHandler(handleClickButtonUser);
                 panelUser.Controls.Add(btn);
             }
@@ -54,8 +57,8 @@ namespace MayNapKhiTPA.Forms.ActivityManagement
         private void LoadDatagridView(List<Activity> activities)
         {
             DataTable dt = new DataTable();
-            dt.Columns.Add("Hoạt động", typeof(string));
-            dt.Columns.Add("Ngày thực hiện", typeof(DateTime));
+            dt.Columns.Add("Hoạt động");
+            dt.Columns.Add("Ngày thực hiện");
             activities.ForEach(delegate (Activity activity)
             {
                 string createAt = activity.Create_At.ToString("dd/MM/yyyy hh:mm:ss", CultureInfo.InvariantCulture);

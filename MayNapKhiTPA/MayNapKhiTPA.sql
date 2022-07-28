@@ -61,6 +61,7 @@ LuuLuongMax FLOAT,
 LuuLuongAvg FLOAT,
 TimeStart DATETIME DEFAULT GETDATE(),
 TimeEnd DATETIME,
+ID_Machine INT,
 ID_User int,
 FOREIGN KEY (ID_User) REFERENCES [User](ID_User)
 )
@@ -538,6 +539,7 @@ exec AddActivity N'Thay đổi thể tích nạp',1,3
 exec AddActivity 'Start',0,2
 Go
 
+exec AddTemplateSetting N'Tùy chỉnh',100,100,60,60
 exec AddTemplateSetting N'Binh 1',342,32,55,43
 exec AddTemplateSetting N'Binh 2',23,56,32,76
 exec AddTemplateSetting N'Binh 3',23,44,55,43
@@ -546,4 +548,5 @@ exec AddTemplateSetting N'Binh 5',45,34,100,43
 exec AddTemplateSetting N'Binh 6',56,398,55,43
 exec AddTemplateSetting N'Binh 1',86,98,55,43
 
+select * from TemplateSetting
 

@@ -19,7 +19,7 @@ namespace MayNapKhiTPA
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormLogin());
 
-            if (Common.IsLoggedIn)
+            if (Common.USERSESSION != null)
             {
                 Application.Run(new FormMain());
             }

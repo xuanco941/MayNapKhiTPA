@@ -33,12 +33,12 @@ namespace MayNapKhiTPA
             {
                 try
                 {
-                    if (UserBusiness.AuthLogin(Username, Password) == true)
+                    // Lưu quyền và thông tin của user vào 2 biến USERSESSION và GROUPSESSION
+                    Common.USERSESSION = UserBusiness.AuthLogin(Username, Password);
+                    if (Common.USERSESSION != null)
                     {
+                        Common.GROUPSESSION = GroupBusiness.GetGroupFromID(Common.USERSESSION.ID_Group);
                         this.Close();
-                        Common.UserNameCurrent = Username;
-                        Common.IsLoggedIn = true;
-
                     }
                     else
                     {
@@ -47,7 +47,7 @@ namespace MayNapKhiTPA
                 }
                 catch
                 {
-                    MessageBox.Show("Lỗi server", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Lỗi hệ thống.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }

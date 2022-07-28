@@ -6,7 +6,7 @@ namespace MayNapKhiTPA.Models
 
     public class UserBusiness
     {
-        public static bool AuthLogin(string username, string password)
+        public static User AuthLogin(string username, string password)
         {
             SqlConnection sqlConnection = new SqlConnection(Common.ConnectionString);
             sqlConnection.Open();
@@ -15,16 +15,18 @@ namespace MayNapKhiTPA.Models
             var command = new SqlCommand(sql, sqlConnection);
             SqlDataReader sqlDataReader = command.ExecuteReader();
 
-            // 3 la cloumn password
             if (sqlDataReader.Read() && ((string)sqlDataReader["Password"]).Trim() == password.ToString().Trim())
             {
+                User user = new User((int)sqlDataReader["ID_User"], (string)sqlDataReader["FullName"],
+                    (string)sqlDataReader["Username"], (string)sqlDataReader["Password"], (string)sqlDataReader["PhoneNumber"],
+                    (string)sqlDataReader["Email"], (int)sqlDataReader["ID_Shift"], (int)sqlDataReader["ID_Group"]);
                 sqlConnection.Close();
-                return true;
+                return user;
             }
             else
             {
                 sqlConnection.Close();
-                return false;
+                return null;
             }
         }
 
@@ -39,7 +41,8 @@ namespace MayNapKhiTPA.Models
             while (sqlDataReader.Read())
             {
                 User user = new User((int)sqlDataReader["ID_User"], (string)sqlDataReader["FullName"],
-                    (string)sqlDataReader["Username"], (string)sqlDataReader["Password"], (string)sqlDataReader["PhoneNumber"], (string)sqlDataReader["Email"], (int)sqlDataReader["ID_Shift"], (int)sqlDataReader["ID_Group"]);
+                    (string)sqlDataReader["Username"], (string)sqlDataReader["Password"], (string)sqlDataReader["PhoneNumber"],
+                    (string)sqlDataReader["Email"], (int)sqlDataReader["ID_Shift"], (int)sqlDataReader["ID_Group"]);
                 list.Add(user);
             }
             sqlConnection.Close();

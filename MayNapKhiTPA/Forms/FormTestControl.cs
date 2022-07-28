@@ -18,6 +18,18 @@ namespace MayNapKhiTPA.Forms
             dateTimePicker1.Format = DateTimePickerFormat.Time;
             dateTimePicker1.ShowUpDown = true;
 
+
+            //
+            //
+            DataTable dt = new DataTable();
+            dt.Columns.Add("No.", typeof(int));
+            dt.Columns.Add("Hoạt động", typeof(string));
+            dt.Columns.Add("Thời gian", typeof(DateTime));
+            dt.Columns.Add("Tên người thực hiện");
+
+            // load datagridview từ tham số activities truyền vào
+            
+            dataGridView1.DataSource = dt;
         }
     }
 }

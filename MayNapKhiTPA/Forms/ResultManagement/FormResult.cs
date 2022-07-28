@@ -47,7 +47,7 @@ namespace MayNapKhiTPA.Forms
 
             dataGridViewResult.DataSource = dt;
 
-            List<string> listMay = new List<string> { "Máy nạp 1", "Máy nạp 2" };
+            List<string> listMay = new List<string> { "Máy nạp 1", "Máy nạp 2", "Tất cả" };
             comboBoxSelectMay.DataSource = listMay;
 
 

@@ -32,6 +32,9 @@ namespace MayNapKhiTPA.Forms
         {
             InitializeComponent();
             GetActivities();
+
+            //setting header column
+            dataGridViewActivity.ColumnHeadersDefaultCellStyle.Font = new Font("Bahnschrift", 12, FontStyle.Regular);
         }
 
 
@@ -68,9 +71,9 @@ namespace MayNapKhiTPA.Forms
 
             //
             DataTable dt = new DataTable();
-            dt.Columns.Add("No.", typeof(int));
-            dt.Columns.Add("Hoạt động", typeof(string));
-            dt.Columns.Add("Thời gian", typeof(DateTime));
+            dt.Columns.Add("No.");
+            dt.Columns.Add("Hoạt động");
+            dt.Columns.Add("Thời gian");
             dt.Columns.Add("Tên người thực hiện");
 
             // load datagridview từ tham số activities truyền vào

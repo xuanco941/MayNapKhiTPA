@@ -102,7 +102,7 @@ namespace MayNapKhiTPA.Models
             SqlConnection sqlConnection = new SqlConnection(Common.ConnectionString);
             sqlConnection.Open();
             SqlCommand command = new SqlCommand();
-            command.CommandText = $"AddActivity {activity.Description}, {activity.IsSetting}, {activity.ID_User}";
+            command.CommandText = $"AddActivity N'{activity.Description}', {activity.IsSetting}, {activity.ID_User}";
             command.Connection = sqlConnection;
 
             command.ExecuteNonQuery();

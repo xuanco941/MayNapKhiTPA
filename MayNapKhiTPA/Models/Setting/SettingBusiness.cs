@@ -6,13 +6,14 @@ namespace MayNapKhiTPA.Models
 {
     public class SettingBusiness
     {
-        public static void UpdateSetting(double apSuatNap, double theTichNap, double thoiGianNap, double thoiGianLayMau)
+        public static void UpdateSetting(string Name, double apSuatNap, double theTichNap, double thoiGianNap, double thoiGianLayMau)
         {
             SqlConnection sqlConnection = new SqlConnection(Common.ConnectionString);
             sqlConnection.Open();
             SqlCommand command = new SqlCommand();
-            command.CommandText = "exec UpdateSetting @ApSuatNap, @TheTichNap, @ThoiGianNap, @ThoiGianLayMau";
+            command.CommandText = "exec UpdateSetting @NameTemplateSetting, @ApSuatNap, @TheTichNap, @ThoiGianNap, @ThoiGianLayMau";
 
+            command.Parameters.AddWithValue("NameTemplateSetting", Name);
             command.Parameters.AddWithValue("ApSuatNap", apSuatNap);
             command.Parameters.AddWithValue("TheTichNap", theTichNap);
             command.Parameters.AddWithValue("ThoiGianNap", thoiGianNap);

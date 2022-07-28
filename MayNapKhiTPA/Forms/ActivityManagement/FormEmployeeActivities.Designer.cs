@@ -40,8 +40,8 @@ namespace MayNapKhiTPA.Forms.ActivityManagement
             // panelUser
             // 
             this.panelUser.AutoScroll = true;
-            this.panelUser.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelUser.Location = new System.Drawing.Point(0, 0);
+            this.panelUser.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelUser.Location = new System.Drawing.Point(1042, 0);
             this.panelUser.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelUser.Name = "panelUser";
             this.panelUser.Size = new System.Drawing.Size(277, 615);
@@ -54,7 +54,7 @@ namespace MayNapKhiTPA.Forms.ActivityManagement
             this.dataGridViewUserActivity.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -62,7 +62,7 @@ namespace MayNapKhiTPA.Forms.ActivityManagement
             this.dataGridViewUserActivity.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewUserActivity.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewUserActivity.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewUserActivity.Location = new System.Drawing.Point(277, 0);
+            this.dataGridViewUserActivity.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewUserActivity.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridViewUserActivity.Name = "dataGridViewUserActivity";
             this.dataGridViewUserActivity.ReadOnly = true;

@@ -18,6 +18,9 @@ namespace MayNapKhiTPA.Models
             Create_At = create_At;
             ID_User = iD_User;
         }
+        public Activity()
+        {
+        }
     }
 }
 

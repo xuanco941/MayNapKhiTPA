@@ -67,9 +67,9 @@ namespace MayNapKhiTPA.Forms
                 {
                     UserBusiness.UpdateUser(usernameOld, user);
                     //nếu username cũ là username current , biến tĩnh của program thì cập nhật lại usercurrent
-                    if(usernameOld == Common.UserNameCurrent)
+                    if(usernameOld == Common.USERSESSION.Username)
                     {
-                        Common.UserNameCurrent = user.Username;
+                        Common.USERSESSION.Username = user.Username;
                     }
                     //thông báo
                     changeData?.Invoke("Cập nhật thành công.", FormAlert.enmType.Success);
@@ -112,7 +112,7 @@ namespace MayNapKhiTPA.Forms
         private void comboBoxSelectUsername_SelectedIndexChanged(object sender, EventArgs e)
         {
             //vô hiệu hóa nút xóa khi đây là tài khoản hiện tại
-            if (comboBoxSelectUsername.Text == Common.UserNameCurrent)
+            if (comboBoxSelectUsername.Text == Common.USERSESSION.Username)
             {
                 buttonDelete.Enabled = false;
             }
