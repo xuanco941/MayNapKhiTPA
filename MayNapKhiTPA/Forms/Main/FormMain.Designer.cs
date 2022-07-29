@@ -197,10 +197,10 @@ namespace MayNapKhiTPA.Forms
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Monotype Corsiva", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label2.Location = new System.Drawing.Point(68, 15);
+            this.label2.Font = new System.Drawing.Font("Monotype Corsiva", 33.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(58, 12);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 43);
+            this.label2.Size = new System.Drawing.Size(101, 54);
             this.label2.TabIndex = 0;
             this.label2.Text = "TPA";
             // 

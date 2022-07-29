@@ -154,7 +154,7 @@
     <Compile Include="Models\Activity\ActivityBusiness.cs" />
     <Compile Include="Models\Data\Data.cs" />
     <Compile Include="Models\Data\DataBusiness.cs" />
-    <Compile Include="Models\TemplateSetting\TemplateSettingBusiness.cs" />
+    <Compile Include="Models\TemplateMachine\TemplateMachineBusiness.cs" />
     <Compile Include="Models\User\User.cs" />
     <Compile Include="Models\User\UserBusiness.cs" />
     <Compile Include="Models\User\Rules.cs" />
@@ -162,11 +162,11 @@
     <Compile Include="Models\Group\GroupBusiness.cs" />
     <Compile Include="Models\Result\Result.cs" />
     <Compile Include="Models\Result\ResultBusiness.cs" />
-    <Compile Include="Models\Setting\Setting.cs" />
-    <Compile Include="Models\Setting\SettingBusiness.cs" />
+    <Compile Include="Models\Machine\Machine.cs" />
+    <Compile Include="Models\Machine\MachineBusiness.cs" />
     <Compile Include="Models\Shift\Shift.cs" />
     <Compile Include="Models\Shift\ShiftBusiness.cs" />
-    <Compile Include="Models\TemplateSetting\TemplateSetting.cs" />
+    <Compile Include="Models\TemplateMachine\TemplateMachine.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\ActivityManagement\FormActivity.resx">

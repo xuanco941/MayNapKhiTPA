@@ -50,16 +50,15 @@ namespace MayNapKhiTPA.Forms
             string password = textBoxPassword.Texts.Trim();
             string phonenumber = textBoxPhoneNumber.Texts.Trim();
             string email = textBoxEmail.Texts.Trim();
+            string nameshift = comboBoxSelectShift.Text;
 
             //get id shift và group từ tên tên combobox (name unique)
-            int id_shift = ShiftBusiness.GetShiftFromName(comboBoxSelectShift.Text).ID_Shift;
             int id_group = GroupBusiness.GetGroupFromName(comboBoxSelectGroup.Text).ID_Group;
 
-            User user = new User(fullname, username, password, phonenumber, email, id_shift, id_group);
+            User user = new User(fullname, username, password, phonenumber, email, nameshift, id_group);
             if (String.IsNullOrEmpty(fullname) || String.IsNullOrEmpty(username) || String.IsNullOrEmpty(password))
             {
                 MessageBox.Show("Vui lòng điền đủ thông tin.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
             }
             else
             {
@@ -78,7 +77,6 @@ namespace MayNapKhiTPA.Forms
                 {
                     changeData?.Invoke(ex.Message, FormAlert.enmType.Error);
                 }
-                this.Close();
 
             }
 
@@ -133,7 +131,7 @@ namespace MayNapKhiTPA.Forms
             textBoxPassword.Texts = user.Password;
             textBoxPhoneNumber.Texts = user.PhoneNumber;
             textBoxEmail.Texts = user.Email;
-            comboBoxSelectShift.Text = ShiftBusiness.GetShiftFromID(user.ID_Shift).Name;
+            comboBoxSelectShift.Text = user.NameShift;
             comboBoxSelectGroup.Text = GroupBusiness.GetGroupFromID(user.ID_Group).Name;
         }
 

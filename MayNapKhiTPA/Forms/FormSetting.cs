@@ -86,17 +86,17 @@ namespace MayNapKhiTPA.Forms
         //Load setting
         private void LoadSetting()
         {
-            Setting setting = SettingBusiness.GetSetting();
-            buttonNameSetting.Text = "Loại bình : " + setting.NameTemplateSetting;
-            buttonApSuatNap.Text = "Áp suất nạp : " + setting.ApSuatNap + " bar";
-            buttonTheTichNap.Text = "Thể tích nạp : " + setting.TheTichNap + " m3";
-            buttonThoiGianNap.Text = "Thời gian nạp : " + setting.ThoiGianNap + " phút";
-            buttonThoiGianLayMau.Text = "Thời gian lấy mẫu : " + setting.ThoiGianLayMau + " phút";
+            Machine machine = MachineBusiness.GetMachine1();
+            buttonNameSetting.Text = "Loại bình : " + machine.NameTemplateMachine;
+            buttonApSuatNap.Text = "Áp suất nạp : " + machine.ApSuatNap + " bar";
+            buttonTheTichNap.Text = "Thể tích nạp : " + machine.TheTichNap + " m3";
+            buttonThoiGianNap.Text = "Thời gian nạp : " + machine.ThoiGianNap + " phút";
+            buttonThoiGianLayMau.Text = "Thời gian lấy mẫu : " + machine.ThoiGianLayMau + " phút";
 
             //load combobox select bình
-            var listTemplateSetting = TemplateSettingBusiness.GetAllTemplateSettings();
-            var listNameTemplateSetting = from templateSetting in listTemplateSetting select templateSetting.Name;
-            comboBoxSelectTemplateSetting.DataSource = listNameTemplateSetting.ToList();
+            var listTemplateMachine = TemplateMachineBusiness.GetAllTemplateMachines();
+            var listTemplateMachineName = from templateMachine in listTemplateMachine select templateMachine.Name;
+            comboBoxSelectTemplateSetting.DataSource = listTemplateMachineName.ToList();
         }
 
         //Load datagridview setting
@@ -113,7 +113,7 @@ namespace MayNapKhiTPA.Forms
             int count = 1;
             list.ForEach(delegate (Activity activity)
             {
-                User user = UserBusiness.GetUserFromID(activity.ID_User);
+                User user = UserBusiness.GetUserFromUserName(activity.Worker);
                 //format date từ sql -> c#
                 string createAt = activity.Create_At.ToString("dd/MM/yyyy hh:mm:ss", CultureInfo.InvariantCulture);
                 dt.Rows.Add(count, activity.Description, createAt, user.FullName);
@@ -125,7 +125,7 @@ namespace MayNapKhiTPA.Forms
         // Load Datagridview TemplateSetting
         private void LoadDataGridViewTemplateSetting()
         {
-            List<TemplateSetting> list = TemplateSettingBusiness.GetAllTemplateSettings();
+            List<TemplateMachine> list = TemplateMachineBusiness.GetAllTemplateMachines();
             DataTable dt = new DataTable();
             dt.Columns.Add("Mã bình");
             dt.Columns.Add("Tên bình");
@@ -133,9 +133,9 @@ namespace MayNapKhiTPA.Forms
             dt.Columns.Add("Thể tích nạp (m3)");
             dt.Columns.Add("Thời gian nạp (phút)");
             dt.Columns.Add("Thời gian lấy mẫu (phút)");
-            list.ForEach(delegate (TemplateSetting templateSetting)
+            list.ForEach(delegate (TemplateMachine templateSetting)
             {
-                dt.Rows.Add(templateSetting.ID_TemplateSetting, templateSetting.Name, templateSetting.ApSuatNap, templateSetting.TheTichNap, templateSetting.ThoiGianNap, templateSetting.ThoiGianLayMau);
+                dt.Rows.Add(templateSetting.ID_TemplateMachine, templateSetting.Name, templateSetting.ApSuatNap, templateSetting.TheTichNap, templateSetting.ThoiGianNap, templateSetting.ThoiGianLayMau);
             });
             dataGridViewTemplateSetting.DataSource = dt;
         }
@@ -175,15 +175,15 @@ namespace MayNapKhiTPA.Forms
                && !String.IsNullOrEmpty(ThoiGianNap) && ThoiGianNap != textBoxThoiGianNapTemplateSetting.PlaceholderText
                && !String.IsNullOrEmpty(ThoiGianLayMau) && ThoiGianLayMau != textBoxThoiGianLayMauTemplateSetting.PlaceholderText)
             {
-                TemplateSetting templateSetting = new TemplateSetting();
-                templateSetting.Name = Name;
-                templateSetting.ApSuatNap = double.Parse(ApSuatNap);
-                templateSetting.TheTichNap = double.Parse(TheTichNap);
-                templateSetting.ThoiGianNap = double.Parse(ThoiGianNap);
-                templateSetting.ThoiGianLayMau = double.Parse(ThoiGianLayMau);
+                TemplateMachine templateMachine = new TemplateMachine();
+                templateMachine.Name = Name;
+                templateMachine.ApSuatNap = double.Parse(ApSuatNap);
+                templateMachine.TheTichNap = double.Parse(TheTichNap);
+                templateMachine.ThoiGianNap = double.Parse(ThoiGianNap);
+                templateMachine.ThoiGianLayMau = double.Parse(ThoiGianLayMau);
                 try
                 {
-                    TemplateSettingBusiness.AddTemplateSetting(templateSetting);
+                    TemplateMachineBusiness.AddTemplateMachine(templateMachine);
                     callAlert?.Invoke("Thêm thành công.", FormAlert.enmType.Success);
                     LoadDataGridViewTemplateSetting();
                     LoadSetting();
@@ -201,7 +201,7 @@ namespace MayNapKhiTPA.Forms
         }
 
         //select template setting
-        private int ID_TemplateSetting_Selected = 0;
+        private int ID_TemplateMachine_Selected = 0;
         private void dataGridViewTemplateSetting_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int rowIndex = e.RowIndex;
@@ -211,7 +211,7 @@ namespace MayNapKhiTPA.Forms
                 row = dataGridViewTemplateSetting.Rows[rowIndex];
 
                 //id được selected
-                ID_TemplateSetting_Selected = int.Parse(row.Cells[0].Value.ToString());
+                ID_TemplateMachine_Selected = int.Parse(row.Cells[0].Value.ToString());
 
                 textBoxNameTemplateSetting.Texts = Convert.ToString(row.Cells[1].Value);
                 textBoxApSuatNapTemplateSetting.Texts = Convert.ToString(row.Cells[2].Value);
@@ -251,11 +251,11 @@ namespace MayNapKhiTPA.Forms
                && !String.IsNullOrEmpty(ThoiGianNap) && ThoiGianNap != textBoxThoiGianNapTemplateSetting.PlaceholderText
                && !String.IsNullOrEmpty(ThoiGianLayMau) && ThoiGianLayMau != textBoxThoiGianLayMauTemplateSetting.PlaceholderText)
             {
-                if (ID_TemplateSetting_Selected != 0)
+                if (ID_TemplateMachine_Selected != 0)
                 {
                     try
                     {
-                        TemplateSettingBusiness.UpdateTemplateSetting(ID_TemplateSetting_Selected, Name, double.Parse(ApSuatNap),
+                        TemplateMachineBusiness.UpdateTemplateMachine(ID_TemplateMachine_Selected, Name, double.Parse(ApSuatNap),
                          double.Parse(TheTichNap), double.Parse(ThoiGianNap), double.Parse(ThoiGianLayMau));
                         callAlert?.Invoke("Cập nhật thành công.", FormAlert.enmType.Success);
                         LoadDataGridViewTemplateSetting();
@@ -279,18 +279,18 @@ namespace MayNapKhiTPA.Forms
 
         private void buttonDeleteTemplateSetting_Click(object sender, EventArgs e)
         {
-            if (ID_TemplateSetting_Selected != 0)
+            if (ID_TemplateMachine_Selected != 0)
             {
                 try
                 {
-                    TemplateSetting templateSetting = TemplateSettingBusiness.GetTemplateSettingFromID(ID_TemplateSetting_Selected);
+                    TemplateMachine templateSetting = TemplateMachineBusiness.GetTemplateMachineFromID(ID_TemplateMachine_Selected);
                     DialogResult dialogResult = MessageBox.Show($"Bạn có chắc muốn xóa bình {templateSetting.Name}", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (dialogResult == DialogResult.Yes)
                     {
-                        TemplateSettingBusiness.DeleteTemplateSetting(ID_TemplateSetting_Selected);
+                        TemplateMachineBusiness.DeleteTemplateMachine(ID_TemplateMachine_Selected);
                         callAlert?.Invoke("Xóa thành công.", FormAlert.enmType.Success);
                         LoadDataGridViewTemplateSetting();
-                        this.ID_TemplateSetting_Selected = 0;
+                        this.ID_TemplateMachine_Selected = 0;
                         textBoxNameTemplateSetting.Texts = null;
                         textBoxApSuatNapTemplateSetting.Texts = null;
                         textBoxTheTichNapTemplateSetting.Texts = null;
@@ -444,7 +444,7 @@ namespace MayNapKhiTPA.Forms
         private void comboBoxSelectTemplateSetting_SelectedIndexChanged(object sender, EventArgs e)
         {
             // lấy ra thông tin user có username là username trên combobox
-            TemplateSetting templateSetting = TemplateSettingBusiness.GetTemplateSettingFromName(comboBoxSelectTemplateSetting.Text);
+            TemplateMachine templateSetting = TemplateMachineBusiness.GetTemplateMachineFromName(comboBoxSelectTemplateSetting.Text);
 
             //show trên textbox
 
@@ -479,13 +479,13 @@ namespace MayNapKhiTPA.Forms
             {
                 try
                 {
-                    SettingBusiness.UpdateSetting(Name, double.Parse(ApSuatNap), double.Parse(TheTichNap), double.Parse(ThoiGianNap), double.Parse(ThoiGianLayMau));
+                    MachineBusiness.UpdateMachine(Name, double.Parse(ApSuatNap), double.Parse(TheTichNap), double.Parse(ThoiGianNap), double.Parse(ThoiGianLayMau));
 
                     //lưu lại hành động thay đôi cài đặt
                     Activity activity = new Activity();
                     activity.Description = "Cập nhật cài đặt máy";
                     activity.IsSetting = true;
-                    activity.ID_User = Common.USERSESSION.ID_User;
+                    activity.Worker = Common.USERSESSION.Username;
                     ActivityBusiness.AddActivity(activity);
                     //load lại datagridview + thông số cài đặt hiện tại
                     LoadSetting();

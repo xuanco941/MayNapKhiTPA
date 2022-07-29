@@ -19,7 +19,7 @@ namespace MayNapKhiTPA.Models
             {
                 User user = new User((int)sqlDataReader["ID_User"], (string)sqlDataReader["FullName"],
                     (string)sqlDataReader["Username"], (string)sqlDataReader["Password"], (string)sqlDataReader["PhoneNumber"],
-                    (string)sqlDataReader["Email"], (int)sqlDataReader["ID_Shift"], (int)sqlDataReader["ID_Group"]);
+                    (string)sqlDataReader["Email"], (string)sqlDataReader["NameShift"], (int)sqlDataReader["ID_Group"]);
                 sqlConnection.Close();
                 return user;
             }
@@ -41,8 +41,8 @@ namespace MayNapKhiTPA.Models
             while (sqlDataReader.Read())
             {
                 User user = new User((int)sqlDataReader["ID_User"], (string)sqlDataReader["FullName"],
-                    (string)sqlDataReader["Username"], (string)sqlDataReader["Password"], (string)sqlDataReader["PhoneNumber"],
-                    (string)sqlDataReader["Email"], (int)sqlDataReader["ID_Shift"], (int)sqlDataReader["ID_Group"]);
+                   (string)sqlDataReader["Username"], (string)sqlDataReader["Password"], (string)sqlDataReader["PhoneNumber"],
+                   (string)sqlDataReader["Email"], (string)sqlDataReader["NameShift"], (int)sqlDataReader["ID_Group"]);
                 list.Add(user);
             }
             sqlConnection.Close();
@@ -60,7 +60,8 @@ namespace MayNapKhiTPA.Models
             while (sqlDataReader.Read())
             {
                 User user = new User((int)sqlDataReader["ID_User"], (string)sqlDataReader["FullName"],
-                    (string)sqlDataReader["Username"], (string)sqlDataReader["Password"], (string)sqlDataReader["PhoneNumber"], (string)sqlDataReader["Email"], (int)sqlDataReader["ID_Shift"], (int)sqlDataReader["ID_Group"]);
+                    (string)sqlDataReader["Username"], (string)sqlDataReader["Password"], (string)sqlDataReader["PhoneNumber"],
+                    (string)sqlDataReader["Email"], (string)sqlDataReader["NameShift"], (int)sqlDataReader["ID_Group"]);
                 list.Add(user);
             }
             sqlConnection.Close();
@@ -79,11 +80,49 @@ namespace MayNapKhiTPA.Models
             while (sqlDataReader.Read())
             {
                 user = new User((int)sqlDataReader["ID_User"], (string)sqlDataReader["FullName"],
-                                  (string)sqlDataReader["Username"], (string)sqlDataReader["Password"], (string)sqlDataReader["PhoneNumber"], (string)sqlDataReader["Email"], (int)sqlDataReader["ID_Shift"], (int)sqlDataReader["ID_Group"]);
+                        (string)sqlDataReader["Username"], (string)sqlDataReader["Password"], (string)sqlDataReader["PhoneNumber"],
+                        (string)sqlDataReader["Email"], (string)sqlDataReader["NameShift"], (int)sqlDataReader["ID_Group"]);
             }
             sqlConnection.Close();
             return user;
         }
+
+        public static User GetUserFromFullName(string fullname)
+        {
+            User user = null;
+            SqlConnection sqlConnection = new SqlConnection(Common.ConnectionString);
+            sqlConnection.Open();
+            string sql = $"GetUserFromFullName N'{fullname}'";
+            var command = new SqlCommand(sql, sqlConnection);
+            SqlDataReader sqlDataReader = command.ExecuteReader();
+            while (sqlDataReader.Read())
+            {
+                user = new User((int)sqlDataReader["ID_User"], (string)sqlDataReader["FullName"],
+                        (string)sqlDataReader["Username"], (string)sqlDataReader["Password"], (string)sqlDataReader["PhoneNumber"],
+                        (string)sqlDataReader["Email"], (string)sqlDataReader["NameShift"], (int)sqlDataReader["ID_Group"]);
+            }
+            sqlConnection.Close();
+            return user;
+        }
+
+        public static User GetUserFromUserName(string username)
+        {
+            User user = null;
+            SqlConnection sqlConnection = new SqlConnection(Common.ConnectionString);
+            sqlConnection.Open();
+            string sql = $"GetUserFromUserName N'{username}'";
+            var command = new SqlCommand(sql, sqlConnection);
+            SqlDataReader sqlDataReader = command.ExecuteReader();
+            while (sqlDataReader.Read())
+            {
+                user = new User((int)sqlDataReader["ID_User"], (string)sqlDataReader["FullName"],
+                        (string)sqlDataReader["Username"], (string)sqlDataReader["Password"], (string)sqlDataReader["PhoneNumber"],
+                        (string)sqlDataReader["Email"], (string)sqlDataReader["NameShift"], (int)sqlDataReader["ID_Group"]);
+            }
+            sqlConnection.Close();
+            return user;
+        }
+
 
 
 
@@ -94,13 +133,13 @@ namespace MayNapKhiTPA.Models
             SqlConnection sqlConnection = new SqlConnection(Common.ConnectionString);
             sqlConnection.Open();
             var command = new SqlCommand();
-            command.CommandText = $"exec AddUser @FullName, @Username, @Password,@PhoneNumber, @Email, @ID_Shift, @ID_Group";
+            command.CommandText = $"exec AddUser @FullName, @Username, @Password,@PhoneNumber, @Email, @NameShift, @ID_Group";
             command.Parameters.AddWithValue("FullName", user.FullName);
             command.Parameters.AddWithValue("Username", user.Username.ToString().Trim());
             command.Parameters.AddWithValue("Password", user.Password.ToString().Trim());
             command.Parameters.AddWithValue("PhoneNumber", user.PhoneNumber.ToString().Trim());
             command.Parameters.AddWithValue("Email", user.Email.ToString().Trim());
-            command.Parameters.AddWithValue("ID_Shift", user.ID_Shift);
+            command.Parameters.AddWithValue("NameShift", user.NameShift);
             command.Parameters.AddWithValue("ID_Group", user.ID_Group);
 
             command.Connection = sqlConnection;
@@ -115,14 +154,14 @@ namespace MayNapKhiTPA.Models
             SqlConnection sqlConnection = new SqlConnection(Common.ConnectionString);
             sqlConnection.Open();
             var command = new SqlCommand();
-            command.CommandText = "exec UpdateUser @UsernameOld, @FullName, @Username, @Password, @PhoneNumber, @Email, @ID_Shift, @ID_Group";
+            command.CommandText = "exec UpdateUser @UsernameOld, @FullName, @Username, @Password, @PhoneNumber, @Email, @NameShift, @ID_Group";
             command.Parameters.AddWithValue("UsernameOld", UsernameOld);
             command.Parameters.AddWithValue("FullName", user.FullName);
             command.Parameters.AddWithValue("Username", user.Username.ToString().Trim());
             command.Parameters.AddWithValue("Password", user.Password.ToString().Trim());
             command.Parameters.AddWithValue("PhoneNumber", user.PhoneNumber.ToString().Trim());
             command.Parameters.AddWithValue("Email", user.Email.ToString().Trim());
-            command.Parameters.AddWithValue("ID_Shift", user.ID_Shift);
+            command.Parameters.AddWithValue("NameShift", user.NameShift);
             command.Parameters.AddWithValue("ID_Group", user.ID_Group);
             command.Connection = sqlConnection;
 

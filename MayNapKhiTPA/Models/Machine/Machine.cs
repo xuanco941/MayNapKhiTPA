@@ -2,11 +2,12 @@
 
 namespace MayNapKhiTPA.Models
 {
-    public class Setting
+    public class Machine
     {
         // mặc định trên db chỉ có 1 record lưu cài đặt này có ID = 1
-        public int ID_Setting { get; set; } = 1;
-        public string NameTemplateSetting { get; set; }
+        public int ID_Machine { get; set; }
+        public string NameMachine { get; set; }
+        public string NameTemplateMachine { get; set; }
         public double ApSuatNap { get; set; }
         public double TheTichNap { get; set; }
         public double ThoiGianNap { get; set; }
@@ -14,18 +15,20 @@ namespace MayNapKhiTPA.Models
         public double ThoiGianLayMau { get; set; }
         public DateTime UpdateAt { get; set; }
 
-        public Setting()
+        public Machine(int iD_Machine, string nameMachine, string nameTemplateMachine, double apSuatNap, double theTichNap, double thoiGianNap, double thoiGianLayMau, DateTime updateAt)
         {
-        }
-
-        public Setting(string nameTemplateSetting, double apSuatNap, double theTichNap, double thoiGianNap, double thoiGianLayMau, DateTime updateAt)
-        {
-            NameTemplateSetting = nameTemplateSetting;
+            ID_Machine = iD_Machine;
+            NameMachine = nameMachine;
+            NameTemplateMachine = nameTemplateMachine;
             ApSuatNap = apSuatNap;
             TheTichNap = theTichNap;
             ThoiGianNap = thoiGianNap;
             ThoiGianLayMau = thoiGianLayMau;
             UpdateAt = updateAt;
+        }
+
+        public Machine()
+        {
         }
     }
 }

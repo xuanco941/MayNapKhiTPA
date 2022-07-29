@@ -21,13 +21,13 @@ namespace MayNapKhiTPA.Models
             }
             else
             {
-                sql = "select * from Activity order by Activity.Activity_ID DESC";
+                sql = "select * from Activity order by Activity.ID_Activity DESC";
             }
             SqlCommand command = new SqlCommand(sql, sqlConnection);
             SqlDataReader sqlDataReader = command.ExecuteReader();
             while (sqlDataReader.Read())
             {
-                Activity activity = new Activity(sqlDataReader.GetInt32(0), sqlDataReader.GetString(1), sqlDataReader.GetBoolean(2), sqlDataReader.GetDateTime(3), sqlDataReader.GetInt32(4));
+                Activity activity = new Activity(sqlDataReader.GetInt32(0), sqlDataReader.GetString(1), sqlDataReader.GetBoolean(2), sqlDataReader.GetDateTime(3), sqlDataReader.GetString(4));
                 list.Add(activity);
             }
             sqlConnection.Close();
@@ -55,7 +55,7 @@ namespace MayNapKhiTPA.Models
             SqlDataReader sqlDataReader = command.ExecuteReader();
             while (sqlDataReader.Read())
             {
-                Activity activity = new Activity(sqlDataReader.GetInt32(0), sqlDataReader.GetString(1), sqlDataReader.GetBoolean(2), sqlDataReader.GetDateTime(3), sqlDataReader.GetInt32(4));
+                Activity activity = new Activity(sqlDataReader.GetInt32(0), sqlDataReader.GetString(1), sqlDataReader.GetBoolean(2), sqlDataReader.GetDateTime(3), sqlDataReader.GetString(4));
                 list.Add(activity);
             }
             sqlConnection.Close();
@@ -102,25 +102,25 @@ namespace MayNapKhiTPA.Models
             SqlConnection sqlConnection = new SqlConnection(Common.ConnectionString);
             sqlConnection.Open();
             SqlCommand command = new SqlCommand();
-            command.CommandText = $"AddActivity N'{activity.Description}', {activity.IsSetting}, {activity.ID_User}";
+            command.CommandText = $"AddActivity N'{activity.Description}', {activity.IsSetting}, N'{activity.Worker}'";
             command.Connection = sqlConnection;
 
             command.ExecuteNonQuery();
             sqlConnection.Close();
         }
 
-        public static List<Activity> GetActivityFromIDUser(int ID_User)
+        public static List<Activity> GetActivityFromWorker(string worker)
         {
 
             List<Activity> list = new List<Activity>();
             SqlConnection sqlConnection = new SqlConnection(Common.ConnectionString);
             sqlConnection.Open();
-            string sql = $"exec GetActivityFromIDUser {ID_User}";
+            string sql = $"exec GetActivityFromWorker N'{worker}'";
             SqlCommand command = new SqlCommand(sql, sqlConnection);
             SqlDataReader sqlDataReader = command.ExecuteReader();
             while (sqlDataReader.Read())
             {
-                Activity activity = new Activity(sqlDataReader.GetInt32(0), sqlDataReader.GetString(1), sqlDataReader.GetBoolean(2), sqlDataReader.GetDateTime(3), sqlDataReader.GetInt32(4));
+                Activity activity = new Activity(sqlDataReader.GetInt32(0), sqlDataReader.GetString(1), sqlDataReader.GetBoolean(2), sqlDataReader.GetDateTime(3), sqlDataReader.GetString(4));
                 list.Add(activity);
             }
             sqlConnection.Close();
@@ -128,18 +128,19 @@ namespace MayNapKhiTPA.Models
             return list;
         }
 
-        public static List<int> GetListIDUserHasActivity()
+
+        public static List<string> GetListWorkerHasActivity()
         {
 
-            List<int> list = new List<int>();
+            List<string> list = new List<string>();
             SqlConnection sqlConnection = new SqlConnection(Common.ConnectionString);
             sqlConnection.Open();
-            string sql = $"exec GetListIDUserHasActivity";
+            string sql = $"exec GetListWorkerHasActivity";
             SqlCommand command = new SqlCommand(sql, sqlConnection);
             SqlDataReader sqlDataReader = command.ExecuteReader();
             while (sqlDataReader.Read())
             {
-                list.Add(sqlDataReader.GetInt32(0)) ;
+                list.Add(sqlDataReader.GetString(0)) ;
             }
             sqlConnection.Close();
 
@@ -157,7 +158,7 @@ namespace MayNapKhiTPA.Models
             SqlDataReader sqlDataReader = command.ExecuteReader();
             while (sqlDataReader.Read())
             {
-                Activity activity = new Activity(sqlDataReader.GetInt32(0), sqlDataReader.GetString(1), sqlDataReader.GetBoolean(2), sqlDataReader.GetDateTime(3), sqlDataReader.GetInt32(4));
+                Activity activity = new Activity(sqlDataReader.GetInt32(0), sqlDataReader.GetString(1), sqlDataReader.GetBoolean(2), sqlDataReader.GetDateTime(3), sqlDataReader.GetString(4));
                 list.Add(activity);
             }
             sqlConnection.Close();

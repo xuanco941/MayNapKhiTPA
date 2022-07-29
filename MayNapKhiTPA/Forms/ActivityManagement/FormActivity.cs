@@ -67,16 +67,15 @@ namespace MayNapKhiTPA.Forms
             dt.Columns.Add("No.");
             dt.Columns.Add("Hoạt động");
             dt.Columns.Add("Thời gian");
-            dt.Columns.Add("Tên người thực hiện");
+            dt.Columns.Add("Người thực hiện");
 
             // load datagridview từ tham số activities truyền vào
             int count = 1;
             activities.ForEach(delegate (Activity activity)
             {
-                User user = UserBusiness.GetUserFromID(activity.ID_User);
                 //format date từ sql -> c#
                 string createAt = activity.Create_At.ToString("dd/MM/yyyy hh:mm:ss", CultureInfo.InvariantCulture);
-                dt.Rows.Add(count, activity.Description, createAt, user.FullName);
+                dt.Rows.Add(count, activity.Description, createAt, activity.Worker);
                 count++;
             });
             dataGridViewActivity.DataSource = dt;

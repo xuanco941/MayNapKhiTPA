@@ -40,10 +40,10 @@ namespace MayNapKhiTPA.Forms
             string phonenumber = textBoxSoDienThoai.Texts.Trim();
             string email = textBoxEmail.Texts.Trim();
 
-            int id_shift = ShiftBusiness.GetShiftFromName(comboBoxSelectShift.Text).ID_Shift;
+            string nameshift = comboBoxSelectShift.Text;
             int id_group = GroupBusiness.GetGroupFromName(comboBoxSelectGroup.Text).ID_Group;
 
-            User user = new User(fullname, username, password, phonenumber, email, id_shift, id_group);
+            User user = new User(fullname, username, password, phonenumber, email, nameshift, id_group);
 
             if (String.IsNullOrEmpty(fullname) || String.IsNullOrEmpty(username) || String.IsNullOrEmpty(password))
             {

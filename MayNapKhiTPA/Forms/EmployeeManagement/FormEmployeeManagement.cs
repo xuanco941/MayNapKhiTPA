@@ -32,7 +32,7 @@ namespace MayNapKhiTPA.Forms
             LoadDataGroup(GroupBusiness.GetAllGroups());
         }
 
-      
+
 
         //method gọi Alert ở Main từ form khác thông qua form hiện tại, delegate
         public void AlertActive(string msg, FormAlert.enmType enmType)
@@ -63,9 +63,8 @@ namespace MayNapKhiTPA.Forms
 
             listUser.ForEach(delegate (User user)
             {
-                Shift shift = ShiftBusiness.GetShiftFromID(user.ID_Shift);
                 Group group = GroupBusiness.GetGroupFromID(user.ID_Group);
-                dt.Rows.Add(user.FullName, user.Username, user.Password, user.PhoneNumber, user.Email, shift.Name, group.Name);
+                dt.Rows.Add(user.FullName, user.Username, user.Password, user.PhoneNumber, user.Email, user.NameShift, group.Name);
             });
             dataGridViewUser.DataSource = dt;
 
@@ -76,15 +75,35 @@ namespace MayNapKhiTPA.Forms
         {
             DataTable dt = new DataTable();
             dt.Columns.Add("ID");
-            dt.Columns.Add("Tên");
-            dt.Columns.Add("Quyền quản trị nhân viên");
-            dt.Columns.Add("Quyền quản trị cài đặt");
+            dt.Columns.Add("Tên nhóm quyền");
+            dt.Columns.Add("Quản trị nhân viên");
+            dt.Columns.Add("Quản trị nhóm quyền");
+            dt.Columns.Add("Điều khiển máy");
+            dt.Columns.Add("Cài đặt máy");
+            dt.Columns.Add("Thiết lập ca làm");
+            dt.Columns.Add("Thiết lập bình");
+            dt.Columns.Add("Xem lịch sử nạp");
+            dt.Columns.Add("Xem lịch sử hoạt động");
+            dt.Columns.Add("Xóa lịch sử nạp");
+            dt.Columns.Add("Xóa lịch sử hoạt động");
+
 
             listGroup.ForEach(delegate (Group group)
             {
                 string IsManagementUser = group.IsManagementUser == true ? "Có" : "Không";
-                string IsManagementSetting = group.IsManagementSetting == true ? "Có" : "Không";
-                dt.Rows.Add(group.ID_Group, group.Name, IsManagementUser, IsManagementSetting);
+                string IsManagementGroup = group.IsManagementGroup == true ? "Có" : "Không";
+                string IsControlMachine = group.IsControlMachine == true ? "Có" : "Không";
+                string IsSettingMachine = group.IsSettingMachine == true ? "Có" : "Không";
+                string IsSettingShift = group.IsSettingShift == true ? "Có" : "Không";
+                string IsSettingTemplateMachine = group.IsSettingTemplateMachine == true ? "Có" : "Không";
+                string IsViewResult = group.IsViewResult == true ? "Có" : "Không";
+                string IsViewActivity = group.IsViewActivity == true ? "Có" : "Không";
+                string IsDeleteResult = group.IsDeleteResult == true ? "Có" : "Không";
+                string IsDeleteActivity = group.IsDeleteActivity == true ? "Có" : "Không";
+
+                dt.Rows.Add(group.ID_Group, group.Name, IsManagementUser, IsManagementGroup, IsControlMachine, IsSettingMachine,
+                    IsSettingShift, IsSettingTemplateMachine, IsViewResult, IsDeleteActivity, IsDeleteResult, IsDeleteActivity
+                    );
             });
             dataGridViewGroup.DataSource = dt;
 

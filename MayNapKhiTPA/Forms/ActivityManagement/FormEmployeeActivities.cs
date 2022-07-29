@@ -27,18 +27,18 @@ namespace MayNapKhiTPA.Forms.ActivityManagement
         {            
             List<User> listUsers = new List<User>();
             //lấy danh sách id_user tham gia hoạt động, sau đó tìm thông tin user đó và thêm vào list user
-            foreach (int id_user in ActivityBusiness.GetListIDUserHasActivity())
+            foreach (string worker in ActivityBusiness.GetListWorkerHasActivity())
             {
-                listUsers.Add(UserBusiness.GetUserFromID(id_user));
+                listUsers.Add(UserBusiness.GetUserFromUserName(worker));
             }
 
             foreach(User user in listUsers)
             {
                 Button btn = new Button();
                 btn.Height = 50;
-                btn.Text = user.FullName;
-                //tag để lưu id_user
-                btn.Tag = user.ID_User;
+                btn.Text = user.FullName+"("+user.Username+")";
+                //tag để lưu username
+                btn.Tag = user.Username;
                 btn.ForeColor = Color.FromName("#B0B3B8");
                 btn.BackColor = Color.FromName("#3a3b3c");
                 btn.Dock = DockStyle.Top;
@@ -49,8 +49,8 @@ namespace MayNapKhiTPA.Forms.ActivityManagement
 
             // load 1 thông tin của user
             if (panelUser.Controls.Count > 0) {
-                int id_user_first = Int32.Parse(panelUser.Controls[0].Tag.ToString());
-                LoadDatagridView(ActivityBusiness.GetActivityFromIDUser(id_user_first));
+                string username = panelUser.Controls[0].Tag.ToString();
+                LoadDatagridView(ActivityBusiness.GetActivityFromWorker(username));
             }
 
         }
@@ -71,8 +71,7 @@ namespace MayNapKhiTPA.Forms.ActivityManagement
         private void handleClickButtonUser(object sender, EventArgs e)
         {
             Button btn = sender as Button;
-            LoadDatagridView(ActivityBusiness.GetActivityFromIDUser(Int32.Parse(btn.Tag.ToString())));
-
+            LoadDatagridView(ActivityBusiness.GetActivityFromWorker(btn.Tag.ToString()));
         }
 
     }

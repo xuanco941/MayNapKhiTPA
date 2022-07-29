@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace MayNapKhiTPA.Models
 {
-    public class TemplateSetting
+    public class TemplateMachine
     {
-        public int ID_TemplateSetting { get; set; }
+        public int ID_TemplateMachine { get; set; }
         public string Name { get; set; }
         public double ApSuatNap { get; set; }
         public double TheTichNap { get; set; }
         public double ThoiGianNap { get; set; }
         public double ThoiGianLayMau { get; set; }
 
-        public TemplateSetting(int iD_TemplateSetting, string name, double apSuatNap, double theTichNap, double thoiGianNap, double thoiGianLayMau)
+        public TemplateMachine(int iD_TemplateMachine, string name, double apSuatNap, double theTichNap, double thoiGianNap, double thoiGianLayMau)
         {
-            ID_TemplateSetting = iD_TemplateSetting;
+            ID_TemplateMachine = iD_TemplateMachine;
             Name = name;
             ApSuatNap = apSuatNap;
             TheTichNap = theTichNap;
@@ -25,7 +25,7 @@ namespace MayNapKhiTPA.Models
             ThoiGianLayMau = thoiGianLayMau;
         }
 
-        public TemplateSetting()
+        public TemplateMachine()
         {
         }
     }

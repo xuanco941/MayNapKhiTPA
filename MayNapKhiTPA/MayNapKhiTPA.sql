@@ -16,8 +16,16 @@ GO
 CREATE TABLE [Group] (
 ID_Group INT IDENTITY(1,1) PRIMARY KEY,
 [Name] nvarchar(100) UNIQUE,
-IsManagementSetting bit,
-IsManagementUser bit
+IsManagementUser bit,
+IsManagementGroup bit,
+IsControlMachine bit,
+IsSettingMachine bit,
+IsSettingShift bit,
+IsSettingTemplateMachine bit,
+IsViewResult bit,
+IsViewActivity bit,
+IsDeleteResult bit,
+IsDeleteActivity bit,
 )
 GO
 
@@ -29,10 +37,10 @@ Username VARCHAR(100) UNIQUE NOT NULL,
 [Password] VARCHAR(100) default 'tpa',
 PhoneNumber Varchar(100),
 Email Varchar(100),
-ID_Shift int,
+NameShift nvarchar(200),
 ID_Group int,
-FOREIGN KEY (ID_Shift) REFERENCES [Shift](ID_Shift),
-FOREIGN KEY (ID_Group) REFERENCES [Group](ID_Group)
+-- neu xoa group thi xoa luon user
+FOREIGN KEY (ID_Group) REFERENCES [Group](ID_Group) On Delete CASCADE 
 )
 GO
 
@@ -42,8 +50,8 @@ ID_Activity INT IDENTITY(1,1) PRIMARY KEY,
 [Description] NVARCHAR(2000),
 IsSetting bit default 0,
 Create_At DATETIME DEFAULT GETDATE(),
-ID_User int,
-FOREIGN KEY (ID_User) REFERENCES [User](ID_User)
+--worker là username của user
+Worker nvarchar(100)
 )
 GO
 
@@ -61,9 +69,9 @@ LuuLuongMax FLOAT,
 LuuLuongAvg FLOAT,
 TimeStart DATETIME DEFAULT GETDATE(),
 TimeEnd DATETIME,
-ID_Machine INT,
-ID_User int,
-FOREIGN KEY (ID_User) REFERENCES [User](ID_User)
+NameMachine nvarchar(100),
+--worker là username của user
+Worker nvarchar(100)
 )
 GO
 
@@ -75,15 +83,16 @@ TheTich FLOAT,
 LuuLuong FLOAT,
 CreateAt DATETIME DEFAULT GETDATE(),
 ID_Result int,
-FOREIGN KEY (ID_Result) REFERENCES Result(ID_Result)
+--Xóa result thì xóa luôn data
+FOREIGN KEY (ID_Result) REFERENCES Result(ID_Result) ON DELETE CASCADE
 
 )
 GO
 
 
 --TABLE Bình
-CREATE TABLE TemplateSetting (
-ID_TemplateSetting INT IDENTITY(1,1) PRIMARY KEY,
+CREATE TABLE TemplateMachine (
+ID_TemplateMachine INT IDENTITY(1,1) PRIMARY KEY,
 [Name] nvarchar(100) UNIQUE,
 ApSuatNap FLoat,
 TheTichNap Float,
@@ -94,9 +103,10 @@ GO
 
 
 --TABLE THONG SO MAY
-CREATE TABLE Setting (
-ID_Setting int DEFAULT 1,
-NameTemplateSetting nvarchar(100),
+CREATE TABLE Machine (
+ID_Machine int unique,
+NameMachine nvarchar(100) unique,
+NameTemplateMachine nvarchar(100),
 ApSuatNap FLoat,
 TheTichNap Float,
 -- thoi gian tinh bang phut
@@ -105,105 +115,16 @@ ThoiGianLayMau FLOAT,
 UpdateAt DateTime default GetDate()
 )
 GO
-Insert into Setting(NameTemplateSetting,ApSuatNap,TheTichNap,ThoiGianNap,ThoiGianLayMau) values (N'Không có sẵn',0,0,5,5);
-GO
 
 /* Procedure */
 
 
-
-----Result
--- -- Them result
---CREATE PROC AddResult @Result_ApSuatNap FLOAT,@Result_TheTichNap FLOAT,@Result_LoaiKhi nvarchar(100),@Result_ApSuatLayMau NVARCHAR(100), @Result_LuuLuongLayMau NVARCHAR(100),@Result_ThoiGian TIME
---as begin
---INSERT INTO Result(Result_ApSuatNap,Result_TheTichNap,Result_LoaiKhi,Result_ApSuatLayMau,Result_LuuLuongLayMau,Result_ThoiGian) 
---values(@Result_ApSuatNap,@Result_TheTichNap,@Result_LoaiKhi,@Result_ApSuatLayMau,@Result_LuuLuongLayMau,@Result_ThoiGian)
---end
---GO
-
-----phan trang, lất tất cả
--- create proc paginationResult (@startfrom int ,@endto int) as
---SELECT * FROM ( 
---  SELECT *, ROW_NUMBER() OVER (ORDER BY Result_ID desc) as row FROM Result 
--- ) a WHERE a.row > @startfrom and a.row <= @endto
--- GO
-
-
--- --Tim kiem Result theo khoang ngay
---create proc paginationResultByDay (@startfrom int ,@endto int, @Time1 Datetime , @Time2 Datetime) as
---SELECT * FROM ( 
---  SELECT *, ROW_NUMBER() OVER (ORDER BY Result_ID desc) as row FROM Result WHERE 
---Result_CreateAt BETWEEN
---@Time1 AND
--- @Time2
--- ) as a WHERE a.row > @startfrom and a.row <= @endto 
--- GO
-
---CREATE PROC FindResultDayToDay @Time1 DateTime , @Time2 DateTime
---as begin
---SELECT * FROM Result WHERE 
---Result_CreateAt BETWEEN
---@Time1 AND
--- @Time2 order by Result.Result_ID DESC
---end
---GO
-
-
--- --pagination paraID and day
--- create proc paginationResultByDayAndParameter @startfrom int ,@endto int, @Time1 Datetime , @Time2 Datetime,@Oxy nvarchar(100), @Nitor nvarchar(100) 
--- as begin 
---  select * from (SELECT *, ROW_NUMBER() OVER (ORDER BY Result_ID desc) as row FROM Result WHERE 
---(Result_CreateAt BETWEEN
---@Time1 AND
--- @Time2) AND (Result_LoaiKhi = @Oxy OR Result_LoaiKhi = @Nitor )) as a WHERE a.row > @startfrom and a.row <= @endto  
--- end
--- GO
-
--- CREATE PROC FindResultDayToDayByParameter @Time1 DateTime , @Time2 DateTime,@Oxy nvarchar(100), @Nitor nvarchar(100)
---as begin
---SELECT * FROM Result WHERE( 
---Result_CreateAt BETWEEN
---@Time1 AND
--- @Time2) and (Result_LoaiKhi = @Oxy OR Result_LoaiKhi = @Nitor) order by Result.Result_ID DESC
---end
---GO
-
-----Dem result theo ngay, theo parameter
---CREATE PROC CountResultByParameterAndDay @Time1 DateTime, @Time2 DateTime, @Oxy nvarchar(100), @Nitor nvarchar(100)
---as begin
---select count(*) from Result where (Result.Result_LoaiKhi = @Oxy OR Result.Result_LoaiKhi = @Nitor) and (Result.Result_CreateAt between @Time1 and @Time2) 
---end
---GO
-
-----count by day
---CREATE PROC CountResultDayToDay @Time1 DateTime , @Time2 DateTime
---as begin
---SELECT count(*) FROM Result WHERE 
---Result_CreateAt BETWEEN
---@Time1 AND
--- @Time2
---end
---GO
-
--- -- delete result by ID
--- CREATE proc DeleteResultByIDAndParameter (@startID int, @endID int, @Oxy nvarchar(100), @Nitor nvarchar(100))
--- as begin
--- Delete From Result Where (Result.Result_ID >= @startID and Result.Result_ID <= @endID) and (Result.Result_LoaiKhi = @Oxy OR Result_LoaiKhi = @Nitor) 
--- end
--- GO
-
-
-
-
-
-
-
--- PROC SETTING
+-- PROC Machine
 --Update Thông số máy
-CREATE PROC UpdateSetting @NameTemplateSetting nvarchar(100), @ApSuatNap FLoat, @TheTichNap FLOAT, @ThoiGianNap FLOAT, @ThoiGianLayMau FLOAT
+CREATE PROC UpdateMachine @NameTemplateMachine nvarchar(100), @ApSuatNap FLoat, @TheTichNap FLOAT, @ThoiGianNap FLOAT, @ThoiGianLayMau FLOAT
 as begin
-Update Setting SET NameTemplateSetting = @NameTemplateSetting  ,ApSuatNap = @ApSuatNap, TheTichNap = @TheTichNap, ThoiGianNap = @ThoiGianNap, ThoiGianLayMau = @ThoiGianLayMau ,UpdateAt = GETDATE()
-where ID_Setting = 1
+Update Machine SET NameTemplateMachine = @NameTemplateMachine  ,ApSuatNap = @ApSuatNap, TheTichNap = @TheTichNap, ThoiGianNap = @ThoiGianNap, ThoiGianLayMau = @ThoiGianLayMau ,UpdateAt = GETDATE()
+where ID_Machine = 1 or ID_Machine = 2
 end
 GO
 
@@ -211,57 +132,58 @@ GO
 
 
 
---PROC TemplateSetting
--- Thêm TemplateSetting
-CREATE PROC AddTemplateSetting @Name nvarchar(100), @ApSuatNap FLoat, @TheTichNap FLOAT, @ThoiGianNap FLoat, @ThoiGianLayMau FLOAT
+--PROC TemplateMachine
+-- Thêm TemplateMachine
+CREATE PROC AddTemplateMachine @Name nvarchar(100), @ApSuatNap FLoat, @TheTichNap FLOAT, @ThoiGianNap FLoat, @ThoiGianLayMau FLOAT
 as begin
-Insert into TemplateSetting values (@Name,@ApSuatNap,@TheTichNap,@ThoiGianNap,@ThoiGianLayMau);
+Insert into TemplateMachine values (@Name,@ApSuatNap,@TheTichNap,@ThoiGianNap,@ThoiGianLayMau);
 end
 GO
---Cap nhat thong tin TemplateSetting
-CREATE PROC UpdateTemplateSetting @ID_TemplateSetting int,@Name nvarchar(100), @ApSuatNap FLoat, @TheTichNap FLOAT, @ThoiGianNap FLOAT, @ThoiGianLayMau FLOAT
+--Cap nhat thong tin TemplateMachine
+CREATE PROC UpdateTemplateMachine @ID_TemplateMachine int,@Name nvarchar(100), @ApSuatNap FLoat, @TheTichNap FLOAT, @ThoiGianNap FLOAT, @ThoiGianLayMau FLOAT
 as begin
-Update TemplateSetting SET TemplateSetting.[Name] = @Name, ApSuatNap = @ApSuatNap, TheTichNap = @TheTichNap, ThoiGianNap = @ThoiGianNap, ThoiGianLayMau = @ThoiGianLayMau
-where ID_TemplateSetting = @ID_TemplateSetting
-end
-GO
-
---Xóa TemplateSetting
-CREATE PROC DeleteTemplateSetting @ID_TemplateSetting Int
-as begin
-Delete FROM TemplateSetting WHERE TemplateSetting.ID_TemplateSetting = @ID_TemplateSetting;
+Update TemplateMachine SET TemplateMachine.[Name] = @Name, ApSuatNap = @ApSuatNap, TheTichNap = @TheTichNap, ThoiGianNap = @ThoiGianNap, ThoiGianLayMau = @ThoiGianLayMau
+where ID_TemplateMachine = @ID_TemplateMachine
 end
 GO
 
---lấy TemplateSetting từ tên TemplateSetting
-CREATE PROC GetTemplateSettingFromName @Name nvarchar(100)
+--Xóa TemplateMachine
+CREATE PROC DeleteTemplateMachine @ID_TemplateMachine Int
+as begin
+Delete FROM TemplateMachine WHERE TemplateMachine.ID_TemplateMachine = @ID_TemplateMachine;
+end
+GO
+
+--lấy TemplateMachine từ tên TemplateMachine
+CREATE PROC GetTemplateMachineFromName @Name nvarchar(100)
 as begin 
-Select * From TemplateSetting Where TemplateSetting.[Name] like @Name;
+Select * From TemplateMachine Where TemplateMachine.[Name] like @Name;
 end
 GO
---Lấy TemplateSetting từ id
-CREATE PROC GetTemplateSettingFromID @ID_TemplateSetting Int
+--Lấy TemplateMachine từ id
+CREATE PROC GetTemplateMachineFromID @ID_TemplateMachine Int
 as begin
-Select * from TemplateSetting where ID_TemplateSetting = @ID_TemplateSetting
+Select * from TemplateMachine where ID_TemplateMachine = @ID_TemplateMachine
 end
 GO
-
 
 
 
 
 -- PROC Group
 -- Thêm Group
-CREATE PROC AddGroup @Name nvarchar(100), @IsManagementSetting bit, @IsManagementUser bit
+CREATE PROC AddGroup @Name nvarchar(100), @IsManagementUser bit, @IsManagementGroup bit,@IsControlMachine bit,@IsSettingMachine bit, @IsSettingShift bit, @IsSettingTemplateMachine bit, @IsViewResult bit, @IsViewActivity bit, @IsDeleteResult bit, @IsDeleteActivity bit
 as begin
-Insert into [Group] values (@Name,@IsManagementSetting,@IsManagementUser);
+Insert into [Group] values (@Name,@IsManagementUser, @IsManagementGroup,@IsControlMachine,@IsSettingMachine, @IsSettingShift, @IsSettingTemplateMachine, @IsViewResult, @IsViewActivity, @IsDeleteResult, @IsDeleteActivity);
 end
 GO
 
 --Cap nhat thong tin quyền
-CREATE PROC UpdateGroup @ID_Group int,@Name nvarchar(100), @IsManagementSetting bit, @IsManagementUser bit
+CREATE PROC UpdateGroup @ID_Group int,@Name nvarchar(100), @IsManagementUser bit, @IsManagementGroup bit,@IsControlMachine bit,@IsSettingMachine bit, @IsSettingShift bit, @IsSettingTemplateMachine bit, @IsViewResult bit, @IsViewActivity bit, @IsDeleteResult bit, @IsDeleteActivity bit
 as begin
-Update [Group] SET [Name] = @Name, IsManagementSetting = @IsManagementSetting, IsManagementUser = @IsManagementUser
+Update [Group] SET [Name] = @Name, IsManagementUser = @IsManagementUser, IsManagementGroup = @IsManagementGroup,
+IsControlMachine = @IsControlMachine, IsSettingMachine = @IsSettingMachine, IsSettingShift = @IsSettingShift, IsSettingTemplateMachine = @IsSettingTemplateMachine,
+IsViewResult = @IsViewResult, IsViewActivity = @IsViewActivity, IsDeleteResult = @IsDeleteResult, IsDeleteActivity = @IsDeleteActivity
 where ID_Group = @ID_Group
 end
 GO
@@ -337,9 +259,7 @@ GO
 
 
 
-
-
---Proc Employee
+--Proc User
 --Tìm kiếm nhân viên theo tên tài khoản
 CREATE PROC FindUserByUsername @Username varchar(100)
 as begin 
@@ -354,6 +274,21 @@ Select * From [User] Where [User].ID_User = @ID_User;
 end
 GO
 
+-- get user from full name
+CREATE PROC GetUserFromFullName @fullname nvarchar(100)
+as begin 
+Select * From [User] Where [User].fullname = @fullname;
+end
+GO
+
+-- get user from user name
+CREATE PROC GetUserFromUserName @username varchar(100)
+as begin 
+Select * From [User] Where [User].Username = @username;
+end
+GO
+
+
 --Tìm kiếm nhân viên với họ tên bất kỳ
 CREATE PROC FindUserByFullNameOrUsername @Name nvarchar(100)
 as begin 
@@ -362,16 +297,16 @@ end
 GO
 
 -- Thêm nhân viên
-CREATE PROC AddUser @FullName nvarchar(100), @Username VARCHAR(100) , @Password VARCHAR(100) , @PhoneNumber VARCHAR(100), @Email VARCHAR(100), @ID_Shift INT, @ID_Group INT
+CREATE PROC AddUser @FullName nvarchar(100), @Username VARCHAR(100) , @Password VARCHAR(100) , @PhoneNumber VARCHAR(100), @Email VARCHAR(100), @NameShift Nvarchar(200), @ID_Group INT
 as begin
-Insert into [User] values (@FullName,@Username,@Password,@PhoneNumber,@Email,@ID_Shift,@ID_Group);
+Insert into [User] values (@FullName,@Username,@Password,@PhoneNumber,@Email,@NameShift,@ID_Group);
 end
 GO
 
 --Cap nhat thong tin nhan vien
-CREATE PROC UpdateUser @UsernameOld varchar(100), @FullName nvarchar(100), @Username VARCHAR(100) , @Password VARCHAR(100), @PhoneNumber VARCHAR(100), @Email VARCHAR(100), @ID_Shift INT, @ID_Group INT
+CREATE PROC UpdateUser @UsernameOld varchar(100), @FullName nvarchar(100), @Username VARCHAR(100) , @Password VARCHAR(100), @PhoneNumber VARCHAR(100), @Email VARCHAR(100), @NameShift NVARCHAR(200), @ID_Group INT
 as begin
-Update [User] SET FullName = @FullName, Username = @Username, Password = @Password, PhoneNumber=@PhoneNumber ,Email = @Email, ID_Shift = @ID_Shift, ID_Group = @ID_Group
+Update [User] SET FullName = @FullName, Username = @Username, Password = @Password, PhoneNumber=@PhoneNumber ,Email = @Email, NameShift = @NameShift, ID_Group = @ID_Group
 where [User].Username = @UsernameOld
 end
 GO
@@ -387,11 +322,13 @@ GO
 
 
 
+
+
 --Activity
 --Add Activity
-CREATE PROC AddActivity @description nvarchar(2000), @isSetting bit ,@id_user int 
+CREATE PROC AddActivity @description nvarchar(2000), @isSetting bit ,@Worker nvarchar(100) 
 as begin
-insert into Activity ([Description],IsSetting,ID_User) values (@Description,@IsSetting,@id_user)
+insert into Activity ([Description],IsSetting,Worker) values (@Description,@IsSetting,@Worker)
 end
 GO
 
@@ -432,15 +369,16 @@ Create_At BETWEEN
  end
  GO
 
- --Lấy ra các Activity theo ID_User
- CREATE PROC GetActivityFromIDUser (@ID_User int) as begin
- Select * from Activity where Activity.ID_User = @ID_User order by Activity.ID_Activity desc
+ --Lấy ra các Activity theo Worker
+ CREATE PROC GetActivityFromWorker (@Worker nvarchar(100)) as begin
+ Select * from Activity where Activity.Worker = @Worker order by Activity.ID_Activity desc
  end
  GO
 
+
  -- Lấy ra danh sách user tham gia hoạt động
- CREATE PROC GetListIDUserHasActivity as begin
- select distinct ID_User from Activity 
+ CREATE PROC GetListWorkerHasActivity as begin
+ select distinct Activity.Worker from Activity 
  end
  GO
 
@@ -482,6 +420,10 @@ Create_At BETWEEN
 --GO
 
 
+Insert into Machine(ID_Machine,NameMachine,NameTemplateMachine,ApSuatNap,TheTichNap,ThoiGianNap,ThoiGianLayMau) values (1,N'Máy 1',N'Không có sẵn',0,0,5,5);
+Insert into Machine(ID_Machine,NameMachine,NameTemplateMachine,ApSuatNap,TheTichNap,ThoiGianNap,ThoiGianLayMau) values (2,N'Máy 2',N'Không có sẵn',0,0,5,5);
+GO
+
 exec AddShift N'Ca sáng','10:00:00','12:00:00'
 exec AddShift N'Ca toi','11:00:00','12:00:00'
 exec AddShift N'Ca dem','11:00:00','12:00:00'
@@ -495,58 +437,58 @@ exec AddShift N'Ca chieu','11:00:00','12:00:00'
 
 
 GO
-exec AddGroup N'Quyền Admin',1,1
-exec AddGroup N'Quyền A',0,1
-exec AddGroup N'Quyền B',0,1
-exec AddGroup N'Quyền C',0,1
-exec AddGroup N'Quyền D',0,1
-exec AddGroup N'Quyền E',0,1
-exec AddGroup N'Quyền F',0,1
-exec AddGroup N'Quyền G',0,1
-exec AddGroup N'Quyền H',0,1
-exec AddGroup N'Quyền I',0,1
-exec AddGroup N'Quyền K',0,1
-exec AddGroup N'Quyền L',0,1
+exec AddGroup N'Quyền Admin',1,1,1,1,1,1,1,1,1,1
+exec AddGroup N'Quyền A',0,1,1,1,1,1,1,1,1,1
+exec AddGroup N'Quyền B',0,1,0,0,0,0,1,1,1,1
+exec AddGroup N'Quyền C',0,1,1,0,0,1,1,1,0,1
+exec AddGroup N'Quyền D',0,1,1,0,0,1,1,1,0,1
+exec AddGroup N'Quyền E',0,1,1,1,1,1,1,1,1,1
+exec AddGroup N'Quyền F',0,1,1,1,1,1,1,1,1,1
+exec AddGroup N'Quyền G',0,1,1,1,1,1,1,1,1,1
+exec AddGroup N'Quyền H',0,1,1,1,1,1,1,1,1,1
+exec AddGroup N'Quyền I',0,1,1,1,1,1,1,1,1,1
+exec AddGroup N'Quyền K',0,1,1,1,1,1,1,1,1,1
+exec AddGroup N'Quyền L',0,1,1,1,1,1,1,1,1,1
 
 
 
 GO
-exec AddUser N'Đỗ Văn Xuân', 'admin','123', '0123456789','xuan@gmail.com',1,1
-exec AddUser N'Lee Văn A', 'admin1','123', '0123456789','xuan@gmail.com',2,2
-exec AddUser N'Kim Văn B', 'admin2','123', '0123456789','xuan@gmail.com',3,2
-exec AddUser N'Nguyen Văn C', 'admin3','123', '0123456789','xuan@gmail.com',3,4
-exec AddUser N'Pham Văn D', 'admin4','123', '0123456789','xuan@gmail.com',4,4
-exec AddUser N'Đỗ Văn E', 'admin5','123', '0123456789','xuan@gmail.com',1,2
-exec AddUser N'Đỗ Văn F', 'admin6','123', '0123456789','xuan@gmail.com',1,2
-exec AddUser N'Đỗ Văn H', 'admin7','123', '0123456789','xuan@gmail.com',2,2
-exec AddUser N'Đỗ Văn G', 'admin8','123', '0123456789','xuan@gmail.com',1,3
-exec AddUser N'Đỗ Văn X', 'admin9','123', '0123456789','xuan@gmail.com',1,5
-exec AddUser N'Đỗ Văn K', 'admin10','123', '0123456789','xuan@gmail.com',3,1
+exec AddUser N'Đỗ Văn Xuân', 'admin','123', '0123456789','xuan@gmail.com',N'Ca sáng',1
+exec AddUser N'Lee Văn A', 'admin1','123', '0123456789','xuan@gmail.com',N'Ca sáng',2
+exec AddUser N'Kim Văn B', 'admin2','123', '0123456789','xuan@gmail.com',N'Ca sáng',2
+exec AddUser N'Nguyen Văn C', 'admin3','123', '0123456789','xuan@gmail.com',N'Ca sáng',4
+exec AddUser N'Pham Văn D', 'admin4','123', '0123456789','xuan@gmail.com',N'Ca sáng',4
+exec AddUser N'Đỗ Văn E', 'admin5','123', '0123456789','xuan@gmail.com',N'Ca sáng',2
+exec AddUser N'Đỗ Văn F', 'admin6','123', '0123456789','xuan@gmail.com',N'Ca sáng',2
+exec AddUser N'Đỗ Văn H', 'admin7','123', '0123456789','xuan@gmail.com',N'Ca sáng',2
+exec AddUser N'Đỗ Văn G', 'admin8','123', '0123456789','xuan@gmail.com',N'Ca sáng',3
+exec AddUser N'Đỗ Văn X', 'admin9','123', '0123456789','xuan@gmail.com',N'Ca sáng',5
+exec AddUser N'Đỗ Văn K', 'admin10','123', '0123456789','xuan@gmail.com',N'Ca sáng',1
 
 GO
 
-exec AddActivity 'Start',0,2
-exec AddActivity N'Thay đổi áp suất nạp',1,3
-exec AddActivity N'Thay đổi thể tích nạp',1,4
-exec AddActivity N'Thay đổi thời gian nạp',1,2
-exec AddActivity 'Start',0,3
-exec AddActivity 'Start',0,4
-exec AddActivity N'Thay đổi áp suất nạp',1,5
-exec AddActivity 'Start',0,2
-exec AddActivity 'Start',0,1
-exec AddActivity 'Start',0,1
-exec AddActivity N'Thay đổi thể tích nạp',1,3
-exec AddActivity 'Start',0,2
+exec AddActivity 'Start',0,'admin'
+exec AddActivity N'Thay đổi áp suất nạp',1,'admin2'
+exec AddActivity N'Thay đổi thể tích nạp',1,'admin1'
+exec AddActivity N'Thay đổi thời gian nạp',1,'admin4'
+exec AddActivity 'Start',0,'admin'
+exec AddActivity 'Start',0,'admin2'
+exec AddActivity N'Thay đổi áp suất nạp',1,'admin2'
+exec AddActivity 'Start',0,'admin1'
+exec AddActivity 'Start',0,'admin4'
+exec AddActivity 'Start',0,'admin3'
+exec AddActivity N'Thay đổi thể tích nạp',1,'admin1'
+exec AddActivity 'Start',0,'admin1'
 Go
 
-exec AddTemplateSetting N'Tùy chỉnh',100,100,60,60
-exec AddTemplateSetting N'Binh 1',342,32,55,43
-exec AddTemplateSetting N'Binh 2',23,56,32,76
-exec AddTemplateSetting N'Binh 3',23,44,55,43
-exec AddTemplateSetting N'Binh 4',343,344,55,43
-exec AddTemplateSetting N'Binh 5',45,34,100,43
-exec AddTemplateSetting N'Binh 6',56,398,55,43
-exec AddTemplateSetting N'Binh 1',86,98,55,43
+exec AddTemplateMachine N'Tùy chỉnh',100,100,60,60
+exec AddTemplateMachine N'Binh 1',342,32,55,43
+exec AddTemplateMachine N'Binh 2',23,56,32,76
+exec AddTemplateMachine N'Binh 3',23,44,55,43
+exec AddTemplateMachine N'Binh 4',343,344,55,43
+exec AddTemplateMachine N'Binh 5',45,34,100,43
+exec AddTemplateMachine N'Binh 6',56,398,55,43
+exec AddTemplateMachine N'Binh 1',86,98,55,43
 
-select * from TemplateSetting
 
+select * from TemplateMachine
