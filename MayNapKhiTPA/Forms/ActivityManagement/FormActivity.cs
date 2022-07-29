@@ -250,7 +250,7 @@ namespace MayNapKhiTPA.Forms
             else
             {
                 this.page = int.Parse(button.Text);
-                if (this.page < 2)
+                if (this.page <= 2)
                 {
                     buttonPage1.Text = 1.ToString();
                     buttonPage2.Text = 2.ToString();

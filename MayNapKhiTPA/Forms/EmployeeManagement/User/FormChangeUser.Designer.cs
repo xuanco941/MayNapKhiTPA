@@ -67,7 +67,7 @@ namespace MayNapKhiTPA.Forms
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Showcard Gothic", 18F, System.Drawing.FontStyle.Bold);
-            this.label8.ForeColor = System.Drawing.Color.Olive;
+            this.label8.ForeColor = System.Drawing.Color.Goldenrod;
             this.label8.Location = new System.Drawing.Point(275, 32);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(274, 30);

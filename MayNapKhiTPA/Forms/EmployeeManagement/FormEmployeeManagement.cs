@@ -79,7 +79,7 @@ namespace MayNapKhiTPA.Forms
             dt.Columns.Add("Quản trị nhân viên");
             dt.Columns.Add("Quản trị nhóm quyền");
             dt.Columns.Add("Điều khiển máy");
-            dt.Columns.Add("Cài đặt máy");
+            dt.Columns.Add("Cài đặt thông số máy");
             dt.Columns.Add("Thiết lập ca làm");
             dt.Columns.Add("Thiết lập bình");
             dt.Columns.Add("Xem lịch sử nạp");

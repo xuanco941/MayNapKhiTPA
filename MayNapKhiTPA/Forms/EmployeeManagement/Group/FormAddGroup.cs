@@ -24,5 +24,42 @@ namespace MayNapKhiTPA.Forms
         // Create instance (null)
         public ChangeData changeData;
 
+        private void buttonAddGroup_Click(object sender, EventArgs e)
+        {
+            string nameGroup = textBoxNameGroup.Texts;
+
+            if (String.IsNullOrEmpty(nameGroup) || nameGroup == textBoxNameGroup.PlaceholderText)
+            {
+                MessageBox.Show("Vui lòng điền tên nhóm quyền.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            else
+            {
+                try
+                {
+                    Group group = new Group();
+                    group.Name = nameGroup;
+                    group.IsManagementUser = checkBoxIsManagementUser.Checked;
+                    group.IsManagementGroup = checkBoxIsManagementGroup.Checked;
+                    group.IsControlMachine = checkBoxIsControlMachine.Checked;
+                    group.IsSettingMachine = checkBoxIsSettingMachine.Checked;
+                    group.IsSettingShift = checkBoxIsSettingShift.Checked;
+                    group.IsSettingTemplateMachine = checkBoxIsSettingTemplateMachine.Checked;
+                    group.IsViewResult = checkBoxIsViewResult.Checked;
+                    group.IsViewActivity = checkBoxIsViewActivity.Checked;
+                    group.IsDeleteResult = checkBoxIsDeleteResult.Checked;
+                    group.IsDeleteActivity = checkBoxIsDeleteActivity.Checked;
+                    GroupBusiness.AddGroup(group);
+                    changeData?.Invoke($"Thêm thành công quyền {group.Name}.", FormAlert.enmType.Success);
+                    this.Close();
+                }
+                catch
+                {
+                    changeData?.Invoke("Thêm thất bại, tên nhóm quyền phải là duy nhất.", FormAlert.enmType.Error);
+                }
+
+            }
+
+        }
     }
 }

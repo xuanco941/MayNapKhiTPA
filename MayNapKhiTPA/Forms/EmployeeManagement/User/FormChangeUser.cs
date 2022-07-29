@@ -102,7 +102,6 @@ namespace MayNapKhiTPA.Forms
                     changeData?.Invoke($"Xóa thất bại.", FormAlert.enmType.Error);
                 }
                 LoadForm();
-                this.Close();
             }
         }
 

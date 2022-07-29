@@ -117,17 +117,62 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="checkBoxIsManagementUser.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="checkBoxIsManagementGroup.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="groupBox1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="checkBoxIsDeleteActivity.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="checkBoxIsDeleteResult.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="checkBoxIsViewActivity.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="checkBoxIsViewResult.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="checkBoxIsSettingTemplateMachine.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="checkBoxIsSettingShift.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="checkBoxIsSettingMachine.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="checkBoxIsControlMachine.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="label8.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="textBoxNameGroup.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="buttonAddGroup.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="buttonDangNhap.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="buttonAddGroup.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAFlSURBVDhPrZS/TsMwEMYtELwQb9BkRAIBKVLjbAiJjRdAysjf7pVgIgKJpTFigoWBHTYCFBae
-        AIUd7pxz6jpHYxAn/ZTI993XOmef4CK6iOaDPF4PlTwLclkAn0SBa+FQdlFD8ukB4tVAyVco/mphFKpk
-        hcqaAb84G6jkkCmcSpjLgzRNZ8hmHH8xq1HxHtlUobfJCYnFqw0Nl6sZymVtVjVAjhoCi6P7Yw2Xs3jT
-        jcJuMskJ+g8nGi5n01FJBIby3E24+BoCmYC9PzOJCX5hWOA/LO3F3vV2bWC4eb/TuOuotWuB8r8NP9Dw
-        yVlsYAy4nE0nTx4F3VdWYPA1hH6c4qHuskkLb8M8XhMLg805uI8vvKDCyxAGSj2BcGqwImLrdkfD5Qzh
-        ZW9Jm5nAqcEJfYDaXbIZB44gSO674lZg0rDjywROjbZviqCmsc2fAhuFFx0KMzxb8MTDX9J7ht1EDcmt
-        EOIbRroVP7NU/NUAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAWVJREFUOE+t
+        lL9OwzAQxi0QvBBv0GREAgEpUuNsCImNF0DKyN/ulWAiAomlMWKChYEdNgIUFp4AhR3unHPqOkdjECf9
+        lMj33dc6Z5/gIrqI5oM8Xg+VPAtyWQCfRIFr4VB2UUPy6QHi1UDJVyj+amEUqmSFypoBvzgbqOSQKZxK
+        mMuDNE1nyGYcfzGrUfEe2VSht8kJicWrDQ2XqxnKZW1WNUCOGgKLo/tjDZezeNONwm4yyQn6DycaLmfT
+        UUkEhvLcTbj4GgKZgL0/M4kJfmFY4D8s7cXe9XZtYLh5v9O466i1a4Hyvw0/0PDJWWxgDLicTSdPHgXd
+        V1Zg8DWEfpzioe6ySQtvwzxeEwuDzTm4jy+8oMLLEAZKPYFwarAiYut2R8PlDOFlb0mbmcCpwQl9gNpd
+        shkHjiBI7rviVmDSsOPLBE6Ntm+KoKaxzZ8CG4UXHQozPFvwxMNf0nuG3UQNya0Q4htGuhU/s1T81QAA
+        AABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>
