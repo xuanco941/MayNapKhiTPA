@@ -24,8 +24,7 @@ namespace MayNapKhiTPA
                 Application.Run(new FormMain());
             }
 
-            //FormTestControl formTestControl = new FormTestControl();
-            //Application.Run(formTestControl);
+            //Application.Run(new FormTestControl());
         }
     }
 }

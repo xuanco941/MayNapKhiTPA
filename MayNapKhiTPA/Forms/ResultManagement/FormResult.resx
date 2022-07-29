@@ -126,16 +126,6 @@
         ABp4QM22B0nWDASMQI3PKEoDwBC3pigp0wgwMAAAx4BQiFzaligAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="buttonCallFormData.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAARdJREFUSEvt
-        1E9KAzEYhvGpXXWl1rpzrUXc9QKCfy6gLt2KnkB7Ie+gbRUV7YHElYo+DzTQRSYTA1IXvvCDYZIvaWe+
-        SfUXsoYDXOBy5hz76KIoLZzgER/4quHYA45hTVZWMUFswZQRVtCYMWIL5LhFMn3ECn9iC7X59Q2MzzJW
-        mOMGjfFFlWzi819GMpvYgS13hHuk2vQdd3CuNda6Rm128YYrhJazbfdwhvChee29+TlDWOsatXEw/LpX
-        XMMveIANdGa89p5jznFuqEtusI0wsZSdmIyffqwwh++sMet4RmyBlCf0kEzoojZOMcUnYgvKsRc4dwlF
-        XeQ/OoRH9Pxx7RHumPnvomyL76KQ0i4qSk4XLSpV9Q08EQItCCEAlAAAAABJRU5ErkJggg==
-</value>
-  </data>
   <data name="buttonCustom2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAhtJREFUOE+l
@@ -149,6 +139,16 @@
         RdC8eZ4/K5KcbSbwQL3vHMdJWm8/MMkv66cav8NlNPmjBGGA836aWjZy+3S0OTyUwRx802Uexrc6gQ9a
         Dw8FPj7BDUxl+A3ajQs30Z/A63gCYuQbHkcfK7Qbh/U6EN2hzPqlygdDMplMEfjadd3qPqI5teDVpCrq
         AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="buttonCallFormData.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAARdJREFUSEvt
+        1E9KAzEYhvGpXXWl1rpzrUXc9QKCfy6gLt2KnkB7Ie+gbRUV7YHElYo+DzTQRSYTA1IXvvCDYZIvaWe+
+        SfUXsoYDXOBy5hz76KIoLZzgER/4quHYA45hTVZWMUFswZQRVtCYMWIL5LhFMn3ECn9iC7X59Q2MzzJW
+        mOMGjfFFlWzi819GMpvYgS13hHuk2vQdd3CuNda6Rm128YYrhJazbfdwhvChee29+TlDWOsatXEw/LpX
+        XMMveIANdGa89p5jznFuqEtusI0wsZSdmIyffqwwh++sMet4RmyBlCf0kEzoojZOMcUnYgvKsRc4dwlF
+        XeQ/OoRH9Pxx7RHumPnvomyL76KQ0i4qSk4XLSpV9Q08EQItCCEAlAAAAABJRU5ErkJggg==
 </value>
   </data>
 </root>

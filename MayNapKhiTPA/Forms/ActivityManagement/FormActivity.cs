@@ -35,6 +35,7 @@ namespace MayNapKhiTPA.Forms
 
             //setting header column
             dataGridViewActivity.ColumnHeadersDefaultCellStyle.Font = new Font("Bahnschrift", 12, FontStyle.Regular);
+            dataGridViewActivity.RowTemplate.Height = 35;
         }
 
 
@@ -52,21 +53,13 @@ namespace MayNapKhiTPA.Forms
                 string[] arr2 = strDatimeToiNgay.Split('-');
                 string infoTuNgay = arr1[2] + "-" + arr1[1] + "-" + arr1[0];
                 string infoToiNgay = (int.Parse(arr2[2]) - 1) + "-" + arr2[1] + "-" + arr2[0];
-                if (infoTuNgay == infoToiNgay)
-                {
-                    labelTuNgay.Text = "- Hoạt động trong ngày: " + infoTuNgay;
-                    labelToiNgay.Text = "";
-                }
-                else
-                {
-                    labelTuNgay.Text = "- Từ ngày: " + infoTuNgay;
-                    labelToiNgay.Text = "- Tới ngày: " + infoToiNgay;
-                }
+                labelTuNgay.Text = "- Từ ngày: " + infoTuNgay + ".";
+                labelToiNgay.Text = "- Tới ngày: " + infoToiNgay + ".";
             }
             else
             {
-                labelTuNgay.Text = "- Không có.";
-                labelToiNgay.Text = "- Không có.";
+                labelTuNgay.Text = "- Từ ngày : trống.";
+                labelToiNgay.Text = "- Tới ngày : trống.";
             }
 
             //
@@ -339,7 +332,7 @@ namespace MayNapKhiTPA.Forms
 
         }
 
-        private void buttonLoc_Click(object sender, EventArgs e)
+        private void buttonLoc_Click_1(object sender, EventArgs e)
         {
             //lấy ngày ở datetimepicker rồi chuyển về dạng yyyy-mm-dd, lưu vào các strdatetime, field của lớp
             DateTime tuNgay = Convert.ToDateTime(dateTimePickerTuNgay.Value);

@@ -20,6 +20,7 @@ namespace MayNapKhiTPA.Forms.ActivityManagement
             LoadPanelUser();
             //setting header column
             dataGridViewUserActivity.ColumnHeadersDefaultCellStyle.Font = new Font("Bahnschrift", 12, FontStyle.Regular);
+            dataGridViewUserActivity.RowTemplate.Height = 35;
         }
 
         private void LoadPanelUser()

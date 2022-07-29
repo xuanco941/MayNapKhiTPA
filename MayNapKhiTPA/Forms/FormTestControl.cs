@@ -31,5 +31,10 @@ namespace MayNapKhiTPA.Forms
             
             dataGridView1.DataSource = dt;
         }
+
+        private void buttonDangNhap_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
