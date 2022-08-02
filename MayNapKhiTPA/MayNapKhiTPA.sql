@@ -212,7 +212,12 @@ TheTichAvg = @TheTichAvg,  LuuLuongMin = @LuuLuongMin, LuuLuongMax = @LuuLuongMa
 end
 GO
 
-
+--Tìm kiếm result theo IDResult
+CREATE PROC GetResultFromID @ID_Result int
+as begin 
+Select * From Result Where Result.ID_Result = @ID_Result;
+end
+GO
 
 
 
@@ -494,6 +499,13 @@ Create_At BETWEEN
  end
  GO
 
+
+ --DATA
+CREATE PROC AddData (@ApSuat float, @TheTich FLOAT, @LuuLuong Float, @ID_Result int)
+as begin
+insert into [Data] (ApSuat,TheTich,LuuLuong,ID_Result) values (@ApSuat, @TheTich, @LuuLuong,@ID_Result)
+end
+GO
 
 
 -- --Chart

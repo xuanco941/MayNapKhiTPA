@@ -25,5 +25,23 @@ namespace MayNapKhiTPA.Models
             sqlConnection.Close();
             return list;
         }
+        public static void AddData(Data data)
+        {
+            SqlConnection sqlConnection = new SqlConnection(Common.ConnectionString);
+            sqlConnection.Open();
+            var command = new SqlCommand();
+            command.CommandText = $"exec AddData @ApSuat, @TheTich, @LuuLuong, @ID_Result";
+
+            command.Parameters.AddWithValue("ApSuat", data.ApSuat);
+            command.Parameters.AddWithValue("TheTich", data.TheTich);
+            command.Parameters.AddWithValue("LuuLuong", data.LuuLuong);
+            command.Parameters.AddWithValue("ID_Result", data.ID_Result);
+
+
+            command.Connection = sqlConnection;
+
+            command.ExecuteNonQuery();
+            sqlConnection.Close();
+        }
     }
 }
