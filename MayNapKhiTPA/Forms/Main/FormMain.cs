@@ -81,6 +81,7 @@ namespace MayNapKhiTPA.Forms
         {
             labelHeader.Text = "Lịch sử nạp khí";
             FormResult formResult = new FormResult();
+            formResult.callAlert = new FormResult.CallAlert(Alert);
             ChangeFormContent(formResult);
             this.Font = new Font("Bahnschrift", 11);
         }

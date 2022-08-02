@@ -24,31 +24,41 @@ namespace MayNapKhiTPA.Forms.ActivityManagement
         }
 
         private void LoadPanelUser()
-        {            
-            List<User> listUsers = new List<User>();
+        {
             //lấy danh sách id_user tham gia hoạt động, sau đó tìm thông tin user đó và thêm vào list user
             foreach (string worker in ActivityBusiness.GetListWorkerHasActivity())
             {
-                listUsers.Add(UserBusiness.GetUserFromUserName(worker));
-            }
+                string fullnameButton = worker;
 
-            foreach(User user in listUsers)
-            {
+                User user = UserBusiness.GetUserFromUserName(worker);
+                if (user != null)
+                {
+                    fullnameButton = user.FullName;
+                }
+                else
+                {
+                    fullnameButton = worker + " (không còn tồn tại)";
+                }
+
                 Button btn = new Button();
                 btn.Height = 50;
-                btn.Text = user.FullName+"("+user.Username+")";
+                btn.Text = fullnameButton;
                 //tag để lưu username
-                btn.Tag = user.Username;
+                btn.Tag = worker;
                 btn.ForeColor = Color.FromName("#B0B3B8");
                 btn.BackColor = Color.FromName("#3a3b3c");
                 btn.Dock = DockStyle.Top;
                 btn.Cursor = Cursors.Hand;
                 btn.Click += new EventHandler(handleClickButtonUser);
                 panelUser.Controls.Add(btn);
+
             }
 
+
+
             // load 1 thông tin của user
-            if (panelUser.Controls.Count > 0) {
+            if (panelUser.Controls.Count > 0)
+            {
                 string username = panelUser.Controls[0].Tag.ToString();
                 LoadDatagridView(ActivityBusiness.GetActivityFromWorker(username));
             }

@@ -113,7 +113,7 @@ namespace MayNapKhiTPA.Forms
             DialogResult dialogResult = MessageBox.Show($"Bạn có chắc muốn xóa nhóm quyền {nameGroup}", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {
-                DialogResult dialogResult2 = MessageBox.Show($"Xác nhận xóa đồng nghĩa với việc xóa mọi tài khoản trong nhóm quyền này.", "Thông báo quan trọng", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult dialogResult2 = MessageBox.Show($"Xác nhận xóa đồng nghĩa với việc xóa mọi tài khoản trong nhóm quyền này.", "Thông báo quan trọng", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
 
                 if (dialogResult2 == DialogResult.Yes)
                 {
@@ -122,7 +122,7 @@ namespace MayNapKhiTPA.Forms
                     {
                         int id_group = GroupBusiness.GetGroupFromName(nameGroup).ID_Group;
                         GroupBusiness.DeleteGroup(id_group);
-                        changeData?.Invoke($"Xóa thành công nhóm quyền {nameGroup} và những tài khoản trong quyền này.", FormAlert.enmType.Success);
+                        changeData?.Invoke($"Xóa thành công nhóm quyền {nameGroup}.", FormAlert.enmType.Success);
                     }
                     catch
                     {

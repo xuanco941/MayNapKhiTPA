@@ -55,41 +55,6 @@ Worker nvarchar(100)
 )
 GO
 
---TABLE RESULT (MẺ)
-CREATE TABLE Result(
-ID_Result INT IDENTITY(1,1) PRIMARY KEY,
-ApSuatMin FLOAT,
-ApSuatMax FLOAT,
-ApSuatAvg FLOAT,
-TheTichMin FLOAT,
-TheTichMax FLOAT,
-TheTichAvg FLOAT,
-LuuLuongMin FLOAT,
-LuuLuongMax FLOAT,
-LuuLuongAvg FLOAT,
-TimeStart DATETIME DEFAULT GETDATE(),
-TimeEnd DATETIME,
-NameMachine nvarchar(100),
---worker là username của user
-Worker nvarchar(100)
-)
-GO
-
---TABLE DATA (Dữ liệu suốt quá trình nạp)
-CREATE TABLE [Data](
-ID_Data INT IDENTITY(1,1) PRIMARY KEY,
-ApSuat FLOAT,
-TheTich FLOAT,
-LuuLuong FLOAT,
-CreateAt DATETIME DEFAULT GETDATE(),
-ID_Result int,
---Xóa result thì xóa luôn data
-FOREIGN KEY (ID_Result) REFERENCES Result(ID_Result) ON DELETE CASCADE
-
-)
-GO
-
-
 --TABLE Bình
 CREATE TABLE TemplateMachine (
 ID_TemplateMachine INT IDENTITY(1,1) PRIMARY KEY,
@@ -116,7 +81,142 @@ UpdateAt DateTime default GetDate()
 )
 GO
 
+
+--TABLE RESULT (MẺ)
+CREATE TABLE Result(
+ID_Result INT IDENTITY(1,1) PRIMARY KEY,
+ApSuatMin FLOAT DEFAULT -1,
+ApSuatMax FLOAT DEFAULT -1,
+ApSuatAvg FLOAT DEFAULT -1,
+TheTichMin FLOAT DEFAULT -1,
+TheTichMax FLOAT DEFAULT -1,
+TheTichAvg FLOAT DEFAULT -1,
+LuuLuongMin FLOAT DEFAULT -1,
+LuuLuongMax FLOAT DEFAULT -1,
+LuuLuongAvg FLOAT DEFAULT -1,
+TimeStart DATETIME DEFAULT GETDATE(),
+TimeEnd DATETIME DEFAULT GETDATE(),
+NameMachine nvarchar(100),
+--worker là username của user
+Worker nvarchar(100)
+)
+GO
+
+--TABLE DATA (Dữ liệu suốt quá trình nạp)
+CREATE TABLE [Data](
+ID_Data INT IDENTITY(1,1) PRIMARY KEY,
+ApSuat FLOAT,
+TheTich FLOAT,
+LuuLuong FLOAT,
+CreateAt DATETIME DEFAULT GETDATE(),
+ID_Result int,
+--Xóa result thì xóa luôn data
+FOREIGN KEY (ID_Result) REFERENCES Result(ID_Result) ON DELETE CASCADE
+
+)
+GO
+
 /* Procedure */
+--PROC DATA
+--Add Data
+CREATE PROC AddData @ApSuat FLOAT, @TheTich FLOAT ,@LuuLuong Float, @ID_Result FLOAT
+as begin
+insert into [Data] (ApSuat,TheTich,LuuLuong,ID_Result) values (@ApSuat,@TheTich,@LuuLuong,@ID_Result)
+end
+GO
+
+
+
+--PROC RESULT
+--Tim kiem Result theo khoang ngay, sắp xếp theo thứ tự giảm dần của ID
+CREATE PROC FindResultByDay @Time1 DateTime , @Time2 DateTime
+as begin
+SELECT * FROM Result WHERE 
+Result.TimeStart BETWEEN
+@Time1 AND
+ @Time2 order by Result.ID_Result DESC
+end
+GO
+
+--Đếm Result theo ngày
+CREATE PROC CountResultDayToDay @Time1 DateTime , @Time2 DateTime
+as begin
+SELECT count(*) FROM Result WHERE 
+TimeStart BETWEEN
+@Time1 AND
+ @Time2
+end
+GO
+
+--phan trang 
+create proc PaginationResult (@startfrom int ,@endto int) as
+SELECT * FROM ( 
+  SELECT *, ROW_NUMBER() OVER (ORDER BY ID_Result desc) as row FROM Result 
+ ) a WHERE a.row > @startfrom and a.row <= @endto
+ GO
+
+ -- phan trang theo ngay
+ create proc PaginationResultByDay (@startfrom int ,@endto int, @Time1 Datetime , @Time2 Datetime) as begin
+SELECT * FROM ( SELECT *, ROW_NUMBER() OVER (ORDER BY ID_Result desc) as row FROM Result WHERE 
+TimeStart BETWEEN
+@Time1 AND
+ @Time2 ) as a WHERE a.row > @startfrom and a.row <= @endto
+ end
+ GO
+
+ --Lấy ra các Result theo Worker
+ CREATE PROC GetResultFromWorker (@Worker nvarchar(100)) as begin
+ Select * from Result where Result.Worker = @Worker order by Result.ID_Result desc
+ end
+ GO
+
+
+ -- Lấy ra danh sách user tham gia an nap may
+ CREATE PROC GetListWorkerHasResult as begin
+ select distinct Result.Worker from Result 
+ end
+ GO
+  -- Lấy ra danh sách may machine
+ CREATE PROC GetListMachineHasResult as begin
+ select distinct Result.NameMachine from Result 
+ end
+ GO
+
+
+--Add Result (chi them 1 result rong, sau khi ket thuc nap moi cap nhat lai)
+CREATE PROC AddResultAndReturnIDResult
+@NameMachine nvarchar(100),
+@Worker nvarchar(100)
+as begin
+Declare @Result_Clone table (ID_Result int);
+Insert into [Result] (NameMachine,Worker) OUTPUT inserted.ID_Result INTO @Result_Clone values (@NameMachine,@Worker);
+select ID_Result from @Result_Clone;
+end
+GO
+
+--Update Result (TimeEnd = last update)
+CREATE PROC UpdateResult
+@ID_Result int,
+@ApSuatMin FLOAT,
+@ApSuatMax FLOAT,
+@ApSuatAvg FLOAT,
+@TheTichMin FLOAT,
+@TheTichMax FLOAT,
+@TheTichAvg FLOAT,
+@LuuLuongMin FLOAT,
+@LuuLuongMax FLOAT,
+@LuuLuongAvg FLOAT
+as begin 
+Update Result Set ApSuatMin = @ApSuatMin, ApSuatMax = @ApSuatMax, ApSuatAvg = @ApSuatAvg, TheTichMin = @TheTichMin, TheTichMax = @TheTichMax,
+TheTichAvg = @TheTichAvg,  LuuLuongMin = @LuuLuongMin, LuuLuongMax = @LuuLuongMax, LuuLuongAvg = @LuuLuongAvg, TimeEnd = GETDATE() Where ID_Result = @ID_Result;
+end
+GO
+
+
+
+
+
+
 
 
 -- PROC Machine
@@ -311,6 +411,18 @@ where [User].Username = @UsernameOld
 end
 GO
 
+--TRIGGER UPDATE USER
+Create TRIGGER UpdateUserTrigger
+on [User] for Update
+AS begin
+declare @usernameBeforeUpdate varchar(100);
+select @usernameBeforeUpdate = deleted.username from deleted;
+declare @usernameAfterUpdate varchar(100);
+select @usernameAfterUpdate = inserted.username from inserted;
+	UPDATE Activity set worker = @usernameAfterUpdate where worker = @usernameBeforeUpdate;
+	UPDATE Result set worker = @usernameAfterUpdate where worker = @usernameBeforeUpdate;
+end
+GO
 
 --Xóa tài khoản nhân viên theo Username
 CREATE PROC DeleteUser @username VARCHAR(100)
@@ -334,7 +446,7 @@ GO
 
 
 --Tim kiem Activity theo khoang ngay, sắp xếp theo thứ tự giảm dần của ID
-CREATE PROC FindActivityByDayToDay @Time1 DateTime , @Time2 DateTime
+CREATE PROC FindActivityByDay @Time1 DateTime , @Time2 DateTime
 as begin
 SELECT * FROM Activity WHERE 
 Create_At BETWEEN
@@ -488,7 +600,7 @@ exec AddTemplateMachine N'Binh 3',23,44,55,43
 exec AddTemplateMachine N'Binh 4',343,344,55,43
 exec AddTemplateMachine N'Binh 5',45,34,100,43
 exec AddTemplateMachine N'Binh 6',56,398,55,43
-exec AddTemplateMachine N'Binh 1',86,98,55,43
+GO
 
 
-select * from TemplateMachine
+exec AddResultAndReturnIDResult 'May 1','admin'

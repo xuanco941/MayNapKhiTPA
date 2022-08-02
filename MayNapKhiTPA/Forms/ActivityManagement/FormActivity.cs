@@ -73,9 +73,19 @@ namespace MayNapKhiTPA.Forms
             int count = 1;
             activities.ForEach(delegate (Activity activity)
             {
+                string fullnameButton = activity.Worker;
+                User user = UserBusiness.GetUserFromUserName(activity.Worker);
+                if (user != null)
+                {
+                    fullnameButton = user.FullName;
+                }
+                else
+                {
+                    fullnameButton = activity.Worker + " (không còn tồn tại)";
+                }
                 //format date từ sql -> c#
                 string createAt = activity.Create_At.ToString("dd/MM/yyyy hh:mm:ss", CultureInfo.InvariantCulture);
-                dt.Rows.Add(count, activity.Description, createAt, activity.Worker);
+                dt.Rows.Add(count, activity.Description, createAt, fullnameButton);
                 count++;
             });
             dataGridViewActivity.DataSource = dt;
@@ -168,11 +178,11 @@ namespace MayNapKhiTPA.Forms
         private void GoPage()
         {
             // nếu ô tìm kiếm không rỗng và khác placeholder
-            if (String.IsNullOrEmpty(textBoxGoPage.Texts) == false && textBoxGoPage.Texts != textBoxGoPage.PlaceholderText)
+            if (String.IsNullOrEmpty(textBoxGoPage.Texts) == false && textBoxGoPage.Texts != textBoxGoPage.PlaceholderText && int.Parse(textBoxGoPage.Texts) > 0)
             {
                 if (int.Parse(textBoxGoPage.Texts) > this.pageSize)
                 {
-                    callAlert?.Invoke("Số trang tối đa hiện tại là: " + pageSize, FormAlert.enmType.Error);
+                    callAlert?.Invoke("Số trang tối đa hiện tại là: " + pageSize, FormAlert.enmType.Warning);
                 }
                 else
                 {

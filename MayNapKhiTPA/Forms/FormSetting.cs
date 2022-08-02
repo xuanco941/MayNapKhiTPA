@@ -113,10 +113,19 @@ namespace MayNapKhiTPA.Forms
             int count = 1;
             list.ForEach(delegate (Activity activity)
             {
+                string fullnameButton = activity.Worker;
                 User user = UserBusiness.GetUserFromUserName(activity.Worker);
+                if (user != null)
+                {
+                    fullnameButton = user.FullName;
+                }
+                else
+                {
+                    fullnameButton = activity.Worker + " (không còn tồn tại)";
+                }
                 //format date từ sql -> c#
                 string createAt = activity.Create_At.ToString("dd/MM/yyyy hh:mm:ss", CultureInfo.InvariantCulture);
-                dt.Rows.Add(count, activity.Description, createAt, user.FullName);
+                dt.Rows.Add(count, activity.Description, createAt, fullnameButton);
                 count++;
             });
             dataGridViewActivitySetting.DataSource = dt;

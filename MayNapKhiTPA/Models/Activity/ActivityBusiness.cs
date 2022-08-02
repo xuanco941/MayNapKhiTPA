@@ -48,7 +48,7 @@ namespace MayNapKhiTPA.Models
             }
             else
             {
-                sql = $"exec FindActivityByDayToDay '{tungay}', '{toingay}'";
+                sql = $"exec FindActivityByDay '{tungay}', '{toingay}'";
             }
             SqlCommand command = new SqlCommand(sql, sqlConnection);
             //loi
