@@ -119,7 +119,7 @@ GO
 /* Procedure */
 --PROC DATA
 --Add Data
-CREATE PROC AddData @ApSuat FLOAT, @TheTich FLOAT ,@LuuLuong Float, @ID_Result FLOAT
+CREATE PROC AddData @ApSuat FLOAT, @TheTich FLOAT ,@LuuLuong Float, @ID_Result int
 as begin
 insert into [Data] (ApSuat,TheTich,LuuLuong,ID_Result) values (@ApSuat,@TheTich,@LuuLuong,@ID_Result)
 end
@@ -500,13 +500,6 @@ Create_At BETWEEN
  GO
 
 
- --DATA
-CREATE PROC AddData (@ApSuat float, @TheTich FLOAT, @LuuLuong Float, @ID_Result int)
-as begin
-insert into [Data] (ApSuat,TheTich,LuuLuong,ID_Result) values (@ApSuat, @TheTich, @LuuLuong,@ID_Result)
-end
-GO
-
 
 -- --Chart
 -- -- lấy dữ liệu của Oxy hoặc Nitor trong ngày hiện tại
@@ -616,3 +609,6 @@ GO
 
 
 exec AddResultAndReturnIDResult 'May 1','admin'
+
+exec AddData 10,10,10,1
+exec UpdateResult 1,10,21,12,123,123,123,213,123,234

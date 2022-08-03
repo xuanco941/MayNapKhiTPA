@@ -72,7 +72,7 @@ namespace MayNapKhiTPA.Forms.ActivityManagement
             dt.Columns.Add("Ngày thực hiện");
             activities.ForEach(delegate (Activity activity)
             {
-                string createAt = activity.Create_At.ToString("dd/MM/yyyy hh:mm:ss", CultureInfo.InvariantCulture);
+                string createAt = activity.Create_At.ToString("hh:mm:ss dd/MM/yyyy", CultureInfo.InvariantCulture);
                 dt.Rows.Add(activity.Description, createAt);
             });
             dataGridViewUserActivity.DataSource = dt;

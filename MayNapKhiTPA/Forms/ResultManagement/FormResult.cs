@@ -79,8 +79,8 @@ namespace MayNapKhiTPA.Forms
             list.ForEach(delegate (Result result)
             {
                 //format date từ sql -> c#
-                string TimeStart = result.TimeStart.ToString("dd/MM/yyyy hh:mm:ss", CultureInfo.InvariantCulture);
-                string TimeEnd = result.TimeEnd.ToString("dd/MM/yyyy hh:mm:ss", CultureInfo.InvariantCulture);
+                string TimeStart = result.TimeStart.ToString("hh:mm:ss dd/MM/yyyy", CultureInfo.InvariantCulture);
+                string TimeEnd = result.TimeEnd.ToString("hh:mm:ss dd/MM/yyyy", CultureInfo.InvariantCulture);
 
                 string fullnameButton = result.Worker;
                 User user = UserBusiness.GetUserFromUserName(result.Worker);
@@ -207,7 +207,7 @@ namespace MayNapKhiTPA.Forms
             {
                 if (int.Parse(textBoxGoPage.Texts) > this.pageSize)
                 {
-                    callAlert?.Invoke("Số trang tối đa hiện tại là: " + pageSize, FormAlert.enmType.Warning);
+                    callAlert?.Invoke("Số trang tối đa hiện tại là: " + pageSize, FormAlert.enmType.Info);
                 }
                 else
                 {

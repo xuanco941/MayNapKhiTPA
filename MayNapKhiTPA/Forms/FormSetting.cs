@@ -124,7 +124,7 @@ namespace MayNapKhiTPA.Forms
                     fullnameButton = activity.Worker + " (không còn tồn tại)";
                 }
                 //format date từ sql -> c#
-                string createAt = activity.Create_At.ToString("dd/MM/yyyy hh:mm:ss", CultureInfo.InvariantCulture);
+                string createAt = activity.Create_At.ToString("hh:mm:ss dd/MM/yyyy", CultureInfo.InvariantCulture);
                 dt.Rows.Add(count, activity.Description, createAt, fullnameButton);
                 count++;
             });

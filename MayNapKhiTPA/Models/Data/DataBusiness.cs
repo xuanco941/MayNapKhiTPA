@@ -19,7 +19,7 @@ namespace MayNapKhiTPA.Models
             SqlDataReader sqlDataReader = command.ExecuteReader();
             while (sqlDataReader.Read())
             {
-                Data data = new Data(sqlDataReader.GetInt32(0), sqlDataReader.GetDouble(1), sqlDataReader.GetDouble(2), sqlDataReader.GetDouble(3), sqlDataReader.GetDateTime(4), sqlDataReader.GetInt32(6));
+                Data data = new Data(sqlDataReader.GetInt32(0), sqlDataReader.GetDouble(1), sqlDataReader.GetDouble(2), sqlDataReader.GetDouble(3), sqlDataReader.GetDateTime(4), sqlDataReader.GetInt32(5));
                 list.Add(data);
             }
             sqlConnection.Close();

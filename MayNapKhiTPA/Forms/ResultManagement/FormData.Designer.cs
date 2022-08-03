@@ -29,8 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormData));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelSearchData = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -42,6 +43,7 @@
             this.labelNgayKetThuc = new System.Windows.Forms.Label();
             this.labelNgayBatDau = new System.Windows.Forms.Label();
             this.dataGridViewSearchData = new System.Windows.Forms.DataGridView();
+            this.labelMaMe = new System.Windows.Forms.Label();
             this.panelSearchData.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -138,6 +140,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.labelMaMe);
             this.groupBox1.Controls.Add(this.labelFullNameUser);
             this.groupBox1.Controls.Add(this.labelMachine);
             this.groupBox1.Controls.Add(this.labelNgayKetThuc);
@@ -157,70 +160,89 @@
             this.labelFullNameUser.AutoSize = true;
             this.labelFullNameUser.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelFullNameUser.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelFullNameUser.Location = new System.Drawing.Point(22, 116);
+            this.labelFullNameUser.Location = new System.Drawing.Point(3, 79);
             this.labelFullNameUser.Name = "labelFullNameUser";
-            this.labelFullNameUser.Size = new System.Drawing.Size(177, 17);
+            this.labelFullNameUser.Size = new System.Drawing.Size(126, 17);
             this.labelFullNameUser.TabIndex = 4;
-            this.labelFullNameUser.Text = "- Người thực hiện :  chưa có";
+            this.labelFullNameUser.Text = "- Người thực hiện : ";
             // 
             // labelMachine
             // 
             this.labelMachine.AutoSize = true;
             this.labelMachine.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMachine.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelMachine.Location = new System.Drawing.Point(22, 87);
+            this.labelMachine.Location = new System.Drawing.Point(3, 50);
             this.labelMachine.Name = "labelMachine";
-            this.labelMachine.Size = new System.Drawing.Size(166, 17);
+            this.labelMachine.Size = new System.Drawing.Size(115, 17);
             this.labelMachine.TabIndex = 3;
-            this.labelMachine.Text = "- Máy thực hiện :  chưa có";
+            this.labelMachine.Text = "- Máy thực hiện : ";
             // 
             // labelNgayKetThuc
             // 
             this.labelNgayKetThuc.AutoSize = true;
             this.labelNgayKetThuc.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNgayKetThuc.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelNgayKetThuc.Location = new System.Drawing.Point(22, 59);
+            this.labelNgayKetThuc.Location = new System.Drawing.Point(3, 136);
             this.labelNgayKetThuc.Name = "labelNgayKetThuc";
-            this.labelNgayKetThuc.Size = new System.Drawing.Size(189, 17);
+            this.labelNgayKetThuc.Size = new System.Drawing.Size(138, 17);
             this.labelNgayKetThuc.TabIndex = 2;
-            this.labelNgayKetThuc.Text = "- Thời gian kết thúc :  chưa có";
+            this.labelNgayKetThuc.Text = "- Thời gian kết thúc : ";
             // 
             // labelNgayBatDau
             // 
             this.labelNgayBatDau.AutoSize = true;
             this.labelNgayBatDau.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNgayBatDau.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelNgayBatDau.Location = new System.Drawing.Point(22, 32);
+            this.labelNgayBatDau.Location = new System.Drawing.Point(3, 109);
             this.labelNgayBatDau.Name = "labelNgayBatDau";
-            this.labelNgayBatDau.Size = new System.Drawing.Size(186, 17);
+            this.labelNgayBatDau.Size = new System.Drawing.Size(135, 17);
             this.labelNgayBatDau.TabIndex = 0;
-            this.labelNgayBatDau.Text = "- Thời gian bắt đầu :  chưa có";
+            this.labelNgayBatDau.Text = "- Thời gian bắt đầu : ";
             // 
             // dataGridViewSearchData
             // 
             this.dataGridViewSearchData.AllowUserToAddRows = false;
             this.dataGridViewSearchData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewSearchData.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewSearchData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewSearchData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewSearchData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewSearchData.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewSearchData.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewSearchData.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridViewSearchData.Name = "dataGridViewSearchData";
             this.dataGridViewSearchData.ReadOnly = true;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewSearchData.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewSearchData.RowHeadersVisible = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewSearchData.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewSearchData.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewSearchData.RowTemplate.Height = 25;
             this.dataGridViewSearchData.Size = new System.Drawing.Size(729, 564);
             this.dataGridViewSearchData.TabIndex = 3;
+            // 
+            // labelMaMe
+            // 
+            this.labelMaMe.AutoSize = true;
+            this.labelMaMe.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMaMe.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelMaMe.Location = new System.Drawing.Point(3, 23);
+            this.labelMaMe.Name = "labelMaMe";
+            this.labelMaMe.Size = new System.Drawing.Size(70, 17);
+            this.labelMaMe.TabIndex = 5;
+            this.labelMaMe.Text = "- Mã mẻ : ";
             // 
             // FormData
             // 
@@ -254,5 +276,6 @@
         private System.Windows.Forms.Label labelNgayKetThuc;
         private System.Windows.Forms.Label labelNgayBatDau;
         private System.Windows.Forms.Label labelFullNameUser;
+        private System.Windows.Forms.Label labelMaMe;
     }
 }

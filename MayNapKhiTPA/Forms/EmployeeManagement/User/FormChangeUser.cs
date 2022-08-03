@@ -68,7 +68,8 @@ namespace MayNapKhiTPA.Forms
                     //nếu username cũ là username current , biến tĩnh của program thì cập nhật lại usercurrent
                     if(usernameOld == Common.USERSESSION.Username)
                     {
-                        Common.USERSESSION.Username = user.Username;
+                        Common.USERSESSION = user;
+                        
                     }
                     //thông báo
                     changeData?.Invoke("Cập nhật thành công.", FormAlert.enmType.Success);
