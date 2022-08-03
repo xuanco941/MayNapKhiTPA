@@ -23,6 +23,8 @@ namespace MayNapKhiTPA.Forms
         private void LoadDataGridView(List<Data> list)
         {
             DataTable dt = new DataTable();
+            dt.Columns.Add("No.");
+
             dt.Columns.Add("Áp suất");
 
             dt.Columns.Add("Thể tích");
@@ -31,10 +33,12 @@ namespace MayNapKhiTPA.Forms
 
             dt.Columns.Add("Thời điểm");
 
+            int count = 1;
             list.ForEach(delegate (Data data)
             {
                 string day = data.CreateAt.ToString("hh:mm:ss dd/MM/yyyy", CultureInfo.InvariantCulture);
-                dt.Rows.Add(data.ApSuat, data.TheTich, data.LuuLuong, day);
+                dt.Rows.Add(count,data.ApSuat, data.TheTich, data.LuuLuong, day);
+                count++;
             });
 
             dataGridViewSearchData.DataSource = dt;

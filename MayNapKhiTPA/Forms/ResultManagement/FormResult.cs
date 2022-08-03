@@ -19,9 +19,21 @@ namespace MayNapKhiTPA.Forms
         public CallAlert callAlert;
 
 
-        // ngày để query 
+        //var name query tất cả
+        private const string allMachine = "Tất cả";
+
+
+        //query 
         private string strDatimeTuNgay = null;
         private string strDatimeToiNgay = null;
+        private string nameMachine = allMachine;
+        private double ApSuat1 = 0;
+        private double ApSuat2 = 0;
+        private double TheTich1 = 0;
+        private double TheTich2 = 0;
+        private double LuuLuong1 = 0;
+        private double LuuLuong2 = 0;
+
         // trang hiện tại
         private int page = 1;
         // tổng số trang
@@ -49,7 +61,7 @@ namespace MayNapKhiTPA.Forms
         private void LoadComboBox()
         {
             List<string> listMay = ResultBusiness.GetListMachineHasResult();
-            listMay.Insert(0,"Tất cả");
+            listMay.Insert(0, allMachine);
             comboBoxSelectMay.DataSource = listMay;
         }
         // Load DataGridView
@@ -157,6 +169,11 @@ namespace MayNapKhiTPA.Forms
                     //Lỗi
                 }
             }
+
+
+
+
+
 
             if (this.pageSize == 0)
             {

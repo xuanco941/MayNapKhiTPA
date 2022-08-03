@@ -154,6 +154,7 @@
     <Compile Include="Models\Activity\ActivityBusiness.cs" />
     <Compile Include="Models\Data\Data.cs" />
     <Compile Include="Models\Data\DataBusiness.cs" />
+    <Compile Include="Models\Result\PaginationResult.cs" />
     <Compile Include="Models\TemplateMachine\TemplateMachineBusiness.cs" />
     <Compile Include="Models\User\User.cs" />
     <Compile Include="Models\User\UserBusiness.cs" />

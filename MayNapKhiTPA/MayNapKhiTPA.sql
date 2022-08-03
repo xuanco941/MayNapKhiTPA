@@ -127,42 +127,798 @@ GO
 
 
 
---PROC RESULT
---Tim kiem Result theo khoang ngay, sắp xếp theo thứ tự giảm dần của ID
-CREATE PROC FindResultByDay @Time1 DateTime , @Time2 DateTime
-as begin
-SELECT * FROM Result WHERE 
-Result.TimeStart BETWEEN
-@Time1 AND
- @Time2 order by Result.ID_Result DESC
+-----------PROC RESULT-----------
+
+
+--Không chọn tên Machine, không chọn ngày, không chọn chỉ số
+CREATE PROC Count_NoName_NoDate_NoParameter 
+as begin 
+select count(*) from Result;
 end
 GO
 
---Đếm Result theo ngày
-CREATE PROC CountResultDayToDay @Time1 DateTime , @Time2 DateTime
+CREATE PROC Pagination_NoName_NoDate_NoParameter (@page int ,@NUM_ELM int)
 as begin
-SELECT count(*) FROM Result WHERE 
-TimeStart BETWEEN
-@Time1 AND
- @Time2
+Declare @start INT = (@page -1) * @NUM_ELM;
+Declare @end INT = @page * @NUM_ELM;
+SELECT * FROM ( SELECT *, ROW_NUMBER() OVER (ORDER BY ID_Result desc) as row FROM Result ) 
+a WHERE a.row > @start and a.row <= @end;
 end
 GO
 
---phan trang 
-create proc PaginationResult (@startfrom int ,@endto int) as
-SELECT * FROM ( 
-  SELECT *, ROW_NUMBER() OVER (ORDER BY ID_Result desc) as row FROM Result 
- ) a WHERE a.row > @startfrom and a.row <= @endto
- GO
 
- -- phan trang theo ngay
- create proc PaginationResultByDay (@startfrom int ,@endto int, @Time1 Datetime , @Time2 Datetime) as begin
-SELECT * FROM ( SELECT *, ROW_NUMBER() OVER (ORDER BY ID_Result desc) as row FROM Result WHERE 
-TimeStart BETWEEN
-@Time1 AND
- @Time2 ) as a WHERE a.row > @startfrom and a.row <= @endto
- end
- GO
+
+
+
+
+
+
+
+
+
+
+
+/*CẢ 3*/
+
+--Chọn tên, chọn ngày, chọn chỉ số (3 chỉ số) (NAME_DATE_PARAMETER)
+CREATE PROC Count_YesName_YesDate_YesParameter_ApSuat_TheTich_LuuLuong
+(@NameMachine nvarchar(100), @Time1 Datetime , @Time2 Datetime,
+@ApSuat1 FLOAT, @ApSuat2 FLOAT , @TheTich1 FLOAT, @TheTich2 FLOAT , @LuuLuong1 FLOAT, @LuuLuong2 FLOAT)
+as begin 
+select count(*) from Result where 
+(Result.NameMachine = @NameMachine)
+and (Result.TimeStart BETWEEN @Time1 AND @Time2)
+and (Result.ApSuatAvg between @ApSuat1 and @ApSuat2) 
+and (Result.TheTichAvg between @TheTich1 and @TheTich2)
+and (Result.LuuLuongAvg between @LuuLuong1 and @LuuLuong2)
+end
+GO
+
+CREATE PROC Pagination_YesName_YesDate_YesParameter_ApSuat_TheTich_LuuLuong (@page int ,@NUM_ELM int, @NameMachine nvarchar(100), @Time1 Datetime , @Time2 Datetime,
+@ApSuat1 FLOAT, @ApSuat2 FLOAT , @TheTich1 FLOAT, @TheTich2 FLOAT , @LuuLuong1 FLOAT, @LuuLuong2 FLOAT)
+as begin
+Declare @start INT = (@page -1) * @NUM_ELM;
+Declare @end INT = @page * @NUM_ELM;
+SELECT * FROM ( SELECT *, ROW_NUMBER() OVER (ORDER BY ID_Result desc) as row FROM Result 
+where (Result.NameMachine = @NameMachine)
+and (Result.TimeStart BETWEEN @Time1 AND @Time2)
+and (Result.ApSuatAvg between @ApSuat1 and @ApSuat2) 
+and (Result.TheTichAvg between @TheTich1 and @TheTich2)
+and (Result.LuuLuongAvg between @LuuLuong1 and @LuuLuong2)) 
+a WHERE a.row > @start and a.row <= @end;
+end
+GO
+
+--Chọn tên Machine,có chọn ngày, có chọn chỉ số (2 chỉ số , Áp suất - Thể tích)
+CREATE PROC Count_YesName_YesDate_YesParameter_ApSuat_TheTich
+(@NameMachine nvarchar(100), @Time1 Datetime , @Time2 Datetime, @ApSuat1 FLOAT, @ApSuat2 FLOAT , @TheTich1 FLOAT, @TheTich2 FLOAT)
+as begin 
+select count(*) from Result where (Result.NameMachine = @NameMachine)
+and (Result.TimeStart BETWEEN @Time1 AND @Time2) 
+and (Result.ApSuatAvg between @ApSuat1 and @ApSuat2) 
+and (Result.TheTichAvg between @TheTich1 and @TheTich2)
+end
+GO
+
+CREATE PROC Pagination_YesName_YesDate_YesParameter_ApSuat_TheTich (@page int ,@NUM_ELM int, @NameMachine nvarchar(100), @Time1 Datetime , @Time2 Datetime, @ApSuat1 FLOAT, @ApSuat2 FLOAT , @TheTich1 FLOAT, @TheTich2 FLOAT)
+as begin
+Declare @start INT = (@page -1) * @NUM_ELM;
+Declare @end INT = @page * @NUM_ELM;
+SELECT * FROM ( SELECT *, ROW_NUMBER() OVER (ORDER BY ID_Result desc) as row FROM Result 
+where 
+(Result.NameMachine = @NameMachine)
+and (Result.TimeStart BETWEEN @Time1 AND @Time2)
+and (Result.ApSuatAvg between @ApSuat1 and @ApSuat2) 
+and (Result.TheTichAvg between @TheTich1 and @TheTich2)) 
+a WHERE a.row > @start and a.row <= @end;
+end
+GO
+
+--Có chọn tên Machine, có chọn ngày, có chọn chỉ số (2 chỉ số , Áp suất - Lưu Lượng)
+CREATE PROC Count_YesName_YesDate_YesParameter_ApSuat_LuuLuong
+( @NameMachine nvarchar(100), @Time1 Datetime , @Time2 Datetime, @ApSuat1 FLOAT, @ApSuat2 FLOAT , @LuuLuong1 FLOAT, @LuuLuong2 FLOAT)
+as begin 
+select count(*) from Result where 
+(Result.NameMachine = @NameMachine)
+and (Result.TimeStart BETWEEN @Time1 AND @Time2)
+and (Result.ApSuatAvg between @ApSuat1 and @ApSuat2) 
+and (Result.LuuLuongAvg between @LuuLuong1 and @LuuLuong2)
+end
+GO
+
+CREATE PROC Pagination_YesName_YesDate_YesParameter_ApSuat_LuuLuong (@page int ,@NUM_ELM int,  @NameMachine nvarchar(100), @Time1 Datetime , @Time2 Datetime, @ApSuat1 FLOAT, @ApSuat2 FLOAT, @LuuLuong1 FLOAT, @LuuLuong2 FLOAT)
+as begin
+Declare @start INT = (@page -1) * @NUM_ELM;
+Declare @end INT = @page * @NUM_ELM;
+SELECT * FROM ( SELECT *, ROW_NUMBER() OVER (ORDER BY ID_Result desc) as row FROM Result 
+where (Result.NameMachine = @NameMachine)
+and (Result.TimeStart BETWEEN @Time1 AND @Time2)
+and (Result.ApSuatAvg between @ApSuat1 and @ApSuat2) 
+and (Result.LuuLuongAvg between @LuuLuong1 and @LuuLuong2)) 
+a WHERE a.row > @start and a.row <= @end;
+end
+GO
+
+--Có chọn tên Machine, có chọn ngày, có chọn chỉ số (2 chỉ số (thể tích - lưu lượng))
+CREATE PROC Count_YesName_YesDate_YesParameter_TheTich_LuuLuong
+(@NameMachine nvarchar(100), @Time1 Datetime , @Time2 Datetime, @TheTich1 FLOAT, @TheTich2 FLOAT , @LuuLuong1 FLOAT, @LuuLuong2 FLOAT)
+as begin 
+select count(*) from Result where 
+(Result.NameMachine = @NameMachine)
+and (Result.TimeStart BETWEEN @Time1 AND @Time2) 
+and (Result.TheTichAvg between @TheTich1 and @TheTich2)
+and (Result.LuuLuongAvg between @LuuLuong1 and @LuuLuong2)
+end
+GO
+
+CREATE PROC Pagination_YesName_YesDate_YesParameter_TheTich_LuuLuong (@page int ,@NUM_ELM int, @NameMachine nvarchar(100), @Time1 Datetime , @Time2 Datetime, @TheTich1 FLOAT, @TheTich2 FLOAT , @LuuLuong1 FLOAT, @LuuLuong2 FLOAT)
+as begin
+Declare @start INT = (@page -1) * @NUM_ELM;
+Declare @end INT = @page * @NUM_ELM;
+SELECT * FROM ( SELECT *, ROW_NUMBER() OVER (ORDER BY ID_Result desc) as row FROM Result 
+where (Result.NameMachine = @NameMachine)
+and (Result.TimeStart BETWEEN @Time1 AND @Time2) 
+and (Result.TheTichAvg between @TheTich1 and @TheTich2)
+and (Result.LuuLuongAvg between @LuuLuong1 and @LuuLuong2)) 
+a WHERE a.row > @start and a.row <= @end;
+end
+GO
+
+--Có chọn tên Machine, có chọn ngày, có chọn chỉ số (1 thể tích)
+CREATE PROC Count_YesName_YesDate_YesParameter_TheTich
+(@NameMachine nvarchar(100), @Time1 Datetime , @Time2 Datetime, @TheTich1 FLOAT, @TheTich2 FLOAT)
+as begin 
+select count(*) from Result where (Result.NameMachine = @NameMachine)
+and (Result.TimeStart BETWEEN @Time1 AND @Time2) and (Result.TheTichAvg between @TheTich1 and @TheTich2)
+end
+GO
+
+CREATE PROC Pagination_YesName_YesDate_YesParameter_TheTich (@page int ,@NUM_ELM int, @NameMachine nvarchar(100), @Time1 Datetime , @Time2 Datetime, @TheTich1 FLOAT, @TheTich2 FLOAT)
+as begin
+Declare @start INT = (@page -1) * @NUM_ELM;
+Declare @end INT = @page * @NUM_ELM;
+SELECT * FROM ( SELECT *, ROW_NUMBER() OVER (ORDER BY ID_Result desc) as row FROM Result 
+where (Result.NameMachine = @NameMachine)
+and (Result.TimeStart BETWEEN @Time1 AND @Time2) 
+and (Result.TheTichAvg between @TheTich1 and @TheTich2)) 
+a WHERE a.row > @start and a.row <= @end;
+end
+GO
+
+--Có chọn tên Machine, có chọn ngày, có chọn chỉ số (1 - lưu lượng)
+CREATE PROC Count_YesName_YesDate_YesParameter_LuuLuong
+(@NameMachine nvarchar(100), @Time1 Datetime , @Time2 Datetime, @LuuLuong1 FLOAT, @LuuLuong2 FLOAT)
+as begin 
+select count(*) from Result where  (Result.NameMachine = @NameMachine)
+and (Result.TimeStart BETWEEN @Time1 AND @Time2) and (Result.LuuLuongAvg between @LuuLuong1 and @LuuLuong2)
+end
+GO
+
+CREATE PROC Pagination_YesName_YesDate_YesParameter_LuuLuong (@page int ,@NUM_ELM int, @NameMachine nvarchar(100), @Time1 Datetime , @Time2 Datetime, @LuuLuong1 FLOAT, @LuuLuong2 FLOAT)
+as begin
+Declare @start INT = (@page -1) * @NUM_ELM;
+Declare @end INT = @page * @NUM_ELM;
+SELECT * FROM ( SELECT *, ROW_NUMBER() OVER (ORDER BY ID_Result desc) as row FROM Result 
+where  (Result.NameMachine = @NameMachine)
+and (Result.TimeStart BETWEEN @Time1 AND @Time2) 
+and (Result.LuuLuongAvg between @LuuLuong1 and @LuuLuong2))
+a WHERE a.row > @start and a.row <= @end;
+end
+GO
+
+
+--Có chọn tên Machine, có chọn ngày, có chọn chỉ số (1 chỉ số - Áp suất)
+CREATE PROC Count_YesName_YesDate_YesParameter_ApSuat
+( @NameMachine nvarchar(100), @Time1 Datetime , @Time2 Datetime, @ApSuat1 FLOAT, @ApSuat2 FLOAT)
+as begin 
+select count(*) from Result where (Result.NameMachine = @NameMachine)
+and (Result.TimeStart BETWEEN @Time1 AND @Time2) and (Result.ApSuatAvg between @ApSuat1 and @ApSuat2)
+end
+GO
+
+CREATE PROC Pagination_YesName_YesDate_YesParameter_ApSuat (@page int ,@NUM_ELM int,  @NameMachine nvarchar(100), @Time1 Datetime , @Time2 Datetime, @ApSuat1 FLOAT, @ApSuat2 FLOAT)
+as begin
+Declare @start INT = (@page -1) * @NUM_ELM;
+Declare @end INT = @page * @NUM_ELM;
+SELECT * FROM ( SELECT *, ROW_NUMBER() OVER (ORDER BY ID_Result desc) as row FROM Result 
+where (Result.NameMachine = @NameMachine)
+and (Result.TimeStart BETWEEN @Time1 AND @Time2)
+and Result.ApSuatAvg between @ApSuat1 and @ApSuat2) 
+a WHERE a.row > @start and a.row <= @end;
+end
+GO
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*LẺ*/
+
+--Không chọn tên Machine, có chọn ngày, không chọn chỉ số (DATE)
+CREATE PROC Count_NoName_YesDate_NoParameter (@Time1 Datetime , @Time2 Datetime)
+as begin 
+select count(*) from Result Where Result.TimeStart BETWEEN @Time1 AND @Time2;
+end
+GO
+
+
+CREATE PROC Pagination_NoName_YesDate_NoParameter (@page int ,@NUM_ELM int, @Time1 Datetime , @Time2 Datetime)
+as begin
+Declare @start INT = (@page -1) * @NUM_ELM;
+Declare @end INT = @page * @NUM_ELM;
+SELECT * FROM ( SELECT *, ROW_NUMBER() OVER (ORDER BY ID_Result desc) as row FROM Result 
+where Result.TimeStart BETWEEN @Time1 AND @Time2 ) 
+a WHERE a.row > @start and a.row <= @end;
+end
+GO
+
+--Chọn tên Machine, không chọn ngày, không chọn chỉ số (NAME)
+CREATE PROC Count_YesName_NoDate_NoParameter (@NameMachine nvarchar(100) )
+as begin 
+select count(*) from Result where Result.NameMachine = @NameMachine;
+end
+GO
+
+CREATE PROC Pagination_YesName_NoDate_NoParameter (@NameMachine nvarchar(100),@page int ,@NUM_ELM int)
+as begin
+Declare @start INT = (@page -1) * @NUM_ELM;
+Declare @end INT = @page * @NUM_ELM;
+SELECT * FROM ( SELECT *, ROW_NUMBER() OVER (ORDER BY ID_Result desc) as row FROM Result ) 
+a WHERE a.row > @start and a.row <= @end;
+end
+GO
+
+
+
+
+
+/*PARAMETER*/
+--Không chọn tên Machine, không chọn ngày, có chọn chỉ số (3 chỉ số) 
+CREATE PROC Count_NoName_NoDate_YesParameter_ApSuat_TheTich_LuuLuong
+(@ApSuat1 FLOAT, @ApSuat2 FLOAT , @TheTich1 FLOAT, @TheTich2 FLOAT , @LuuLuong1 FLOAT, @LuuLuong2 FLOAT)
+as begin 
+select count(*) from Result where (Result.ApSuatAvg between @ApSuat1 and @ApSuat2) 
+and (Result.TheTichAvg between @TheTich1 and @TheTich2)
+and (Result.LuuLuongAvg between @LuuLuong1 and @LuuLuong2)
+end
+GO
+
+CREATE PROC Pagination_NoName_NoDate_YesParameter_ApSuat_TheTich_LuuLuong (@page int ,@NUM_ELM int, @ApSuat1 FLOAT, @ApSuat2 FLOAT , @TheTich1 FLOAT, @TheTich2 FLOAT , @LuuLuong1 FLOAT, @LuuLuong2 FLOAT)
+as begin
+Declare @start INT = (@page -1) * @NUM_ELM;
+Declare @end INT = @page * @NUM_ELM;
+SELECT * FROM ( SELECT *, ROW_NUMBER() OVER (ORDER BY ID_Result desc) as row FROM Result 
+where (Result.ApSuatAvg between @ApSuat1 and @ApSuat2) 
+and (Result.TheTichAvg between @TheTich1 and @TheTich2)
+and (Result.LuuLuongAvg between @LuuLuong1 and @LuuLuong2)) 
+a WHERE a.row > @start and a.row <= @end;
+end
+GO
+
+--Không chọn tên Machine, không chọn ngày, có chọn chỉ số (2 chỉ số , Áp suất - Thể tích)
+CREATE PROC Count_NoName_NoDate_YesParameter_ApSuat_TheTich
+(@ApSuat1 FLOAT, @ApSuat2 FLOAT , @TheTich1 FLOAT, @TheTich2 FLOAT)
+as begin 
+select count(*) from Result where (Result.ApSuatAvg between @ApSuat1 and @ApSuat2) 
+and (Result.TheTichAvg between @TheTich1 and @TheTich2)
+end
+GO
+
+CREATE PROC Pagination_NoName_NoDate_YesParameter_ApSuat_TheTich (@page int ,@NUM_ELM int, @ApSuat1 FLOAT, @ApSuat2 FLOAT , @TheTich1 FLOAT, @TheTich2 FLOAT)
+as begin
+Declare @start INT = (@page -1) * @NUM_ELM;
+Declare @end INT = @page * @NUM_ELM;
+SELECT * FROM ( SELECT *, ROW_NUMBER() OVER (ORDER BY ID_Result desc) as row FROM Result 
+where (Result.ApSuatAvg between @ApSuat1 and @ApSuat2) 
+and (Result.TheTichAvg between @TheTich1 and @TheTich2)) 
+a WHERE a.row > @start and a.row <= @end;
+end
+GO
+
+--Không chọn tên Machine, không chọn ngày, có chọn chỉ số (2 chỉ số , Áp suất - Lưu Lượng)
+CREATE PROC Count_NoName_NoDate_YesParameter_ApSuat_LuuLuong
+(@ApSuat1 FLOAT, @ApSuat2 FLOAT , @LuuLuong1 FLOAT, @LuuLuong2 FLOAT)
+as begin 
+select count(*) from Result where (Result.ApSuatAvg between @ApSuat1 and @ApSuat2) 
+and (Result.LuuLuongAvg between @LuuLuong1 and @LuuLuong2)
+end
+GO
+
+CREATE PROC Pagination_NoName_NoDate_YesParameter_ApSuat_LuuLuong (@page int ,@NUM_ELM int, @ApSuat1 FLOAT, @ApSuat2 FLOAT, @LuuLuong1 FLOAT, @LuuLuong2 FLOAT)
+as begin
+Declare @start INT = (@page -1) * @NUM_ELM;
+Declare @end INT = @page * @NUM_ELM;
+SELECT * FROM ( SELECT *, ROW_NUMBER() OVER (ORDER BY ID_Result desc) as row FROM Result 
+where (Result.ApSuatAvg between @ApSuat1 and @ApSuat2) 
+and (Result.LuuLuongAvg between @LuuLuong1 and @LuuLuong2)) 
+a WHERE a.row > @start and a.row <= @end;
+end
+GO
+
+--Không chọn tên Machine, không chọn ngày, có chọn chỉ số (2 chỉ số (thể tích - lưu lượng))
+CREATE PROC Count_NoName_NoDate_YesParameter_TheTich_LuuLuong
+(@TheTich1 FLOAT, @TheTich2 FLOAT , @LuuLuong1 FLOAT, @LuuLuong2 FLOAT)
+as begin 
+select count(*) from Result where (Result.TheTichAvg between @TheTich1 and @TheTich2)
+and (Result.LuuLuongAvg between @LuuLuong1 and @LuuLuong2)
+end
+GO
+
+CREATE PROC Pagination_NoName_NoDate_YesParameter_TheTich_LuuLuong (@page int ,@NUM_ELM int, @TheTich1 FLOAT, @TheTich2 FLOAT , @LuuLuong1 FLOAT, @LuuLuong2 FLOAT)
+as begin
+Declare @start INT = (@page -1) * @NUM_ELM;
+Declare @end INT = @page * @NUM_ELM;
+SELECT * FROM ( SELECT *, ROW_NUMBER() OVER (ORDER BY ID_Result desc) as row FROM Result 
+where(Result.TheTichAvg between @TheTich1 and @TheTich2)
+and (Result.LuuLuongAvg between @LuuLuong1 and @LuuLuong2)) 
+a WHERE a.row > @start and a.row <= @end;
+end
+GO
+
+--Không chọn tên Machine, không chọn ngày, có chọn chỉ số (1 thể tích)
+CREATE PROC Count_NoName_NoDate_YesParameter_TheTich
+(@TheTich1 FLOAT, @TheTich2 FLOAT)
+as begin 
+select count(*) from Result where (Result.TheTichAvg between @TheTich1 and @TheTich2)
+end
+GO
+
+CREATE PROC Pagination_NoName_NoDate_YesParameter_TheTich (@page int ,@NUM_ELM int, @TheTich1 FLOAT, @TheTich2 FLOAT)
+as begin
+Declare @start INT = (@page -1) * @NUM_ELM;
+Declare @end INT = @page * @NUM_ELM;
+SELECT * FROM ( SELECT *, ROW_NUMBER() OVER (ORDER BY ID_Result desc) as row FROM Result 
+where Result.TheTichAvg between @TheTich1 and @TheTich2) 
+a WHERE a.row > @start and a.row <= @end;
+end
+GO
+
+--Không chọn tên Machine, không chọn ngày, có chọn chỉ số (1 - lưu lượng)
+CREATE PROC Count_NoName_NoDate_YesParameter_LuuLuong
+(@LuuLuong1 FLOAT, @LuuLuong2 FLOAT)
+as begin 
+select count(*) from Result where Result.LuuLuongAvg between @LuuLuong1 and @LuuLuong2
+end
+GO
+
+CREATE PROC Pagination_NoName_NoDate_YesParameter_LuuLuong (@page int ,@NUM_ELM int, @LuuLuong1 FLOAT, @LuuLuong2 FLOAT)
+as begin
+Declare @start INT = (@page -1) * @NUM_ELM;
+Declare @end INT = @page * @NUM_ELM;
+SELECT * FROM ( SELECT *, ROW_NUMBER() OVER (ORDER BY ID_Result desc) as row FROM Result 
+where Result.LuuLuongAvg between @LuuLuong1 and @LuuLuong2)
+a WHERE a.row > @start and a.row <= @end;
+end
+GO
+
+--Không chọn tên Machine, không chọn ngày, có chọn chỉ số (1 chỉ số - Áp suất)
+CREATE PROC Count_NoName_NoDate_YesParameter_ApSuat
+(@ApSuat1 FLOAT, @ApSuat2 FLOAT)
+as begin 
+select count(*) from Result where Result.ApSuatAvg between @ApSuat1 and @ApSuat2
+end
+GO
+
+CREATE PROC Pagination_NoName_NoDate_YesParameter_ApSuat (@page int ,@NUM_ELM int, @ApSuat1 FLOAT, @ApSuat2 FLOAT)
+as begin
+Declare @start INT = (@page -1) * @NUM_ELM;
+Declare @end INT = @page * @NUM_ELM;
+SELECT * FROM ( SELECT *, ROW_NUMBER() OVER (ORDER BY ID_Result desc) as row FROM Result 
+where Result.ApSuatAvg between @ApSuat1 and @ApSuat2) 
+a WHERE a.row > @start and a.row <= @end;
+end
+GO
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*2*/
+
+--Chọn tên, chọn ngày, không chọn chỉ số (NAME_DATE)
+CREATE PROC Count_YesName_YesDate_NoParameter
+(@NameMachine nvarchar(100), @Time1 Datetime , @Time2 Datetime)
+as begin 
+select count(*) from Result where 
+(Result.NameMachine = @NameMachine)
+and (Result.TimeStart BETWEEN @Time1 AND @Time2)
+end
+GO
+
+CREATE PROC Pagination_YesName_YesDate_NoParameter (@page int ,@NUM_ELM int, @NameMachine nvarchar(100), @Time1 Datetime , @Time2 Datetime)
+as begin
+Declare @start INT = (@page -1) * @NUM_ELM;
+Declare @end INT = @page * @NUM_ELM;
+SELECT * FROM ( SELECT *, ROW_NUMBER() OVER (ORDER BY ID_Result desc) as row FROM Result 
+where (Result.NameMachine = @NameMachine)
+and (Result.TimeStart BETWEEN @Time1 AND @Time2)) 
+a WHERE a.row > @start and a.row <= @end;
+end
+GO
+
+
+--Name vs Parameter
+
+--Chọn tên, không chọn ngày, chọn chỉ số (3 chỉ số) (NAME_DATE_PARAMETER)
+CREATE PROC Count_YesName_NoDate_YesParameter_ApSuat_TheTich_LuuLuong
+(@NameMachine nvarchar(100), @ApSuat1 FLOAT, @ApSuat2 FLOAT , @TheTich1 FLOAT, @TheTich2 FLOAT , @LuuLuong1 FLOAT, @LuuLuong2 FLOAT)
+as begin 
+select count(*) from Result where 
+(Result.NameMachine = @NameMachine)
+and (Result.ApSuatAvg between @ApSuat1 and @ApSuat2) 
+and (Result.TheTichAvg between @TheTich1 and @TheTich2)
+and (Result.LuuLuongAvg between @LuuLuong1 and @LuuLuong2)
+end
+GO
+
+CREATE PROC Pagination_YesName_NoDate_YesParameter_ApSuat_TheTich_LuuLuong (@page int ,@NUM_ELM int, @NameMachine nvarchar(100),
+@ApSuat1 FLOAT, @ApSuat2 FLOAT , @TheTich1 FLOAT, @TheTich2 FLOAT , @LuuLuong1 FLOAT, @LuuLuong2 FLOAT)
+as begin
+Declare @start INT = (@page -1) * @NUM_ELM;
+Declare @end INT = @page * @NUM_ELM;
+SELECT * FROM ( SELECT *, ROW_NUMBER() OVER (ORDER BY ID_Result desc) as row FROM Result 
+where (Result.NameMachine = @NameMachine)
+and (Result.ApSuatAvg between @ApSuat1 and @ApSuat2) 
+and (Result.TheTichAvg between @TheTich1 and @TheTich2)
+and (Result.LuuLuongAvg between @LuuLuong1 and @LuuLuong2)) 
+a WHERE a.row > @start and a.row <= @end;
+end
+GO
+
+--Chọn tên Machine,không chọn ngày, có chọn chỉ số (2 chỉ số , Áp suất - Thể tích)
+CREATE PROC Count_YesName_NoDate_YesParameter_ApSuat_TheTich
+(@NameMachine nvarchar(100), @ApSuat1 FLOAT, @ApSuat2 FLOAT , @TheTich1 FLOAT, @TheTich2 FLOAT)
+as begin 
+select count(*) from Result where (Result.NameMachine = @NameMachine)
+and (Result.ApSuatAvg between @ApSuat1 and @ApSuat2) 
+and (Result.TheTichAvg between @TheTich1 and @TheTich2)
+end
+GO
+
+CREATE PROC Pagination_YesName_NoDate_YesParameter_ApSuat_TheTich (@page int ,@NUM_ELM int, @NameMachine nvarchar(100), @ApSuat1 FLOAT, @ApSuat2 FLOAT , @TheTich1 FLOAT, @TheTich2 FLOAT)
+as begin
+Declare @start INT = (@page -1) * @NUM_ELM;
+Declare @end INT = @page * @NUM_ELM;
+SELECT * FROM ( SELECT *, ROW_NUMBER() OVER (ORDER BY ID_Result desc) as row FROM Result 
+where 
+(Result.NameMachine = @NameMachine)
+and (Result.ApSuatAvg between @ApSuat1 and @ApSuat2) 
+and (Result.TheTichAvg between @TheTich1 and @TheTich2)) 
+a WHERE a.row > @start and a.row <= @end;
+end
+GO
+
+--Có chọn tên Machine, không chọn ngày, có chọn chỉ số (2 chỉ số , Áp suất - Lưu Lượng)
+CREATE PROC Count_YesName_NoDate_YesParameter_ApSuat_LuuLuong
+( @NameMachine nvarchar(100), @ApSuat1 FLOAT, @ApSuat2 FLOAT , @LuuLuong1 FLOAT, @LuuLuong2 FLOAT)
+as begin 
+select count(*) from Result where 
+(Result.NameMachine = @NameMachine)
+and (Result.ApSuatAvg between @ApSuat1 and @ApSuat2) 
+and (Result.LuuLuongAvg between @LuuLuong1 and @LuuLuong2)
+end
+GO
+
+CREATE PROC Pagination_YesName_NoDate_YesParameter_ApSuat_LuuLuong (@page int ,@NUM_ELM int,  @NameMachine nvarchar(100), @ApSuat1 FLOAT, @ApSuat2 FLOAT, @LuuLuong1 FLOAT, @LuuLuong2 FLOAT)
+as begin
+Declare @start INT = (@page -1) * @NUM_ELM;
+Declare @end INT = @page * @NUM_ELM;
+SELECT * FROM ( SELECT *, ROW_NUMBER() OVER (ORDER BY ID_Result desc) as row FROM Result 
+where (Result.NameMachine = @NameMachine)
+and (Result.ApSuatAvg between @ApSuat1 and @ApSuat2) 
+and (Result.LuuLuongAvg between @LuuLuong1 and @LuuLuong2)) 
+a WHERE a.row > @start and a.row <= @end;
+end
+GO
+
+--Có chọn tên Machine, không chọn ngày, có chọn chỉ số (2 chỉ số (thể tích - lưu lượng))
+CREATE PROC Count_YesName_NoDate_YesParameter_TheTich_LuuLuong
+(@NameMachine nvarchar(100), @TheTich1 FLOAT, @TheTich2 FLOAT , @LuuLuong1 FLOAT, @LuuLuong2 FLOAT)
+as begin 
+select count(*) from Result where 
+(Result.NameMachine = @NameMachine)
+and (Result.TheTichAvg between @TheTich1 and @TheTich2)
+and (Result.LuuLuongAvg between @LuuLuong1 and @LuuLuong2)
+end
+GO
+
+CREATE PROC Pagination_YesName_NoDate_YesParameter_TheTich_LuuLuong (@page int ,@NUM_ELM int, @NameMachine nvarchar(100), @TheTich1 FLOAT, @TheTich2 FLOAT , @LuuLuong1 FLOAT, @LuuLuong2 FLOAT)
+as begin
+Declare @start INT = (@page -1) * @NUM_ELM;
+Declare @end INT = @page * @NUM_ELM;
+SELECT * FROM ( SELECT *, ROW_NUMBER() OVER (ORDER BY ID_Result desc) as row FROM Result 
+where (Result.NameMachine = @NameMachine)
+and (Result.TheTichAvg between @TheTich1 and @TheTich2)
+and (Result.LuuLuongAvg between @LuuLuong1 and @LuuLuong2)) 
+a WHERE a.row > @start and a.row <= @end;
+end
+GO
+
+--Có chọn tên Machine, không chọn ngày, có chọn chỉ số (1 thể tích)
+CREATE PROC Count_YesName_NoDate_YesParameter_TheTich
+(@NameMachine nvarchar(100), @TheTich1 FLOAT, @TheTich2 FLOAT)
+as begin 
+select count(*) from Result where (Result.NameMachine = @NameMachine)
+and (Result.TheTichAvg between @TheTich1 and @TheTich2)
+end
+GO
+
+CREATE PROC Pagination_YesName_NoDate_YesParameter_TheTich (@page int ,@NUM_ELM int, @NameMachine nvarchar(100), @TheTich1 FLOAT, @TheTich2 FLOAT)
+as begin
+Declare @start INT = (@page -1) * @NUM_ELM;
+Declare @end INT = @page * @NUM_ELM;
+SELECT * FROM ( SELECT *, ROW_NUMBER() OVER (ORDER BY ID_Result desc) as row FROM Result 
+where (Result.NameMachine = @NameMachine)
+and (Result.TheTichAvg between @TheTich1 and @TheTich2)) 
+a WHERE a.row > @start and a.row <= @end;
+end
+GO
+
+--Có chọn tên Machine, không chọn ngày, có chọn chỉ số (1 - lưu lượng)
+CREATE PROC Count_YesName_NoDate_YesParameter_LuuLuong
+(@NameMachine nvarchar(100), @LuuLuong1 FLOAT, @LuuLuong2 FLOAT)
+as begin 
+select count(*) from Result where  (Result.NameMachine = @NameMachine) and (Result.LuuLuongAvg between @LuuLuong1 and @LuuLuong2)
+end
+GO
+
+CREATE PROC Pagination_YesName_NoDate_YesParameter_LuuLuong (@page int ,@NUM_ELM int, @NameMachine nvarchar(100), @LuuLuong1 FLOAT, @LuuLuong2 FLOAT)
+as begin
+Declare @start INT = (@page -1) * @NUM_ELM;
+Declare @end INT = @page * @NUM_ELM;
+SELECT * FROM ( SELECT *, ROW_NUMBER() OVER (ORDER BY ID_Result desc) as row FROM Result 
+where  (Result.NameMachine = @NameMachine)
+and (Result.LuuLuongAvg between @LuuLuong1 and @LuuLuong2))
+a WHERE a.row > @start and a.row <= @end;
+end
+GO
+
+
+--Có chọn tên Machine, có chọn ngày, có chọn chỉ số (1 chỉ số - Áp suất)
+CREATE PROC Count_YesName_NoDate_YesParameter_ApSuat
+( @NameMachine nvarchar(100), @ApSuat1 FLOAT, @ApSuat2 FLOAT)
+as begin 
+select count(*) from Result where (Result.NameMachine = @NameMachine)
+and (Result.ApSuatAvg between @ApSuat1 and @ApSuat2)
+end
+GO
+
+CREATE PROC Pagination_YesName_NoDate_YesParameter_ApSuat (@page int ,@NUM_ELM int,  @NameMachine nvarchar(100), @ApSuat1 FLOAT, @ApSuat2 FLOAT)
+as begin
+Declare @start INT = (@page -1) * @NUM_ELM;
+Declare @end INT = @page * @NUM_ELM;
+SELECT * FROM ( SELECT *, ROW_NUMBER() OVER (ORDER BY ID_Result desc) as row FROM Result 
+where (Result.NameMachine = @NameMachine)
+and Result.ApSuatAvg between @ApSuat1 and @ApSuat2) 
+a WHERE a.row > @start and a.row <= @end;
+end
+GO
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--DATE VS PARAMETER
+
+--không chọn tên, chọn ngày, chọn chỉ số (3 chỉ số) (NAME_DATE_PARAMETER)
+CREATE PROC Count_NoName_YesDate_YesParameter_ApSuat_TheTich_LuuLuong
+(@Time1 Datetime , @Time2 Datetime,
+@ApSuat1 FLOAT, @ApSuat2 FLOAT , @TheTich1 FLOAT, @TheTich2 FLOAT , @LuuLuong1 FLOAT, @LuuLuong2 FLOAT)
+as begin 
+select count(*) from Result where 
+(Result.TimeStart BETWEEN @Time1 AND @Time2)
+and (Result.ApSuatAvg between @ApSuat1 and @ApSuat2) 
+and (Result.TheTichAvg between @TheTich1 and @TheTich2)
+and (Result.LuuLuongAvg between @LuuLuong1 and @LuuLuong2)
+end
+GO
+
+CREATE PROC Pagination_NoName_YesDate_YesParameter_ApSuat_TheTich_LuuLuong (@page int ,@NUM_ELM int, @Time1 Datetime , @Time2 Datetime,
+@ApSuat1 FLOAT, @ApSuat2 FLOAT , @TheTich1 FLOAT, @TheTich2 FLOAT , @LuuLuong1 FLOAT, @LuuLuong2 FLOAT)
+as begin
+Declare @start INT = (@page -1) * @NUM_ELM;
+Declare @end INT = @page * @NUM_ELM;
+SELECT * FROM ( SELECT *, ROW_NUMBER() OVER (ORDER BY ID_Result desc) as row FROM Result 
+where(Result.TimeStart BETWEEN @Time1 AND @Time2)
+and (Result.ApSuatAvg between @ApSuat1 and @ApSuat2) 
+and (Result.TheTichAvg between @TheTich1 and @TheTich2)
+and (Result.LuuLuongAvg between @LuuLuong1 and @LuuLuong2)) 
+a WHERE a.row > @start and a.row <= @end;
+end
+GO
+
+--Không chọn tên Machine,có chọn ngày, có chọn chỉ số (2 chỉ số , Áp suất - Thể tích)
+CREATE PROC Count_NoName_YesDate_YesParameter_ApSuat_TheTich
+(@Time1 Datetime , @Time2 Datetime, @ApSuat1 FLOAT, @ApSuat2 FLOAT , @TheTich1 FLOAT, @TheTich2 FLOAT)
+as begin 
+select count(*) from Result where (Result.TimeStart BETWEEN @Time1 AND @Time2) 
+and (Result.ApSuatAvg between @ApSuat1 and @ApSuat2) 
+and (Result.TheTichAvg between @TheTich1 and @TheTich2)
+end
+GO
+
+CREATE PROC Pagination_NoName_YesDate_YesParameter_ApSuat_TheTich (@page int ,@NUM_ELM int, @Time1 Datetime , @Time2 Datetime, @ApSuat1 FLOAT, @ApSuat2 FLOAT , @TheTich1 FLOAT, @TheTich2 FLOAT)
+as begin
+Declare @start INT = (@page -1) * @NUM_ELM;
+Declare @end INT = @page * @NUM_ELM;
+SELECT * FROM ( SELECT *, ROW_NUMBER() OVER (ORDER BY ID_Result desc) as row FROM Result 
+where (Result.TimeStart BETWEEN @Time1 AND @Time2)
+and (Result.ApSuatAvg between @ApSuat1 and @ApSuat2) 
+and (Result.TheTichAvg between @TheTich1 and @TheTich2)) 
+a WHERE a.row > @start and a.row <= @end;
+end
+GO
+
+--Không chọn tên Machine, có chọn ngày, có chọn chỉ số (2 chỉ số , Áp suất - Lưu Lượng)
+CREATE PROC Count_NoName_YesDate_YesParameter_ApSuat_LuuLuong
+(@Time1 Datetime , @Time2 Datetime, @ApSuat1 FLOAT, @ApSuat2 FLOAT , @LuuLuong1 FLOAT, @LuuLuong2 FLOAT)
+as begin 
+select count(*) from Result where 
+(Result.TimeStart BETWEEN @Time1 AND @Time2)
+and (Result.ApSuatAvg between @ApSuat1 and @ApSuat2) 
+and (Result.LuuLuongAvg between @LuuLuong1 and @LuuLuong2)
+end
+GO
+
+CREATE PROC Pagination_NoName_YesDate_YesParameter_ApSuat_LuuLuong (@page int ,@NUM_ELM int, @Time1 Datetime , @Time2 Datetime, @ApSuat1 FLOAT, @ApSuat2 FLOAT, @LuuLuong1 FLOAT, @LuuLuong2 FLOAT)
+as begin
+Declare @start INT = (@page -1) * @NUM_ELM;
+Declare @end INT = @page * @NUM_ELM;
+SELECT * FROM ( SELECT *, ROW_NUMBER() OVER (ORDER BY ID_Result desc) as row FROM Result 
+where (Result.TimeStart BETWEEN @Time1 AND @Time2)
+and (Result.ApSuatAvg between @ApSuat1 and @ApSuat2) 
+and (Result.LuuLuongAvg between @LuuLuong1 and @LuuLuong2)) 
+a WHERE a.row > @start and a.row <= @end;
+end
+GO
+
+--Không chọn tên Machine, có chọn ngày, có chọn chỉ số (2 chỉ số (thể tích - lưu lượng))
+CREATE PROC Count_NoName_YesDate_YesParameter_TheTich_LuuLuong
+(@Time1 Datetime , @Time2 Datetime, @TheTich1 FLOAT, @TheTich2 FLOAT , @LuuLuong1 FLOAT, @LuuLuong2 FLOAT)
+as begin 
+select count(*) from Result where (Result.TimeStart BETWEEN @Time1 AND @Time2) 
+and (Result.TheTichAvg between @TheTich1 and @TheTich2)
+and (Result.LuuLuongAvg between @LuuLuong1 and @LuuLuong2)
+end
+GO
+
+CREATE PROC Pagination_NoName_YesDate_YesParameter_TheTich_LuuLuong (@page int ,@NUM_ELM int, @Time1 Datetime , @Time2 Datetime, @TheTich1 FLOAT, @TheTich2 FLOAT , @LuuLuong1 FLOAT, @LuuLuong2 FLOAT)
+as begin
+Declare @start INT = (@page -1) * @NUM_ELM;
+Declare @end INT = @page * @NUM_ELM;
+SELECT * FROM ( SELECT *, ROW_NUMBER() OVER (ORDER BY ID_Result desc) as row FROM Result 
+where (Result.TimeStart BETWEEN @Time1 AND @Time2) 
+and (Result.TheTichAvg between @TheTich1 and @TheTich2)
+and (Result.LuuLuongAvg between @LuuLuong1 and @LuuLuong2)) 
+a WHERE a.row > @start and a.row <= @end;
+end
+GO
+
+--Không chọn tên Machine, có chọn ngày, có chọn chỉ số (1 thể tích)
+CREATE PROC Count_NoName_YesDate_YesParameter_TheTich
+(@Time1 Datetime , @Time2 Datetime, @TheTich1 FLOAT, @TheTich2 FLOAT)
+as begin 
+select count(*) from Result where (Result.TimeStart BETWEEN @Time1 AND @Time2) and (Result.TheTichAvg between @TheTich1 and @TheTich2)
+end
+GO
+
+CREATE PROC Pagination_NoName_YesDate_YesParameter_TheTich (@page int ,@NUM_ELM int, @Time1 Datetime , @Time2 Datetime, @TheTich1 FLOAT, @TheTich2 FLOAT)
+as begin
+Declare @start INT = (@page -1) * @NUM_ELM;
+Declare @end INT = @page * @NUM_ELM;
+SELECT * FROM ( SELECT *, ROW_NUMBER() OVER (ORDER BY ID_Result desc) as row FROM Result 
+where (Result.TimeStart BETWEEN @Time1 AND @Time2) 
+and (Result.TheTichAvg between @TheTich1 and @TheTich2)) 
+a WHERE a.row > @start and a.row <= @end;
+end
+GO
+
+--Không chọn tên Machine, có chọn ngày, có chọn chỉ số (1 - lưu lượng)
+CREATE PROC Count_NoName_YesDate_YesParameter_LuuLuong
+(@Time1 Datetime , @Time2 Datetime, @LuuLuong1 FLOAT, @LuuLuong2 FLOAT)
+as begin 
+select count(*) from Result where (Result.TimeStart BETWEEN @Time1 AND @Time2) and (Result.LuuLuongAvg between @LuuLuong1 and @LuuLuong2)
+end
+GO
+
+CREATE PROC Pagination_NoName_YesDate_YesParameter_LuuLuong (@page int ,@NUM_ELM int, @Time1 Datetime , @Time2 Datetime, @LuuLuong1 FLOAT, @LuuLuong2 FLOAT)
+as begin
+Declare @start INT = (@page -1) * @NUM_ELM;
+Declare @end INT = @page * @NUM_ELM;
+SELECT * FROM ( SELECT *, ROW_NUMBER() OVER (ORDER BY ID_Result desc) as row FROM Result 
+where (Result.TimeStart BETWEEN @Time1 AND @Time2) 
+and (Result.LuuLuongAvg between @LuuLuong1 and @LuuLuong2))
+a WHERE a.row > @start and a.row <= @end;
+end
+GO
+
+
+--Không chọn tên Machine, có chọn ngày, có chọn chỉ số (1 chỉ số - Áp suất)
+CREATE PROC Count_NoName_YesDate_YesParameter_ApSuat
+(@Time1 Datetime , @Time2 Datetime, @ApSuat1 FLOAT, @ApSuat2 FLOAT)
+as begin 
+select count(*) from Result where (Result.TimeStart BETWEEN @Time1 AND @Time2) and (Result.ApSuatAvg between @ApSuat1 and @ApSuat2)
+end
+GO
+
+CREATE PROC Pagination_NoName_YesDate_YesParameter_ApSuat (@page int ,@NUM_ELM int, @Time1 Datetime , @Time2 Datetime, @ApSuat1 FLOAT, @ApSuat2 FLOAT)
+as begin
+Declare @start INT = (@page -1) * @NUM_ELM;
+Declare @end INT = @page * @NUM_ELM;
+SELECT * FROM ( SELECT *, ROW_NUMBER() OVER (ORDER BY ID_Result desc) as row FROM Result 
+where (Result.TimeStart BETWEEN @Time1 AND @Time2)
+and Result.ApSuatAvg between @ApSuat1 and @ApSuat2) 
+a WHERE a.row > @start and a.row <= @end;
+end
+GO
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
  --Lấy ra các Result theo Worker
  CREATE PROC GetResultFromWorker (@Worker nvarchar(100)) as begin
@@ -609,6 +1365,7 @@ GO
 
 
 exec AddResultAndReturnIDResult 'May 1','admin'
-
+GO
 exec AddData 10,10,10,1
+GO
 exec UpdateResult 1,10,21,12,123,123,123,213,123,234

@@ -7,23 +7,17 @@ namespace MayNapKhiTPA.Models
 
     public class ResultBusiness
     {
-        public static List<Result> GetAllResults(int? page)
+        public static List<Result> GetAllResults(int page)
         {
             List<Result> list = new List<Result>();
             SqlConnection sqlConnection = new SqlConnection(Common.ConnectionString);
             sqlConnection.Open();
 
-            string sql;
-            if (page != null && page != 0)
-            {
-                int? start = (page - 1) * Common.NUMBER_ELM_ON_PAGE_RESULT;
-                int? end = page * Common.NUMBER_ELM_ON_PAGE_RESULT;
-                sql = $"exec PaginationResult {start},{end}";
-            }
-            else
-            {
-                sql = "select * from Result order by Result.ID_Result DESC";
-            }
+
+            int? start = (page - 1) * Common.NUMBER_ELM_ON_PAGE_RESULT;
+            int? end = page * Common.NUMBER_ELM_ON_PAGE_RESULT;
+            string sql = $"exec PaginationResult {start},{end}";
+
             SqlCommand command = new SqlCommand(sql, sqlConnection);
             SqlDataReader sqlDataReader = command.ExecuteReader();
             while (sqlDataReader.Read())
@@ -38,22 +32,17 @@ namespace MayNapKhiTPA.Models
             return list;
         }
 
-        public static List<Result> GetResultByDay(string tungay, string toingay, int? page)
+        public static List<Result> GetResultByDay(string tungay, string toingay, int page)
         {
             List<Result> list = new List<Result>();
             SqlConnection sqlConnection = new SqlConnection(Common.ConnectionString);
             sqlConnection.Open();
-            string sql;
-            if (page != null && page != 0)
-            {
-                int? start = (page - 1) * Common.NUMBER_ELM_ON_PAGE_RESULT;
-                int? end = page * Common.NUMBER_ELM_ON_PAGE_RESULT;
-                sql = $"exec PaginationResultByDay {start},{end},'{tungay}','{toingay}'";
-            }
-            else
-            {
-                sql = $"exec FindResultByDay '{tungay}', '{toingay}'";
-            }
+
+
+            int start = (page - 1) * Common.NUMBER_ELM_ON_PAGE_RESULT;
+            int end = page * Common.NUMBER_ELM_ON_PAGE_RESULT;
+            string sql = $"exec PaginationResultByDay {start},{end},'{tungay}','{toingay}'";
+
             SqlCommand command = new SqlCommand(sql, sqlConnection);
             //loi
             SqlDataReader sqlDataReader = command.ExecuteReader();
