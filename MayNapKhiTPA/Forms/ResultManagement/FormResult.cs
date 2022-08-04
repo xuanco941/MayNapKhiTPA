@@ -1,14 +1,18 @@
-﻿using MayNapKhiTPA.Models;
+﻿using MayNapKhiTPA.Library;
+using MayNapKhiTPA.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Excel = Microsoft.Office.Interop.Excel;
+using Microsoft.Office.Interop.Excel;
 
 namespace MayNapKhiTPA.Forms
 {
@@ -50,10 +54,10 @@ namespace MayNapKhiTPA.Forms
         {
             InitializeComponent();
             buttonExcel.ForeColor = Color.Black;
-            buttonExcel.Font = new Font("Segoe UI", 9, FontStyle.Bold);
+            buttonExcel.Font = new System.Drawing.Font("Segoe UI", 9, FontStyle.Bold);
 
             buttonPrint.ForeColor = Color.Black;
-            buttonPrint.Font = new Font("Segoe UI", 9, FontStyle.Bold);
+            buttonPrint.Font = new System.Drawing.Font("Segoe UI", 9, FontStyle.Bold);
 
             dataGridViewResult.RowTemplate.Height = 45;
 
@@ -74,7 +78,7 @@ namespace MayNapKhiTPA.Forms
         private void LoadDataGridView(List<Result> list)
         {
             //
-            DataTable dt = new DataTable();
+            System.Data.DataTable dt = new System.Data.DataTable();
             dt.Columns.Add("Mã mẻ");
             dt.Columns.Add("Áp suất min");
             dt.Columns.Add("Áp suất max");
@@ -496,7 +500,7 @@ namespace MayNapKhiTPA.Forms
         private void buttonPage1_Click(object sender, EventArgs e)
         {
             // select button trang
-            Button button = sender as Button;
+            System.Windows.Forms.Button button = sender as System.Windows.Forms.Button;
 
             if (this.page > this.pageSize)
             {
@@ -579,6 +583,105 @@ namespace MayNapKhiTPA.Forms
                     this.page = this.pageSize;
                 }
                 GetResults();
+            }
+        }
+
+
+        //public DataGridView CloneDataGrid(DataGridView mainDataGridView)
+        //{
+        //    DataGridView cloneDataGridView = new DataGridView();
+
+        //    if (cloneDataGridView.Columns.Count == 0)
+        //    {
+        //        foreach (DataGridViewColumn datagrid in mainDataGridView.Columns)
+        //        {
+        //            cloneDataGridView.Columns.Add(datagrid.Clone() as DataGridViewColumn);
+        //        }
+        //    }
+
+        //    DataGridViewRow dataRow = new DataGridViewRow();
+
+        //    for (int i = 0; i < mainDataGridView.Rows.Count; i++)
+        //    {
+        //        dataRow = (DataGridViewRow)mainDataGridView.Rows[i].Clone();
+        //        int Index = 0;
+        //        foreach (DataGridViewCell cell in mainDataGridView.Rows[i].Cells)
+        //        {
+        //            dataRow.Cells[Index].Value = cell.Value;
+        //            Index++;
+        //        }
+        //        cloneDataGridView.Rows.Add(dataRow);
+        //    }
+        //    cloneDataGridView.AllowUserToAddRows = false;
+        //    cloneDataGridView.Refresh();
+
+
+        //    return cloneDataGridView;
+        //}
+        private void buttonPrint_Click(object sender, EventArgs e)
+        {
+
+            DGVPrinter printer = new DGVPrinter();
+
+            printer.Title = "TPA - Total Automation Solutions";
+
+            printer.SubTitle = "("+DateTime.Now.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture)+")";
+
+            printer.TitleSpacing = 5;
+
+            printer.SubTitleSpacing = 30;
+
+            printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
+
+            printer.PageNumbers = true;
+
+            printer.PageNumberInHeader = false;
+
+            printer.PorportionalColumns = true;
+
+            printer.HeaderCellAlignment = StringAlignment.Near;
+
+            printer.Footer = "TPA";
+
+            printer.FooterSpacing = 15;
+
+
+            PrinterSettings ps = new PrinterSettings();
+            PrintDocument recordDoc = new PrintDocument();
+            recordDoc.PrinterSettings = ps;
+            IEnumerable<PaperSize> paperSizes = ps.PaperSizes.Cast<PaperSize>();
+            PaperSize sizeA4 = paperSizes.First<PaperSize>(size => size.Kind == PaperKind.A4); // setting paper size to A4 size
+            recordDoc.DefaultPageSettings.PaperSize = sizeA4;
+            printer.printDocument.DefaultPageSettings.PaperSize = sizeA4;
+
+
+            printer.PrintDataGridView(dataGridViewResult);
+        }
+
+
+        //Excel
+       
+        private void buttonExcel_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewResult.Rows.Count > 0)
+            {
+                Excel.Application XcelApp = new Excel.Application();
+
+                XcelApp.Application.Workbooks.Add(Type.Missing);
+                for (int i = 1; i < dataGridViewResult.Columns.Count + 1; i++)
+                {
+                    XcelApp.Cells[1, i] = dataGridViewResult.Columns[i - 1].HeaderText;
+                }
+                for (int i = 0; i < dataGridViewResult.Rows.Count; i++)
+                {
+                    for (int j = 0; j < dataGridViewResult.Columns.Count; j++)
+                    {
+                        XcelApp.Cells[i + 2, j + 1] = dataGridViewResult.Rows[i].Cells[j].Value.ToString();
+                        XcelApp.Cells[i+2,j+1].HorizontalAlignment = XlHAlign.xlHAlignCenter;
+                    }
+                }
+                XcelApp.Columns.AutoFit();
+                XcelApp.Visible = true;
             }
         }
     }

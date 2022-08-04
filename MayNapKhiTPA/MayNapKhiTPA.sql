@@ -1376,7 +1376,7 @@ exec AddTemplateMachine N'Binh 6',56,398,55,43
 GO
 
 
-exec AddResultAndReturnIDResult 'May 1','admin2'
+exec AddResultAndReturnIDResult 'Máy 1','admin2'
 GO
 exec AddData 141,113,112,1
 GO

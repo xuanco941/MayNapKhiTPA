@@ -716,6 +716,7 @@ namespace MayNapKhiTPA.Forms
             this.buttonPrint.TextColor = System.Drawing.Color.Black;
             this.buttonPrint.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonPrint.UseVisualStyleBackColor = false;
+            this.buttonPrint.Click += new System.EventHandler(this.buttonPrint_Click);
             // 
             // buttonExcel
             // 
@@ -741,6 +742,7 @@ namespace MayNapKhiTPA.Forms
             this.buttonExcel.TextColor = System.Drawing.Color.Black;
             this.buttonExcel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonExcel.UseVisualStyleBackColor = false;
+            this.buttonExcel.Click += new System.EventHandler(this.buttonExcel_Click);
             // 
             // FormResult
             // 
