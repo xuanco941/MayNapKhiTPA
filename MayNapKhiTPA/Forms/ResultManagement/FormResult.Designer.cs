@@ -30,14 +30,15 @@ namespace MayNapKhiTPA.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormResult));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.dataGridViewResult = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.buttonPageNext = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.buttonPage3 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
@@ -62,10 +63,10 @@ namespace MayNapKhiTPA.Forms
             this.numericUpDownTheTich1 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownApSuat2 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownApSuat1 = new System.Windows.Forms.NumericUpDown();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBoxLuuLuong = new System.Windows.Forms.CheckBox();
+            this.checkBoxTheTich = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBoxApSuat = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dateTimePickerToiNgay = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
@@ -76,8 +77,8 @@ namespace MayNapKhiTPA.Forms
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.buttonPrint = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.buttonExcel = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
-            this.dataGridViewResult = new System.Windows.Forms.DataGridView();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewResult)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -94,7 +95,6 @@ namespace MayNapKhiTPA.Forms
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownApSuat1)).BeginInit();
             this.panel6.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewResult)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -124,6 +124,48 @@ namespace MayNapKhiTPA.Forms
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(696, 610);
             this.panel3.TabIndex = 1;
+            // 
+            // dataGridViewResult
+            // 
+            this.dataGridViewResult.AllowUserToAddRows = false;
+            this.dataGridViewResult.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewResult.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridViewResult.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewResult.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridViewResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewResult.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridViewResult.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewResult.Location = new System.Drawing.Point(0, 0);
+            this.dataGridViewResult.Name = "dataGridViewResult";
+            this.dataGridViewResult.ReadOnly = true;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewResult.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dataGridViewResult.RowHeadersVisible = false;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewResult.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            this.dataGridViewResult.Size = new System.Drawing.Size(696, 610);
+            this.dataGridViewResult.TabIndex = 0;
             // 
             // panel2
             // 
@@ -162,6 +204,7 @@ namespace MayNapKhiTPA.Forms
             this.buttonPageNext.TextColor = System.Drawing.Color.Black;
             this.buttonPageNext.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.buttonPageNext.UseVisualStyleBackColor = false;
+            this.buttonPageNext.Click += new System.EventHandler(this.buttonPageNext_Click);
             // 
             // buttonPage3
             // 
@@ -184,6 +227,7 @@ namespace MayNapKhiTPA.Forms
             this.buttonPage3.TextColor = System.Drawing.Color.Black;
             this.buttonPage3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.buttonPage3.UseVisualStyleBackColor = false;
+            this.buttonPage3.Click += new System.EventHandler(this.buttonPage1_Click);
             // 
             // buttonPage1
             // 
@@ -206,6 +250,7 @@ namespace MayNapKhiTPA.Forms
             this.buttonPage1.TextColor = System.Drawing.Color.Black;
             this.buttonPage1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.buttonPage1.UseVisualStyleBackColor = false;
+            this.buttonPage1.Click += new System.EventHandler(this.buttonPage1_Click);
             // 
             // buttonPage2
             // 
@@ -228,6 +273,7 @@ namespace MayNapKhiTPA.Forms
             this.buttonPage2.TextColor = System.Drawing.Color.Black;
             this.buttonPage2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.buttonPage2.UseVisualStyleBackColor = false;
+            this.buttonPage2.Click += new System.EventHandler(this.buttonPage1_Click);
             // 
             // buttonCustomGoPage
             // 
@@ -358,10 +404,10 @@ namespace MayNapKhiTPA.Forms
             this.panel8.Controls.Add(this.numericUpDownTheTich1);
             this.panel8.Controls.Add(this.numericUpDownApSuat2);
             this.panel8.Controls.Add(this.numericUpDownApSuat1);
-            this.panel8.Controls.Add(this.checkBox3);
-            this.panel8.Controls.Add(this.checkBox2);
+            this.panel8.Controls.Add(this.checkBoxLuuLuong);
+            this.panel8.Controls.Add(this.checkBoxTheTich);
             this.panel8.Controls.Add(this.label4);
-            this.panel8.Controls.Add(this.checkBox1);
+            this.panel8.Controls.Add(this.checkBoxApSuat);
             this.panel8.Controls.Add(this.label3);
             this.panel8.Controls.Add(this.dateTimePickerToiNgay);
             this.panel8.Controls.Add(this.label2);
@@ -428,6 +474,7 @@ namespace MayNapKhiTPA.Forms
             this.numericUpDownLuuLuong2.Name = "numericUpDownLuuLuong2";
             this.numericUpDownLuuLuong2.Size = new System.Drawing.Size(56, 25);
             this.numericUpDownLuuLuong2.TabIndex = 63;
+            this.numericUpDownLuuLuong2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // numericUpDownLuuLuong1
             // 
@@ -441,6 +488,7 @@ namespace MayNapKhiTPA.Forms
             this.numericUpDownLuuLuong1.Name = "numericUpDownLuuLuong1";
             this.numericUpDownLuuLuong1.Size = new System.Drawing.Size(55, 25);
             this.numericUpDownLuuLuong1.TabIndex = 61;
+            this.numericUpDownLuuLuong1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // numericUpDownTheTich2
             // 
@@ -454,6 +502,7 @@ namespace MayNapKhiTPA.Forms
             this.numericUpDownTheTich2.Name = "numericUpDownTheTich2";
             this.numericUpDownTheTich2.Size = new System.Drawing.Size(56, 25);
             this.numericUpDownTheTich2.TabIndex = 62;
+            this.numericUpDownTheTich2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label6
             // 
@@ -477,6 +526,7 @@ namespace MayNapKhiTPA.Forms
             this.numericUpDownTheTich1.Name = "numericUpDownTheTich1";
             this.numericUpDownTheTich1.Size = new System.Drawing.Size(55, 25);
             this.numericUpDownTheTich1.TabIndex = 60;
+            this.numericUpDownTheTich1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // numericUpDownApSuat2
             // 
@@ -490,6 +540,7 @@ namespace MayNapKhiTPA.Forms
             this.numericUpDownApSuat2.Name = "numericUpDownApSuat2";
             this.numericUpDownApSuat2.Size = new System.Drawing.Size(56, 25);
             this.numericUpDownApSuat2.TabIndex = 58;
+            this.numericUpDownApSuat2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // numericUpDownApSuat1
             // 
@@ -503,28 +554,29 @@ namespace MayNapKhiTPA.Forms
             this.numericUpDownApSuat1.Name = "numericUpDownApSuat1";
             this.numericUpDownApSuat1.Size = new System.Drawing.Size(55, 25);
             this.numericUpDownApSuat1.TabIndex = 57;
+            this.numericUpDownApSuat1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // checkBox3
+            // checkBoxLuuLuong
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox3.Location = new System.Drawing.Point(19, 284);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(86, 21);
-            this.checkBox3.TabIndex = 56;
-            this.checkBox3.Text = "Lưu lượng";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBoxLuuLuong.AutoSize = true;
+            this.checkBoxLuuLuong.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxLuuLuong.Location = new System.Drawing.Point(19, 284);
+            this.checkBoxLuuLuong.Name = "checkBoxLuuLuong";
+            this.checkBoxLuuLuong.Size = new System.Drawing.Size(86, 21);
+            this.checkBoxLuuLuong.TabIndex = 56;
+            this.checkBoxLuuLuong.Text = "Lưu lượng";
+            this.checkBoxLuuLuong.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // checkBoxTheTich
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.Location = new System.Drawing.Point(19, 226);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(72, 21);
-            this.checkBox2.TabIndex = 55;
-            this.checkBox2.Text = "Thể tích";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBoxTheTich.AutoSize = true;
+            this.checkBoxTheTich.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxTheTich.Location = new System.Drawing.Point(19, 226);
+            this.checkBoxTheTich.Name = "checkBoxTheTich";
+            this.checkBoxTheTich.Size = new System.Drawing.Size(72, 21);
+            this.checkBoxTheTich.TabIndex = 55;
+            this.checkBoxTheTich.Text = "Thể tích";
+            this.checkBoxTheTich.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -536,16 +588,16 @@ namespace MayNapKhiTPA.Forms
             this.label4.TabIndex = 54;
             this.label4.Text = "=>";
             // 
-            // checkBox1
+            // checkBoxApSuat
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(19, 163);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(71, 21);
-            this.checkBox1.TabIndex = 53;
-            this.checkBox1.Text = "Áp suất";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBoxApSuat.AutoSize = true;
+            this.checkBoxApSuat.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxApSuat.Location = new System.Drawing.Point(19, 163);
+            this.checkBoxApSuat.Name = "checkBoxApSuat";
+            this.checkBoxApSuat.Size = new System.Drawing.Size(71, 21);
+            this.checkBoxApSuat.TabIndex = 53;
+            this.checkBoxApSuat.Text = "Áp suất";
+            this.checkBoxApSuat.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -690,48 +742,6 @@ namespace MayNapKhiTPA.Forms
             this.buttonExcel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonExcel.UseVisualStyleBackColor = false;
             // 
-            // dataGridViewResult
-            // 
-            this.dataGridViewResult.AllowUserToAddRows = false;
-            this.dataGridViewResult.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewResult.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridViewResult.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewResult.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewResult.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewResult.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewResult.Location = new System.Drawing.Point(0, 0);
-            this.dataGridViewResult.Name = "dataGridViewResult";
-            this.dataGridViewResult.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewResult.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewResult.RowHeadersVisible = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewResult.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridViewResult.Size = new System.Drawing.Size(696, 610);
-            this.dataGridViewResult.TabIndex = 0;
-            // 
             // FormResult
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -741,6 +751,7 @@ namespace MayNapKhiTPA.Forms
             this.Name = "FormResult";
             this.Text = "FormResult";
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewResult)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -759,7 +770,6 @@ namespace MayNapKhiTPA.Forms
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownApSuat1)).EndInit();
             this.panel6.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewResult)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -794,10 +804,10 @@ namespace MayNapKhiTPA.Forms
         private NumericUpDown numericUpDownTheTich1;
         private NumericUpDown numericUpDownApSuat2;
         private NumericUpDown numericUpDownApSuat1;
-        private CheckBox checkBox3;
-        private CheckBox checkBox2;
+        private CheckBox checkBoxLuuLuong;
+        private CheckBox checkBoxTheTich;
         private Label label4;
-        private CheckBox checkBox1;
+        private CheckBox checkBoxApSuat;
         private Label label3;
         private DateTimePicker dateTimePickerToiNgay;
         private Label label2;

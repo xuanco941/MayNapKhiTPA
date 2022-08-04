@@ -155,9 +155,6 @@ GO
 
 
 
-
-
-
 /*CẢ 3*/
 
 --Chọn tên, chọn ngày, chọn chỉ số (3 chỉ số) (NAME_DATE_PARAMETER)
@@ -390,7 +387,7 @@ select count(*) from Result where Result.NameMachine = @NameMachine;
 end
 GO
 
-CREATE PROC Pagination_YesName_NoDate_NoParameter (@NameMachine nvarchar(100),@page int ,@NUM_ELM int)
+CREATE PROC Pagination_YesName_NoDate_NoParameter (@page int ,@NUM_ELM int, @NameMachine nvarchar(100))
 as begin
 Declare @start INT = (@page -1) * @NUM_ELM;
 Declare @end INT = @page * @NUM_ELM;

@@ -150,6 +150,21 @@
       <DependentUpon>FormAleart.cs</DependentUpon>
     </Compile>
     <Compile Include="Library\DGVPrinter.cs" />
+    <Compile Include="Library\PLCSiemens\S71200pro\Conversion.cs" />
+    <Compile Include="Library\PLCSiemens\S71200pro\Enums.cs" />
+    <Compile Include="Library\PLCSiemens\S71200pro\PLC.cs" />
+    <Compile Include="Library\PLCSiemens\Type\Boolean.cs" />
+    <Compile Include="Library\PLCSiemens\Type\Byte.cs" />
+    <Compile Include="Library\PLCSiemens\Type\ByteArray.cs" />
+    <Compile Include="Library\PLCSiemens\Type\Counter.cs" />
+    <Compile Include="Library\PLCSiemens\Type\DInt.cs" />
+    <Compile Include="Library\PLCSiemens\Type\Double.cs" />
+    <Compile Include="Library\PLCSiemens\Type\DWord.cs" />
+    <Compile Include="Library\PLCSiemens\Type\Int.cs" />
+    <Compile Include="Library\PLCSiemens\Type\String.cs" />
+    <Compile Include="Library\PLCSiemens\Type\Struct.cs" />
+    <Compile Include="Library\PLCSiemens\Type\Timer.cs" />
+    <Compile Include="Library\PLCSiemens\Type\Word.cs" />
     <Compile Include="Models\Activity\Activity.cs" />
     <Compile Include="Models\Activity\ActivityBusiness.cs" />
     <Compile Include="Models\Data\Data.cs" />

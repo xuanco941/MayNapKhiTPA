@@ -27,12 +27,18 @@ namespace MayNapKhiTPA.Forms
         private string strDatimeTuNgay = null;
         private string strDatimeToiNgay = null;
         private string nameMachine = allMachine;
-        private double ApSuat1 = 0;
-        private double ApSuat2 = 0;
-        private double TheTich1 = 0;
-        private double TheTich2 = 0;
-        private double LuuLuong1 = 0;
-        private double LuuLuong2 = 0;
+
+        private bool checkApSuat = false;
+        private double apSuat1 = 0;
+        private double apSuat2 = 0;
+
+        private bool checkTheTich = false;
+        private double theTich1 = 0;
+        private double theTich2 = 0;
+
+        private bool checkLuuLuong = false;
+        private double luuLuong1 = 0;
+        private double luuLuong2 = 0;
 
         // trang hiện tại
         private int page = 1;
@@ -94,28 +100,28 @@ namespace MayNapKhiTPA.Forms
                 string TimeStart = result.TimeStart.ToString("hh:mm:ss dd/MM/yyyy", CultureInfo.InvariantCulture);
                 string TimeEnd = result.TimeEnd.ToString("hh:mm:ss dd/MM/yyyy", CultureInfo.InvariantCulture);
 
-                string fullnameButton = result.Worker;
+                string fullname = result.Worker;
                 User user = UserBusiness.GetUserFromUserName(result.Worker);
                 if (user != null)
                 {
-                    fullnameButton = user.FullName;
+                    fullname = user.FullName;
                 }
                 else
                 {
-                    fullnameButton = result.Worker + " (không còn tồn tại)";
+                    fullname = result.Worker + " (không còn tồn tại)";
                 }
 
                 if (TimeStart == TimeEnd)
                 {
                     dt.Rows.Add(result.ID_Result, "Chưa có", "Chưa có", "Chưa có", "Chưa có", "Chưa có", "Chưa có",
                     "Chưa có", "Chưa có", "Chưa có",
-                    TimeStart, "Chưa có", result.NameMachine, fullnameButton);
+                    TimeStart, "Chưa có", result.NameMachine, fullname);
                 }
                 else
                 {
                     dt.Rows.Add(result.ID_Result, result.ApSuatMin, result.ApSuatMax, result.ApSuatAvg, result.TheTichMin, result.TheTichMax, result.TheTichAvg,
                     result.LuuLuongMin, result.LuuLuongMax, result.LuuLuongAvg,
-                    TimeStart, TimeEnd, result.NameMachine, fullnameButton);
+                    TimeStart, TimeEnd, result.NameMachine, fullname);
                 }
 
             });
@@ -125,49 +131,24 @@ namespace MayNapKhiTPA.Forms
 
 
 
+        private void ChangePageSizeFromSumResult(int countResult)
+        {
+            float value = (float)countResult / (float)Common.NUMBER_ELM_ON_PAGE_RESULT;
+            this.pageSize = (int)Math.Ceiling(value);
+
+        }
+
 
         //get activity dựa trên thông số trên trang (ngày, trang)
         private void GetResults()
         {
-            List<Result> results = new List<Result>();
+            List<Result> listResults = new List<Result>();
 
-            // nếu tham số không có ngày thì get tất cả
-            if (strDatimeTuNgay == null && strDatimeToiNgay == null)
+            //dieu kien
+            if (this.nameMachine == FormResult.allMachine && this.strDatimeTuNgay == null && this.checkApSuat == false && this.checkTheTich == false && this.checkLuuLuong == false)
             {
-                try
-                {
-                    // đếm tổng số activity
-                    int sumResult = ResultBusiness.CountResult();
-                    // pagesize bằng tổng số activity chia cho số phần tử mỗi trang
-                    this.pageSize = (sumResult / Common.NUMBER_ELM_ON_PAGE_RESULT);
-                    if (sumResult % Common.NUMBER_ELM_ON_PAGE_RESULT != 0)
-                    {
-                        this.pageSize = this.pageSize + 1;
-                    }
-                    results = ResultBusiness.GetAllResults(page);
-                }
-                catch
-                {
-                    // Lỗi
-                }
-            }
-            // nếu có ngày
-            else
-            {
-                try
-                {
-                    int sumResult = ResultBusiness.CountResultByDay(strDatimeTuNgay, strDatimeToiNgay);
-                    this.pageSize = (sumResult / Common.NUMBER_ELM_ON_PAGE_RESULT);
-                    if (sumResult % Common.NUMBER_ELM_ON_PAGE_RESULT != 0)
-                    {
-                        this.pageSize = this.pageSize + 1;
-                    }
-                    results = ResultBusiness.GetResultByDay(strDatimeTuNgay, strDatimeToiNgay, page);
-                }
-                catch
-                {
-                    //Lỗi
-                }
+                ChangePageSizeFromSumResult(PaginationResult.Count_NoName_NoDate_NoParameter());
+                listResults = PaginationResult.Pagination_NoName_NoDate_NoParameter(this.page, Common.NUMBER_ELM_ON_PAGE_RESULT);
             }
 
 
@@ -175,6 +156,16 @@ namespace MayNapKhiTPA.Forms
 
 
 
+
+
+
+
+
+
+
+
+
+            //set button
             if (this.pageSize == 0)
             {
                 buttonPage1.Enabled = false;
@@ -211,7 +202,7 @@ namespace MayNapKhiTPA.Forms
                 buttonPageNext.Enabled = true;
             }
 
-            LoadDataGridView(results);
+            LoadDataGridView(listResults);
         }
 
 
@@ -275,11 +266,30 @@ namespace MayNapKhiTPA.Forms
 
         private void buttonCustomLoc_Click(object sender, EventArgs e)
         {
+
+            //set name machine
+            this.nameMachine = comboBoxSelectMay.Text;
+
             //lấy ngày ở datetimepicker rồi chuyển về dạng yyyy-mm-dd, lưu vào các strdatetime, field của lớp
             DateTime tuNgay = Convert.ToDateTime(dateTimePickerTuNgay.Value);
             DateTime toiNgay = Convert.ToDateTime(dateTimePickerToiNgay.Value).AddDays(1);
             strDatimeTuNgay = tuNgay.Year + "-" + tuNgay.Month + "-" + tuNgay.Day;
             strDatimeToiNgay = toiNgay.Year + "-" + toiNgay.Month + "-" + toiNgay.Day;
+
+            //set check parameter
+            this.checkApSuat = checkBoxApSuat.Checked;
+            this.checkTheTich = checkBoxTheTich.Checked;
+            this.checkLuuLuong = checkBoxLuuLuong.Checked;
+
+            //set value parameter
+            this.apSuat1 = Convert.ToDouble(numericUpDownApSuat1.Value);
+            this.apSuat2 = Convert.ToDouble(numericUpDownApSuat2.Value);
+            this.theTich1 = Convert.ToDouble(numericUpDownTheTich1.Value);
+            this.theTich2 = Convert.ToDouble(numericUpDownTheTich2.Value);
+            this.luuLuong1 = Convert.ToDouble(numericUpDownLuuLuong1.Value);
+            this.luuLuong2 = Convert.ToDouble(numericUpDownLuuLuong2.Value);
+
+
             //đặt page về trang 1, đặt các button về mặc định
             this.page = 1;
             buttonPage1.Text = 1.ToString();
@@ -299,6 +309,95 @@ namespace MayNapKhiTPA.Forms
             if (e.KeyCode == Keys.Enter)
             {
                 GoPage();
+            }
+        }
+
+        private void buttonPage1_Click(object sender, EventArgs e)
+        {
+            // select button trang
+            Button button = sender as Button;
+
+            if (this.page > this.pageSize)
+            {
+                this.page = this.pageSize;
+            }
+            else
+            {
+                this.page = int.Parse(button.Text);
+                if (this.page <= 2)
+                {
+                    buttonPage1.Text = 1.ToString();
+                    buttonPage2.Text = 2.ToString();
+                    buttonPage3.Text = 3.ToString();
+                }
+                else
+                {
+                    buttonPage1.Text = (page - 1).ToString();
+                    buttonPage2.Text = page.ToString();
+                    buttonPage3.Text = (page + 1).ToString();
+                    //nếu tràng hiện tại là trang cuối cùng thì đặt các nút là các những trang cuối
+                    if (this.page == this.pageSize)
+                    {
+                        buttonPage1.Text = (page - 2).ToString();
+                        buttonPage2.Text = (page - 1).ToString();
+                        buttonPage3.Text = page.ToString();
+                    }
+                }
+            }
+            GetResults();
+
+        }
+
+        private void buttonPageNext_Click(object sender, EventArgs e)
+        {
+            if (this.page == this.pageSize)
+            {
+                callAlert?.Invoke("Bạn đang ở trang cuối cùng.", FormAlert.enmType.Warning);
+            }
+            else
+            {
+                // bấm next sẽ là trang số ở button3 + 1
+                int numPageButton3 = int.Parse(buttonPage3.Text);
+                if (numPageButton3 < this.pageSize)
+                {
+                    if (this.page == 1)
+                    {
+                        this.page = 3;
+                        buttonPage1.Text = 2.ToString();
+                        buttonPage2.Text = 3.ToString();
+                        buttonPage3.Text = 4.ToString();
+                    }
+                    else
+                    {
+                        this.page = numPageButton3 + 1;
+                        //set lại button 1,2,3 
+                        if (this.page == this.pageSize)
+                        {
+                            buttonPage1.Text = (this.page - 2).ToString();
+                            buttonPage2.Text = (this.page - 1).ToString();
+                            buttonPage3.Text = (this.page).ToString();
+                        }
+                        if (this.page + 1 <= this.pageSize)
+                        {
+                            buttonPage1.Text = (this.page - 1).ToString();
+                            buttonPage2.Text = (this.page).ToString();
+                            buttonPage3.Text = (this.page + 1).ToString();
+                        }
+                        if (this.page + 2 <= this.pageSize)
+                        {
+                            buttonPage1.Text = (this.page).ToString();
+                            buttonPage2.Text = (this.page + 1).ToString();
+                            buttonPage3.Text = (this.page + 2).ToString();
+                        }
+                    }
+
+
+                }
+                else
+                {
+                    this.page = this.pageSize;
+                }
+                GetResults();
             }
         }
     }

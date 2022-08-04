@@ -19,6 +19,8 @@ namespace MayNapKhiTPA.Forms
             //fullscreen
             this.WindowState = FormWindowState.Maximized;
 
+            //center picture
+            pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
 
             //
             FormDashboard formDashboard = new FormDashboard();
