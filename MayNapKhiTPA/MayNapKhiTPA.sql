@@ -211,6 +211,7 @@ a WHERE a.row > @start and a.row <= @end;
 end
 GO
 
+
 --Có chọn tên Machine, có chọn ngày, có chọn chỉ số (2 chỉ số , Áp suất - Lưu Lượng)
 CREATE PROC Count_YesName_YesDate_YesParameter_ApSuat_LuuLuong
 ( @NameMachine nvarchar(100), @Time1 Datetime , @Time2 Datetime, @ApSuat1 FLOAT, @ApSuat2 FLOAT , @LuuLuong1 FLOAT, @LuuLuong2 FLOAT)
@@ -947,21 +948,35 @@ select ID_Result from @Result_Clone;
 end
 GO
 
---Update Result (TimeEnd = last update)
+--Update Result (TimeEnd = last update) (auto update from data)
 CREATE PROC UpdateResult
-@ID_Result int,
-@ApSuatMin FLOAT,
-@ApSuatMax FLOAT,
-@ApSuatAvg FLOAT,
-@TheTichMin FLOAT,
-@TheTichMax FLOAT,
-@TheTichAvg FLOAT,
-@LuuLuongMin FLOAT,
-@LuuLuongMax FLOAT,
-@LuuLuongAvg FLOAT
+@ID_Result int
 as begin 
+--neu ton tai id_result nay thi cap nhat
+if(exists(select * from Result where ID_Result = @ID_Result))
+begin
+Declare @ApSuatMin FLOAT;
+select @ApSuatMin = MIN([Data].ApSuat) from [Data] where ID_Result = @ID_Result;
+Declare @ApSuatMax FLOAT;
+select @ApSuatMax = MAX([Data].ApSuat) from [Data] where ID_Result = @ID_Result;
+Declare @ApSuatAvg FLOAT;
+select @ApSuatAvg = AVG([Data].ApSuat) from [Data] where ID_Result = @ID_Result;
+Declare @TheTichMin FLOAT;
+select @TheTichMin = MIN([Data].TheTich) from [Data] where ID_Result = @ID_Result;
+Declare @TheTichMax FLOAT;
+select @TheTichMax = MAX([Data].TheTich) from [Data] where ID_Result = @ID_Result;
+Declare @TheTichAvg FLOAT;
+select @TheTichAvg = AVG([Data].TheTich) from [Data] where ID_Result = @ID_Result;
+Declare @LuuLuongMin FLOAT;
+select @LuuLuongMin = MIN([Data].LuuLuong) from [Data] where ID_Result = @ID_Result;
+Declare @LuuLuongMax FLOAT;
+select @LuuLuongMax = MAX([Data].LuuLuong) from [Data] where ID_Result = @ID_Result;
+Declare @LuuLuongAvg FLOAT;
+select @LuuLuongAvg = AVG([Data].LuuLuong) from [Data] where ID_Result = @ID_Result;
+
 Update Result Set ApSuatMin = @ApSuatMin, ApSuatMax = @ApSuatMax, ApSuatAvg = @ApSuatAvg, TheTichMin = @TheTichMin, TheTichMax = @TheTichMax,
 TheTichAvg = @TheTichAvg,  LuuLuongMin = @LuuLuongMin, LuuLuongMax = @LuuLuongMax, LuuLuongAvg = @LuuLuongAvg, TimeEnd = GETDATE() Where ID_Result = @ID_Result;
+end
 end
 GO
 
@@ -1361,8 +1376,9 @@ exec AddTemplateMachine N'Binh 6',56,398,55,43
 GO
 
 
-exec AddResultAndReturnIDResult 'May 1','admin'
+exec AddResultAndReturnIDResult 'May 1','admin2'
 GO
-exec AddData 10,10,10,1
+exec AddData 141,113,112,1
 GO
-exec UpdateResult 1,10,21,12,123,123,123,213,123,234
+exec UpdateResult 1
+select * from Result

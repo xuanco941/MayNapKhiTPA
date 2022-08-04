@@ -24,8 +24,8 @@ namespace MayNapKhiTPA.Forms
 
 
         //query 
-        private string strDatimeTuNgay = null;
-        private string strDatimeToiNgay = null;
+        private string time1 = null;
+        private string time2 = null;
         private string nameMachine = allMachine;
 
         private bool checkApSuat = false;
@@ -145,17 +145,198 @@ namespace MayNapKhiTPA.Forms
             List<Result> listResults = new List<Result>();
 
             //dieu kien
-            if (this.nameMachine == FormResult.allMachine && this.strDatimeTuNgay == null && this.checkApSuat == false && this.checkTheTich == false && this.checkLuuLuong == false)
+            //--Không chọn tên Machine, không chọn ngày, không chọn chỉ số
+            if (this.nameMachine == allMachine && this.time1 == null && this.checkApSuat == false && this.checkTheTich == false && this.checkLuuLuong == false)
             {
                 ChangePageSizeFromSumResult(PaginationResult.Count_NoName_NoDate_NoParameter());
                 listResults = PaginationResult.Pagination_NoName_NoDate_NoParameter(this.page, Common.NUMBER_ELM_ON_PAGE_RESULT);
             }
-
-
-
-
-
-
+            //--Chọn tên, chọn ngày, chọn chỉ số (3 chỉ số) (NAME_DATE_PARAMETER)
+            else if (this.nameMachine != allMachine && this.time1 != null && this.checkApSuat != false && this.checkTheTich != false && this.checkLuuLuong != false)
+            {
+                ChangePageSizeFromSumResult(PaginationResult.Count_YesName_YesDate_YesParameter_ApSuat_TheTich_LuuLuong(nameMachine, time1, time2, apSuat1, apSuat2, theTich1, theTich2, luuLuong1, luuLuong2));
+                listResults = PaginationResult.Pagination_YesName_YesDate_YesParameter_ApSuat_TheTich_LuuLuong(page, Common.NUMBER_ELM_ON_PAGE_RESULT, nameMachine, time1, time2, apSuat1, apSuat2, theTich1, theTich2, luuLuong1, luuLuong2);
+            }
+            //--Chọn tên Machine,có chọn ngày, có chọn chỉ số (2 chỉ số , Áp suất - Thể tích)
+            else if (this.nameMachine != allMachine && this.time1 != null && this.checkApSuat != false && this.checkTheTich != false && this.checkLuuLuong != true)
+            {
+                ChangePageSizeFromSumResult(PaginationResult.Count_YesName_YesDate_YesParameter_ApSuat_TheTich(nameMachine, time1, time2, apSuat1, apSuat2, theTich1, theTich2));
+                listResults = PaginationResult.Pagination_YesName_YesDate_YesParameter_ApSuat_TheTich(page, Common.NUMBER_ELM_ON_PAGE_RESULT, nameMachine, time1, time2, apSuat1, apSuat2, theTich1, theTich2);
+            }
+            //--Có chọn tên Machine, có chọn ngày, có chọn chỉ số (2 chỉ số , Áp suất - Lưu Lượng)
+            else if (this.nameMachine != allMachine && this.time1 != null && this.checkApSuat != false && this.checkTheTich != true && this.checkLuuLuong != false)
+            {
+                ChangePageSizeFromSumResult(PaginationResult.Count_YesName_YesDate_YesParameter_ApSuat_LuuLuong(nameMachine, time1, time2, apSuat1, apSuat2, luuLuong1, luuLuong2));
+                listResults = PaginationResult.Pagination_YesName_YesDate_YesParameter_ApSuat_LuuLuong(page, Common.NUMBER_ELM_ON_PAGE_RESULT, nameMachine, time1, time2, apSuat1, apSuat2, luuLuong1, luuLuong2);
+            }
+            //--Có chọn tên Machine, có chọn ngày, có chọn chỉ số (2 chỉ số (thể tích - lưu lượng))
+            else if (this.nameMachine != allMachine && this.time1 != null && this.checkApSuat != true && this.checkTheTich != false && this.checkLuuLuong != false)
+            {
+                ChangePageSizeFromSumResult(PaginationResult.Count_YesName_YesDate_YesParameter_TheTich_LuuLuong(nameMachine, time1, time2, theTich1, theTich2, luuLuong1, luuLuong2));
+                listResults = PaginationResult.Pagination_YesName_YesDate_YesParameter_TheTich_LuuLuong(page, Common.NUMBER_ELM_ON_PAGE_RESULT, nameMachine, time1, time2, theTich1, theTich2, luuLuong1, luuLuong2);
+            }
+            //--Có chọn tên Machine, có chọn ngày, có chọn chỉ số (1 thể tích)
+            else if (this.nameMachine != allMachine && this.time1 != null && this.checkApSuat != true && this.checkTheTich != false && this.checkLuuLuong != true)
+            {
+                ChangePageSizeFromSumResult(PaginationResult.Count_YesName_YesDate_YesParameter_TheTich(nameMachine, time1, time2, theTich1, theTich2));
+                listResults = PaginationResult.Pagination_YesName_YesDate_YesParameter_TheTich(page, Common.NUMBER_ELM_ON_PAGE_RESULT, nameMachine, time1, time2, theTich1, theTich2);
+            }
+            //--Có chọn tên Machine, có chọn ngày, có chọn chỉ số (1 - lưu lượng)
+            else if (this.nameMachine != allMachine && this.time1 != null && this.checkApSuat != true && this.checkTheTich != true && this.checkLuuLuong != false)
+            {
+                ChangePageSizeFromSumResult(PaginationResult.Count_YesName_YesDate_YesParameter_LuuLuong(nameMachine, time1, time2, luuLuong1, luuLuong2));
+                listResults = PaginationResult.Pagination_YesName_YesDate_YesParameter_LuuLuong(page, Common.NUMBER_ELM_ON_PAGE_RESULT, nameMachine, time1, time2, luuLuong1, luuLuong2);
+            }
+            //--Có chọn tên Machine, có chọn ngày, có chọn chỉ số (1 chỉ số - Áp suất)
+            else if (this.nameMachine != allMachine && this.time1 != null && this.checkApSuat != false && this.checkTheTich != true && this.checkLuuLuong != true)
+            {
+                ChangePageSizeFromSumResult(PaginationResult.Count_YesName_YesDate_YesParameter_ApSuat(nameMachine, time1, time2, apSuat1, apSuat2));
+                listResults = PaginationResult.Pagination_YesName_YesDate_YesParameter_ApSuat(page, Common.NUMBER_ELM_ON_PAGE_RESULT, nameMachine, time1, time2, apSuat1, apSuat2);
+            }
+            //--Không chọn tên Machine, có chọn ngày, không chọn chỉ số (DATE)
+            else if (this.nameMachine == allMachine && this.time1 != null && this.checkApSuat != true && this.checkTheTich != true && this.checkLuuLuong != true)
+            {
+                ChangePageSizeFromSumResult(PaginationResult.Count_NoName_YesDate_NoParameter(time1, time2));
+                listResults = PaginationResult.Pagination_NoName_YesDate_NoParameter(page, Common.NUMBER_ELM_ON_PAGE_RESULT, time1, time2);
+            }
+            //--Chọn tên Machine, không chọn ngày, không chọn chỉ số(NAME)
+            else if (this.nameMachine != allMachine && this.time1 == null && this.checkApSuat != true && this.checkTheTich != true && this.checkLuuLuong != true)
+            {
+                ChangePageSizeFromSumResult(PaginationResult.Count_YesName_NoDate_NoParameter(nameMachine));
+                listResults = PaginationResult.Pagination_YesName_NoDate_NoParameter(page, Common.NUMBER_ELM_ON_PAGE_RESULT, nameMachine);
+            }
+            //--Không chọn tên Machine, không chọn ngày, có chọn chỉ số(3 chỉ số) 
+            else if (this.nameMachine == allMachine && this.time1 == null && this.checkApSuat != false && this.checkTheTich != false && this.checkLuuLuong != false)
+            {
+                ChangePageSizeFromSumResult(PaginationResult.Count_NoName_NoDate_YesParameter_ApSuat_TheTich_LuuLuong(apSuat1, apSuat2, theTich1, theTich2, luuLuong1, luuLuong2));
+                listResults = PaginationResult.Pagination_NoName_NoDate_YesParameter_ApSuat_TheTich_LuuLuong(page, Common.NUMBER_ELM_ON_PAGE_RESULT, apSuat1, apSuat2, theTich1, theTich2, luuLuong1, luuLuong2);
+            }
+            //--Không chọn tên Machine, không chọn ngày, có chọn chỉ số (2 chỉ số , Áp suất - Thể tích)
+            else if (this.nameMachine == allMachine && this.time1 == null && this.checkApSuat != false && this.checkTheTich != false && this.checkLuuLuong != true)
+            {
+                ChangePageSizeFromSumResult(PaginationResult.Count_NoName_NoDate_YesParameter_ApSuat_TheTich(apSuat1, apSuat2, theTich1, theTich2));
+                listResults = PaginationResult.Pagination_NoName_NoDate_YesParameter_ApSuat_TheTich(page, Common.NUMBER_ELM_ON_PAGE_RESULT, apSuat1, apSuat2, theTich1, theTich2);
+            }
+            //--Không chọn tên Machine, không chọn ngày, có chọn chỉ số (2 chỉ số , Áp suất - Lưu Lượng)
+            else if (this.nameMachine == allMachine && this.time1 == null && this.checkApSuat != false && this.checkTheTich != true && this.checkLuuLuong != false)
+            {
+                ChangePageSizeFromSumResult(PaginationResult.Count_NoName_NoDate_YesParameter_ApSuat_LuuLuong(apSuat1, apSuat2, luuLuong1, luuLuong2));
+                listResults = PaginationResult.Pagination_NoName_NoDate_YesParameter_ApSuat_LuuLuong(page, Common.NUMBER_ELM_ON_PAGE_RESULT, apSuat1, apSuat2, luuLuong1, luuLuong2);
+            }
+            //--Không chọn tên Machine, không chọn ngày, có chọn chỉ số (2 chỉ số (thể tích - lưu lượng))
+            else if (this.nameMachine == allMachine && this.time1 == null && this.checkApSuat != true && this.checkTheTich != false && this.checkLuuLuong != false)
+            {
+                ChangePageSizeFromSumResult(PaginationResult.Count_NoName_NoDate_YesParameter_TheTich_LuuLuong(theTich1, theTich2, luuLuong1, luuLuong2));
+                listResults = PaginationResult.Pagination_NoName_NoDate_YesParameter_TheTich_LuuLuong(page, Common.NUMBER_ELM_ON_PAGE_RESULT, theTich1, theTich2, luuLuong1, luuLuong2);
+            }
+            //--Không chọn tên Machine, không chọn ngày, có chọn chỉ số (1 thể tích)
+            else if (this.nameMachine == allMachine && this.time1 == null && this.checkApSuat != true && this.checkTheTich != false && this.checkLuuLuong != true)
+            {
+                ChangePageSizeFromSumResult(PaginationResult.Count_NoName_NoDate_YesParameter_TheTich(theTich1, theTich2));
+                listResults = PaginationResult.Pagination_NoName_NoDate_YesParameter_TheTich(page, Common.NUMBER_ELM_ON_PAGE_RESULT, theTich1, theTich2);
+            }
+            //--Không chọn tên Machine, không chọn ngày, có chọn chỉ số (1 - lưu lượng)
+            else if (this.nameMachine == allMachine && this.time1 == null && this.checkApSuat != true && this.checkTheTich != true && this.checkLuuLuong != false)
+            {
+                ChangePageSizeFromSumResult(PaginationResult.Count_NoName_NoDate_YesParameter_LuuLuong(luuLuong1, luuLuong2));
+                listResults = PaginationResult.Pagination_NoName_NoDate_YesParameter_LuuLuong(page, Common.NUMBER_ELM_ON_PAGE_RESULT, luuLuong1, luuLuong2);
+            }
+            //--Không chọn tên Machine, không chọn ngày, có chọn chỉ số (1 chỉ số - Áp suất)
+            else if (this.nameMachine == allMachine && this.time1 == null && this.checkApSuat != false && this.checkTheTich != true && this.checkLuuLuong != true)
+            {
+                ChangePageSizeFromSumResult(PaginationResult.Count_NoName_NoDate_YesParameter_ApSuat(apSuat1, apSuat2));
+                listResults = PaginationResult.Pagination_NoName_NoDate_YesParameter_ApSuat(page, Common.NUMBER_ELM_ON_PAGE_RESULT, apSuat1, apSuat2);
+            }
+            //--Chọn tên, chọn ngày, không chọn chỉ số (NAME_DATE)
+            else if (this.nameMachine != allMachine && this.time1 != null && this.checkApSuat != true && this.checkTheTich != true && this.checkLuuLuong != true)
+            {
+                ChangePageSizeFromSumResult(PaginationResult.Count_YesName_YesDate_NoParameter(nameMachine, time1, time2));
+                listResults = PaginationResult.Pagination_YesName_YesDate_NoParameter(page, Common.NUMBER_ELM_ON_PAGE_RESULT, nameMachine, time1, time2);
+            }
+            //--Chọn tên, không chọn ngày, chọn chỉ số (3 chỉ số) (NAME_DATE_PARAMETER)
+            else if (this.nameMachine != allMachine && this.time1 == null && this.checkApSuat != false && this.checkTheTich != false && this.checkLuuLuong != false)
+            {
+                ChangePageSizeFromSumResult(PaginationResult.Count_YesName_NoDate_YesParameter_ApSuat_TheTich_LuuLuong(nameMachine, apSuat1, apSuat2, theTich1, theTich2, luuLuong1, luuLuong2));
+                listResults = PaginationResult.Pagination_YesName_NoDate_YesParameter_ApSuat_TheTich_LuuLuong(page, Common.NUMBER_ELM_ON_PAGE_RESULT, nameMachine, apSuat1, apSuat2, theTich1, theTich2, luuLuong1, luuLuong2);
+            }
+            //--Chọn tên Machine,không chọn ngày, có chọn chỉ số (2 chỉ số , Áp suất - Thể tích)
+            else if (this.nameMachine != allMachine && this.time1 == null && this.checkApSuat != false && this.checkTheTich != false && this.checkLuuLuong != true)
+            {
+                ChangePageSizeFromSumResult(PaginationResult.Count_YesName_NoDate_YesParameter_ApSuat_TheTich(nameMachine, apSuat1, apSuat2, theTich1, theTich2));
+                listResults = PaginationResult.Pagination_YesName_NoDate_YesParameter_ApSuat_TheTich(page, Common.NUMBER_ELM_ON_PAGE_RESULT, nameMachine, apSuat1, apSuat2, theTich1, theTich2);
+            }
+            //--Có chọn tên Machine, không chọn ngày, có chọn chỉ số (2 chỉ số , Áp suất - Lưu Lượng)
+            else if (this.nameMachine != allMachine && this.time1 == null && this.checkApSuat != false && this.checkTheTich != true && this.checkLuuLuong != false)
+            {
+                ChangePageSizeFromSumResult(PaginationResult.Count_YesName_NoDate_YesParameter_ApSuat_LuuLuong(nameMachine, apSuat1, apSuat2, luuLuong1, luuLuong2));
+                listResults = PaginationResult.Pagination_YesName_NoDate_YesParameter_ApSuat_LuuLuong(page, Common.NUMBER_ELM_ON_PAGE_RESULT, nameMachine, apSuat1, apSuat2, luuLuong1, luuLuong2);
+            }
+            //--Có chọn tên Machine, không chọn ngày, có chọn chỉ số (2 chỉ số (thể tích - lưu lượng))
+            else if (this.nameMachine != allMachine && this.time1 == null && this.checkApSuat != true && this.checkTheTich != false && this.checkLuuLuong != false)
+            {
+                ChangePageSizeFromSumResult(PaginationResult.Count_YesName_NoDate_YesParameter_TheTich_LuuLuong(nameMachine, theTich1, theTich2, luuLuong1, luuLuong2));
+                listResults = PaginationResult.Pagination_YesName_NoDate_YesParameter_TheTich_LuuLuong(page, Common.NUMBER_ELM_ON_PAGE_RESULT, nameMachine, theTich1, theTich2, luuLuong1, luuLuong2);
+            }
+            //--Có chọn tên Machine, không chọn ngày, có chọn chỉ số (1 thể tích)
+            else if (this.nameMachine != allMachine && this.time1 == null && this.checkApSuat != true && this.checkTheTich != false && this.checkLuuLuong != true)
+            {
+                ChangePageSizeFromSumResult(PaginationResult.Count_YesName_NoDate_YesParameter_TheTich(nameMachine, theTich1, theTich2));
+                listResults = PaginationResult.Pagination_YesName_NoDate_YesParameter_TheTich(page, Common.NUMBER_ELM_ON_PAGE_RESULT, nameMachine, theTich1, theTich2);
+            }
+            //--Có chọn tên Machine, không chọn ngày, có chọn chỉ số (1 - lưu lượng)
+            else if (this.nameMachine != allMachine && this.time1 == null && this.checkApSuat != true && this.checkTheTich != true && this.checkLuuLuong != false)
+            {
+                ChangePageSizeFromSumResult(PaginationResult.Count_YesName_NoDate_YesParameter_LuuLuong(nameMachine, luuLuong1, luuLuong2));
+                listResults = PaginationResult.Pagination_YesName_NoDate_YesParameter_LuuLuong(page, Common.NUMBER_ELM_ON_PAGE_RESULT, nameMachine, luuLuong1, luuLuong2);
+            }
+            //--Có chọn tên Machine, có chọn ngày, có chọn chỉ số (1 chỉ số - Áp suất)
+            else if (this.nameMachine != allMachine && this.time1 == null && this.checkApSuat != false && this.checkTheTich != true && this.checkLuuLuong != true)
+            {
+                ChangePageSizeFromSumResult(PaginationResult.Count_YesName_NoDate_YesParameter_ApSuat(nameMachine, apSuat1, apSuat2));
+                listResults = PaginationResult.Pagination_YesName_NoDate_YesParameter_ApSuat(page, Common.NUMBER_ELM_ON_PAGE_RESULT, nameMachine, apSuat1, apSuat2);
+            }
+            //--không chọn tên, chọn ngày, chọn chỉ số (3 chỉ số) (NAME_DATE_PARAMETER)
+            else if (this.nameMachine == allMachine && this.time1 != null && this.checkApSuat != false && this.checkTheTich != false && this.checkLuuLuong != false)
+            {
+                ChangePageSizeFromSumResult(PaginationResult.Count_NoName_YesDate_YesParameter_ApSuat_TheTich_LuuLuong(time1, time2, apSuat1, apSuat2, theTich1, theTich2, luuLuong1, luuLuong2));
+                listResults = PaginationResult.Pagination_NoName_YesDate_YesParameter_ApSuat_TheTich_LuuLuong(page, Common.NUMBER_ELM_ON_PAGE_RESULT, time1, time2, apSuat1, apSuat2, theTich1, theTich2, luuLuong1, luuLuong2);
+            }
+            //--Không chọn tên Machine,có chọn ngày, có chọn chỉ số (2 chỉ số , Áp suất - Thể tích)
+            else if (this.nameMachine == allMachine && this.time1 != null && this.checkApSuat != false && this.checkTheTich != false && this.checkLuuLuong != true)
+            {
+                ChangePageSizeFromSumResult(PaginationResult.Count_NoName_YesDate_YesParameter_ApSuat_TheTich(time1, time2, apSuat1, apSuat2, theTich1, theTich2));
+                listResults = PaginationResult.Pagination_NoName_YesDate_YesParameter_ApSuat_TheTich(page, Common.NUMBER_ELM_ON_PAGE_RESULT, time1, time2, apSuat1, apSuat2, theTich1, theTich2);
+            }
+            //--Không chọn tên Machine, có chọn ngày, có chọn chỉ số (2 chỉ số , Áp suất - Lưu Lượng)
+            else if (this.nameMachine == allMachine && this.time1 != null && this.checkApSuat != false && this.checkTheTich != true && this.checkLuuLuong != false)
+            {
+                ChangePageSizeFromSumResult(PaginationResult.Count_NoName_YesDate_YesParameter_ApSuat_LuuLuong(time1, time2, apSuat1, apSuat2, luuLuong1, luuLuong2));
+                listResults = PaginationResult.Pagination_NoName_YesDate_YesParameter_ApSuat_LuuLuong(page, Common.NUMBER_ELM_ON_PAGE_RESULT, time1, time2, apSuat1, apSuat2, luuLuong1, luuLuong2);
+            }
+            //--Không chọn tên Machine, có chọn ngày, có chọn chỉ số (2 chỉ số (thể tích - lưu lượng))
+            else if (this.nameMachine == allMachine && this.time1 != null && this.checkApSuat != true && this.checkTheTich != false && this.checkLuuLuong != false)
+            {
+                ChangePageSizeFromSumResult(PaginationResult.Count_NoName_YesDate_YesParameter_TheTich_LuuLuong(time1, time2, theTich1, theTich2, luuLuong1, luuLuong2));
+                listResults = PaginationResult.Pagination_NoName_YesDate_YesParameter_TheTich_LuuLuong(page, Common.NUMBER_ELM_ON_PAGE_RESULT, time1, time2, theTich1, theTich2, luuLuong1, luuLuong2);
+            }
+            //--Không chọn tên Machine, có chọn ngày, có chọn chỉ số (1 thể tích)
+            else if (this.nameMachine == allMachine && this.time1 != null && this.checkApSuat != true && this.checkTheTich != false && this.checkLuuLuong != true)
+            {
+                ChangePageSizeFromSumResult(PaginationResult.Count_NoName_YesDate_YesParameter_TheTich(time1, time2, theTich1, theTich2));
+                listResults = PaginationResult.Pagination_NoName_YesDate_YesParameter_TheTich(page, Common.NUMBER_ELM_ON_PAGE_RESULT, time1, time2, theTich1, theTich2);
+            }
+            //--Không chọn tên Machine, có chọn ngày, có chọn chỉ số (1 - lưu lượng)
+            else if (this.nameMachine == allMachine && this.time1 != null && this.checkApSuat != true && this.checkTheTich != true && this.checkLuuLuong != false)
+            {
+                ChangePageSizeFromSumResult(PaginationResult.Count_NoName_YesDate_YesParameter_LuuLuong(time1, time2, luuLuong1, luuLuong2));
+                listResults = PaginationResult.Pagination_NoName_YesDate_YesParameter_LuuLuong(page, Common.NUMBER_ELM_ON_PAGE_RESULT, time1, time2, luuLuong1, luuLuong2);
+            }
+            //--Không chọn tên Machine, có chọn ngày, có chọn chỉ số (1 chỉ số - Áp suất)
+            else if (this.nameMachine == allMachine && this.time1 != null && this.checkApSuat != false && this.checkTheTich != true && this.checkLuuLuong != true)
+            {
+                ChangePageSizeFromSumResult(PaginationResult.Count_NoName_YesDate_YesParameter_ApSuat(time1, time2, apSuat1, apSuat2));
+                listResults = PaginationResult.Pagination_NoName_YesDate_YesParameter_ApSuat(page, Common.NUMBER_ELM_ON_PAGE_RESULT, time1, time2, apSuat1, apSuat2);
+            }
 
 
 
@@ -273,8 +454,8 @@ namespace MayNapKhiTPA.Forms
             //lấy ngày ở datetimepicker rồi chuyển về dạng yyyy-mm-dd, lưu vào các strdatetime, field của lớp
             DateTime tuNgay = Convert.ToDateTime(dateTimePickerTuNgay.Value);
             DateTime toiNgay = Convert.ToDateTime(dateTimePickerToiNgay.Value).AddDays(1);
-            strDatimeTuNgay = tuNgay.Year + "-" + tuNgay.Month + "-" + tuNgay.Day;
-            strDatimeToiNgay = toiNgay.Year + "-" + toiNgay.Month + "-" + toiNgay.Day;
+            time1 = tuNgay.Year + "-" + tuNgay.Month + "-" + tuNgay.Day;
+            time2 = toiNgay.Year + "-" + toiNgay.Month + "-" + toiNgay.Day;
 
             //set check parameter
             this.checkApSuat = checkBoxApSuat.Checked;

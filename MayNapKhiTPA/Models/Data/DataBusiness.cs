@@ -14,7 +14,7 @@ namespace MayNapKhiTPA.Models
             List<Data> list = new List<Data>();
             SqlConnection sqlConnection = new SqlConnection(Common.ConnectionString);
             sqlConnection.Open();
-            string sql = $"select * from [Data] where ID_Result = {ID_Result}";
+            string sql = $"select * from [Data] where ID_Result = {ID_Result} ORDER BY ID_Data desc";
             var command = new SqlCommand(sql, sqlConnection);
             SqlDataReader sqlDataReader = command.ExecuteReader();
             while (sqlDataReader.Read())
