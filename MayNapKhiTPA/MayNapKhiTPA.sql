@@ -1254,6 +1254,24 @@ Create_At BETWEEN
  end
  GO
 
+
+ --Đếm Activity is setting
+CREATE PROC CountActivityIsSetting
+as begin
+SELECT count(*) FROM Activity WHERE 
+IsSetting = 1
+end
+GO
+
+ -- phan trang is setting
+ create proc PaginationActivityIsSetting (@startfrom int ,@endto int) as begin
+SELECT * FROM ( SELECT *, ROW_NUMBER() OVER (ORDER BY ID_Activity desc) as row FROM Activity WHERE 
+IsSetting = 1 ) as a WHERE a.row > @startfrom and a.row <= @endto
+ end
+ GO
+
+
+
  --Lấy ra các Activity theo Worker
  CREATE PROC GetActivityFromWorker (@Worker nvarchar(100)) as begin
  Select * from Activity where Activity.Worker = @Worker order by Activity.ID_Activity desc

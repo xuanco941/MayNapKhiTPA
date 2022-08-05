@@ -17,6 +17,11 @@ namespace MayNapKhiTPA.Forms
         public delegate void CallAlert(string msg, FormAlert.enmType type);
         public CallAlert callAlert;
 
+        //pagination datagridview setting
+        // trang hiện tại
+        private int page = 1;
+        // tổng số trang
+        private int pageSize = 1;
 
         public FormSetting()
         {
@@ -34,9 +39,8 @@ namespace MayNapKhiTPA.Forms
             LoadDataGridViewShift();
 
             //Setting
-            dataGridViewActivitySetting.RowTemplate.Height = 35;
-            LoadDataGridViewSetting();
-
+            dataGridViewActivitySetting.RowTemplate.Height = 36;
+            GetActivities();
 
 
         }
@@ -100,9 +104,8 @@ namespace MayNapKhiTPA.Forms
         }
 
         //Load datagridview setting
-        private void LoadDataGridViewSetting()
+        private void LoadDataGridViewSetting(List<Activity> list)
         {
-            List<Activity> list = ActivityBusiness.GetActivitiesIsSetting();
             DataTable dt = new DataTable();
             dt.Columns.Add("No.", typeof(int));
             dt.Columns.Add("Hoạt động", typeof(string));
@@ -498,7 +501,7 @@ namespace MayNapKhiTPA.Forms
                     ActivityBusiness.AddActivity(activity);
                     //load lại datagridview + thông số cài đặt hiện tại
                     LoadSetting();
-                    LoadDataGridViewSetting();
+                    GetActivities();
                     //aleart
                     callAlert?.Invoke("Cập nhật cài đặt máy thành công.", FormAlert.enmType.Success);
 
@@ -511,6 +514,160 @@ namespace MayNapKhiTPA.Forms
             else
             {
                 callAlert?.Invoke("Các trường cài đặt không được trống.", FormAlert.enmType.Error);
+            }
+        }
+
+
+
+
+
+        //pagination 
+        private void GetActivities()
+        {
+            List<Activity> activities = new List<Activity>();
+                try
+                {
+                    // đếm tổng số activity
+                    int sumActivity = ActivityBusiness.CountActivityIsSetting();
+                    // pagesize bằng tổng số activity chia cho số phần tử mỗi trang
+                    this.pageSize = (sumActivity / Common.NUMBER_ELM_ON_PAGE_ACTIVITY);
+                    if (sumActivity % Common.NUMBER_ELM_ON_PAGE_ACTIVITY != 0)
+                    {
+                        this.pageSize = this.pageSize + 1;
+                    }
+                    activities = ActivityBusiness.PaginationActivityIsSetting(page);
+                }
+                catch
+                {
+                    // Lỗi
+                }
+           
+            
+
+            if (this.pageSize == 0)
+            {
+                buttonPage1.Enabled = false;
+                buttonPage2.Enabled = false;
+                buttonPage3.Enabled = false;
+                buttonPageNext.Enabled = false;
+            }
+            else if (this.pageSize == 1)
+            {
+                buttonPage1.Enabled = true;
+                buttonPage2.Enabled = false;
+                buttonPage3.Enabled = false;
+                buttonPageNext.Enabled = false;
+            }
+            else if (this.pageSize == 2)
+            {
+                buttonPage1.Enabled = true;
+                buttonPage2.Enabled = true;
+                buttonPage3.Enabled = false;
+                buttonPageNext.Enabled = false;
+            }
+            else if (this.pageSize == 3)
+            {
+                buttonPage1.Enabled = true;
+                buttonPage2.Enabled = true;
+                buttonPage3.Enabled = true;
+                buttonPageNext.Enabled = false;
+            }
+            else
+            {
+                buttonPage1.Enabled = true;
+                buttonPage2.Enabled = true;
+                buttonPage3.Enabled = true;
+                buttonPageNext.Enabled = true;
+            }
+
+            LoadDataGridViewSetting(activities);
+        }
+
+        private void buttonPage1_Click(object sender, EventArgs e)
+        {
+            // select button trang
+            Button button = sender as Button;
+
+            if (this.page > this.pageSize)
+            {
+                this.page = this.pageSize;
+            }
+            else
+            {
+                this.page = int.Parse(button.Text);
+                if (this.page <= 2)
+                {
+                    buttonPage1.Text = 1.ToString();
+                    buttonPage2.Text = 2.ToString();
+                    buttonPage3.Text = 3.ToString();
+                }
+                else
+                {
+                    buttonPage1.Text = (page - 1).ToString();
+                    buttonPage2.Text = page.ToString();
+                    buttonPage3.Text = (page + 1).ToString();
+                    //nếu tràng hiện tại là trang cuối cùng thì đặt các nút là các những trang cuối
+                    if (this.page == this.pageSize)
+                    {
+                        buttonPage1.Text = (page - 2).ToString();
+                        buttonPage2.Text = (page - 1).ToString();
+                        buttonPage3.Text = page.ToString();
+                    }
+                }
+            }
+            GetActivities();
+        }
+
+        private void buttonPageNext_Click(object sender, EventArgs e)
+        {
+            if (this.page == this.pageSize)
+            {
+                callAlert?.Invoke("Bạn đang ở trang cuối cùng.", FormAlert.enmType.Warning);
+            }
+            else
+            {
+                // bấm next sẽ là trang số ở button3 + 1
+                int numPageButton3 = int.Parse(buttonPage3.Text);
+                if (numPageButton3 < this.pageSize)
+                {
+                    if (this.page == 1)
+                    {
+                        this.page = 3;
+                        buttonPage1.Text = 2.ToString();
+                        buttonPage2.Text = 3.ToString();
+                        buttonPage3.Text = 4.ToString();
+                    }
+                    else
+                    {
+                        this.page = numPageButton3 + 1;
+                        //set lại button 1,2,3 
+                        if (this.page == this.pageSize)
+                        {
+                            buttonPage1.Text = (this.page - 2).ToString();
+                            buttonPage2.Text = (this.page - 1).ToString();
+                            buttonPage3.Text = (this.page).ToString();
+                        }
+                        if (this.page + 1 <= this.pageSize)
+                        {
+                            buttonPage1.Text = (this.page - 1).ToString();
+                            buttonPage2.Text = (this.page).ToString();
+                            buttonPage3.Text = (this.page + 1).ToString();
+                        }
+                        if (this.page + 2 <= this.pageSize)
+                        {
+                            buttonPage1.Text = (this.page).ToString();
+                            buttonPage2.Text = (this.page + 1).ToString();
+                            buttonPage3.Text = (this.page + 2).ToString();
+                        }
+                    }
+
+
+                }
+                else
+                {
+                    this.page = this.pageSize;
+                }
+                GetActivities();
             }
         }
     }

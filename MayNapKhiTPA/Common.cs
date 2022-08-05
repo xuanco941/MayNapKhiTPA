@@ -12,6 +12,7 @@ namespace MayNapKhiTPA
         //pagination
         public const int NUMBER_ELM_ON_PAGE_ACTIVITY = 10;
         public const int NUMBER_ELM_ON_PAGE_RESULT = 15;
+        public const int NUMBER_ELM_ON_PAGE_ACTIVITY_IS_SETTING = 30;
 
         //user login
         public static User USERSESSION;

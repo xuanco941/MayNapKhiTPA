@@ -147,13 +147,34 @@ namespace MayNapKhiTPA.Models
             return list;
         }
 
-        public static List<Activity> GetActivitiesIsSetting()
+
+        public static int CountActivityIsSetting()
+        {
+            SqlConnection sqlConnection = new SqlConnection(Common.ConnectionString);
+            sqlConnection.Open();
+            string sql = $"exec CountActivityIsSetting";
+            SqlCommand command = new SqlCommand(sql, sqlConnection);
+            SqlDataReader sqlDataReader = command.ExecuteReader();
+            int num = 0;
+            while (sqlDataReader.Read())
+            {
+                num = sqlDataReader.GetInt32(0);
+            }
+            sqlConnection.Close();
+
+            return num;
+        }
+
+
+        public static List<Activity> PaginationActivityIsSetting(int page)
         {
 
             List<Activity> list = new List<Activity>();
             SqlConnection sqlConnection = new SqlConnection(Common.ConnectionString);
             sqlConnection.Open();
-            string sql = $"select * from Activity where isSetting = 1";
+            int? start = (page - 1) * Common.NUMBER_ELM_ON_PAGE_ACTIVITY_IS_SETTING;
+            int? end = page * Common.NUMBER_ELM_ON_PAGE_ACTIVITY_IS_SETTING;
+            string sql = $"exec PaginationActivityIsSetting {start}, {end}";
             SqlCommand command = new SqlCommand(sql, sqlConnection);
             SqlDataReader sqlDataReader = command.ExecuteReader();
             while (sqlDataReader.Read())

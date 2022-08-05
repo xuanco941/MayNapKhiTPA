@@ -463,55 +463,55 @@ namespace MayNapKhiTPA.Forms
             // labelPage
             // 
             this.labelPage.AutoSize = true;
-            this.labelPage.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPage.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPage.ForeColor = System.Drawing.SystemColors.ControlText;
             this.labelPage.Location = new System.Drawing.Point(7, 91);
             this.labelPage.Name = "labelPage";
-            this.labelPage.Size = new System.Drawing.Size(38, 15);
+            this.labelPage.Size = new System.Drawing.Size(39, 15);
             this.labelPage.TabIndex = 4;
             this.labelPage.Text = "label5";
             // 
             // labelToiNgay
             // 
             this.labelToiNgay.AutoSize = true;
-            this.labelToiNgay.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelToiNgay.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelToiNgay.ForeColor = System.Drawing.SystemColors.ControlText;
             this.labelToiNgay.Location = new System.Drawing.Point(7, 37);
             this.labelToiNgay.Name = "labelToiNgay";
-            this.labelToiNgay.Size = new System.Drawing.Size(38, 15);
+            this.labelToiNgay.Size = new System.Drawing.Size(39, 15);
             this.labelToiNgay.TabIndex = 3;
             this.labelToiNgay.Text = "label5";
             // 
             // labelBanGhiMoiTrang
             // 
             this.labelBanGhiMoiTrang.AutoSize = true;
-            this.labelBanGhiMoiTrang.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBanGhiMoiTrang.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelBanGhiMoiTrang.ForeColor = System.Drawing.SystemColors.ControlText;
             this.labelBanGhiMoiTrang.Location = new System.Drawing.Point(7, 73);
             this.labelBanGhiMoiTrang.Name = "labelBanGhiMoiTrang";
-            this.labelBanGhiMoiTrang.Size = new System.Drawing.Size(38, 15);
+            this.labelBanGhiMoiTrang.Size = new System.Drawing.Size(39, 15);
             this.labelBanGhiMoiTrang.TabIndex = 3;
             this.labelBanGhiMoiTrang.Text = "label5";
             // 
             // labelTuNgay
             // 
             this.labelTuNgay.AutoSize = true;
-            this.labelTuNgay.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTuNgay.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTuNgay.ForeColor = System.Drawing.SystemColors.ControlText;
             this.labelTuNgay.Location = new System.Drawing.Point(7, 19);
             this.labelTuNgay.Name = "labelTuNgay";
-            this.labelTuNgay.Size = new System.Drawing.Size(38, 15);
+            this.labelTuNgay.Size = new System.Drawing.Size(39, 15);
             this.labelTuNgay.TabIndex = 1;
             this.labelTuNgay.Text = "label5";
             // 
             // labelTongSoTrang
             // 
             this.labelTongSoTrang.AutoSize = true;
-            this.labelTongSoTrang.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTongSoTrang.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTongSoTrang.ForeColor = System.Drawing.SystemColors.ControlText;
             this.labelTongSoTrang.Location = new System.Drawing.Point(7, 55);
             this.labelTongSoTrang.Name = "labelTongSoTrang";
-            this.labelTongSoTrang.Size = new System.Drawing.Size(38, 15);
+            this.labelTongSoTrang.Size = new System.Drawing.Size(39, 15);
             this.labelTongSoTrang.TabIndex = 1;
             this.labelTongSoTrang.Text = "label5";
             // 

@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSetting));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -73,6 +73,11 @@
             this.buttonNameSetting = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.panel38 = new System.Windows.Forms.Panel();
+            this.buttonPageNext = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.buttonPage3 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.buttonPage1 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.buttonPage2 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.dataGridViewActivitySetting = new System.Windows.Forms.DataGridView();
             this.button8 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -160,6 +165,7 @@
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel10.SuspendLayout();
+            this.panel38.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewActivitySetting)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -717,6 +723,7 @@
             // 
             // panel10
             // 
+            this.panel10.Controls.Add(this.panel38);
             this.panel10.Controls.Add(this.dataGridViewActivitySetting);
             this.panel10.Controls.Add(this.button8);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -725,6 +732,110 @@
             this.panel10.Size = new System.Drawing.Size(504, 294);
             this.panel10.TabIndex = 29;
             // 
+            // panel38
+            // 
+            this.panel38.Controls.Add(this.buttonPageNext);
+            this.panel38.Controls.Add(this.buttonPage3);
+            this.panel38.Controls.Add(this.buttonPage1);
+            this.panel38.Controls.Add(this.buttonPage2);
+            this.panel38.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel38.Location = new System.Drawing.Point(0, 255);
+            this.panel38.Name = "panel38";
+            this.panel38.Size = new System.Drawing.Size(504, 39);
+            this.panel38.TabIndex = 32;
+            // 
+            // buttonPageNext
+            // 
+            this.buttonPageNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonPageNext.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonPageNext.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonPageNext.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonPageNext.BorderRadius = 3;
+            this.buttonPageNext.BorderSize = 0;
+            this.buttonPageNext.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonPageNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPageNext.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPageNext.ForeColor = System.Drawing.Color.Black;
+            this.buttonPageNext.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonPageNext.Location = new System.Drawing.Point(206, 7);
+            this.buttonPageNext.Name = "buttonPageNext";
+            this.buttonPageNext.Size = new System.Drawing.Size(63, 30);
+            this.buttonPageNext.TabIndex = 28;
+            this.buttonPageNext.Text = ">>";
+            this.buttonPageNext.TextColor = System.Drawing.Color.Black;
+            this.buttonPageNext.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonPageNext.UseVisualStyleBackColor = false;
+            this.buttonPageNext.Click += new System.EventHandler(this.buttonPageNext_Click);
+            // 
+            // buttonPage3
+            // 
+            this.buttonPage3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonPage3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonPage3.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonPage3.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonPage3.BorderRadius = 3;
+            this.buttonPage3.BorderSize = 0;
+            this.buttonPage3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonPage3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPage3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPage3.ForeColor = System.Drawing.Color.Black;
+            this.buttonPage3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonPage3.Location = new System.Drawing.Point(137, 7);
+            this.buttonPage3.Name = "buttonPage3";
+            this.buttonPage3.Size = new System.Drawing.Size(63, 30);
+            this.buttonPage3.TabIndex = 27;
+            this.buttonPage3.Text = "3";
+            this.buttonPage3.TextColor = System.Drawing.Color.Black;
+            this.buttonPage3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonPage3.UseVisualStyleBackColor = false;
+            this.buttonPage3.Click += new System.EventHandler(this.buttonPage1_Click);
+            // 
+            // buttonPage1
+            // 
+            this.buttonPage1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonPage1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonPage1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonPage1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonPage1.BorderRadius = 3;
+            this.buttonPage1.BorderSize = 0;
+            this.buttonPage1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonPage1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPage1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPage1.ForeColor = System.Drawing.Color.Black;
+            this.buttonPage1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonPage1.Location = new System.Drawing.Point(0, 7);
+            this.buttonPage1.Name = "buttonPage1";
+            this.buttonPage1.Size = new System.Drawing.Size(63, 30);
+            this.buttonPage1.TabIndex = 26;
+            this.buttonPage1.Text = "1";
+            this.buttonPage1.TextColor = System.Drawing.Color.Black;
+            this.buttonPage1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonPage1.UseVisualStyleBackColor = false;
+            this.buttonPage1.Click += new System.EventHandler(this.buttonPage1_Click);
+            // 
+            // buttonPage2
+            // 
+            this.buttonPage2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonPage2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonPage2.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonPage2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonPage2.BorderRadius = 3;
+            this.buttonPage2.BorderSize = 0;
+            this.buttonPage2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonPage2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPage2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPage2.ForeColor = System.Drawing.Color.Black;
+            this.buttonPage2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonPage2.Location = new System.Drawing.Point(68, 7);
+            this.buttonPage2.Name = "buttonPage2";
+            this.buttonPage2.Size = new System.Drawing.Size(63, 30);
+            this.buttonPage2.TabIndex = 25;
+            this.buttonPage2.Text = "2";
+            this.buttonPage2.TextColor = System.Drawing.Color.Black;
+            this.buttonPage2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonPage2.UseVisualStyleBackColor = false;
+            this.buttonPage2.Click += new System.EventHandler(this.buttonPage1_Click);
+            // 
             // dataGridViewActivitySetting
             // 
             this.dataGridViewActivitySetting.AllowUserToAddRows = false;
@@ -732,22 +843,22 @@
             this.dataGridViewActivitySetting.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewActivitySetting.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridViewActivitySetting.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewActivitySetting.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewActivitySetting.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
             this.dataGridViewActivitySetting.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewActivitySetting.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewActivitySetting.Location = new System.Drawing.Point(0, 47);
             this.dataGridViewActivitySetting.Name = "dataGridViewActivitySetting";
             this.dataGridViewActivitySetting.ReadOnly = true;
             this.dataGridViewActivitySetting.RowHeadersVisible = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewActivitySetting.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewActivitySetting.RowsDefaultCellStyle = dataGridViewCellStyle20;
             this.dataGridViewActivitySetting.Size = new System.Drawing.Size(504, 247);
             this.dataGridViewActivitySetting.TabIndex = 31;
             // 
@@ -1298,22 +1409,22 @@
             this.dataGridViewTemplateSetting.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewTemplateSetting.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridViewTemplateSetting.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTemplateSetting.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTemplateSetting.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle21;
             this.dataGridViewTemplateSetting.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewTemplateSetting.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewTemplateSetting.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewTemplateSetting.Name = "dataGridViewTemplateSetting";
             this.dataGridViewTemplateSetting.ReadOnly = true;
             this.dataGridViewTemplateSetting.RowHeadersVisible = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTemplateSetting.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTemplateSetting.RowsDefaultCellStyle = dataGridViewCellStyle22;
             this.dataGridViewTemplateSetting.Size = new System.Drawing.Size(907, 270);
             this.dataGridViewTemplateSetting.TabIndex = 0;
             this.dataGridViewTemplateSetting.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTemplateSetting_CellClick);
@@ -1736,21 +1847,21 @@
             this.dataGridViewShift.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewShift.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridViewShift.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewShift.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewShift.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
             this.dataGridViewShift.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewShift.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewShift.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewShift.Name = "dataGridViewShift";
             this.dataGridViewShift.RowHeadersVisible = false;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewShift.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewShift.RowsDefaultCellStyle = dataGridViewCellStyle24;
             this.dataGridViewShift.Size = new System.Drawing.Size(907, 270);
             this.dataGridViewShift.TabIndex = 0;
             this.dataGridViewShift.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewShift_CellClick);
@@ -1787,6 +1898,7 @@
             this.panel7.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
+            this.panel38.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewActivitySetting)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
@@ -1948,5 +2060,10 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Panel panel38;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonPageNext;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonPage3;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonPage1;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonPage2;
     }
 }
