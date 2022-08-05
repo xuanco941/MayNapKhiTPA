@@ -525,24 +525,25 @@ namespace MayNapKhiTPA.Forms
         private void GetActivities()
         {
             List<Activity> activities = new List<Activity>();
-                try
+            try
+            {
+                // đếm tổng số activity
+                int sumActivity = ActivityBusiness.CountActivityIsSetting();
+                // pagesize bằng tổng số activity chia cho số phần tử mỗi trang
+                this.pageSize = (sumActivity / Common.NUMBER_ELM_ON_PAGE_ACTIVITY);
+                if (sumActivity % Common.NUMBER_ELM_ON_PAGE_ACTIVITY != 0)
                 {
-                    // đếm tổng số activity
-                    int sumActivity = ActivityBusiness.CountActivityIsSetting();
-                    // pagesize bằng tổng số activity chia cho số phần tử mỗi trang
-                    this.pageSize = (sumActivity / Common.NUMBER_ELM_ON_PAGE_ACTIVITY);
-                    if (sumActivity % Common.NUMBER_ELM_ON_PAGE_ACTIVITY != 0)
-                    {
-                        this.pageSize = this.pageSize + 1;
-                    }
-                    activities = ActivityBusiness.PaginationActivityIsSetting(page);
+                    this.pageSize = this.pageSize + 1;
                 }
-                catch
-                {
-                    // Lỗi
-                }
-           
-            
+                activities = ActivityBusiness.PaginationActivityIsSetting(page);
+            }
+            catch
+            {
+                // Lỗi
+                MessageBox.Show("Không thể tải lên lịch sử hoạt động cài đặt.", "Lỗi hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
 
             if (this.pageSize == 0)
             {

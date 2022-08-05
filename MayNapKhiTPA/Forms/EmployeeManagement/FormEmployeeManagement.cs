@@ -197,26 +197,54 @@ namespace MayNapKhiTPA.Forms
         //Tìm kiếm user 
         private void buttonSearchUser_Click(object sender, EventArgs e)
         {
-            SearchUser();
+            try
+            {
+                SearchUser();
+            }
+            catch
+            {
+                MessageBox.Show("Không thể tìm kiếm người dùng.", "Lỗi hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void textBoxSearchUser_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                SearchUser();
+                try
+                {
+                    SearchUser();
+                }
+                catch
+                {
+                    MessageBox.Show("Không thể tìm kiếm người dùng.", "Lỗi hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
         //Tìm kiếm group
         private void buttonSearchGroup_Click(object sender, EventArgs e)
         {
-            SearchGroup();
+            try
+            {
+                SearchGroup();
+            }
+            catch
+            {
+                MessageBox.Show("Không thể tìm kiếm nhóm quyền.", "Lỗi hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private void textBoxSearchGroup_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                SearchGroup();
+                try
+                {
+                    SearchGroup();
+                }
+                catch
+                {
+                    MessageBox.Show("Không thể tìm kiếm nhóm quyền.", "Lỗi hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }

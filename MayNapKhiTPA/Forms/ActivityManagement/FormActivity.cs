@@ -115,6 +115,7 @@ namespace MayNapKhiTPA.Forms
                 catch
                 {
                     // Lỗi
+                    MessageBox.Show("Không thể tải lên dữ liệu", "Lỗi hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             // nếu có ngày
@@ -133,6 +134,7 @@ namespace MayNapKhiTPA.Forms
                 catch
                 {
                     //Lỗi
+                    MessageBox.Show("Không thể tải lên dữ liệu", "Lỗi hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
 
@@ -208,12 +210,6 @@ namespace MayNapKhiTPA.Forms
 
 
         // show form chia tiết hoạt động của user
-        private void buttonCallFormEmployeeActivities_Click(object sender, EventArgs e)
-        {
-            // Show form 
-            new FormEmployeeActivities().Show();
-        }
-
         private void buttonGoPage_Click(object sender, EventArgs e)
         {
             GoPage();
@@ -290,7 +286,7 @@ namespace MayNapKhiTPA.Forms
         {
             if (this.page == this.pageSize)
             {
-                callAlert?.Invoke("Bạn đang ở trang cuối cùng.", FormAlert.enmType.Warning);
+                callAlert?.Invoke("Bạn đang ở trang cuối cùng.", FormAlert.enmType.Info);
             }
             else
             {
@@ -355,6 +351,16 @@ namespace MayNapKhiTPA.Forms
             buttonPage3.Text = 3.ToString();
 
             GetActivities();
+        }
+
+        private void buttonCallFormEmployeeActivities_Click(object sender, EventArgs e)
+        {
+            new FormEmployeeActivities().Show();
+        }
+
+        private void btnPageInfo_Click(object sender, EventArgs e)
+        {
+            new FormPageInfo().ShowDialog();
         }
     }
 }

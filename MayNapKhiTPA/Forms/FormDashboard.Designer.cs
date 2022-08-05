@@ -83,8 +83,8 @@ namespace MayNapKhiTPA.Forms
             this.button1 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.zedGraphControl2 = new ZedGraph.ZedGraphControl();
-            this.zedGraphControl1 = new ZedGraph.ZedGraphControl();
+            this.zedGraphControlTheTich1 = new ZedGraph.ZedGraphControl();
+            this.zedGraphControlApSuat1 = new ZedGraph.ZedGraphControl();
             this.button2 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
@@ -136,9 +136,10 @@ namespace MayNapKhiTPA.Forms
             this.button27 = new System.Windows.Forms.Button();
             this.panel32 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
-            this.zedGraphControl3 = new ZedGraph.ZedGraphControl();
-            this.zedGraphControl4 = new ZedGraph.ZedGraphControl();
+            this.zedGraphControlTheTich2 = new ZedGraph.ZedGraphControl();
+            this.zedGraphControlApSuat2 = new ZedGraph.ZedGraphControl();
             this.button28 = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -630,11 +631,11 @@ namespace MayNapKhiTPA.Forms
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel3.Controls.Add(this.panel23, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 202);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 142);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(544, 146);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(544, 206);
             this.tableLayoutPanel3.TabIndex = 22;
             // 
             // panel23
@@ -644,7 +645,7 @@ namespace MayNapKhiTPA.Forms
             this.panel23.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel23.Location = new System.Drawing.Point(184, 3);
             this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(175, 140);
+            this.panel23.Size = new System.Drawing.Size(175, 200);
             this.panel23.TabIndex = 19;
             // 
             // buttonCustom2
@@ -704,7 +705,7 @@ namespace MayNapKhiTPA.Forms
             this.button4.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(0, 152);
+            this.button4.Location = new System.Drawing.Point(0, 92);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(544, 50);
             this.button4.TabIndex = 21;
@@ -719,7 +720,7 @@ namespace MayNapKhiTPA.Forms
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(544, 152);
+            this.panel5.Size = new System.Drawing.Size(544, 92);
             this.panel5.TabIndex = 0;
             // 
             // label1
@@ -907,8 +908,8 @@ namespace MayNapKhiTPA.Forms
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Controls.Add(this.zedGraphControl2, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.zedGraphControl1, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.zedGraphControlTheTich1, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.zedGraphControlApSuat1, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 50);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -918,37 +919,37 @@ namespace MayNapKhiTPA.Forms
             this.tableLayoutPanel2.Size = new System.Drawing.Size(822, 350);
             this.tableLayoutPanel2.TabIndex = 9;
             // 
-            // zedGraphControl2
+            // zedGraphControlTheTich1
             // 
-            this.zedGraphControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.zedGraphControl2.Location = new System.Drawing.Point(3, 178);
-            this.zedGraphControl2.Name = "zedGraphControl2";
-            this.zedGraphControl2.ScrollGrace = 0D;
-            this.zedGraphControl2.ScrollMaxX = 0D;
-            this.zedGraphControl2.ScrollMaxY = 0D;
-            this.zedGraphControl2.ScrollMaxY2 = 0D;
-            this.zedGraphControl2.ScrollMinX = 0D;
-            this.zedGraphControl2.ScrollMinY = 0D;
-            this.zedGraphControl2.ScrollMinY2 = 0D;
-            this.zedGraphControl2.Size = new System.Drawing.Size(816, 169);
-            this.zedGraphControl2.TabIndex = 5;
-            this.zedGraphControl2.UseExtendedPrintDialog = true;
+            this.zedGraphControlTheTich1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.zedGraphControlTheTich1.Location = new System.Drawing.Point(3, 178);
+            this.zedGraphControlTheTich1.Name = "zedGraphControlTheTich1";
+            this.zedGraphControlTheTich1.ScrollGrace = 0D;
+            this.zedGraphControlTheTich1.ScrollMaxX = 0D;
+            this.zedGraphControlTheTich1.ScrollMaxY = 0D;
+            this.zedGraphControlTheTich1.ScrollMaxY2 = 0D;
+            this.zedGraphControlTheTich1.ScrollMinX = 0D;
+            this.zedGraphControlTheTich1.ScrollMinY = 0D;
+            this.zedGraphControlTheTich1.ScrollMinY2 = 0D;
+            this.zedGraphControlTheTich1.Size = new System.Drawing.Size(816, 169);
+            this.zedGraphControlTheTich1.TabIndex = 5;
+            this.zedGraphControlTheTich1.UseExtendedPrintDialog = true;
             // 
-            // zedGraphControl1
+            // zedGraphControlApSuat1
             // 
-            this.zedGraphControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.zedGraphControl1.Location = new System.Drawing.Point(3, 3);
-            this.zedGraphControl1.Name = "zedGraphControl1";
-            this.zedGraphControl1.ScrollGrace = 0D;
-            this.zedGraphControl1.ScrollMaxX = 0D;
-            this.zedGraphControl1.ScrollMaxY = 0D;
-            this.zedGraphControl1.ScrollMaxY2 = 0D;
-            this.zedGraphControl1.ScrollMinX = 0D;
-            this.zedGraphControl1.ScrollMinY = 0D;
-            this.zedGraphControl1.ScrollMinY2 = 0D;
-            this.zedGraphControl1.Size = new System.Drawing.Size(816, 169);
-            this.zedGraphControl1.TabIndex = 4;
-            this.zedGraphControl1.UseExtendedPrintDialog = true;
+            this.zedGraphControlApSuat1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.zedGraphControlApSuat1.Location = new System.Drawing.Point(3, 3);
+            this.zedGraphControlApSuat1.Name = "zedGraphControlApSuat1";
+            this.zedGraphControlApSuat1.ScrollGrace = 0D;
+            this.zedGraphControlApSuat1.ScrollMaxX = 0D;
+            this.zedGraphControlApSuat1.ScrollMaxY = 0D;
+            this.zedGraphControlApSuat1.ScrollMaxY2 = 0D;
+            this.zedGraphControlApSuat1.ScrollMinX = 0D;
+            this.zedGraphControlApSuat1.ScrollMinY = 0D;
+            this.zedGraphControlApSuat1.ScrollMinY2 = 0D;
+            this.zedGraphControlApSuat1.Size = new System.Drawing.Size(816, 169);
+            this.zedGraphControlApSuat1.TabIndex = 4;
+            this.zedGraphControlApSuat1.UseExtendedPrintDialog = true;
             // 
             // button2
             // 
@@ -1387,11 +1388,11 @@ namespace MayNapKhiTPA.Forms
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel7.Controls.Add(this.panel26, 1, 0);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(0, 202);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(0, 142);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 1;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(544, 146);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(544, 206);
             this.tableLayoutPanel7.TabIndex = 22;
             // 
             // panel26
@@ -1401,7 +1402,7 @@ namespace MayNapKhiTPA.Forms
             this.panel26.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel26.Location = new System.Drawing.Point(184, 3);
             this.panel26.Name = "panel26";
-            this.panel26.Size = new System.Drawing.Size(175, 140);
+            this.panel26.Size = new System.Drawing.Size(175, 200);
             this.panel26.TabIndex = 19;
             // 
             // buttonCustom1
@@ -1461,7 +1462,7 @@ namespace MayNapKhiTPA.Forms
             this.button7.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(0, 152);
+            this.button7.Location = new System.Drawing.Point(0, 92);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(544, 50);
             this.button7.TabIndex = 21;
@@ -1476,7 +1477,7 @@ namespace MayNapKhiTPA.Forms
             this.panel27.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel27.Location = new System.Drawing.Point(0, 0);
             this.panel27.Name = "panel27";
-            this.panel27.Size = new System.Drawing.Size(544, 152);
+            this.panel27.Size = new System.Drawing.Size(544, 92);
             this.panel27.TabIndex = 0;
             // 
             // label2
@@ -1664,8 +1665,8 @@ namespace MayNapKhiTPA.Forms
             this.tableLayoutPanel9.ColumnCount = 1;
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel9.Controls.Add(this.zedGraphControl3, 0, 1);
-            this.tableLayoutPanel9.Controls.Add(this.zedGraphControl4, 0, 0);
+            this.tableLayoutPanel9.Controls.Add(this.zedGraphControlTheTich2, 0, 1);
+            this.tableLayoutPanel9.Controls.Add(this.zedGraphControlApSuat2, 0, 0);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel9.Location = new System.Drawing.Point(0, 50);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
@@ -1675,37 +1676,37 @@ namespace MayNapKhiTPA.Forms
             this.tableLayoutPanel9.Size = new System.Drawing.Size(822, 350);
             this.tableLayoutPanel9.TabIndex = 9;
             // 
-            // zedGraphControl3
+            // zedGraphControlTheTich2
             // 
-            this.zedGraphControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.zedGraphControl3.Location = new System.Drawing.Point(3, 178);
-            this.zedGraphControl3.Name = "zedGraphControl3";
-            this.zedGraphControl3.ScrollGrace = 0D;
-            this.zedGraphControl3.ScrollMaxX = 0D;
-            this.zedGraphControl3.ScrollMaxY = 0D;
-            this.zedGraphControl3.ScrollMaxY2 = 0D;
-            this.zedGraphControl3.ScrollMinX = 0D;
-            this.zedGraphControl3.ScrollMinY = 0D;
-            this.zedGraphControl3.ScrollMinY2 = 0D;
-            this.zedGraphControl3.Size = new System.Drawing.Size(816, 169);
-            this.zedGraphControl3.TabIndex = 5;
-            this.zedGraphControl3.UseExtendedPrintDialog = true;
+            this.zedGraphControlTheTich2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.zedGraphControlTheTich2.Location = new System.Drawing.Point(3, 178);
+            this.zedGraphControlTheTich2.Name = "zedGraphControlTheTich2";
+            this.zedGraphControlTheTich2.ScrollGrace = 0D;
+            this.zedGraphControlTheTich2.ScrollMaxX = 0D;
+            this.zedGraphControlTheTich2.ScrollMaxY = 0D;
+            this.zedGraphControlTheTich2.ScrollMaxY2 = 0D;
+            this.zedGraphControlTheTich2.ScrollMinX = 0D;
+            this.zedGraphControlTheTich2.ScrollMinY = 0D;
+            this.zedGraphControlTheTich2.ScrollMinY2 = 0D;
+            this.zedGraphControlTheTich2.Size = new System.Drawing.Size(816, 169);
+            this.zedGraphControlTheTich2.TabIndex = 5;
+            this.zedGraphControlTheTich2.UseExtendedPrintDialog = true;
             // 
-            // zedGraphControl4
+            // zedGraphControlApSuat2
             // 
-            this.zedGraphControl4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.zedGraphControl4.Location = new System.Drawing.Point(3, 3);
-            this.zedGraphControl4.Name = "zedGraphControl4";
-            this.zedGraphControl4.ScrollGrace = 0D;
-            this.zedGraphControl4.ScrollMaxX = 0D;
-            this.zedGraphControl4.ScrollMaxY = 0D;
-            this.zedGraphControl4.ScrollMaxY2 = 0D;
-            this.zedGraphControl4.ScrollMinX = 0D;
-            this.zedGraphControl4.ScrollMinY = 0D;
-            this.zedGraphControl4.ScrollMinY2 = 0D;
-            this.zedGraphControl4.Size = new System.Drawing.Size(816, 169);
-            this.zedGraphControl4.TabIndex = 4;
-            this.zedGraphControl4.UseExtendedPrintDialog = true;
+            this.zedGraphControlApSuat2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.zedGraphControlApSuat2.Location = new System.Drawing.Point(3, 3);
+            this.zedGraphControlApSuat2.Name = "zedGraphControlApSuat2";
+            this.zedGraphControlApSuat2.ScrollGrace = 0D;
+            this.zedGraphControlApSuat2.ScrollMaxX = 0D;
+            this.zedGraphControlApSuat2.ScrollMaxY = 0D;
+            this.zedGraphControlApSuat2.ScrollMaxY2 = 0D;
+            this.zedGraphControlApSuat2.ScrollMinX = 0D;
+            this.zedGraphControlApSuat2.ScrollMinY = 0D;
+            this.zedGraphControlApSuat2.ScrollMinY2 = 0D;
+            this.zedGraphControlApSuat2.Size = new System.Drawing.Size(816, 169);
+            this.zedGraphControlApSuat2.TabIndex = 4;
+            this.zedGraphControlApSuat2.UseExtendedPrintDialog = true;
             // 
             // button28
             // 
@@ -1726,6 +1727,11 @@ namespace MayNapKhiTPA.Forms
             this.button28.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button28.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.button28.UseVisualStyleBackColor = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 5000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // FormDashboard
             // 
@@ -1853,8 +1859,8 @@ namespace MayNapKhiTPA.Forms
         private Button button1;
         private Panel panel4;
         private TableLayoutPanel tableLayoutPanel2;
-        private ZedGraph.ZedGraphControl zedGraphControl2;
-        private ZedGraph.ZedGraphControl zedGraphControl1;
+        private ZedGraph.ZedGraphControl zedGraphControlTheTich1;
+        private ZedGraph.ZedGraphControl zedGraphControlApSuat1;
         private Button button2;
         private TabPage tabPage2;
         private TableLayoutPanel tableLayoutPanel10;
@@ -1906,8 +1912,9 @@ namespace MayNapKhiTPA.Forms
         private Button button27;
         private Panel panel32;
         private TableLayoutPanel tableLayoutPanel9;
-        private ZedGraph.ZedGraphControl zedGraphControl3;
-        private ZedGraph.ZedGraphControl zedGraphControl4;
+        private ZedGraph.ZedGraphControl zedGraphControlTheTich2;
+        private ZedGraph.ZedGraphControl zedGraphControlApSuat2;
         private Button button28;
+        private Timer timer1;
     }
 }

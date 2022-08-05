@@ -81,3 +81,4 @@ D:\WorkPlace\C-Sharp\Working\DESKTOP\MayNapKhiTPA\MayNapKhiTPA\obj\Debug\MayNapK
 D:\WorkPlace\C-Sharp\Working\DESKTOP\MayNapKhiTPA\MayNapKhiTPA\obj\Debug\MayNapKhiTPA.Forms.FormAddUser.resources
 D:\WorkPlace\C-Sharp\Working\DESKTOP\MayNapKhiTPA\MayNapKhiTPA\obj\Debug\MayNapKhiTPA.Forms.FormChangeUser.resources
 D:\WorkPlace\C-Sharp\Working\DESKTOP\MayNapKhiTPA\MayNapKhiTPA\obj\Debug\MayNapKhiTPA.Forms.FormData.resources
+D:\WorkPlace\C-Sharp\Working\DESKTOP\MayNapKhiTPA\MayNapKhiTPA\obj\Debug\MayNapKhiTPA.Forms.ActivityManagement.FormPageInfo.resources

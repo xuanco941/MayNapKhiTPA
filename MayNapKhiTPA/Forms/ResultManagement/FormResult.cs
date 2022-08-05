@@ -54,16 +54,33 @@ namespace MayNapKhiTPA.Forms
         {
             InitializeComponent();
             buttonExcel.ForeColor = Color.Black;
-            buttonExcel.Font = new System.Drawing.Font("Segoe UI", 9, FontStyle.Bold);
+            buttonExcel.Font = new System.Drawing.Font("Segoe UI", 11, FontStyle.Bold);
 
             buttonPrint.ForeColor = Color.Black;
-            buttonPrint.Font = new System.Drawing.Font("Segoe UI", 9, FontStyle.Bold);
+            buttonPrint.Font = new System.Drawing.Font("Segoe UI", 11, FontStyle.Bold);
 
             dataGridViewResult.RowTemplate.Height = 45;
 
 
-            LoadComboBox();
-            GetResults();
+            try
+            {
+                LoadComboBox();
+            }
+            catch
+            {
+                //Lỗi tải danh sách mẻ nạp
+                MessageBox.Show("Không thể tải lên dữ liệu của danh sách các máy.", "Lỗi hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            try
+            {
+                GetResults();
+            }
+            catch
+            {
+                //Lỗi tải danh sách mẻ nạp
+                MessageBox.Show("Không thể tải lên dữ liệu các mẻ nạp.", "Lỗi hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         //METHOD
@@ -481,7 +498,15 @@ namespace MayNapKhiTPA.Forms
             buttonPage2.Text = 2.ToString();
             buttonPage3.Text = 3.ToString();
 
-            GetResults();
+            try
+            {
+                GetResults();
+            }
+            catch
+            {
+                //Lỗi tải danh sách mẻ nạp
+                MessageBox.Show("Không thể tải lên dữ liệu", "Lỗi hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void buttonCustomGoPage_Click(object sender, EventArgs e)
@@ -529,15 +554,22 @@ namespace MayNapKhiTPA.Forms
                     }
                 }
             }
-            GetResults();
-
+            try
+            {
+                GetResults();
+            }
+            catch
+            {
+                //Lỗi tải danh sách mẻ nạp
+                MessageBox.Show("Không thể tải lên dữ liệu", "Lỗi hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void buttonPageNext_Click(object sender, EventArgs e)
         {
             if (this.page == this.pageSize)
             {
-                callAlert?.Invoke("Bạn đang ở trang cuối cùng.", FormAlert.enmType.Warning);
+                callAlert?.Invoke("Bạn đang ở trang cuối cùng.", FormAlert.enmType.Info);
             }
             else
             {
@@ -582,7 +614,15 @@ namespace MayNapKhiTPA.Forms
                 {
                     this.page = this.pageSize;
                 }
-                GetResults();
+                try
+                {
+                    GetResults();
+                }
+                catch
+                {
+                    //Lỗi tải danh sách mẻ nạp
+                    MessageBox.Show("Không thể tải lên dữ liệu", "Lỗi hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -684,5 +724,7 @@ namespace MayNapKhiTPA.Forms
                 XcelApp.Visible = true;
             }
         }
+
+
     }
 }

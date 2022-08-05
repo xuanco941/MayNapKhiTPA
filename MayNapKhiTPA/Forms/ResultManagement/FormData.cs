@@ -37,7 +37,7 @@ namespace MayNapKhiTPA.Forms
             list.ForEach(delegate (Data data)
             {
                 string day = data.CreateAt.ToString("hh:mm:ss dd/MM/yyyy", CultureInfo.InvariantCulture);
-                dt.Rows.Add(count,data.ApSuat, data.TheTich, data.LuuLuong, day);
+                dt.Rows.Add(count, data.ApSuat, data.TheTich, data.LuuLuong, day);
                 count++;
             });
 
@@ -85,15 +85,29 @@ namespace MayNapKhiTPA.Forms
         }
         private void buttonViewDetsil_Click(object sender, EventArgs e)
         {
-            LoadForm();
+            try
+            {
+                LoadForm();
+            }
+            catch
+            {
+                MessageBox.Show("Không thể tải dữ liệu lên.", "Lỗi hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
 
         private void textBoxIDResult_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
-                LoadForm();
-            {
-            }
+                try
+                {
+                    LoadForm();
+                }
+                catch
+                {
+                    MessageBox.Show("Không thể tải dữ liệu lên.", "Lỗi hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
         }
 
         private void textBoxIDResult_KeyPress(object sender, KeyPressEventArgs e)

@@ -19,42 +19,46 @@ namespace MayNapKhiTPA.Forms
         // Create instance (null)
         public CallAlert callAlert;
 
+        //x
+        string[] x = { "35s", "30s", "25s", "20s", "15s", "10s", "5s" };
 
+        double[] yApSuat1 = { 0, 0, 0, 0, 0, 0, 0 };
+        double[] yTheTich1 = { 0, 0, 0, 0, 0, 0, 0 };
+        double[] yApSuat2 = { 0, 0, 0, 0, 0, 0, 0 };
+        double[] yTheTich2 = { 0, 0, 0, 0, 0, 0, 0 };
 
-
+        //name label
+        string labelApSuat = "Áp suất";
+        string labelTheTich = "Thể tích";
         public FormDashboard()
         {
             InitializeComponent();
-            string[] x = { "60 phút", "50 phút", "40 phút", "30 phút", "20 phút", "10 phút", "1 phút" };
 
-            double[] y1 = { 1, 2, 3, 5, 7, 6, 13 };
-            double[] y2 = { 4, 1, 3, 6, 7, 8, 5 };
-            double[] y3 = { 2, 7, 8, 6, 7, 8, 18 };
-            double[] y4 = { 1, 2, 3, 6, 10, 6, 8 };
+            // tạo các chart rỗng
+            double[] y = { 0, 0, 0, 0, 0, 0, 0 };
 
+            CreateChart(zedGraphControlApSuat1, "Biểu Đồ Áp Suất", x, labelApSuat, y);
+            CreateChart(zedGraphControlTheTich1, "Biểu Đồ Thể tích", x, labelTheTich, y);
+            CreateChart(zedGraphControlApSuat2, "Biểu Đồ Áp Suất", x, labelApSuat, y);
+            CreateChart(zedGraphControlTheTich2, "Biểu Đồ Thể tích", x, labelTheTich, y);
 
-            UpdateChart(zedGraphControl1,"Biểu Đồ Áp Suất","Áp suất",x,y1);
-            UpdateChart(zedGraphControl2, "Biểu Đồ Thể tích", "Thể tích", x, y2);
-            UpdateChart(zedGraphControl3, "Biểu Đồ Thể tích", "Thể tích", x, y3);
-            UpdateChart(zedGraphControl4, "Biểu Đồ Áp Suất", "Áp suất", x, y4);
+            timer1.Start();
 
         }
 
 
-        private void UpdateChart(ZedGraphControl zedGraphControl, string title,string label ,string[] x, double[] y)
+        private void CreateChart(ZedGraphControl zedGraphControl, string title, string[] x, string label, double[] y)
         {
             //generate pane
-            var pane = zedGraphControl.GraphPane;
 
+            zedGraphControl.GraphPane.XAxis.Scale.IsVisible = true;
+            zedGraphControl.GraphPane.YAxis.Scale.IsVisible = true;
 
-            pane.XAxis.Scale.IsVisible = true;
-            pane.YAxis.Scale.IsVisible = true;
+            zedGraphControl.GraphPane.XAxis.MajorGrid.IsVisible = true;
+            zedGraphControl.GraphPane.YAxis.MajorGrid.IsVisible = true;
 
-            pane.XAxis.MajorGrid.IsVisible = true;
-            pane.YAxis.MajorGrid.IsVisible = true;
-
-            pane.XAxis.Scale.TextLabels = x;
-            pane.XAxis.Type = AxisType.Text;
+            zedGraphControl.GraphPane.XAxis.Scale.TextLabels = x;
+            zedGraphControl.GraphPane.XAxis.Type = AxisType.Text;
 
             //
             zedGraphControl.GraphPane.XAxis.Title.Text = "Thời gian";
@@ -62,23 +66,79 @@ namespace MayNapKhiTPA.Forms
 
             //var pointsCurve;
             zedGraphControl.GraphPane.Title.Text = title;
-            LineItem pointsCurve = pane.AddCurve(label, null, y, Color.Black);
+
+            // thêm 1 line không có dữ liệu
+            LineItem pointsCurve = zedGraphControl.GraphPane.AddCurve(label, null, y, Color.Black);
+
+            zedGraphControl.GraphPane.AxisChange();
+            zedGraphControl.Refresh();
+
+        }
+        private void UpdateChart(ZedGraphControl zedGraphControl, string label, double[] y)
+        {
+            zedGraphControl.GraphPane.CurveList.Clear();
+            Color color;
+            if (label == labelApSuat)
+            {
+                color = Color.DarkOrange;
+            }
+            else
+            {
+                color = Color.MediumSeaGreen;
+            }
+            LineItem pointsCurve = zedGraphControl.GraphPane.AddCurve(label, null, y, color);
+
             pointsCurve.Line.IsVisible = true;
-            pointsCurve.Line.Width = 1F;
+            pointsCurve.Line.Width = 2;
             //Create your own scale of colors.
 
-            pointsCurve.Symbol.Fill = new Fill(new Color[] { Color.Blue, Color.Green, Color.Red });
+            pointsCurve.Symbol.Fill = new Fill(new Color[] { Color.Blue, Color.Green, Color.DarkBlue });
             pointsCurve.Symbol.Fill.Type = FillType.Solid;
-            pointsCurve.Symbol.Type = SymbolType.Circle;
+            pointsCurve.Symbol.Type = SymbolType.Diamond;
             pointsCurve.Symbol.Border.IsVisible = true;
 
-
-
-            pane.AxisChange();
+            zedGraphControl.GraphPane.AxisChange();
             zedGraphControl.Refresh();
+
         }
 
+        public double GetRandomNumber(double minimum, double maximum)
+        {
+            Random random = new Random();
+            return random.NextDouble() * (maximum - minimum) + minimum;
+        }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            for(int i = 0; i<7; i++)
+            {
+                if (i+1 == 7)
+                {
+                    yApSuat1[i] = GetRandomNumber(23, 96) -33;
+                    yApSuat2[i] = GetRandomNumber(0, 100) +10;
+                    yTheTich1[i] = GetRandomNumber(5, 80) + 1;
+                    yTheTich2[i] = GetRandomNumber(9, 87) +33;
+
+                    continue;
+                }
+                else
+                {
+                    yApSuat1[i] = yApSuat1[i + 1];
+                    yApSuat2[i] = yApSuat2[i + 1];
+                    yTheTich1[i] = yTheTich1[i + 1];
+                    yTheTich2[i] = yTheTich2[i + 1];
+                }
+            }
+
+
+
+            UpdateChart(zedGraphControlApSuat1, labelApSuat, yApSuat1);
+            UpdateChart(zedGraphControlApSuat2, labelApSuat, yApSuat2);
+            UpdateChart(zedGraphControlTheTich1, labelTheTich, yTheTich1);
+            UpdateChart(zedGraphControlTheTich2, labelTheTich, yTheTich2);
+
+
+        }
 
     }
 }

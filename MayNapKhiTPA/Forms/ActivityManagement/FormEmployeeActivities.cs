@@ -17,7 +17,15 @@ namespace MayNapKhiTPA.Forms.ActivityManagement
         public FormEmployeeActivities()
         {
             InitializeComponent();
-            LoadPanelUser();
+            try
+            {
+                LoadPanelUser();
+            }
+            catch
+            {
+                //lỗi tải danh sách user
+                MessageBox.Show("Không thể tải danh sách người có thao tác hoạt động.", "Lỗi hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             //setting header column
             dataGridViewUserActivity.ColumnHeadersDefaultCellStyle.Font = new Font("Bahnschrift", 12, FontStyle.Regular);
             dataGridViewUserActivity.RowTemplate.Height = 35;

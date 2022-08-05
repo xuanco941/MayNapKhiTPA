@@ -75,6 +75,12 @@
     <Compile Include="Forms\ActivityManagement\FormEmployeeActivities.Designer.cs">
       <DependentUpon>FormEmployeeActivities.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ActivityManagement\FormPageInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ActivityManagement\FormPageInfo.Designer.cs">
+      <DependentUpon>FormPageInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\EmployeeManagement\FormEmployeeManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,6 +200,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ActivityManagement\FormEmployeeActivities.resx">
       <DependentUpon>FormEmployeeActivities.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ActivityManagement\FormPageInfo.resx">
+      <DependentUpon>FormPageInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\EmployeeManagement\FormEmployeeManagement.resx">
       <DependentUpon>FormEmployeeManagement.cs</DependentUpon>

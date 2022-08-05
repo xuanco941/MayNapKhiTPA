@@ -24,7 +24,6 @@ namespace MayNapKhiTPA
                 Application.Run(new FormMain());
             }
 
-            //Application.Run(new FormTestControl());
         }
     }
 }

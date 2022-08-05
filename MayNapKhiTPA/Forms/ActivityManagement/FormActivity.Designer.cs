@@ -48,6 +48,7 @@ namespace MayNapKhiTPA.Forms
             this.textBoxGoPage = new LW_PhanMemBaoGia.MyControls.TextBoxT();
             this.panel4 = new System.Windows.Forms.Panel();
             this.buttonCallFormEmployeeActivities = new System.Windows.Forms.Button();
+            this.btnPageInfo = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.buttonLoc = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.label1 = new System.Windows.Forms.Label();
@@ -123,7 +124,7 @@ namespace MayNapKhiTPA.Forms
             this.dataGridViewActivity.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewActivity.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(235)))), ((int)(((byte)(239)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
@@ -306,6 +307,7 @@ namespace MayNapKhiTPA.Forms
             // panel4
             // 
             this.panel4.Controls.Add(this.buttonCallFormEmployeeActivities);
+            this.panel4.Controls.Add(this.btnPageInfo);
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.panel7);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -316,20 +318,39 @@ namespace MayNapKhiTPA.Forms
             // 
             // buttonCallFormEmployeeActivities
             // 
+            this.buttonCallFormEmployeeActivities.BackColor = System.Drawing.SystemColors.Control;
             this.buttonCallFormEmployeeActivities.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonCallFormEmployeeActivities.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.buttonCallFormEmployeeActivities.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCallFormEmployeeActivities.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.buttonCallFormEmployeeActivities.Image = global::MayNapKhiTPA.Properties.Resources.button2_Image;
-            this.buttonCallFormEmployeeActivities.Location = new System.Drawing.Point(0, 329);
+            this.buttonCallFormEmployeeActivities.Image = ((System.Drawing.Image)(resources.GetObject("buttonCallFormEmployeeActivities.Image")));
+            this.buttonCallFormEmployeeActivities.Location = new System.Drawing.Point(0, 285);
             this.buttonCallFormEmployeeActivities.Name = "buttonCallFormEmployeeActivities";
             this.buttonCallFormEmployeeActivities.Size = new System.Drawing.Size(208, 44);
-            this.buttonCallFormEmployeeActivities.TabIndex = 10;
-            this.buttonCallFormEmployeeActivities.Text = "Hoạt Động Thành Viên";
+            this.buttonCallFormEmployeeActivities.TabIndex = 20;
+            this.buttonCallFormEmployeeActivities.Text = "Hoạt động thành viên";
             this.buttonCallFormEmployeeActivities.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonCallFormEmployeeActivities.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonCallFormEmployeeActivities.UseVisualStyleBackColor = true;
+            this.buttonCallFormEmployeeActivities.UseVisualStyleBackColor = false;
             this.buttonCallFormEmployeeActivities.Click += new System.EventHandler(this.buttonCallFormEmployeeActivities_Click);
+            // 
+            // btnPageInfo
+            // 
+            this.btnPageInfo.BackColor = System.Drawing.SystemColors.Control;
+            this.btnPageInfo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPageInfo.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnPageInfo.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPageInfo.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btnPageInfo.Image = ((System.Drawing.Image)(resources.GetObject("btnPageInfo.Image")));
+            this.btnPageInfo.Location = new System.Drawing.Point(0, 329);
+            this.btnPageInfo.Name = "btnPageInfo";
+            this.btnPageInfo.Size = new System.Drawing.Size(208, 44);
+            this.btnPageInfo.TabIndex = 16;
+            this.btnPageInfo.Text = "Thông tin trang";
+            this.btnPageInfo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPageInfo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPageInfo.UseVisualStyleBackColor = false;
+            this.btnPageInfo.Click += new System.EventHandler(this.btnPageInfo_Click);
             // 
             // panel5
             // 
@@ -452,7 +473,7 @@ namespace MayNapKhiTPA.Forms
             this.groupBox3.Controls.Add(this.labelTuNgay);
             this.groupBox3.Controls.Add(this.labelTongSoTrang);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox3.ForeColor = System.Drawing.Color.Green;
+            this.groupBox3.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.groupBox3.Location = new System.Drawing.Point(0, 0);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(208, 115);
@@ -519,6 +540,7 @@ namespace MayNapKhiTPA.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(235)))), ((int)(((byte)(239)))));
             this.ClientSize = new System.Drawing.Size(1039, 494);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "FormActivity";
@@ -546,7 +568,6 @@ namespace MayNapKhiTPA.Forms
         private Panel panel3;
         private Panel panel2;
         private Panel panel4;
-        private Button buttonCallFormEmployeeActivities;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonPageNext;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonPage3;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonPage1;
@@ -568,5 +589,7 @@ namespace MayNapKhiTPA.Forms
         private Label label2;
         private DateTimePicker dateTimePickerToiNgay;
         private Label label3;
+        private Button buttonCallFormEmployeeActivities;
+        private Button btnPageInfo;
     }
 }

@@ -73,6 +73,7 @@ namespace MayNapKhiTPA.Forms
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimePickerTuNgay = new System.Windows.Forms.DateTimePicker();
             this.buttonCallFormData = new System.Windows.Forms.Button();
+            this.buttonPageInfo = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.buttonPrint = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
@@ -385,6 +386,7 @@ namespace MayNapKhiTPA.Forms
             // 
             this.panel7.Controls.Add(this.panel8);
             this.panel7.Controls.Add(this.buttonCallFormData);
+            this.panel7.Controls.Add(this.buttonPageInfo);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Name = "panel7";
@@ -413,9 +415,10 @@ namespace MayNapKhiTPA.Forms
             this.panel8.Controls.Add(this.label2);
             this.panel8.Controls.Add(this.label1);
             this.panel8.Controls.Add(this.dateTimePickerTuNgay);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel8.Location = new System.Drawing.Point(0, 0);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(202, 490);
+            this.panel8.Size = new System.Drawing.Size(202, 446);
             this.panel8.TabIndex = 48;
             // 
             // comboBoxSelectMay
@@ -661,7 +664,7 @@ namespace MayNapKhiTPA.Forms
             this.buttonCallFormData.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCallFormData.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.buttonCallFormData.Image = ((System.Drawing.Image)(resources.GetObject("buttonCallFormData.Image")));
-            this.buttonCallFormData.Location = new System.Drawing.Point(0, 490);
+            this.buttonCallFormData.Location = new System.Drawing.Point(0, 446);
             this.buttonCallFormData.Name = "buttonCallFormData";
             this.buttonCallFormData.Size = new System.Drawing.Size(202, 44);
             this.buttonCallFormData.TabIndex = 47;
@@ -670,6 +673,22 @@ namespace MayNapKhiTPA.Forms
             this.buttonCallFormData.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonCallFormData.UseVisualStyleBackColor = false;
             this.buttonCallFormData.Click += new System.EventHandler(this.buttonCallFormData_Click);
+            // 
+            // buttonPageInfo
+            // 
+            this.buttonPageInfo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonPageInfo.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.buttonPageInfo.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPageInfo.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.buttonPageInfo.Image = ((System.Drawing.Image)(resources.GetObject("buttonPageInfo.Image")));
+            this.buttonPageInfo.Location = new System.Drawing.Point(0, 490);
+            this.buttonPageInfo.Name = "buttonPageInfo";
+            this.buttonPageInfo.Size = new System.Drawing.Size(202, 44);
+            this.buttonPageInfo.TabIndex = 49;
+            this.buttonPageInfo.Text = "Thông tin trang";
+            this.buttonPageInfo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonPageInfo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonPageInfo.UseVisualStyleBackColor = false;
             // 
             // panel6
             // 
@@ -685,6 +704,7 @@ namespace MayNapKhiTPA.Forms
             this.groupBox1.Controls.Add(this.buttonPrint);
             this.groupBox1.Controls.Add(this.buttonExcel);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(202, 114);
@@ -703,7 +723,7 @@ namespace MayNapKhiTPA.Forms
             this.buttonPrint.BorderSize = 0;
             this.buttonPrint.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPrint.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPrint.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPrint.ForeColor = System.Drawing.Color.Black;
             this.buttonPrint.Image = global::MayNapKhiTPA.Properties.Resources.iconfinder_Save_278762;
             this.buttonPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -729,7 +749,7 @@ namespace MayNapKhiTPA.Forms
             this.buttonExcel.BorderSize = 0;
             this.buttonExcel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonExcel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonExcel.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonExcel.ForeColor = System.Drawing.Color.Black;
             this.buttonExcel.Image = global::MayNapKhiTPA.Properties.Resources.Logoexe;
             this.buttonExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -819,5 +839,6 @@ namespace MayNapKhiTPA.Forms
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonPrint;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonExcel;
         private DataGridView dataGridViewResult;
+        private Button buttonPageInfo;
     }
 }
