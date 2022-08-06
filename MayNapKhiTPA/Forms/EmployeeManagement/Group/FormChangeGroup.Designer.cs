@@ -80,7 +80,7 @@ namespace MayNapKhiTPA.Forms
             this.buttonDeleteGroup.BorderRadius = 3;
             this.buttonDeleteGroup.BorderSize = 0;
             this.buttonDeleteGroup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDeleteGroup.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDeleteGroup.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDeleteGroup.ForeColor = System.Drawing.Color.White;
             this.buttonDeleteGroup.Image = ((System.Drawing.Image)(resources.GetObject("buttonDeleteGroup.Image")));
             this.buttonDeleteGroup.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -103,7 +103,7 @@ namespace MayNapKhiTPA.Forms
             this.buttonUpdateGroup.BorderRadius = 3;
             this.buttonUpdateGroup.BorderSize = 0;
             this.buttonUpdateGroup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonUpdateGroup.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonUpdateGroup.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonUpdateGroup.ForeColor = System.Drawing.Color.White;
             this.buttonUpdateGroup.Image = global::MayNapKhiTPA.Properties.Resources.iconfinder_Synchronize_278832;
             this.buttonUpdateGroup.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;

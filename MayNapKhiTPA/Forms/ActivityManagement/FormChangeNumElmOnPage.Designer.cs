@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormChangeNumElmOnPage));
             this.textBoxNumElm = new LW_PhanMemBaoGia.MyControls.TextBoxT();
-            this.buttonSaveSetting = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.label1 = new System.Windows.Forms.Label();
+            this.buttonSaveSetting = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.SuspendLayout();
             // 
             // textBoxNumElm
@@ -44,6 +44,7 @@
             this.textBoxNumElm.BorderRadius = 5;
             this.textBoxNumElm.BorderSize = 1;
             this.textBoxNumElm.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNumElm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.textBoxNumElm.Location = new System.Drawing.Point(82, 72);
             this.textBoxNumElm.Multiline = false;
             this.textBoxNumElm.Name = "textBoxNumElm";
@@ -58,19 +59,30 @@
             this.textBoxNumElm.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxNumElm_KeyDown);
             this.textBoxNumElm.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumElm_KeyPress);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.LightGray;
+            this.label1.Location = new System.Drawing.Point(79, 53);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(111, 17);
+            this.label1.TabIndex = 53;
+            this.label1.Text = "Số dòng hiển thị :";
+            // 
             // buttonSaveSetting
             // 
             this.buttonSaveSetting.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonSaveSetting.BackColor = System.Drawing.Color.Green;
-            this.buttonSaveSetting.BackgroundColor = System.Drawing.Color.Green;
+            this.buttonSaveSetting.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.buttonSaveSetting.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.buttonSaveSetting.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.buttonSaveSetting.BorderRadius = 6;
             this.buttonSaveSetting.BorderSize = 0;
             this.buttonSaveSetting.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonSaveSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSaveSetting.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSaveSetting.ForeColor = System.Drawing.Color.White;
+            this.buttonSaveSetting.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.buttonSaveSetting.Image = ((System.Drawing.Image)(resources.GetObject("buttonSaveSetting.Image")));
             this.buttonSaveSetting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonSaveSetting.Location = new System.Drawing.Point(263, 72);
@@ -79,25 +91,16 @@
             this.buttonSaveSetting.TabIndex = 52;
             this.buttonSaveSetting.Text = "Lưu";
             this.buttonSaveSetting.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonSaveSetting.TextColor = System.Drawing.Color.White;
+            this.buttonSaveSetting.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.buttonSaveSetting.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.buttonSaveSetting.UseVisualStyleBackColor = false;
             this.buttonSaveSetting.Click += new System.EventHandler(this.buttonSaveSetting_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(79, 53);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 17);
-            this.label1.TabIndex = 53;
-            this.label1.Text = "Số dòng hiển thị :";
             // 
             // FormChangeNumElmOnPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(410, 182);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonSaveSetting);

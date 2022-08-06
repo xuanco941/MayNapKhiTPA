@@ -82,6 +82,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.LightGray;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.textBoxIDResult);
             this.panel1.Controls.Add(this.buttonViewDetsil);
@@ -101,6 +102,7 @@
             this.textBoxIDResult.BorderRadius = 5;
             this.textBoxIDResult.BorderSize = 1;
             this.textBoxIDResult.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxIDResult.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.textBoxIDResult.Location = new System.Drawing.Point(37, 47);
             this.textBoxIDResult.Multiline = false;
             this.textBoxIDResult.Name = "textBoxIDResult";
@@ -143,6 +145,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.groupBox1.Controls.Add(this.labelStatus);
             this.groupBox1.Controls.Add(this.labelMaMe);
             this.groupBox1.Controls.Add(this.labelFullNameUser);
@@ -151,7 +154,7 @@
             this.groupBox1.Controls.Add(this.labelNgayBatDau);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.Green;
+            this.groupBox1.ForeColor = System.Drawing.Color.LightGray;
             this.groupBox1.Location = new System.Drawing.Point(4, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(269, 355);
@@ -163,7 +166,7 @@
             // 
             this.labelMaMe.AutoSize = true;
             this.labelMaMe.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMaMe.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelMaMe.ForeColor = System.Drawing.Color.LightGray;
             this.labelMaMe.Location = new System.Drawing.Point(3, 23);
             this.labelMaMe.Name = "labelMaMe";
             this.labelMaMe.Size = new System.Drawing.Size(70, 17);
@@ -174,7 +177,7 @@
             // 
             this.labelFullNameUser.AutoSize = true;
             this.labelFullNameUser.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFullNameUser.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelFullNameUser.ForeColor = System.Drawing.Color.LightGray;
             this.labelFullNameUser.Location = new System.Drawing.Point(3, 79);
             this.labelFullNameUser.Name = "labelFullNameUser";
             this.labelFullNameUser.Size = new System.Drawing.Size(126, 17);
@@ -185,7 +188,7 @@
             // 
             this.labelMachine.AutoSize = true;
             this.labelMachine.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMachine.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelMachine.ForeColor = System.Drawing.Color.LightGray;
             this.labelMachine.Location = new System.Drawing.Point(3, 50);
             this.labelMachine.Name = "labelMachine";
             this.labelMachine.Size = new System.Drawing.Size(115, 17);
@@ -196,7 +199,7 @@
             // 
             this.labelNgayKetThuc.AutoSize = true;
             this.labelNgayKetThuc.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNgayKetThuc.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelNgayKetThuc.ForeColor = System.Drawing.Color.LightGray;
             this.labelNgayKetThuc.Location = new System.Drawing.Point(3, 136);
             this.labelNgayKetThuc.Name = "labelNgayKetThuc";
             this.labelNgayKetThuc.Size = new System.Drawing.Size(138, 17);
@@ -207,7 +210,7 @@
             // 
             this.labelNgayBatDau.AutoSize = true;
             this.labelNgayBatDau.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNgayBatDau.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelNgayBatDau.ForeColor = System.Drawing.Color.LightGray;
             this.labelNgayBatDau.Location = new System.Drawing.Point(3, 109);
             this.labelNgayBatDau.Name = "labelNgayBatDau";
             this.labelNgayBatDau.Size = new System.Drawing.Size(135, 17);
@@ -252,7 +255,7 @@
             // 
             this.labelStatus.AutoSize = true;
             this.labelStatus.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelStatus.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelStatus.ForeColor = System.Drawing.Color.LightGray;
             this.labelStatus.Location = new System.Drawing.Point(3, 162);
             this.labelStatus.Name = "labelStatus";
             this.labelStatus.Size = new System.Drawing.Size(89, 17);
@@ -263,6 +266,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.label1.Location = new System.Drawing.Point(37, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 15);
@@ -273,6 +277,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1006, 564);
             this.Controls.Add(this.dataGridViewSearchData);
             this.Controls.Add(this.panelSearchData);

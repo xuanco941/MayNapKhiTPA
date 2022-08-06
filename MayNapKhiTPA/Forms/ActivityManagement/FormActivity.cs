@@ -52,13 +52,13 @@ namespace MayNapKhiTPA.Forms
                 string[] arr2 = strDatimeToiNgay.Split('-');
                 string infoTuNgay = arr1[2] + "-" + arr1[1] + "-" + arr1[0];
                 string infoToiNgay = (int.Parse(arr2[2]) - 1) + "-" + arr2[1] + "-" + arr2[0];
-                labelTuNgay.Text = "- Từ ngày: " + infoTuNgay + ".";
-                labelToiNgay.Text = "- Tới ngày: " + infoToiNgay + ".";
+                labelTuNgay.Text = "- Lọc từ ngày: " + infoTuNgay + ".";
+                labelToiNgay.Text = "- Lọc tới ngày: " + infoToiNgay + ".";
             }
             else
             {
-                labelTuNgay.Text = "- Từ ngày : trống.";
-                labelToiNgay.Text = "- Tới ngày : trống.";
+                labelTuNgay.Text = "- Lọc từ ngày: trống.";
+                labelToiNgay.Text = "- Lọc tới ngày: trống.";
             }
 
             //
@@ -370,9 +370,9 @@ namespace MayNapKhiTPA.Forms
         }
         private void btnChangeNumElmPage_Click(object sender, EventArgs e)
         {
-            FormChangeNumElmOnPage formPageInfo = new FormChangeNumElmOnPage();
-            formPageInfo.changeData = new FormChangeNumElmOnPage.ChangeData(AlertActive);
-            formPageInfo.ShowDialog();
+            FormChangeNumElmOnPage form = new FormChangeNumElmOnPage();
+            form.changeData = new FormChangeNumElmOnPage.ChangeData(AlertActive);
+            form.ShowDialog();
         }
         private void buttonDeleteDataActivity_Click(object sender, EventArgs e)
         {

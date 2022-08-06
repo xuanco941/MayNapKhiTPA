@@ -28,7 +28,7 @@ namespace MayNapKhiTPA.Forms
             if (!String.IsNullOrEmpty(textBoxNumElm.Texts) && textBoxNumElm.Texts != textBoxNumElm.PlaceholderText && int.Parse(textBoxNumElm.Texts) > 0)
             {
                 Common.NUMBER_ELM_ON_PAGE_ACTIVITY = int.Parse(textBoxNumElm.Texts);
-                changeData.Invoke("Cập nhật số dòng hiển thị là: "+textBoxNumElm.Texts,FormAlert.enmType.Success);
+                changeData.Invoke("Cập nhật số dòng hiển thị trang hoạt động là: "+textBoxNumElm.Texts,FormAlert.enmType.Success);
                 this.Close();
             }
             else

@@ -53,7 +53,7 @@ namespace MayNapKhiTPA.Forms
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.buttonCallFormData = new System.Windows.Forms.Button();
-            this.btnChangeNumElmPage = new System.Windows.Forms.Button();
+            this.btnInfoPage = new System.Windows.Forms.Button();
             this.buttonDeleteResult = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.comboBoxSelectMay = new System.Windows.Forms.ComboBox();
@@ -386,7 +386,7 @@ namespace MayNapKhiTPA.Forms
             // panel7
             // 
             this.panel7.Controls.Add(this.buttonCallFormData);
-            this.panel7.Controls.Add(this.btnChangeNumElmPage);
+            this.panel7.Controls.Add(this.btnInfoPage);
             this.panel7.Controls.Add(this.buttonDeleteResult);
             this.panel7.Controls.Add(this.panel8);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -412,21 +412,22 @@ namespace MayNapKhiTPA.Forms
             this.buttonCallFormData.UseVisualStyleBackColor = false;
             this.buttonCallFormData.Click += new System.EventHandler(this.buttonCallFormData_Click);
             // 
-            // btnChangeNumElmPage
+            // btnInfoPage
             // 
-            this.btnChangeNumElmPage.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnChangeNumElmPage.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnChangeNumElmPage.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChangeNumElmPage.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnChangeNumElmPage.Image = ((System.Drawing.Image)(resources.GetObject("btnChangeNumElmPage.Image")));
-            this.btnChangeNumElmPage.Location = new System.Drawing.Point(0, 446);
-            this.btnChangeNumElmPage.Name = "btnChangeNumElmPage";
-            this.btnChangeNumElmPage.Size = new System.Drawing.Size(202, 44);
-            this.btnChangeNumElmPage.TabIndex = 49;
-            this.btnChangeNumElmPage.Text = "Thông tin trang";
-            this.btnChangeNumElmPage.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnChangeNumElmPage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnChangeNumElmPage.UseVisualStyleBackColor = false;
+            this.btnInfoPage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInfoPage.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnInfoPage.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInfoPage.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btnInfoPage.Image = ((System.Drawing.Image)(resources.GetObject("btnInfoPage.Image")));
+            this.btnInfoPage.Location = new System.Drawing.Point(0, 446);
+            this.btnInfoPage.Name = "btnInfoPage";
+            this.btnInfoPage.Size = new System.Drawing.Size(202, 44);
+            this.btnInfoPage.TabIndex = 49;
+            this.btnInfoPage.Text = "Thông tin trang";
+            this.btnInfoPage.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnInfoPage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnInfoPage.UseVisualStyleBackColor = false;
+            this.btnInfoPage.Click += new System.EventHandler(this.btnInfoPage_Click);
             // 
             // buttonDeleteResult
             // 
@@ -858,7 +859,7 @@ namespace MayNapKhiTPA.Forms
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonPrint;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonExcel;
         private DataGridView dataGridViewResult;
-        private Button btnChangeNumElmPage;
+        private Button btnInfoPage;
         private Button buttonDeleteResult;
     }
 }

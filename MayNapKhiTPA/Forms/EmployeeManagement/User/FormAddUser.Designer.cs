@@ -247,7 +247,7 @@ namespace MayNapKhiTPA.Forms
             this.buttonThem.BorderSize = 0;
             this.buttonThem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonThem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonThem.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonThem.ForeColor = System.Drawing.Color.White;
             this.buttonThem.Image = ((System.Drawing.Image)(resources.GetObject("buttonThem.Image")));
             this.buttonThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;

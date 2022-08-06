@@ -228,7 +228,7 @@ namespace MayNapKhiTPA.Forms
             this.buttonAddGroup.BorderRadius = 3;
             this.buttonAddGroup.BorderSize = 0;
             this.buttonAddGroup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAddGroup.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAddGroup.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAddGroup.ForeColor = System.Drawing.Color.White;
             this.buttonAddGroup.Image = ((System.Drawing.Image)(resources.GetObject("buttonAddGroup.Image")));
             this.buttonAddGroup.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;

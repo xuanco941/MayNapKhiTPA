@@ -749,5 +749,25 @@ namespace MayNapKhiTPA.Forms
                 callAlert("Xóa thành công!", FormAlert.enmType.Success);
             }
         }
+
+
+        public void AlertActive(string msg, FormAlert.enmType enmType)
+        {
+            callAlert?.Invoke(msg, enmType);
+            //load lai datagridview
+            this.page = 1;
+            buttonPage1.Text = 1.ToString();
+            buttonPage2.Text = 2.ToString();
+            buttonPage3.Text = 3.ToString();
+            GetResults();
+
+        }
+
+        private void btnInfoPage_Click(object sender, EventArgs e)
+        {
+            FormInfoPage form = new FormInfoPage(nameMachine,time1,time2,checkApSuat,checkTheTich,checkLuuLuong,apSuat1,apSuat2,theTich1,theTich2,luuLuong1,luuLuong2,page,pageSize);
+            form.changeData = new FormInfoPage.ChangeData(AlertActive);
+            form.ShowDialog();
+        }
     }
 }

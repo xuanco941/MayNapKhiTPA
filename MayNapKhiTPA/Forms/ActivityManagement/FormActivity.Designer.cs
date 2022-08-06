@@ -30,10 +30,10 @@ namespace MayNapKhiTPA.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormActivity));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -115,38 +115,38 @@ namespace MayNapKhiTPA.Forms
             this.dataGridViewActivity.AllowUserToDeleteRows = false;
             this.dataGridViewActivity.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewActivity.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewActivity.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewActivity.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle21;
             this.dataGridViewActivity.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewActivity.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewActivity.DefaultCellStyle = dataGridViewCellStyle22;
             this.dataGridViewActivity.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewActivity.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewActivity.Name = "dataGridViewActivity";
             this.dataGridViewActivity.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewActivity.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewActivity.RowHeadersDefaultCellStyle = dataGridViewCellStyle23;
             this.dataGridViewActivity.RowHeadersVisible = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewActivity.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewActivity.RowsDefaultCellStyle = dataGridViewCellStyle24;
             this.dataGridViewActivity.RowTemplate.Height = 25;
             this.dataGridViewActivity.Size = new System.Drawing.Size(819, 438);
             this.dataGridViewActivity.TabIndex = 0;
@@ -388,7 +388,7 @@ namespace MayNapKhiTPA.Forms
             this.groupBox3.Controls.Add(this.labelTuNgay);
             this.groupBox3.Controls.Add(this.labelTongSoTrang);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox3.ForeColor = System.Drawing.Color.Green;
+            this.groupBox3.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.groupBox3.Location = new System.Drawing.Point(0, 0);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(208, 115);
@@ -401,11 +401,11 @@ namespace MayNapKhiTPA.Forms
             this.labelPage.AutoSize = true;
             this.labelPage.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPage.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelPage.Location = new System.Drawing.Point(7, 91);
+            this.labelPage.Location = new System.Drawing.Point(7, 55);
             this.labelPage.Name = "labelPage";
-            this.labelPage.Size = new System.Drawing.Size(39, 15);
+            this.labelPage.Size = new System.Drawing.Size(88, 15);
             this.labelPage.TabIndex = 4;
-            this.labelPage.Text = "label5";
+            this.labelPage.Text = "- Đang ở trang:";
             // 
             // labelToiNgay
             // 
@@ -414,9 +414,9 @@ namespace MayNapKhiTPA.Forms
             this.labelToiNgay.ForeColor = System.Drawing.SystemColors.ControlText;
             this.labelToiNgay.Location = new System.Drawing.Point(7, 37);
             this.labelToiNgay.Name = "labelToiNgay";
-            this.labelToiNgay.Size = new System.Drawing.Size(39, 15);
+            this.labelToiNgay.Size = new System.Drawing.Size(83, 15);
             this.labelToiNgay.TabIndex = 3;
-            this.labelToiNgay.Text = "label5";
+            this.labelToiNgay.Text = "- Lọc tới ngày:";
             // 
             // labelBanGhiMoiTrang
             // 
@@ -425,9 +425,9 @@ namespace MayNapKhiTPA.Forms
             this.labelBanGhiMoiTrang.ForeColor = System.Drawing.SystemColors.ControlText;
             this.labelBanGhiMoiTrang.Location = new System.Drawing.Point(7, 73);
             this.labelBanGhiMoiTrang.Name = "labelBanGhiMoiTrang";
-            this.labelBanGhiMoiTrang.Size = new System.Drawing.Size(39, 15);
+            this.labelBanGhiMoiTrang.Size = new System.Drawing.Size(113, 15);
             this.labelBanGhiMoiTrang.TabIndex = 3;
-            this.labelBanGhiMoiTrang.Text = "label5";
+            this.labelBanGhiMoiTrang.Text = "- Bản ghi mỗi trang:";
             // 
             // labelTuNgay
             // 
@@ -436,20 +436,20 @@ namespace MayNapKhiTPA.Forms
             this.labelTuNgay.ForeColor = System.Drawing.SystemColors.ControlText;
             this.labelTuNgay.Location = new System.Drawing.Point(7, 19);
             this.labelTuNgay.Name = "labelTuNgay";
-            this.labelTuNgay.Size = new System.Drawing.Size(39, 15);
+            this.labelTuNgay.Size = new System.Drawing.Size(80, 15);
             this.labelTuNgay.TabIndex = 1;
-            this.labelTuNgay.Text = "label5";
+            this.labelTuNgay.Text = "- Lọc từ ngày:";
             // 
             // labelTongSoTrang
             // 
             this.labelTongSoTrang.AutoSize = true;
             this.labelTongSoTrang.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTongSoTrang.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelTongSoTrang.Location = new System.Drawing.Point(7, 55);
+            this.labelTongSoTrang.Location = new System.Drawing.Point(7, 91);
             this.labelTongSoTrang.Name = "labelTongSoTrang";
-            this.labelTongSoTrang.Size = new System.Drawing.Size(39, 15);
+            this.labelTongSoTrang.Size = new System.Drawing.Size(92, 15);
             this.labelTongSoTrang.TabIndex = 1;
-            this.labelTongSoTrang.Text = "label5";
+            this.labelTongSoTrang.Text = "- Tổng số trang:";
             // 
             // buttonGoPage
             // 
