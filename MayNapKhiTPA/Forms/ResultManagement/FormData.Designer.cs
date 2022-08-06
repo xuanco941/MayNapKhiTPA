@@ -29,21 +29,23 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormData));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelSearchData = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBoxIDResult = new LW_PhanMemBaoGia.MyControls.TextBoxT();
             this.buttonViewDetsil = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.labelMaMe = new System.Windows.Forms.Label();
             this.labelFullNameUser = new System.Windows.Forms.Label();
             this.labelMachine = new System.Windows.Forms.Label();
             this.labelNgayKetThuc = new System.Windows.Forms.Label();
             this.labelNgayBatDau = new System.Windows.Forms.Label();
             this.dataGridViewSearchData = new System.Windows.Forms.DataGridView();
-            this.labelMaMe = new System.Windows.Forms.Label();
+            this.labelStatus = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelSearchData.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -74,18 +76,19 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 170F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 220F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(277, 564);
             this.tableLayoutPanel1.TabIndex = 55;
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.textBoxIDResult);
             this.panel1.Controls.Add(this.buttonViewDetsil);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(4, 396);
+            this.panel1.Location = new System.Drawing.Point(4, 366);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(269, 164);
+            this.panel1.Size = new System.Drawing.Size(269, 194);
             this.panel1.TabIndex = 57;
             // 
             // textBoxIDResult
@@ -98,7 +101,7 @@
             this.textBoxIDResult.BorderRadius = 5;
             this.textBoxIDResult.BorderSize = 1;
             this.textBoxIDResult.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxIDResult.Location = new System.Drawing.Point(38, 35);
+            this.textBoxIDResult.Location = new System.Drawing.Point(37, 47);
             this.textBoxIDResult.Multiline = false;
             this.textBoxIDResult.Name = "textBoxIDResult";
             this.textBoxIDResult.Padding = new System.Windows.Forms.Padding(7);
@@ -127,7 +130,7 @@
             this.buttonViewDetsil.ForeColor = System.Drawing.Color.Black;
             this.buttonViewDetsil.Image = ((System.Drawing.Image)(resources.GetObject("buttonViewDetsil.Image")));
             this.buttonViewDetsil.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonViewDetsil.Location = new System.Drawing.Point(75, 91);
+            this.buttonViewDetsil.Location = new System.Drawing.Point(74, 103);
             this.buttonViewDetsil.Name = "buttonViewDetsil";
             this.buttonViewDetsil.Size = new System.Drawing.Size(132, 32);
             this.buttonViewDetsil.TabIndex = 52;
@@ -140,6 +143,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.labelStatus);
             this.groupBox1.Controls.Add(this.labelMaMe);
             this.groupBox1.Controls.Add(this.labelFullNameUser);
             this.groupBox1.Controls.Add(this.labelMachine);
@@ -150,10 +154,21 @@
             this.groupBox1.ForeColor = System.Drawing.Color.Green;
             this.groupBox1.Location = new System.Drawing.Point(4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(269, 385);
+            this.groupBox1.Size = new System.Drawing.Size(269, 355);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin";
+            // 
+            // labelMaMe
+            // 
+            this.labelMaMe.AutoSize = true;
+            this.labelMaMe.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMaMe.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelMaMe.Location = new System.Drawing.Point(3, 23);
+            this.labelMaMe.Name = "labelMaMe";
+            this.labelMaMe.Size = new System.Drawing.Size(70, 17);
+            this.labelMaMe.TabIndex = 5;
+            this.labelMaMe.Text = "- Mã mẻ : ";
             // 
             // labelFullNameUser
             // 
@@ -204,45 +219,55 @@
             this.dataGridViewSearchData.AllowUserToAddRows = false;
             this.dataGridViewSearchData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewSearchData.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewSearchData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewSearchData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewSearchData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewSearchData.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewSearchData.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewSearchData.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridViewSearchData.Name = "dataGridViewSearchData";
             this.dataGridViewSearchData.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewSearchData.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewSearchData.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewSearchData.RowHeadersVisible = false;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewSearchData.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewSearchData.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewSearchData.RowTemplate.Height = 25;
             this.dataGridViewSearchData.Size = new System.Drawing.Size(729, 564);
             this.dataGridViewSearchData.TabIndex = 3;
             // 
-            // labelMaMe
+            // labelStatus
             // 
-            this.labelMaMe.AutoSize = true;
-            this.labelMaMe.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMaMe.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelMaMe.Location = new System.Drawing.Point(3, 23);
-            this.labelMaMe.Name = "labelMaMe";
-            this.labelMaMe.Size = new System.Drawing.Size(70, 17);
-            this.labelMaMe.TabIndex = 5;
-            this.labelMaMe.Text = "- Mã mẻ : ";
+            this.labelStatus.AutoSize = true;
+            this.labelStatus.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelStatus.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelStatus.Location = new System.Drawing.Point(3, 162);
+            this.labelStatus.Name = "labelStatus";
+            this.labelStatus.Size = new System.Drawing.Size(89, 17);
+            this.labelStatus.TabIndex = 6;
+            this.labelStatus.Text = "- Trạng thái : ";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(37, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(73, 15);
+            this.label1.TabIndex = 53;
+            this.label1.Text = "Mã mẻ nạp :";
             // 
             // FormData
             // 
@@ -257,6 +282,7 @@
             this.panelSearchData.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSearchData)).EndInit();
@@ -277,5 +303,7 @@
         private System.Windows.Forms.Label labelNgayBatDau;
         private System.Windows.Forms.Label labelFullNameUser;
         private System.Windows.Forms.Label labelMaMe;
+        private System.Windows.Forms.Label labelStatus;
+        private System.Windows.Forms.Label label1;
     }
 }

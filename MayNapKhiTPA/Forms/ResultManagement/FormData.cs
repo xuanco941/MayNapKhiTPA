@@ -44,19 +44,20 @@ namespace MayNapKhiTPA.Forms
             dataGridViewSearchData.DataSource = dt;
         }
 
-        private void LoadInfo(string id_result, string timeStart, string timeEnd, string nameMachine, string nameUser)
+        private void LoadInfo(string id_result, string timeStart, string timeEnd, string nameMachine, string nameUser, string status)
         {
-            labelMaMe.Text = "- Mã mẻ: " + id_result;
-            labelNgayBatDau.Text = "- Thời gian bắt đầu : " + timeStart;
-            labelNgayKetThuc.Text = "- Thời gian kết thúc : " + timeEnd;
-            labelMachine.Text = "- Máy thực hiện : " + nameMachine;
-            labelFullNameUser.Text = "- Người thực hiện : " + nameUser;
+            labelMaMe.Text = "- Mã mẻ: " + id_result +".";
+            labelNgayBatDau.Text = "- Thời gian bắt đầu : " + timeStart+".";
+            labelNgayKetThuc.Text = "- Thời gian kết thúc : " + timeEnd+".";
+            labelMachine.Text = "- Máy thực hiện : " + nameMachine+".";
+            labelFullNameUser.Text = "- Người thực hiện : " + nameUser+".";
+            labelStatus.Text = "- Trạng thái : " + status+".";
         }
 
         //đang làm dở
         private void LoadForm()
         {
-            if (String.IsNullOrEmpty(textBoxIDResult.Texts) == false && textBoxIDResult.Texts != textBoxIDResult.PlaceholderText)
+            if (String.IsNullOrEmpty(textBoxIDResult.Texts) == false && textBoxIDResult.Texts != textBoxIDResult.PlaceholderText && int.Parse(textBoxIDResult.Texts)>0)
             {
                 int IDResult = int.Parse(textBoxIDResult.Texts);
 
@@ -67,11 +68,11 @@ namespace MayNapKhiTPA.Forms
                     string TimeEnd = result.TimeEnd.ToString("hh:mm:ss dd/MM/yyyy", CultureInfo.InvariantCulture);
                     if (TimeStart == TimeEnd)
                     {
-                        LoadInfo("chưa có.", "chưa có.", "chưa có.", "chưa có.", "chưa có.");
+                        LoadInfo(result.ID_Result.ToString(), TimeStart, "Chưa có", result.NameMachine, result.Worker, "Chưa hoàn thành");
                     }
                     else
                     {
-                        LoadInfo(result.ID_Result.ToString(), TimeStart, TimeEnd, result.NameMachine, result.Worker);
+                        LoadInfo(result.ID_Result.ToString(), TimeStart, TimeEnd, result.NameMachine, result.Worker, "Đã hoàn thành");
                         LoadDataGridView(DataBusiness.GetAllDatasByIDResult(IDResult));
                     }
                 }
@@ -81,6 +82,10 @@ namespace MayNapKhiTPA.Forms
                     MessageBox.Show("Mã mẻ này không tồn tại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
+            }
+            else
+            {
+                MessageBox.Show("Mã mẻ này không tồn tại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void buttonViewDetsil_Click(object sender, EventArgs e)

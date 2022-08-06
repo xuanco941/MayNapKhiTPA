@@ -27,7 +27,6 @@ namespace MayNapKhiTPA.Forms
         // tổng số trang
         private int pageSize = 1;
 
-
         public FormActivity()
         {
             InitializeComponent();
@@ -43,9 +42,9 @@ namespace MayNapKhiTPA.Forms
         private void LoadForm(List<Activity> activities)
         {
             //
-            labelBanGhiMoiTrang.Text = "- Tổng số trang: " + pageSize;
-            labelTongSoTrang.Text = "- Bản ghi mỗi trang: " + Common.NUMBER_ELM_ON_PAGE_ACTIVITY;
-            labelPage.Text = "- Đang ở trang: " + this.page;
+            labelBanGhiMoiTrang.Text = "- Tổng số trang: " + pageSize+".";
+            labelTongSoTrang.Text = "- Bản ghi mỗi trang: " + Common.NUMBER_ELM_ON_PAGE_ACTIVITY+".";
+            labelPage.Text = "- Đang ở trang: " + this.page+".";
             //
             if (strDatimeTuNgay != null && strDatimeToiNgay != null)
             {
@@ -64,13 +63,12 @@ namespace MayNapKhiTPA.Forms
 
             //
             DataTable dt = new DataTable();
-            dt.Columns.Add("No.");
+            dt.Columns.Add("ID");
             dt.Columns.Add("Hoạt động");
             dt.Columns.Add("Thời gian");
             dt.Columns.Add("Người thực hiện");
 
             // load datagridview từ tham số activities truyền vào
-            int count = 1;
             activities.ForEach(delegate (Activity activity)
             {
                 string fullnameButton = activity.Worker;
@@ -85,8 +83,7 @@ namespace MayNapKhiTPA.Forms
                 }
                 //format date từ sql -> c#
                 string createAt = activity.Create_At.ToString("hh:mm:ss dd/MM/yyyy", CultureInfo.InvariantCulture);
-                dt.Rows.Add(count, activity.Description, createAt, fullnameButton);
-                count++;
+                dt.Rows.Add(activity.ID_Activity, activity.Description, createAt, fullnameButton);
             });
             dataGridViewActivity.DataSource = dt;
         }
@@ -358,9 +355,50 @@ namespace MayNapKhiTPA.Forms
             new FormEmployeeActivities().Show();
         }
 
-        private void btnPageInfo_Click(object sender, EventArgs e)
+
+
+        public void AlertActive(string msg, FormAlert.enmType enmType)
         {
-            new FormPageInfo().ShowDialog();
+            callAlert?.Invoke(msg, enmType);
+            //load lai datagridview
+            this.page = 1;
+            buttonPage1.Text = 1.ToString();
+            buttonPage2.Text = 2.ToString();
+            buttonPage3.Text = 3.ToString();
+            GetActivities();
+            
         }
+        private void btnChangeNumElmPage_Click(object sender, EventArgs e)
+        {
+            FormChangeNumElmOnPage formPageInfo = new FormChangeNumElmOnPage();
+            formPageInfo.changeData = new FormChangeNumElmOnPage.ChangeData(AlertActive);
+            formPageInfo.ShowDialog();
+        }
+        private void buttonDeleteDataActivity_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show($"Bạn có chắc muốn xóa dữ liệu hoạt động đang hiển thị tại trang này?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
+            {
+                foreach (DataGridViewRow row in dataGridViewActivity.Rows)
+                {
+                    try
+                    {
+                        ActivityBusiness.DeleteActivityFromID(int.Parse(row.Cells[0].Value.ToString()));
+                    }
+                    catch
+                    {
+                        continue;
+                    }
+                }
+                this.page = 1;
+                buttonPage1.Text = 1.ToString();
+                buttonPage2.Text = 2.ToString();
+                buttonPage3.Text = 3.ToString();
+                GetActivities();
+                callAlert("Xóa thành công!", FormAlert.enmType.Success);
+            }
+        }
+
+
     }
 }

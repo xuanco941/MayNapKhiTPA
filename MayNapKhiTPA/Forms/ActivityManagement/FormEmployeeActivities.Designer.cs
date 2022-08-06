@@ -40,8 +40,8 @@ namespace MayNapKhiTPA.Forms.ActivityManagement
             // panelUser
             // 
             this.panelUser.AutoScroll = true;
-            this.panelUser.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelUser.Location = new System.Drawing.Point(0, 0);
+            this.panelUser.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelUser.Location = new System.Drawing.Point(1042, 0);
             this.panelUser.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelUser.Name = "panelUser";
             this.panelUser.Size = new System.Drawing.Size(277, 615);
@@ -62,7 +62,7 @@ namespace MayNapKhiTPA.Forms.ActivityManagement
             this.dataGridViewUserActivity.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewUserActivity.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewUserActivity.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewUserActivity.Location = new System.Drawing.Point(277, 0);
+            this.dataGridViewUserActivity.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewUserActivity.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridViewUserActivity.Name = "dataGridViewUserActivity";
             this.dataGridViewUserActivity.ReadOnly = true;
@@ -70,7 +70,7 @@ namespace MayNapKhiTPA.Forms.ActivityManagement
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dataGridViewUserActivity.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewUserActivity.RowTemplate.Height = 25;
-            this.dataGridViewUserActivity.Size = new System.Drawing.Size(1042, 615);
+            this.dataGridViewUserActivity.Size = new System.Drawing.Size(1319, 615);
             this.dataGridViewUserActivity.TabIndex = 1;
             // 
             // FormEmployeeActivities
@@ -79,8 +79,8 @@ namespace MayNapKhiTPA.Forms.ActivityManagement
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1319, 615);
-            this.Controls.Add(this.dataGridViewUserActivity);
             this.Controls.Add(this.panelUser);
+            this.Controls.Add(this.dataGridViewUserActivity);
             this.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);

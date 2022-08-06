@@ -75,11 +75,11 @@
     <Compile Include="Forms\ActivityManagement\FormEmployeeActivities.Designer.cs">
       <DependentUpon>FormEmployeeActivities.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ActivityManagement\FormPageInfo.cs">
+    <Compile Include="Forms\ActivityManagement\FormChangeNumElmOnPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ActivityManagement\FormPageInfo.Designer.cs">
-      <DependentUpon>FormPageInfo.cs</DependentUpon>
+    <Compile Include="Forms\ActivityManagement\FormChangeNumElmOnPage.Designer.cs">
+      <DependentUpon>FormChangeNumElmOnPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\EmployeeManagement\FormEmployeeManagement.cs">
       <SubType>Form</SubType>
@@ -134,6 +134,12 @@
     </Compile>
     <Compile Include="Forms\Main\FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ResultManagement\FormInfoPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ResultManagement\FormInfoPage.Designer.cs">
+      <DependentUpon>FormInfoPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ResultManagement\FormResult.cs">
       <SubType>Form</SubType>
@@ -201,8 +207,8 @@
     <EmbeddedResource Include="Forms\ActivityManagement\FormEmployeeActivities.resx">
       <DependentUpon>FormEmployeeActivities.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ActivityManagement\FormPageInfo.resx">
-      <DependentUpon>FormPageInfo.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\ActivityManagement\FormChangeNumElmOnPage.resx">
+      <DependentUpon>FormChangeNumElmOnPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\EmployeeManagement\FormEmployeeManagement.resx">
       <DependentUpon>FormEmployeeManagement.cs</DependentUpon>
@@ -233,6 +239,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Main\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ResultManagement\FormInfoPage.resx">
+      <DependentUpon>FormInfoPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ResultManagement\FormResult.resx">
       <DependentUpon>FormResult.cs</DependentUpon>

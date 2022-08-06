@@ -502,6 +502,7 @@ namespace MayNapKhiTPA.Forms
                     //load lại datagridview + thông số cài đặt hiện tại
                     LoadSetting();
                     GetActivities();
+                    comboBoxSelectTemplateSetting.Text = Name;
                     //aleart
                     callAlert?.Invoke("Cập nhật cài đặt máy thành công.", FormAlert.enmType.Success);
 

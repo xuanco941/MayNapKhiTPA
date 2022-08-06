@@ -52,6 +52,9 @@ namespace MayNapKhiTPA.Forms
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.buttonCallFormData = new System.Windows.Forms.Button();
+            this.btnChangeNumElmPage = new System.Windows.Forms.Button();
+            this.buttonDeleteResult = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.comboBoxSelectMay = new System.Windows.Forms.ComboBox();
             this.buttonCustomLoc = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
@@ -72,8 +75,6 @@ namespace MayNapKhiTPA.Forms
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimePickerTuNgay = new System.Windows.Forms.DateTimePicker();
-            this.buttonCallFormData = new System.Windows.Forms.Button();
-            this.buttonPageInfo = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.buttonPrint = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
@@ -384,14 +385,65 @@ namespace MayNapKhiTPA.Forms
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.panel8);
             this.panel7.Controls.Add(this.buttonCallFormData);
-            this.panel7.Controls.Add(this.buttonPageInfo);
+            this.panel7.Controls.Add(this.btnChangeNumElmPage);
+            this.panel7.Controls.Add(this.buttonDeleteResult);
+            this.panel7.Controls.Add(this.panel8);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(202, 534);
             this.panel7.TabIndex = 26;
+            // 
+            // buttonCallFormData
+            // 
+            this.buttonCallFormData.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonCallFormData.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.buttonCallFormData.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCallFormData.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.buttonCallFormData.Image = ((System.Drawing.Image)(resources.GetObject("buttonCallFormData.Image")));
+            this.buttonCallFormData.Location = new System.Drawing.Point(0, 402);
+            this.buttonCallFormData.Name = "buttonCallFormData";
+            this.buttonCallFormData.Size = new System.Drawing.Size(202, 44);
+            this.buttonCallFormData.TabIndex = 47;
+            this.buttonCallFormData.Text = "Dữ liệu chi tiết";
+            this.buttonCallFormData.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonCallFormData.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonCallFormData.UseVisualStyleBackColor = false;
+            this.buttonCallFormData.Click += new System.EventHandler(this.buttonCallFormData_Click);
+            // 
+            // btnChangeNumElmPage
+            // 
+            this.btnChangeNumElmPage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnChangeNumElmPage.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnChangeNumElmPage.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChangeNumElmPage.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btnChangeNumElmPage.Image = ((System.Drawing.Image)(resources.GetObject("btnChangeNumElmPage.Image")));
+            this.btnChangeNumElmPage.Location = new System.Drawing.Point(0, 446);
+            this.btnChangeNumElmPage.Name = "btnChangeNumElmPage";
+            this.btnChangeNumElmPage.Size = new System.Drawing.Size(202, 44);
+            this.btnChangeNumElmPage.TabIndex = 49;
+            this.btnChangeNumElmPage.Text = "Thông tin trang";
+            this.btnChangeNumElmPage.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnChangeNumElmPage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnChangeNumElmPage.UseVisualStyleBackColor = false;
+            // 
+            // buttonDeleteResult
+            // 
+            this.buttonDeleteResult.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonDeleteResult.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.buttonDeleteResult.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDeleteResult.ForeColor = System.Drawing.Color.Crimson;
+            this.buttonDeleteResult.Image = ((System.Drawing.Image)(resources.GetObject("buttonDeleteResult.Image")));
+            this.buttonDeleteResult.Location = new System.Drawing.Point(0, 490);
+            this.buttonDeleteResult.Name = "buttonDeleteResult";
+            this.buttonDeleteResult.Size = new System.Drawing.Size(202, 44);
+            this.buttonDeleteResult.TabIndex = 67;
+            this.buttonDeleteResult.Text = "Xóa dữ liệu trang này";
+            this.buttonDeleteResult.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonDeleteResult.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonDeleteResult.UseVisualStyleBackColor = false;
+            this.buttonDeleteResult.Click += new System.EventHandler(this.buttonDeleteResult_Click);
             // 
             // panel8
             // 
@@ -418,7 +470,7 @@ namespace MayNapKhiTPA.Forms
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel8.Location = new System.Drawing.Point(0, 0);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(202, 446);
+            this.panel8.Size = new System.Drawing.Size(202, 534);
             this.panel8.TabIndex = 48;
             // 
             // comboBoxSelectMay
@@ -657,39 +709,6 @@ namespace MayNapKhiTPA.Forms
             this.dateTimePickerTuNgay.Size = new System.Drawing.Size(108, 25);
             this.dateTimePickerTuNgay.TabIndex = 48;
             // 
-            // buttonCallFormData
-            // 
-            this.buttonCallFormData.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonCallFormData.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.buttonCallFormData.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCallFormData.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.buttonCallFormData.Image = ((System.Drawing.Image)(resources.GetObject("buttonCallFormData.Image")));
-            this.buttonCallFormData.Location = new System.Drawing.Point(0, 446);
-            this.buttonCallFormData.Name = "buttonCallFormData";
-            this.buttonCallFormData.Size = new System.Drawing.Size(202, 44);
-            this.buttonCallFormData.TabIndex = 47;
-            this.buttonCallFormData.Text = "Dữ liệu chi tiết";
-            this.buttonCallFormData.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonCallFormData.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonCallFormData.UseVisualStyleBackColor = false;
-            this.buttonCallFormData.Click += new System.EventHandler(this.buttonCallFormData_Click);
-            // 
-            // buttonPageInfo
-            // 
-            this.buttonPageInfo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonPageInfo.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.buttonPageInfo.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonPageInfo.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.buttonPageInfo.Image = ((System.Drawing.Image)(resources.GetObject("buttonPageInfo.Image")));
-            this.buttonPageInfo.Location = new System.Drawing.Point(0, 490);
-            this.buttonPageInfo.Name = "buttonPageInfo";
-            this.buttonPageInfo.Size = new System.Drawing.Size(202, 44);
-            this.buttonPageInfo.TabIndex = 49;
-            this.buttonPageInfo.Text = "Thông tin trang";
-            this.buttonPageInfo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonPageInfo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonPageInfo.UseVisualStyleBackColor = false;
-            // 
             // panel6
             // 
             this.panel6.Controls.Add(this.groupBox1);
@@ -839,6 +858,7 @@ namespace MayNapKhiTPA.Forms
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonPrint;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonExcel;
         private DataGridView dataGridViewResult;
-        private Button buttonPageInfo;
+        private Button btnChangeNumElmPage;
+        private Button buttonDeleteResult;
     }
 }

@@ -987,6 +987,14 @@ Select * From Result Where Result.ID_Result = @ID_Result;
 end
 GO
 
+-- delete result theo id
+ -- Delete Activity
+ CREATE PROC DeleteResultFromID (@ID_Result int)
+ as begin
+ Delete From Result where ID_Result = @ID_Result
+ end
+ GO
+
 
 
 
@@ -1286,6 +1294,12 @@ IsSetting = 1 ) as a WHERE a.row > @startfrom and a.row <= @endto
  GO
 
 
+ -- Delete Activity
+ CREATE PROC DeleteActivityFromID (@ID_Activity int)
+ as begin
+ Delete From Activity where ID_Activity = @ID_Activity
+ end
+ GO
 
 -- --Chart
 -- -- lấy dữ liệu của Oxy hoặc Nitor trong ngày hiện tại

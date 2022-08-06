@@ -185,5 +185,17 @@ namespace MayNapKhiTPA.Models
             sqlConnection.Close();
             return result;
         }
+
+        public static void DeleteResultFromID(int ID_Result)
+        {
+            SqlConnection sqlConnection = new SqlConnection(Common.ConnectionString);
+            sqlConnection.Open();
+            SqlCommand command = new SqlCommand();
+            command.CommandText = $"exec DeleteResultFromID {ID_Result}";
+            command.Connection = sqlConnection;
+
+            command.ExecuteNonQuery();
+            sqlConnection.Close();
+        }
     }
 }

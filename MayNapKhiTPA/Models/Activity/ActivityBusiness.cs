@@ -187,6 +187,20 @@ namespace MayNapKhiTPA.Models
             return list;
         }
 
+        public static void DeleteActivityFromID(int ID_Activity)
+        {
+            SqlConnection sqlConnection = new SqlConnection(Common.ConnectionString);
+            sqlConnection.Open();
+            SqlCommand command = new SqlCommand();
+            command.CommandText = $"exec DeleteActivityFromID {ID_Activity}";
+            command.Connection = sqlConnection;
+
+            command.ExecuteNonQuery();
+            sqlConnection.Close();
+        }
+
+
+
     }
 
 }

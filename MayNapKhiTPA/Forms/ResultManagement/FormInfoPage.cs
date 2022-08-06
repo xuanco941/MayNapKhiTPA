@@ -8,14 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MayNapKhiTPA.Forms.ActivityManagement
+namespace MayNapKhiTPA.Forms
 {
-    public partial class FormPageInfo : Form
+    public partial class FormInfoPage : Form
     {
-        public FormPageInfo()
+        public FormInfoPage()
         {
             InitializeComponent();
         }
-
     }
 }
