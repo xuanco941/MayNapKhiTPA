@@ -53,6 +53,19 @@ namespace MayNapKhiTPA.Forms
         public FormResult()
         {
             InitializeComponent();
+
+            //test update result
+            try
+            {
+                ResultBusiness.UpdateResult(1);
+                ResultBusiness.UpdateResult(2);
+            }
+            catch
+            {
+                //none
+            }
+
+
             buttonExcel.ForeColor = Color.Black;
             buttonExcel.Font = new System.Drawing.Font("Segoe UI", 11, FontStyle.Bold);
 
@@ -663,9 +676,9 @@ namespace MayNapKhiTPA.Forms
 
             DGVPrinter printer = new DGVPrinter();
 
-            printer.Title = "TPA - Total Automation Solutions";
+            printer.Title = "Lịch sử mẻ nạp";
 
-            printer.SubTitle = "("+DateTime.Now.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture)+")";
+            printer.SubTitle = "(" + DateTime.Now.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture) + ")";
 
             printer.TitleSpacing = 5;
 
@@ -681,18 +694,18 @@ namespace MayNapKhiTPA.Forms
 
             printer.HeaderCellAlignment = StringAlignment.Near;
 
-            printer.Footer = "TPA";
+            printer.Footer = "TPA - Total Automation Solutions";
 
             printer.FooterSpacing = 15;
 
 
-            PrinterSettings ps = new PrinterSettings();
-            PrintDocument recordDoc = new PrintDocument();
-            recordDoc.PrinterSettings = ps;
-            IEnumerable<PaperSize> paperSizes = ps.PaperSizes.Cast<PaperSize>();
-            PaperSize sizeA4 = paperSizes.First<PaperSize>(size => size.Kind == PaperKind.A4); // setting paper size to A4 size
-            recordDoc.DefaultPageSettings.PaperSize = sizeA4;
-            printer.printDocument.DefaultPageSettings.PaperSize = sizeA4;
+            //PrinterSettings ps = new PrinterSettings();
+            //PrintDocument recordDoc = new PrintDocument();
+            //recordDoc.PrinterSettings = ps;
+            //IEnumerable<PaperSize> paperSizes = ps.PaperSizes.Cast<PaperSize>();
+            //PaperSize sizeA4 = paperSizes.First<PaperSize>(size => size.Kind == PaperKind.A4); // setting paper size to A4 size
+            //recordDoc.DefaultPageSettings.PaperSize = sizeA4;
+            //printer.printDocument.DefaultPageSettings.Landscape = true;
 
 
             printer.PrintDataGridView(dataGridViewResult);
@@ -700,7 +713,7 @@ namespace MayNapKhiTPA.Forms
 
 
         //Excel
-       
+
         private void buttonExcel_Click(object sender, EventArgs e)
         {
             if (dataGridViewResult.Rows.Count > 0)
@@ -717,7 +730,7 @@ namespace MayNapKhiTPA.Forms
                     for (int j = 0; j < dataGridViewResult.Columns.Count; j++)
                     {
                         XcelApp.Cells[i + 2, j + 1] = dataGridViewResult.Rows[i].Cells[j].Value.ToString();
-                        XcelApp.Cells[i+2,j+1].HorizontalAlignment = XlHAlign.xlHAlignCenter;
+                        XcelApp.Cells[i + 2, j + 1].HorizontalAlignment = XlHAlign.xlHAlignCenter;
                     }
                 }
                 XcelApp.Columns.AutoFit();
@@ -765,7 +778,7 @@ namespace MayNapKhiTPA.Forms
 
         private void btnInfoPage_Click(object sender, EventArgs e)
         {
-            FormInfoPage form = new FormInfoPage(nameMachine,time1,time2,checkApSuat,checkTheTich,checkLuuLuong,apSuat1,apSuat2,theTich1,theTich2,luuLuong1,luuLuong2,page,pageSize);
+            FormInfoPage form = new FormInfoPage(nameMachine, time1, time2, checkApSuat, checkTheTich, checkLuuLuong, apSuat1, apSuat2, theTich1, theTich2, luuLuong1, luuLuong2, page, pageSize);
             form.changeData = new FormInfoPage.ChangeData(AlertActive);
             form.ShowDialog();
         }

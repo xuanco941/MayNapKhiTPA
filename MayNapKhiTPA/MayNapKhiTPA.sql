@@ -1408,9 +1408,22 @@ exec AddTemplateMachine N'Binh 6',56,398,55,43
 GO
 
 
+--add and get id, check bằng time start , time end, khác nhau thì là đã cập nhật
 exec AddResultAndReturnIDResult 'Máy 1','admin2'
 GO
 exec AddData 141,113,112,1
+exec AddData 131,163,132,1
+
 GO
-exec UpdateResult 1
-select * from Result
+
+exec AddResultAndReturnIDResult 'Máy 2','admin'
+GO
+exec AddData 141,113,112,2
+exec AddData 121,143,122,2
+GO
+
+exec AddResultAndReturnIDResult 'Máy 1','admin2'
+GO
+exec AddData 141,113,112,3
+exec AddData 111,143,152,3
+GO

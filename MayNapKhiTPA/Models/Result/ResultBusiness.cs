@@ -173,7 +173,7 @@ namespace MayNapKhiTPA.Models
             Result result = null;
             SqlConnection sqlConnection = new SqlConnection(Common.ConnectionString);
             sqlConnection.Open();
-            string sql = $"GetResultFromID {ID_Result}";
+            string sql = $"exec GetResultFromID {ID_Result}";
             var command = new SqlCommand(sql, sqlConnection);
             SqlDataReader sqlDataReader = command.ExecuteReader();
             while (sqlDataReader.Read())
@@ -196,6 +196,33 @@ namespace MayNapKhiTPA.Models
 
             command.ExecuteNonQuery();
             sqlConnection.Close();
+        }
+        public static void UpdateResult(int ID_Result)
+        {
+            SqlConnection sqlConnection = new SqlConnection(Common.ConnectionString);
+            sqlConnection.Open();
+            SqlCommand command = new SqlCommand();
+            command.CommandText = $"exec UpdateResult {ID_Result}";
+            command.Connection = sqlConnection;
+
+            command.ExecuteNonQuery();
+            sqlConnection.Close();
+        }
+
+        public static int AddResultAndReturnIDResult(string nameMachine, string woker)
+        {
+            int idResult = 0;
+            SqlConnection sqlConnection = new SqlConnection(Common.ConnectionString);
+            sqlConnection.Open();
+            string sql = $"AddResultAndReturnIDResult N'{nameMachine}', N'{woker}'";
+            var command = new SqlCommand(sql, sqlConnection);
+            SqlDataReader sqlDataReader = command.ExecuteReader();
+            while (sqlDataReader.Read())
+            {
+                idResult = sqlDataReader.GetInt32(0);
+            }
+            sqlConnection.Close();
+            return idResult;
         }
 
     }
