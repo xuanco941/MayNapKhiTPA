@@ -20,7 +20,7 @@ namespace MayNapKhiTPA.Forms
         public CallAlert callAlert;
 
         //x
-        string[] x = { "35s", "30s", "25s", "20s", "15s", "10s", "5s" };
+        string[] x = { "35 giây", "30 giây", "25 giây", "20 giây", "15 giây", "10 giây", "5 giây" };
 
         double[] yApSuat1 = { 0, 0, 0, 0, 0, 0, 0 };
         double[] yTheTich1 = { 0, 0, 0, 0, 0, 0, 0 };
@@ -139,6 +139,5 @@ namespace MayNapKhiTPA.Forms
 
 
         }
-
     }
 }

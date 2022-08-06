@@ -280,7 +280,7 @@ namespace MayNapKhiTPA.Forms
                 }
                 else
                 {
-                    callAlert?.Invoke("Hãy chọn một bình để tiến hành cập nhật.", FormAlert.enmType.Warning);
+                    callAlert?.Invoke("Hãy chọn một bình để tiến hành cập nhật.", FormAlert.enmType.Info);
                 }
             }
             else
@@ -319,7 +319,7 @@ namespace MayNapKhiTPA.Forms
             }
             else
             {
-                callAlert?.Invoke("Hãy chọn một bình trước khi xóa.", FormAlert.enmType.Warning);
+                callAlert?.Invoke("Hãy chọn một bình trước khi xóa.", FormAlert.enmType.Info);
             }
         }
 
@@ -412,7 +412,7 @@ namespace MayNapKhiTPA.Forms
                 }
                 else
                 {
-                    callAlert?.Invoke("Hãy chọn một ca làm để tiến hành cập nhật.", FormAlert.enmType.Warning);
+                    callAlert?.Invoke("Hãy chọn một ca làm để tiến hành cập nhật.", FormAlert.enmType.Info);
                 }
             }
             else
@@ -447,7 +447,7 @@ namespace MayNapKhiTPA.Forms
             }
             else
             {
-                callAlert?.Invoke("Hãy chọn một ca làm trước khi xóa.", FormAlert.enmType.Warning);
+                callAlert?.Invoke("Hãy chọn một ca làm trước khi xóa.", FormAlert.enmType.Info);
             }
         }
 
@@ -624,7 +624,7 @@ namespace MayNapKhiTPA.Forms
         {
             if (this.page == this.pageSize)
             {
-                callAlert?.Invoke("Bạn đang ở trang cuối cùng.", FormAlert.enmType.Warning);
+                callAlert?.Invoke("Bạn đang ở trang cuối cùng.", FormAlert.enmType.Info);
             }
             else
             {

@@ -68,7 +68,7 @@
             this.pictureBoxClose.Image = global::MayNapKhiTPA.Properties.Resources.icons8_cancel_25px;
             this.pictureBoxClose.Location = new System.Drawing.Point(0, 0);
             this.pictureBoxClose.Name = "pictureBoxClose";
-            this.pictureBoxClose.Size = new System.Drawing.Size(72, 63);
+            this.pictureBoxClose.Size = new System.Drawing.Size(72, 64);
             this.pictureBoxClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBoxClose.TabIndex = 3;
             this.pictureBoxClose.TabStop = false;
@@ -98,7 +98,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(420, 69);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(420, 70);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
             // panel1
@@ -107,7 +107,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(345, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(72, 63);
+            this.panel1.Size = new System.Drawing.Size(72, 64);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -116,7 +116,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(81, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(258, 63);
+            this.panel2.Size = new System.Drawing.Size(258, 64);
             this.panel2.TabIndex = 1;
             // 
             // panel3
@@ -125,18 +125,18 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(3, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(72, 63);
+            this.panel3.Size = new System.Drawing.Size(72, 64);
             this.panel3.TabIndex = 2;
             // 
             // FormAlert
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.Highlight;
-            this.ClientSize = new System.Drawing.Size(420, 69);
+            this.ClientSize = new System.Drawing.Size(420, 70);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MaximumSize = new System.Drawing.Size(420, 69);
+            this.MaximumSize = new System.Drawing.Size(420, 70);
             this.Name = "FormAlert";
             this.Text = "Thông báo";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).EndInit();
