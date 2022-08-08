@@ -257,6 +257,7 @@ namespace MayNapKhiTPA.Forms
             this.Controls.Add(this.textBoxNameGroup);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormAddGroup";

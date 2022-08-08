@@ -32,6 +32,7 @@ namespace MayNapKhiTPA.Forms.ActivityManagement
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEmployeeActivities));
             this.panelUser = new System.Windows.Forms.Panel();
             this.dataGridViewUserActivity = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUserActivity)).BeginInit();
@@ -83,6 +84,7 @@ namespace MayNapKhiTPA.Forms.ActivityManagement
             this.Controls.Add(this.dataGridViewUserActivity);
             this.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormEmployeeActivities";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

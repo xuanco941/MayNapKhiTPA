@@ -286,6 +286,7 @@ namespace MayNapKhiTPA.Forms
             this.Controls.Add(this.buttonUpdateGroup);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormChangeGroup";

@@ -122,7 +122,7 @@
             // 
             this.panel4.Controls.Add(this.lblMsg);
             this.panel4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel4.Location = new System.Drawing.Point(0, 16);
+            this.panel4.Location = new System.Drawing.Point(0, 14);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(258, 44);
             this.panel4.TabIndex = 2;

@@ -33,6 +33,10 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labelLuuLuong = new System.Windows.Forms.Label();
+            this.labelApSuat = new System.Windows.Forms.Label();
+            this.labelTheTich = new System.Windows.Forms.Label();
+            this.labelNameMachine = new System.Windows.Forms.Label();
             this.labelToiNgay = new System.Windows.Forms.Label();
             this.labelTuNgay = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -43,10 +47,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.buttonSaveSetting = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.textBoxNumElm = new LW_PhanMemBaoGia.MyControls.TextBoxT();
-            this.labelNameMachine = new System.Windows.Forms.Label();
-            this.labelTheTich = new System.Windows.Forms.Label();
-            this.labelApSuat = new System.Windows.Forms.Label();
-            this.labelLuuLuong = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -114,6 +114,50 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(363, 259);
             this.panel1.TabIndex = 0;
+            // 
+            // labelLuuLuong
+            // 
+            this.labelLuuLuong.AutoSize = true;
+            this.labelLuuLuong.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLuuLuong.ForeColor = System.Drawing.Color.LightGray;
+            this.labelLuuLuong.Location = new System.Drawing.Point(16, 213);
+            this.labelLuuLuong.Name = "labelLuuLuong";
+            this.labelLuuLuong.Size = new System.Drawing.Size(147, 21);
+            this.labelLuuLuong.TabIndex = 16;
+            this.labelLuuLuong.Text = "- Lưu lượng: trống.";
+            // 
+            // labelApSuat
+            // 
+            this.labelApSuat.AutoSize = true;
+            this.labelApSuat.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelApSuat.ForeColor = System.Drawing.Color.LightGray;
+            this.labelApSuat.Location = new System.Drawing.Point(16, 133);
+            this.labelApSuat.Name = "labelApSuat";
+            this.labelApSuat.Size = new System.Drawing.Size(128, 21);
+            this.labelApSuat.TabIndex = 15;
+            this.labelApSuat.Text = "- Áp suất: trống.";
+            // 
+            // labelTheTich
+            // 
+            this.labelTheTich.AutoSize = true;
+            this.labelTheTich.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTheTich.ForeColor = System.Drawing.Color.LightGray;
+            this.labelTheTich.Location = new System.Drawing.Point(16, 173);
+            this.labelTheTich.Name = "labelTheTich";
+            this.labelTheTich.Size = new System.Drawing.Size(131, 21);
+            this.labelTheTich.TabIndex = 14;
+            this.labelTheTich.Text = "- Thể tích: trống.";
+            // 
+            // labelNameMachine
+            // 
+            this.labelNameMachine.AutoSize = true;
+            this.labelNameMachine.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNameMachine.ForeColor = System.Drawing.Color.LightGray;
+            this.labelNameMachine.Location = new System.Drawing.Point(16, 13);
+            this.labelNameMachine.Name = "labelNameMachine";
+            this.labelNameMachine.Size = new System.Drawing.Size(137, 21);
+            this.labelNameMachine.TabIndex = 13;
+            this.labelNameMachine.Text = "- Loại máy: trống.";
             // 
             // labelToiNgay
             // 
@@ -259,50 +303,6 @@
             this.textBoxNumElm.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxNumElm_KeyDown);
             this.textBoxNumElm.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumElm_KeyPress);
             // 
-            // labelNameMachine
-            // 
-            this.labelNameMachine.AutoSize = true;
-            this.labelNameMachine.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNameMachine.ForeColor = System.Drawing.Color.LightGray;
-            this.labelNameMachine.Location = new System.Drawing.Point(16, 13);
-            this.labelNameMachine.Name = "labelNameMachine";
-            this.labelNameMachine.Size = new System.Drawing.Size(137, 21);
-            this.labelNameMachine.TabIndex = 13;
-            this.labelNameMachine.Text = "- Loại máy: trống.";
-            // 
-            // labelTheTich
-            // 
-            this.labelTheTich.AutoSize = true;
-            this.labelTheTich.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTheTich.ForeColor = System.Drawing.Color.LightGray;
-            this.labelTheTich.Location = new System.Drawing.Point(16, 173);
-            this.labelTheTich.Name = "labelTheTich";
-            this.labelTheTich.Size = new System.Drawing.Size(131, 21);
-            this.labelTheTich.TabIndex = 14;
-            this.labelTheTich.Text = "- Thể tích: trống.";
-            // 
-            // labelApSuat
-            // 
-            this.labelApSuat.AutoSize = true;
-            this.labelApSuat.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelApSuat.ForeColor = System.Drawing.Color.LightGray;
-            this.labelApSuat.Location = new System.Drawing.Point(16, 133);
-            this.labelApSuat.Name = "labelApSuat";
-            this.labelApSuat.Size = new System.Drawing.Size(128, 21);
-            this.labelApSuat.TabIndex = 15;
-            this.labelApSuat.Text = "- Áp suất: trống.";
-            // 
-            // labelLuuLuong
-            // 
-            this.labelLuuLuong.AutoSize = true;
-            this.labelLuuLuong.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLuuLuong.ForeColor = System.Drawing.Color.LightGray;
-            this.labelLuuLuong.Location = new System.Drawing.Point(16, 213);
-            this.labelLuuLuong.Name = "labelLuuLuong";
-            this.labelLuuLuong.Size = new System.Drawing.Size(147, 21);
-            this.labelLuuLuong.TabIndex = 16;
-            this.labelLuuLuong.Text = "- Lưu lượng: trống.";
-            // 
             // FormInfoPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -311,6 +311,7 @@
             this.ClientSize = new System.Drawing.Size(762, 473);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.MaximizeBox = false;
             this.MinimizeBox = false;

@@ -88,7 +88,7 @@ namespace MayNapKhiTPA.Forms
                     GroupBusiness.UpdateGroup(group.ID_Group, group.Name, group.IsManagementUser, group.IsManagementGroup, group.IsControlMachine,
                         group.IsSettingMachine, group.IsSettingShift, group.IsSettingTemplateMachine, group.IsViewResult, group.IsViewActivity, group.IsDeleteResult, group.IsDeleteActivity);
                     //nếu group là group của user current thì thay đổi groupsession
-                    if (group.Name == Common.GROUPSESSION.Name)
+                    if (group.ID_Group == Common.GROUPSESSION.ID_Group)
                     {
                         Common.GROUPSESSION = group;
                     }
@@ -121,8 +121,17 @@ namespace MayNapKhiTPA.Forms
                     try
                     {
                         int id_group = GroupBusiness.GetGroupFromName(nameGroup).ID_Group;
-                        GroupBusiness.DeleteGroup(id_group);
-                        changeData?.Invoke($"Xóa thành công nhóm quyền {nameGroup}.", FormAlert.enmType.Success);
+                        //nếu quyền bị xóa là quyền hiện tại của hệ thống thì báo lỗi
+                        if(id_group == Common.GROUPSESSION.ID_Group)
+                        {
+                            changeData?.Invoke($"Xóa không thành công, nhóm quyền {nameGroup} là nhóm quyền tài khoản của bạn.", FormAlert.enmType.Error);
+                        }
+                        else
+                        {
+                            GroupBusiness.DeleteGroup(id_group);
+                            changeData?.Invoke($"Xóa thành công nhóm quyền {nameGroup}.", FormAlert.enmType.Success);
+                        }
+
                     }
                     catch
                     {

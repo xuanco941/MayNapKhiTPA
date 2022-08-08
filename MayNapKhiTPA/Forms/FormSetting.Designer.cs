@@ -1394,7 +1394,8 @@
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(214, 213);
             this.label13.TabIndex = 0;
-            this.label13.Text = "- Chọn trực tiếp các hàng trên bảng , dữ liệu sẽ hiển thị dưới hộp cài đặt.";
+            this.label13.Text = "- Chọn trực tiếp các hàng trên bảng trước khi thực hiện các thao tác , dữ liệu sẽ" +
+    " hiển thị dưới hộp cài đặt.";
             // 
             // panel11
             // 
@@ -1833,7 +1834,8 @@
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(214, 213);
             this.label14.TabIndex = 0;
-            this.label14.Text = "- Chọn trực tiếp các hàng trên bảng , dữ liệu sẽ hiển thị dưới hộp cài đặt.";
+            this.label14.Text = "- Chọn trực tiếp các hàng trên bảng trước khi thực hiện các thao tác , dữ liệu sẽ" +
+    " hiển thị dưới hộp cài đặt.";
             // 
             // panel35
             // 
@@ -1877,6 +1879,7 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(927, 566);
             this.Controls.Add(this.tabControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormSetting";
             this.Text = "FormSetting";
             this.tabControl1.ResumeLayout(false);

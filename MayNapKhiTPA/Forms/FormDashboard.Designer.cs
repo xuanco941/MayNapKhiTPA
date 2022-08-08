@@ -678,6 +678,7 @@ namespace MayNapKhiTPA.Forms
             // 
             this.button39.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button39.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button39.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.button39.Image = ((System.Drawing.Image)(resources.GetObject("button39.Image")));
             this.button39.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button39.Location = new System.Drawing.Point(0, 0);
@@ -703,6 +704,7 @@ namespace MayNapKhiTPA.Forms
             // 
             this.button40.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button40.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button40.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.button40.Image = ((System.Drawing.Image)(resources.GetObject("button40.Image")));
             this.button40.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button40.Location = new System.Drawing.Point(0, 0);
@@ -757,9 +759,10 @@ namespace MayNapKhiTPA.Forms
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(47, 12);
+            this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 20);
             this.label1.TabIndex = 0;
@@ -1454,6 +1457,7 @@ namespace MayNapKhiTPA.Forms
             // 
             this.button23.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button23.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.button23.Image = ((System.Drawing.Image)(resources.GetObject("button23.Image")));
             this.button23.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button23.Location = new System.Drawing.Point(0, 0);
@@ -1479,6 +1483,7 @@ namespace MayNapKhiTPA.Forms
             // 
             this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
             this.button7.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button7.Location = new System.Drawing.Point(0, 0);
@@ -1533,13 +1538,14 @@ namespace MayNapKhiTPA.Forms
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(47, 12);
+            this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(90, 20);
             this.label2.TabIndex = 0;
-            this.label2.Text = "-Cảnh báo 1";
+            this.label2.Text = "-Cảnh báo 2";
             // 
             // button42
             // 
@@ -1789,6 +1795,7 @@ namespace MayNapKhiTPA.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1168, 691);
             this.Controls.Add(this.tabControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormDashboard";
             this.Text = "FormDashboard";
             this.tabControl1.ResumeLayout(false);

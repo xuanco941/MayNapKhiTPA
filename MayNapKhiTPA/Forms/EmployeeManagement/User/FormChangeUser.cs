@@ -56,7 +56,7 @@ namespace MayNapKhiTPA.Forms
             int id_group = GroupBusiness.GetGroupFromName(comboBoxSelectGroup.Text).ID_Group;
 
             User user = new User(fullname, username, password, phonenumber, email, nameshift, id_group);
-            if (String.IsNullOrEmpty(fullname) || String.IsNullOrEmpty(username) || String.IsNullOrEmpty(password))
+            if (String.IsNullOrEmpty(fullname) || String.IsNullOrEmpty(username) || String.IsNullOrEmpty(password) || String.IsNullOrEmpty(nameshift) || String.IsNullOrEmpty(comboBoxSelectGroup.Text))
             {
                 MessageBox.Show("Vui lòng điền đủ thông tin.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -68,7 +68,9 @@ namespace MayNapKhiTPA.Forms
                     //nếu username cũ là username current , biến tĩnh của program thì cập nhật lại usercurrent
                     if(usernameOld == Common.USERSESSION.Username)
                     {
+                        // cập nhật lại quyền hiện tại
                         Common.USERSESSION = user;
+                        Common.GROUPSESSION = GroupBusiness.GetGroupFromID(Common.USERSESSION.ID_Group);
                         
                     }
                     //thông báo
@@ -95,8 +97,15 @@ namespace MayNapKhiTPA.Forms
                 //Xóa tài khoản, xóa xong sẽ load lại danh sách username của form
                 try
                 {
-                    UserBusiness.DeleteUser(username);
-                    changeData?.Invoke($"Xóa thành công tài khoản {username}.", FormAlert.enmType.Success);
+                    if(username == "admin")
+                    {
+                        MessageBox.Show("Đây là tài khoản mặc định của hệ thống, bạn không thể xóa.","Lỗi",MessageBoxButtons.OK, MessageBoxIcon.Question);
+                    }
+                    else
+                    {
+                        UserBusiness.DeleteUser(username);
+                        changeData?.Invoke($"Xóa thành công tài khoản {username}.", FormAlert.enmType.Success);
+                    }
                 }
                 catch
                 {
@@ -110,7 +119,7 @@ namespace MayNapKhiTPA.Forms
         private void comboBoxSelectUsername_SelectedIndexChanged(object sender, EventArgs e)
         {
             //vô hiệu hóa nút xóa khi đây là tài khoản hiện tại
-            if (comboBoxSelectUsername.Text == Common.USERSESSION.Username)
+            if (comboBoxSelectUsername.Text == Common.USERSESSION.Username || comboBoxSelectUsername.Text == "admin")
             {
                 buttonDelete.Enabled = false;
             }

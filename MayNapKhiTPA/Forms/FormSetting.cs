@@ -589,8 +589,8 @@ namespace MayNapKhiTPA.Forms
                 // đếm tổng số activity
                 int sumActivity = ActivityBusiness.CountActivityIsSetting();
                 // pagesize bằng tổng số activity chia cho số phần tử mỗi trang
-                this.pageSize = (sumActivity / Common.NUMBER_ELM_ON_PAGE_ACTIVITY);
-                if (sumActivity % Common.NUMBER_ELM_ON_PAGE_ACTIVITY != 0)
+                this.pageSize = (sumActivity / Common.NUMBER_ELM_ON_PAGE_ACTIVITY_IS_SETTING);
+                if (sumActivity % Common.NUMBER_ELM_ON_PAGE_ACTIVITY_IS_SETTING != 0)
                 {
                     this.pageSize = this.pageSize + 1;
                 }
