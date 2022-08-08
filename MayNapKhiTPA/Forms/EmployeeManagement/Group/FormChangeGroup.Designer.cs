@@ -120,10 +120,13 @@ namespace MayNapKhiTPA.Forms
             // 
             // comboBoxSelectGroup
             // 
+            this.comboBoxSelectGroup.BackColor = System.Drawing.SystemColors.Window;
             this.comboBoxSelectGroup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSelectGroup.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxSelectGroup.FormattingEnabled = true;
+            this.comboBoxSelectGroup.IntegralHeight = false;
             this.comboBoxSelectGroup.Location = new System.Drawing.Point(128, 111);
+            this.comboBoxSelectGroup.MaxDropDownItems = 9;
             this.comboBoxSelectGroup.Name = "comboBoxSelectGroup";
             this.comboBoxSelectGroup.Size = new System.Drawing.Size(356, 33);
             this.comboBoxSelectGroup.TabIndex = 75;

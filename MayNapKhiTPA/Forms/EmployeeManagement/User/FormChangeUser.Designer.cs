@@ -226,7 +226,9 @@ namespace MayNapKhiTPA.Forms
             this.comboBoxSelectShift.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSelectShift.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxSelectShift.FormattingEnabled = true;
+            this.comboBoxSelectShift.IntegralHeight = false;
             this.comboBoxSelectShift.Location = new System.Drawing.Point(428, 176);
+            this.comboBoxSelectShift.MaxDropDownItems = 9;
             this.comboBoxSelectShift.Name = "comboBoxSelectShift";
             this.comboBoxSelectShift.Size = new System.Drawing.Size(200, 33);
             this.comboBoxSelectShift.TabIndex = 77;
@@ -236,7 +238,9 @@ namespace MayNapKhiTPA.Forms
             this.comboBoxSelectUsername.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSelectUsername.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxSelectUsername.FormattingEnabled = true;
+            this.comboBoxSelectUsername.IntegralHeight = false;
             this.comboBoxSelectUsername.Location = new System.Drawing.Point(195, 113);
+            this.comboBoxSelectUsername.MaxDropDownItems = 9;
             this.comboBoxSelectUsername.Name = "comboBoxSelectUsername";
             this.comboBoxSelectUsername.Size = new System.Drawing.Size(433, 33);
             this.comboBoxSelectUsername.TabIndex = 78;
@@ -247,7 +251,9 @@ namespace MayNapKhiTPA.Forms
             this.comboBoxSelectGroup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSelectGroup.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxSelectGroup.FormattingEnabled = true;
+            this.comboBoxSelectGroup.IntegralHeight = false;
             this.comboBoxSelectGroup.Location = new System.Drawing.Point(195, 373);
+            this.comboBoxSelectGroup.MaxDropDownItems = 9;
             this.comboBoxSelectGroup.Name = "comboBoxSelectGroup";
             this.comboBoxSelectGroup.Size = new System.Drawing.Size(433, 33);
             this.comboBoxSelectGroup.TabIndex = 79;
