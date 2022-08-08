@@ -126,7 +126,7 @@ namespace MayNapKhiTPA.Forms
             this.buttonActivity.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonActivity.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonActivity.UseVisualStyleBackColor = true;
-            this.buttonActivity.Click += new System.EventHandler(this.buttonCaLam_Click);
+            this.buttonActivity.Click += new System.EventHandler(this.buttonActivity_Click);
             // 
             // buttonEmployee
             // 

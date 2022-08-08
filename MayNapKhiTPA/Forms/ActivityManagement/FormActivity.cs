@@ -376,26 +376,33 @@ namespace MayNapKhiTPA.Forms
         }
         private void buttonDeleteDataActivity_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show($"Bạn có chắc muốn xóa dữ liệu hoạt động đang hiển thị tại trang này?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dialogResult == DialogResult.Yes)
+            if (Common.GROUPSESSION.IsDeleteActivity)
             {
-                foreach (DataGridViewRow row in dataGridViewActivity.Rows)
+                DialogResult dialogResult = MessageBox.Show($"Bạn có chắc muốn xóa dữ liệu hoạt động đang hiển thị tại trang này?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogResult == DialogResult.Yes)
                 {
-                    try
+                    foreach (DataGridViewRow row in dataGridViewActivity.Rows)
                     {
-                        ActivityBusiness.DeleteActivityFromID(int.Parse(row.Cells[0].Value.ToString()));
+                        try
+                        {
+                            ActivityBusiness.DeleteActivityFromID(int.Parse(row.Cells[0].Value.ToString()));
+                        }
+                        catch
+                        {
+                            continue;
+                        }
                     }
-                    catch
-                    {
-                        continue;
-                    }
+                    this.page = 1;
+                    buttonPage1.Text = 1.ToString();
+                    buttonPage2.Text = 2.ToString();
+                    buttonPage3.Text = 3.ToString();
+                    GetActivities();
+                    callAlert.Invoke("Xóa thành công!", FormAlert.enmType.Success);
                 }
-                this.page = 1;
-                buttonPage1.Text = 1.ToString();
-                buttonPage2.Text = 2.ToString();
-                buttonPage3.Text = 3.ToString();
-                GetActivities();
-                callAlert("Xóa thành công!", FormAlert.enmType.Success);
+            }
+            else
+            {
+                callAlert?.Invoke("Tài khoản của bạn không có quyền này.", FormAlert.enmType.Info);
             }
         }
 

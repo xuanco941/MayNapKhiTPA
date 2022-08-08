@@ -161,6 +161,7 @@ namespace MayNapKhiTPA.Forms
             this.checkBoxIsDeleteActivity.TabIndex = 22;
             this.checkBoxIsDeleteActivity.Text = "Xóa lịch sử hoạt động";
             this.checkBoxIsDeleteActivity.UseVisualStyleBackColor = true;
+            this.checkBoxIsDeleteActivity.CheckedChanged += new System.EventHandler(this.checkBoxIsDeleteActivity_CheckedChanged);
             // 
             // checkBoxIsDeleteResult
             // 
@@ -173,6 +174,7 @@ namespace MayNapKhiTPA.Forms
             this.checkBoxIsDeleteResult.TabIndex = 21;
             this.checkBoxIsDeleteResult.Text = "Xóa lịch sử nạp";
             this.checkBoxIsDeleteResult.UseVisualStyleBackColor = true;
+            this.checkBoxIsDeleteResult.CheckedChanged += new System.EventHandler(this.checkBoxIsDeleteResult_CheckedChanged);
             // 
             // checkBoxIsViewActivity
             // 
@@ -185,6 +187,7 @@ namespace MayNapKhiTPA.Forms
             this.checkBoxIsViewActivity.TabIndex = 20;
             this.checkBoxIsViewActivity.Text = "Xem lịch sử hoạt động";
             this.checkBoxIsViewActivity.UseVisualStyleBackColor = true;
+            this.checkBoxIsViewActivity.CheckedChanged += new System.EventHandler(this.checkBoxIsViewActivity_CheckedChanged);
             // 
             // checkBoxIsViewResult
             // 
@@ -197,6 +200,7 @@ namespace MayNapKhiTPA.Forms
             this.checkBoxIsViewResult.TabIndex = 19;
             this.checkBoxIsViewResult.Text = "Xem lịch sử nạp";
             this.checkBoxIsViewResult.UseVisualStyleBackColor = true;
+            this.checkBoxIsViewResult.CheckedChanged += new System.EventHandler(this.checkBoxIsViewResult_CheckedChanged);
             // 
             // checkBoxIsSettingTemplateMachine
             // 

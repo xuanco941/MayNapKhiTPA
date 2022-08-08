@@ -21,6 +21,7 @@ namespace MayNapKhiTPA.Forms
         public FormChangeNumElmOnPage()
         {
             InitializeComponent();
+            label1.Text = $"Số dòng hiển thị (hiện tại là {Common.NUMBER_ELM_ON_PAGE_ACTIVITY}):";
         }
 
         private void ChangeNumElm()

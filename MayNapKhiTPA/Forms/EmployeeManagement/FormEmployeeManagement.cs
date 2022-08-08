@@ -55,7 +55,6 @@ namespace MayNapKhiTPA.Forms
             DataTable dt = new DataTable();
             dt.Columns.Add("Họ tên");
             dt.Columns.Add("Tài khoản");
-            dt.Columns.Add("Mật khẩu");
             dt.Columns.Add("Số điện thoại");
             dt.Columns.Add("Email");
             dt.Columns.Add("Ca làm");
@@ -64,7 +63,7 @@ namespace MayNapKhiTPA.Forms
             listUser.ForEach(delegate (User user)
             {
                 Group group = GroupBusiness.GetGroupFromID(user.ID_Group);
-                dt.Rows.Add(user.FullName, user.Username, user.Password, user.PhoneNumber, user.Email, user.NameShift, group.Name);
+                dt.Rows.Add(user.FullName, user.Username, user.PhoneNumber, user.Email, user.NameShift, group.Name);
             });
             dataGridViewUser.DataSource = dt;
 
@@ -143,51 +142,77 @@ namespace MayNapKhiTPA.Forms
         // Toast form add, change
         private void buttonAddUser_Click_1(object sender, EventArgs e)
         {
-            // Create an instance of form add user
-            FormAddUser formAddUser = new FormAddUser();
+            //check quyền
+            if (Common.GROUPSESSION.IsManagementUser)
+            {
+                // Create an instance of form add user
+                FormAddUser formAddUser = new FormAddUser();
+                // Create an instance of the delegate
+                formAddUser.changeData = new FormAddUser.ChangeData(AlertActive);
+                formAddUser.ShowDialog();
+            }
+            else
+            {
+                callAlert?.Invoke("Tài khoản của bạn không có quyền này.", FormAlert.enmType.Info);
+            }
 
-            // Create an instance of the delegate
-            formAddUser.changeData = new FormAddUser.ChangeData(AlertActive);
-
-            // Show form Them User
-            formAddUser.ShowDialog();
         }
 
         private void buttonChangeUser_Click_1(object sender, EventArgs e)
         {
-            FormChangeUser formChangeUser = new FormChangeUser();
 
-            // Create an instance of the delegate
-            formChangeUser.changeData = new FormChangeUser.ChangeData(AlertActive);
-
-            // Show form 2
-            formChangeUser.ShowDialog();
+            //check quyền
+            if (Common.GROUPSESSION.IsManagementUser)
+            {
+                FormChangeUser formChangeUser = new FormChangeUser();
+                formChangeUser.changeData = new FormChangeUser.ChangeData(AlertActive);
+                formChangeUser.ShowDialog();
+            }
+            else
+            {
+                callAlert?.Invoke("Tài khoản của bạn không có quyền này.", FormAlert.enmType.Info);
+            }
         }
 
 
 
         private void buttonAddGroup_Click(object sender, EventArgs e)
         {
-            // Create an instance of form 2
-            FormAddGroup formAddGroup = new FormAddGroup();
+            //check quyền
+            if (Common.GROUPSESSION.IsManagementGroup)
+            {
+                // Create an instance of form 2
+                FormAddGroup formAddGroup = new FormAddGroup();
+                // Create an instance of the delegate
+                formAddGroup.changeData = new FormAddGroup.ChangeData(AlertActive);
+                // Show form 2
+                formAddGroup.ShowDialog();
+            }
+            else
+            {
+                callAlert?.Invoke("Tài khoản của bạn không có quyền này.", FormAlert.enmType.Info);
+            }
 
-            // Create an instance of the delegate
-            formAddGroup.changeData = new FormAddGroup.ChangeData(AlertActive);
-
-            // Show form 2
-            formAddGroup.ShowDialog();
         }
 
         private void buttonChangeGroup_Click(object sender, EventArgs e)
         {
-            // Create an instance of form 2
-            FormChangeGroup formChangeGroup = new FormChangeGroup();
+            //check quyền
+            if (Common.GROUPSESSION.IsManagementGroup)
+            {
+                // Create an instance of form 2
+                FormChangeGroup formChangeGroup = new FormChangeGroup();
 
-            // Create an instance of the delegate
-            formChangeGroup.changeData = new FormChangeGroup.ChangeData(AlertActive);
+                // Create an instance of the delegate
+                formChangeGroup.changeData = new FormChangeGroup.ChangeData(AlertActive);
 
-            // Show form 2
-            formChangeGroup.ShowDialog();
+                // Show form 2
+                formChangeGroup.ShowDialog();
+            }
+            else
+            {
+                callAlert?.Invoke("Tài khoản của bạn không có quyền này.", FormAlert.enmType.Info);
+            }
         }
 
 

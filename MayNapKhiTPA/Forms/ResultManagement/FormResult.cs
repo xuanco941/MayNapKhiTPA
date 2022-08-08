@@ -740,27 +740,35 @@ namespace MayNapKhiTPA.Forms
 
         private void buttonDeleteResult_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show($"Bạn có chắc muốn xóa dữ liệu mẻ nạp đang hiển thị tại trang này?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dialogResult == DialogResult.Yes)
+            if (Common.GROUPSESSION.IsDeleteResult)
             {
-                foreach (DataGridViewRow row in dataGridViewResult.Rows)
+                DialogResult dialogResult = MessageBox.Show($"Bạn có chắc muốn xóa dữ liệu mẻ nạp đang hiển thị tại trang này?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogResult == DialogResult.Yes)
                 {
-                    try
+                    foreach (DataGridViewRow row in dataGridViewResult.Rows)
                     {
-                        ResultBusiness.DeleteResultFromID(int.Parse(row.Cells[0].Value.ToString()));
+                        try
+                        {
+                            ResultBusiness.DeleteResultFromID(int.Parse(row.Cells[0].Value.ToString()));
+                        }
+                        catch
+                        {
+                            continue;
+                        }
                     }
-                    catch
-                    {
-                        continue;
-                    }
+                    this.page = 1;
+                    buttonPage1.Text = 1.ToString();
+                    buttonPage2.Text = 2.ToString();
+                    buttonPage3.Text = 3.ToString();
+                    GetResults();
+                    callAlert("Xóa thành công!", FormAlert.enmType.Success);
                 }
-                this.page = 1;
-                buttonPage1.Text = 1.ToString();
-                buttonPage2.Text = 2.ToString();
-                buttonPage3.Text = 3.ToString();
-                GetResults();
-                callAlert("Xóa thành công!", FormAlert.enmType.Success);
             }
+            else
+            {
+                callAlert?.Invoke("Tài khoản của bạn không có quyền này.", FormAlert.enmType.Info);
+            }
+
         }
 
 

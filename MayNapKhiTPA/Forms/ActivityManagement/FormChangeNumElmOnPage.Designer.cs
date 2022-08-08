@@ -52,7 +52,7 @@
             this.textBoxNumElm.PasswordChar = false;
             this.textBoxNumElm.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.textBoxNumElm.PlaceholderText = "Nhập số . . .";
-            this.textBoxNumElm.Size = new System.Drawing.Size(175, 35);
+            this.textBoxNumElm.Size = new System.Drawing.Size(200, 35);
             this.textBoxNumElm.TabIndex = 51;
             this.textBoxNumElm.Texts = "Nhập số . . .";
             this.textBoxNumElm.UnderlinedStyle = false;
@@ -85,9 +85,9 @@
             this.buttonSaveSetting.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.buttonSaveSetting.Image = ((System.Drawing.Image)(resources.GetObject("buttonSaveSetting.Image")));
             this.buttonSaveSetting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSaveSetting.Location = new System.Drawing.Point(263, 72);
+            this.buttonSaveSetting.Location = new System.Drawing.Point(288, 72);
             this.buttonSaveSetting.Name = "buttonSaveSetting";
-            this.buttonSaveSetting.Size = new System.Drawing.Size(76, 35);
+            this.buttonSaveSetting.Size = new System.Drawing.Size(74, 35);
             this.buttonSaveSetting.TabIndex = 52;
             this.buttonSaveSetting.Text = "Lưu";
             this.buttonSaveSetting.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -101,7 +101,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(410, 182);
+            this.ClientSize = new System.Drawing.Size(435, 185);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonSaveSetting);
             this.Controls.Add(this.textBoxNumElm);

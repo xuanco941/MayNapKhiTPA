@@ -19,13 +19,12 @@ namespace MayNapKhiTPA.Forms
             //fullscreen
             this.WindowState = FormWindowState.Maximized;
 
-            //center picture
-            pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
-
             //
+            labelHeader.Text = "Bảng điều khiển";
             FormDashboard formDashboard = new FormDashboard();
-            this.Font = new Font("Bahnschrift", 11);
+            formDashboard.callAlert = new FormDashboard.CallAlert(Alert);
             ChangeFormContent(formDashboard);
+            this.Font = new Font("Bahnschrift", 11);
         }
 
         private void buttonThoat_Click(object sender, EventArgs e)
@@ -58,15 +57,6 @@ namespace MayNapKhiTPA.Forms
 
         }
 
-        private void buttonCaLam_Click(object sender, EventArgs e)
-        {
-            labelHeader.Text = "Hoạt động";
-            FormActivity formActivity = new FormActivity();
-            formActivity.callAlert = new FormActivity.CallAlert(Alert);
-            ChangeFormContent(formActivity);
-            this.Font = new Font("Bahnschrift", 11);
-
-        }
 
         private void buttonDashboard_Click_1(object sender, EventArgs e)
         {
@@ -81,11 +71,37 @@ namespace MayNapKhiTPA.Forms
 
         private void buttonLichSuDo_Click(object sender, EventArgs e)
         {
-            labelHeader.Text = "Lịch sử nạp khí";
-            FormResult formResult = new FormResult();
-            formResult.callAlert = new FormResult.CallAlert(Alert);
-            ChangeFormContent(formResult);
-            this.Font = new Font("Bahnschrift", 11);
+            //check quyền
+            if (Common.GROUPSESSION.IsViewResult)
+            {
+                labelHeader.Text = "Lịch sử nạp khí";
+                FormResult formResult = new FormResult();
+                formResult.callAlert = new FormResult.CallAlert(Alert);
+                ChangeFormContent(formResult);
+                this.Font = new Font("Bahnschrift", 11);
+            }
+            else
+            {
+               Alert("Tài khoản của bạn không có quyền này.", FormAlert.enmType.Info);
+            }
+
+        }
+
+        private void buttonActivity_Click(object sender, EventArgs e)
+        {
+            //check quyền
+            if (Common.GROUPSESSION.IsViewResult)
+            {
+                labelHeader.Text = "Hoạt động";
+                FormActivity formActivity = new FormActivity();
+                formActivity.callAlert = new FormActivity.CallAlert(Alert);
+                ChangeFormContent(formActivity);
+                this.Font = new Font("Bahnschrift", 11);
+            }
+            else
+            {
+                Alert("Tài khoản của bạn không có quyền này.", FormAlert.enmType.Info);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -104,6 +120,5 @@ namespace MayNapKhiTPA.Forms
             frm.showAlert(msg, type);
             panelAleart.Controls.Add(frm);
         }
-
     }
 }

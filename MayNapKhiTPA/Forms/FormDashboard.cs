@@ -139,5 +139,29 @@ namespace MayNapKhiTPA.Forms
 
 
         }
+
+        private void button40_Click(object sender, EventArgs e)
+        {
+            if (Common.GROUPSESSION.IsControlMachine)
+            {
+
+            }
+            else
+            {
+                callAlert?.Invoke("Tài khoản của bạn không có quyền này.", FormAlert.enmType.Info);
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            if (Common.GROUPSESSION.IsControlMachine)
+            {
+
+            }
+            else
+            {
+                callAlert?.Invoke("Tài khoản của bạn không có quyền này.", FormAlert.enmType.Info);
+            }
+        }
     }
 }
