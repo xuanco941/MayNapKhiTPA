@@ -52,7 +52,7 @@ namespace MayNapKhiTPA.Forms
         }
         private void FocusButton(Button button)
         {
-            foreach (Control control in panelMenu.Controls)
+            foreach (Control control in panelItemMenu.Controls)
             {
                 control.BackColor = Color.FromArgb(41, 44, 51);
                 if(control.Text == button.Text)
@@ -62,10 +62,7 @@ namespace MayNapKhiTPA.Forms
             }
         }
 
-
-
-
-        private void buttonDashboard_Click_1(object sender, EventArgs e)
+        private void buttonDashboard_Click(object sender, EventArgs e)
         {
             //btn
             Button button = sender as Button;
@@ -77,11 +74,9 @@ namespace MayNapKhiTPA.Forms
             ChangeFormContent(formDashboard);
             this.Font = new Font("Bahnschrift", 11);
 
-
-
         }
 
-        private void buttonLichSuDo_Click(object sender, EventArgs e)
+        private void buttonResult_Click(object sender, EventArgs e)
         {
             //check quyền
             if (Common.GROUPSESSION.IsViewResult)
@@ -99,12 +94,24 @@ namespace MayNapKhiTPA.Forms
             }
             else
             {
-               Alert("Tài khoản của bạn không có quyền này.", FormAlert.enmType.Info);
+                Alert("Tài khoản của bạn không có quyền này.", FormAlert.enmType.Info);
             }
-
         }
 
-        private void buttonActivity_Click(object sender, EventArgs e)
+        private void buttonEmployee_Click_1(object sender, EventArgs e)
+        {
+            //btn
+            Button button = sender as Button;
+            FocusButton(button);
+
+            labelHeader.Text = "Quản lý nhân sự";
+            FormEmployeeManagement formEmployeeManagement = new FormEmployeeManagement();
+            formEmployeeManagement.callAlert = new FormEmployeeManagement.CallAlert(Alert);
+            ChangeFormContent(formEmployeeManagement);
+            this.Font = new Font("Bahnschrift", 11);
+        }
+
+        private void buttonActivity_Click_1(object sender, EventArgs e)
         {
             //check quyền
             if (Common.GROUPSESSION.IsViewResult)
@@ -127,21 +134,7 @@ namespace MayNapKhiTPA.Forms
             }
         }
 
-
-        private void buttonEmployee_Click(object sender, EventArgs e)
-        {
-            //btn
-            Button button = sender as Button;
-            FocusButton(button);
-
-            labelHeader.Text = "Quản lý nhân sự";
-            FormEmployeeManagement formEmployeeManagement = new FormEmployeeManagement();
-            formEmployeeManagement.callAlert = new FormEmployeeManagement.CallAlert(Alert);
-            ChangeFormContent(formEmployeeManagement);
-            this.Font = new Font("Bahnschrift", 11);
-        }
-
-        private void buttonSetting_Click(object sender, EventArgs e)
+        private void buttonSetting_Click_1(object sender, EventArgs e)
         {
             //btn
             Button button = sender as Button;
@@ -154,14 +147,11 @@ namespace MayNapKhiTPA.Forms
             this.Font = new Font("Bahnschrift", 11);
         }
 
-
-        private void buttonThoat_Click(object sender, EventArgs e)
+        private void buttonThoat_Click_1(object sender, EventArgs e)
         {
             Common.USERSESSION = null;
             Common.GROUPSESSION = null;
             Application.Restart();
         }
-
-
     }
 }
