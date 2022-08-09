@@ -31,7 +31,7 @@ namespace MayNapKhiTPA.Forms
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelMenu = new System.Windows.Forms.Panel();
             this.buttonThoat = new System.Windows.Forms.Button();
             this.buttonSetting = new System.Windows.Forms.Button();
             this.buttonActivity = new System.Windows.Forms.Button();
@@ -47,7 +47,7 @@ namespace MayNapKhiTPA.Forms
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panelAleart = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
+            this.panelMenu.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelContainer.SuspendLayout();
@@ -56,20 +56,20 @@ namespace MayNapKhiTPA.Forms
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // panelMenu
             // 
-            this.panel1.Controls.Add(this.buttonThoat);
-            this.panel1.Controls.Add(this.buttonSetting);
-            this.panel1.Controls.Add(this.buttonActivity);
-            this.panel1.Controls.Add(this.buttonEmployee);
-            this.panel1.Controls.Add(this.buttonResult);
-            this.panel1.Controls.Add(this.buttonDashboard);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(211, 730);
-            this.panel1.TabIndex = 0;
+            this.panelMenu.Controls.Add(this.buttonThoat);
+            this.panelMenu.Controls.Add(this.buttonSetting);
+            this.panelMenu.Controls.Add(this.buttonActivity);
+            this.panelMenu.Controls.Add(this.buttonEmployee);
+            this.panelMenu.Controls.Add(this.buttonResult);
+            this.panelMenu.Controls.Add(this.buttonDashboard);
+            this.panelMenu.Controls.Add(this.panel3);
+            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelMenu.Name = "panelMenu";
+            this.panelMenu.Size = new System.Drawing.Size(211, 730);
+            this.panelMenu.TabIndex = 0;
             // 
             // buttonThoat
             // 
@@ -107,7 +107,7 @@ namespace MayNapKhiTPA.Forms
             this.buttonSetting.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonSetting.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonSetting.UseVisualStyleBackColor = true;
-            this.buttonSetting.Click += new System.EventHandler(this.button1_Click);
+            this.buttonSetting.Click += new System.EventHandler(this.buttonSetting_Click);
             // 
             // buttonActivity
             // 
@@ -145,7 +145,7 @@ namespace MayNapKhiTPA.Forms
             this.buttonEmployee.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonEmployee.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonEmployee.UseVisualStyleBackColor = true;
-            this.buttonEmployee.Click += new System.EventHandler(this.buttonNhanVien_Click);
+            this.buttonEmployee.Click += new System.EventHandler(this.buttonEmployee_Click);
             // 
             // buttonResult
             // 
@@ -286,14 +286,14 @@ namespace MayNapKhiTPA.Forms
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1449, 730);
             this.Controls.Add(this.panelContainer);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelMenu);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Máy nạp khí TPA";
-            this.panel1.ResumeLayout(false);
+            this.panelMenu.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelContainer.ResumeLayout(false);
@@ -307,7 +307,7 @@ namespace MayNapKhiTPA.Forms
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Button buttonEmployee;
         private System.Windows.Forms.Button buttonResult;
         private System.Windows.Forms.Label labelHeader;

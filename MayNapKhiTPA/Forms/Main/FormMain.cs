@@ -25,14 +25,17 @@ namespace MayNapKhiTPA.Forms
             formDashboard.callAlert = new FormDashboard.CallAlert(Alert);
             ChangeFormContent(formDashboard);
             this.Font = new Font("Bahnschrift", 11);
+
+            //focus color dashboard first
             buttonDashboard.BackColor = Color.FromArgb(69, 73, 82);
         }
 
-        private void buttonThoat_Click(object sender, EventArgs e)
+
+        public void Alert(string msg, FormAlert.enmType type)
         {
-            Common.USERSESSION = null;
-            Common.GROUPSESSION = null;
-            Application.Restart();
+            FormAlert frm = new FormAlert();
+            frm.showAlert(msg, type);
+            panelAleart.Controls.Add(frm);
         }
 
         private void ChangeFormContent(Form form)
@@ -47,37 +50,26 @@ namespace MayNapKhiTPA.Forms
             form.Dock = DockStyle.Fill;
             form.Show();
         }
-
-        private void buttonNhanVien_Click(object sender, EventArgs e)
+        private void FocusButton(Button button)
         {
-
-            //btn
-            buttonDashboard.BackColor = Color.FromArgb(41, 44, 51);
-            buttonActivity.BackColor = Color.FromArgb(41, 44, 51);
-            buttonResult.BackColor = Color.FromArgb(41, 44, 51);
-            buttonSetting.BackColor = Color.FromArgb(41, 44, 51);
-
-            buttonEmployee.BackColor = Color.FromArgb(69, 73, 82);
-
-            labelHeader.Text = "Quản lý nhân sự";
-            FormEmployeeManagement formEmployeeManagement = new FormEmployeeManagement();
-            formEmployeeManagement.callAlert = new FormEmployeeManagement.CallAlert(Alert);
-            ChangeFormContent(formEmployeeManagement);
-            this.Font = new Font("Bahnschrift", 11);
-
-            
+            foreach (Control control in panelMenu.Controls)
+            {
+                control.BackColor = Color.FromArgb(41, 44, 51);
+                if(control.Text == button.Text)
+                {
+                    control.BackColor = Color.FromArgb(69, 73, 82);
+                }
+            }
         }
+
+
 
 
         private void buttonDashboard_Click_1(object sender, EventArgs e)
         {
             //btn
-            buttonEmployee.BackColor = Color.FromArgb(41, 44, 51);
-            buttonActivity.BackColor = Color.FromArgb(41, 44, 51);
-            buttonResult.BackColor = Color.FromArgb(41, 44, 51);
-            buttonSetting.BackColor = Color.FromArgb(41, 44, 51);
-
-            buttonDashboard.BackColor = Color.FromArgb(69, 73, 82);
+            Button button = sender as Button;
+            FocusButton(button);
 
             labelHeader.Text = "Bảng điều khiển";
             FormDashboard formDashboard = new FormDashboard();
@@ -95,12 +87,8 @@ namespace MayNapKhiTPA.Forms
             if (Common.GROUPSESSION.IsViewResult)
             {
                 //btn
-                buttonEmployee.BackColor = Color.FromArgb(41, 44, 51);
-                buttonActivity.BackColor = Color.FromArgb(41, 44, 51);
-                buttonDashboard.BackColor = Color.FromArgb(41, 44, 51);
-                buttonSetting.BackColor = Color.FromArgb(41, 44, 51);
-
-                buttonResult.BackColor = Color.FromArgb(69, 73, 82);
+                Button button = sender as Button;
+                FocusButton(button);
 
                 labelHeader.Text = "Lịch sử nạp khí";
                 FormResult formResult = new FormResult();
@@ -122,12 +110,8 @@ namespace MayNapKhiTPA.Forms
             if (Common.GROUPSESSION.IsViewResult)
             {
                 //btn
-                buttonEmployee.BackColor = Color.FromArgb(41, 44, 51);
-                buttonResult.BackColor = Color.FromArgb(41, 44, 51);
-                buttonDashboard.BackColor = Color.FromArgb(41, 44, 51);
-                buttonSetting.BackColor = Color.FromArgb(41, 44, 51);
-
-                buttonActivity.BackColor = Color.FromArgb(69, 73, 82);
+                Button button = sender as Button;
+                FocusButton(button);
 
                 labelHeader.Text = "Hoạt động";
                 FormActivity formActivity = new FormActivity();
@@ -143,31 +127,41 @@ namespace MayNapKhiTPA.Forms
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+        private void buttonEmployee_Click(object sender, EventArgs e)
         {
             //btn
-            buttonEmployee.BackColor = Color.FromArgb(41, 44, 51);
-            buttonResult.BackColor = Color.FromArgb(41, 44, 51);
-            buttonDashboard.BackColor = Color.FromArgb(41, 44, 51);
-            buttonActivity.BackColor = Color.FromArgb(41, 44, 51);
+            Button button = sender as Button;
+            FocusButton(button);
 
-            buttonSetting.BackColor = Color.FromArgb(69, 73, 82);
+            labelHeader.Text = "Quản lý nhân sự";
+            FormEmployeeManagement formEmployeeManagement = new FormEmployeeManagement();
+            formEmployeeManagement.callAlert = new FormEmployeeManagement.CallAlert(Alert);
+            ChangeFormContent(formEmployeeManagement);
+            this.Font = new Font("Bahnschrift", 11);
+        }
+
+        private void buttonSetting_Click(object sender, EventArgs e)
+        {
+            //btn
+            Button button = sender as Button;
+            FocusButton(button);
 
             labelHeader.Text = "Cài đặt";
             FormSetting formSetting = new FormSetting();
             formSetting.callAlert = new FormSetting.CallAlert(Alert);
             ChangeFormContent(formSetting);
             this.Font = new Font("Bahnschrift", 11);
-
-
         }
 
 
-        public void Alert(string msg, FormAlert.enmType type)
+        private void buttonThoat_Click(object sender, EventArgs e)
         {
-            FormAlert frm = new FormAlert();
-            frm.showAlert(msg, type);
-            panelAleart.Controls.Add(frm);
+            Common.USERSESSION = null;
+            Common.GROUPSESSION = null;
+            Application.Restart();
         }
+
+
     }
 }
