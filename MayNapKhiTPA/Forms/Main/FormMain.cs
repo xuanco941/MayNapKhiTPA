@@ -25,6 +25,7 @@ namespace MayNapKhiTPA.Forms
             formDashboard.callAlert = new FormDashboard.CallAlert(Alert);
             ChangeFormContent(formDashboard);
             this.Font = new Font("Bahnschrift", 11);
+            buttonDashboard.BackColor = Color.FromArgb(69, 73, 82);
         }
 
         private void buttonThoat_Click(object sender, EventArgs e)
@@ -49,22 +50,41 @@ namespace MayNapKhiTPA.Forms
 
         private void buttonNhanVien_Click(object sender, EventArgs e)
         {
+
+            //btn
+            buttonDashboard.BackColor = Color.FromArgb(41, 44, 51);
+            buttonActivity.BackColor = Color.FromArgb(41, 44, 51);
+            buttonResult.BackColor = Color.FromArgb(41, 44, 51);
+            buttonSetting.BackColor = Color.FromArgb(41, 44, 51);
+
+            buttonEmployee.BackColor = Color.FromArgb(69, 73, 82);
+
             labelHeader.Text = "Quản lý nhân sự";
             FormEmployeeManagement formEmployeeManagement = new FormEmployeeManagement();
             formEmployeeManagement.callAlert = new FormEmployeeManagement.CallAlert(Alert);
             ChangeFormContent(formEmployeeManagement);
             this.Font = new Font("Bahnschrift", 11);
 
+            
         }
 
 
         private void buttonDashboard_Click_1(object sender, EventArgs e)
         {
+            //btn
+            buttonEmployee.BackColor = Color.FromArgb(41, 44, 51);
+            buttonActivity.BackColor = Color.FromArgb(41, 44, 51);
+            buttonResult.BackColor = Color.FromArgb(41, 44, 51);
+            buttonSetting.BackColor = Color.FromArgb(41, 44, 51);
+
+            buttonDashboard.BackColor = Color.FromArgb(69, 73, 82);
+
             labelHeader.Text = "Bảng điều khiển";
             FormDashboard formDashboard = new FormDashboard();
             formDashboard.callAlert = new FormDashboard.CallAlert(Alert);
             ChangeFormContent(formDashboard);
             this.Font = new Font("Bahnschrift", 11);
+
 
 
         }
@@ -74,11 +94,20 @@ namespace MayNapKhiTPA.Forms
             //check quyền
             if (Common.GROUPSESSION.IsViewResult)
             {
+                //btn
+                buttonEmployee.BackColor = Color.FromArgb(41, 44, 51);
+                buttonActivity.BackColor = Color.FromArgb(41, 44, 51);
+                buttonDashboard.BackColor = Color.FromArgb(41, 44, 51);
+                buttonSetting.BackColor = Color.FromArgb(41, 44, 51);
+
+                buttonResult.BackColor = Color.FromArgb(69, 73, 82);
+
                 labelHeader.Text = "Lịch sử nạp khí";
                 FormResult formResult = new FormResult();
                 formResult.callAlert = new FormResult.CallAlert(Alert);
                 ChangeFormContent(formResult);
                 this.Font = new Font("Bahnschrift", 11);
+
             }
             else
             {
@@ -92,11 +121,21 @@ namespace MayNapKhiTPA.Forms
             //check quyền
             if (Common.GROUPSESSION.IsViewResult)
             {
+                //btn
+                buttonEmployee.BackColor = Color.FromArgb(41, 44, 51);
+                buttonResult.BackColor = Color.FromArgb(41, 44, 51);
+                buttonDashboard.BackColor = Color.FromArgb(41, 44, 51);
+                buttonSetting.BackColor = Color.FromArgb(41, 44, 51);
+
+                buttonActivity.BackColor = Color.FromArgb(69, 73, 82);
+
                 labelHeader.Text = "Hoạt động";
                 FormActivity formActivity = new FormActivity();
                 formActivity.callAlert = new FormActivity.CallAlert(Alert);
                 ChangeFormContent(formActivity);
                 this.Font = new Font("Bahnschrift", 11);
+
+
             }
             else
             {
@@ -106,11 +145,21 @@ namespace MayNapKhiTPA.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //btn
+            buttonEmployee.BackColor = Color.FromArgb(41, 44, 51);
+            buttonResult.BackColor = Color.FromArgb(41, 44, 51);
+            buttonDashboard.BackColor = Color.FromArgb(41, 44, 51);
+            buttonActivity.BackColor = Color.FromArgb(41, 44, 51);
+
+            buttonSetting.BackColor = Color.FromArgb(69, 73, 82);
+
             labelHeader.Text = "Cài đặt";
             FormSetting formSetting = new FormSetting();
             formSetting.callAlert = new FormSetting.CallAlert(Alert);
             ChangeFormContent(formSetting);
             this.Font = new Font("Bahnschrift", 11);
+
+
         }
 
 
