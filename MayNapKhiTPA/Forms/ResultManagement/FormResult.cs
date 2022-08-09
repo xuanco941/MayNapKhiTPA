@@ -54,18 +54,6 @@ namespace MayNapKhiTPA.Forms
         {
             InitializeComponent();
 
-            //test update result
-            try
-            {
-                ResultBusiness.UpdateResult(1);
-                ResultBusiness.UpdateResult(2);
-            }
-            catch
-            {
-                //none
-            }
-
-
             buttonExcel.ForeColor = Color.Black;
             buttonExcel.Font = new System.Drawing.Font("Segoe UI", 11, FontStyle.Bold);
 

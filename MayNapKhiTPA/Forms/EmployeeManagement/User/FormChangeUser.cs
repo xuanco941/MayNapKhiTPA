@@ -36,9 +36,9 @@ namespace MayNapKhiTPA.Forms
         }
         public void LoadForm()
         {
-            // lấy tất cả các username vào combobox
-            var listUsers = UserBusiness.GetAllUsers();
-            var listUsername = from user in listUsers select user.Username;
+            // lấy tất cả các username vào combobox,sap xep nguoc lai theo id
+            var listUsers = UserBusiness.GetAllUsers().OrderByDescending(user => user.ID_User);
+            var listUsername = (from user in listUsers select user.Username);
             comboBoxSelectUsername.DataSource = listUsername.ToList();
         }
 
@@ -119,7 +119,7 @@ namespace MayNapKhiTPA.Forms
         private void comboBoxSelectUsername_SelectedIndexChanged(object sender, EventArgs e)
         {
             //vô hiệu hóa nút xóa khi đây là tài khoản hiện tại
-            if (comboBoxSelectUsername.Text == Common.USERSESSION.Username || comboBoxSelectUsername.Text == "admin")
+            if (comboBoxSelectUsername.Text == Common.USERSESSION.Username)
             {
                 buttonDelete.Enabled = false;
             }
@@ -127,21 +127,68 @@ namespace MayNapKhiTPA.Forms
             {
                 buttonDelete.Enabled = true;
             }
+            //neu la tai khoan admin thi khong the xoa, khong the thay doi ten user
+ 
+            if(comboBoxSelectUsername.Text == "admin" && Common.USERSESSION.Username != "admin")
+            {
+                textBoxUsername.Enabled = false;
+                textBoxFullName.Enabled = false;
+                textBoxEmail.Enabled = false;
+                textBoxPassword.PasswordChar = true;
+                textBoxPassword.Enabled = false;
+                textBoxPhoneNumber.Enabled = false;
+                comboBoxSelectGroup.Enabled = false;
+                comboBoxSelectShift.Enabled = false;
+                buttonUpdate.Enabled = false;
+            }
+            else
+            {
+                textBoxUsername.Enabled = true;
+                textBoxFullName.Enabled = true;
+                textBoxEmail.Enabled = true;
+                textBoxPassword.PasswordChar = false;
+                textBoxPassword.Enabled = true;
+                textBoxPhoneNumber.Enabled = true;
+                comboBoxSelectGroup.Enabled = true;
+                comboBoxSelectShift.Enabled = true;
+                buttonUpdate.Enabled = true;
 
-            // lấy ra thông tin user có username là username trên combobox
-            var listUser = UserBusiness.GetAllUsers();
-            string usernameOld = comboBoxSelectUsername.Text;
-            User user = listUser.Single(elm => elm.Username == usernameOld);
+                // lấy ra thông tin user có username là username trên combobox
+                try
+                {
+                    var listUser = UserBusiness.GetAllUsers();
+                    string usernameOld = comboBoxSelectUsername.Text;
+                    User user = listUser.Single(elm => elm.Username == usernameOld);
 
-            //show trên textbox
+                    //show trên textbox
 
-            textBoxFullName.Texts = user.FullName;
-            textBoxUsername.Texts = user.Username;
-            textBoxPassword.Texts = user.Password;
-            textBoxPhoneNumber.Texts = user.PhoneNumber;
-            textBoxEmail.Texts = user.Email;
-            comboBoxSelectShift.Text = user.NameShift;
-            comboBoxSelectGroup.Text = GroupBusiness.GetGroupFromID(user.ID_Group).Name;
+                    textBoxFullName.Texts = user.FullName;
+                    textBoxUsername.Texts = user.Username;
+                    textBoxPassword.Texts = user.Password;
+                    textBoxPhoneNumber.Texts = user.PhoneNumber;
+                    textBoxEmail.Texts = user.Email;
+                    comboBoxSelectShift.Text = user.NameShift;
+                    comboBoxSelectGroup.Text = GroupBusiness.GetGroupFromID(user.ID_Group).Name;
+                }
+                catch
+                {
+                    changeData?.Invoke($"Không thể lấy thông tin người dùng này.", FormAlert.enmType.Error);
+                }
+            }
+
+            if (comboBoxSelectUsername.Text == "admin")
+            {
+                buttonDelete.Enabled = false;
+                textBoxUsername.Enabled = false;
+                comboBoxSelectGroup.Enabled = false;
+            }
+            else
+            {
+                textBoxUsername.Enabled = true;
+                buttonDelete.Enabled = true;
+                comboBoxSelectGroup.Enabled = true;
+            }
+
         }
 
         private void textBoxPhoneNumber_KeyPress(object sender, KeyPressEventArgs e)

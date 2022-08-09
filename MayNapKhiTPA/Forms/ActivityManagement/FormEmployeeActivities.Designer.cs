@@ -35,7 +35,9 @@ namespace MayNapKhiTPA.Forms.ActivityManagement
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEmployeeActivities));
             this.panelUser = new System.Windows.Forms.Panel();
             this.dataGridViewUserActivity = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUserActivity)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelUser
@@ -71,8 +73,17 @@ namespace MayNapKhiTPA.Forms.ActivityManagement
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dataGridViewUserActivity.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewUserActivity.RowTemplate.Height = 25;
-            this.dataGridViewUserActivity.Size = new System.Drawing.Size(1319, 615);
+            this.dataGridViewUserActivity.Size = new System.Drawing.Size(1042, 615);
             this.dataGridViewUserActivity.TabIndex = 1;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.dataGridViewUserActivity);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1042, 615);
+            this.panel1.TabIndex = 2;
             // 
             // FormEmployeeActivities
             // 
@@ -80,8 +91,8 @@ namespace MayNapKhiTPA.Forms.ActivityManagement
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1319, 615);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelUser);
-            this.Controls.Add(this.dataGridViewUserActivity);
             this.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -90,6 +101,7 @@ namespace MayNapKhiTPA.Forms.ActivityManagement
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chi tiết hoạt động của nhân viên vận hành";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUserActivity)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -98,5 +110,6 @@ namespace MayNapKhiTPA.Forms.ActivityManagement
 
         private Panel panelUser;
         private DataGridView dataGridViewUserActivity;
+        private Panel panel1;
     }
 }

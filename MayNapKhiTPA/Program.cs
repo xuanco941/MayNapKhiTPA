@@ -5,6 +5,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using MayNapKhiTPA.Models;
+
+
 namespace MayNapKhiTPA
 {
     internal static class Program
@@ -18,6 +21,29 @@ namespace MayNapKhiTPA
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormLogin());
+
+            //test update result
+            try
+            {
+                ResultBusiness.UpdateResult(1);
+                ResultBusiness.UpdateResult(2);
+                ResultBusiness.UpdateResult(3);
+                ResultBusiness.UpdateResult(4);
+                ResultBusiness.UpdateResult(5);
+                ResultBusiness.UpdateResult(6);
+                ResultBusiness.UpdateResult(7);
+                ResultBusiness.UpdateResult(8);
+                ResultBusiness.UpdateResult(9);
+                ResultBusiness.UpdateResult(10);
+
+
+            }
+            catch
+            {
+                //none
+            }
+
+
 
             if (Common.USERSESSION != null)
             {
