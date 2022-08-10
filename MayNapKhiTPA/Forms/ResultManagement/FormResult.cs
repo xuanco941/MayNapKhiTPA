@@ -133,7 +133,7 @@ namespace MayNapKhiTPA.Forms
                     fullname = result.Worker + " (không còn tồn tại)";
                 }
 
-                if (TimeStart == TimeEnd)
+                if (result.Status == false)
                 {
                     dt.Rows.Add(result.ID_Result, "Chưa có", "Chưa có", "Chưa có", "Chưa có", "Chưa có", "Chưa có",
                     "Chưa có", "Chưa có", "Chưa có",

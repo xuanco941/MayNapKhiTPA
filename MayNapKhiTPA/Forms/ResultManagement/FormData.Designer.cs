@@ -28,17 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormData));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormData));
             this.panelSearchData = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonUpdate = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxIDResult = new LW_PhanMemBaoGia.MyControls.TextBoxT();
             this.buttonViewDetsil = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.labelLuuLuongTB = new System.Windows.Forms.Label();
+            this.labelTheTichTB = new System.Windows.Forms.Label();
+            this.labelApSuatTB = new System.Windows.Forms.Label();
             this.labelStatus = new System.Windows.Forms.Label();
             this.labelMaMe = new System.Windows.Forms.Label();
             this.labelFullNameUser = new System.Windows.Forms.Label();
@@ -46,7 +51,7 @@
             this.labelNgayKetThuc = new System.Windows.Forms.Label();
             this.labelNgayBatDau = new System.Windows.Forms.Label();
             this.dataGridViewSearchData = new System.Windows.Forms.DataGridView();
-            this.buttonUpdate = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panelSearchData.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -59,10 +64,10 @@
             this.panelSearchData.AutoScroll = true;
             this.panelSearchData.Controls.Add(this.tableLayoutPanel1);
             this.panelSearchData.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelSearchData.Location = new System.Drawing.Point(729, 0);
+            this.panelSearchData.Location = new System.Drawing.Point(802, 0);
             this.panelSearchData.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelSearchData.Name = "panelSearchData";
-            this.panelSearchData.Size = new System.Drawing.Size(277, 564);
+            this.panelSearchData.Size = new System.Drawing.Size(277, 612);
             this.panelSearchData.TabIndex = 2;
             // 
             // tableLayoutPanel1
@@ -78,7 +83,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 270F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(277, 564);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(277, 612);
             this.tableLayoutPanel1.TabIndex = 55;
             // 
             // panel1
@@ -89,10 +94,38 @@
             this.panel1.Controls.Add(this.textBoxIDResult);
             this.panel1.Controls.Add(this.buttonViewDetsil);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(4, 296);
+            this.panel1.Location = new System.Drawing.Point(4, 344);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(269, 264);
             this.panel1.TabIndex = 57;
+            // 
+            // buttonUpdate
+            // 
+            this.buttonUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonUpdate.BackColor = System.Drawing.Color.Goldenrod;
+            this.buttonUpdate.BackgroundColor = System.Drawing.Color.Goldenrod;
+            this.buttonUpdate.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonUpdate.BorderRadius = 3;
+            this.buttonUpdate.BorderSize = 0;
+            this.buttonUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonUpdate.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.buttonUpdate.ForeColor = System.Drawing.Color.Black;
+            this.buttonUpdate.Image = ((System.Drawing.Image)(resources.GetObject("buttonUpdate.Image")));
+            this.buttonUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonUpdate.Location = new System.Drawing.Point(72, 152);
+            this.buttonUpdate.Name = "buttonUpdate";
+            this.buttonUpdate.Size = new System.Drawing.Size(132, 40);
+            this.buttonUpdate.TabIndex = 54;
+            this.buttonUpdate.Text = "Cập nhật";
+            this.buttonUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonUpdate.TextColor = System.Drawing.Color.Black;
+            this.buttonUpdate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.buttonUpdate, "Cập nhật thống kê  dữ liệu từ đầu mẻ nạp tới thời điểm hiện tại dù chưa kết thúc " +
+        "mẻ nạp.");
+            this.buttonUpdate.UseVisualStyleBackColor = false;
+            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
             // label1
             // 
@@ -147,7 +180,7 @@
             this.buttonViewDetsil.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonViewDetsil.Location = new System.Drawing.Point(72, 98);
             this.buttonViewDetsil.Name = "buttonViewDetsil";
-            this.buttonViewDetsil.Size = new System.Drawing.Size(132, 32);
+            this.buttonViewDetsil.Size = new System.Drawing.Size(132, 40);
             this.buttonViewDetsil.TabIndex = 52;
             this.buttonViewDetsil.Text = "Xem chi tiết";
             this.buttonViewDetsil.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -159,6 +192,9 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.groupBox1.Controls.Add(this.labelLuuLuongTB);
+            this.groupBox1.Controls.Add(this.labelTheTichTB);
+            this.groupBox1.Controls.Add(this.labelApSuatTB);
             this.groupBox1.Controls.Add(this.labelStatus);
             this.groupBox1.Controls.Add(this.labelMaMe);
             this.groupBox1.Controls.Add(this.labelFullNameUser);
@@ -170,17 +206,50 @@
             this.groupBox1.ForeColor = System.Drawing.Color.LightGray;
             this.groupBox1.Location = new System.Drawing.Point(4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(269, 285);
+            this.groupBox1.Size = new System.Drawing.Size(269, 333);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin";
+            // 
+            // labelLuuLuongTB
+            // 
+            this.labelLuuLuongTB.AutoSize = true;
+            this.labelLuuLuongTB.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLuuLuongTB.ForeColor = System.Drawing.Color.LightGray;
+            this.labelLuuLuongTB.Location = new System.Drawing.Point(5, 235);
+            this.labelLuuLuongTB.Name = "labelLuuLuongTB";
+            this.labelLuuLuongTB.Size = new System.Drawing.Size(158, 17);
+            this.labelLuuLuongTB.TabIndex = 9;
+            this.labelLuuLuongTB.Text = "- Lưu lượng trung bình : ";
+            // 
+            // labelTheTichTB
+            // 
+            this.labelTheTichTB.AutoSize = true;
+            this.labelTheTichTB.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTheTichTB.ForeColor = System.Drawing.Color.LightGray;
+            this.labelTheTichTB.Location = new System.Drawing.Point(5, 205);
+            this.labelTheTichTB.Name = "labelTheTichTB";
+            this.labelTheTichTB.Size = new System.Drawing.Size(145, 17);
+            this.labelTheTichTB.TabIndex = 8;
+            this.labelTheTichTB.Text = "- Thể tích trung bình : ";
+            // 
+            // labelApSuatTB
+            // 
+            this.labelApSuatTB.AutoSize = true;
+            this.labelApSuatTB.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelApSuatTB.ForeColor = System.Drawing.Color.LightGray;
+            this.labelApSuatTB.Location = new System.Drawing.Point(5, 175);
+            this.labelApSuatTB.Name = "labelApSuatTB";
+            this.labelApSuatTB.Size = new System.Drawing.Size(144, 17);
+            this.labelApSuatTB.TabIndex = 7;
+            this.labelApSuatTB.Text = "- Áp suất trung bình : ";
             // 
             // labelStatus
             // 
             this.labelStatus.AutoSize = true;
             this.labelStatus.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelStatus.ForeColor = System.Drawing.Color.LightGray;
-            this.labelStatus.Location = new System.Drawing.Point(3, 162);
+            this.labelStatus.Location = new System.Drawing.Point(5, 265);
             this.labelStatus.Name = "labelStatus";
             this.labelStatus.Size = new System.Drawing.Size(89, 17);
             this.labelStatus.TabIndex = 6;
@@ -191,7 +260,7 @@
             this.labelMaMe.AutoSize = true;
             this.labelMaMe.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMaMe.ForeColor = System.Drawing.Color.LightGray;
-            this.labelMaMe.Location = new System.Drawing.Point(3, 23);
+            this.labelMaMe.Location = new System.Drawing.Point(5, 25);
             this.labelMaMe.Name = "labelMaMe";
             this.labelMaMe.Size = new System.Drawing.Size(70, 17);
             this.labelMaMe.TabIndex = 5;
@@ -202,7 +271,7 @@
             this.labelFullNameUser.AutoSize = true;
             this.labelFullNameUser.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelFullNameUser.ForeColor = System.Drawing.Color.LightGray;
-            this.labelFullNameUser.Location = new System.Drawing.Point(3, 79);
+            this.labelFullNameUser.Location = new System.Drawing.Point(5, 85);
             this.labelFullNameUser.Name = "labelFullNameUser";
             this.labelFullNameUser.Size = new System.Drawing.Size(126, 17);
             this.labelFullNameUser.TabIndex = 4;
@@ -213,7 +282,7 @@
             this.labelMachine.AutoSize = true;
             this.labelMachine.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMachine.ForeColor = System.Drawing.Color.LightGray;
-            this.labelMachine.Location = new System.Drawing.Point(3, 50);
+            this.labelMachine.Location = new System.Drawing.Point(5, 55);
             this.labelMachine.Name = "labelMachine";
             this.labelMachine.Size = new System.Drawing.Size(115, 17);
             this.labelMachine.TabIndex = 3;
@@ -224,7 +293,7 @@
             this.labelNgayKetThuc.AutoSize = true;
             this.labelNgayKetThuc.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNgayKetThuc.ForeColor = System.Drawing.Color.LightGray;
-            this.labelNgayKetThuc.Location = new System.Drawing.Point(3, 136);
+            this.labelNgayKetThuc.Location = new System.Drawing.Point(5, 145);
             this.labelNgayKetThuc.Name = "labelNgayKetThuc";
             this.labelNgayKetThuc.Size = new System.Drawing.Size(138, 17);
             this.labelNgayKetThuc.TabIndex = 2;
@@ -235,7 +304,7 @@
             this.labelNgayBatDau.AutoSize = true;
             this.labelNgayBatDau.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNgayBatDau.ForeColor = System.Drawing.Color.LightGray;
-            this.labelNgayBatDau.Location = new System.Drawing.Point(3, 109);
+            this.labelNgayBatDau.Location = new System.Drawing.Point(5, 115);
             this.labelNgayBatDau.Name = "labelNgayBatDau";
             this.labelNgayBatDau.Size = new System.Drawing.Size(135, 17);
             this.labelNgayBatDau.TabIndex = 0;
@@ -272,40 +341,21 @@
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dataGridViewSearchData.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewSearchData.RowTemplate.Height = 25;
-            this.dataGridViewSearchData.Size = new System.Drawing.Size(729, 564);
+            this.dataGridViewSearchData.Size = new System.Drawing.Size(802, 612);
             this.dataGridViewSearchData.TabIndex = 3;
             // 
-            // buttonUpdate
+            // toolTip1
             // 
-            this.buttonUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonUpdate.BackColor = System.Drawing.Color.Goldenrod;
-            this.buttonUpdate.BackgroundColor = System.Drawing.Color.Goldenrod;
-            this.buttonUpdate.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonUpdate.BorderRadius = 3;
-            this.buttonUpdate.BorderSize = 0;
-            this.buttonUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonUpdate.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.buttonUpdate.ForeColor = System.Drawing.Color.Black;
-            this.buttonUpdate.Image = ((System.Drawing.Image)(resources.GetObject("buttonUpdate.Image")));
-            this.buttonUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonUpdate.Location = new System.Drawing.Point(72, 140);
-            this.buttonUpdate.Name = "buttonUpdate";
-            this.buttonUpdate.Size = new System.Drawing.Size(132, 32);
-            this.buttonUpdate.TabIndex = 54;
-            this.buttonUpdate.Text = "Cập nhật";
-            this.buttonUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonUpdate.TextColor = System.Drawing.Color.Black;
-            this.buttonUpdate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonUpdate.UseVisualStyleBackColor = false;
+            this.toolTip1.AutoPopDelay = 6000;
+            this.toolTip1.InitialDelay = 200;
+            this.toolTip1.ReshowDelay = 100;
             // 
             // FormData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(1006, 564);
+            this.ClientSize = new System.Drawing.Size(1079, 612);
             this.Controls.Add(this.dataGridViewSearchData);
             this.Controls.Add(this.panelSearchData);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -339,5 +389,9 @@
         private System.Windows.Forms.Label labelStatus;
         private System.Windows.Forms.Label label1;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonUpdate;
+        private System.Windows.Forms.Label labelLuuLuongTB;
+        private System.Windows.Forms.Label labelTheTichTB;
+        private System.Windows.Forms.Label labelApSuatTB;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

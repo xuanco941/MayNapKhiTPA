@@ -25,13 +25,13 @@ namespace MayNapKhiTPA
             //test update result
             try
             {
-                ResultBusiness.UpdateResult(1);
-                ResultBusiness.UpdateResult(2);
-                ResultBusiness.UpdateResult(3);
-                ResultBusiness.UpdateResult(4);
-                ResultBusiness.UpdateResult(5);
-                ResultBusiness.UpdateResult(6);
-                ResultBusiness.UpdateResult(7);
+                ResultBusiness.UpdateResult(1,true);
+                ResultBusiness.UpdateResult(2,true);
+                ResultBusiness.UpdateResult(3,true);
+                ResultBusiness.UpdateResult(4,true);
+                ResultBusiness.UpdateResult(5,true);
+                ResultBusiness.UpdateResult(6,true);
+                ResultBusiness.UpdateResult(7,true);
 
 
             }

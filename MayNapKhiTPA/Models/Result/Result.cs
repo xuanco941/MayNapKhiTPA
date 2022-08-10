@@ -18,11 +18,13 @@ namespace MayNapKhiTPA.Models
         public DateTime TimeEnd { get; set; }
         public string NameMachine { get; set; }
         public string Worker { get; set; }
+
+        public bool Status { get; set; }
         public Result()
         {
         }
 
-        public Result(int iD_Result, double apSuatMin, double apSuatMax, double apSuatAvg, double theTichMin, double theTichMax, double theTichAvg, double luuLuongMin, double luuLuongMax, double luuLuongAvg, DateTime timeStart, DateTime timeEnd, string nameMachine, string worker)
+        public Result(int iD_Result, double apSuatMin, double apSuatMax, double apSuatAvg, double theTichMin, double theTichMax, double theTichAvg, double luuLuongMin, double luuLuongMax, double luuLuongAvg, DateTime timeStart, DateTime timeEnd, string nameMachine, string worker, bool status)
         {
             ID_Result = iD_Result;
             ApSuatMin = apSuatMin;
@@ -38,6 +40,7 @@ namespace MayNapKhiTPA.Models
             TimeEnd = timeEnd;
             NameMachine = nameMachine;
             Worker = worker;
+            Status = status;
         }
     }
 

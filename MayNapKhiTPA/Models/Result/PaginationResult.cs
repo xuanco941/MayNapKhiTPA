@@ -41,7 +41,7 @@ namespace MayNapKhiTPA.Models
             {
                 Result result = new Result(sqlDataReader.GetInt32(0), sqlDataReader.GetDouble(1), sqlDataReader.GetDouble(2),
                         sqlDataReader.GetDouble(3), sqlDataReader.GetDouble(4), sqlDataReader.GetDouble(5), sqlDataReader.GetDouble(6), sqlDataReader.GetDouble(7),
-                        sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13));
+                        sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13),sqlDataReader.GetBoolean(14));
                 list.Add(result);
             }
             sqlConnection.Close();
@@ -84,7 +84,7 @@ namespace MayNapKhiTPA.Models
             {
                 Result result = new Result(sqlDataReader.GetInt32(0), sqlDataReader.GetDouble(1), sqlDataReader.GetDouble(2),
                         sqlDataReader.GetDouble(3), sqlDataReader.GetDouble(4), sqlDataReader.GetDouble(5), sqlDataReader.GetDouble(6), sqlDataReader.GetDouble(7),
-                        sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13));
+                        sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13), sqlDataReader.GetBoolean(14));
                 list.Add(result);
             }
             sqlConnection.Close();
@@ -125,8 +125,8 @@ namespace MayNapKhiTPA.Models
             while (sqlDataReader.Read())
             {
                 Result result = new Result(sqlDataReader.GetInt32(0), sqlDataReader.GetDouble(1), sqlDataReader.GetDouble(2),
-                        sqlDataReader.GetDouble(3), sqlDataReader.GetDouble(4), sqlDataReader.GetDouble(5), sqlDataReader.GetDouble(6), sqlDataReader.GetDouble(7),
-                        sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13));
+                       sqlDataReader.GetDouble(3), sqlDataReader.GetDouble(4), sqlDataReader.GetDouble(5), sqlDataReader.GetDouble(6), sqlDataReader.GetDouble(7),
+                       sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13), sqlDataReader.GetBoolean(14));
                 list.Add(result);
             }
             sqlConnection.Close();
@@ -167,8 +167,8 @@ namespace MayNapKhiTPA.Models
             while (sqlDataReader.Read())
             {
                 Result result = new Result(sqlDataReader.GetInt32(0), sqlDataReader.GetDouble(1), sqlDataReader.GetDouble(2),
-                        sqlDataReader.GetDouble(3), sqlDataReader.GetDouble(4), sqlDataReader.GetDouble(5), sqlDataReader.GetDouble(6), sqlDataReader.GetDouble(7),
-                        sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13));
+                       sqlDataReader.GetDouble(3), sqlDataReader.GetDouble(4), sqlDataReader.GetDouble(5), sqlDataReader.GetDouble(6), sqlDataReader.GetDouble(7),
+                       sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13), sqlDataReader.GetBoolean(14));
                 list.Add(result);
             }
             sqlConnection.Close();
@@ -209,7 +209,7 @@ namespace MayNapKhiTPA.Models
             {
                 Result result = new Result(sqlDataReader.GetInt32(0), sqlDataReader.GetDouble(1), sqlDataReader.GetDouble(2),
                         sqlDataReader.GetDouble(3), sqlDataReader.GetDouble(4), sqlDataReader.GetDouble(5), sqlDataReader.GetDouble(6), sqlDataReader.GetDouble(7),
-                        sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13));
+                        sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13), sqlDataReader.GetBoolean(14));
                 list.Add(result);
             }
             sqlConnection.Close();
@@ -249,8 +249,8 @@ namespace MayNapKhiTPA.Models
             while (sqlDataReader.Read())
             {
                 Result result = new Result(sqlDataReader.GetInt32(0), sqlDataReader.GetDouble(1), sqlDataReader.GetDouble(2),
-                        sqlDataReader.GetDouble(3), sqlDataReader.GetDouble(4), sqlDataReader.GetDouble(5), sqlDataReader.GetDouble(6), sqlDataReader.GetDouble(7),
-                        sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13));
+                       sqlDataReader.GetDouble(3), sqlDataReader.GetDouble(4), sqlDataReader.GetDouble(5), sqlDataReader.GetDouble(6), sqlDataReader.GetDouble(7),
+                       sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13), sqlDataReader.GetBoolean(14));
                 list.Add(result);
             }
             sqlConnection.Close();
@@ -291,8 +291,8 @@ namespace MayNapKhiTPA.Models
             while (sqlDataReader.Read())
             {
                 Result result = new Result(sqlDataReader.GetInt32(0), sqlDataReader.GetDouble(1), sqlDataReader.GetDouble(2),
-                        sqlDataReader.GetDouble(3), sqlDataReader.GetDouble(4), sqlDataReader.GetDouble(5), sqlDataReader.GetDouble(6), sqlDataReader.GetDouble(7),
-                        sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13));
+                       sqlDataReader.GetDouble(3), sqlDataReader.GetDouble(4), sqlDataReader.GetDouble(5), sqlDataReader.GetDouble(6), sqlDataReader.GetDouble(7),
+                       sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13), sqlDataReader.GetBoolean(14));
                 list.Add(result);
             }
             sqlConnection.Close();
@@ -334,7 +334,7 @@ namespace MayNapKhiTPA.Models
             {
                 Result result = new Result(sqlDataReader.GetInt32(0), sqlDataReader.GetDouble(1), sqlDataReader.GetDouble(2),
                         sqlDataReader.GetDouble(3), sqlDataReader.GetDouble(4), sqlDataReader.GetDouble(5), sqlDataReader.GetDouble(6), sqlDataReader.GetDouble(7),
-                        sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13));
+                        sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13), sqlDataReader.GetBoolean(14));
                 list.Add(result);
             }
             sqlConnection.Close();
@@ -376,8 +376,8 @@ namespace MayNapKhiTPA.Models
             while (sqlDataReader.Read())
             {
                 Result result = new Result(sqlDataReader.GetInt32(0), sqlDataReader.GetDouble(1), sqlDataReader.GetDouble(2),
-                        sqlDataReader.GetDouble(3), sqlDataReader.GetDouble(4), sqlDataReader.GetDouble(5), sqlDataReader.GetDouble(6), sqlDataReader.GetDouble(7),
-                        sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13));
+                       sqlDataReader.GetDouble(3), sqlDataReader.GetDouble(4), sqlDataReader.GetDouble(5), sqlDataReader.GetDouble(6), sqlDataReader.GetDouble(7),
+                       sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13), sqlDataReader.GetBoolean(14));
                 list.Add(result);
             }
             sqlConnection.Close();
@@ -418,7 +418,7 @@ namespace MayNapKhiTPA.Models
             {
                 Result result = new Result(sqlDataReader.GetInt32(0), sqlDataReader.GetDouble(1), sqlDataReader.GetDouble(2),
                         sqlDataReader.GetDouble(3), sqlDataReader.GetDouble(4), sqlDataReader.GetDouble(5), sqlDataReader.GetDouble(6), sqlDataReader.GetDouble(7),
-                        sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13));
+                        sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13), sqlDataReader.GetBoolean(14));
                 list.Add(result);
             }
             sqlConnection.Close();
@@ -460,7 +460,7 @@ namespace MayNapKhiTPA.Models
             {
                 Result result = new Result(sqlDataReader.GetInt32(0), sqlDataReader.GetDouble(1), sqlDataReader.GetDouble(2),
                         sqlDataReader.GetDouble(3), sqlDataReader.GetDouble(4), sqlDataReader.GetDouble(5), sqlDataReader.GetDouble(6), sqlDataReader.GetDouble(7),
-                        sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13));
+                        sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13), sqlDataReader.GetBoolean(14));
                 list.Add(result);
             }
             sqlConnection.Close();
@@ -502,8 +502,8 @@ namespace MayNapKhiTPA.Models
             while (sqlDataReader.Read())
             {
                 Result result = new Result(sqlDataReader.GetInt32(0), sqlDataReader.GetDouble(1), sqlDataReader.GetDouble(2),
-                        sqlDataReader.GetDouble(3), sqlDataReader.GetDouble(4), sqlDataReader.GetDouble(5), sqlDataReader.GetDouble(6), sqlDataReader.GetDouble(7),
-                        sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13));
+                       sqlDataReader.GetDouble(3), sqlDataReader.GetDouble(4), sqlDataReader.GetDouble(5), sqlDataReader.GetDouble(6), sqlDataReader.GetDouble(7),
+                       sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13), sqlDataReader.GetBoolean(14));
                 list.Add(result);
             }
             sqlConnection.Close();
@@ -546,7 +546,7 @@ namespace MayNapKhiTPA.Models
             {
                 Result result = new Result(sqlDataReader.GetInt32(0), sqlDataReader.GetDouble(1), sqlDataReader.GetDouble(2),
                         sqlDataReader.GetDouble(3), sqlDataReader.GetDouble(4), sqlDataReader.GetDouble(5), sqlDataReader.GetDouble(6), sqlDataReader.GetDouble(7),
-                        sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13));
+                        sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13), sqlDataReader.GetBoolean(14));
                 list.Add(result);
             }
             sqlConnection.Close();
@@ -588,8 +588,8 @@ namespace MayNapKhiTPA.Models
             while (sqlDataReader.Read())
             {
                 Result result = new Result(sqlDataReader.GetInt32(0), sqlDataReader.GetDouble(1), sqlDataReader.GetDouble(2),
-                        sqlDataReader.GetDouble(3), sqlDataReader.GetDouble(4), sqlDataReader.GetDouble(5), sqlDataReader.GetDouble(6), sqlDataReader.GetDouble(7),
-                        sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13));
+                         sqlDataReader.GetDouble(3), sqlDataReader.GetDouble(4), sqlDataReader.GetDouble(5), sqlDataReader.GetDouble(6), sqlDataReader.GetDouble(7),
+                         sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13), sqlDataReader.GetBoolean(14));
                 list.Add(result);
             }
             sqlConnection.Close();
@@ -632,7 +632,7 @@ namespace MayNapKhiTPA.Models
             {
                 Result result = new Result(sqlDataReader.GetInt32(0), sqlDataReader.GetDouble(1), sqlDataReader.GetDouble(2),
                         sqlDataReader.GetDouble(3), sqlDataReader.GetDouble(4), sqlDataReader.GetDouble(5), sqlDataReader.GetDouble(6), sqlDataReader.GetDouble(7),
-                        sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13));
+                        sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13), sqlDataReader.GetBoolean(14));
                 list.Add(result);
             }
             sqlConnection.Close();
@@ -674,8 +674,8 @@ namespace MayNapKhiTPA.Models
             while (sqlDataReader.Read())
             {
                 Result result = new Result(sqlDataReader.GetInt32(0), sqlDataReader.GetDouble(1), sqlDataReader.GetDouble(2),
-                        sqlDataReader.GetDouble(3), sqlDataReader.GetDouble(4), sqlDataReader.GetDouble(5), sqlDataReader.GetDouble(6), sqlDataReader.GetDouble(7),
-                        sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13));
+                         sqlDataReader.GetDouble(3), sqlDataReader.GetDouble(4), sqlDataReader.GetDouble(5), sqlDataReader.GetDouble(6), sqlDataReader.GetDouble(7),
+                         sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13), sqlDataReader.GetBoolean(14));
                 list.Add(result);
             }
             sqlConnection.Close();
@@ -718,7 +718,7 @@ namespace MayNapKhiTPA.Models
             {
                 Result result = new Result(sqlDataReader.GetInt32(0), sqlDataReader.GetDouble(1), sqlDataReader.GetDouble(2),
                         sqlDataReader.GetDouble(3), sqlDataReader.GetDouble(4), sqlDataReader.GetDouble(5), sqlDataReader.GetDouble(6), sqlDataReader.GetDouble(7),
-                        sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13));
+                        sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13), sqlDataReader.GetBoolean(14));
                 list.Add(result);
             }
             sqlConnection.Close();
@@ -760,8 +760,8 @@ namespace MayNapKhiTPA.Models
             while (sqlDataReader.Read())
             {
                 Result result = new Result(sqlDataReader.GetInt32(0), sqlDataReader.GetDouble(1), sqlDataReader.GetDouble(2),
-                        sqlDataReader.GetDouble(3), sqlDataReader.GetDouble(4), sqlDataReader.GetDouble(5), sqlDataReader.GetDouble(6), sqlDataReader.GetDouble(7),
-                        sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13));
+                          sqlDataReader.GetDouble(3), sqlDataReader.GetDouble(4), sqlDataReader.GetDouble(5), sqlDataReader.GetDouble(6), sqlDataReader.GetDouble(7),
+                          sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13), sqlDataReader.GetBoolean(14));
                 list.Add(result);
             }
             sqlConnection.Close();
@@ -803,8 +803,8 @@ namespace MayNapKhiTPA.Models
             while (sqlDataReader.Read())
             {
                 Result result = new Result(sqlDataReader.GetInt32(0), sqlDataReader.GetDouble(1), sqlDataReader.GetDouble(2),
-                        sqlDataReader.GetDouble(3), sqlDataReader.GetDouble(4), sqlDataReader.GetDouble(5), sqlDataReader.GetDouble(6), sqlDataReader.GetDouble(7),
-                        sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13));
+                       sqlDataReader.GetDouble(3), sqlDataReader.GetDouble(4), sqlDataReader.GetDouble(5), sqlDataReader.GetDouble(6), sqlDataReader.GetDouble(7),
+                       sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13), sqlDataReader.GetBoolean(14));
                 list.Add(result);
             }
             sqlConnection.Close();
@@ -845,8 +845,8 @@ namespace MayNapKhiTPA.Models
             while (sqlDataReader.Read())
             {
                 Result result = new Result(sqlDataReader.GetInt32(0), sqlDataReader.GetDouble(1), sqlDataReader.GetDouble(2),
-                        sqlDataReader.GetDouble(3), sqlDataReader.GetDouble(4), sqlDataReader.GetDouble(5), sqlDataReader.GetDouble(6), sqlDataReader.GetDouble(7),
-                        sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13));
+                       sqlDataReader.GetDouble(3), sqlDataReader.GetDouble(4), sqlDataReader.GetDouble(5), sqlDataReader.GetDouble(6), sqlDataReader.GetDouble(7),
+                       sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13), sqlDataReader.GetBoolean(14));
                 list.Add(result);
             }
             sqlConnection.Close();
@@ -888,7 +888,7 @@ namespace MayNapKhiTPA.Models
             {
                 Result result = new Result(sqlDataReader.GetInt32(0), sqlDataReader.GetDouble(1), sqlDataReader.GetDouble(2),
                         sqlDataReader.GetDouble(3), sqlDataReader.GetDouble(4), sqlDataReader.GetDouble(5), sqlDataReader.GetDouble(6), sqlDataReader.GetDouble(7),
-                        sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13));
+                        sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13), sqlDataReader.GetBoolean(14));
                 list.Add(result);
             }
             sqlConnection.Close();
@@ -929,8 +929,8 @@ namespace MayNapKhiTPA.Models
             while (sqlDataReader.Read())
             {
                 Result result = new Result(sqlDataReader.GetInt32(0), sqlDataReader.GetDouble(1), sqlDataReader.GetDouble(2),
-                        sqlDataReader.GetDouble(3), sqlDataReader.GetDouble(4), sqlDataReader.GetDouble(5), sqlDataReader.GetDouble(6), sqlDataReader.GetDouble(7),
-                        sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13));
+                       sqlDataReader.GetDouble(3), sqlDataReader.GetDouble(4), sqlDataReader.GetDouble(5), sqlDataReader.GetDouble(6), sqlDataReader.GetDouble(7),
+                       sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13), sqlDataReader.GetBoolean(14));
                 list.Add(result);
             }
             sqlConnection.Close();
@@ -973,8 +973,8 @@ namespace MayNapKhiTPA.Models
             while (sqlDataReader.Read())
             {
                 Result result = new Result(sqlDataReader.GetInt32(0), sqlDataReader.GetDouble(1), sqlDataReader.GetDouble(2),
-                        sqlDataReader.GetDouble(3), sqlDataReader.GetDouble(4), sqlDataReader.GetDouble(5), sqlDataReader.GetDouble(6), sqlDataReader.GetDouble(7),
-                        sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13));
+                       sqlDataReader.GetDouble(3), sqlDataReader.GetDouble(4), sqlDataReader.GetDouble(5), sqlDataReader.GetDouble(6), sqlDataReader.GetDouble(7),
+                       sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13), sqlDataReader.GetBoolean(14));
                 list.Add(result);
             }
             sqlConnection.Close();
@@ -1015,8 +1015,8 @@ namespace MayNapKhiTPA.Models
             while (sqlDataReader.Read())
             {
                 Result result = new Result(sqlDataReader.GetInt32(0), sqlDataReader.GetDouble(1), sqlDataReader.GetDouble(2),
-                        sqlDataReader.GetDouble(3), sqlDataReader.GetDouble(4), sqlDataReader.GetDouble(5), sqlDataReader.GetDouble(6), sqlDataReader.GetDouble(7),
-                        sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13));
+                      sqlDataReader.GetDouble(3), sqlDataReader.GetDouble(4), sqlDataReader.GetDouble(5), sqlDataReader.GetDouble(6), sqlDataReader.GetDouble(7),
+                      sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13), sqlDataReader.GetBoolean(14));
                 list.Add(result);
             }
             sqlConnection.Close();
@@ -1059,8 +1059,8 @@ namespace MayNapKhiTPA.Models
             while (sqlDataReader.Read())
             {
                 Result result = new Result(sqlDataReader.GetInt32(0), sqlDataReader.GetDouble(1), sqlDataReader.GetDouble(2),
-                        sqlDataReader.GetDouble(3), sqlDataReader.GetDouble(4), sqlDataReader.GetDouble(5), sqlDataReader.GetDouble(6), sqlDataReader.GetDouble(7),
-                        sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13));
+                      sqlDataReader.GetDouble(3), sqlDataReader.GetDouble(4), sqlDataReader.GetDouble(5), sqlDataReader.GetDouble(6), sqlDataReader.GetDouble(7),
+                      sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13), sqlDataReader.GetBoolean(14));
                 list.Add(result);
             }
             sqlConnection.Close();
@@ -1101,8 +1101,8 @@ namespace MayNapKhiTPA.Models
             while (sqlDataReader.Read())
             {
                 Result result = new Result(sqlDataReader.GetInt32(0), sqlDataReader.GetDouble(1), sqlDataReader.GetDouble(2),
-                        sqlDataReader.GetDouble(3), sqlDataReader.GetDouble(4), sqlDataReader.GetDouble(5), sqlDataReader.GetDouble(6), sqlDataReader.GetDouble(7),
-                        sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13));
+                       sqlDataReader.GetDouble(3), sqlDataReader.GetDouble(4), sqlDataReader.GetDouble(5), sqlDataReader.GetDouble(6), sqlDataReader.GetDouble(7),
+                       sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13), sqlDataReader.GetBoolean(14));
                 list.Add(result);
             }
             sqlConnection.Close();
@@ -1144,8 +1144,8 @@ namespace MayNapKhiTPA.Models
             while (sqlDataReader.Read())
             {
                 Result result = new Result(sqlDataReader.GetInt32(0), sqlDataReader.GetDouble(1), sqlDataReader.GetDouble(2),
-                        sqlDataReader.GetDouble(3), sqlDataReader.GetDouble(4), sqlDataReader.GetDouble(5), sqlDataReader.GetDouble(6), sqlDataReader.GetDouble(7),
-                        sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13));
+                      sqlDataReader.GetDouble(3), sqlDataReader.GetDouble(4), sqlDataReader.GetDouble(5), sqlDataReader.GetDouble(6), sqlDataReader.GetDouble(7),
+                      sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13), sqlDataReader.GetBoolean(14));
                 list.Add(result);
             }
             sqlConnection.Close();
@@ -1188,8 +1188,8 @@ namespace MayNapKhiTPA.Models
             while (sqlDataReader.Read())
             {
                 Result result = new Result(sqlDataReader.GetInt32(0), sqlDataReader.GetDouble(1), sqlDataReader.GetDouble(2),
-                        sqlDataReader.GetDouble(3), sqlDataReader.GetDouble(4), sqlDataReader.GetDouble(5), sqlDataReader.GetDouble(6), sqlDataReader.GetDouble(7),
-                        sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13));
+                       sqlDataReader.GetDouble(3), sqlDataReader.GetDouble(4), sqlDataReader.GetDouble(5), sqlDataReader.GetDouble(6), sqlDataReader.GetDouble(7),
+                       sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13), sqlDataReader.GetBoolean(14));
                 list.Add(result);
             }
             sqlConnection.Close();
@@ -1231,8 +1231,8 @@ namespace MayNapKhiTPA.Models
             while (sqlDataReader.Read())
             {
                 Result result = new Result(sqlDataReader.GetInt32(0), sqlDataReader.GetDouble(1), sqlDataReader.GetDouble(2),
-                        sqlDataReader.GetDouble(3), sqlDataReader.GetDouble(4), sqlDataReader.GetDouble(5), sqlDataReader.GetDouble(6), sqlDataReader.GetDouble(7),
-                        sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13));
+                       sqlDataReader.GetDouble(3), sqlDataReader.GetDouble(4), sqlDataReader.GetDouble(5), sqlDataReader.GetDouble(6), sqlDataReader.GetDouble(7),
+                       sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13), sqlDataReader.GetBoolean(14));
                 list.Add(result);
             }
             sqlConnection.Close();
@@ -1275,7 +1275,7 @@ namespace MayNapKhiTPA.Models
             {
                 Result result = new Result(sqlDataReader.GetInt32(0), sqlDataReader.GetDouble(1), sqlDataReader.GetDouble(2),
                         sqlDataReader.GetDouble(3), sqlDataReader.GetDouble(4), sqlDataReader.GetDouble(5), sqlDataReader.GetDouble(6), sqlDataReader.GetDouble(7),
-                        sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13));
+                        sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13), sqlDataReader.GetBoolean(14));
                 list.Add(result);
             }
             sqlConnection.Close();
@@ -1316,8 +1316,8 @@ namespace MayNapKhiTPA.Models
             while (sqlDataReader.Read())
             {
                 Result result = new Result(sqlDataReader.GetInt32(0), sqlDataReader.GetDouble(1), sqlDataReader.GetDouble(2),
-                        sqlDataReader.GetDouble(3), sqlDataReader.GetDouble(4), sqlDataReader.GetDouble(5), sqlDataReader.GetDouble(6), sqlDataReader.GetDouble(7),
-                        sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13));
+                       sqlDataReader.GetDouble(3), sqlDataReader.GetDouble(4), sqlDataReader.GetDouble(5), sqlDataReader.GetDouble(6), sqlDataReader.GetDouble(7),
+                       sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13), sqlDataReader.GetBoolean(14));
                 list.Add(result);
             }
             sqlConnection.Close();
@@ -1358,8 +1358,8 @@ namespace MayNapKhiTPA.Models
             while (sqlDataReader.Read())
             {
                 Result result = new Result(sqlDataReader.GetInt32(0), sqlDataReader.GetDouble(1), sqlDataReader.GetDouble(2),
-                        sqlDataReader.GetDouble(3), sqlDataReader.GetDouble(4), sqlDataReader.GetDouble(5), sqlDataReader.GetDouble(6), sqlDataReader.GetDouble(7),
-                        sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13));
+                       sqlDataReader.GetDouble(3), sqlDataReader.GetDouble(4), sqlDataReader.GetDouble(5), sqlDataReader.GetDouble(6), sqlDataReader.GetDouble(7),
+                       sqlDataReader.GetDouble(8), sqlDataReader.GetDouble(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11), sqlDataReader.GetString(12), sqlDataReader.GetString(13), sqlDataReader.GetBoolean(14));
                 list.Add(result);
             }
             sqlConnection.Close();

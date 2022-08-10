@@ -98,7 +98,8 @@ TimeStart DATETIME DEFAULT GETDATE(),
 TimeEnd DATETIME DEFAULT GETDATE(),
 NameMachine nvarchar(100),
 --worker là username của user
-Worker nvarchar(100)
+Worker nvarchar(100),
+[Status] bit default 0
 )
 GO
 
@@ -950,7 +951,7 @@ GO
 
 --Update Result (TimeEnd = last update) (auto update from data)
 CREATE PROC UpdateResult
-@ID_Result int
+@ID_Result int , @Status bit
 as begin 
 --neu ton tai id_result nay thi cap nhat
 if(exists(select * from Result where ID_Result = @ID_Result))
@@ -975,7 +976,7 @@ Declare @LuuLuongAvg FLOAT;
 select @LuuLuongAvg = AVG([Data].LuuLuong) from [Data] where ID_Result = @ID_Result;
 
 Update Result Set ApSuatMin = @ApSuatMin, ApSuatMax = @ApSuatMax, ApSuatAvg = ROUND( @ApSuatAvg,2), TheTichMin = @TheTichMin, TheTichMax = @TheTichMax,
-TheTichAvg = ROUND(@TheTichAvg,2),  LuuLuongMin = @LuuLuongMin, LuuLuongMax = @LuuLuongMax, LuuLuongAvg = ROUND(@LuuLuongAvg,2), TimeEnd = GETDATE() Where ID_Result = @ID_Result;
+TheTichAvg = ROUND(@TheTichAvg,2),  LuuLuongMin = @LuuLuongMin, LuuLuongMax = @LuuLuongMax, LuuLuongAvg = ROUND(@LuuLuongAvg,2), TimeEnd = GETDATE(), [Status] = @Status Where ID_Result = @ID_Result;
 end
 end
 GO

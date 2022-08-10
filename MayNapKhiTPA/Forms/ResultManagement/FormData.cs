@@ -14,10 +14,14 @@ namespace MayNapKhiTPA.Forms
 {
     public partial class FormData : Form
     {
+
+        int id_result_search_current = 0;
+
         public FormData()
         {
             InitializeComponent();
             dataGridViewSearchData.RowTemplate.Height = 35;
+            buttonUpdate.Enabled = false;
         }
 
         private void LoadDataGridView(List<Data> list)
@@ -44,20 +48,23 @@ namespace MayNapKhiTPA.Forms
             dataGridViewSearchData.DataSource = dt;
         }
 
-        private void LoadInfo(string id_result, string timeStart, string timeEnd, string nameMachine, string nameUser, string status)
+        private void LoadInfo(string id_result, string timeStart, string timeEnd, string nameMachine, string nameUser, string apSuatTB, string theTichTB, string luuLuongTB, string status)
         {
-            labelMaMe.Text = "- Mã mẻ: " + id_result +".";
-            labelNgayBatDau.Text = "- Thời gian bắt đầu : " + timeStart+".";
-            labelNgayKetThuc.Text = "- Thời gian kết thúc : " + timeEnd+".";
-            labelMachine.Text = "- Máy thực hiện : " + nameMachine+".";
-            labelFullNameUser.Text = "- Người thực hiện : " + nameUser+".";
-            labelStatus.Text = "- Trạng thái : " + status+".";
+            labelMaMe.Text = "- Mã mẻ: " + id_result;
+            labelNgayBatDau.Text = "- Thời gian bắt đầu : " + timeStart;
+            labelNgayKetThuc.Text = "- Thời gian kết thúc : " + timeEnd;
+            labelMachine.Text = "- Máy thực hiện : " + nameMachine;
+            labelFullNameUser.Text = "- Người thực hiện : " + nameUser;
+            labelApSuatTB.Text = "- Áp suất trung bình : " + apSuatTB;
+            labelTheTichTB.Text = "- Thể tích trung bình : " + theTichTB;
+            labelLuuLuongTB.Text = "- Lưu lượng trung bình : " + luuLuongTB;
+            labelStatus.Text = "- Trạng thái : " + status;
         }
 
         //đang làm dở
         private void LoadForm()
         {
-            if (String.IsNullOrEmpty(textBoxIDResult.Texts) == false && textBoxIDResult.Texts != textBoxIDResult.PlaceholderText && int.Parse(textBoxIDResult.Texts)>0)
+            if (String.IsNullOrEmpty(textBoxIDResult.Texts) == false && textBoxIDResult.Texts != textBoxIDResult.PlaceholderText && int.Parse(textBoxIDResult.Texts) > 0)
             {
                 int IDResult = int.Parse(textBoxIDResult.Texts);
 
@@ -66,13 +73,15 @@ namespace MayNapKhiTPA.Forms
                 {
                     string TimeStart = result.TimeStart.ToString("hh:mm:ss dd/MM/yyyy", CultureInfo.InvariantCulture);
                     string TimeEnd = result.TimeEnd.ToString("hh:mm:ss dd/MM/yyyy", CultureInfo.InvariantCulture);
-                    if (TimeStart == TimeEnd)
+                    if (result.Status == false)
                     {
-                        LoadInfo(result.ID_Result.ToString(), TimeStart, "Chưa có", result.NameMachine, result.Worker, "Chưa hoàn thành");
+                        LoadInfo(result.ID_Result.ToString(), TimeStart, "Chưa có", result.NameMachine, result.Worker, "Chưa có", "Chưa có", "Chưa có", "Chưa hoàn thành");
+                        buttonUpdate.Enabled = true;
+                        this.id_result_search_current = result.ID_Result;
                     }
                     else
                     {
-                        LoadInfo(result.ID_Result.ToString(), TimeStart, TimeEnd, result.NameMachine, result.Worker, "Đã hoàn thành");
+                        LoadInfo(result.ID_Result.ToString(), TimeStart, TimeEnd, result.NameMachine, result.Worker, result.ApSuatAvg.ToString(), result.TheTichAvg.ToString(), result.LuuLuongAvg.ToString(), "Đã hoàn thành");
                     }
                     LoadDataGridView(DataBusiness.GetAllDatasByIDResult(IDResult));
                 }
@@ -131,6 +140,41 @@ namespace MayNapKhiTPA.Forms
             if (e.KeyChar == 8 || e.KeyChar == 46)
             {
                 e.Handled = false;
+            }
+        }
+
+        private void buttonUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if(this.id_result_search_current != 0)
+                {
+                    ResultBusiness.UpdateResult(this.id_result_search_current, true);
+                    Result result = ResultBusiness.GetResultFromID(this.id_result_search_current);
+                    if (result != null)
+                    {
+                        string TimeStart = result.TimeStart.ToString("hh:mm:ss dd/MM/yyyy", CultureInfo.InvariantCulture);
+                        string TimeEnd = result.TimeEnd.ToString("hh:mm:ss dd/MM/yyyy", CultureInfo.InvariantCulture);
+                        if (result.Status == false)
+                        {
+                            LoadInfo(result.ID_Result.ToString(), TimeStart, "Chưa có", result.NameMachine, result.Worker, "Chưa có", "Chưa có", "Chưa có", "Chưa hoàn thành");
+                        }
+                        else
+                        {
+                            LoadInfo(result.ID_Result.ToString(), TimeStart, TimeEnd, result.NameMachine, result.Worker, result.ApSuatAvg.ToString(), result.TheTichAvg.ToString(), result.LuuLuongAvg.ToString(), "Đã hoàn thành");
+                        }
+                        LoadDataGridView(DataBusiness.GetAllDatasByIDResult(this.id_result_search_current));
+                    }
+                    else
+                    {
+                        //alert
+                        MessageBox.Show("Mã mẻ này không tồn tại.", "Lỗi!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Cập nhật dữ liệu không thành công.", "Lỗi hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

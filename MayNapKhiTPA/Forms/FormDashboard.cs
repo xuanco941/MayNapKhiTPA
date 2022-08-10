@@ -156,7 +156,7 @@ namespace MayNapKhiTPA.Forms
                 if (Common.IsMachine1Running == true)
                 {
                     //update
-                    ResultBusiness.UpdateResult(Common.dataMachine1.ID_Result);
+                    ResultBusiness.UpdateResult(Common.dataMachine1.ID_Result,true);
                     //Stop timer machine 1
                     Common.timer.ClearTimeMachine1();
 
@@ -211,7 +211,7 @@ namespace MayNapKhiTPA.Forms
                 if (Common.IsMachine2Running == true)
                 {
                     //update
-                    ResultBusiness.UpdateResult(Common.dataMachine2.ID_Result);
+                    ResultBusiness.UpdateResult(Common.dataMachine2.ID_Result,true);
                     //delete timer
                     Common.timer.ClearTimeMachine2();
 
