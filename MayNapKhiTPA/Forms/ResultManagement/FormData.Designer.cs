@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormData));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormData));
             this.panelSearchData = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -46,6 +46,7 @@
             this.labelNgayKetThuc = new System.Windows.Forms.Label();
             this.labelNgayBatDau = new System.Windows.Forms.Label();
             this.dataGridViewSearchData = new System.Windows.Forms.DataGridView();
+            this.buttonUpdate = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.panelSearchData.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -76,20 +77,21 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 220F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 270F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(277, 564);
             this.tableLayoutPanel1.TabIndex = 55;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightGray;
+            this.panel1.Controls.Add(this.buttonUpdate);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.textBoxIDResult);
             this.panel1.Controls.Add(this.buttonViewDetsil);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(4, 346);
+            this.panel1.Location = new System.Drawing.Point(4, 296);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(269, 214);
+            this.panel1.Size = new System.Drawing.Size(269, 264);
             this.panel1.TabIndex = 57;
             // 
             // label1
@@ -143,7 +145,7 @@
             this.buttonViewDetsil.ForeColor = System.Drawing.Color.Black;
             this.buttonViewDetsil.Image = ((System.Drawing.Image)(resources.GetObject("buttonViewDetsil.Image")));
             this.buttonViewDetsil.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonViewDetsil.Location = new System.Drawing.Point(74, 103);
+            this.buttonViewDetsil.Location = new System.Drawing.Point(72, 98);
             this.buttonViewDetsil.Name = "buttonViewDetsil";
             this.buttonViewDetsil.Size = new System.Drawing.Size(132, 32);
             this.buttonViewDetsil.TabIndex = 52;
@@ -168,7 +170,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.LightGray;
             this.groupBox1.Location = new System.Drawing.Point(4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(269, 335);
+            this.groupBox1.Size = new System.Drawing.Size(269, 285);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin";
@@ -273,6 +275,31 @@
             this.dataGridViewSearchData.Size = new System.Drawing.Size(729, 564);
             this.dataGridViewSearchData.TabIndex = 3;
             // 
+            // buttonUpdate
+            // 
+            this.buttonUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonUpdate.BackColor = System.Drawing.Color.Goldenrod;
+            this.buttonUpdate.BackgroundColor = System.Drawing.Color.Goldenrod;
+            this.buttonUpdate.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonUpdate.BorderRadius = 3;
+            this.buttonUpdate.BorderSize = 0;
+            this.buttonUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonUpdate.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.buttonUpdate.ForeColor = System.Drawing.Color.Black;
+            this.buttonUpdate.Image = ((System.Drawing.Image)(resources.GetObject("buttonUpdate.Image")));
+            this.buttonUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonUpdate.Location = new System.Drawing.Point(72, 140);
+            this.buttonUpdate.Name = "buttonUpdate";
+            this.buttonUpdate.Size = new System.Drawing.Size(132, 32);
+            this.buttonUpdate.TabIndex = 54;
+            this.buttonUpdate.Text = "Cập nhật";
+            this.buttonUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonUpdate.TextColor = System.Drawing.Color.Black;
+            this.buttonUpdate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonUpdate.UseVisualStyleBackColor = false;
+            // 
             // FormData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -311,5 +338,6 @@
         private System.Windows.Forms.Label labelMaMe;
         private System.Windows.Forms.Label labelStatus;
         private System.Windows.Forms.Label label1;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonUpdate;
     }
 }

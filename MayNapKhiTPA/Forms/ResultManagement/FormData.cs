@@ -73,8 +73,8 @@ namespace MayNapKhiTPA.Forms
                     else
                     {
                         LoadInfo(result.ID_Result.ToString(), TimeStart, TimeEnd, result.NameMachine, result.Worker, "Đã hoàn thành");
-                        LoadDataGridView(DataBusiness.GetAllDatasByIDResult(IDResult));
                     }
+                    LoadDataGridView(DataBusiness.GetAllDatasByIDResult(IDResult));
                 }
                 else
                 {

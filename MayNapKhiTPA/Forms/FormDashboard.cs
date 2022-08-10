@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MayNapKhiTPA.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,7 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ZedGraph;
-
 namespace MayNapKhiTPA.Forms
 {
     public partial class FormDashboard : Form
@@ -20,12 +20,7 @@ namespace MayNapKhiTPA.Forms
         public CallAlert callAlert;
 
         //x
-        string[] x = { "14 giây", "12 giây", "10 giây", "8 giây", "6 giây", "4 giây", "2 giây" };
-
-        double[] yApSuat1 = { 0, 0, 0, 0, 0, 0, 0 };
-        double[] yTheTich1 = { 0, 0, 0, 0, 0, 0, 0 };
-        double[] yApSuat2 = { 0, 0, 0, 0, 0, 0, 0 };
-        double[] yTheTich2 = { 0, 0, 0, 0, 0, 0, 0 };
+        string[] x = { "60 giây", "50 giây", "40 giây", "30 giây", "20 giây", "10 giây", "1 giây" };
 
         //name label
         string labelApSuat = "Áp suất";
@@ -34,14 +29,31 @@ namespace MayNapKhiTPA.Forms
         {
             InitializeComponent();
 
-            // tạo các chart rỗng
-            double[] y = { 0, 0, 0, 0, 0, 0, 0 };
+            CreateChart(zedGraphControlApSuat1, "Biểu Đồ Áp Suất", x, labelApSuat, Common.chartDataApSuatMachine1);
+            CreateChart(zedGraphControlTheTich1, "Biểu Đồ Thể tích", x, labelTheTich, Common.chartDataTheTichMachine1);
+            CreateChart(zedGraphControlApSuat2, "Biểu Đồ Áp Suất", x, labelApSuat, Common.chartDataApSuatMachine2);
+            CreateChart(zedGraphControlTheTich2, "Biểu Đồ Thể tích", x, labelTheTich, Common.chartDataTheTichMachine2);
 
-            CreateChart(zedGraphControlApSuat1, "Biểu Đồ Áp Suất", x, labelApSuat, y);
-            CreateChart(zedGraphControlTheTich1, "Biểu Đồ Thể tích", x, labelTheTich, y);
-            CreateChart(zedGraphControlApSuat2, "Biểu Đồ Áp Suất", x, labelApSuat, y);
-            CreateChart(zedGraphControlTheTich2, "Biểu Đồ Thể tích", x, labelTheTich, y);
 
+            //check btn start, end
+            if (Common.IsMachine1Running == true)
+            {
+                buttonStartMachine1.Enabled = false;
+            }
+            else
+            {
+                buttonStartMachine1.Enabled = true;
+            }
+
+            if (Common.IsMachine2Running == true)
+            {
+                buttonStartMachine2.Enabled = false;
+            }
+            else
+            {
+                buttonStartMachine2.Enabled = true;
+            }
+            //start timer
             timer1.Start();
 
         }
@@ -68,7 +80,7 @@ namespace MayNapKhiTPA.Forms
             zedGraphControl.GraphPane.Title.Text = title;
 
             // thêm 1 line không có dữ liệu
-            LineItem pointsCurve = zedGraphControl.GraphPane.AddCurve(label, null, y, Color.Black);
+            zedGraphControl.GraphPane.AddCurve(label, null, y, Color.Black);
 
             zedGraphControl.GraphPane.AxisChange();
             zedGraphControl.Refresh();
@@ -101,50 +113,34 @@ namespace MayNapKhiTPA.Forms
             zedGraphControl.Refresh();
 
         }
-
-        public double GetRandomNumber(double minimum, double maximum)
-        {
-            Random random = new Random();
-            return random.NextDouble() * (maximum - minimum) + minimum;
-        }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
-            for(int i = 0; i<7; i++)
-            {
-                if (i+1 == 7)
-                {
-                    yApSuat1[i] = GetRandomNumber(23, 96) -33;
-                    yApSuat2[i] = GetRandomNumber(0, 100) +10;
-                    yTheTich1[i] = GetRandomNumber(5, 80) + 1;
-                    yTheTich2[i] = GetRandomNumber(9, 87) +33;
-
-                    continue;
-                }
-                else
-                {
-                    yApSuat1[i] = yApSuat1[i + 1];
-                    yApSuat2[i] = yApSuat2[i + 1];
-                    yTheTich1[i] = yTheTich1[i + 1];
-                    yTheTich2[i] = yTheTich2[i + 1];
-                }
-            }
-
-
-
-            UpdateChart(zedGraphControlApSuat1, labelApSuat, yApSuat1);
-            UpdateChart(zedGraphControlApSuat2, labelApSuat, yApSuat2);
-            UpdateChart(zedGraphControlTheTich1, labelTheTich, yTheTich1);
-            UpdateChart(zedGraphControlTheTich2, labelTheTich, yTheTich2);
-
-
+            UpdateChart(zedGraphControlApSuat1, labelApSuat, Common.chartDataApSuatMachine1);
+            UpdateChart(zedGraphControlTheTich1, labelTheTich, Common.chartDataTheTichMachine1);
+            UpdateChart(zedGraphControlApSuat2, labelApSuat, Common.chartDataApSuatMachine2);
+            UpdateChart(zedGraphControlTheTich2, labelTheTich, Common.chartDataTheTichMachine2);
         }
 
-        private void button40_Click(object sender, EventArgs e)
+        private void buttonStartMachine1_Click(object sender, EventArgs e)
         {
             if (Common.GROUPSESSION.IsControlMachine)
             {
-
+                try
+                {
+                    //Machine 1 is running
+                    Common.IsMachine1Running = true;
+                    //thêm result rỗng và lấy id result đó cho biến data 1
+                    Common.dataMachine1.ID_Result = ResultBusiness.AddResultAndReturnIDResult("Máy 1", Common.USERSESSION.Username);
+                    //bắt đầu lưu dữ liệu 10s/1lần
+                    Common.timer.RunTimerMachine1();
+                    //disabled nút start cho đến khi ấn ngừng nạp
+                    buttonStartMachine1.Enabled = false;
+                    callAlert.Invoke("Máy 1 đã bắt đầu nạp.", FormAlert.enmType.Success);
+                }
+                catch
+                {
+                    callAlert.Invoke("Có lỗi xảy ra khi khởi chạy máy 1.", FormAlert.enmType.Error);
+                }
             }
             else
             {
@@ -152,10 +148,80 @@ namespace MayNapKhiTPA.Forms
             }
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void buttonStopMachine1_Click(object sender, EventArgs e)
         {
             if (Common.GROUPSESSION.IsControlMachine)
             {
+
+                if (Common.IsMachine1Running == true)
+                {
+                    //update
+                    ResultBusiness.UpdateResult(Common.dataMachine1.ID_Result);
+                    //Stop timer machine 1
+                    Common.timer.ClearTimeMachine1();
+
+                    //
+                    Common.IsMachine1Running = false;
+                    buttonStartMachine1.Enabled = true;
+
+                    //
+                    callAlert?.Invoke("Đã ngừng nạp máy 1.", FormAlert.enmType.Success);
+
+                }
+            }
+            else
+            {
+                callAlert?.Invoke("Tài khoản của bạn không có quyền này.", FormAlert.enmType.Info);
+            }
+        }
+
+        private void buttonStartMachine2_Click(object sender, EventArgs e)
+        {
+            if (Common.GROUPSESSION.IsControlMachine)
+            {
+                try
+                {
+                    //Machine 1 is running
+                    Common.IsMachine2Running = true;
+                    //thêm result rỗng và lấy id result đó cho biến data 1
+                    Common.dataMachine2.ID_Result = ResultBusiness.AddResultAndReturnIDResult("Máy 2", Common.USERSESSION.Username);
+                    //Start timer2 save data
+                    Common.timer.RunTimerMachine2();
+
+                    //disabled nút start cho đến khi ấn ngừng nạp
+                    buttonStartMachine2.Enabled = false;
+                    callAlert.Invoke("Máy 2 đã bắt đầu nạp.", FormAlert.enmType.Success);
+                }
+                catch
+                {
+                    callAlert.Invoke("Có lỗi xảy ra khi khởi chạy máy 2.", FormAlert.enmType.Error);
+                }
+                timer1.Start();
+            }
+            else
+            {
+                callAlert?.Invoke("Tài khoản của bạn không có quyền này.", FormAlert.enmType.Info);
+            }
+        }
+
+        private void buttonStopMachine2_Click(object sender, EventArgs e)
+        {
+            if (Common.GROUPSESSION.IsControlMachine)
+            {
+                if (Common.IsMachine2Running == true)
+                {
+                    //update
+                    ResultBusiness.UpdateResult(Common.dataMachine2.ID_Result);
+                    //delete timer
+                    Common.timer.ClearTimeMachine2();
+
+                    //
+                    buttonStartMachine2.Enabled = true;
+                    Common.IsMachine2Running = false;
+
+                    //
+                    callAlert?.Invoke("Đã ngừng nạp máy 2.", FormAlert.enmType.Success);
+                }
 
             }
             else

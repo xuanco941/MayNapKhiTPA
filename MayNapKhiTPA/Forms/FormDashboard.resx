@@ -154,7 +154,7 @@
         gPGKgh7uUv838Xj+AWkwan1q9jKJAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="button39.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="buttonStopMachine1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAu
         IgAALiIBquLdkgAAHvZJREFUeF7VnAd8XXX5xoNsERlFQEFwMMQBCCoKIgoCgsiSAooLWaIUkCHzQwEF
@@ -292,7 +292,7 @@
         yrzvscceu1Q4EaUkL/0xH2lp/wf5HvpIlFfTzwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="button40.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="buttonStartMachine1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAu
         IgAALiIBquLdkgAAFy1JREFUeF7dXAl0VVWWfVa3WtBtDat6re6qcmqrLLAsLUtRLO2yGks7y1ZbRaxW
@@ -588,7 +588,7 @@
         gPGKgh7uUv838Xj+AWkwan1q9jKJAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="button23.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="buttonStopMachine2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAu
         IgAALiIBquLdkgAAHvZJREFUeF7VnAd8XXX5xoNsERlFQEFwMMQBCCoKIgoCgsiSAooLWaIUkCHzQwEF
@@ -726,7 +726,7 @@
         yrzvscceu1Q4EaUkL/0xH2lp/wf5HvpIlFfTzwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="button7.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="buttonStartMachine2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAu
         IgAALiIBquLdkgAAFy1JREFUeF7dXAl0VVWWfVa3WtBtDat6re6qcmqrLLAsLUtRLO2yGks7y1ZbRaxW
@@ -990,7 +990,7 @@
     <value>17, 17</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>25</value>
+    <value>79</value>
   </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

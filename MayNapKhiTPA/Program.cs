@@ -32,9 +32,6 @@ namespace MayNapKhiTPA
                 ResultBusiness.UpdateResult(5);
                 ResultBusiness.UpdateResult(6);
                 ResultBusiness.UpdateResult(7);
-                ResultBusiness.UpdateResult(8);
-                ResultBusiness.UpdateResult(9);
-                ResultBusiness.UpdateResult(10);
 
 
             }

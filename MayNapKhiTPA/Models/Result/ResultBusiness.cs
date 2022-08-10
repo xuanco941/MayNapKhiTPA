@@ -7,24 +7,6 @@ namespace MayNapKhiTPA.Models
 
     public class ResultBusiness
     {
-        public static int AddResultAndReturnIDResult(Result result)
-        {
-            SqlConnection sqlConnection = new SqlConnection(Common.ConnectionString);
-            sqlConnection.Open();
-            SqlCommand command = new SqlCommand();
-            command.CommandText = $"AddResultAndReturnIDResult N'{result.NameMachine}', N'{result.Worker}'";
-            command.Connection = sqlConnection;
-
-            SqlDataReader sqlDataReader = command.ExecuteReader();
-            int num = 0;
-            while (sqlDataReader.Read())
-            {
-                num = sqlDataReader.GetInt32(0);
-            }
-            sqlConnection.Close();
-
-            return num;
-        }
 
         public static List<Result> GetResultFromWorker(string worker)
         {
@@ -129,7 +111,7 @@ namespace MayNapKhiTPA.Models
             int idResult = 0;
             SqlConnection sqlConnection = new SqlConnection(Common.ConnectionString);
             sqlConnection.Open();
-            string sql = $"AddResultAndReturnIDResult N'{nameMachine}', N'{woker}'";
+            string sql = $"exec AddResultAndReturnIDResult N'{nameMachine}', N'{woker}'";
             var command = new SqlCommand(sql, sqlConnection);
             SqlDataReader sqlDataReader = command.ExecuteReader();
             while (sqlDataReader.Read())

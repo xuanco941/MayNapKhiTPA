@@ -121,7 +121,7 @@ GO
 --Add Data
 CREATE PROC AddData @ApSuat FLOAT, @TheTich FLOAT ,@LuuLuong Float, @ID_Result int
 as begin
-insert into [Data] (ApSuat,TheTich,LuuLuong,ID_Result) values (@ApSuat,@TheTich,@LuuLuong,@ID_Result)
+insert into [Data] (ApSuat,TheTich,LuuLuong,ID_Result) values (ROUND( @ApSuat,2),ROUND(@TheTich,2),ROUND(@LuuLuong,2),@ID_Result)
 end
 GO
 
@@ -974,8 +974,8 @@ select @LuuLuongMax = MAX([Data].LuuLuong) from [Data] where ID_Result = @ID_Res
 Declare @LuuLuongAvg FLOAT;
 select @LuuLuongAvg = AVG([Data].LuuLuong) from [Data] where ID_Result = @ID_Result;
 
-Update Result Set ApSuatMin = @ApSuatMin, ApSuatMax = @ApSuatMax, ApSuatAvg = @ApSuatAvg, TheTichMin = @TheTichMin, TheTichMax = @TheTichMax,
-TheTichAvg = @TheTichAvg,  LuuLuongMin = @LuuLuongMin, LuuLuongMax = @LuuLuongMax, LuuLuongAvg = @LuuLuongAvg, TimeEnd = GETDATE() Where ID_Result = @ID_Result;
+Update Result Set ApSuatMin = @ApSuatMin, ApSuatMax = @ApSuatMax, ApSuatAvg = ROUND( @ApSuatAvg,2), TheTichMin = @TheTichMin, TheTichMax = @TheTichMax,
+TheTichAvg = ROUND(@TheTichAvg,2),  LuuLuongMin = @LuuLuongMin, LuuLuongMax = @LuuLuongMax, LuuLuongAvg = ROUND(@LuuLuongAvg,2), TimeEnd = GETDATE() Where ID_Result = @ID_Result;
 end
 end
 GO
@@ -1355,17 +1355,17 @@ exec AddShift N'Ca chieu','11:00:00','12:00:00'
 
 GO
 exec AddGroup N'Quyền Admin',1,1,1,1,1,1,1,1,1,1
-exec AddGroup N'Quyền A',0,1,1,1,1,1,1,1,1,1
+exec AddGroup N'Quyền A',0,1,1,1,1,1,1,0,1,1
 exec AddGroup N'Quyền B',0,1,0,0,0,0,1,1,1,1
 exec AddGroup N'Quyền C',0,1,1,0,0,1,1,1,0,1
 exec AddGroup N'Quyền D',0,1,1,0,0,1,1,1,0,1
-exec AddGroup N'Quyền E',0,1,1,1,1,1,1,1,1,1
-exec AddGroup N'Quyền F',0,1,1,1,1,1,1,1,1,1
-exec AddGroup N'Quyền G',0,1,1,1,1,1,1,1,1,1
+exec AddGroup N'Quyền E',0,1,1,1,1,0,0,1,1,1
+exec AddGroup N'Quyền F',0,1,1,1,1,0,1,0,1,1
+exec AddGroup N'Quyền G',0,1,1,1,1,0,1,0,0,1
 exec AddGroup N'Quyền H',0,1,1,1,1,1,1,1,1,1
-exec AddGroup N'Quyền I',0,1,1,1,1,1,1,1,1,1
-exec AddGroup N'Quyền K',0,1,1,1,1,1,1,1,1,1
-exec AddGroup N'Quyền L',0,1,1,1,1,1,1,1,1,1
+exec AddGroup N'Quyền I',0,1,1,0,1,0,1,0,1,1
+exec AddGroup N'Quyền K',0,1,1,0,1,1,1,0,1,1
+exec AddGroup N'Quyền L',0,1,1,0,1,0,1,0,1,1
 
 
 
@@ -1399,9 +1399,9 @@ exec AddActivity 'Start',0,'admin1'
 Go
 
 exec AddTemplateMachine N'Tùy chỉnh',100,100,60,60
-exec AddTemplateMachine N'Binh 1',342,32,55,43
-exec AddTemplateMachine N'Binh 2',23,56,32,76
-exec AddTemplateMachine N'Binh 3',23,44,55,43
+exec AddTemplateMachine N'Bình 1',342,32,55,43
+exec AddTemplateMachine N'ình 2',23,56,32,76
+exec AddTemplateMachine N'Bình 3',23,44,55,43
 exec AddTemplateMachine N'Binh 4',343,344,55,43
 exec AddTemplateMachine N'Binh 5',45,34,100,43
 exec AddTemplateMachine N'Binh 6',56,398,55,43
@@ -1412,7 +1412,13 @@ GO
 exec AddResultAndReturnIDResult 'Máy 1','admin2'
 GO
 exec AddData 141,113,112,1
-exec AddData 131,163,132,1
+exec AddData 111,173,122,1
+exec AddData 121,133,122,1
+exec AddData 131,163,112,1
+exec AddData 141,113,152,1
+exec AddData 131,163,142,1
+exec AddData 141,123,132,1
+exec AddData 131,133,132,1
 
 GO
 
@@ -1420,10 +1426,110 @@ exec AddResultAndReturnIDResult 'Máy 2','admin'
 GO
 exec AddData 141,113,112,2
 exec AddData 121,143,122,2
+exec AddData 141,113,112,2
+exec AddData 111,173,122,2
+exec AddData 121,133,122,2
+exec AddData 131,163,112,2
+exec AddData 141,113,152,2
+exec AddData 131,163,142,2
+exec AddData 141,123,132,2
+exec AddData 131,133,132,2
 GO
 
-exec AddResultAndReturnIDResult 'Máy 1','admin2'
+exec AddResultAndReturnIDResult 'Máy 2','admin2'
 GO
 exec AddData 141,113,112,3
 exec AddData 111,143,152,3
+exec AddData 141,113,112,3
+exec AddData 121,143,122,3
+exec AddData 141,113,112,3
+exec AddData 111,173,122,3
+exec AddData 121,133,122,3
+exec AddData 131,163,112,3
+exec AddData 141,113,152,3
+exec AddData 131,163,142,3
+exec AddData 141,123,132,3
+exec AddData 131,133,132,3
 GO
+
+exec AddResultAndReturnIDResult 'Máy 2','admin3'
+GO
+exec AddData 141,113,112,4
+exec AddData 111,143,152,4
+exec AddData 141,113,112,4
+exec AddData 121,143,122,4
+exec AddData 141,113,112,4
+exec AddData 111,173,122,4
+exec AddData 121,133,122,4
+exec AddData 131,163,112,4
+exec AddData 141,113,152,4
+exec AddData 131,163,142,4
+exec AddData 141,123,132,4
+exec AddData 131,133,121,4
+GO
+
+exec AddResultAndReturnIDResult 'Máy 1','admin3'
+GO
+exec AddData 141,113,112,5
+exec AddData 111,143,152,5
+exec AddData 141,113,112,5
+exec AddData 121,143,122,5
+exec AddData 141,113,112,5
+exec AddData 111,173,122,5
+exec AddData 121,133,122,5
+exec AddData 131,163,112,5
+exec AddData 141,113,152,5
+exec AddData 131,163,142,5
+exec AddData 141,123,132,5
+exec AddData 131,133,121,5
+GO
+
+exec AddResultAndReturnIDResult 'Máy 1','admin3'
+GO
+exec AddData 141,113,112,6
+exec AddData 111,143,152,6
+exec AddData 141,113,112,6
+exec AddData 121,143,122,6
+exec AddData 141,113,112,6
+exec AddData 111,173,122,6
+exec AddData 121,133,122,6
+exec AddData 131,163,112,6
+exec AddData 141,113,152,6
+exec AddData 131,163,142,6
+exec AddData 141,123,132,6
+exec AddData 131,133,121,6
+GO
+
+
+exec AddResultAndReturnIDResult 'Máy 2','admin4'
+GO
+exec AddData 141,113,112,7
+exec AddData 111,143,152,7
+exec AddData 141,113,112,7
+exec AddData 121,143,122,7
+exec AddData 141,113,112,7
+exec AddData 111,173,122,7
+exec AddData 121,133,122,7
+exec AddData 131,163,112,7
+exec AddData 141,113,152,7
+exec AddData 131,163,142,7
+exec AddData 141,123,132,7
+exec AddData 131,133,121,7
+GO
+
+exec AddResultAndReturnIDResult 'Máy 2','admin'
+GO
+exec AddData 141,113,112,8
+exec AddData 111,143,152,8
+exec AddData 141,113,112,8
+exec AddData 121,143,122,8
+exec AddData 141,113,112,8
+exec AddData 111,173,122,8
+exec AddData 121,133,122,8
+exec AddData 131,163,112,8
+exec AddData 141,113,152,8
+exec AddData 131,163,142,8
+exec AddData 141,123,132,8
+exec AddData 131,133,121,8
+GO
+

@@ -67,9 +67,9 @@ namespace MayNapKhiTPA.Forms
             this.panel36 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
             this.panel47 = new System.Windows.Forms.Panel();
-            this.button39 = new System.Windows.Forms.Button();
+            this.buttonStopMachine1 = new System.Windows.Forms.Button();
             this.panel48 = new System.Windows.Forms.Panel();
-            this.button40 = new System.Windows.Forms.Button();
+            this.buttonStartMachine1 = new System.Windows.Forms.Button();
             this.button32 = new System.Windows.Forms.Button();
             this.panel38 = new System.Windows.Forms.Panel();
             this.panel45 = new System.Windows.Forms.Panel();
@@ -123,9 +123,9 @@ namespace MayNapKhiTPA.Forms
             this.panel25 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
             this.panel44 = new System.Windows.Forms.Panel();
-            this.button23 = new System.Windows.Forms.Button();
+            this.buttonStopMachine2 = new System.Windows.Forms.Button();
             this.panel37 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
+            this.buttonStartMachine2 = new System.Windows.Forms.Button();
             this.button41 = new System.Windows.Forms.Button();
             this.panel26 = new System.Windows.Forms.Panel();
             this.panel27 = new System.Windows.Forms.Panel();
@@ -667,55 +667,55 @@ namespace MayNapKhiTPA.Forms
             // 
             // panel47
             // 
-            this.panel47.Controls.Add(this.button39);
+            this.panel47.Controls.Add(this.buttonStopMachine1);
             this.panel47.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel47.Location = new System.Drawing.Point(227, 3);
             this.panel47.Name = "panel47";
             this.panel47.Size = new System.Drawing.Size(218, 187);
             this.panel47.TabIndex = 1;
             // 
-            // button39
+            // buttonStopMachine1
             // 
-            this.button39.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button39.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button39.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.button39.Image = ((System.Drawing.Image)(resources.GetObject("button39.Image")));
-            this.button39.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button39.Location = new System.Drawing.Point(0, 0);
-            this.button39.Name = "button39";
-            this.button39.Size = new System.Drawing.Size(218, 187);
-            this.button39.TabIndex = 27;
-            this.button39.Text = "Ngừng nạp";
-            this.button39.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button39.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button39.UseVisualStyleBackColor = true;
-            this.button39.Click += new System.EventHandler(this.button40_Click);
+            this.buttonStopMachine1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStopMachine1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonStopMachine1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.buttonStopMachine1.Image = ((System.Drawing.Image)(resources.GetObject("buttonStopMachine1.Image")));
+            this.buttonStopMachine1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonStopMachine1.Location = new System.Drawing.Point(0, 0);
+            this.buttonStopMachine1.Name = "buttonStopMachine1";
+            this.buttonStopMachine1.Size = new System.Drawing.Size(218, 187);
+            this.buttonStopMachine1.TabIndex = 27;
+            this.buttonStopMachine1.Text = "Ngừng nạp";
+            this.buttonStopMachine1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.buttonStopMachine1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonStopMachine1.UseVisualStyleBackColor = true;
+            this.buttonStopMachine1.Click += new System.EventHandler(this.buttonStopMachine1_Click);
             // 
             // panel48
             // 
-            this.panel48.Controls.Add(this.button40);
+            this.panel48.Controls.Add(this.buttonStartMachine1);
             this.panel48.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel48.Location = new System.Drawing.Point(3, 3);
             this.panel48.Name = "panel48";
             this.panel48.Size = new System.Drawing.Size(218, 187);
             this.panel48.TabIndex = 0;
             // 
-            // button40
+            // buttonStartMachine1
             // 
-            this.button40.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button40.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button40.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.button40.Image = ((System.Drawing.Image)(resources.GetObject("button40.Image")));
-            this.button40.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button40.Location = new System.Drawing.Point(0, 0);
-            this.button40.Name = "button40";
-            this.button40.Size = new System.Drawing.Size(218, 187);
-            this.button40.TabIndex = 26;
-            this.button40.Text = "Bắt đầu nạp";
-            this.button40.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button40.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button40.UseVisualStyleBackColor = true;
-            this.button40.Click += new System.EventHandler(this.button40_Click);
+            this.buttonStartMachine1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStartMachine1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonStartMachine1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.buttonStartMachine1.Image = ((System.Drawing.Image)(resources.GetObject("buttonStartMachine1.Image")));
+            this.buttonStartMachine1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonStartMachine1.Location = new System.Drawing.Point(0, 0);
+            this.buttonStartMachine1.Name = "buttonStartMachine1";
+            this.buttonStartMachine1.Size = new System.Drawing.Size(218, 187);
+            this.buttonStartMachine1.TabIndex = 26;
+            this.buttonStartMachine1.Text = "Bắt đầu nạp";
+            this.buttonStartMachine1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.buttonStartMachine1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonStartMachine1.UseVisualStyleBackColor = true;
+            this.buttonStartMachine1.Click += new System.EventHandler(this.buttonStartMachine1_Click);
             // 
             // button32
             // 
@@ -1446,55 +1446,55 @@ namespace MayNapKhiTPA.Forms
             // 
             // panel44
             // 
-            this.panel44.Controls.Add(this.button23);
+            this.panel44.Controls.Add(this.buttonStopMachine2);
             this.panel44.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel44.Location = new System.Drawing.Point(227, 3);
             this.panel44.Name = "panel44";
             this.panel44.Size = new System.Drawing.Size(218, 187);
             this.panel44.TabIndex = 1;
             // 
-            // button23
+            // buttonStopMachine2
             // 
-            this.button23.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.button23.Image = ((System.Drawing.Image)(resources.GetObject("button23.Image")));
-            this.button23.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button23.Location = new System.Drawing.Point(0, 0);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(218, 187);
-            this.button23.TabIndex = 27;
-            this.button23.Text = "Ngừng nạp";
-            this.button23.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button23.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button23.UseVisualStyleBackColor = true;
-            this.button23.Click += new System.EventHandler(this.button7_Click);
+            this.buttonStopMachine2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStopMachine2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonStopMachine2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.buttonStopMachine2.Image = ((System.Drawing.Image)(resources.GetObject("buttonStopMachine2.Image")));
+            this.buttonStopMachine2.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonStopMachine2.Location = new System.Drawing.Point(0, 0);
+            this.buttonStopMachine2.Name = "buttonStopMachine2";
+            this.buttonStopMachine2.Size = new System.Drawing.Size(218, 187);
+            this.buttonStopMachine2.TabIndex = 27;
+            this.buttonStopMachine2.Text = "Ngừng nạp";
+            this.buttonStopMachine2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.buttonStopMachine2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonStopMachine2.UseVisualStyleBackColor = true;
+            this.buttonStopMachine2.Click += new System.EventHandler(this.buttonStopMachine2_Click);
             // 
             // panel37
             // 
-            this.panel37.Controls.Add(this.button7);
+            this.panel37.Controls.Add(this.buttonStartMachine2);
             this.panel37.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel37.Location = new System.Drawing.Point(3, 3);
             this.panel37.Name = "panel37";
             this.panel37.Size = new System.Drawing.Size(218, 187);
             this.panel37.TabIndex = 0;
             // 
-            // button7
+            // buttonStartMachine2
             // 
-            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button7.Location = new System.Drawing.Point(0, 0);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(218, 187);
-            this.button7.TabIndex = 26;
-            this.button7.Text = "Bắt đầu nạp";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.buttonStartMachine2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStartMachine2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonStartMachine2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.buttonStartMachine2.Image = ((System.Drawing.Image)(resources.GetObject("buttonStartMachine2.Image")));
+            this.buttonStartMachine2.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonStartMachine2.Location = new System.Drawing.Point(0, 0);
+            this.buttonStartMachine2.Name = "buttonStartMachine2";
+            this.buttonStartMachine2.Size = new System.Drawing.Size(218, 187);
+            this.buttonStartMachine2.TabIndex = 26;
+            this.buttonStartMachine2.Text = "Bắt đầu nạp";
+            this.buttonStartMachine2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.buttonStartMachine2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonStartMachine2.UseVisualStyleBackColor = true;
+            this.buttonStartMachine2.Click += new System.EventHandler(this.buttonStartMachine2_Click);
             // 
             // button41
             // 
@@ -1786,7 +1786,7 @@ namespace MayNapKhiTPA.Forms
             // 
             // timer1
             // 
-            this.timer1.Interval = 2000;
+            this.timer1.Interval = 3000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // FormDashboard
@@ -1977,13 +1977,13 @@ namespace MayNapKhiTPA.Forms
         private Button button42;
         private TableLayoutPanel tableLayoutPanel14;
         private Panel panel47;
-        private Button button39;
+        private Button buttonStopMachine1;
         private Panel panel48;
-        private Button button40;
+        private Button buttonStartMachine1;
         private TableLayoutPanel tableLayoutPanel13;
         private Panel panel44;
-        private Button button23;
+        private Button buttonStopMachine2;
         private Panel panel37;
-        private Button button7;
+        private Button buttonStartMachine2;
     }
 }
