@@ -82,3 +82,10 @@ D:\WorkPlace\C-Sharp\Working\DESKTOP\MayNapKhiTPA\MayNapKhiTPA\obj\Debug\MayNapK
 D:\WorkPlace\C-Sharp\Working\DESKTOP\MayNapKhiTPA\MayNapKhiTPA\obj\Debug\MayNapKhiTPA.Forms.FormData.resources
 D:\WorkPlace\C-Sharp\Working\DESKTOP\MayNapKhiTPA\MayNapKhiTPA\obj\Debug\MayNapKhiTPA.Forms.FormChangeNumElmOnPage.resources
 D:\WorkPlace\C-Sharp\Working\DESKTOP\MayNapKhiTPA\MayNapKhiTPA\obj\Debug\MayNapKhiTPA.Forms.FormInfoPage.resources
+D:\WorkPlace\C-Sharp\Working\DESKTOP\MayNapKhiTPA\MayNapKhiTPA\obj\Debug\MayNapKhiTPA.Forms.FormHelp.resources
+D:\WorkPlace\C-Sharp\Working\DESKTOP\MayNapKhiTPA\MayNapKhiTPA\bin\Debug\abc.pdf
+D:\WorkPlace\C-Sharp\Working\DESKTOP\MayNapKhiTPA\MayNapKhiTPA\bin\Debug\Interop.AcroPDFLib.dll
+D:\WorkPlace\C-Sharp\Working\DESKTOP\MayNapKhiTPA\MayNapKhiTPA\bin\Debug\AxInterop.AcroPDFLib.dll
+D:\WorkPlace\C-Sharp\Working\DESKTOP\MayNapKhiTPA\MayNapKhiTPA\obj\Debug\Interop.AcroPDFLib.dll
+D:\WorkPlace\C-Sharp\Working\DESKTOP\MayNapKhiTPA\MayNapKhiTPA\obj\Debug\AxInterop.AcroPDFLib.dll
+D:\WorkPlace\C-Sharp\Working\DESKTOP\MayNapKhiTPA\MayNapKhiTPA\obj\Debug\MayNapKhiTPA.csproj.ResolveComReference.cache

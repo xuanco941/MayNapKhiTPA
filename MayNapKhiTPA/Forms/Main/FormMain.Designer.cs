@@ -32,6 +32,16 @@ namespace MayNapKhiTPA.Forms
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.panelItemMenu = new System.Windows.Forms.Panel();
+            this.buttonThoat = new System.Windows.Forms.Button();
+            this.buttonSetting = new System.Windows.Forms.Button();
+            this.buttonActivity = new System.Windows.Forms.Button();
+            this.buttonEmployee = new System.Windows.Forms.Button();
+            this.buttonResult = new System.Windows.Forms.Button();
+            this.buttonDashboard = new System.Windows.Forms.Button();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelHeader = new System.Windows.Forms.Label();
             this.panelContainer = new System.Windows.Forms.Panel();
             this.panelContent = new System.Windows.Forms.Panel();
@@ -39,24 +49,15 @@ namespace MayNapKhiTPA.Forms
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panelAleart = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panelItemMenu = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.buttonThoat = new System.Windows.Forms.Button();
-            this.buttonSetting = new System.Windows.Forms.Button();
-            this.buttonActivity = new System.Windows.Forms.Button();
-            this.buttonEmployee = new System.Windows.Forms.Button();
-            this.buttonResult = new System.Windows.Forms.Button();
-            this.buttonDashboard = new System.Windows.Forms.Button();
+            this.buttonHelp = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
+            this.panelItemMenu.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelContainer.SuspendLayout();
             this.panelHeader.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panelItemMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -69,103 +70,10 @@ namespace MayNapKhiTPA.Forms
             this.panelMenu.Size = new System.Drawing.Size(211, 730);
             this.panelMenu.TabIndex = 0;
             // 
-            // labelHeader
-            // 
-            this.labelHeader.AutoSize = true;
-            this.labelHeader.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHeader.ForeColor = System.Drawing.Color.LightGray;
-            this.labelHeader.Location = new System.Drawing.Point(13, 24);
-            this.labelHeader.Name = "labelHeader";
-            this.labelHeader.Size = new System.Drawing.Size(148, 25);
-            this.labelHeader.TabIndex = 2;
-            this.labelHeader.Text = "Bảng điều khiển";
-            // 
-            // panelContainer
-            // 
-            this.panelContainer.Controls.Add(this.panelContent);
-            this.panelContainer.Controls.Add(this.panelHeader);
-            this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContainer.Location = new System.Drawing.Point(211, 0);
-            this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(1238, 730);
-            this.panelContainer.TabIndex = 3;
-            // 
-            // panelContent
-            // 
-            this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContent.Location = new System.Drawing.Point(0, 76);
-            this.panelContent.Name = "panelContent";
-            this.panelContent.Size = new System.Drawing.Size(1238, 654);
-            this.panelContent.TabIndex = 5;
-            // 
-            // panelHeader
-            // 
-            this.panelHeader.Controls.Add(this.tableLayoutPanel1);
-            this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelHeader.Location = new System.Drawing.Point(0, 0);
-            this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Size = new System.Drawing.Size(1238, 76);
-            this.panelHeader.TabIndex = 4;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 193F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.panelAleart, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.panel2, 0, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1238, 76);
-            this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // panelAleart
-            // 
-            this.panelAleart.AutoScroll = true;
-            this.panelAleart.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelAleart.Location = new System.Drawing.Point(815, 3);
-            this.panelAleart.MaximumSize = new System.Drawing.Size(1260, 70);
-            this.panelAleart.MinimumSize = new System.Drawing.Size(420, 70);
-            this.panelAleart.Name = "panelAleart";
-            this.panelAleart.Size = new System.Drawing.Size(420, 70);
-            this.panelAleart.TabIndex = 5;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.labelHeader);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(3, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(187, 70);
-            this.panel2.TabIndex = 0;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(211, 76);
-            this.panel3.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(211, 76);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // panelItemMenu
             // 
             this.panelItemMenu.Controls.Add(this.buttonThoat);
+            this.panelItemMenu.Controls.Add(this.buttonHelp);
             this.panelItemMenu.Controls.Add(this.buttonSetting);
             this.panelItemMenu.Controls.Add(this.buttonActivity);
             this.panelItemMenu.Controls.Add(this.buttonEmployee);
@@ -178,13 +86,6 @@ namespace MayNapKhiTPA.Forms
             this.panelItemMenu.Size = new System.Drawing.Size(211, 654);
             this.panelItemMenu.TabIndex = 1;
             // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(20, 26);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(8, 8);
-            this.flowLayoutPanel1.TabIndex = 0;
-            // 
             // buttonThoat
             // 
             this.buttonThoat.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -194,7 +95,7 @@ namespace MayNapKhiTPA.Forms
             this.buttonThoat.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonThoat.ForeColor = System.Drawing.Color.White;
             this.buttonThoat.Image = global::MayNapKhiTPA.Properties.Resources.red_x_10333;
-            this.buttonThoat.Location = new System.Drawing.Point(0, 395);
+            this.buttonThoat.Location = new System.Drawing.Point(0, 474);
             this.buttonThoat.Name = "buttonThoat";
             this.buttonThoat.Size = new System.Drawing.Size(211, 79);
             this.buttonThoat.TabIndex = 12;
@@ -300,6 +201,126 @@ namespace MayNapKhiTPA.Forms
             this.buttonDashboard.UseVisualStyleBackColor = false;
             this.buttonDashboard.Click += new System.EventHandler(this.buttonDashboard_Click);
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(20, 26);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(8, 8);
+            this.flowLayoutPanel1.TabIndex = 0;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(211, 76);
+            this.panel3.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(211, 76);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // labelHeader
+            // 
+            this.labelHeader.AutoSize = true;
+            this.labelHeader.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHeader.ForeColor = System.Drawing.Color.LightGray;
+            this.labelHeader.Location = new System.Drawing.Point(13, 24);
+            this.labelHeader.Name = "labelHeader";
+            this.labelHeader.Size = new System.Drawing.Size(148, 25);
+            this.labelHeader.TabIndex = 2;
+            this.labelHeader.Text = "Bảng điều khiển";
+            // 
+            // panelContainer
+            // 
+            this.panelContainer.Controls.Add(this.panelContent);
+            this.panelContainer.Controls.Add(this.panelHeader);
+            this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContainer.Location = new System.Drawing.Point(211, 0);
+            this.panelContainer.Name = "panelContainer";
+            this.panelContainer.Size = new System.Drawing.Size(1238, 730);
+            this.panelContainer.TabIndex = 3;
+            // 
+            // panelContent
+            // 
+            this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContent.Location = new System.Drawing.Point(0, 76);
+            this.panelContent.Name = "panelContent";
+            this.panelContent.Size = new System.Drawing.Size(1238, 654);
+            this.panelContent.TabIndex = 5;
+            // 
+            // panelHeader
+            // 
+            this.panelHeader.Controls.Add(this.tableLayoutPanel1);
+            this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelHeader.Location = new System.Drawing.Point(0, 0);
+            this.panelHeader.Name = "panelHeader";
+            this.panelHeader.Size = new System.Drawing.Size(1238, 76);
+            this.panelHeader.TabIndex = 4;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 193F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.panelAleart, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel2, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1238, 76);
+            this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // panelAleart
+            // 
+            this.panelAleart.AutoScroll = true;
+            this.panelAleart.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelAleart.Location = new System.Drawing.Point(815, 3);
+            this.panelAleart.MaximumSize = new System.Drawing.Size(1260, 70);
+            this.panelAleart.MinimumSize = new System.Drawing.Size(420, 70);
+            this.panelAleart.Name = "panelAleart";
+            this.panelAleart.Size = new System.Drawing.Size(420, 70);
+            this.panelAleart.TabIndex = 5;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.labelHeader);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(187, 70);
+            this.panel2.TabIndex = 0;
+            // 
+            // buttonHelp
+            // 
+            this.buttonHelp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonHelp.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonHelp.FlatAppearance.BorderSize = 0;
+            this.buttonHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonHelp.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonHelp.ForeColor = System.Drawing.Color.White;
+            this.buttonHelp.Image = ((System.Drawing.Image)(resources.GetObject("buttonHelp.Image")));
+            this.buttonHelp.Location = new System.Drawing.Point(0, 395);
+            this.buttonHelp.Name = "buttonHelp";
+            this.buttonHelp.Size = new System.Drawing.Size(211, 79);
+            this.buttonHelp.TabIndex = 13;
+            this.buttonHelp.Text = "Trợ giúp";
+            this.buttonHelp.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonHelp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonHelp.UseVisualStyleBackColor = true;
+            this.buttonHelp.Click += new System.EventHandler(this.buttonHelp_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -314,14 +335,14 @@ namespace MayNapKhiTPA.Forms
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Máy nạp khí TPA";
             this.panelMenu.ResumeLayout(false);
+            this.panelItemMenu.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelContainer.ResumeLayout(false);
             this.panelHeader.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panelItemMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -346,6 +367,7 @@ namespace MayNapKhiTPA.Forms
         private Button buttonResult;
         private Button buttonDashboard;
         private FlowLayoutPanel flowLayoutPanel1;
+        private Button buttonHelp;
     }
 }
 

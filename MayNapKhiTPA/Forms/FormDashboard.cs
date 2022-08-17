@@ -229,5 +229,139 @@ namespace MayNapKhiTPA.Forms
                 callAlert?.Invoke("Tài khoản của bạn không có quyền này.", FormAlert.enmType.Info);
             }
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //setting
+        private void LoadSetting()
+        {
+            Machine machine = MachineBusiness.GetMachine1();
+            buttonNameSetting.Text = "Loại bình : " + machine.NameTemplateMachine;
+            buttonApSuatNap.Text = "Áp suất nạp : " + machine.ApSuatNap + " bar";
+            buttonTheTichNap.Text = "Thể tích nạp : " + machine.TheTichNap + " m3";
+            buttonThoiGianNap.Text = "Thời gian nạp : " + machine.ThoiGianNap + " phút";
+            buttonThoiGianLayMau.Text = "Thời gian lấy mẫu : " + machine.ThoiGianLayMau + " phút";
+
+            //load combobox select bình
+            var listTemplateMachine = TemplateMachineBusiness.GetAllTemplateMachines();
+            var listTemplateMachineName = from templateMachine in listTemplateMachine select templateMachine.Name;
+            comboBoxSelectTemplateSetting.DataSource = listTemplateMachineName.ToList();
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedTab == tabPage3)
+            {
+                LoadSetting();
+            }
+        }
+
+        private void textBoxApSuatNap_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            LW_PhanMemBaoGia.MyControls.TextBoxT textBoxT = sender as LW_PhanMemBaoGia.MyControls.TextBoxT;
+            //textbox only number 
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+            //giới hạn length cho text box là 6
+            if (textBoxT.Texts.Length > 5)
+            {
+                e.Handled = true;
+            }
+            if (e.KeyChar == 8 || e.KeyChar == 46)
+            {
+                e.Handled = false;
+            }
+        }
+
+        private void buttonSaveSetting_Click(object sender, EventArgs e)
+        {
+            //check quyền
+            if (Common.GROUPSESSION.IsSettingMachine)
+            {
+                string Name = comboBoxSelectTemplateSetting.Text;
+                string ApSuatNap = textBoxApSuatNap.Texts;
+                string TheTichNap = textBoxTheTichNap.Texts;
+                string ThoiGianNap = textBoxThoiGianNap.Texts;
+                string ThoiGianLayMau = textBoxThoiGianLayMau.Texts;
+
+                if (!String.IsNullOrEmpty(Name) && !String.IsNullOrEmpty(ApSuatNap) && textBoxApSuatNap.Texts != textBoxApSuatNap.PlaceholderText
+                && !String.IsNullOrEmpty(TheTichNap) && textBoxTheTichNap.Texts != textBoxTheTichNap.PlaceholderText
+                && !String.IsNullOrEmpty(ThoiGianNap) && textBoxThoiGianNap.Texts != textBoxThoiGianNap.PlaceholderText
+                && !String.IsNullOrEmpty(ThoiGianLayMau) && textBoxThoiGianLayMau.Texts != textBoxThoiGianLayMau.PlaceholderText)
+                {
+                    try
+                    {
+                        MachineBusiness.UpdateMachine(Name, double.Parse(ApSuatNap), double.Parse(TheTichNap), double.Parse(ThoiGianNap), double.Parse(ThoiGianLayMau));
+
+                        //lưu lại hành động thay đôi cài đặt
+                        Activity activity = new Activity();
+                        activity.Description = "Cập nhật cài đặt máy";
+                        activity.IsSetting = true;
+                        activity.Worker = Common.USERSESSION.Username;
+                        ActivityBusiness.AddActivity(activity);
+                        //load lại datagridview + thông số cài đặt hiện tại
+                        LoadSetting();
+                        comboBoxSelectTemplateSetting.Text = Name;
+                        //aleart
+                        callAlert?.Invoke("Cập nhật cài đặt máy thành công.", FormAlert.enmType.Success);
+
+                    }
+                    catch
+                    {
+                        callAlert?.Invoke("Lỗi hệ thống, không thể cập nhật cài đặt.", FormAlert.enmType.Error);
+                    }
+                }
+                else
+                {
+                    callAlert?.Invoke("Các trường cài đặt không được trống.", FormAlert.enmType.Error);
+                }
+            }
+            else
+            {
+                callAlert?.Invoke("Tài khoản của bạn không có quyền này.", FormAlert.enmType.Info);
+            }
+        }
+
+        private void comboBoxSelectTemplateSetting_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // lấy ra thông tin user có username là username trên combobox
+            TemplateMachine templateSetting = TemplateMachineBusiness.GetTemplateMachineFromName(comboBoxSelectTemplateSetting.Text);
+
+            //show trên textbox
+
+            if (comboBoxSelectTemplateSetting.Text != "Tùy chỉnh")
+            {
+                textBoxApSuatNap.Texts = templateSetting.ApSuatNap.ToString();
+                textBoxTheTichNap.Texts = templateSetting.TheTichNap.ToString();
+                textBoxThoiGianNap.Texts = templateSetting.ThoiGianNap.ToString();
+                textBoxThoiGianLayMau.Texts = templateSetting.ThoiGianLayMau.ToString();
+
+                textBoxApSuatNap.ForeColor = Color.FromArgb(62, 120, 138);
+                textBoxTheTichNap.ForeColor = Color.FromArgb(62, 120, 138);
+                textBoxThoiGianNap.ForeColor = Color.FromArgb(62, 120, 138);
+                textBoxThoiGianLayMau.ForeColor = Color.FromArgb(62, 120, 138);
+            }
+
+        }
     }
 }
+

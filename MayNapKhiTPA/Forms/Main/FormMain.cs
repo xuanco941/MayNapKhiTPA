@@ -153,5 +153,17 @@ namespace MayNapKhiTPA.Forms
             Common.GROUPSESSION = null;
             Application.Restart();
         }
+
+        private void buttonHelp_Click(object sender, EventArgs e)
+        {
+            //btn
+            Button button = sender as Button;
+            FocusButton(button);
+
+            labelHeader.Text = "Trợ giúp";
+            FormHelp formHelp = new FormHelp();
+            ChangeFormContent(formHelp);
+            this.Font = new Font("Bahnschrift", 11);
+        }
     }
 }

@@ -145,6 +145,42 @@ namespace MayNapKhiTPA.Forms
             this.zedGraphControlTheTich2 = new ZedGraph.ZedGraphControl();
             this.zedGraphControlApSuat2 = new ZedGraph.ZedGraphControl();
             this.button28 = new System.Windows.Forms.Button();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel49 = new System.Windows.Forms.Panel();
+            this.panel50 = new System.Windows.Forms.Panel();
+            this.textBoxThoiGianLayMau = new LW_PhanMemBaoGia.MyControls.TextBoxT();
+            this.label5 = new System.Windows.Forms.Label();
+            this.panel51 = new System.Windows.Forms.Panel();
+            this.textBoxThoiGianNap = new LW_PhanMemBaoGia.MyControls.TextBoxT();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel52 = new System.Windows.Forms.Panel();
+            this.textBoxTheTichNap = new LW_PhanMemBaoGia.MyControls.TextBoxT();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel53 = new System.Windows.Forms.Panel();
+            this.textBoxApSuatNap = new LW_PhanMemBaoGia.MyControls.TextBoxT();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel54 = new System.Windows.Forms.Panel();
+            this.comboBoxSelectTemplateSetting = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.buttonSaveSetting = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.panel55 = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
+            this.panel56 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel57 = new System.Windows.Forms.Panel();
+            this.panel58 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel59 = new System.Windows.Forms.Panel();
+            this.buttonThoiGianLayMau = new System.Windows.Forms.Button();
+            this.panel60 = new System.Windows.Forms.Panel();
+            this.buttonThoiGianNap = new System.Windows.Forms.Button();
+            this.panel61 = new System.Windows.Forms.Panel();
+            this.buttonTheTichNap = new System.Windows.Forms.Button();
+            this.panel62 = new System.Windows.Forms.Panel();
+            this.buttonApSuatNap = new System.Windows.Forms.Button();
+            this.buttonNameSetting = new System.Windows.Forms.Button();
+            this.button23 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -211,19 +247,38 @@ namespace MayNapKhiTPA.Forms
             this.panel31.SuspendLayout();
             this.panel32.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.tableLayoutPanel15.SuspendLayout();
+            this.panel49.SuspendLayout();
+            this.panel50.SuspendLayout();
+            this.panel51.SuspendLayout();
+            this.panel52.SuspendLayout();
+            this.panel53.SuspendLayout();
+            this.panel54.SuspendLayout();
+            this.panel56.SuspendLayout();
+            this.tableLayoutPanel16.SuspendLayout();
+            this.panel57.SuspendLayout();
+            this.panel58.SuspendLayout();
+            this.tableLayoutPanel17.SuspendLayout();
+            this.panel59.SuspendLayout();
+            this.panel60.SuspendLayout();
+            this.panel61.SuspendLayout();
+            this.panel62.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1168, 691);
+            this.tabControl1.Size = new System.Drawing.Size(1168, 621);
             this.tabControl1.TabIndex = 0;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabPage1
             // 
@@ -233,7 +288,7 @@ namespace MayNapKhiTPA.Forms
             this.tabPage1.Location = new System.Drawing.Point(4, 30);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1160, 657);
+            this.tabPage1.Size = new System.Drawing.Size(1160, 587);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Quản Lý Máy Nạp 1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -253,7 +308,7 @@ namespace MayNapKhiTPA.Forms
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1154, 651);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1154, 581);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // panel1
@@ -266,7 +321,7 @@ namespace MayNapKhiTPA.Forms
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(686, 254);
+            this.panel1.Size = new System.Drawing.Size(686, 226);
             this.panel1.TabIndex = 2;
             // 
             // tableLayoutPanel2
@@ -291,16 +346,16 @@ namespace MayNapKhiTPA.Forms
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(684, 148);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(684, 120);
             this.tableLayoutPanel2.TabIndex = 12;
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.button1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(459, 101);
+            this.panel2.Location = new System.Drawing.Point(459, 83);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(222, 44);
+            this.panel2.Size = new System.Drawing.Size(222, 34);
             this.panel2.TabIndex = 8;
             // 
             // button1
@@ -314,7 +369,7 @@ namespace MayNapKhiTPA.Forms
             this.button1.ForeColor = System.Drawing.SystemColors.MenuText;
             this.button1.Location = new System.Drawing.Point(0, 0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(222, 44);
+            this.button1.Size = new System.Drawing.Size(222, 34);
             this.button1.TabIndex = 8;
             this.button1.Text = "Lưu lượng trung bình : 60";
             this.button1.UseVisualStyleBackColor = false;
@@ -323,9 +378,9 @@ namespace MayNapKhiTPA.Forms
             // 
             this.panel3.Controls.Add(this.button2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(231, 101);
+            this.panel3.Location = new System.Drawing.Point(231, 83);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(222, 44);
+            this.panel3.Size = new System.Drawing.Size(222, 34);
             this.panel3.TabIndex = 7;
             // 
             // button2
@@ -339,7 +394,7 @@ namespace MayNapKhiTPA.Forms
             this.button2.ForeColor = System.Drawing.SystemColors.MenuText;
             this.button2.Location = new System.Drawing.Point(0, 0);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(222, 44);
+            this.button2.Size = new System.Drawing.Size(222, 34);
             this.button2.TabIndex = 8;
             this.button2.Text = "Lưu lượng max : 100";
             this.button2.UseVisualStyleBackColor = false;
@@ -348,9 +403,9 @@ namespace MayNapKhiTPA.Forms
             // 
             this.panel4.Controls.Add(this.button3);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(3, 101);
+            this.panel4.Location = new System.Drawing.Point(3, 83);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(222, 44);
+            this.panel4.Size = new System.Drawing.Size(222, 34);
             this.panel4.TabIndex = 6;
             // 
             // button3
@@ -364,7 +419,7 @@ namespace MayNapKhiTPA.Forms
             this.button3.ForeColor = System.Drawing.SystemColors.MenuText;
             this.button3.Location = new System.Drawing.Point(0, 0);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(222, 44);
+            this.button3.Size = new System.Drawing.Size(222, 34);
             this.button3.TabIndex = 8;
             this.button3.Text = "Lưu lượng min : 20";
             this.button3.UseVisualStyleBackColor = false;
@@ -373,9 +428,9 @@ namespace MayNapKhiTPA.Forms
             // 
             this.panel5.Controls.Add(this.button4);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(459, 52);
+            this.panel5.Location = new System.Drawing.Point(459, 43);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(222, 43);
+            this.panel5.Size = new System.Drawing.Size(222, 34);
             this.panel5.TabIndex = 5;
             // 
             // button4
@@ -389,7 +444,7 @@ namespace MayNapKhiTPA.Forms
             this.button4.ForeColor = System.Drawing.SystemColors.MenuText;
             this.button4.Location = new System.Drawing.Point(0, 0);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(222, 43);
+            this.button4.Size = new System.Drawing.Size(222, 34);
             this.button4.TabIndex = 8;
             this.button4.Text = "Thể tích trung bình : 70";
             this.button4.UseVisualStyleBackColor = false;
@@ -398,9 +453,9 @@ namespace MayNapKhiTPA.Forms
             // 
             this.panel6.Controls.Add(this.button8);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(231, 52);
+            this.panel6.Location = new System.Drawing.Point(231, 43);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(222, 43);
+            this.panel6.Size = new System.Drawing.Size(222, 34);
             this.panel6.TabIndex = 4;
             // 
             // button8
@@ -414,7 +469,7 @@ namespace MayNapKhiTPA.Forms
             this.button8.ForeColor = System.Drawing.SystemColors.MenuText;
             this.button8.Location = new System.Drawing.Point(0, 0);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(222, 43);
+            this.button8.Size = new System.Drawing.Size(222, 34);
             this.button8.TabIndex = 8;
             this.button8.Text = "Thể tích max : 80";
             this.button8.UseVisualStyleBackColor = false;
@@ -423,9 +478,9 @@ namespace MayNapKhiTPA.Forms
             // 
             this.panel7.Controls.Add(this.button9);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(3, 52);
+            this.panel7.Location = new System.Drawing.Point(3, 43);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(222, 43);
+            this.panel7.Size = new System.Drawing.Size(222, 34);
             this.panel7.TabIndex = 3;
             // 
             // button9
@@ -439,7 +494,7 @@ namespace MayNapKhiTPA.Forms
             this.button9.ForeColor = System.Drawing.SystemColors.MenuText;
             this.button9.Location = new System.Drawing.Point(0, 0);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(222, 43);
+            this.button9.Size = new System.Drawing.Size(222, 34);
             this.button9.TabIndex = 8;
             this.button9.Text = "Thể tích min : 40";
             this.button9.UseVisualStyleBackColor = false;
@@ -450,7 +505,7 @@ namespace MayNapKhiTPA.Forms
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel8.Location = new System.Drawing.Point(459, 3);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(222, 43);
+            this.panel8.Size = new System.Drawing.Size(222, 34);
             this.panel8.TabIndex = 2;
             // 
             // button10
@@ -464,7 +519,7 @@ namespace MayNapKhiTPA.Forms
             this.button10.ForeColor = System.Drawing.SystemColors.MenuText;
             this.button10.Location = new System.Drawing.Point(0, 0);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(222, 43);
+            this.button10.Size = new System.Drawing.Size(222, 34);
             this.button10.TabIndex = 7;
             this.button10.Text = "Áp suất trung bình : 60";
             this.button10.UseVisualStyleBackColor = false;
@@ -475,7 +530,7 @@ namespace MayNapKhiTPA.Forms
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel9.Location = new System.Drawing.Point(231, 3);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(222, 43);
+            this.panel9.Size = new System.Drawing.Size(222, 34);
             this.panel9.TabIndex = 1;
             // 
             // button11
@@ -489,7 +544,7 @@ namespace MayNapKhiTPA.Forms
             this.button11.ForeColor = System.Drawing.SystemColors.MenuText;
             this.button11.Location = new System.Drawing.Point(0, 0);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(222, 43);
+            this.button11.Size = new System.Drawing.Size(222, 34);
             this.button11.TabIndex = 7;
             this.button11.Text = "Áp suất max : 80";
             this.button11.UseVisualStyleBackColor = false;
@@ -500,7 +555,7 @@ namespace MayNapKhiTPA.Forms
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel10.Location = new System.Drawing.Point(3, 3);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(222, 43);
+            this.panel10.Size = new System.Drawing.Size(222, 34);
             this.panel10.TabIndex = 0;
             // 
             // button12
@@ -514,7 +569,7 @@ namespace MayNapKhiTPA.Forms
             this.button12.ForeColor = System.Drawing.SystemColors.MenuText;
             this.button12.Location = new System.Drawing.Point(0, 0);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(222, 43);
+            this.button12.Size = new System.Drawing.Size(222, 34);
             this.button12.TabIndex = 7;
             this.button12.Text = "Áp suất min : 40";
             this.button12.UseVisualStyleBackColor = false;
@@ -619,9 +674,9 @@ namespace MayNapKhiTPA.Forms
             this.panel23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel23.Controls.Add(this.tableLayoutPanel4);
             this.panel23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel23.Location = new System.Drawing.Point(695, 263);
+            this.panel23.Location = new System.Drawing.Point(695, 235);
             this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(456, 385);
+            this.panel23.Size = new System.Drawing.Size(456, 343);
             this.panel23.TabIndex = 5;
             // 
             // tableLayoutPanel4
@@ -636,7 +691,7 @@ namespace MayNapKhiTPA.Forms
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(454, 383);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(454, 341);
             this.tableLayoutPanel4.TabIndex = 1;
             // 
             // panel36
@@ -644,9 +699,9 @@ namespace MayNapKhiTPA.Forms
             this.panel36.Controls.Add(this.tableLayoutPanel14);
             this.panel36.Controls.Add(this.button32);
             this.panel36.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel36.Location = new System.Drawing.Point(3, 137);
+            this.panel36.Location = new System.Drawing.Point(3, 122);
             this.panel36.Name = "panel36";
-            this.panel36.Size = new System.Drawing.Size(448, 243);
+            this.panel36.Size = new System.Drawing.Size(448, 216);
             this.panel36.TabIndex = 1;
             // 
             // tableLayoutPanel14
@@ -661,8 +716,8 @@ namespace MayNapKhiTPA.Forms
             this.tableLayoutPanel14.Name = "tableLayoutPanel14";
             this.tableLayoutPanel14.RowCount = 1;
             this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 193F));
-            this.tableLayoutPanel14.Size = new System.Drawing.Size(448, 193);
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 166F));
+            this.tableLayoutPanel14.Size = new System.Drawing.Size(448, 166);
             this.tableLayoutPanel14.TabIndex = 24;
             // 
             // panel47
@@ -671,7 +726,7 @@ namespace MayNapKhiTPA.Forms
             this.panel47.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel47.Location = new System.Drawing.Point(227, 3);
             this.panel47.Name = "panel47";
-            this.panel47.Size = new System.Drawing.Size(218, 187);
+            this.panel47.Size = new System.Drawing.Size(218, 160);
             this.panel47.TabIndex = 1;
             // 
             // buttonStopMachine1
@@ -683,7 +738,7 @@ namespace MayNapKhiTPA.Forms
             this.buttonStopMachine1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonStopMachine1.Location = new System.Drawing.Point(0, 0);
             this.buttonStopMachine1.Name = "buttonStopMachine1";
-            this.buttonStopMachine1.Size = new System.Drawing.Size(218, 187);
+            this.buttonStopMachine1.Size = new System.Drawing.Size(218, 160);
             this.buttonStopMachine1.TabIndex = 27;
             this.buttonStopMachine1.Text = "Ngừng nạp";
             this.buttonStopMachine1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -697,7 +752,7 @@ namespace MayNapKhiTPA.Forms
             this.panel48.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel48.Location = new System.Drawing.Point(3, 3);
             this.panel48.Name = "panel48";
-            this.panel48.Size = new System.Drawing.Size(218, 187);
+            this.panel48.Size = new System.Drawing.Size(218, 160);
             this.panel48.TabIndex = 0;
             // 
             // buttonStartMachine1
@@ -709,7 +764,7 @@ namespace MayNapKhiTPA.Forms
             this.buttonStartMachine1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonStartMachine1.Location = new System.Drawing.Point(0, 0);
             this.buttonStartMachine1.Name = "buttonStartMachine1";
-            this.buttonStartMachine1.Size = new System.Drawing.Size(218, 187);
+            this.buttonStartMachine1.Size = new System.Drawing.Size(218, 160);
             this.buttonStartMachine1.TabIndex = 26;
             this.buttonStartMachine1.Text = "Bắt đầu nạp";
             this.buttonStartMachine1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -744,7 +799,7 @@ namespace MayNapKhiTPA.Forms
             this.panel38.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel38.Location = new System.Drawing.Point(3, 3);
             this.panel38.Name = "panel38";
-            this.panel38.Size = new System.Drawing.Size(448, 128);
+            this.panel38.Size = new System.Drawing.Size(448, 113);
             this.panel38.TabIndex = 0;
             // 
             // panel45
@@ -753,7 +808,7 @@ namespace MayNapKhiTPA.Forms
             this.panel45.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel45.Location = new System.Drawing.Point(0, 50);
             this.panel45.Name = "panel45";
-            this.panel45.Size = new System.Drawing.Size(448, 78);
+            this.panel45.Size = new System.Drawing.Size(448, 63);
             this.panel45.TabIndex = 7;
             // 
             // label1
@@ -796,7 +851,7 @@ namespace MayNapKhiTPA.Forms
             this.panel39.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel39.Location = new System.Drawing.Point(695, 3);
             this.panel39.Name = "panel39";
-            this.panel39.Size = new System.Drawing.Size(456, 254);
+            this.panel39.Size = new System.Drawing.Size(456, 226);
             this.panel39.TabIndex = 6;
             // 
             // tableLayoutPanel5
@@ -813,7 +868,7 @@ namespace MayNapKhiTPA.Forms
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(454, 202);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(454, 174);
             this.tableLayoutPanel5.TabIndex = 7;
             // 
             // panel40
@@ -823,7 +878,7 @@ namespace MayNapKhiTPA.Forms
             this.panel40.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel40.Location = new System.Drawing.Point(3, 3);
             this.panel40.Name = "panel40";
-            this.panel40.Size = new System.Drawing.Size(448, 61);
+            this.panel40.Size = new System.Drawing.Size(448, 52);
             this.panel40.TabIndex = 0;
             // 
             // button34
@@ -839,7 +894,7 @@ namespace MayNapKhiTPA.Forms
             this.button34.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button34.Location = new System.Drawing.Point(0, 0);
             this.button34.Name = "button34";
-            this.button34.Size = new System.Drawing.Size(446, 59);
+            this.button34.Size = new System.Drawing.Size(446, 50);
             this.button34.TabIndex = 6;
             this.button34.Text = "Áp suất : 50";
             this.button34.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -851,9 +906,9 @@ namespace MayNapKhiTPA.Forms
             this.panel41.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel41.Controls.Add(this.button35);
             this.panel41.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel41.Location = new System.Drawing.Point(3, 70);
+            this.panel41.Location = new System.Drawing.Point(3, 61);
             this.panel41.Name = "panel41";
-            this.panel41.Size = new System.Drawing.Size(448, 61);
+            this.panel41.Size = new System.Drawing.Size(448, 52);
             this.panel41.TabIndex = 1;
             // 
             // button35
@@ -869,7 +924,7 @@ namespace MayNapKhiTPA.Forms
             this.button35.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button35.Location = new System.Drawing.Point(0, 0);
             this.button35.Name = "button35";
-            this.button35.Size = new System.Drawing.Size(446, 59);
+            this.button35.Size = new System.Drawing.Size(446, 50);
             this.button35.TabIndex = 7;
             this.button35.Text = "Thể tích : 130";
             this.button35.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -881,9 +936,9 @@ namespace MayNapKhiTPA.Forms
             this.panel42.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel42.Controls.Add(this.button36);
             this.panel42.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel42.Location = new System.Drawing.Point(3, 137);
+            this.panel42.Location = new System.Drawing.Point(3, 119);
             this.panel42.Name = "panel42";
-            this.panel42.Size = new System.Drawing.Size(448, 62);
+            this.panel42.Size = new System.Drawing.Size(448, 52);
             this.panel42.TabIndex = 2;
             // 
             // button36
@@ -899,7 +954,7 @@ namespace MayNapKhiTPA.Forms
             this.button36.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button36.Location = new System.Drawing.Point(0, 0);
             this.button36.Name = "button36";
-            this.button36.Size = new System.Drawing.Size(446, 60);
+            this.button36.Size = new System.Drawing.Size(446, 50);
             this.button36.TabIndex = 7;
             this.button36.Text = "Lưu lượng : 80";
             this.button36.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -932,9 +987,9 @@ namespace MayNapKhiTPA.Forms
             this.panel43.Controls.Add(this.tableLayoutPanel11);
             this.panel43.Controls.Add(this.button38);
             this.panel43.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel43.Location = new System.Drawing.Point(3, 263);
+            this.panel43.Location = new System.Drawing.Point(3, 235);
             this.panel43.Name = "panel43";
-            this.panel43.Size = new System.Drawing.Size(686, 385);
+            this.panel43.Size = new System.Drawing.Size(686, 343);
             this.panel43.TabIndex = 7;
             // 
             // tableLayoutPanel11
@@ -950,13 +1005,13 @@ namespace MayNapKhiTPA.Forms
             this.tableLayoutPanel11.RowCount = 2;
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel11.Size = new System.Drawing.Size(684, 333);
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(684, 291);
             this.tableLayoutPanel11.TabIndex = 9;
             // 
             // zedGraphControlTheTich1
             // 
             this.zedGraphControlTheTich1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.zedGraphControlTheTich1.Location = new System.Drawing.Point(3, 169);
+            this.zedGraphControlTheTich1.Location = new System.Drawing.Point(3, 148);
             this.zedGraphControlTheTich1.Name = "zedGraphControlTheTich1";
             this.zedGraphControlTheTich1.ScrollGrace = 0D;
             this.zedGraphControlTheTich1.ScrollMaxX = 0D;
@@ -965,7 +1020,7 @@ namespace MayNapKhiTPA.Forms
             this.zedGraphControlTheTich1.ScrollMinX = 0D;
             this.zedGraphControlTheTich1.ScrollMinY = 0D;
             this.zedGraphControlTheTich1.ScrollMinY2 = 0D;
-            this.zedGraphControlTheTich1.Size = new System.Drawing.Size(678, 161);
+            this.zedGraphControlTheTich1.Size = new System.Drawing.Size(678, 140);
             this.zedGraphControlTheTich1.TabIndex = 5;
             this.zedGraphControlTheTich1.UseExtendedPrintDialog = true;
             // 
@@ -981,7 +1036,7 @@ namespace MayNapKhiTPA.Forms
             this.zedGraphControlApSuat1.ScrollMinX = 0D;
             this.zedGraphControlApSuat1.ScrollMinY = 0D;
             this.zedGraphControlApSuat1.ScrollMinY2 = 0D;
-            this.zedGraphControlApSuat1.Size = new System.Drawing.Size(678, 160);
+            this.zedGraphControlApSuat1.Size = new System.Drawing.Size(678, 139);
             this.zedGraphControlApSuat1.TabIndex = 4;
             this.zedGraphControlApSuat1.UseExtendedPrintDialog = true;
             // 
@@ -1012,7 +1067,7 @@ namespace MayNapKhiTPA.Forms
             this.tabPage2.Location = new System.Drawing.Point(4, 30);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1160, 657);
+            this.tabPage2.Size = new System.Drawing.Size(1160, 587);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Quản Lý Máy Nạp 2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -1032,7 +1087,7 @@ namespace MayNapKhiTPA.Forms
             this.tableLayoutPanel10.RowCount = 2;
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(1154, 651);
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(1154, 581);
             this.tableLayoutPanel10.TabIndex = 1;
             // 
             // panel35
@@ -1045,7 +1100,7 @@ namespace MayNapKhiTPA.Forms
             this.panel35.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel35.Location = new System.Drawing.Point(3, 3);
             this.panel35.Name = "panel35";
-            this.panel35.Size = new System.Drawing.Size(686, 254);
+            this.panel35.Size = new System.Drawing.Size(686, 226);
             this.panel35.TabIndex = 2;
             // 
             // tableLayoutPanel6
@@ -1070,16 +1125,16 @@ namespace MayNapKhiTPA.Forms
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(684, 148);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(684, 120);
             this.tableLayoutPanel6.TabIndex = 12;
             // 
             // panel22
             // 
             this.panel22.Controls.Add(this.button20);
             this.panel22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel22.Location = new System.Drawing.Point(459, 101);
+            this.panel22.Location = new System.Drawing.Point(459, 83);
             this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(222, 44);
+            this.panel22.Size = new System.Drawing.Size(222, 34);
             this.panel22.TabIndex = 8;
             // 
             // button20
@@ -1093,7 +1148,7 @@ namespace MayNapKhiTPA.Forms
             this.button20.ForeColor = System.Drawing.SystemColors.MenuText;
             this.button20.Location = new System.Drawing.Point(0, 0);
             this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(222, 44);
+            this.button20.Size = new System.Drawing.Size(222, 34);
             this.button20.TabIndex = 8;
             this.button20.Text = "Lưu lượng trung bình : 60";
             this.button20.UseVisualStyleBackColor = false;
@@ -1102,9 +1157,9 @@ namespace MayNapKhiTPA.Forms
             // 
             this.panel21.Controls.Add(this.button22);
             this.panel21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel21.Location = new System.Drawing.Point(231, 101);
+            this.panel21.Location = new System.Drawing.Point(231, 83);
             this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(222, 44);
+            this.panel21.Size = new System.Drawing.Size(222, 34);
             this.panel21.TabIndex = 7;
             // 
             // button22
@@ -1118,7 +1173,7 @@ namespace MayNapKhiTPA.Forms
             this.button22.ForeColor = System.Drawing.SystemColors.MenuText;
             this.button22.Location = new System.Drawing.Point(0, 0);
             this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(222, 44);
+            this.button22.Size = new System.Drawing.Size(222, 34);
             this.button22.TabIndex = 8;
             this.button22.Text = "Lưu lượng max : 100";
             this.button22.UseVisualStyleBackColor = false;
@@ -1127,9 +1182,9 @@ namespace MayNapKhiTPA.Forms
             // 
             this.panel20.Controls.Add(this.button21);
             this.panel20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel20.Location = new System.Drawing.Point(3, 101);
+            this.panel20.Location = new System.Drawing.Point(3, 83);
             this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(222, 44);
+            this.panel20.Size = new System.Drawing.Size(222, 34);
             this.panel20.TabIndex = 6;
             // 
             // button21
@@ -1143,7 +1198,7 @@ namespace MayNapKhiTPA.Forms
             this.button21.ForeColor = System.Drawing.SystemColors.MenuText;
             this.button21.Location = new System.Drawing.Point(0, 0);
             this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(222, 44);
+            this.button21.Size = new System.Drawing.Size(222, 34);
             this.button21.TabIndex = 8;
             this.button21.Text = "Lưu lượng min : 20";
             this.button21.UseVisualStyleBackColor = false;
@@ -1152,9 +1207,9 @@ namespace MayNapKhiTPA.Forms
             // 
             this.panel19.Controls.Add(this.button19);
             this.panel19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel19.Location = new System.Drawing.Point(459, 52);
+            this.panel19.Location = new System.Drawing.Point(459, 43);
             this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(222, 43);
+            this.panel19.Size = new System.Drawing.Size(222, 34);
             this.panel19.TabIndex = 5;
             // 
             // button19
@@ -1168,7 +1223,7 @@ namespace MayNapKhiTPA.Forms
             this.button19.ForeColor = System.Drawing.SystemColors.MenuText;
             this.button19.Location = new System.Drawing.Point(0, 0);
             this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(222, 43);
+            this.button19.Size = new System.Drawing.Size(222, 34);
             this.button19.TabIndex = 8;
             this.button19.Text = "Thể tích trung bình : 70";
             this.button19.UseVisualStyleBackColor = false;
@@ -1177,9 +1232,9 @@ namespace MayNapKhiTPA.Forms
             // 
             this.panel18.Controls.Add(this.button18);
             this.panel18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel18.Location = new System.Drawing.Point(231, 52);
+            this.panel18.Location = new System.Drawing.Point(231, 43);
             this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(222, 43);
+            this.panel18.Size = new System.Drawing.Size(222, 34);
             this.panel18.TabIndex = 4;
             // 
             // button18
@@ -1193,7 +1248,7 @@ namespace MayNapKhiTPA.Forms
             this.button18.ForeColor = System.Drawing.SystemColors.MenuText;
             this.button18.Location = new System.Drawing.Point(0, 0);
             this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(222, 43);
+            this.button18.Size = new System.Drawing.Size(222, 34);
             this.button18.TabIndex = 8;
             this.button18.Text = "Thể tích max : 80";
             this.button18.UseVisualStyleBackColor = false;
@@ -1202,9 +1257,9 @@ namespace MayNapKhiTPA.Forms
             // 
             this.panel17.Controls.Add(this.button17);
             this.panel17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel17.Location = new System.Drawing.Point(3, 52);
+            this.panel17.Location = new System.Drawing.Point(3, 43);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(222, 43);
+            this.panel17.Size = new System.Drawing.Size(222, 34);
             this.panel17.TabIndex = 3;
             // 
             // button17
@@ -1218,7 +1273,7 @@ namespace MayNapKhiTPA.Forms
             this.button17.ForeColor = System.Drawing.SystemColors.MenuText;
             this.button17.Location = new System.Drawing.Point(0, 0);
             this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(222, 43);
+            this.button17.Size = new System.Drawing.Size(222, 34);
             this.button17.TabIndex = 8;
             this.button17.Text = "Thể tích min : 40";
             this.button17.UseVisualStyleBackColor = false;
@@ -1229,7 +1284,7 @@ namespace MayNapKhiTPA.Forms
             this.panel16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel16.Location = new System.Drawing.Point(459, 3);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(222, 43);
+            this.panel16.Size = new System.Drawing.Size(222, 34);
             this.panel16.TabIndex = 2;
             // 
             // button16
@@ -1243,7 +1298,7 @@ namespace MayNapKhiTPA.Forms
             this.button16.ForeColor = System.Drawing.SystemColors.MenuText;
             this.button16.Location = new System.Drawing.Point(0, 0);
             this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(222, 43);
+            this.button16.Size = new System.Drawing.Size(222, 34);
             this.button16.TabIndex = 7;
             this.button16.Text = "Áp suất trung bình : 60";
             this.button16.UseVisualStyleBackColor = false;
@@ -1254,7 +1309,7 @@ namespace MayNapKhiTPA.Forms
             this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel15.Location = new System.Drawing.Point(231, 3);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(222, 43);
+            this.panel15.Size = new System.Drawing.Size(222, 34);
             this.panel15.TabIndex = 1;
             // 
             // button15
@@ -1268,7 +1323,7 @@ namespace MayNapKhiTPA.Forms
             this.button15.ForeColor = System.Drawing.SystemColors.MenuText;
             this.button15.Location = new System.Drawing.Point(0, 0);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(222, 43);
+            this.button15.Size = new System.Drawing.Size(222, 34);
             this.button15.TabIndex = 7;
             this.button15.Text = "Áp suất max : 80";
             this.button15.UseVisualStyleBackColor = false;
@@ -1279,7 +1334,7 @@ namespace MayNapKhiTPA.Forms
             this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel14.Location = new System.Drawing.Point(3, 3);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(222, 43);
+            this.panel14.Size = new System.Drawing.Size(222, 34);
             this.panel14.TabIndex = 0;
             // 
             // button14
@@ -1293,7 +1348,7 @@ namespace MayNapKhiTPA.Forms
             this.button14.ForeColor = System.Drawing.SystemColors.MenuText;
             this.button14.Location = new System.Drawing.Point(0, 0);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(222, 43);
+            this.button14.Size = new System.Drawing.Size(222, 34);
             this.button14.TabIndex = 7;
             this.button14.Text = "Áp suất min : 40";
             this.button14.UseVisualStyleBackColor = false;
@@ -1398,9 +1453,9 @@ namespace MayNapKhiTPA.Forms
             this.panel24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel24.Controls.Add(this.tableLayoutPanel7);
             this.panel24.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel24.Location = new System.Drawing.Point(695, 263);
+            this.panel24.Location = new System.Drawing.Point(695, 235);
             this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(456, 385);
+            this.panel24.Size = new System.Drawing.Size(456, 343);
             this.panel24.TabIndex = 5;
             // 
             // tableLayoutPanel7
@@ -1415,7 +1470,7 @@ namespace MayNapKhiTPA.Forms
             this.tableLayoutPanel7.RowCount = 2;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(454, 383);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(454, 341);
             this.tableLayoutPanel7.TabIndex = 2;
             // 
             // panel25
@@ -1423,9 +1478,9 @@ namespace MayNapKhiTPA.Forms
             this.panel25.Controls.Add(this.tableLayoutPanel13);
             this.panel25.Controls.Add(this.button41);
             this.panel25.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel25.Location = new System.Drawing.Point(3, 137);
+            this.panel25.Location = new System.Drawing.Point(3, 122);
             this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(448, 243);
+            this.panel25.Size = new System.Drawing.Size(448, 216);
             this.panel25.TabIndex = 1;
             // 
             // tableLayoutPanel13
@@ -1440,8 +1495,8 @@ namespace MayNapKhiTPA.Forms
             this.tableLayoutPanel13.Name = "tableLayoutPanel13";
             this.tableLayoutPanel13.RowCount = 1;
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 193F));
-            this.tableLayoutPanel13.Size = new System.Drawing.Size(448, 193);
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 166F));
+            this.tableLayoutPanel13.Size = new System.Drawing.Size(448, 166);
             this.tableLayoutPanel13.TabIndex = 23;
             // 
             // panel44
@@ -1450,7 +1505,7 @@ namespace MayNapKhiTPA.Forms
             this.panel44.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel44.Location = new System.Drawing.Point(227, 3);
             this.panel44.Name = "panel44";
-            this.panel44.Size = new System.Drawing.Size(218, 187);
+            this.panel44.Size = new System.Drawing.Size(218, 160);
             this.panel44.TabIndex = 1;
             // 
             // buttonStopMachine2
@@ -1462,7 +1517,7 @@ namespace MayNapKhiTPA.Forms
             this.buttonStopMachine2.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonStopMachine2.Location = new System.Drawing.Point(0, 0);
             this.buttonStopMachine2.Name = "buttonStopMachine2";
-            this.buttonStopMachine2.Size = new System.Drawing.Size(218, 187);
+            this.buttonStopMachine2.Size = new System.Drawing.Size(218, 160);
             this.buttonStopMachine2.TabIndex = 27;
             this.buttonStopMachine2.Text = "Ngừng nạp";
             this.buttonStopMachine2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1476,7 +1531,7 @@ namespace MayNapKhiTPA.Forms
             this.panel37.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel37.Location = new System.Drawing.Point(3, 3);
             this.panel37.Name = "panel37";
-            this.panel37.Size = new System.Drawing.Size(218, 187);
+            this.panel37.Size = new System.Drawing.Size(218, 160);
             this.panel37.TabIndex = 0;
             // 
             // buttonStartMachine2
@@ -1488,7 +1543,7 @@ namespace MayNapKhiTPA.Forms
             this.buttonStartMachine2.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonStartMachine2.Location = new System.Drawing.Point(0, 0);
             this.buttonStartMachine2.Name = "buttonStartMachine2";
-            this.buttonStartMachine2.Size = new System.Drawing.Size(218, 187);
+            this.buttonStartMachine2.Size = new System.Drawing.Size(218, 160);
             this.buttonStartMachine2.TabIndex = 26;
             this.buttonStartMachine2.Text = "Bắt đầu nạp";
             this.buttonStartMachine2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1523,7 +1578,7 @@ namespace MayNapKhiTPA.Forms
             this.panel26.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel26.Location = new System.Drawing.Point(3, 3);
             this.panel26.Name = "panel26";
-            this.panel26.Size = new System.Drawing.Size(448, 128);
+            this.panel26.Size = new System.Drawing.Size(448, 113);
             this.panel26.TabIndex = 0;
             // 
             // panel27
@@ -1532,7 +1587,7 @@ namespace MayNapKhiTPA.Forms
             this.panel27.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel27.Location = new System.Drawing.Point(0, 50);
             this.panel27.Name = "panel27";
-            this.panel27.Size = new System.Drawing.Size(448, 78);
+            this.panel27.Size = new System.Drawing.Size(448, 63);
             this.panel27.TabIndex = 7;
             // 
             // label2
@@ -1575,7 +1630,7 @@ namespace MayNapKhiTPA.Forms
             this.panel28.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel28.Location = new System.Drawing.Point(695, 3);
             this.panel28.Name = "panel28";
-            this.panel28.Size = new System.Drawing.Size(456, 254);
+            this.panel28.Size = new System.Drawing.Size(456, 226);
             this.panel28.TabIndex = 6;
             // 
             // tableLayoutPanel8
@@ -1592,7 +1647,7 @@ namespace MayNapKhiTPA.Forms
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(454, 202);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(454, 174);
             this.tableLayoutPanel8.TabIndex = 7;
             // 
             // panel29
@@ -1602,7 +1657,7 @@ namespace MayNapKhiTPA.Forms
             this.panel29.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel29.Location = new System.Drawing.Point(3, 3);
             this.panel29.Name = "panel29";
-            this.panel29.Size = new System.Drawing.Size(448, 61);
+            this.panel29.Size = new System.Drawing.Size(448, 52);
             this.panel29.TabIndex = 0;
             // 
             // button24
@@ -1618,7 +1673,7 @@ namespace MayNapKhiTPA.Forms
             this.button24.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button24.Location = new System.Drawing.Point(0, 0);
             this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(446, 59);
+            this.button24.Size = new System.Drawing.Size(446, 50);
             this.button24.TabIndex = 6;
             this.button24.Text = "Áp suất : 50";
             this.button24.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1630,9 +1685,9 @@ namespace MayNapKhiTPA.Forms
             this.panel30.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel30.Controls.Add(this.button25);
             this.panel30.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel30.Location = new System.Drawing.Point(3, 70);
+            this.panel30.Location = new System.Drawing.Point(3, 61);
             this.panel30.Name = "panel30";
-            this.panel30.Size = new System.Drawing.Size(448, 61);
+            this.panel30.Size = new System.Drawing.Size(448, 52);
             this.panel30.TabIndex = 1;
             // 
             // button25
@@ -1648,7 +1703,7 @@ namespace MayNapKhiTPA.Forms
             this.button25.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button25.Location = new System.Drawing.Point(0, 0);
             this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(446, 59);
+            this.button25.Size = new System.Drawing.Size(446, 50);
             this.button25.TabIndex = 7;
             this.button25.Text = "Thể tích : 130";
             this.button25.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1660,9 +1715,9 @@ namespace MayNapKhiTPA.Forms
             this.panel31.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel31.Controls.Add(this.button26);
             this.panel31.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel31.Location = new System.Drawing.Point(3, 137);
+            this.panel31.Location = new System.Drawing.Point(3, 119);
             this.panel31.Name = "panel31";
-            this.panel31.Size = new System.Drawing.Size(448, 62);
+            this.panel31.Size = new System.Drawing.Size(448, 52);
             this.panel31.TabIndex = 2;
             // 
             // button26
@@ -1678,7 +1733,7 @@ namespace MayNapKhiTPA.Forms
             this.button26.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button26.Location = new System.Drawing.Point(0, 0);
             this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(446, 60);
+            this.button26.Size = new System.Drawing.Size(446, 50);
             this.button26.TabIndex = 7;
             this.button26.Text = "Lưu lượng : 80";
             this.button26.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1711,9 +1766,9 @@ namespace MayNapKhiTPA.Forms
             this.panel32.Controls.Add(this.tableLayoutPanel9);
             this.panel32.Controls.Add(this.button28);
             this.panel32.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel32.Location = new System.Drawing.Point(3, 263);
+            this.panel32.Location = new System.Drawing.Point(3, 235);
             this.panel32.Name = "panel32";
-            this.panel32.Size = new System.Drawing.Size(686, 385);
+            this.panel32.Size = new System.Drawing.Size(686, 343);
             this.panel32.TabIndex = 7;
             // 
             // tableLayoutPanel9
@@ -1729,13 +1784,13 @@ namespace MayNapKhiTPA.Forms
             this.tableLayoutPanel9.RowCount = 2;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(684, 333);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(684, 291);
             this.tableLayoutPanel9.TabIndex = 9;
             // 
             // zedGraphControlTheTich2
             // 
             this.zedGraphControlTheTich2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.zedGraphControlTheTich2.Location = new System.Drawing.Point(3, 169);
+            this.zedGraphControlTheTich2.Location = new System.Drawing.Point(3, 148);
             this.zedGraphControlTheTich2.Name = "zedGraphControlTheTich2";
             this.zedGraphControlTheTich2.ScrollGrace = 0D;
             this.zedGraphControlTheTich2.ScrollMaxX = 0D;
@@ -1744,7 +1799,7 @@ namespace MayNapKhiTPA.Forms
             this.zedGraphControlTheTich2.ScrollMinX = 0D;
             this.zedGraphControlTheTich2.ScrollMinY = 0D;
             this.zedGraphControlTheTich2.ScrollMinY2 = 0D;
-            this.zedGraphControlTheTich2.Size = new System.Drawing.Size(678, 161);
+            this.zedGraphControlTheTich2.Size = new System.Drawing.Size(678, 140);
             this.zedGraphControlTheTich2.TabIndex = 5;
             this.zedGraphControlTheTich2.UseExtendedPrintDialog = true;
             // 
@@ -1760,7 +1815,7 @@ namespace MayNapKhiTPA.Forms
             this.zedGraphControlApSuat2.ScrollMinX = 0D;
             this.zedGraphControlApSuat2.ScrollMinY = 0D;
             this.zedGraphControlApSuat2.ScrollMinY2 = 0D;
-            this.zedGraphControlApSuat2.Size = new System.Drawing.Size(678, 160);
+            this.zedGraphControlApSuat2.Size = new System.Drawing.Size(678, 139);
             this.zedGraphControlApSuat2.TabIndex = 4;
             this.zedGraphControlApSuat2.UseExtendedPrintDialog = true;
             // 
@@ -1784,6 +1839,523 @@ namespace MayNapKhiTPA.Forms
             this.button28.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.button28.UseVisualStyleBackColor = false;
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.tableLayoutPanel15);
+            this.tabPage3.Location = new System.Drawing.Point(4, 30);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1160, 587);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Cài đặt thông số";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel15
+            // 
+            this.tableLayoutPanel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(227)))), ((int)(((byte)(231)))));
+            this.tableLayoutPanel15.ColumnCount = 2;
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 397F));
+            this.tableLayoutPanel15.Controls.Add(this.panel49, 1, 0);
+            this.tableLayoutPanel15.Controls.Add(this.panel56, 0, 0);
+            this.tableLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel15.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel15.Name = "tableLayoutPanel15";
+            this.tableLayoutPanel15.RowCount = 1;
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel15.Size = new System.Drawing.Size(1154, 581);
+            this.tableLayoutPanel15.TabIndex = 3;
+            // 
+            // panel49
+            // 
+            this.panel49.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel49.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel49.Controls.Add(this.panel50);
+            this.panel49.Controls.Add(this.panel51);
+            this.panel49.Controls.Add(this.panel52);
+            this.panel49.Controls.Add(this.panel53);
+            this.panel49.Controls.Add(this.panel54);
+            this.panel49.Controls.Add(this.buttonSaveSetting);
+            this.panel49.Controls.Add(this.panel55);
+            this.panel49.Controls.Add(this.button7);
+            this.panel49.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel49.Location = new System.Drawing.Point(760, 3);
+            this.panel49.Name = "panel49";
+            this.panel49.Size = new System.Drawing.Size(391, 575);
+            this.panel49.TabIndex = 3;
+            // 
+            // panel50
+            // 
+            this.panel50.Controls.Add(this.textBoxThoiGianLayMau);
+            this.panel50.Controls.Add(this.label5);
+            this.panel50.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel50.Location = new System.Drawing.Point(0, 235);
+            this.panel50.Name = "panel50";
+            this.panel50.Size = new System.Drawing.Size(389, 45);
+            this.panel50.TabIndex = 27;
+            // 
+            // textBoxThoiGianLayMau
+            // 
+            this.textBoxThoiGianLayMau.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxThoiGianLayMau.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxThoiGianLayMau.BorderColor = System.Drawing.Color.CornflowerBlue;
+            this.textBoxThoiGianLayMau.BorderFocusColor = System.Drawing.SystemColors.ActiveCaption;
+            this.textBoxThoiGianLayMau.BorderRadius = 5;
+            this.textBoxThoiGianLayMau.BorderSize = 1;
+            this.textBoxThoiGianLayMau.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxThoiGianLayMau.Location = new System.Drawing.Point(124, 4);
+            this.textBoxThoiGianLayMau.Multiline = false;
+            this.textBoxThoiGianLayMau.Name = "textBoxThoiGianLayMau";
+            this.textBoxThoiGianLayMau.Padding = new System.Windows.Forms.Padding(7);
+            this.textBoxThoiGianLayMau.PasswordChar = false;
+            this.textBoxThoiGianLayMau.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.textBoxThoiGianLayMau.PlaceholderText = "phút";
+            this.textBoxThoiGianLayMau.Size = new System.Drawing.Size(216, 35);
+            this.textBoxThoiGianLayMau.TabIndex = 52;
+            this.textBoxThoiGianLayMau.Texts = "phút";
+            this.textBoxThoiGianLayMau.UnderlinedStyle = false;
+            this.textBoxThoiGianLayMau.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxApSuatNap_KeyPress);
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(8, 14);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(150, 18);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Thời gian lấy mẫu :";
+            // 
+            // panel51
+            // 
+            this.panel51.Controls.Add(this.textBoxThoiGianNap);
+            this.panel51.Controls.Add(this.label3);
+            this.panel51.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel51.Location = new System.Drawing.Point(0, 191);
+            this.panel51.Name = "panel51";
+            this.panel51.Size = new System.Drawing.Size(389, 44);
+            this.panel51.TabIndex = 26;
+            // 
+            // textBoxThoiGianNap
+            // 
+            this.textBoxThoiGianNap.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxThoiGianNap.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxThoiGianNap.BorderColor = System.Drawing.Color.CornflowerBlue;
+            this.textBoxThoiGianNap.BorderFocusColor = System.Drawing.SystemColors.ActiveCaption;
+            this.textBoxThoiGianNap.BorderRadius = 5;
+            this.textBoxThoiGianNap.BorderSize = 1;
+            this.textBoxThoiGianNap.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxThoiGianNap.Location = new System.Drawing.Point(124, 4);
+            this.textBoxThoiGianNap.Multiline = false;
+            this.textBoxThoiGianNap.Name = "textBoxThoiGianNap";
+            this.textBoxThoiGianNap.Padding = new System.Windows.Forms.Padding(7);
+            this.textBoxThoiGianNap.PasswordChar = false;
+            this.textBoxThoiGianNap.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.textBoxThoiGianNap.PlaceholderText = "phút";
+            this.textBoxThoiGianNap.Size = new System.Drawing.Size(216, 35);
+            this.textBoxThoiGianNap.TabIndex = 52;
+            this.textBoxThoiGianNap.Texts = "phút";
+            this.textBoxThoiGianNap.UnderlinedStyle = false;
+            this.textBoxThoiGianNap.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxApSuatNap_KeyPress);
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(32, 14);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(119, 18);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Thời gian nạp :";
+            // 
+            // panel52
+            // 
+            this.panel52.Controls.Add(this.textBoxTheTichNap);
+            this.panel52.Controls.Add(this.label4);
+            this.panel52.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel52.Location = new System.Drawing.Point(0, 147);
+            this.panel52.Name = "panel52";
+            this.panel52.Size = new System.Drawing.Size(389, 44);
+            this.panel52.TabIndex = 25;
+            // 
+            // textBoxTheTichNap
+            // 
+            this.textBoxTheTichNap.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxTheTichNap.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxTheTichNap.BorderColor = System.Drawing.Color.CornflowerBlue;
+            this.textBoxTheTichNap.BorderFocusColor = System.Drawing.SystemColors.ActiveCaption;
+            this.textBoxTheTichNap.BorderRadius = 5;
+            this.textBoxTheTichNap.BorderSize = 1;
+            this.textBoxTheTichNap.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxTheTichNap.Location = new System.Drawing.Point(124, 7);
+            this.textBoxTheTichNap.Multiline = false;
+            this.textBoxTheTichNap.Name = "textBoxTheTichNap";
+            this.textBoxTheTichNap.Padding = new System.Windows.Forms.Padding(7);
+            this.textBoxTheTichNap.PasswordChar = false;
+            this.textBoxTheTichNap.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.textBoxTheTichNap.PlaceholderText = "m3";
+            this.textBoxTheTichNap.Size = new System.Drawing.Size(216, 35);
+            this.textBoxTheTichNap.TabIndex = 51;
+            this.textBoxTheTichNap.Texts = "m3";
+            this.textBoxTheTichNap.UnderlinedStyle = false;
+            this.textBoxTheTichNap.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxApSuatNap_KeyPress);
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(41, 16);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(110, 18);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Thể tích nạp :";
+            // 
+            // panel53
+            // 
+            this.panel53.Controls.Add(this.textBoxApSuatNap);
+            this.panel53.Controls.Add(this.label6);
+            this.panel53.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel53.Location = new System.Drawing.Point(0, 103);
+            this.panel53.Name = "panel53";
+            this.panel53.Size = new System.Drawing.Size(389, 44);
+            this.panel53.TabIndex = 24;
+            // 
+            // textBoxApSuatNap
+            // 
+            this.textBoxApSuatNap.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxApSuatNap.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxApSuatNap.BorderColor = System.Drawing.Color.CornflowerBlue;
+            this.textBoxApSuatNap.BorderFocusColor = System.Drawing.SystemColors.ActiveCaption;
+            this.textBoxApSuatNap.BorderRadius = 5;
+            this.textBoxApSuatNap.BorderSize = 1;
+            this.textBoxApSuatNap.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxApSuatNap.Location = new System.Drawing.Point(124, 6);
+            this.textBoxApSuatNap.Multiline = false;
+            this.textBoxApSuatNap.Name = "textBoxApSuatNap";
+            this.textBoxApSuatNap.Padding = new System.Windows.Forms.Padding(7);
+            this.textBoxApSuatNap.PasswordChar = false;
+            this.textBoxApSuatNap.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.textBoxApSuatNap.PlaceholderText = "bar";
+            this.textBoxApSuatNap.Size = new System.Drawing.Size(216, 35);
+            this.textBoxApSuatNap.TabIndex = 50;
+            this.textBoxApSuatNap.Texts = "bar";
+            this.textBoxApSuatNap.UnderlinedStyle = false;
+            this.textBoxApSuatNap.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxApSuatNap_KeyPress);
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(43, 15);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(106, 18);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Áp suất nạp :";
+            // 
+            // panel54
+            // 
+            this.panel54.Controls.Add(this.comboBoxSelectTemplateSetting);
+            this.panel54.Controls.Add(this.label7);
+            this.panel54.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel54.Location = new System.Drawing.Point(0, 59);
+            this.panel54.Name = "panel54";
+            this.panel54.Size = new System.Drawing.Size(389, 44);
+            this.panel54.TabIndex = 23;
+            // 
+            // comboBoxSelectTemplateSetting
+            // 
+            this.comboBoxSelectTemplateSetting.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBoxSelectTemplateSetting.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxSelectTemplateSetting.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxSelectTemplateSetting.FormattingEnabled = true;
+            this.comboBoxSelectTemplateSetting.IntegralHeight = false;
+            this.comboBoxSelectTemplateSetting.Location = new System.Drawing.Point(124, 5);
+            this.comboBoxSelectTemplateSetting.MaxDropDownItems = 9;
+            this.comboBoxSelectTemplateSetting.Name = "comboBoxSelectTemplateSetting";
+            this.comboBoxSelectTemplateSetting.Size = new System.Drawing.Size(216, 36);
+            this.comboBoxSelectTemplateSetting.TabIndex = 77;
+            this.comboBoxSelectTemplateSetting.SelectedIndexChanged += new System.EventHandler(this.comboBoxSelectTemplateSetting_SelectedIndexChanged);
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(60, 15);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(86, 18);
+            this.label7.TabIndex = 7;
+            this.label7.Text = "Loại bình :";
+            // 
+            // buttonSaveSetting
+            // 
+            this.buttonSaveSetting.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonSaveSetting.BackColor = System.Drawing.Color.Green;
+            this.buttonSaveSetting.BackgroundColor = System.Drawing.Color.Green;
+            this.buttonSaveSetting.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonSaveSetting.BorderRadius = 6;
+            this.buttonSaveSetting.BorderSize = 0;
+            this.buttonSaveSetting.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonSaveSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSaveSetting.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSaveSetting.ForeColor = System.Drawing.Color.White;
+            this.buttonSaveSetting.Image = ((System.Drawing.Image)(resources.GetObject("buttonSaveSetting.Image")));
+            this.buttonSaveSetting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonSaveSetting.Location = new System.Drawing.Point(124, 300);
+            this.buttonSaveSetting.Name = "buttonSaveSetting";
+            this.buttonSaveSetting.Size = new System.Drawing.Size(146, 39);
+            this.buttonSaveSetting.TabIndex = 22;
+            this.buttonSaveSetting.Text = "Lưu";
+            this.buttonSaveSetting.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonSaveSetting.TextColor = System.Drawing.Color.White;
+            this.buttonSaveSetting.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonSaveSetting.UseVisualStyleBackColor = false;
+            this.buttonSaveSetting.Click += new System.EventHandler(this.buttonSaveSetting_Click);
+            // 
+            // panel55
+            // 
+            this.panel55.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel55.Location = new System.Drawing.Point(0, 49);
+            this.panel55.Name = "panel55";
+            this.panel55.Size = new System.Drawing.Size(389, 10);
+            this.panel55.TabIndex = 7;
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.LightSlateGray;
+            this.button7.Cursor = System.Windows.Forms.Cursors.Default;
+            this.button7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Bahnschrift", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.button7.Location = new System.Drawing.Point(0, 0);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(389, 49);
+            this.button7.TabIndex = 6;
+            this.button7.Text = "Thiết lập thông số";
+            this.button7.UseVisualStyleBackColor = false;
+            // 
+            // panel56
+            // 
+            this.panel56.Controls.Add(this.tableLayoutPanel16);
+            this.panel56.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel56.Location = new System.Drawing.Point(3, 3);
+            this.panel56.Name = "panel56";
+            this.panel56.Size = new System.Drawing.Size(751, 575);
+            this.panel56.TabIndex = 0;
+            // 
+            // tableLayoutPanel16
+            // 
+            this.tableLayoutPanel16.ColumnCount = 1;
+            this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel16.Controls.Add(this.panel57, 0, 0);
+            this.tableLayoutPanel16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel16.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel16.Name = "tableLayoutPanel16";
+            this.tableLayoutPanel16.RowCount = 1;
+            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 99.99999F));
+            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 575F));
+            this.tableLayoutPanel16.Size = new System.Drawing.Size(751, 575);
+            this.tableLayoutPanel16.TabIndex = 0;
+            // 
+            // panel57
+            // 
+            this.panel57.Controls.Add(this.panel58);
+            this.panel57.Controls.Add(this.buttonNameSetting);
+            this.panel57.Controls.Add(this.button23);
+            this.panel57.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel57.Location = new System.Drawing.Point(3, 3);
+            this.panel57.Name = "panel57";
+            this.panel57.Size = new System.Drawing.Size(745, 569);
+            this.panel57.TabIndex = 28;
+            // 
+            // panel58
+            // 
+            this.panel58.Controls.Add(this.tableLayoutPanel17);
+            this.panel58.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel58.Location = new System.Drawing.Point(0, 179);
+            this.panel58.Name = "panel58";
+            this.panel58.Size = new System.Drawing.Size(745, 390);
+            this.panel58.TabIndex = 11;
+            // 
+            // tableLayoutPanel17
+            // 
+            this.tableLayoutPanel17.ColumnCount = 2;
+            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel17.Controls.Add(this.panel59, 1, 1);
+            this.tableLayoutPanel17.Controls.Add(this.panel60, 0, 1);
+            this.tableLayoutPanel17.Controls.Add(this.panel61, 1, 0);
+            this.tableLayoutPanel17.Controls.Add(this.panel62, 0, 0);
+            this.tableLayoutPanel17.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel17.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel17.Name = "tableLayoutPanel17";
+            this.tableLayoutPanel17.RowCount = 2;
+            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel17.Size = new System.Drawing.Size(745, 390);
+            this.tableLayoutPanel17.TabIndex = 9;
+            // 
+            // panel59
+            // 
+            this.panel59.Controls.Add(this.buttonThoiGianLayMau);
+            this.panel59.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel59.Location = new System.Drawing.Point(375, 198);
+            this.panel59.Name = "panel59";
+            this.panel59.Size = new System.Drawing.Size(367, 189);
+            this.panel59.TabIndex = 3;
+            // 
+            // buttonThoiGianLayMau
+            // 
+            this.buttonThoiGianLayMau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(214)))), ((int)(((byte)(157)))));
+            this.buttonThoiGianLayMau.Cursor = System.Windows.Forms.Cursors.Default;
+            this.buttonThoiGianLayMau.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonThoiGianLayMau.FlatAppearance.BorderSize = 0;
+            this.buttonThoiGianLayMau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonThoiGianLayMau.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonThoiGianLayMau.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(29)))), ((int)(((byte)(131)))));
+            this.buttonThoiGianLayMau.Image = ((System.Drawing.Image)(resources.GetObject("buttonThoiGianLayMau.Image")));
+            this.buttonThoiGianLayMau.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonThoiGianLayMau.Location = new System.Drawing.Point(0, 0);
+            this.buttonThoiGianLayMau.Name = "buttonThoiGianLayMau";
+            this.buttonThoiGianLayMau.Size = new System.Drawing.Size(367, 189);
+            this.buttonThoiGianLayMau.TabIndex = 11;
+            this.buttonThoiGianLayMau.Text = "Thời gian lấy mẫu : rỗng";
+            this.buttonThoiGianLayMau.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.buttonThoiGianLayMau.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonThoiGianLayMau.UseVisualStyleBackColor = false;
+            // 
+            // panel60
+            // 
+            this.panel60.Controls.Add(this.buttonThoiGianNap);
+            this.panel60.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel60.Location = new System.Drawing.Point(3, 198);
+            this.panel60.Name = "panel60";
+            this.panel60.Size = new System.Drawing.Size(366, 189);
+            this.panel60.TabIndex = 2;
+            // 
+            // buttonThoiGianNap
+            // 
+            this.buttonThoiGianNap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(214)))), ((int)(((byte)(157)))));
+            this.buttonThoiGianNap.Cursor = System.Windows.Forms.Cursors.Default;
+            this.buttonThoiGianNap.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonThoiGianNap.FlatAppearance.BorderSize = 0;
+            this.buttonThoiGianNap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonThoiGianNap.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonThoiGianNap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(29)))), ((int)(((byte)(131)))));
+            this.buttonThoiGianNap.Image = ((System.Drawing.Image)(resources.GetObject("buttonThoiGianNap.Image")));
+            this.buttonThoiGianNap.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonThoiGianNap.Location = new System.Drawing.Point(0, 0);
+            this.buttonThoiGianNap.Name = "buttonThoiGianNap";
+            this.buttonThoiGianNap.Size = new System.Drawing.Size(366, 189);
+            this.buttonThoiGianNap.TabIndex = 11;
+            this.buttonThoiGianNap.Text = "Thời gian nạp : rỗng";
+            this.buttonThoiGianNap.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.buttonThoiGianNap.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonThoiGianNap.UseVisualStyleBackColor = false;
+            // 
+            // panel61
+            // 
+            this.panel61.Controls.Add(this.buttonTheTichNap);
+            this.panel61.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel61.Location = new System.Drawing.Point(375, 3);
+            this.panel61.Name = "panel61";
+            this.panel61.Size = new System.Drawing.Size(367, 189);
+            this.panel61.TabIndex = 1;
+            // 
+            // buttonTheTichNap
+            // 
+            this.buttonTheTichNap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(214)))), ((int)(((byte)(157)))));
+            this.buttonTheTichNap.Cursor = System.Windows.Forms.Cursors.Default;
+            this.buttonTheTichNap.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonTheTichNap.FlatAppearance.BorderSize = 0;
+            this.buttonTheTichNap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonTheTichNap.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonTheTichNap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(29)))), ((int)(((byte)(131)))));
+            this.buttonTheTichNap.Image = ((System.Drawing.Image)(resources.GetObject("buttonTheTichNap.Image")));
+            this.buttonTheTichNap.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonTheTichNap.Location = new System.Drawing.Point(0, 0);
+            this.buttonTheTichNap.Name = "buttonTheTichNap";
+            this.buttonTheTichNap.Size = new System.Drawing.Size(367, 189);
+            this.buttonTheTichNap.TabIndex = 11;
+            this.buttonTheTichNap.Text = "Thể tích nạp : rỗng";
+            this.buttonTheTichNap.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.buttonTheTichNap.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonTheTichNap.UseVisualStyleBackColor = false;
+            // 
+            // panel62
+            // 
+            this.panel62.Controls.Add(this.buttonApSuatNap);
+            this.panel62.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel62.Location = new System.Drawing.Point(3, 3);
+            this.panel62.Name = "panel62";
+            this.panel62.Size = new System.Drawing.Size(366, 189);
+            this.panel62.TabIndex = 0;
+            // 
+            // buttonApSuatNap
+            // 
+            this.buttonApSuatNap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(214)))), ((int)(((byte)(157)))));
+            this.buttonApSuatNap.Cursor = System.Windows.Forms.Cursors.Default;
+            this.buttonApSuatNap.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonApSuatNap.FlatAppearance.BorderSize = 0;
+            this.buttonApSuatNap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonApSuatNap.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonApSuatNap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(29)))), ((int)(((byte)(131)))));
+            this.buttonApSuatNap.Image = ((System.Drawing.Image)(resources.GetObject("buttonApSuatNap.Image")));
+            this.buttonApSuatNap.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonApSuatNap.Location = new System.Drawing.Point(0, 0);
+            this.buttonApSuatNap.Name = "buttonApSuatNap";
+            this.buttonApSuatNap.Size = new System.Drawing.Size(366, 189);
+            this.buttonApSuatNap.TabIndex = 11;
+            this.buttonApSuatNap.Text = "Áp suất nạp : rỗng";
+            this.buttonApSuatNap.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.buttonApSuatNap.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonApSuatNap.UseVisualStyleBackColor = false;
+            // 
+            // buttonNameSetting
+            // 
+            this.buttonNameSetting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(214)))), ((int)(((byte)(157)))));
+            this.buttonNameSetting.Cursor = System.Windows.Forms.Cursors.Default;
+            this.buttonNameSetting.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonNameSetting.FlatAppearance.BorderSize = 0;
+            this.buttonNameSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonNameSetting.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonNameSetting.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(29)))), ((int)(((byte)(131)))));
+            this.buttonNameSetting.Location = new System.Drawing.Point(0, 47);
+            this.buttonNameSetting.Name = "buttonNameSetting";
+            this.buttonNameSetting.Size = new System.Drawing.Size(745, 132);
+            this.buttonNameSetting.TabIndex = 10;
+            this.buttonNameSetting.Text = "Loại bình : Mặc định";
+            this.buttonNameSetting.UseVisualStyleBackColor = false;
+            // 
+            // button23
+            // 
+            this.button23.BackColor = System.Drawing.Color.LightSlateGray;
+            this.button23.Cursor = System.Windows.Forms.Cursors.Default;
+            this.button23.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button23.FlatAppearance.BorderSize = 0;
+            this.button23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button23.Font = new System.Drawing.Font("Bahnschrift", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button23.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.button23.Location = new System.Drawing.Point(0, 0);
+            this.button23.Name = "button23";
+            this.button23.Size = new System.Drawing.Size(745, 47);
+            this.button23.TabIndex = 8;
+            this.button23.Text = "Thông số hiện tại";
+            this.button23.UseVisualStyleBackColor = false;
+            // 
             // timer1
             // 
             this.timer1.Interval = 3000;
@@ -1793,7 +2365,7 @@ namespace MayNapKhiTPA.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1168, 691);
+            this.ClientSize = new System.Drawing.Size(1168, 621);
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormDashboard";
@@ -1865,6 +2437,28 @@ namespace MayNapKhiTPA.Forms
             this.panel31.ResumeLayout(false);
             this.panel32.ResumeLayout(false);
             this.tableLayoutPanel9.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
+            this.tableLayoutPanel15.ResumeLayout(false);
+            this.panel49.ResumeLayout(false);
+            this.panel50.ResumeLayout(false);
+            this.panel50.PerformLayout();
+            this.panel51.ResumeLayout(false);
+            this.panel51.PerformLayout();
+            this.panel52.ResumeLayout(false);
+            this.panel52.PerformLayout();
+            this.panel53.ResumeLayout(false);
+            this.panel53.PerformLayout();
+            this.panel54.ResumeLayout(false);
+            this.panel54.PerformLayout();
+            this.panel56.ResumeLayout(false);
+            this.tableLayoutPanel16.ResumeLayout(false);
+            this.panel57.ResumeLayout(false);
+            this.panel58.ResumeLayout(false);
+            this.tableLayoutPanel17.ResumeLayout(false);
+            this.panel59.ResumeLayout(false);
+            this.panel60.ResumeLayout(false);
+            this.panel61.ResumeLayout(false);
+            this.panel62.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1985,5 +2579,41 @@ namespace MayNapKhiTPA.Forms
         private Button buttonStopMachine2;
         private Panel panel37;
         private Button buttonStartMachine2;
+        private TabPage tabPage3;
+        private TableLayoutPanel tableLayoutPanel15;
+        private Panel panel49;
+        private Panel panel50;
+        private LW_PhanMemBaoGia.MyControls.TextBoxT textBoxThoiGianLayMau;
+        private Label label5;
+        private Panel panel51;
+        private LW_PhanMemBaoGia.MyControls.TextBoxT textBoxThoiGianNap;
+        private Label label3;
+        private Panel panel52;
+        private LW_PhanMemBaoGia.MyControls.TextBoxT textBoxTheTichNap;
+        private Label label4;
+        private Panel panel53;
+        private LW_PhanMemBaoGia.MyControls.TextBoxT textBoxApSuatNap;
+        private Label label6;
+        private Panel panel54;
+        private ComboBox comboBoxSelectTemplateSetting;
+        private Label label7;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonSaveSetting;
+        private Panel panel55;
+        private Button button7;
+        private Panel panel56;
+        private TableLayoutPanel tableLayoutPanel16;
+        private Panel panel57;
+        private Panel panel58;
+        private TableLayoutPanel tableLayoutPanel17;
+        private Panel panel59;
+        private Button buttonThoiGianLayMau;
+        private Panel panel60;
+        private Button buttonThoiGianNap;
+        private Panel panel61;
+        private Button buttonTheTichNap;
+        private Panel panel62;
+        private Button buttonApSuatNap;
+        private Button buttonNameSetting;
+        private Button button23;
     }
 }
