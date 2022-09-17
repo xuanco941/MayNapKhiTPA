@@ -16,11 +16,7 @@ namespace MayNapKhiTPA.Forms
         public FormHelp()
         {
             InitializeComponent();
-            string cur = Directory.GetCurrentDirectory();
-            axAcroPDF1.LoadFile("abc.pdf");
-            axAcroPDF1.setShowToolbar(false);
-            axAcroPDF1.setZoom(90);
-            axAcroPDF1.Show();
+            pdfViewerControl1.Load("abc.pdf");
         }
 
     }
