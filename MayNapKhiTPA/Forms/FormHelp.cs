@@ -16,7 +16,7 @@ namespace MayNapKhiTPA.Forms
         public FormHelp()
         {
             InitializeComponent();
-            pdfViewerControl1.Load("abc.pdf");
+            pdfDocumentView1.Load("abc.pdf");
         }
 
     }
