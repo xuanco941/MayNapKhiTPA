@@ -175,47 +175,39 @@ namespace MayNapKhiTPA.Forms
         // add template setting
         private void buttonAddTemplateSetting_Click(object sender, EventArgs e)
         {
-            //check quyền
-            if (Common.GROUPSESSION.IsSettingTemplateMachine)
-            {
-                string Name = textBoxNameTemplateSetting.Texts;
-                string ApSuatNap = textBoxApSuatNapTemplateSetting.Texts;
-                string TheTichNap = textBoxTheTichNapTemplateSetting.Texts;
-                string ThoiGianNap = textBoxThoiGianNapTemplateSetting.Texts;
-                string ThoiGianLayMau = textBoxThoiGianLayMauTemplateSetting.Texts;
+            string Name = textBoxNameTemplateSetting.Texts;
+            string ApSuatNap = textBoxApSuatNapTemplateSetting.Texts;
+            string TheTichNap = textBoxTheTichNapTemplateSetting.Texts;
+            string ThoiGianNap = textBoxThoiGianNapTemplateSetting.Texts;
+            string ThoiGianLayMau = textBoxThoiGianLayMauTemplateSetting.Texts;
 
-                if (!String.IsNullOrEmpty(Name) && Name != textBoxNameTemplateSetting.PlaceholderText
-                   && !String.IsNullOrEmpty(ApSuatNap) && ApSuatNap != textBoxApSuatNapTemplateSetting.PlaceholderText
-                   && !String.IsNullOrEmpty(TheTichNap) && TheTichNap != textBoxTheTichNapTemplateSetting.PlaceholderText
-                   && !String.IsNullOrEmpty(ThoiGianNap) && ThoiGianNap != textBoxThoiGianNapTemplateSetting.PlaceholderText
-                   && !String.IsNullOrEmpty(ThoiGianLayMau) && ThoiGianLayMau != textBoxThoiGianLayMauTemplateSetting.PlaceholderText)
+            if (!String.IsNullOrEmpty(Name) && Name != textBoxNameTemplateSetting.PlaceholderText
+               && !String.IsNullOrEmpty(ApSuatNap) && ApSuatNap != textBoxApSuatNapTemplateSetting.PlaceholderText
+               && !String.IsNullOrEmpty(TheTichNap) && TheTichNap != textBoxTheTichNapTemplateSetting.PlaceholderText
+               && !String.IsNullOrEmpty(ThoiGianNap) && ThoiGianNap != textBoxThoiGianNapTemplateSetting.PlaceholderText
+               && !String.IsNullOrEmpty(ThoiGianLayMau) && ThoiGianLayMau != textBoxThoiGianLayMauTemplateSetting.PlaceholderText)
+            {
+                TemplateMachine templateMachine = new TemplateMachine();
+                templateMachine.Name = Name;
+                templateMachine.ApSuatNap = double.Parse(ApSuatNap);
+                templateMachine.TheTichNap = double.Parse(TheTichNap);
+                templateMachine.ThoiGianNap = double.Parse(ThoiGianNap);
+                templateMachine.ThoiGianLayMau = double.Parse(ThoiGianLayMau);
+                try
                 {
-                    TemplateMachine templateMachine = new TemplateMachine();
-                    templateMachine.Name = Name;
-                    templateMachine.ApSuatNap = double.Parse(ApSuatNap);
-                    templateMachine.TheTichNap = double.Parse(TheTichNap);
-                    templateMachine.ThoiGianNap = double.Parse(ThoiGianNap);
-                    templateMachine.ThoiGianLayMau = double.Parse(ThoiGianLayMau);
-                    try
-                    {
-                        TemplateMachineBusiness.AddTemplateMachine(templateMachine);
-                        callAlert?.Invoke("Thêm thành công.", FormAlert.enmType.Success);
-                        LoadDataGridViewTemplateSetting();
-                        LoadSetting();
-                    }
-                    catch
-                    {
-                        callAlert?.Invoke("Tên này đã tồn tại.", FormAlert.enmType.Error);
-                    }
+                    TemplateMachineBusiness.AddTemplateMachine(templateMachine);
+                    callAlert?.Invoke("Thêm thành công.", FormAlert.enmType.Success);
+                    LoadDataGridViewTemplateSetting();
+                    LoadSetting();
                 }
-                else
+                catch
                 {
-                    callAlert?.Invoke("Các trường thêm không được trống.", FormAlert.enmType.Error);
+                    callAlert?.Invoke("Tên này đã tồn tại.", FormAlert.enmType.Error);
                 }
             }
             else
             {
-                callAlert?.Invoke("Tài khoản của bạn không có quyền này.", FormAlert.enmType.Info);
+                callAlert?.Invoke("Các trường thêm không được trống.", FormAlert.enmType.Error);
             }
 
 
@@ -259,48 +251,41 @@ namespace MayNapKhiTPA.Forms
         //update template setting
         private void buttonUpdateTemplateSetting_Click(object sender, EventArgs e)
         {
-            if (Common.GROUPSESSION.IsSettingTemplateMachine)
-            {
-                string Name = textBoxNameTemplateSetting.Texts;
-                string ApSuatNap = textBoxApSuatNapTemplateSetting.Texts;
-                string TheTichNap = textBoxTheTichNapTemplateSetting.Texts;
-                string ThoiGianNap = textBoxThoiGianNapTemplateSetting.Texts;
-                string ThoiGianLayMau = textBoxThoiGianLayMauTemplateSetting.Texts;
+            string Name = textBoxNameTemplateSetting.Texts;
+            string ApSuatNap = textBoxApSuatNapTemplateSetting.Texts;
+            string TheTichNap = textBoxTheTichNapTemplateSetting.Texts;
+            string ThoiGianNap = textBoxThoiGianNapTemplateSetting.Texts;
+            string ThoiGianLayMau = textBoxThoiGianLayMauTemplateSetting.Texts;
 
-                if (!String.IsNullOrEmpty(Name) && Name != textBoxNameTemplateSetting.PlaceholderText
-                   && !String.IsNullOrEmpty(ApSuatNap) && ApSuatNap != textBoxApSuatNapTemplateSetting.PlaceholderText
-                   && !String.IsNullOrEmpty(TheTichNap) && TheTichNap != textBoxTheTichNapTemplateSetting.PlaceholderText
-                   && !String.IsNullOrEmpty(ThoiGianNap) && ThoiGianNap != textBoxThoiGianNapTemplateSetting.PlaceholderText
-                   && !String.IsNullOrEmpty(ThoiGianLayMau) && ThoiGianLayMau != textBoxThoiGianLayMauTemplateSetting.PlaceholderText)
+            if (!String.IsNullOrEmpty(Name) && Name != textBoxNameTemplateSetting.PlaceholderText
+               && !String.IsNullOrEmpty(ApSuatNap) && ApSuatNap != textBoxApSuatNapTemplateSetting.PlaceholderText
+               && !String.IsNullOrEmpty(TheTichNap) && TheTichNap != textBoxTheTichNapTemplateSetting.PlaceholderText
+               && !String.IsNullOrEmpty(ThoiGianNap) && ThoiGianNap != textBoxThoiGianNapTemplateSetting.PlaceholderText
+               && !String.IsNullOrEmpty(ThoiGianLayMau) && ThoiGianLayMau != textBoxThoiGianLayMauTemplateSetting.PlaceholderText)
+            {
+                if (ID_TemplateMachine_Selected != 0)
                 {
-                    if (ID_TemplateMachine_Selected != 0)
+                    try
                     {
-                        try
-                        {
-                            TemplateMachineBusiness.UpdateTemplateMachine(ID_TemplateMachine_Selected, Name, double.Parse(ApSuatNap),
-                             double.Parse(TheTichNap), double.Parse(ThoiGianNap), double.Parse(ThoiGianLayMau));
-                            callAlert?.Invoke("Cập nhật thành công.", FormAlert.enmType.Success);
-                            LoadDataGridViewTemplateSetting();
-                            LoadSetting();
-                        }
-                        catch
-                        {
-                            callAlert?.Invoke("Gặp lỗi, không thể cập nhật.", FormAlert.enmType.Error);
-                        }
+                        TemplateMachineBusiness.UpdateTemplateMachine(ID_TemplateMachine_Selected, Name, double.Parse(ApSuatNap),
+                         double.Parse(TheTichNap), double.Parse(ThoiGianNap), double.Parse(ThoiGianLayMau));
+                        callAlert?.Invoke("Cập nhật thành công.", FormAlert.enmType.Success);
+                        LoadDataGridViewTemplateSetting();
+                        LoadSetting();
                     }
-                    else
+                    catch
                     {
-                        callAlert?.Invoke("Hãy chọn một bình để tiến hành cập nhật.", FormAlert.enmType.Info);
+                        callAlert?.Invoke("Gặp lỗi, không thể cập nhật.", FormAlert.enmType.Error);
                     }
                 }
                 else
                 {
-                    callAlert?.Invoke("Các trường cập nhật không được trống.", FormAlert.enmType.Error);
+                    callAlert?.Invoke("Hãy chọn một bình để tiến hành cập nhật.", FormAlert.enmType.Info);
                 }
             }
             else
             {
-                callAlert?.Invoke("Tài khoản của bạn không có quyền này.", FormAlert.enmType.Info);
+                callAlert?.Invoke("Các trường cập nhật không được trống.", FormAlert.enmType.Error);
             }
 
         }
@@ -308,37 +293,30 @@ namespace MayNapKhiTPA.Forms
         private void buttonDeleteTemplateSetting_Click(object sender, EventArgs e)
         {
 
-            if (Common.GROUPSESSION.IsSettingTemplateMachine)
+            if (ID_TemplateMachine_Selected != 0)
             {
-                if (ID_TemplateMachine_Selected != 0)
+                try
                 {
-                    try
+                    TemplateMachine templateSetting = TemplateMachineBusiness.GetTemplateMachineFromID(ID_TemplateMachine_Selected);
+                    DialogResult dialogResult = MessageBox.Show($"Bạn có chắc muốn xóa bình {templateSetting.Name}", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (dialogResult == DialogResult.Yes)
                     {
-                        TemplateMachine templateSetting = TemplateMachineBusiness.GetTemplateMachineFromID(ID_TemplateMachine_Selected);
-                        DialogResult dialogResult = MessageBox.Show($"Bạn có chắc muốn xóa bình {templateSetting.Name}", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        if (dialogResult == DialogResult.Yes)
-                        {
-                            TemplateMachineBusiness.DeleteTemplateMachine(ID_TemplateMachine_Selected);
-                            callAlert?.Invoke("Xóa thành công.", FormAlert.enmType.Success);
-                            LoadDataGridViewTemplateSetting();
-                            this.ID_TemplateMachine_Selected = 0;
-                            textBoxNameTemplateSetting.Texts = null;
-                            textBoxApSuatNapTemplateSetting.Texts = null;
-                            textBoxTheTichNapTemplateSetting.Texts = null;
-                            textBoxThoiGianNapTemplateSetting.Texts = null;
-                            textBoxThoiGianLayMauTemplateSetting.Texts = null;
-                            LoadSetting();
-                        }
+                        TemplateMachineBusiness.DeleteTemplateMachine(ID_TemplateMachine_Selected);
+                        callAlert?.Invoke("Xóa thành công.", FormAlert.enmType.Success);
+                        LoadDataGridViewTemplateSetting();
+                        this.ID_TemplateMachine_Selected = 0;
+                        textBoxNameTemplateSetting.Texts = null;
+                        textBoxApSuatNapTemplateSetting.Texts = null;
+                        textBoxTheTichNapTemplateSetting.Texts = null;
+                        textBoxThoiGianNapTemplateSetting.Texts = null;
+                        textBoxThoiGianLayMauTemplateSetting.Texts = null;
+                        LoadSetting();
+                    }
 
-                    }
-                    catch
-                    {
-                        callAlert?.Invoke("Gặp lỗi, không thể xóa.", FormAlert.enmType.Error);
-                    }
                 }
-                else
+                catch
                 {
-                    callAlert?.Invoke("Hãy chọn một bình trước khi xóa.", FormAlert.enmType.Info);
+                    callAlert?.Invoke("Gặp lỗi, không thể xóa.", FormAlert.enmType.Error);
                 }
             }
             else
@@ -352,38 +330,31 @@ namespace MayNapKhiTPA.Forms
         //add Shift
         private void buttonAddShift_Click(object sender, EventArgs e)
         {
-            if (Common.GROUPSESSION.IsSettingShift)
+            string Name = textBoxNameShift.Texts;
+            DateTime TimeStart = dateTimePickerTimeStart.Value;
+            DateTime TimeEnd = dateTimePickerTimeEnd.Value;
+
+
+            if (!String.IsNullOrEmpty(Name) && Name != textBoxNameShift.PlaceholderText && dateTimePickerTimeStart.Value != null && dateTimePickerTimeStart.Value != null)
             {
-                string Name = textBoxNameShift.Texts;
-                DateTime TimeStart = dateTimePickerTimeStart.Value;
-                DateTime TimeEnd = dateTimePickerTimeEnd.Value;
-
-
-                if (!String.IsNullOrEmpty(Name) && Name != textBoxNameShift.PlaceholderText && dateTimePickerTimeStart.Value != null && dateTimePickerTimeStart.Value != null)
+                Shift shift = new Shift();
+                shift.Name = Name;
+                shift.TimeStart = TimeStart.TimeOfDay;
+                shift.TimeEnd = TimeEnd.TimeOfDay;
+                try
                 {
-                    Shift shift = new Shift();
-                    shift.Name = Name;
-                    shift.TimeStart = TimeStart.TimeOfDay;
-                    shift.TimeEnd = TimeEnd.TimeOfDay;
-                    try
-                    {
-                        ShiftBusiness.AddShift(shift);
-                        callAlert?.Invoke("Thêm thành công.", FormAlert.enmType.Success);
-                        LoadDataGridViewShift();
-                    }
-                    catch
-                    {
-                        callAlert?.Invoke("Tên ca làm này đã tồn tại.", FormAlert.enmType.Error);
-                    }
+                    ShiftBusiness.AddShift(shift);
+                    callAlert?.Invoke("Thêm thành công.", FormAlert.enmType.Success);
+                    LoadDataGridViewShift();
                 }
-                else
+                catch
                 {
-                    callAlert?.Invoke("Các trường thêm không được trống.", FormAlert.enmType.Error);
+                    callAlert?.Invoke("Tên ca làm này đã tồn tại.", FormAlert.enmType.Error);
                 }
             }
             else
             {
-                callAlert?.Invoke("Tài khoản của bạn không có quyền này.", FormAlert.enmType.Info);
+                callAlert?.Invoke("Các trường thêm không được trống.", FormAlert.enmType.Error);
             }
 
 
@@ -425,78 +396,67 @@ namespace MayNapKhiTPA.Forms
         //update shift
         private void buttonUpdateShift_Click(object sender, EventArgs e)
         {
-            if (Common.GROUPSESSION.IsSettingShift)
+            string Name = textBoxNameShift.Texts;
+            DateTime TimeStart = dateTimePickerTimeStart.Value;
+            DateTime TimeEnd = dateTimePickerTimeEnd.Value;
+            if (!String.IsNullOrEmpty(Name) && Name != textBoxNameShift.PlaceholderText && TimeStart != null && TimeEnd != null)
             {
-                string Name = textBoxNameShift.Texts;
-                DateTime TimeStart = dateTimePickerTimeStart.Value;
-                DateTime TimeEnd = dateTimePickerTimeEnd.Value;
-                if (!String.IsNullOrEmpty(Name) && Name != textBoxNameShift.PlaceholderText && TimeStart != null && TimeEnd != null)
+                if (ID_Shift_Selected != 0)
                 {
-                    if (ID_Shift_Selected != 0)
+                    try
                     {
-                        try
-                        {
-                            ShiftBusiness.UpdateShift(ID_Shift_Selected, Name, TimeStart.TimeOfDay, TimeEnd.TimeOfDay);
-                            callAlert?.Invoke("Cập nhật ca làm thành công.", FormAlert.enmType.Success);
-                            LoadDataGridViewShift();
-                        }
-                        catch
-                        {
-                            callAlert?.Invoke("Gặp lỗi, không thể cập nhật.", FormAlert.enmType.Error);
-                        }
+                        ShiftBusiness.UpdateShift(ID_Shift_Selected, Name, TimeStart.TimeOfDay, TimeEnd.TimeOfDay);
+                        callAlert?.Invoke("Cập nhật ca làm thành công.", FormAlert.enmType.Success);
+                        LoadDataGridViewShift();
                     }
-                    else
+                    catch
                     {
-                        callAlert?.Invoke("Hãy chọn một ca làm để tiến hành cập nhật.", FormAlert.enmType.Info);
+                        callAlert?.Invoke("Gặp lỗi, không thể cập nhật.", FormAlert.enmType.Error);
                     }
                 }
                 else
                 {
-                    callAlert?.Invoke("Các trường cập nhật không được trống.", FormAlert.enmType.Error);
+                    callAlert?.Invoke("Hãy chọn một ca làm để tiến hành cập nhật.", FormAlert.enmType.Info);
                 }
             }
             else
             {
-                callAlert?.Invoke("Tài khoản của bạn không có quyền này.", FormAlert.enmType.Info);
+                callAlert?.Invoke("Các trường cập nhật không được trống.", FormAlert.enmType.Error);
             }
+
 
         }
 
         //Xóa ca làm
         private void buttonDeleteShift_Click(object sender, EventArgs e)
         {
-            if (Common.GROUPSESSION.IsSettingShift)
-            {
-                if (this.ID_Shift_Selected != 0)
-                {
-                    try
-                    {
-                        Shift shift = ShiftBusiness.GetShiftFromID(ID_Shift_Selected);
-                        DialogResult dialogResult = MessageBox.Show($"Bạn có chắc muốn xóa {shift.Name}", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        if (dialogResult == DialogResult.Yes)
-                        {
-                            ShiftBusiness.DeleteShift(ID_Shift_Selected);
-                            callAlert?.Invoke("Xóa thành công.", FormAlert.enmType.Success);
-                            LoadDataGridViewShift();
-                            this.ID_Shift_Selected = 0;
-                            textBoxNameShift.Texts = null;
-                        }
 
-                    }
-                    catch
-                    {
-                        callAlert?.Invoke("Gặp lỗi, không thể xóa.", FormAlert.enmType.Error);
-                    }
-                }
-                else
+            if (this.ID_Shift_Selected != 0)
+            {
+                try
                 {
-                    callAlert?.Invoke("Hãy chọn một ca làm trước khi xóa.", FormAlert.enmType.Info);
+                    Shift shift = ShiftBusiness.GetShiftFromID(ID_Shift_Selected);
+                    DialogResult dialogResult = MessageBox.Show($"Bạn có chắc muốn xóa {shift.Name}", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        ShiftBusiness.DeleteShift(ID_Shift_Selected);
+                        callAlert?.Invoke("Xóa thành công.", FormAlert.enmType.Success);
+                        LoadDataGridViewShift();
+                        this.ID_Shift_Selected = 0;
+                        textBoxNameShift.Texts = null;
+                    }
+
+                }
+                catch
+                {
+                    callAlert?.Invoke("Gặp lỗi, không thể xóa.", FormAlert.enmType.Error);
                 }
             }
             else
             {
-                callAlert?.Invoke("Tài khoản của bạn không có quyền này.", FormAlert.enmType.Info);
+                callAlert?.Invoke("Hãy chọn một ca làm trước khi xóa.", FormAlert.enmType.Info);
             }
+
 
         }
 
@@ -527,53 +487,47 @@ namespace MayNapKhiTPA.Forms
 
         private void buttonSaveSetting_Click(object sender, EventArgs e)
         {
-            //check quyền
-            if (Common.GROUPSESSION.IsSettingMachine)
+
+            string Name = comboBoxSelectTemplateSetting.Text;
+            string ApSuatNap = textBoxApSuatNap.Texts;
+            string TheTichNap = textBoxTheTichNap.Texts;
+            string ThoiGianNap = textBoxThoiGianNap.Texts;
+            string ThoiGianLayMau = textBoxThoiGianLayMau.Texts;
+
+            if (!String.IsNullOrEmpty(Name) && !String.IsNullOrEmpty(ApSuatNap) && textBoxApSuatNap.Texts != textBoxApSuatNap.PlaceholderText
+            && !String.IsNullOrEmpty(TheTichNap) && textBoxTheTichNap.Texts != textBoxTheTichNap.PlaceholderText
+            && !String.IsNullOrEmpty(ThoiGianNap) && textBoxThoiGianNap.Texts != textBoxThoiGianNap.PlaceholderText
+            && !String.IsNullOrEmpty(ThoiGianLayMau) && textBoxThoiGianLayMau.Texts != textBoxThoiGianLayMau.PlaceholderText)
             {
-                string Name = comboBoxSelectTemplateSetting.Text;
-                string ApSuatNap = textBoxApSuatNap.Texts;
-                string TheTichNap = textBoxTheTichNap.Texts;
-                string ThoiGianNap = textBoxThoiGianNap.Texts;
-                string ThoiGianLayMau = textBoxThoiGianLayMau.Texts;
-
-                if (!String.IsNullOrEmpty(Name) && !String.IsNullOrEmpty(ApSuatNap) && textBoxApSuatNap.Texts != textBoxApSuatNap.PlaceholderText
-                && !String.IsNullOrEmpty(TheTichNap) && textBoxTheTichNap.Texts != textBoxTheTichNap.PlaceholderText
-                && !String.IsNullOrEmpty(ThoiGianNap) && textBoxThoiGianNap.Texts != textBoxThoiGianNap.PlaceholderText
-                && !String.IsNullOrEmpty(ThoiGianLayMau) && textBoxThoiGianLayMau.Texts != textBoxThoiGianLayMau.PlaceholderText)
+                try
                 {
-                    try
-                    {
-                        MachineBusiness.UpdateMachine(Name, double.Parse(ApSuatNap), double.Parse(TheTichNap), double.Parse(ThoiGianNap), double.Parse(ThoiGianLayMau));
+                    MachineBusiness.UpdateMachine(Name, double.Parse(ApSuatNap), double.Parse(TheTichNap), double.Parse(ThoiGianNap), double.Parse(ThoiGianLayMau));
 
-                        //lưu lại hành động thay đôi cài đặt
-                        Activity activity = new Activity();
-                        activity.Description = "Cập nhật cài đặt máy";
-                        activity.IsSetting = true;
-                        activity.Worker = Common.USERSESSION.Username;
-                        ActivityBusiness.AddActivity(activity);
-                        //load lại datagridview + thông số cài đặt hiện tại
-                        LoadSetting();
-                        GetActivities();
-                        comboBoxSelectTemplateSetting.Text = Name;
-                        //aleart
-                        callAlert?.Invoke("Cập nhật cài đặt máy thành công.", FormAlert.enmType.Success);
+                    //lưu lại hành động thay đôi cài đặt
+                    Activity activity = new Activity();
+                    activity.Description = "Cập nhật cài đặt máy";
+                    activity.IsSetting = true;
+                    activity.Worker = Common.USERSESSION.Username;
+                    ActivityBusiness.AddActivity(activity);
+                    //load lại datagridview + thông số cài đặt hiện tại
+                    LoadSetting();
+                    GetActivities();
+                    comboBoxSelectTemplateSetting.Text = Name;
+                    //aleart
+                    callAlert?.Invoke("Cập nhật cài đặt máy thành công.", FormAlert.enmType.Success);
 
-                    }
-                    catch
-                    {
-                        callAlert?.Invoke("Lỗi hệ thống, không thể cập nhật cài đặt.", FormAlert.enmType.Error);
-                    }
                 }
-                else
+                catch
                 {
-                    callAlert?.Invoke("Các trường cài đặt không được trống.", FormAlert.enmType.Error);
+                    callAlert?.Invoke("Lỗi hệ thống, không thể cập nhật cài đặt.", FormAlert.enmType.Error);
                 }
             }
             else
             {
-                callAlert?.Invoke("Tài khoản của bạn không có quyền này.", FormAlert.enmType.Info);
+                callAlert?.Invoke("Các trường cài đặt không được trống.", FormAlert.enmType.Error);
             }
-          
+
+
         }
 
 

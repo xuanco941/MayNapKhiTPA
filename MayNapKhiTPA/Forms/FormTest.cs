@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace MayNapKhiTPA.Forms
 {
-    public partial class FormHelp : Form
+    public partial class FormTest : Form
     {
-        public FormHelp()
+        public FormTest()
         {
             InitializeComponent();
-            pdfDocumentView1.Load("help.pdf");
         }
     }
 }

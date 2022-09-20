@@ -142,77 +142,53 @@ namespace MayNapKhiTPA.Forms
         // Toast form add, change
         private void buttonAddUser_Click_1(object sender, EventArgs e)
         {
-            //check quyền
-            if (Common.GROUPSESSION.IsManagementUser)
-            {
-                // Create an instance of form add user
-                FormAddUser formAddUser = new FormAddUser();
-                // Create an instance of the delegate
-                formAddUser.changeData = new FormAddUser.ChangeData(AlertActive);
-                formAddUser.ShowDialog();
-            }
-            else
-            {
-                callAlert?.Invoke("Tài khoản của bạn không có quyền này.", FormAlert.enmType.Info);
-            }
+
+            // Create an instance of form add user
+            FormAddUser formAddUser = new FormAddUser();
+            // Create an instance of the delegate
+            formAddUser.changeData = new FormAddUser.ChangeData(AlertActive);
+            formAddUser.ShowDialog();
+
 
         }
 
         private void buttonChangeUser_Click_1(object sender, EventArgs e)
         {
 
-            //check quyền
-            if (Common.GROUPSESSION.IsManagementUser)
-            {
-                FormChangeUser formChangeUser = new FormChangeUser();
-                formChangeUser.changeData = new FormChangeUser.ChangeData(AlertActive);
-                formChangeUser.ShowDialog();
-            }
-            else
-            {
-                callAlert?.Invoke("Tài khoản của bạn không có quyền này.", FormAlert.enmType.Info);
-            }
+
+            FormChangeUser formChangeUser = new FormChangeUser();
+            formChangeUser.changeData = new FormChangeUser.ChangeData(AlertActive);
+            formChangeUser.ShowDialog();
+
         }
 
 
 
         private void buttonAddGroup_Click(object sender, EventArgs e)
         {
-            //check quyền
-            if (Common.GROUPSESSION.IsManagementGroup)
-            {
-                // Create an instance of form 2
-                FormAddGroup formAddGroup = new FormAddGroup();
-                // Create an instance of the delegate
-                formAddGroup.changeData = new FormAddGroup.ChangeData(AlertActive);
-                // Show form 2
-                formAddGroup.ShowDialog();
-            }
-            else
-            {
-                callAlert?.Invoke("Tài khoản của bạn không có quyền này.", FormAlert.enmType.Info);
-            }
+
+            // Create an instance of form 2
+            FormAddGroup formAddGroup = new FormAddGroup();
+            // Create an instance of the delegate
+            formAddGroup.changeData = new FormAddGroup.ChangeData(AlertActive);
+            // Show form 2
+            formAddGroup.ShowDialog();
+
 
         }
 
         private void buttonChangeGroup_Click(object sender, EventArgs e)
         {
-            //check quyền
-            if (Common.GROUPSESSION.IsManagementGroup)
-            {
-                // Create an instance of form 2
-                FormChangeGroup formChangeGroup = new FormChangeGroup();
 
-                // Create an instance of the delegate
-                formChangeGroup.changeData = new FormChangeGroup.ChangeData(AlertActive);
+            // Create an instance of form 2
+            FormChangeGroup formChangeGroup = new FormChangeGroup();
 
-                // Show form 2
-                formChangeGroup.ShowDialog();
-            }
-            else
-            {
-                callAlert?.Invoke("Tài khoản của bạn không có quyền này.", FormAlert.enmType.Info);
-            }
+            // Create an instance of the delegate
+            formChangeGroup.changeData = new FormChangeGroup.ChangeData(AlertActive);
+
+            // Show form 2
+            formChangeGroup.ShowDialog();
+
         }
 
 

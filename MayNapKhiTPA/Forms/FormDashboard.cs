@@ -123,107 +123,83 @@ namespace MayNapKhiTPA.Forms
 
         private void buttonStartMachine1_Click(object sender, EventArgs e)
         {
-            if (Common.GROUPSESSION.IsControlMachine)
+            try
             {
-                try
-                {
-                    //Machine 1 is running
-                    Common.IsMachine1Running = true;
-                    //thêm result rỗng và lấy id result đó cho biến data 1
-                    Common.dataMachine1.ID_Result = ResultBusiness.AddResultAndReturnIDResult("Máy 1", Common.USERSESSION.Username);
-                    //bắt đầu lưu dữ liệu 10s/1lần
-                    Common.timer.RunTimerMachine1();
-                    //disabled nút start cho đến khi ấn ngừng nạp
-                    buttonStartMachine1.Enabled = false;
-                    callAlert.Invoke("Máy 1 đã bắt đầu nạp.", FormAlert.enmType.Success);
-                }
-                catch
-                {
-                    callAlert.Invoke("Có lỗi xảy ra khi khởi chạy máy 1.", FormAlert.enmType.Error);
-                }
+                //Machine 1 is running
+                Common.IsMachine1Running = true;
+                //thêm result rỗng và lấy id result đó cho biến data 1
+                Common.dataMachine1.ID_Result = ResultBusiness.AddResultAndReturnIDResult("Máy 1", Common.USERSESSION.Username);
+                //bắt đầu lưu dữ liệu 10s/1lần
+                Common.timer.RunTimerMachine1();
+                //disabled nút start cho đến khi ấn ngừng nạp
+                buttonStartMachine1.Enabled = false;
+                callAlert.Invoke("Máy 1 đã bắt đầu nạp.", FormAlert.enmType.Success);
             }
-            else
+            catch
             {
-                callAlert?.Invoke("Tài khoản của bạn không có quyền này.", FormAlert.enmType.Info);
+                callAlert.Invoke("Có lỗi xảy ra khi khởi chạy máy 1.", FormAlert.enmType.Error);
             }
         }
 
         private void buttonStopMachine1_Click(object sender, EventArgs e)
         {
-            if (Common.GROUPSESSION.IsControlMachine)
+            if (Common.IsMachine1Running == true)
             {
+                //update
+                ResultBusiness.UpdateResult(Common.dataMachine1.ID_Result, true);
+                //Stop timer machine 1
+                Common.timer.ClearTimeMachine1();
 
-                if (Common.IsMachine1Running == true)
-                {
-                    //update
-                    ResultBusiness.UpdateResult(Common.dataMachine1.ID_Result,true);
-                    //Stop timer machine 1
-                    Common.timer.ClearTimeMachine1();
+                //
+                Common.IsMachine1Running = false;
+                buttonStartMachine1.Enabled = true;
 
-                    //
-                    Common.IsMachine1Running = false;
-                    buttonStartMachine1.Enabled = true;
+                //
+                callAlert?.Invoke("Đã ngừng nạp máy 1.", FormAlert.enmType.Success);
 
-                    //
-                    callAlert?.Invoke("Đã ngừng nạp máy 1.", FormAlert.enmType.Success);
-
-                }
-            }
-            else
-            {
-                callAlert?.Invoke("Tài khoản của bạn không có quyền này.", FormAlert.enmType.Info);
             }
         }
 
         private void buttonStartMachine2_Click(object sender, EventArgs e)
         {
-            if (Common.GROUPSESSION.IsControlMachine)
+            try
             {
-                try
-                {
-                    //Machine 1 is running
-                    Common.IsMachine2Running = true;
-                    //thêm result rỗng và lấy id result đó cho biến data 1
-                    Common.dataMachine2.ID_Result = ResultBusiness.AddResultAndReturnIDResult("Máy 2", Common.USERSESSION.Username);
-                    //Start timer2 save data
-                    Common.timer.RunTimerMachine2();
+                //Machine 1 is running
+                Common.IsMachine2Running = true;
+                //thêm result rỗng và lấy id result đó cho biến data 1
+                Common.dataMachine2.ID_Result = ResultBusiness.AddResultAndReturnIDResult("Máy 2", Common.USERSESSION.Username);
+                //Start timer2 save data
+                Common.timer.RunTimerMachine2();
 
-                    //disabled nút start cho đến khi ấn ngừng nạp
-                    buttonStartMachine2.Enabled = false;
-                    callAlert.Invoke("Máy 2 đã bắt đầu nạp.", FormAlert.enmType.Success);
-                }
-                catch
-                {
-                    callAlert.Invoke("Có lỗi xảy ra khi khởi chạy máy 2.", FormAlert.enmType.Error);
-                }
-                timer1.Start();
+                //disabled nút start cho đến khi ấn ngừng nạp
+                buttonStartMachine2.Enabled = false;
+                callAlert.Invoke("Máy 2 đã bắt đầu nạp.", FormAlert.enmType.Success);
             }
-            else
+            catch
             {
-                callAlert?.Invoke("Tài khoản của bạn không có quyền này.", FormAlert.enmType.Info);
+                callAlert.Invoke("Có lỗi xảy ra khi khởi chạy máy 2.", FormAlert.enmType.Error);
             }
+            timer1.Start();
         }
 
         private void buttonStopMachine2_Click(object sender, EventArgs e)
         {
-            if (Common.GROUPSESSION.IsControlMachine)
+
+            if (Common.IsMachine2Running == true)
             {
-                if (Common.IsMachine2Running == true)
-                {
-                    //update
-                    ResultBusiness.UpdateResult(Common.dataMachine2.ID_Result,true);
-                    //delete timer
-                    Common.timer.ClearTimeMachine2();
+                //update
+                ResultBusiness.UpdateResult(Common.dataMachine2.ID_Result, true);
+                //delete timer
+                Common.timer.ClearTimeMachine2();
 
-                    //
-                    buttonStartMachine2.Enabled = true;
-                    Common.IsMachine2Running = false;
+                //
+                buttonStartMachine2.Enabled = true;
+                Common.IsMachine2Running = false;
 
-                    //
-                    callAlert?.Invoke("Đã ngừng nạp máy 2.", FormAlert.enmType.Success);
-                }
-
+                //
+                callAlert?.Invoke("Đã ngừng nạp máy 2.", FormAlert.enmType.Success);
             }
+
             else
             {
                 callAlert?.Invoke("Tài khoản của bạn không có quyền này.", FormAlert.enmType.Info);
