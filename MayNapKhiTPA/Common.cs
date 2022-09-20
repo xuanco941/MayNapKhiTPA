@@ -7,6 +7,7 @@ namespace MayNapKhiTPA
     {
 
         public const string ConnectionString = @"Data Source=DESKTOP-P4IC2M8\SQLEXPRESS;Initial Catalog=MayNapKhiTPA;User ID=sa;Password=942001xX";
+        public const string LicenseSyncfusion = "NzE5NjE0QDMyMzAyZTMyMmUzMFlqaFh1Qk9GKytyNHNaaE16dktXZFg0cERMU2Qvai9KQmdEYUZSL0U4OE09";
 
         //pagination
         public static int NUMBER_ELM_ON_PAGE_ACTIVITY = 10;
