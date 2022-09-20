@@ -89,7 +89,6 @@ D:\WorkPlace\C-Sharp\Working\DESKTOP\MayNapKhiTPA\MayNapKhiTPA\bin\Debug\AxInter
 D:\WorkPlace\C-Sharp\Working\DESKTOP\MayNapKhiTPA\MayNapKhiTPA\obj\Debug\Interop.AcroPDFLib.dll
 D:\WorkPlace\C-Sharp\Working\DESKTOP\MayNapKhiTPA\MayNapKhiTPA\obj\Debug\AxInterop.AcroPDFLib.dll
 D:\WorkPlace\C-Sharp\Working\DESKTOP\MayNapKhiTPA\MayNapKhiTPA\obj\Debug\MayNapKhiTPA.csproj.ResolveComReference.cache
-D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\MayNapKhiTPA\MayNapKhiTPA\bin\Debug\abc.pdf
 D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\MayNapKhiTPA\MayNapKhiTPA\bin\Debug\MayNapKhiTPA.exe.config
 D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\MayNapKhiTPA\MayNapKhiTPA\bin\Debug\MayNapKhiTPA.exe
 D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\MayNapKhiTPA\MayNapKhiTPA\bin\Debug\MayNapKhiTPA.pdb
@@ -162,3 +161,7 @@ D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\MayNapKhiTPA\MayNapKhiTPA\bin\Debug\Syn
 D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\MayNapKhiTPA\MayNapKhiTPA\bin\Debug\Syncfusion.SpellChecker.Base.xml
 D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\MayNapKhiTPA\MayNapKhiTPA\bin\Debug\Syncfusion.Grid.Windows.XmlSerializers.dll
 D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\MayNapKhiTPA\MayNapKhiTPA\obj\Debug\MayNapKhiTPA.Forms.FormHelp.resources
+D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\MayNapKhiTPA\MayNapKhiTPA\bin\Debug\help.pdf
+D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\MayNapKhiTPA\MayNapKhiTPA\obj\Debug\MayNapKhiTPA.Forms.FormTest.resources
+D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\MayNapKhiTPA\MayNapKhiTPA\bin\Debug\Syncfusion.Gauge.Windows.dll
+D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\MayNapKhiTPA\MayNapKhiTPA\bin\Debug\Syncfusion.Gauge.Windows.xml

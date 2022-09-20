@@ -728,8 +728,7 @@ namespace MayNapKhiTPA.Forms
 
         private void buttonDeleteResult_Click(object sender, EventArgs e)
         {
-            if (Common.GROUPSESSION.IsDeleteResult)
-            {
+
                 DialogResult dialogResult = MessageBox.Show($"Bạn có chắc muốn xóa dữ liệu mẻ nạp đang hiển thị tại trang này?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (dialogResult == DialogResult.Yes)
                 {
@@ -751,11 +750,7 @@ namespace MayNapKhiTPA.Forms
                     GetResults();
                     callAlert("Xóa thành công!", FormAlert.enmType.Success);
                 }
-            }
-            else
-            {
-                callAlert?.Invoke("Tài khoản của bạn không có quyền này.", FormAlert.enmType.Info);
-            }
+            
 
         }
 

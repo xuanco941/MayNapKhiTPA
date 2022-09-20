@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Syncfusion.Windows.Forms.Barcode;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,10 @@ namespace MayNapKhiTPA.Forms
         public FormTest()
         {
             InitializeComponent();
+            sfBarcode1.Symbology = BarcodeSymbolType.Code11;
+            sfBarcode1.Height = 70;
+            sfBarcode1.Text = "999-888";
+            this.Controls.Add(this.sfBarcode1);
         }
     }
 }

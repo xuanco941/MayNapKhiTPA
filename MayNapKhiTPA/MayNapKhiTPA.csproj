@@ -57,6 +57,7 @@
       <HintPath>D:\Syncfusion\Ensential Studio\Windows\20.2.0.36\precompiledassemblies\4.6\Syncfusion.Core.WinForms.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Syncfusion.Gauge.Windows, Version=20.2460.0.36, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
     <Reference Include="Syncfusion.Grid.Base, Version=20.2460.0.36, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <HintPath>D:\Syncfusion\Ensential Studio\Windows\20.2.0.36\precompiledassemblies\4.6\Syncfusion.Grid.Base.dll</HintPath>
       <Private>True</Private>
@@ -101,6 +102,7 @@
     <Reference Include="System.Data.SqlClient, Version=4.6.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Data.SqlClient.4.8.3\lib\net461\System.Data.SqlClient.dll</HintPath>
     </Reference>
+    <Reference Include="System.Design" />
     <Reference Include="System.Messaging" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
@@ -181,6 +183,12 @@
     </Compile>
     <Compile Include="Forms\FormHelp.Designer.cs">
       <DependentUpon>FormHelp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormTest.Designer.cs">
+      <DependentUpon>FormTest.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ResultManagement\FormData.cs">
       <SubType>Form</SubType>
@@ -272,6 +280,9 @@
     <EmbeddedResource Include="Forms\FormHelp.resx">
       <DependentUpon>FormHelp.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormTest.resx">
+      <DependentUpon>FormTest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ResultManagement\FormData.resx">
       <DependentUpon>FormData.cs</DependentUpon>
     </EmbeddedResource>
@@ -306,7 +317,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="abc.pdf">
+    <None Include="help.pdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />

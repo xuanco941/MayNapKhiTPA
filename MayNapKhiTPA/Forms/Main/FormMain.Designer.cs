@@ -34,6 +34,7 @@ namespace MayNapKhiTPA.Forms
             this.panelMenu = new System.Windows.Forms.Panel();
             this.panelItemMenu = new System.Windows.Forms.Panel();
             this.buttonThoat = new System.Windows.Forms.Button();
+            this.buttonHelp = new System.Windows.Forms.Button();
             this.buttonSetting = new System.Windows.Forms.Button();
             this.buttonActivity = new System.Windows.Forms.Button();
             this.buttonEmployee = new System.Windows.Forms.Button();
@@ -49,7 +50,8 @@ namespace MayNapKhiTPA.Forms
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panelAleart = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.buttonHelp = new System.Windows.Forms.Button();
+            this.buttonQuanLyDonHang = new System.Windows.Forms.Button();
+            this.buttonQuanLyKho = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelItemMenu.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -73,13 +75,15 @@ namespace MayNapKhiTPA.Forms
             // panelItemMenu
             // 
             this.panelItemMenu.Controls.Add(this.buttonThoat);
+            this.panelItemMenu.Controls.Add(this.buttonResult);
+            this.panelItemMenu.Controls.Add(this.buttonQuanLyDonHang);
+            this.panelItemMenu.Controls.Add(this.buttonQuanLyKho);
             this.panelItemMenu.Controls.Add(this.buttonHelp);
             this.panelItemMenu.Controls.Add(this.buttonSetting);
             this.panelItemMenu.Controls.Add(this.buttonActivity);
             this.panelItemMenu.Controls.Add(this.buttonEmployee);
-            this.panelItemMenu.Controls.Add(this.buttonResult);
-            this.panelItemMenu.Controls.Add(this.buttonDashboard);
             this.panelItemMenu.Controls.Add(this.flowLayoutPanel1);
+            this.panelItemMenu.Controls.Add(this.buttonDashboard);
             this.panelItemMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelItemMenu.Location = new System.Drawing.Point(0, 76);
             this.panelItemMenu.Name = "panelItemMenu";
@@ -95,7 +99,7 @@ namespace MayNapKhiTPA.Forms
             this.buttonThoat.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonThoat.ForeColor = System.Drawing.Color.White;
             this.buttonThoat.Image = global::MayNapKhiTPA.Properties.Resources.red_x_10333;
-            this.buttonThoat.Location = new System.Drawing.Point(0, 474);
+            this.buttonThoat.Location = new System.Drawing.Point(0, 632);
             this.buttonThoat.Name = "buttonThoat";
             this.buttonThoat.Size = new System.Drawing.Size(211, 79);
             this.buttonThoat.TabIndex = 12;
@@ -104,6 +108,25 @@ namespace MayNapKhiTPA.Forms
             this.buttonThoat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonThoat.UseVisualStyleBackColor = true;
             this.buttonThoat.Click += new System.EventHandler(this.buttonThoat_Click_1);
+            // 
+            // buttonHelp
+            // 
+            this.buttonHelp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonHelp.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonHelp.FlatAppearance.BorderSize = 0;
+            this.buttonHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonHelp.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonHelp.ForeColor = System.Drawing.Color.White;
+            this.buttonHelp.Image = ((System.Drawing.Image)(resources.GetObject("buttonHelp.Image")));
+            this.buttonHelp.Location = new System.Drawing.Point(0, 316);
+            this.buttonHelp.Name = "buttonHelp";
+            this.buttonHelp.Size = new System.Drawing.Size(211, 79);
+            this.buttonHelp.TabIndex = 13;
+            this.buttonHelp.Text = "Trợ giúp";
+            this.buttonHelp.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonHelp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonHelp.UseVisualStyleBackColor = true;
+            this.buttonHelp.Click += new System.EventHandler(this.buttonHelp_Click);
             // 
             // buttonSetting
             // 
@@ -114,7 +137,7 @@ namespace MayNapKhiTPA.Forms
             this.buttonSetting.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSetting.ForeColor = System.Drawing.Color.White;
             this.buttonSetting.Image = global::MayNapKhiTPA.Properties.Resources.setting_24;
-            this.buttonSetting.Location = new System.Drawing.Point(0, 316);
+            this.buttonSetting.Location = new System.Drawing.Point(0, 237);
             this.buttonSetting.Name = "buttonSetting";
             this.buttonSetting.Size = new System.Drawing.Size(211, 79);
             this.buttonSetting.TabIndex = 11;
@@ -133,7 +156,7 @@ namespace MayNapKhiTPA.Forms
             this.buttonActivity.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonActivity.ForeColor = System.Drawing.Color.White;
             this.buttonActivity.Image = global::MayNapKhiTPA.Properties.Resources.button3_Image;
-            this.buttonActivity.Location = new System.Drawing.Point(0, 237);
+            this.buttonActivity.Location = new System.Drawing.Point(0, 158);
             this.buttonActivity.Name = "buttonActivity";
             this.buttonActivity.Size = new System.Drawing.Size(211, 79);
             this.buttonActivity.TabIndex = 10;
@@ -152,7 +175,7 @@ namespace MayNapKhiTPA.Forms
             this.buttonEmployee.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEmployee.ForeColor = System.Drawing.Color.White;
             this.buttonEmployee.Image = global::MayNapKhiTPA.Properties.Resources.button2_Image;
-            this.buttonEmployee.Location = new System.Drawing.Point(0, 158);
+            this.buttonEmployee.Location = new System.Drawing.Point(0, 79);
             this.buttonEmployee.Name = "buttonEmployee";
             this.buttonEmployee.Size = new System.Drawing.Size(211, 79);
             this.buttonEmployee.TabIndex = 9;
@@ -171,7 +194,7 @@ namespace MayNapKhiTPA.Forms
             this.buttonResult.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonResult.ForeColor = System.Drawing.Color.White;
             this.buttonResult.Image = global::MayNapKhiTPA.Properties.Resources.book24;
-            this.buttonResult.Location = new System.Drawing.Point(0, 79);
+            this.buttonResult.Location = new System.Drawing.Point(0, 553);
             this.buttonResult.Name = "buttonResult";
             this.buttonResult.Size = new System.Drawing.Size(211, 79);
             this.buttonResult.TabIndex = 8;
@@ -302,24 +325,41 @@ namespace MayNapKhiTPA.Forms
             this.panel2.Size = new System.Drawing.Size(187, 70);
             this.panel2.TabIndex = 0;
             // 
-            // buttonHelp
+            // buttonQuanLyDonHang
             // 
-            this.buttonHelp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonHelp.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonHelp.FlatAppearance.BorderSize = 0;
-            this.buttonHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonHelp.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonHelp.ForeColor = System.Drawing.Color.White;
-            this.buttonHelp.Image = ((System.Drawing.Image)(resources.GetObject("buttonHelp.Image")));
-            this.buttonHelp.Location = new System.Drawing.Point(0, 395);
-            this.buttonHelp.Name = "buttonHelp";
-            this.buttonHelp.Size = new System.Drawing.Size(211, 79);
-            this.buttonHelp.TabIndex = 13;
-            this.buttonHelp.Text = "Trợ giúp";
-            this.buttonHelp.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.buttonHelp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.buttonHelp.UseVisualStyleBackColor = true;
-            this.buttonHelp.Click += new System.EventHandler(this.buttonHelp_Click);
+            this.buttonQuanLyDonHang.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonQuanLyDonHang.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonQuanLyDonHang.FlatAppearance.BorderSize = 0;
+            this.buttonQuanLyDonHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonQuanLyDonHang.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonQuanLyDonHang.ForeColor = System.Drawing.Color.White;
+            this.buttonQuanLyDonHang.Image = ((System.Drawing.Image)(resources.GetObject("buttonQuanLyDonHang.Image")));
+            this.buttonQuanLyDonHang.Location = new System.Drawing.Point(0, 474);
+            this.buttonQuanLyDonHang.Name = "buttonQuanLyDonHang";
+            this.buttonQuanLyDonHang.Size = new System.Drawing.Size(211, 79);
+            this.buttonQuanLyDonHang.TabIndex = 14;
+            this.buttonQuanLyDonHang.Text = "Quản lý đơn hàng";
+            this.buttonQuanLyDonHang.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonQuanLyDonHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonQuanLyDonHang.UseVisualStyleBackColor = true;
+            // 
+            // buttonQuanLyKho
+            // 
+            this.buttonQuanLyKho.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonQuanLyKho.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonQuanLyKho.FlatAppearance.BorderSize = 0;
+            this.buttonQuanLyKho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonQuanLyKho.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonQuanLyKho.ForeColor = System.Drawing.Color.White;
+            this.buttonQuanLyKho.Image = ((System.Drawing.Image)(resources.GetObject("buttonQuanLyKho.Image")));
+            this.buttonQuanLyKho.Location = new System.Drawing.Point(0, 395);
+            this.buttonQuanLyKho.Name = "buttonQuanLyKho";
+            this.buttonQuanLyKho.Size = new System.Drawing.Size(211, 79);
+            this.buttonQuanLyKho.TabIndex = 15;
+            this.buttonQuanLyKho.Text = "Quản lý kho";
+            this.buttonQuanLyKho.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonQuanLyKho.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonQuanLyKho.UseVisualStyleBackColor = true;
             // 
             // FormMain
             // 
@@ -368,6 +408,8 @@ namespace MayNapKhiTPA.Forms
         private Button buttonDashboard;
         private FlowLayoutPanel flowLayoutPanel1;
         private Button buttonHelp;
+        private Button buttonQuanLyKho;
+        private Button buttonQuanLyDonHang;
     }
 }
 

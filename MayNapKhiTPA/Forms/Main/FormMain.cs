@@ -78,9 +78,6 @@ namespace MayNapKhiTPA.Forms
 
         private void buttonResult_Click(object sender, EventArgs e)
         {
-            //check quyền
-            if (Common.GROUPSESSION.IsViewResult)
-            {
                 //btn
                 Button button = sender as Button;
                 FocusButton(button);
@@ -91,11 +88,6 @@ namespace MayNapKhiTPA.Forms
                 ChangeFormContent(formResult);
                 this.Font = new Font("Bahnschrift", 11);
 
-            }
-            else
-            {
-                Alert("Tài khoản của bạn không có quyền này.", FormAlert.enmType.Info);
-            }
         }
 
         private void buttonEmployee_Click_1(object sender, EventArgs e)
@@ -113,9 +105,7 @@ namespace MayNapKhiTPA.Forms
 
         private void buttonActivity_Click_1(object sender, EventArgs e)
         {
-            //check quyền
-            if (Common.GROUPSESSION.IsViewResult)
-            {
+
                 //btn
                 Button button = sender as Button;
                 FocusButton(button);
@@ -127,11 +117,6 @@ namespace MayNapKhiTPA.Forms
                 this.Font = new Font("Bahnschrift", 11);
 
 
-            }
-            else
-            {
-                Alert("Tài khoản của bạn không có quyền này.", FormAlert.enmType.Info);
-            }
         }
 
         private void buttonSetting_Click_1(object sender, EventArgs e)
