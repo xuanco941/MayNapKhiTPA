@@ -20,5 +20,6 @@ namespace MayNapKhiTPA.Forms.OrderPurchaseManagement
         {
             InitializeComponent();
         }
+
     }
 }
