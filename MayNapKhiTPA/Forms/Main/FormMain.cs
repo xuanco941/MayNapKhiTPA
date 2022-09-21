@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MayNapKhiTPA.Forms.InventoryManagement;
+using MayNapKhiTPA.Forms.OrderPurchaseManagement;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -148,6 +150,32 @@ namespace MayNapKhiTPA.Forms
             labelHeader.Text = "Trợ giúp";
             FormHelp formHelp = new FormHelp();
             ChangeFormContent(formHelp);
+            this.Font = new Font("Bahnschrift", 11);
+        }
+
+        private void buttonQuanLyKho_Click(object sender, EventArgs e)
+        {
+            //btn
+            Button button = sender as Button;
+            FocusButton(button);
+
+            labelHeader.Text = "Quản lý kho";
+            FormInventoryManagement formInventoryManagement = new FormInventoryManagement();
+            formInventoryManagement.callAlert = new FormInventoryManagement.CallAlert(Alert);
+            ChangeFormContent(formInventoryManagement);
+            this.Font = new Font("Bahnschrift", 11);
+        }
+
+        private void buttonQuanLyDonHang_Click(object sender, EventArgs e)
+        {
+            //btn
+            Button button = sender as Button;
+            FocusButton(button);
+
+            labelHeader.Text = "Quản lý đơn hàng";
+            FormOrderPurchaseManagement formOrderPurchaseManagement = new FormOrderPurchaseManagement();
+            formOrderPurchaseManagement.callAlert = new FormOrderPurchaseManagement.CallAlert(Alert);
+            ChangeFormContent(formOrderPurchaseManagement);
             this.Font = new Font("Bahnschrift", 11);
         }
     }

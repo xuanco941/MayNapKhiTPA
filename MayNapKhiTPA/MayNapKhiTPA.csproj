@@ -190,6 +190,18 @@
     <Compile Include="Forms\FormTest.Designer.cs">
       <DependentUpon>FormTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\InventoryManagement\FormInventoryManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InventoryManagement\FormInventoryManagement.Designer.cs">
+      <DependentUpon>FormInventoryManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OrderPurchaseManagement\FormOrderPurchaseManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OrderPurchaseManagement\FormOrderPurchaseManagement.Designer.cs">
+      <DependentUpon>FormOrderPurchaseManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ResultManagement\FormData.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -282,6 +294,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormTest.resx">
       <DependentUpon>FormTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OrderPurchaseManagement\FormOrderPurchaseManagement.resx">
+      <DependentUpon>FormOrderPurchaseManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ResultManagement\FormData.resx">
       <DependentUpon>FormData.cs</DependentUpon>

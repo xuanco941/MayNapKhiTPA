@@ -165,3 +165,4 @@ D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\MayNapKhiTPA\MayNapKhiTPA\bin\Debug\hel
 D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\MayNapKhiTPA\MayNapKhiTPA\obj\Debug\MayNapKhiTPA.Forms.FormTest.resources
 D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\MayNapKhiTPA\MayNapKhiTPA\bin\Debug\Syncfusion.Gauge.Windows.dll
 D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\MayNapKhiTPA\MayNapKhiTPA\bin\Debug\Syncfusion.Gauge.Windows.xml
+D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\MayNapKhiTPA\MayNapKhiTPA\obj\Debug\MayNapKhiTPA.Forms.OrderPurchaseManagement.FormOrderPurchaseManagement.resources
