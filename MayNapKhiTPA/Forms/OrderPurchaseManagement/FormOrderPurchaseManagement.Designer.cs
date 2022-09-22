@@ -30,16 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormOrderPurchaseManagement));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.buttonDangNhap = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.buttonCustom4 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.buttonCustom6 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonTodolist = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.buttonProcess = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.buttonPurchaseOrder = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.tableLayoutPanel1.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -56,108 +56,111 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 566F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1299, 566);
             this.tableLayoutPanel1.TabIndex = 16;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.buttonDangNhap);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(426, 560);
-            this.panel1.TabIndex = 0;
-            // 
-            // buttonDangNhap
-            // 
-            this.buttonDangNhap.BackColor = System.Drawing.Color.SteelBlue;
-            this.buttonDangNhap.BackgroundColor = System.Drawing.Color.SteelBlue;
-            this.buttonDangNhap.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonDangNhap.BorderRadius = 15;
-            this.buttonDangNhap.BorderSize = 0;
-            this.buttonDangNhap.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonDangNhap.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonDangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDangNhap.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDangNhap.ForeColor = System.Drawing.Color.White;
-            this.buttonDangNhap.Image = ((System.Drawing.Image)(resources.GetObject("buttonDangNhap.Image")));
-            this.buttonDangNhap.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.buttonDangNhap.Location = new System.Drawing.Point(0, 0);
-            this.buttonDangNhap.Name = "buttonDangNhap";
-            this.buttonDangNhap.Size = new System.Drawing.Size(426, 560);
-            this.buttonDangNhap.TabIndex = 19;
-            this.buttonDangNhap.Text = "Quản lý đơn hàng";
-            this.buttonDangNhap.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonDangNhap.TextColor = System.Drawing.Color.White;
-            this.buttonDangNhap.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.buttonDangNhap.UseVisualStyleBackColor = false;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.buttonCustom4);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(435, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(427, 560);
-            this.panel2.TabIndex = 1;
-            // 
-            // buttonCustom4
-            // 
-            this.buttonCustom4.BackColor = System.Drawing.Color.SteelBlue;
-            this.buttonCustom4.BackgroundColor = System.Drawing.Color.SteelBlue;
-            this.buttonCustom4.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonCustom4.BorderRadius = 15;
-            this.buttonCustom4.BorderSize = 0;
-            this.buttonCustom4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonCustom4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonCustom4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCustom4.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCustom4.ForeColor = System.Drawing.Color.White;
-            this.buttonCustom4.Image = ((System.Drawing.Image)(resources.GetObject("buttonCustom4.Image")));
-            this.buttonCustom4.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.buttonCustom4.Location = new System.Drawing.Point(0, 0);
-            this.buttonCustom4.Name = "buttonCustom4";
-            this.buttonCustom4.Size = new System.Drawing.Size(427, 560);
-            this.buttonCustom4.TabIndex = 21;
-            this.buttonCustom4.Text = "Tiến trình sản xuất";
-            this.buttonCustom4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonCustom4.TextColor = System.Drawing.Color.White;
-            this.buttonCustom4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.buttonCustom4.UseVisualStyleBackColor = false;
-            // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.buttonCustom6);
+            this.panel3.Controls.Add(this.buttonTodolist);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(868, 3);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(428, 560);
             this.panel3.TabIndex = 2;
             // 
-            // buttonCustom6
+            // panel2
             // 
-            this.buttonCustom6.BackColor = System.Drawing.Color.SteelBlue;
-            this.buttonCustom6.BackgroundColor = System.Drawing.Color.SteelBlue;
-            this.buttonCustom6.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonCustom6.BorderRadius = 14;
-            this.buttonCustom6.BorderSize = 0;
-            this.buttonCustom6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonCustom6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonCustom6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCustom6.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCustom6.ForeColor = System.Drawing.Color.White;
-            this.buttonCustom6.Image = ((System.Drawing.Image)(resources.GetObject("buttonCustom6.Image")));
-            this.buttonCustom6.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.buttonCustom6.Location = new System.Drawing.Point(0, 0);
-            this.buttonCustom6.Name = "buttonCustom6";
-            this.buttonCustom6.Size = new System.Drawing.Size(428, 560);
-            this.buttonCustom6.TabIndex = 20;
-            this.buttonCustom6.Text = "Danh mục cần làm";
-            this.buttonCustom6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonCustom6.TextColor = System.Drawing.Color.White;
-            this.buttonCustom6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.buttonCustom6.UseVisualStyleBackColor = false;
+            this.panel2.Controls.Add(this.buttonProcess);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(435, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(427, 560);
+            this.panel2.TabIndex = 1;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.buttonPurchaseOrder);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(426, 560);
+            this.panel1.TabIndex = 0;
+            // 
+            // buttonTodolist
+            // 
+            this.buttonTodolist.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.buttonTodolist.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.buttonTodolist.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonTodolist.BorderRadius = 14;
+            this.buttonTodolist.BorderSize = 0;
+            this.buttonTodolist.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonTodolist.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonTodolist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonTodolist.Font = new System.Drawing.Font("Segoe UI Semibold", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonTodolist.ForeColor = System.Drawing.Color.White;
+            this.buttonTodolist.Image = ((System.Drawing.Image)(resources.GetObject("buttonTodolist.Image")));
+            this.buttonTodolist.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonTodolist.Location = new System.Drawing.Point(0, 0);
+            this.buttonTodolist.Name = "buttonTodolist";
+            this.buttonTodolist.Size = new System.Drawing.Size(428, 560);
+            this.buttonTodolist.TabIndex = 20;
+            this.buttonTodolist.Text = "Danh mục cần làm";
+            this.buttonTodolist.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.buttonTodolist.TextColor = System.Drawing.Color.White;
+            this.buttonTodolist.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonTodolist.UseVisualStyleBackColor = false;
+            this.buttonTodolist.Click += new System.EventHandler(this.buttonTodolist_Click);
+            // 
+            // buttonProcess
+            // 
+            this.buttonProcess.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.buttonProcess.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.buttonProcess.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonProcess.BorderRadius = 15;
+            this.buttonProcess.BorderSize = 0;
+            this.buttonProcess.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonProcess.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonProcess.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonProcess.Font = new System.Drawing.Font("Segoe UI Semibold", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonProcess.ForeColor = System.Drawing.Color.White;
+            this.buttonProcess.Image = ((System.Drawing.Image)(resources.GetObject("buttonProcess.Image")));
+            this.buttonProcess.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonProcess.Location = new System.Drawing.Point(0, 0);
+            this.buttonProcess.Name = "buttonProcess";
+            this.buttonProcess.Size = new System.Drawing.Size(427, 560);
+            this.buttonProcess.TabIndex = 21;
+            this.buttonProcess.Text = "Tiến trình sản xuất";
+            this.buttonProcess.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.buttonProcess.TextColor = System.Drawing.Color.White;
+            this.buttonProcess.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonProcess.UseVisualStyleBackColor = false;
+            this.buttonProcess.Click += new System.EventHandler(this.buttonProcess_Click);
+            // 
+            // buttonPurchaseOrder
+            // 
+            this.buttonPurchaseOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.buttonPurchaseOrder.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.buttonPurchaseOrder.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonPurchaseOrder.BorderRadius = 15;
+            this.buttonPurchaseOrder.BorderSize = 0;
+            this.buttonPurchaseOrder.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonPurchaseOrder.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonPurchaseOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPurchaseOrder.Font = new System.Drawing.Font("Segoe UI Semibold", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPurchaseOrder.ForeColor = System.Drawing.Color.White;
+            this.buttonPurchaseOrder.Image = ((System.Drawing.Image)(resources.GetObject("buttonPurchaseOrder.Image")));
+            this.buttonPurchaseOrder.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonPurchaseOrder.Location = new System.Drawing.Point(0, 0);
+            this.buttonPurchaseOrder.Name = "buttonPurchaseOrder";
+            this.buttonPurchaseOrder.Size = new System.Drawing.Size(426, 560);
+            this.buttonPurchaseOrder.TabIndex = 19;
+            this.buttonPurchaseOrder.Text = "Đơn hàng";
+            this.buttonPurchaseOrder.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.buttonPurchaseOrder.TextColor = System.Drawing.Color.White;
+            this.buttonPurchaseOrder.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonPurchaseOrder.UseVisualStyleBackColor = false;
+            this.buttonPurchaseOrder.Click += new System.EventHandler(this.buttonPurchaseOrder_Click);
             // 
             // FormOrderPurchaseManagement
             // 
@@ -168,9 +171,9 @@
             this.Name = "FormOrderPurchaseManagement";
             this.Text = "FormOrderPurchaseManagement";
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -179,10 +182,10 @@
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel3;
-        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom6;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonTodolist;
         private System.Windows.Forms.Panel panel2;
-        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom4;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonProcess;
         private System.Windows.Forms.Panel panel1;
-        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonDangNhap;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonPurchaseOrder;
     }
 }

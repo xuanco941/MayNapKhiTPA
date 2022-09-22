@@ -117,68 +117,35 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="setting-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\setting-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="buttonDashboard.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAOhJREFUSEvN
+        VjsOgzAM5QjcsDkISMzNwAnagXamI9dqShey0DxEqIOsyg0fMTzJsl/eA5uQJKooU5Wd7yrXxqFfCeaU
+        6xu0k1GcIy1HpqvEBWs++RwGBlPi+mh60757a20A5C51I+KhRjUDA26Rx/PVfnku5jgAalQzMOAWeHSd
+        nXiIOY4H1dzX4FeL6KtHGwzDY/qLHB1ytIEUxzWQ7oPoz1S6D2AmmRUQGMwXUKAtlCvFMQ02bxEn7oEa
+        1YwyQMxxPKjmvgbSf1F0i6T/on+HvO2ROZz+fHExoD1eW3TlEqteWwbNokw/W9/VXgDZl3UAAAAASUVO
+        RK5CYII=
+</value>
   </data>
-  <data name="iconfinder_Remove_278742" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconfinder_Remove_278742.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAOhJREFUSEvN
+        VjsOgzAM5QjcsDkISMzNwAnagXamI9dqShey0DxEqIOsyg0fMTzJsl/eA5uQJKooU5Wd7yrXxqFfCeaU
+        6xu0k1GcIy1HpqvEBWs++RwGBlPi+mh60757a20A5C51I+KhRjUDA26Rx/PVfnku5jgAalQzMOAWeHSd
+        nXiIOY4H1dzX4FeL6KtHGwzDY/qLHB1ytIEUxzWQ7oPoz1S6D2AmmRUQGMwXUKAtlCvFMQ02bxEn7oEa
+        1YwyQMxxPKjmvgbSf1F0i6T/on+HvO2ROZz+fHExoD1eW3TlEqteWwbNokw/W9/VXgDZl3UAAAAASUVO
+        RK5CYII=
+</value>
   </data>
-  <data name="update" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\update.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_cancel_25px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_cancel_25px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iconfinder_Stock Index Up_278812" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconfinder_Stock Index Up_278812.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button2_Image" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\button2.Image.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button1_Image" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\button1.Image.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Logoexe" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Logoexe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iconfinder_Save_278762" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconfinder_Save_278762.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iconfinder_Undo_278852" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconfinder_Undo_278852.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button3_Image" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\button3.Image.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="warning" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\warning.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="info" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\info.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="error" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\error.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="red_x_10333" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\red-x-10333.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iconfinder_Synchronize_278832" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconfinder_Synchronize_278832.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="dashboard-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dashboard-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="book24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\book24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="success" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\success.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="backpage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\backpage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAOhJREFUSEvN
+        VjsOgzAM5QjcsDkISMzNwAnagXamI9dqShey0DxEqIOsyg0fMTzJsl/eA5uQJKooU5Wd7yrXxqFfCeaU
+        6xu0k1GcIy1HpqvEBWs++RwGBlPi+mh60757a20A5C51I+KhRjUDA26Rx/PVfnku5jgAalQzMOAWeHSd
+        nXiIOY4H1dzX4FeL6KtHGwzDY/qLHB1ytIEUxzWQ7oPoz1S6D2AmmRUQGMwXUKAtlCvFMQ02bxEn7oEa
+        1YwyQMxxPKjmvgbSf1F0i6T/on+HvO2ROZz+fHExoD1eW3TlEqteWwbNokw/W9/VXgDZl3UAAAAASUVO
+        RK5CYII=
+</value>
   </data>
 </root>

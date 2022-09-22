@@ -58,6 +58,9 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Syncfusion.DataSource.WinForms, Version=20.2460.0.36, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Diagram.Base, Version=20.2460.0.36, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Diagram.Windows, Version=20.2460.0.36, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Edit.Windows, Version=20.2460.0.36, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
     <Reference Include="Syncfusion.Gauge.Windows, Version=20.2460.0.36, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
     <Reference Include="Syncfusion.Grid.Base, Version=20.2460.0.36, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <HintPath>D:\Syncfusion\Ensential Studio\Windows\20.2.0.36\precompiledassemblies\4.6\Syncfusion.Grid.Base.dll</HintPath>
@@ -107,6 +110,7 @@
     </Reference>
     <Reference Include="System.Design" />
     <Reference Include="System.Messaging" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -205,6 +209,36 @@
     <Compile Include="Forms\OrderPurchaseManagement\FormOrderPurchaseManagement.Designer.cs">
       <DependentUpon>FormOrderPurchaseManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\OrderPurchaseManagement\FormProcessWorking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OrderPurchaseManagement\FormProcessWorking.Designer.cs">
+      <DependentUpon>FormProcessWorking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OrderPurchaseManagement\FormWorkingList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OrderPurchaseManagement\FormWorkingList.Designer.cs">
+      <DependentUpon>FormWorkingList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OrderPurchaseManagement\PurchaseOrder\FormAddPurchaseOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OrderPurchaseManagement\PurchaseOrder\FormAddPurchaseOrder.Designer.cs">
+      <DependentUpon>FormAddPurchaseOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OrderPurchaseManagement\PurchaseOrder\FormPurchaseOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OrderPurchaseManagement\PurchaseOrder\FormPurchaseOrder.Designer.cs">
+      <DependentUpon>FormPurchaseOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OrderPurchaseManagement\PurchaseOrder\FormViewDetailPurchaseOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OrderPurchaseManagement\PurchaseOrder\FormViewDetailPurchaseOrder.Designer.cs">
+      <DependentUpon>FormViewDetailPurchaseOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ResultManagement\FormData.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -301,6 +335,21 @@
     <EmbeddedResource Include="Forms\OrderPurchaseManagement\FormOrderPurchaseManagement.resx">
       <DependentUpon>FormOrderPurchaseManagement.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OrderPurchaseManagement\FormProcessWorking.resx">
+      <DependentUpon>FormProcessWorking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OrderPurchaseManagement\FormWorkingList.resx">
+      <DependentUpon>FormWorkingList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OrderPurchaseManagement\PurchaseOrder\FormAddPurchaseOrder.resx">
+      <DependentUpon>FormAddPurchaseOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OrderPurchaseManagement\PurchaseOrder\FormPurchaseOrder.resx">
+      <DependentUpon>FormPurchaseOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OrderPurchaseManagement\PurchaseOrder\FormViewDetailPurchaseOrder.resx">
+      <DependentUpon>FormViewDetailPurchaseOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ResultManagement\FormData.resx">
       <DependentUpon>FormData.cs</DependentUpon>
     </EmbeddedResource>
@@ -355,6 +404,9 @@
   <ItemGroup>
     <Content Include="License-LGPL.txt" />
     <Content Include="MayNapKhiTPA.sql" />
+    <None Include="Resources\backpage.png" />
+    <None Include="Resources\update.png" />
+    <None Include="Resources\delete.png" />
     <None Include="Resources\warning.png" />
     <None Include="Resources\success.png" />
     <None Include="Resources\info.png" />
@@ -386,5 +438,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

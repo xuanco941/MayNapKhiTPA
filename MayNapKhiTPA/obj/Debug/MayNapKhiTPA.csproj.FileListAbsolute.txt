@@ -172,3 +172,14 @@ D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\MayNapKhiTPA\MayNapKhiTPA\bin\Debug\Syn
 D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\MayNapKhiTPA\MayNapKhiTPA\bin\Debug\Syncfusion.DataSource.WinForms.xml
 D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\MayNapKhiTPA\MayNapKhiTPA\bin\Debug\Syncfusion.GridCommon.WinForms.xml
 D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\MayNapKhiTPA\MayNapKhiTPA\bin\Debug\Syncfusion.SfListView.WinForms.xml
+D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\MayNapKhiTPA\MayNapKhiTPA\bin\Debug\Syncfusion.Diagram.Base.dll
+D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\MayNapKhiTPA\MayNapKhiTPA\bin\Debug\Syncfusion.Diagram.Windows.dll
+D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\MayNapKhiTPA\MayNapKhiTPA\bin\Debug\Syncfusion.Edit.Windows.dll
+D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\MayNapKhiTPA\MayNapKhiTPA\bin\Debug\Syncfusion.Diagram.Base.xml
+D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\MayNapKhiTPA\MayNapKhiTPA\bin\Debug\Syncfusion.Diagram.Windows.xml
+D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\MayNapKhiTPA\MayNapKhiTPA\bin\Debug\Syncfusion.Edit.Windows.xml
+D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\MayNapKhiTPA\MayNapKhiTPA\obj\Debug\MayNapKhiTPA.Forms.OrderPurchaseManagement.PurchaseOrder.FormPurchaseOrder.resources
+D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\MayNapKhiTPA\MayNapKhiTPA\obj\Debug\MayNapKhiTPA.Forms.OrderPurchaseManagement.FormProcessWorking.resources
+D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\MayNapKhiTPA\MayNapKhiTPA\obj\Debug\MayNapKhiTPA.Forms.OrderPurchaseManagement.PurchaseOrder.FormAddPurchaseOrder.resources
+D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\MayNapKhiTPA\MayNapKhiTPA\obj\Debug\MayNapKhiTPA.Forms.OrderPurchaseManagement.PurchaseOrder.FormViewDetailPurchaseOrder.resources
+D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\MayNapKhiTPA\MayNapKhiTPA\obj\Debug\MayNapKhiTPA.Forms.OrderPurchaseManagement.FormWorkingList.resources

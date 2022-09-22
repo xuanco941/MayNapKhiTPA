@@ -175,6 +175,7 @@ namespace MayNapKhiTPA.Forms
             labelHeader.Text = "Quản lý đơn hàng";
             FormOrderPurchaseManagement formOrderPurchaseManagement = new FormOrderPurchaseManagement();
             formOrderPurchaseManagement.callAlert = new FormOrderPurchaseManagement.CallAlert(Alert);
+            formOrderPurchaseManagement.changeForm = new FormOrderPurchaseManagement.ChangeForm(ChangeFormContent);
             ChangeFormContent(formOrderPurchaseManagement);
             this.Font = new Font("Bahnschrift", 11);
         }
