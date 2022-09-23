@@ -337,6 +337,9 @@
     <EmbeddedResource Include="Forms\FormTest.resx">
       <DependentUpon>FormTest.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InventoryManagement\FormInventoryManagement.resx">
+      <DependentUpon>FormInventoryManagement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\OrderPurchaseManagement\FormOrderPurchaseManagement.resx">
       <DependentUpon>FormOrderPurchaseManagement.cs</DependentUpon>
     </EmbeddedResource>

@@ -189,3 +189,4 @@ D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\MayNapKhiTPA\MayNapKhiTPA\bin\Debug\Syn
 D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\MayNapKhiTPA\MayNapKhiTPA\bin\Debug\Syncfusion.SfDataGrid.WinForms.xml
 D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\MayNapKhiTPA\MayNapKhiTPA\bin\Debug\Syncfusion.SfInput.WinForms.xml
 D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\MayNapKhiTPA\MayNapKhiTPA\obj\Debug\MayNapKhiTPA.Forms.OrderPurchaseManagement.FormViewDetailPurchaseOrder.resources
+D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\MayNapKhiTPA\MayNapKhiTPA\obj\Debug\MayNapKhiTPA.Forms.InventoryManagement.FormInventoryManagement.resources
