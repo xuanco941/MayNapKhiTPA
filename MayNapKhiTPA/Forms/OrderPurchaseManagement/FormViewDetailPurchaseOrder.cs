@@ -9,16 +9,25 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MayNapKhiTPA.Forms
+namespace MayNapKhiTPA.Forms.OrderPurchaseManagement
 {
-    public partial class FormTest : Form
+    public partial class FormViewDetailPurchaseOrder : Form
     {
-        public FormTest()
+        public FormViewDetailPurchaseOrder()
         {
             InitializeComponent();
             sfBarcode1.Symbology = BarcodeSymbolType.Code39Extended;
             sfBarcode1.Text = "ABC-123-abc";
-            this.Controls.Add(this.sfBarcode1);
+        }
+
+        private void panel17_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

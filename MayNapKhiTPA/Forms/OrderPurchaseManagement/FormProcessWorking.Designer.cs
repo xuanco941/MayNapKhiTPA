@@ -33,18 +33,7 @@
             this.buttonDangNhap = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.panelMain1 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.progressBar3 = new System.Windows.Forms.ProgressBar();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.panelPONotDone = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -70,8 +59,12 @@
             this.buttonPage3 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.buttonPage1 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.buttonPage2 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.panelPODone = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.sfBarcode1 = new Syncfusion.Windows.Forms.Barcode.SfBarcode();
             this.label36 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.progressBar6 = new System.Windows.Forms.ProgressBar();
@@ -86,20 +79,17 @@
             this.buttonCustom2 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.buttonCustom3 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.buttonCustom4 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
-            this.sfBarcode1 = new Syncfusion.Windows.Forms.Barcode.SfBarcode();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.panelMain1.SuspendLayout();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panelPONotDone.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
-            this.panel6.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.panelPODone.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel10.SuspendLayout();
@@ -141,11 +131,10 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Alignment = System.Windows.Forms.TabAlignment.Left;
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(0, 42);
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
@@ -155,152 +144,29 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.AutoScroll = true;
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.tabPage1.Controls.Add(this.panelMain1);
+            this.tabPage1.Controls.Add(this.panelPONotDone);
             this.tabPage1.Controls.Add(this.panel2);
             this.tabPage1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage1.Location = new System.Drawing.Point(27, 4);
+            this.tabPage1.Location = new System.Drawing.Point(4, 30);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1117, 535);
+            this.tabPage1.Size = new System.Drawing.Size(1140, 509);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Đơn hàng đang thực hiện";
             // 
-            // tabPage2
+            // panelPONotDone
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.tabPage2.Controls.Add(this.panel6);
-            this.tabPage2.Controls.Add(this.panel10);
-            this.tabPage2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage2.Location = new System.Drawing.Point(27, 4);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1117, 535);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Đơn hàng đã hoàn thành";
-            // 
-            // panelMain1
-            // 
-            this.panelMain1.AutoScroll = true;
-            this.panelMain1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelMain1.Controls.Add(this.panel5);
-            this.panelMain1.Controls.Add(this.panel4);
-            this.panelMain1.Controls.Add(this.panel3);
-            this.panelMain1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMain1.Location = new System.Drawing.Point(3, 3);
-            this.panelMain1.Name = "panelMain1";
-            this.panelMain1.Size = new System.Drawing.Size(1111, 480);
-            this.panelMain1.TabIndex = 9;
-            // 
-            // panel5
-            // 
-            this.panel5.AutoScroll = true;
-            this.panel5.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.label14);
-            this.panel5.Controls.Add(this.label15);
-            this.panel5.Controls.Add(this.progressBar3);
-            this.panel5.Controls.Add(this.label16);
-            this.panel5.Controls.Add(this.label17);
-            this.panel5.Controls.Add(this.label18);
-            this.panel5.Controls.Add(this.label20);
-            this.panel5.Controls.Add(this.label21);
-            this.panel5.Controls.Add(this.pictureBox3);
-            this.panel5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 302);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1109, 151);
-            this.panel5.TabIndex = 2;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(529, 15);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(195, 21);
-            this.label14.TabIndex = 10;
-            this.label14.Text = "Người phụ trách: Đỗ Văn A";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(195, 107);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(83, 21);
-            this.label15.TabIndex = 9;
-            this.label15.Text = "Tiến trình: ";
-            // 
-            // progressBar3
-            // 
-            this.progressBar3.Location = new System.Drawing.Point(284, 104);
-            this.progressBar3.Name = "progressBar3";
-            this.progressBar3.Size = new System.Drawing.Size(507, 28);
-            this.progressBar3.TabIndex = 7;
-            this.progressBar3.Value = 60;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(195, 44);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(287, 21);
-            this.label16.TabIndex = 6;
-            this.label16.Text = "Tổng số sản phẩm cần phải thực hiện : 5";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(529, 44);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(209, 21);
-            this.label17.TabIndex = 5;
-            this.label17.Text = "Số sản phẩm đã thực hiện : 3";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(529, 76);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(266, 21);
-            this.label18.TabIndex = 4;
-            this.label18.Text = "Ngày bắt đầu thực hiện : 23/09/2022";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(195, 76);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(239, 21);
-            this.label20.TabIndex = 3;
-            this.label20.Text = "Ngày tạo đơn hàng : 22/09/2022";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(195, 15);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(173, 21);
-            this.label21.TabIndex = 1;
-            this.label21.Text = "Mã đơn hàng : TPA-001";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(186, 149);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
+            this.panelPONotDone.AutoScroll = true;
+            this.panelPONotDone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelPONotDone.Controls.Add(this.panel4);
+            this.panelPONotDone.Controls.Add(this.panel3);
+            this.panelPONotDone.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelPONotDone.Location = new System.Drawing.Point(3, 3);
+            this.panelPONotDone.Name = "panelPONotDone";
+            this.panelPONotDone.Size = new System.Drawing.Size(1134, 454);
+            this.panelPONotDone.TabIndex = 9;
             // 
             // panel4
             // 
@@ -320,7 +186,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 151);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1109, 151);
+            this.panel4.Size = new System.Drawing.Size(1132, 151);
             this.panel4.TabIndex = 1;
             // 
             // label7
@@ -430,7 +296,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1109, 151);
+            this.panel3.Size = new System.Drawing.Size(1132, 151);
             this.panel3.TabIndex = 0;
             // 
             // label19
@@ -530,9 +396,9 @@
             this.panel2.Controls.Add(this.buttonPage1);
             this.panel2.Controls.Add(this.buttonPage2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(3, 483);
+            this.panel2.Location = new System.Drawing.Point(3, 457);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1111, 49);
+            this.panel2.Size = new System.Drawing.Size(1134, 49);
             this.panel2.TabIndex = 8;
             // 
             // buttonPageNext
@@ -623,22 +489,38 @@
             this.buttonPage2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.buttonPage2.UseVisualStyleBackColor = false;
             // 
-            // panel6
+            // tabPage2
             // 
-            this.panel6.AutoScroll = true;
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Controls.Add(this.panel9);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(3, 3);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1111, 480);
-            this.panel6.TabIndex = 11;
+            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.tabPage2.Controls.Add(this.panelPODone);
+            this.tabPage2.Controls.Add(this.panel10);
+            this.tabPage2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPage2.Location = new System.Drawing.Point(4, 30);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1140, 509);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Đơn hàng đã hoàn thành";
+            // 
+            // panelPODone
+            // 
+            this.panelPODone.AutoScroll = true;
+            this.panelPODone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelPODone.Controls.Add(this.panel9);
+            this.panelPODone.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelPODone.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelPODone.Location = new System.Drawing.Point(3, 3);
+            this.panelPODone.Name = "panelPODone";
+            this.panelPODone.Size = new System.Drawing.Size(1134, 454);
+            this.panelPODone.TabIndex = 11;
             // 
             // panel9
             // 
             this.panel9.AutoScroll = true;
             this.panel9.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel9.Controls.Add(this.label23);
+            this.panel9.Controls.Add(this.label22);
             this.panel9.Controls.Add(this.sfBarcode1);
             this.panel9.Controls.Add(this.label36);
             this.panel9.Controls.Add(this.label37);
@@ -653,8 +535,46 @@
             this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel9.Location = new System.Drawing.Point(0, 0);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(1109, 151);
+            this.panel9.Size = new System.Drawing.Size(1132, 187);
             this.panel9.TabIndex = 0;
+            this.panel9.Click += new System.EventHandler(this.panel9_Click);
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(529, 107);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(184, 21);
+            this.label23.TabIndex = 13;
+            this.label23.Text = "Trạng thái: Chờ nhập kho";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(195, 107);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(225, 21);
+            this.label22.TabIndex = 12;
+            this.label22.Text = "Ngày hoàn thành : 23/09/2022";
+            // 
+            // sfBarcode1
+            // 
+            this.sfBarcode1.DarkBarColor = System.Drawing.Color.Black;
+            this.sfBarcode1.DisplayText = true;
+            this.sfBarcode1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sfBarcode1.LightBarColor = System.Drawing.Color.White;
+            this.sfBarcode1.Location = new System.Drawing.Point(847, 54);
+            this.sfBarcode1.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
+            this.sfBarcode1.Name = "sfBarcode1";
+            this.sfBarcode1.Size = new System.Drawing.Size(252, 74);
+            this.sfBarcode1.Symbology = Syncfusion.Windows.Forms.Barcode.BarcodeSymbolType.Code39Extended;
+            this.sfBarcode1.SymbologySettings = null;
+            this.sfBarcode1.TabIndex = 11;
+            this.sfBarcode1.TextAlignment = Syncfusion.Windows.Forms.Barcode.BarcodeTextAlignment.Center;
+            this.sfBarcode1.TextColor = System.Drawing.Color.Black;
+            this.sfBarcode1.TextGapHeight = 0F;
             // 
             // label36
             // 
@@ -670,7 +590,7 @@
             // 
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(195, 107);
+            this.label37.Location = new System.Drawing.Point(199, 142);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(83, 21);
             this.label37.TabIndex = 9;
@@ -678,7 +598,7 @@
             // 
             // progressBar6
             // 
-            this.progressBar6.Location = new System.Drawing.Point(284, 104);
+            this.progressBar6.Location = new System.Drawing.Point(280, 140);
             this.progressBar6.Name = "progressBar6";
             this.progressBar6.Size = new System.Drawing.Size(507, 28);
             this.progressBar6.TabIndex = 7;
@@ -740,7 +660,7 @@
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
             this.pictureBox6.Location = new System.Drawing.Point(0, 0);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(186, 149);
+            this.pictureBox6.Size = new System.Drawing.Size(186, 185);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox6.TabIndex = 0;
             this.pictureBox6.TabStop = false;
@@ -753,9 +673,9 @@
             this.panel10.Controls.Add(this.buttonCustom3);
             this.panel10.Controls.Add(this.buttonCustom4);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel10.Location = new System.Drawing.Point(3, 483);
+            this.panel10.Location = new System.Drawing.Point(3, 457);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(1111, 49);
+            this.panel10.Size = new System.Drawing.Size(1134, 49);
             this.panel10.TabIndex = 10;
             // 
             // buttonCustom1
@@ -846,22 +766,6 @@
             this.buttonCustom4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.buttonCustom4.UseVisualStyleBackColor = false;
             // 
-            // sfBarcode1
-            // 
-            this.sfBarcode1.DarkBarColor = System.Drawing.Color.Black;
-            this.sfBarcode1.DisplayText = true;
-            this.sfBarcode1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.sfBarcode1.LightBarColor = System.Drawing.Color.White;
-            this.sfBarcode1.Location = new System.Drawing.Point(916, 0);
-            this.sfBarcode1.Name = "sfBarcode1";
-            this.sfBarcode1.Size = new System.Drawing.Size(191, 149);
-            this.sfBarcode1.Symbology = Syncfusion.Windows.Forms.Barcode.BarcodeSymbolType.QRBarcode;
-            this.sfBarcode1.SymbologySettings = null;
-            this.sfBarcode1.TabIndex = 11;
-            this.sfBarcode1.TextAlignment = Syncfusion.Windows.Forms.Barcode.BarcodeTextAlignment.Center;
-            this.sfBarcode1.TextColor = System.Drawing.Color.Black;
-            this.sfBarcode1.TextGapHeight = 0F;
-            // 
             // FormProcessWorking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -875,11 +779,7 @@
             this.panel1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.panelMain1.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panelPONotDone.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -887,7 +787,8 @@
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.panelPODone.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
@@ -901,17 +802,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Panel panelMain1;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.ProgressBar progressBar3;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Panel panelPONotDone;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
@@ -938,7 +829,7 @@
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonPage1;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonPage2;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panelPODone;
         private System.Windows.Forms.Panel panel9;
         private Syncfusion.Windows.Forms.Barcode.SfBarcode sfBarcode1;
         private System.Windows.Forms.Label label36;
@@ -955,5 +846,7 @@
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom2;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom3;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom4;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label23;
     }
 }

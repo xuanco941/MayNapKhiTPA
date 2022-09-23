@@ -16,13 +16,13 @@ namespace MayNapKhiTPA.Forms.OrderPurchaseManagement
         public FormProcessWorking()
         {
             InitializeComponent();
-
-            Code39ExtendedSetting code39Settings = new Code39ExtendedSetting();
-            code39Settings.EnableCheckDigit = false;
-            code39Settings.ShowCheckDigit = true;
-            code39Settings.EncodeStartStopSymbols = true;
-            this.sfBarcode1.SymbologySettings = code39Settings;
+            sfBarcode1.Symbology = BarcodeSymbolType.Code39Extended;
             sfBarcode1.Text = "ABC-123-abc";
+        }
+
+        private void panel9_Click(object sender, EventArgs e)
+        {
+            new FormViewDetailPurchaseOrder().ShowDialog();
         }
     }
 }
