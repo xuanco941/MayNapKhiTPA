@@ -202,10 +202,10 @@
     <Compile Include="Forms\FormTest.Designer.cs">
       <DependentUpon>FormTest.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\InventoryManagement\FormInventoryManagement.cs">
+    <Compile Include="Forms\FormInventoryManagement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\InventoryManagement\FormInventoryManagement.Designer.cs">
+    <Compile Include="Forms\FormInventoryManagement.Designer.cs">
       <DependentUpon>FormInventoryManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\OrderPurchaseManagement\FormOrderPurchaseManagement.cs">
@@ -214,16 +214,22 @@
     <Compile Include="Forms\OrderPurchaseManagement\FormOrderPurchaseManagement.Designer.cs">
       <DependentUpon>FormOrderPurchaseManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\OrderPurchaseManagement\FormProcessWorking.cs">
+    <Compile Include="Forms\OrderPurchaseManagement\ProcessWorking\FormViewDetailPurchaseOrderWorking.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\OrderPurchaseManagement\FormProcessWorking.Designer.cs">
+    <Compile Include="Forms\OrderPurchaseManagement\ProcessWorking\FormViewDetailPurchaseOrderWorking.Designer.cs">
+      <DependentUpon>FormViewDetailPurchaseOrderWorking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OrderPurchaseManagement\ProcessWorking\FormProcessWorking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OrderPurchaseManagement\ProcessWorking\FormProcessWorking.Designer.cs">
       <DependentUpon>FormProcessWorking.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\OrderPurchaseManagement\FormWorkingList.cs">
+    <Compile Include="Forms\FormWorkingList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\OrderPurchaseManagement\FormWorkingList.Designer.cs">
+    <Compile Include="Forms\FormWorkingList.Designer.cs">
       <DependentUpon>FormWorkingList.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\OrderPurchaseManagement\PurchaseOrder\FormAddPurchaseOrder.cs">
@@ -238,10 +244,16 @@
     <Compile Include="Forms\OrderPurchaseManagement\PurchaseOrder\FormPurchaseOrder.Designer.cs">
       <DependentUpon>FormPurchaseOrder.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\OrderPurchaseManagement\FormViewDetailPurchaseOrder.cs">
+    <Compile Include="Forms\OrderPurchaseManagement\ProcessWorking\FormViewDetailPurchaseOrderDone.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\OrderPurchaseManagement\FormViewDetailPurchaseOrder.Designer.cs">
+    <Compile Include="Forms\OrderPurchaseManagement\ProcessWorking\FormViewDetailPurchaseOrderDone.Designer.cs">
+      <DependentUpon>FormViewDetailPurchaseOrderDone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OrderPurchaseManagement\PurchaseOrder\FormViewDetailPurchaseOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OrderPurchaseManagement\PurchaseOrder\FormViewDetailPurchaseOrder.Designer.cs">
       <DependentUpon>FormViewDetailPurchaseOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ResultManagement\FormData.cs">
@@ -337,16 +349,19 @@
     <EmbeddedResource Include="Forms\FormTest.resx">
       <DependentUpon>FormTest.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\InventoryManagement\FormInventoryManagement.resx">
+    <EmbeddedResource Include="Forms\FormInventoryManagement.resx">
       <DependentUpon>FormInventoryManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\OrderPurchaseManagement\FormOrderPurchaseManagement.resx">
       <DependentUpon>FormOrderPurchaseManagement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\OrderPurchaseManagement\FormProcessWorking.resx">
+    <EmbeddedResource Include="Forms\OrderPurchaseManagement\ProcessWorking\FormViewDetailPurchaseOrderWorking.resx">
+      <DependentUpon>FormViewDetailPurchaseOrderWorking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OrderPurchaseManagement\ProcessWorking\FormProcessWorking.resx">
       <DependentUpon>FormProcessWorking.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\OrderPurchaseManagement\FormWorkingList.resx">
+    <EmbeddedResource Include="Forms\FormWorkingList.resx">
       <DependentUpon>FormWorkingList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\OrderPurchaseManagement\PurchaseOrder\FormAddPurchaseOrder.resx">
@@ -355,7 +370,10 @@
     <EmbeddedResource Include="Forms\OrderPurchaseManagement\PurchaseOrder\FormPurchaseOrder.resx">
       <DependentUpon>FormPurchaseOrder.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\OrderPurchaseManagement\FormViewDetailPurchaseOrder.resx">
+    <EmbeddedResource Include="Forms\OrderPurchaseManagement\ProcessWorking\FormViewDetailPurchaseOrderDone.resx">
+      <DependentUpon>FormViewDetailPurchaseOrderDone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OrderPurchaseManagement\PurchaseOrder\FormViewDetailPurchaseOrder.resx">
       <DependentUpon>FormViewDetailPurchaseOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ResultManagement\FormData.resx">

@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MayNapKhiTPA.Forms.OrderPurchaseManagement
+namespace MayNapKhiTPA.Forms.OrderPurchaseManagement.ProcessWorking
 {
-    public partial class FormWorkingList : Form
+    public partial class FormViewDetailPurchaseOrderWorking : Form
     {
-        public FormWorkingList()
+        public FormViewDetailPurchaseOrderWorking()
         {
             InitializeComponent();
         }

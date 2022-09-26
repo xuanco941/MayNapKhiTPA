@@ -9,11 +9,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MayNapKhiTPA.Forms.OrderPurchaseManagement
+namespace MayNapKhiTPA.Forms.OrderPurchaseManagement.ProcessWorking
 {
-    public partial class FormViewDetailPurchaseOrder : Form
+    public partial class FormViewDetailPurchaseOrderDone : Form
     {
-        public FormViewDetailPurchaseOrder()
+        public FormViewDetailPurchaseOrderDone()
         {
             InitializeComponent();
             sfBarcode1.Symbology = BarcodeSymbolType.Code39Extended;

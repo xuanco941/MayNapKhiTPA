@@ -1,4 +1,4 @@
-﻿namespace MayNapKhiTPA.Forms.OrderPurchaseManagement
+﻿namespace MayNapKhiTPA.Forms.OrderPurchaseManagement.ProcessWorking
 {
     partial class FormProcessWorking
     {
@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProcessWorking));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.buttonDangNhap = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panelPONotDone = new System.Windows.Forms.Panel();
@@ -43,7 +42,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label19 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -53,7 +51,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.buttonPageNext = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.buttonPage3 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
@@ -71,26 +68,43 @@
             this.label40 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panel10 = new System.Windows.Forms.Panel();
             this.buttonCustom1 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.buttonCustom2 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.buttonCustom3 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.buttonCustom4 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.progressBar3 = new System.Windows.Forms.ProgressBar();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.buttonDangNhap = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.buttonSaveSetting = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.buttonCustom5 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panelPONotDone.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.panelPODone.SuspendLayout();
             this.panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel10.SuspendLayout();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -102,30 +116,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1148, 42);
             this.panel1.TabIndex = 6;
-            // 
-            // buttonDangNhap
-            // 
-            this.buttonDangNhap.AutoEllipsis = true;
-            this.buttonDangNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.buttonDangNhap.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.buttonDangNhap.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonDangNhap.BorderRadius = 5;
-            this.buttonDangNhap.BorderSize = 0;
-            this.buttonDangNhap.Dock = System.Windows.Forms.DockStyle.Left;
-            this.buttonDangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDangNhap.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDangNhap.ForeColor = System.Drawing.Color.White;
-            this.buttonDangNhap.Image = global::MayNapKhiTPA.Properties.Resources.backpage;
-            this.buttonDangNhap.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonDangNhap.Location = new System.Drawing.Point(0, 0);
-            this.buttonDangNhap.Name = "buttonDangNhap";
-            this.buttonDangNhap.Size = new System.Drawing.Size(123, 40);
-            this.buttonDangNhap.TabIndex = 13;
-            this.buttonDangNhap.Text = "Quay lại";
-            this.buttonDangNhap.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonDangNhap.TextColor = System.Drawing.Color.White;
-            this.buttonDangNhap.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonDangNhap.UseVisualStyleBackColor = false;
             // 
             // tabControl1
             // 
@@ -158,6 +148,7 @@
             // 
             this.panelPONotDone.AutoScroll = true;
             this.panelPONotDone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelPONotDone.Controls.Add(this.panel5);
             this.panelPONotDone.Controls.Add(this.panel4);
             this.panelPONotDone.Controls.Add(this.panel3);
             this.panelPONotDone.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -184,8 +175,9 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 151);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1132, 151);
+            this.panel4.Size = new System.Drawing.Size(1115, 151);
             this.panel4.TabIndex = 1;
+            this.panel4.Click += new System.EventHandler(this.panel5_Click);
             // 
             // label7
             // 
@@ -265,17 +257,6 @@
             this.label13.TabIndex = 1;
             this.label13.Text = "Mã đơn hàng : TPA-001";
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(186, 149);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
             // panel3
             // 
             this.panel3.AutoScroll = true;
@@ -294,8 +275,9 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1132, 151);
+            this.panel3.Size = new System.Drawing.Size(1115, 151);
             this.panel3.TabIndex = 0;
+            this.panel3.Click += new System.EventHandler(this.panel5_Click);
             // 
             // label19
             // 
@@ -375,20 +357,10 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Mã đơn hàng : TPA-001";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(186, 149);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.buttonSaveSetting);
             this.panel2.Controls.Add(this.buttonPageNext);
             this.panel2.Controls.Add(this.buttonPage3);
             this.panel2.Controls.Add(this.buttonPage1);
@@ -632,20 +604,10 @@
             this.label42.TabIndex = 1;
             this.label42.Text = "Mã đơn hàng : TPA-001";
             // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(186, 155);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox6.TabIndex = 0;
-            this.pictureBox6.TabStop = false;
-            // 
             // panel10
             // 
             this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel10.Controls.Add(this.buttonCustom5);
             this.panel10.Controls.Add(this.buttonCustom1);
             this.panel10.Controls.Add(this.buttonCustom2);
             this.panel10.Controls.Add(this.buttonCustom3);
@@ -744,6 +706,223 @@
             this.buttonCustom4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.buttonCustom4.UseVisualStyleBackColor = false;
             // 
+            // panel5
+            // 
+            this.panel5.AutoScroll = true;
+            this.panel5.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.label14);
+            this.panel5.Controls.Add(this.label15);
+            this.panel5.Controls.Add(this.progressBar3);
+            this.panel5.Controls.Add(this.label16);
+            this.panel5.Controls.Add(this.label17);
+            this.panel5.Controls.Add(this.label18);
+            this.panel5.Controls.Add(this.label20);
+            this.panel5.Controls.Add(this.label21);
+            this.panel5.Controls.Add(this.pictureBox3);
+            this.panel5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 302);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1115, 151);
+            this.panel5.TabIndex = 2;
+            this.panel5.Click += new System.EventHandler(this.panel5_Click);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(529, 15);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(195, 21);
+            this.label14.TabIndex = 10;
+            this.label14.Text = "Người phụ trách: Đỗ Văn A";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(195, 107);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(83, 21);
+            this.label15.TabIndex = 9;
+            this.label15.Text = "Tiến trình: ";
+            // 
+            // progressBar3
+            // 
+            this.progressBar3.Location = new System.Drawing.Point(284, 104);
+            this.progressBar3.Name = "progressBar3";
+            this.progressBar3.Size = new System.Drawing.Size(507, 28);
+            this.progressBar3.TabIndex = 7;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(195, 44);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(287, 21);
+            this.label16.TabIndex = 6;
+            this.label16.Text = "Tổng số sản phẩm cần phải thực hiện : 6";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(529, 44);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(209, 21);
+            this.label17.TabIndex = 5;
+            this.label17.Text = "Số sản phẩm đã thực hiện : 0";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(529, 76);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(266, 21);
+            this.label18.TabIndex = 4;
+            this.label18.Text = "Ngày bắt đầu thực hiện : 23/09/2022";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(195, 76);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(239, 21);
+            this.label20.TabIndex = 3;
+            this.label20.Text = "Ngày tạo đơn hàng : 22/09/2022";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(195, 15);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(173, 21);
+            this.label21.TabIndex = 1;
+            this.label21.Text = "Mã đơn hàng : TPA-001";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(186, 149);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(186, 149);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(186, 149);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(186, 155);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox6.TabIndex = 0;
+            this.pictureBox6.TabStop = false;
+            // 
+            // buttonDangNhap
+            // 
+            this.buttonDangNhap.AutoEllipsis = true;
+            this.buttonDangNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.buttonDangNhap.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.buttonDangNhap.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonDangNhap.BorderRadius = 5;
+            this.buttonDangNhap.BorderSize = 0;
+            this.buttonDangNhap.Dock = System.Windows.Forms.DockStyle.Left;
+            this.buttonDangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDangNhap.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDangNhap.ForeColor = System.Drawing.Color.White;
+            this.buttonDangNhap.Image = global::MayNapKhiTPA.Properties.Resources.backpage;
+            this.buttonDangNhap.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonDangNhap.Location = new System.Drawing.Point(0, 0);
+            this.buttonDangNhap.Name = "buttonDangNhap";
+            this.buttonDangNhap.Size = new System.Drawing.Size(123, 40);
+            this.buttonDangNhap.TabIndex = 13;
+            this.buttonDangNhap.Text = "Quay lại";
+            this.buttonDangNhap.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonDangNhap.TextColor = System.Drawing.Color.White;
+            this.buttonDangNhap.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonDangNhap.UseVisualStyleBackColor = false;
+            // 
+            // buttonSaveSetting
+            // 
+            this.buttonSaveSetting.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonSaveSetting.BackColor = System.Drawing.Color.Crimson;
+            this.buttonSaveSetting.BackgroundColor = System.Drawing.Color.Crimson;
+            this.buttonSaveSetting.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonSaveSetting.BorderRadius = 6;
+            this.buttonSaveSetting.BorderSize = 0;
+            this.buttonSaveSetting.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonSaveSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSaveSetting.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSaveSetting.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonSaveSetting.Image = global::MayNapKhiTPA.Properties.Resources.iconfinder_Remove_278742;
+            this.buttonSaveSetting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonSaveSetting.Location = new System.Drawing.Point(1012, 5);
+            this.buttonSaveSetting.Name = "buttonSaveSetting";
+            this.buttonSaveSetting.Size = new System.Drawing.Size(116, 35);
+            this.buttonSaveSetting.TabIndex = 54;
+            this.buttonSaveSetting.Text = "Xóa";
+            this.buttonSaveSetting.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonSaveSetting.TextColor = System.Drawing.SystemColors.Control;
+            this.buttonSaveSetting.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonSaveSetting.UseVisualStyleBackColor = false;
+            // 
+            // buttonCustom5
+            // 
+            this.buttonCustom5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonCustom5.BackColor = System.Drawing.Color.Crimson;
+            this.buttonCustom5.BackgroundColor = System.Drawing.Color.Crimson;
+            this.buttonCustom5.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonCustom5.BorderRadius = 6;
+            this.buttonCustom5.BorderSize = 0;
+            this.buttonCustom5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonCustom5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCustom5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCustom5.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonCustom5.Image = global::MayNapKhiTPA.Properties.Resources.iconfinder_Remove_278742;
+            this.buttonCustom5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCustom5.Location = new System.Drawing.Point(1012, 5);
+            this.buttonCustom5.Name = "buttonCustom5";
+            this.buttonCustom5.Size = new System.Drawing.Size(116, 35);
+            this.buttonCustom5.TabIndex = 55;
+            this.buttonCustom5.Text = "Xóa";
+            this.buttonCustom5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonCustom5.TextColor = System.Drawing.SystemColors.Control;
+            this.buttonCustom5.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonCustom5.UseVisualStyleBackColor = false;
+            // 
             // FormProcessWorking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -760,17 +939,20 @@
             this.panelPONotDone.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.panelPODone.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panel10.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -824,5 +1006,17 @@
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom4;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ProgressBar progressBar3;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonSaveSetting;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom5;
     }
 }

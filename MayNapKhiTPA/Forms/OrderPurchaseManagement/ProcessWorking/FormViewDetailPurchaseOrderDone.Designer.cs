@@ -1,6 +1,6 @@
-﻿namespace MayNapKhiTPA.Forms.OrderPurchaseManagement
+﻿namespace MayNapKhiTPA.Forms.OrderPurchaseManagement.ProcessWorking
 {
-    partial class FormViewDetailPurchaseOrder
+    partial class FormViewDetailPurchaseOrderDone
     {
         /// <summary>
         /// Required designer variable.
@@ -28,14 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormViewDetailPurchaseOrder));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormViewDetailPurchaseOrderDone));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label29 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel20 = new System.Windows.Forms.Panel();
-            this.buttonCustom1 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
-            this.buttonSaveSetting = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.panel23 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.panel18 = new System.Windows.Forms.Panel();
@@ -88,6 +86,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.buttonCustom1 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.buttonSaveSetting = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -131,7 +131,7 @@
             // label29
             // 
             this.label29.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label29.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label29.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label29.Location = new System.Drawing.Point(0, 0);
             this.label29.Name = "label29";
@@ -177,56 +177,6 @@
             this.panel20.Name = "panel20";
             this.panel20.Size = new System.Drawing.Size(274, 131);
             this.panel20.TabIndex = 3;
-            // 
-            // buttonCustom1
-            // 
-            this.buttonCustom1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCustom1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.buttonCustom1.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.buttonCustom1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonCustom1.BorderRadius = 6;
-            this.buttonCustom1.BorderSize = 0;
-            this.buttonCustom1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonCustom1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCustom1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCustom1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.buttonCustom1.Image = ((System.Drawing.Image)(resources.GetObject("buttonCustom1.Image")));
-            this.buttonCustom1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCustom1.Location = new System.Drawing.Point(147, 67);
-            this.buttonCustom1.Name = "buttonCustom1";
-            this.buttonCustom1.Size = new System.Drawing.Size(116, 35);
-            this.buttonCustom1.TabIndex = 54;
-            this.buttonCustom1.Text = "Xuất PDF";
-            this.buttonCustom1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonCustom1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.buttonCustom1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.buttonCustom1.UseVisualStyleBackColor = false;
-            // 
-            // buttonSaveSetting
-            // 
-            this.buttonSaveSetting.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonSaveSetting.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.buttonSaveSetting.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.buttonSaveSetting.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonSaveSetting.BorderRadius = 6;
-            this.buttonSaveSetting.BorderSize = 0;
-            this.buttonSaveSetting.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonSaveSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSaveSetting.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSaveSetting.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.buttonSaveSetting.Image = ((System.Drawing.Image)(resources.GetObject("buttonSaveSetting.Image")));
-            this.buttonSaveSetting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSaveSetting.Location = new System.Drawing.Point(15, 67);
-            this.buttonSaveSetting.Name = "buttonSaveSetting";
-            this.buttonSaveSetting.Size = new System.Drawing.Size(116, 35);
-            this.buttonSaveSetting.TabIndex = 53;
-            this.buttonSaveSetting.Text = "In Barcode";
-            this.buttonSaveSetting.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonSaveSetting.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.buttonSaveSetting.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.buttonSaveSetting.UseVisualStyleBackColor = false;
             // 
             // panel23
             // 
@@ -821,7 +771,57 @@
             this.label1.Text = "Thông tin khách hàng";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // FormViewDetailPurchaseOrder
+            // buttonCustom1
+            // 
+            this.buttonCustom1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonCustom1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.buttonCustom1.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.buttonCustom1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonCustom1.BorderRadius = 6;
+            this.buttonCustom1.BorderSize = 0;
+            this.buttonCustom1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonCustom1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCustom1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCustom1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.buttonCustom1.Image = ((System.Drawing.Image)(resources.GetObject("buttonCustom1.Image")));
+            this.buttonCustom1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCustom1.Location = new System.Drawing.Point(147, 67);
+            this.buttonCustom1.Name = "buttonCustom1";
+            this.buttonCustom1.Size = new System.Drawing.Size(116, 35);
+            this.buttonCustom1.TabIndex = 54;
+            this.buttonCustom1.Text = "Xuất PDF";
+            this.buttonCustom1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonCustom1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.buttonCustom1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonCustom1.UseVisualStyleBackColor = false;
+            // 
+            // buttonSaveSetting
+            // 
+            this.buttonSaveSetting.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonSaveSetting.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.buttonSaveSetting.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.buttonSaveSetting.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonSaveSetting.BorderRadius = 6;
+            this.buttonSaveSetting.BorderSize = 0;
+            this.buttonSaveSetting.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonSaveSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSaveSetting.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSaveSetting.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.buttonSaveSetting.Image = ((System.Drawing.Image)(resources.GetObject("buttonSaveSetting.Image")));
+            this.buttonSaveSetting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonSaveSetting.Location = new System.Drawing.Point(15, 67);
+            this.buttonSaveSetting.Name = "buttonSaveSetting";
+            this.buttonSaveSetting.Size = new System.Drawing.Size(116, 35);
+            this.buttonSaveSetting.TabIndex = 53;
+            this.buttonSaveSetting.Text = "In Barcode";
+            this.buttonSaveSetting.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonSaveSetting.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.buttonSaveSetting.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonSaveSetting.UseVisualStyleBackColor = false;
+            // 
+            // FormViewDetailPurchaseOrderDone
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -830,7 +830,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "FormViewDetailPurchaseOrder";
+            this.Name = "FormViewDetailPurchaseOrderDone";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormViewDetailPurchaseOrder";
             this.panel1.ResumeLayout(false);

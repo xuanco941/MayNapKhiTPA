@@ -1559,6 +1559,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Name = "FormAddPurchaseOrder";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.panel16.ResumeLayout(false);
             this.panel17.ResumeLayout(false);

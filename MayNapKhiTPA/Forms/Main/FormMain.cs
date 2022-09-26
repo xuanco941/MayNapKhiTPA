@@ -1,5 +1,4 @@
-﻿using MayNapKhiTPA.Forms.InventoryManagement;
-using MayNapKhiTPA.Forms.OrderPurchaseManagement;
+﻿using MayNapKhiTPA.Forms.OrderPurchaseManagement;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -177,6 +176,20 @@ namespace MayNapKhiTPA.Forms
             formOrderPurchaseManagement.callAlert = new FormOrderPurchaseManagement.CallAlert(Alert);
             formOrderPurchaseManagement.changeForm = new FormOrderPurchaseManagement.ChangeForm(ChangeFormContent);
             ChangeFormContent(formOrderPurchaseManagement);
+            this.Font = new Font("Bahnschrift", 11);
+        }
+
+        private void buttonChiThiSanXuat_Click(object sender, EventArgs e)
+        {
+            //btn
+            Button button = sender as Button;
+            FocusButton(button);
+
+            labelHeader.Text = "Chỉ thị sản xuất của bạn";
+            FormWorkingList formWorkingList = new FormWorkingList();
+            formWorkingList.callAlert = new FormWorkingList.CallAlert(Alert);
+            formWorkingList.changeForm = new FormWorkingList.ChangeForm(ChangeFormContent);
+            ChangeFormContent(formWorkingList);
             this.Font = new Font("Bahnschrift", 11);
         }
     }

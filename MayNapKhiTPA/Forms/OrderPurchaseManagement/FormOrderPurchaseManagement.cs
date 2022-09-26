@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MayNapKhiTPA.Forms.OrderPurchaseManagement.PurchaseOrder;
+using MayNapKhiTPA.Forms.OrderPurchaseManagement.ProcessWorking;
 
 namespace MayNapKhiTPA.Forms.OrderPurchaseManagement
 {
@@ -33,11 +34,6 @@ namespace MayNapKhiTPA.Forms.OrderPurchaseManagement
         private void buttonProcess_Click(object sender, EventArgs e)
         {
             changeForm?.Invoke(new FormProcessWorking());
-        }
-
-        private void buttonTodolist_Click(object sender, EventArgs e)
-        {
-            changeForm?.Invoke(new FormWorkingList());
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace MayNapKhiTPA.Forms.InventoryManagement
+﻿namespace MayNapKhiTPA.Forms
 {
     partial class FormInventoryManagement
     {
@@ -167,13 +167,13 @@
             // label29
             // 
             this.label29.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label29.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label29.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label29.Location = new System.Drawing.Point(0, 0);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(1317, 43);
             this.label29.TabIndex = 15;
-            this.label29.Text = "Kho chứa chỉ thị đã hoàn thành";
+            this.label29.Text = "Đơn hàng có thể xuất kho";
             this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonUpdate

@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MayNapKhiTPA.Forms.OrderPurchaseManagement
+namespace MayNapKhiTPA.Forms.OrderPurchaseManagement.ProcessWorking
 {
     public partial class FormProcessWorking : Form
     {
@@ -22,7 +22,12 @@ namespace MayNapKhiTPA.Forms.OrderPurchaseManagement
 
         private void panel9_Click(object sender, EventArgs e)
         {
-            new FormViewDetailPurchaseOrder().ShowDialog();
+            new FormViewDetailPurchaseOrderDone().Show();
+        }
+
+        private void panel5_Click(object sender, EventArgs e)
+        {
+            new FormViewDetailPurchaseOrderWorking().Show();
         }
     }
 }

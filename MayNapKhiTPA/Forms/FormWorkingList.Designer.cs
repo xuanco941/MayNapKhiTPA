@@ -1,4 +1,4 @@
-﻿namespace MayNapKhiTPA.Forms.OrderPurchaseManagement
+﻿namespace MayNapKhiTPA.Forms
 {
     partial class FormWorkingList
     {
@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormWorkingList));
             this.label29 = new System.Windows.Forms.Label();
-            this.buttonDangNhap = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label22 = new System.Windows.Forms.Label();
             this.buttonDashboard = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -42,6 +42,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panelMain = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label24 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -51,6 +52,7 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label23 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -64,10 +66,8 @@
             this.buttonPage1 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.buttonPage2 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonDangNhap = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panelMain.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -79,7 +79,7 @@
             // label29
             // 
             this.label29.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label29.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label29.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label29.Location = new System.Drawing.Point(123, 0);
             this.label29.Name = "label29";
@@ -87,30 +87,6 @@
             this.label29.TabIndex = 14;
             this.label29.Text = "Danh mục sản xuất của bạn";
             this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // buttonDangNhap
-            // 
-            this.buttonDangNhap.AutoEllipsis = true;
-            this.buttonDangNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.buttonDangNhap.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.buttonDangNhap.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonDangNhap.BorderRadius = 5;
-            this.buttonDangNhap.BorderSize = 0;
-            this.buttonDangNhap.Dock = System.Windows.Forms.DockStyle.Left;
-            this.buttonDangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDangNhap.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDangNhap.ForeColor = System.Drawing.Color.White;
-            this.buttonDangNhap.Image = global::MayNapKhiTPA.Properties.Resources.backpage;
-            this.buttonDangNhap.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonDangNhap.Location = new System.Drawing.Point(0, 0);
-            this.buttonDangNhap.Name = "buttonDangNhap";
-            this.buttonDangNhap.Size = new System.Drawing.Size(123, 40);
-            this.buttonDangNhap.TabIndex = 13;
-            this.buttonDangNhap.Text = "Quay lại";
-            this.buttonDangNhap.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonDangNhap.TextColor = System.Drawing.Color.White;
-            this.buttonDangNhap.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonDangNhap.UseVisualStyleBackColor = false;
             // 
             // panel3
             // 
@@ -133,6 +109,16 @@
             this.panel3.Size = new System.Drawing.Size(1076, 97);
             this.panel3.TabIndex = 0;
             // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(616, 16);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(191, 21);
+            this.label22.TabIndex = 9;
+            this.label22.Text = "Trạng thái: Đang thực hiện";
+            // 
             // buttonDashboard
             // 
             this.buttonDashboard.BackColor = System.Drawing.SystemColors.HotTrack;
@@ -151,6 +137,7 @@
             this.buttonDashboard.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonDashboard.UseVisualStyleBackColor = false;
+            this.buttonDashboard.Click += new System.EventHandler(this.buttonDashboard_Click);
             // 
             // label7
             // 
@@ -256,6 +243,16 @@
             this.panel5.Size = new System.Drawing.Size(1076, 97);
             this.panel5.TabIndex = 2;
             // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(616, 16);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(183, 21);
+            this.label24.TabIndex = 10;
+            this.label24.Text = "Trạng thái: Chờ thực hiện";
+            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.SystemColors.HotTrack;
@@ -274,6 +271,7 @@
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.buttonDashboard_Click);
             // 
             // label15
             // 
@@ -366,6 +364,16 @@
             this.panel4.Size = new System.Drawing.Size(1076, 97);
             this.panel4.TabIndex = 1;
             // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(616, 16);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(183, 21);
+            this.label23.TabIndex = 10;
+            this.label23.Text = "Trạng thái: Chờ thực hiện";
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.HotTrack;
@@ -384,6 +392,7 @@
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.buttonDashboard_Click);
             // 
             // label8
             // 
@@ -554,6 +563,30 @@
             this.panel1.Size = new System.Drawing.Size(1078, 42);
             this.panel1.TabIndex = 9;
             // 
+            // buttonDangNhap
+            // 
+            this.buttonDangNhap.AutoEllipsis = true;
+            this.buttonDangNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.buttonDangNhap.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.buttonDangNhap.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonDangNhap.BorderRadius = 5;
+            this.buttonDangNhap.BorderSize = 0;
+            this.buttonDangNhap.Dock = System.Windows.Forms.DockStyle.Left;
+            this.buttonDangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDangNhap.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDangNhap.ForeColor = System.Drawing.Color.White;
+            this.buttonDangNhap.Image = global::MayNapKhiTPA.Properties.Resources.backpage;
+            this.buttonDangNhap.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonDangNhap.Location = new System.Drawing.Point(0, 0);
+            this.buttonDangNhap.Name = "buttonDangNhap";
+            this.buttonDangNhap.Size = new System.Drawing.Size(123, 40);
+            this.buttonDangNhap.TabIndex = 13;
+            this.buttonDangNhap.Text = "Quay lại";
+            this.buttonDangNhap.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonDangNhap.TextColor = System.Drawing.Color.White;
+            this.buttonDangNhap.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonDangNhap.UseVisualStyleBackColor = false;
+            // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -566,36 +599,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1078, 49);
             this.panel2.TabIndex = 8;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(616, 16);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(191, 21);
-            this.label22.TabIndex = 9;
-            this.label22.Text = "Trạng thái: Đang thực hiện";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(616, 16);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(183, 21);
-            this.label23.TabIndex = 10;
-            this.label23.Text = "Trạng thái: Chờ thực hiện";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(616, 16);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(183, 21);
-            this.label24.TabIndex = 10;
-            this.label24.Text = "Trạng thái: Chờ thực hiện";
             // 
             // FormWorkingList
             // 
