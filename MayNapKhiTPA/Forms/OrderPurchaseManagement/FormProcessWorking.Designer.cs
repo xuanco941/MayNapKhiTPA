@@ -66,8 +66,6 @@
             this.label22 = new System.Windows.Forms.Label();
             this.sfBarcode1 = new Syncfusion.Windows.Forms.Barcode.SfBarcode();
             this.label36 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.progressBar6 = new System.Windows.Forms.ProgressBar();
             this.label38 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
@@ -523,8 +521,6 @@
             this.panel9.Controls.Add(this.label22);
             this.panel9.Controls.Add(this.sfBarcode1);
             this.panel9.Controls.Add(this.label36);
-            this.panel9.Controls.Add(this.label37);
-            this.panel9.Controls.Add(this.progressBar6);
             this.panel9.Controls.Add(this.label38);
             this.panel9.Controls.Add(this.label39);
             this.panel9.Controls.Add(this.label40);
@@ -535,7 +531,7 @@
             this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel9.Location = new System.Drawing.Point(0, 0);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(1132, 187);
+            this.panel9.Size = new System.Drawing.Size(1132, 157);
             this.panel9.TabIndex = 0;
             this.panel9.Click += new System.EventHandler(this.panel9_Click);
             // 
@@ -565,7 +561,7 @@
             this.sfBarcode1.DisplayText = true;
             this.sfBarcode1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sfBarcode1.LightBarColor = System.Drawing.Color.White;
-            this.sfBarcode1.Location = new System.Drawing.Point(847, 54);
+            this.sfBarcode1.Location = new System.Drawing.Point(849, 44);
             this.sfBarcode1.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
             this.sfBarcode1.Name = "sfBarcode1";
             this.sfBarcode1.Size = new System.Drawing.Size(252, 74);
@@ -585,24 +581,6 @@
             this.label36.Size = new System.Drawing.Size(195, 21);
             this.label36.TabIndex = 10;
             this.label36.Text = "Người phụ trách: Đỗ Văn A";
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(199, 142);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(83, 21);
-            this.label37.TabIndex = 9;
-            this.label37.Text = "Tiến trình: ";
-            // 
-            // progressBar6
-            // 
-            this.progressBar6.Location = new System.Drawing.Point(280, 140);
-            this.progressBar6.Name = "progressBar6";
-            this.progressBar6.Size = new System.Drawing.Size(507, 28);
-            this.progressBar6.TabIndex = 7;
-            this.progressBar6.Value = 100;
             // 
             // label38
             // 
@@ -660,7 +638,7 @@
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
             this.pictureBox6.Location = new System.Drawing.Point(0, 0);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(186, 185);
+            this.pictureBox6.Size = new System.Drawing.Size(186, 155);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox6.TabIndex = 0;
             this.pictureBox6.TabStop = false;
@@ -833,8 +811,6 @@
         private System.Windows.Forms.Panel panel9;
         private Syncfusion.Windows.Forms.Barcode.SfBarcode sfBarcode1;
         private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.ProgressBar progressBar6;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label40;
