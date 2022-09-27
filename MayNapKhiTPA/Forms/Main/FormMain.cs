@@ -192,5 +192,16 @@ namespace MayNapKhiTPA.Forms
             ChangeFormContent(formWorkingList);
             this.Font = new Font("Bahnschrift", 11);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Button button = sender as Button;
+            FocusButton(button);
+
+            labelHeader.Text = "Chỉ thị sản xuất của bạn";
+            FormNhapKho formWorkingList = new FormNhapKho();
+            ChangeFormContent(formWorkingList);
+            this.Font = new Font("Bahnschrift", 11);
+        }
     }
 }

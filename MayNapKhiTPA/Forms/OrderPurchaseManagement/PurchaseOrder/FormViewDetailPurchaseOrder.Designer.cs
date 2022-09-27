@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormViewDetailPurchaseOrder));
             this.panel20 = new System.Windows.Forms.Panel();
+            this.buttonCustom3 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.buttonCustom2 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.buttonCustom1 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.buttonSaveSetting = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.panel23 = new System.Windows.Forms.Panel();
@@ -84,8 +86,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.buttonCustom2 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
-            this.buttonCustom3 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.panel20.SuspendLayout();
             this.panel23.SuspendLayout();
             this.panel24.SuspendLayout();
@@ -127,6 +127,56 @@
             this.panel20.Name = "panel20";
             this.panel20.Size = new System.Drawing.Size(422, 131);
             this.panel20.TabIndex = 3;
+            // 
+            // buttonCustom3
+            // 
+            this.buttonCustom3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonCustom3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.buttonCustom3.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.buttonCustom3.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonCustom3.BorderRadius = 6;
+            this.buttonCustom3.BorderSize = 0;
+            this.buttonCustom3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonCustom3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCustom3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCustom3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.buttonCustom3.Image = ((System.Drawing.Image)(resources.GetObject("buttonCustom3.Image")));
+            this.buttonCustom3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCustom3.Location = new System.Drawing.Point(48, 88);
+            this.buttonCustom3.Name = "buttonCustom3";
+            this.buttonCustom3.Size = new System.Drawing.Size(154, 38);
+            this.buttonCustom3.TabIndex = 56;
+            this.buttonCustom3.Text = "Chỉ thị sản xuất";
+            this.buttonCustom3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonCustom3.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.buttonCustom3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonCustom3.UseVisualStyleBackColor = false;
+            // 
+            // buttonCustom2
+            // 
+            this.buttonCustom2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonCustom2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.buttonCustom2.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.buttonCustom2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonCustom2.BorderRadius = 6;
+            this.buttonCustom2.BorderSize = 0;
+            this.buttonCustom2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonCustom2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCustom2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCustom2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.buttonCustom2.Image = ((System.Drawing.Image)(resources.GetObject("buttonCustom2.Image")));
+            this.buttonCustom2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCustom2.Location = new System.Drawing.Point(208, 89);
+            this.buttonCustom2.Name = "buttonCustom2";
+            this.buttonCustom2.Size = new System.Drawing.Size(154, 38);
+            this.buttonCustom2.TabIndex = 55;
+            this.buttonCustom2.Text = "Xuất PDF";
+            this.buttonCustom2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonCustom2.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.buttonCustom2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonCustom2.UseVisualStyleBackColor = false;
             // 
             // buttonCustom1
             // 
@@ -767,56 +817,6 @@
             this.panel2.Size = new System.Drawing.Size(1425, 137);
             this.panel2.TabIndex = 19;
             // 
-            // buttonCustom2
-            // 
-            this.buttonCustom2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCustom2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.buttonCustom2.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.buttonCustom2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonCustom2.BorderRadius = 6;
-            this.buttonCustom2.BorderSize = 0;
-            this.buttonCustom2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonCustom2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCustom2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCustom2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.buttonCustom2.Image = ((System.Drawing.Image)(resources.GetObject("buttonCustom2.Image")));
-            this.buttonCustom2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCustom2.Location = new System.Drawing.Point(208, 89);
-            this.buttonCustom2.Name = "buttonCustom2";
-            this.buttonCustom2.Size = new System.Drawing.Size(154, 38);
-            this.buttonCustom2.TabIndex = 55;
-            this.buttonCustom2.Text = "Xuất PDF";
-            this.buttonCustom2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonCustom2.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.buttonCustom2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.buttonCustom2.UseVisualStyleBackColor = false;
-            // 
-            // buttonCustom3
-            // 
-            this.buttonCustom3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCustom3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.buttonCustom3.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.buttonCustom3.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonCustom3.BorderRadius = 6;
-            this.buttonCustom3.BorderSize = 0;
-            this.buttonCustom3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonCustom3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCustom3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCustom3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.buttonCustom3.Image = ((System.Drawing.Image)(resources.GetObject("buttonCustom3.Image")));
-            this.buttonCustom3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCustom3.Location = new System.Drawing.Point(48, 88);
-            this.buttonCustom3.Name = "buttonCustom3";
-            this.buttonCustom3.Size = new System.Drawing.Size(154, 38);
-            this.buttonCustom3.TabIndex = 56;
-            this.buttonCustom3.Text = "Chỉ thị sản xuất";
-            this.buttonCustom3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonCustom3.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.buttonCustom3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.buttonCustom3.UseVisualStyleBackColor = false;
-            // 
             // FormViewDetailPurchaseOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -826,7 +826,9 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
+            this.MaximizeBox = false;
             this.Name = "FormViewDetailPurchaseOrder";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormViewDetail";
             this.panel20.ResumeLayout(false);
             this.panel23.ResumeLayout(false);

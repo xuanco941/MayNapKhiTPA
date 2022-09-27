@@ -21,5 +21,10 @@ namespace MayNapKhiTPA.Forms.OrderPurchaseManagement.PurchaseOrder
         {
             new FormAddPurchaseOrder().ShowDialog();
         }
+
+        private void panel5_Click(object sender, EventArgs e)
+        {
+            new FormViewDetailPurchaseOrder().Show();
+        }
     }
 }

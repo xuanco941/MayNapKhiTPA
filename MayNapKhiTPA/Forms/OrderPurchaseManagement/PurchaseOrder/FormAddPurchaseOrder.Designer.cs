@@ -262,8 +262,6 @@
             // 
             // buttonCustom1
             // 
-            this.buttonCustom1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCustom1.BackColor = System.Drawing.Color.Firebrick;
             this.buttonCustom1.BackgroundColor = System.Drawing.Color.Firebrick;
             this.buttonCustom1.BorderColor = System.Drawing.Color.PaleVioletRed;
@@ -287,8 +285,6 @@
             // 
             // buttonPrint
             // 
-            this.buttonPrint.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonPrint.BackColor = System.Drawing.Color.ForestGreen;
             this.buttonPrint.BackgroundColor = System.Drawing.Color.ForestGreen;
             this.buttonPrint.BorderColor = System.Drawing.Color.PaleVioletRed;
@@ -300,7 +296,7 @@
             this.buttonPrint.ForeColor = System.Drawing.SystemColors.Control;
             this.buttonPrint.Image = ((System.Drawing.Image)(resources.GetObject("buttonPrint.Image")));
             this.buttonPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonPrint.Location = new System.Drawing.Point(126, 19);
+            this.buttonPrint.Location = new System.Drawing.Point(147, 19);
             this.buttonPrint.Name = "buttonPrint";
             this.buttonPrint.Size = new System.Drawing.Size(173, 49);
             this.buttonPrint.TabIndex = 18;
@@ -1558,6 +1554,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
+            this.MaximizeBox = false;
             this.Name = "FormAddPurchaseOrder";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
